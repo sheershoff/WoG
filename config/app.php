@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://url-wog-app01.megafon.ru/wog/'),
+    'url' => env('APP_URL', 'http://url-wog-app01.megafon.ru/'),
 
     /*
     |--------------------------------------------------------------------------
