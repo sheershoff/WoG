@@ -12,32 +12,22 @@ class CreateWogTable extends Migration
      */
     public function up()
     {
-        Schema::table('currencies', function (Blueprint $table) {
-            $table->increments('id')->comment('Игровые валюты');
-            $table->primary('id');
-            $table->string('name')->comment('gold, мана, значёк ГТО, рейтин и тп');
-            $table->text('conmment')->nullable();
-            $table->json('options')->nullable()->comment('прочие настройки');
-            $table->timestamps();
-        });
-        Schema::table('actions', function (Blueprint $table) {
+        Schema::create('actions', function (Blueprint $table) {
             $table->increments('id')->comment('Дейстивий возможные с валютой');
-            $table->primary('id');
             $table->string('name')->comment('Н:расход на... начислено за...');
             $table->integer('currency_id')->unsigned();
             $table->foreign('currency_id')->references('id')->on('currencies');
         });
-        Schema::table('latter', function (Blueprint $table) {
-            $table->increments('id');
-            $table->primary('id');
-            $table->string('name');
-            $table->text('template')->nullable();
+        Schema::create('latter', function (Blueprint $table) {
+            $table->increments('id')->comment('Шаблоны писем, на каждое действие может быть несколько действий');
+            $table->string('name')->unique()->comment('');
+            $table->text('template')->nullable()->comment('Тело шаблона');
             $table->timestamps();
             $table->integer('action_id')->unsigned();
             $table->foreign('action_id')->references('id')->on('actions');
         });
-        Schema::table('balances', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('balances', function (Blueprint $table) {
+            $table->increments('id')->comment('балансы игрока, вернее все его приобретения');
             $table->integer('value');
             $table->timestamps();
             $table->integer('currency_id')->unsigned();
@@ -46,8 +36,8 @@ class CreateWogTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
         });
         
-        Schema::table('history', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('history', function (Blueprint $table) {
+            $table->increments('id')->comment('история изменений (приобретений) игрока');
             $table->integer('value');
             $table->timestamps();
             $table->integer('currency_id')->unsigned();
@@ -56,6 +46,8 @@ class CreateWogTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('action_id')->unsigned();
             $table->foreign('action_id')->references('id')->on('actions');
+            $table->integer('latter_id')->unsigned();
+            $table->foreign('latter_id')->references('id')->on('actions');
         });
     }
 
@@ -66,15 +58,13 @@ class CreateWogTable extends Migration
      */
     public function down()
     {
-        Schema::table('history', function (Blueprint $table) {
+        Schema::drop('history', function (Blueprint $table) {
         });
-        Schema::table('balances', function (Blueprint $table) {
+        Schema::drop('balances', function (Blueprint $table) {
         });
-        Schema::table('latter', function (Blueprint $table) {
+        Schema::drop('latter', function (Blueprint $table) {
         });
-        Schema::table('actions', function (Blueprint $table) {
-        });
-        Schema::table('currencies', function (Blueprint $table) {
+        Schema::drop('actions', function (Blueprint $table) {
         });
     }
 }
