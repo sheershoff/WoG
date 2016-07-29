@@ -12,7 +12,6 @@ class CreateUserSkillTable extends Migration
      */
     public function up()
     {
-
         Schema::create('UserSkill', function (Blueprint $table) {
             $table->increments('id')->comment('Навыки конкретного пользователя');
             $table->integer('userId')->unsigned();
@@ -24,8 +23,7 @@ class CreateUserSkillTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
-		
-	}
+    }
 
     /**
      * Reverse the migrations.

@@ -19,6 +19,9 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Vlady',
                 'email' => 'Vladimir.Khonin@megafon.ru',
                 'password' => '$2y$10$Qh0e.70G8iEyEV704IccxeHC8q53VvSyWXZTDOCQRR081mNJ2ypJe',
+                'remember_token' => NULL,
+                'created_at' => '2016-07-28 03:24:24',
+                'updated_at' => '2016-07-28 03:24:24',
             ),
             1 => 
             array (
@@ -26,6 +29,9 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Руслан',
                 'email' => 'ruslan@mail.com',
                 'password' => '$2y$10$E/3OahJvTElVLt6i6vT/BOzLEBWxQ6TnR/X8u9pjGFua/jrXR/eYu',
+                'remember_token' => NULL,
+                'created_at' => '2016-07-28 07:08:10',
+                'updated_at' => '2016-07-28 07:08:10',
             ),
         ));
     }

@@ -14,9 +14,9 @@ class CurrenciesTableSeeder extends Seeder
     {
         
 
-        \DB::table('currencies')->delete();
+        DB::table('Currency')->delete();
         
-        \DB::table('currencies')->insert(array (
+        DB::table('Currency')->insert(array (
             0 => 
             array (
                 'id' => 1,
