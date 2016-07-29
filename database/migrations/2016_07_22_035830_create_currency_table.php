@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCurrenciesTable extends Migration
+class CreateCurrencyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,6 @@ class CreateCurrenciesTable extends Migration
      */
     public function up()
     {
-        Schema::create('CurrencyTypes', function (Blueprint $table) {
-            $table->increments('id')->comment('типы игровыех валют');
-            $table->string('name')->unique()->comment('скилы, платёжные валюты, значки, рейтинги и тп');
-            $table->string('unit')->unique()->comment('единицы измерения');
-            $table->timestamps();
-            $table->softDeletes();
-        });
-		
         Schema::create('Currency', function (Blueprint $table) {
             $table->increments('id')->comment('Игровые валюты');
             $table->string('name')->unique()->comment('gold, мана, значёк ГТО, рейтин и тп');
@@ -45,8 +37,6 @@ class CreateCurrenciesTable extends Migration
     public function down()
     {
         Schema::drop('Currency', function (Blueprint $table) {
-        });
-        Schema::drop('CurrencyType', function (Blueprint $table) {
         });
     }
 }
