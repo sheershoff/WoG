@@ -33,6 +33,7 @@ class CreateWogTable extends Migration
             $table->increments('id')->comment('Квесты у пользователя');
             $table->integer('questId')->unsigned();
             $table->foreign('questId')->references('id')->on('Quest');
+            $table->integer('questType')->unsigned();
             $table->integer('userId')->unsigned();
             $table->foreign('userId')->references('id')->on('User');
             $table->integer('userQuestStatusId')->unsigned();

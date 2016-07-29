@@ -24,13 +24,13 @@ class CreateSkillsTable extends Migration
         });
 
         Schema::create('UserSkill', function (Blueprint $table) {
-            $table->increments('id')->comment('Навыки');
+            $table->increments('id')->comment('Навыки конкретного пользователя');
             $table->integer('userId')->unsigned();
             $table->foreign('userId')->references('id')->on('User')->comment('ключ на таблицу User');
             $table->integer('skillId')->unsigned();
             $table->foreign('skillId')->references('id')->on('Skill')->comment('ключ на таблицу Skill');
             $table->integer('valueUser')->unsigned()->comment('самооценка');
-            $table->integer('valueUser')->unsigned()->comment('прочая оценка');
+            $table->integer('valueExpert')->unsigned()->nullable()->comment('прочая оценка');
             $table->timestamps();
             $table->softDeletes();
         });
