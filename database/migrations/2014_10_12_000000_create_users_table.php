@@ -44,6 +44,7 @@ class CreateUsersTable extends Migration
             $table->foreign('userId')->references('id')->on('User')->comment('ключ на таблицу User');
             $table->binary('photo');
             $table->timestamps();
+            $table->softDeletes();
         });
 		
         Schema::create('TeamUser', function (Blueprint $table) {
