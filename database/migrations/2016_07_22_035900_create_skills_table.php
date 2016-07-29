@@ -18,7 +18,8 @@ class CreateSkillsTable extends Migration
             $table->text('comment')->nullable();
             $table->json('options')->nullable()->comment('прочие настройки');
             $table->integer('currencyId')->unsigned()->comment('Связка с валютой в которой считается навык у пользователя');
-            $table->foreign('currencyId')->references('id')->on('currency');
+            $table->foreign('currencyId')->references('id')->on('Currency');
+            $table->integer('skillId')->unsigned()->comment('Связка с валютой в которой считается навык у пользователя');
             $table->timestamps();
         });
 
