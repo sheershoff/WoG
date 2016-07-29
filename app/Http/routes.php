@@ -11,10 +11,34 @@
 |
 */
 
+Route::group(['prefix'=>'adminzone'], function()
+{
+     Route::get('/', function()
+     {
+         return view('admin.dashboard');
+     });
+/*     Route::resource('Roles','RolesController');
+     Route::resource('Users','UsersController');
+     Route::resource('Currencies','CurrenciesController');
+     Route::resource('Actions','ActionsController');
+     Route::resource('Letters','LettersController');*/
+//     Route::resource('Pages','PagesController');
+});
+
+     Route::resource('Pages','PagesController');
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::auth();
+//Route::auth();
+// Маршруты авторизации...
+Route::get('login', 'Auth\AuthController@showLoginForm');
+Route::post('login', 'Auth\AuthController@login');
+Route::get('logout', 'Auth\AuthController@logout');
+
+// Маршруты регистрации...
+Route::get('register', 'Auth\AuthController@showRegistrationForm');
+Route::post('register', 'Auth\AuthController@register');
 
 Route::get('/home', 'HomeController@index');

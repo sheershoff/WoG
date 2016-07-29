@@ -17,8 +17,8 @@ class CreateCurrenciesTable extends Migration
             $table->string('name')->unique()->comment('gold, мана, значёк ГТО, рейтин и тп');
             $table->text('comment')->nullable();
             $table->json('options')->nullable()->comment('прочие настройки');
+            $table->boolean('topmenu')->default(0)->comment('показывать меню');
             $table->timestamps();
-//            $table->primary('id');
         });
     }
 
