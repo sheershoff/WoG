@@ -40,6 +40,7 @@ class CreateCurrenciesTable extends Migration
     public function down()
     {
         Schema::drop('Currency', function (Blueprint $table) {
+        });
         Schema::drop('CurrencyType', function (Blueprint $table) {
         });
     }
