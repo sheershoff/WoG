@@ -36,16 +36,16 @@ class CreateUsersTable extends Migration
         Schema::create('UserProfile', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('userId')->unsigned();
-            $table->foreign('userId')->references('Id')->on('User'->comment('ключ на таблицу User');
+            $table->foreign('userId')->references('Id')->on('User')->comment('ключ на таблицу User');
             $table->binary('photo');
             $table->timestamps();
         });
         Schema::create('TeamUser', function (Blueprint $table) {
             $table->increments('Id');
             $table->integer('userId')->unsigned();
-            $table->foreign('userId')->references('Id')->on('User'->comment('ключ на таблицу User');
+            $table->foreign('userId')->references('Id')->on('User')->comment('ключ на таблицу User');
             $table->integer('teamUserId')->unsigned();//команда
-            $table->foreign('teamUserId')->references('Id')->on('User'->comment('ключ на таблицу User');
+            $table->foreign('teamUserId')->references('Id')->on('User')->comment('ключ на таблицу User');
             $table->boolean('isLeader')->nullable()->comment('маркер капитана');
             $table->timestamps()->comment('старт.стоп дата');
             $table->softDeletes()->comment('дата удаления');
