@@ -12,7 +12,7 @@ class CreateSkillsTable extends Migration
      */
     public function up()
     {
-        Schema::create('skill', function (Blueprint $table) {
+        Schema::create('Skill', function (Blueprint $table) {
             $table->increments('id')->comment('Навыки');
             $table->string('name')->unique()->comment('Наименование');
             $table->text('comment')->nullable();
@@ -21,7 +21,20 @@ class CreateSkillsTable extends Migration
             $table->foreign('currencyId')->references('id')->on('currency');
             $table->timestamps();
         });
-    }
+
+        Schema::create('UserSkill', function (Blueprint $table) {
+            $table->increments('id')->comment('Навыки');
+            $table->integer('userId')->unsigned();
+            $table->foreign('userId')->references('id')->on('User')->comment('ключ на таблицу User');
+            $table->integer('skillId')->unsigned();
+            $table->foreign('skillId')->references('id')->on('Skill')->comment('ключ на таблицу Skill');
+            $table->integer('valueUser')->unsigned()->comment('самооценка');
+            $table->integer('valueUser')->unsigned()->comment('прочая оценка');
+            $table->timestamps();
+            $table->softDeletes();
+        });
+		
+	}
 
     /**
      * Reverse the migrations.
@@ -30,7 +43,9 @@ class CreateSkillsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('skill', function (Blueprint $table) {
+        Schema::drop('UserSkill', function (Blueprint $table) {
+        });
+        Schema::drop('Skill', function (Blueprint $table) {
         });
     }
 }
