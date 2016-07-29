@@ -12,25 +12,6 @@ class CreateWogTables extends Migration
      */
     public function up()
     {
-        //типы валют
-        Schema::table('currency_types', function (Blueprint $table) {
-            $table->increments('id')->comment('типы игровых валют, например бейджи');
-            $table->primary('id');
-            $table->string('name')->comment('Н:бейдж,рейтинг,платёжный');
-//            $table->integer('team')->comment('применимость к команде');
-//            $table->integer('once')->comment('может назначаться только одна');
-//            $table->integer('expiration')->comment('истекающий по времени');
-            $table->json('options')->nullable()->comment('прочие настройки');
-        });
-        Schema::table('currencies', function (Blueprint $table) {
-            $table->increments('id')->comment('Игровые валюты, например gold, значёк ГТО и тп');
-            $table->primary('id');
-            $table->string('name');
-            $table->text('conmment')->nullable();
-            $table->timestamps();
-            $table->integer('currency_type_id')->unsigned();
-            $table->foreign('currency_type_id')->references('id')->on('currency_types');
-        });
         Schema::table('action_types', function (Blueprint $table) {
             $table->increments('id')->comment('типы дейстивий');
             $table->primary('id');

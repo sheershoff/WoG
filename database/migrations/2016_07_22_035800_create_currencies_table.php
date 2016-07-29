@@ -17,13 +17,14 @@ class CreateCurrenciesTable extends Migration
             $table->string('name')->unique()->comment('скилы, платёжные валюты, значки, рейтинги и тп');
             $table->timestamps();
         });
+		
         Schema::create('currencies', function (Blueprint $table) {
             $table->increments('id')->comment('Игровые валюты');
             $table->string('name')->unique()->comment('gold, мана, значёк ГТО, рейтин и тп');
             $table->text('comment')->nullable();
             $table->string('function')->nullable()->comment('функции пересчитывает количество начисляемой валюты.null 1=1');
             $table->json('options')->nullable()->comment('прочие настройки');
-            $table->boolean('topmenu')->default(0)->comment('показывать меню');
+            $table->boolean('topmenu')->default(0)->comment('показывать в меню');
             $table->timestamps();
         });
     }
