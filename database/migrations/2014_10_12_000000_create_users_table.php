@@ -28,24 +28,29 @@ class CreateUsersTable extends Migration
             $table->integer('userStatusId')->default(1)->unsigned()->comment('Статус пользователя. 1-активен, 0-не активен');
             $table->foreign('userStatusId')->references('id')->on('UserStatus');
             $table->string('psLogin')->unique()->nullable();
+            $table->string('phoneNumber');
+            $table->string('tabNumber');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes()->comment('дата удаления');
         });
 		
         Schema::create('UserProfile', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->comment('Дата удаления');
+            $table->string('description')->comment('Описание');
+            $table->string('status')->comment('Статус (настроение)');
             $table->integer('userId')->unsigned();
-            $table->foreign('userId')->references('Id')->on('User')->comment('ключ на таблицу User');
+            $table->foreign('userId')->references('id')->on('User')->comment('ключ на таблицу User');
             $table->binary('photo');
             $table->timestamps();
         });
+		
         Schema::create('TeamUser', function (Blueprint $table) {
-            $table->increments('Id');
+            $table->increments('id');
             $table->integer('userId')->unsigned();
-            $table->foreign('userId')->references('Id')->on('User')->comment('ключ на таблицу User');
+            $table->foreign('userId')->references('id')->on('User')->comment('ключ на таблицу User');
             $table->integer('teamUserId')->unsigned();//команда
-            $table->foreign('teamUserId')->references('Id')->on('User')->comment('ключ на таблицу User');
+            $table->foreign('teamUserId')->references('id')->on('User')->comment('ключ на таблицу User');
             $table->boolean('isLeader')->nullable()->comment('маркер капитана');
             $table->timestamps()->comment('старт.стоп дата');
             $table->softDeletes()->comment('дата удаления');
