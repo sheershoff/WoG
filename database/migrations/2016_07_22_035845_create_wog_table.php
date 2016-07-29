@@ -18,10 +18,10 @@ class CreateWogTable extends Migration
             $table->integer('currency_id')->unsigned();
             $table->foreign('currency_id')->references('id')->on('currencies');
         });
-        Schema::create('latter', function (Blueprint $table) {
+        Schema::create('mail_template', function (Blueprint $table) {
             $table->increments('id')->comment('Шаблоны писем, на каждое действие может быть несколько действий');
             $table->string('name')->unique()->comment('');
-            $table->text('template')->nullable()->comment('Тело шаблона');
+            $table->text('body')->nullable()->comment('Тело шаблона');
             $table->timestamps();
             $table->integer('action_id')->unsigned();
             $table->foreign('action_id')->references('id')->on('actions');

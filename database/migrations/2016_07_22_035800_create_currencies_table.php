@@ -24,7 +24,7 @@ class CreateCurrenciesTable extends Migration
             $table->text('comment')->nullable();
             $table->string('function')->nullable()->comment('функции пересчитывает количество начисляемой валюты.null 1=1');
             $table->json('options')->nullable()->comment('прочие настройки');
-            $table->boolean('topmenu')->default(0)->comment('показывать меню');
+            $table->boolean('topmenu')->default(0)->comment('показывать в меню');
             $table->timestamps();
         });
     }
