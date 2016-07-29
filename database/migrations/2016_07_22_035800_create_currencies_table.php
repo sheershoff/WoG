@@ -17,6 +17,7 @@ class CreateCurrenciesTable extends Migration
             $table->string('name')->unique()->comment('скилы, платёжные валюты, значки, рейтинги и тп');
             $table->timestamps();
         });
+		
         Schema::create('currencies', function (Blueprint $table) {
             $table->increments('id')->comment('Игровые валюты');
             $table->string('name')->unique()->comment('gold, мана, значёк ГТО, рейтин и тп');

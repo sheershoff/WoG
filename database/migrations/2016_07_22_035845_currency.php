@@ -17,10 +17,6 @@ class CreateWogTables extends Migration
             $table->increments('id')->comment('типы игровых валют, например бейджи');
             $table->primary('id');
             $table->string('name')->comment('Н:бейдж,рейтинг,платёжный');
-//            $table->integer('team')->comment('применимость к команде');
-//            $table->integer('once')->comment('может назначаться только одна');
-//            $table->integer('expiration')->comment('истекающий по времени');
-            $table->json('options')->nullable()->comment('прочие настройки');
         });
         Schema::table('currencies', function (Blueprint $table) {
             $table->increments('id')->comment('Игровые валюты, например gold, значёк ГТО и тп');
