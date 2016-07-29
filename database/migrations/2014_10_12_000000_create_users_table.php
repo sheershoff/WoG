@@ -37,6 +37,15 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
+        Schema::create('TeamUser', function (Blueprint $table) {
+            $table->increments('Id');
+            $table->foreign('userId')->references('Id')->on('User'->comment('ключ на таблицу User');
+            $table->boolean('isLeader')->nullable()->comment('маркер капитана');
+            $table->boolean('isActive')->default(true)->comment('маркер жив\мертв');
+            $table->date('startDate')->default(true)->comment('маркер жив\мертв');
+            $table->timestamps()->comment('старт.стоп дата');
+            $table->softDeletes()->comment('дата удаления');
+        });
     }
 
     /**
