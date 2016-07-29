@@ -12,15 +12,10 @@ class CreateCurrenciesTable extends Migration
      */
     public function up()
     {
-        Schema::create('Unit', function (Blueprint $table) {
-            $table->increments('id')->comment('единицы измерения');
-            $table->string('name')->unique()->comment('шт');
-            $table->timestamps();
-        });
-
         Schema::create('CurrencyTypes', function (Blueprint $table) {
             $table->increments('id')->comment('типы игровыех валют');
             $table->string('name')->unique()->comment('скилы, платёжные валюты, значки, рейтинги и тп');
+            $table->string('unit')->unique()->comment('единицы измерения');
             $table->timestamps();
         });
 		
@@ -34,8 +29,6 @@ class CreateCurrenciesTable extends Migration
             $table->boolean('topMenu')->default(0)->comment('показывать в меню');
             $table->integer('roleId')->unsigned();
             $table->foreign('roleId')->references('id')->on('Role');
-            $table->integer('unitId')->unsigned();
-            $table->foreign('unitId')->references('id')->on('Unit');
             $table->timestamps();
         });
     }
