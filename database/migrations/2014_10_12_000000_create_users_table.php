@@ -15,7 +15,8 @@ class CreateUsersTable extends Migration
         Schema::create('UserStatus', function (Blueprint $table) {
             $table->increments('id')->comment('Статус пользователя');
             $table->string('name');
-            $table->softDeletes()->comment('дата удаления');
+            $table->timestamps();
+            $table->softDeletes();
         });
 		
         Schema::create('User', function (Blueprint $table) {
@@ -32,7 +33,7 @@ class CreateUsersTable extends Migration
             $table->string('tabNumber');
             $table->rememberToken();
             $table->timestamps();
-            $table->softDeletes()->comment('дата удаления');
+            $table->softDeletes();
         });
 		
         Schema::create('UserProfile', function (Blueprint $table) {
@@ -52,8 +53,8 @@ class CreateUsersTable extends Migration
             $table->integer('teamUserId')->unsigned();//команда
             $table->foreign('teamUserId')->references('id')->on('User')->comment('ключ на таблицу User');
             $table->boolean('isLeader')->nullable()->comment('маркер капитана');
-            $table->timestamps()->comment('старт.стоп дата');
-            $table->softDeletes()->comment('дата удаления');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
