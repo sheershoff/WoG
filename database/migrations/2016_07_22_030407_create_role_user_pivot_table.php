@@ -12,12 +12,14 @@ class CreateRoleUserPivotTable extends Migration
      */
     public function up()
     {
-        Schema::create('role_user', function (Blueprint $table) {
-            $table->integer('role_id')->unsigned()->index();
-            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+        Schema::create('roleUser', function (Blueprint $table) {
+            $table->increments('id');
+			$table->integer('role_id')->unsigned()->index();
+            $table->foreign('role_id')->references('id')->on('role')->onDelete('cascade');
             $table->integer('user_id')->unsigned()->index();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->primary(['role_id', 'user_id']);
+            $table->foreign('user_id')->references('id')->on('user')->onDelete('cascade');
+            $table->timestamps();
+			$table->softDeletes();
         });
     }
 
@@ -28,6 +30,6 @@ class CreateRoleUserPivotTable extends Migration
      */
     public function down()
     {
-        Schema::drop('role_user');
+        Schema::drop('roleUser');
     }
 }

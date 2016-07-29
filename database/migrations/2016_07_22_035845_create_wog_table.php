@@ -140,5 +140,11 @@ class CreateWogTable extends Migration
         });
         Schema::drop('Action', function (Blueprint $table) {
         });
+        Schema::drop('UserQuest', function (Blueprint $table) {
+        });
+        Schema::drop('UserQuestStatus', function (Blueprint $table) {
+        });
+        Schema::drop('Quest', function (Blueprint $table) {
+        });
     }
 }
