@@ -75,7 +75,7 @@ return [
             'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => 'wog_',
-            'schema' => 'public',
+            'schema' => env('DB_SCHEMA','public'),
         ],
 
     ],
