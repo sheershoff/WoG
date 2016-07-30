@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
     <link href="http://www.prepbootstrap.com/Content/css/single-page-admin/main.css" rel="stylesheet">
     <link href="{{asset('/css/castom.css')}}" rel="stylesheet">
+    <link href="{{asset('/css/register.css')}}" rel="stylesheet">
     <link href="http://www.prepbootstrap.com/Content/css/single-page-admin/font-style.css" rel="stylesheet">
     <link href="http://www.prepbootstrap.com/Content/css/single-page-admin/flexslider.css" rel="stylesheet">
     <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/jquery-1.10.2.min.js"></script>
@@ -95,12 +96,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html"><img style=" margin-top: -7px; " src="{{asset('img/logo30.png')}}" alt=""></a>
+          <a class="navbar-brand" href="/"><img style=" margin-top: -7px; " src="{{asset('img/logo30.png')}}" alt=""></a>
         </div> 
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html"><i class="icon-home icon-white"></i> WOG</a></li>                            
-              <li><a href="tables.html"><i class="icon-th icon-white"></i> Личные данные</a></li>
+              <li class="active"><a href="/"><i class="icon-home icon-white"></i> WOG</a></li>                            
+              <li><a href="/personal-data"><i class="icon-th icon-white"></i> Персонаж</a></li>
 <!--               <li><a href="login.html"><i class="icon-lock icon-white"></i> </a></li>
               <li><a href="user.html"><i class="icon-user icon-white"></i> User</a></li> -->
 
@@ -128,8 +129,8 @@
       	<div class="container">
       		<div class="row">
       			<div class="col-sm-12 col-lg-12">
-      			<p><img src="http://www.prepbootstrap.com/Content/images/shared/single-page-admin/logo.png" alt=""></p>
-      			<p>Blocks Dashboard Theme - Crafted With Love - Copyright 2013</p>
+      			<!-- <p><img src="http://www.prepbootstrap.com/Content/images/shared/single-page-admin/logo.png" alt=""></p> -->
+      			<p>© 2016 ПАО «МегаФон»</p>
       			</div>
 
       		</div><!-- /row -->

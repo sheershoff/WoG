@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCurrencyTrancactionTable extends Migration
+class CreateCurrencyTransactionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateCurrencyTrancactionTable extends Migration
      */
     public function up()
     {
-        Schema::create('CurrencyTrancaction', function (Blueprint $table) {
+        Schema::create('CurrencyTransaction', function (Blueprint $table) {
             $table->increments('id')->comment('история история изменений баланса игрока');
             $table->integer('value')->unsigned();
             $table->integer('currencyId')->unsigned();
@@ -36,7 +36,7 @@ class CreateCurrencyTrancactionTable extends Migration
      */
     public function down()
     {
-        Schema::drop('CurrencyTrancaction', function (Blueprint $table) {
+        Schema::drop('CurrencyTransaction', function (Blueprint $table) {
         });
     }
 }

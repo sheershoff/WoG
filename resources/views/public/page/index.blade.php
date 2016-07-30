@@ -16,7 +16,7 @@
 						<p>StatCounter Information</p>
 		      		</div>
 			</div> -->
-			<div class="half-unit">
+			<div style=" height: 170px; " class="half-unit">
 	      		<dtitle>Новые задания</dtitle>
 	      		<hr>
 	      			<div class="cont2">
@@ -25,6 +25,8 @@
 	      				<br>
 	      				<p>Система</p>
 	      				<p><bold>Заполни профиль</bold></p>
+	      				   <button type="button" class="btn btn-default btn-xs">Принять</button>
+	      				   <button type="button" class="btn btn-default btn-xs">Отклонить</button>
 	      			</div>
 			</div>
       		<div class="dash-unit">
@@ -64,7 +66,7 @@
 				</div>
 
 			</div>
-			<div class="half-unit">
+		{{-- 	<div class="half-unit">
 	      		<dtitle>Server Uptime</dtitle>
 	      		<hr>
 	      		<div class="cont">
@@ -77,7 +79,7 @@
 	      		<div class="cont">
 					<p><img src="http://www.prepbootstrap.com/Content/images/shared/single-page-admin/up.png" alt=""> <bold>Up</bold> | 356ms.</p>
 				</div>
-			</div>
+			</div> --}}
         </div>
       	<div class="col-sm-3 col-lg-9">
 	  
@@ -136,10 +138,12 @@
 			                <p class="sender">Бог</p>
 			                <p class="message"><strong>Квест</strong> - Расскажи о себе миру...</p>
 			                <div class="actions">
-			                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
+			                	  <button style="margin-top: 14px;  margin-right: 5px; margin-left: -25px;" type="button" class="btn btn-default btn-xs">Завершить квест</button>
+			                	{{-- <a href="#"><img></a> --}}
+{{-- 			                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
 			                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/star_fav.png" alt="favourite"></a>
-			                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/tag.png" alt="label"></a>
-			                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/trash.png" alt="delete"></a>
+			                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/tag.png" alt="label"></a> --}}
+			                    {{-- <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/trash.png" alt="delete"></a> --}}
 			                </div>
 			            </li>
 			            <li>
@@ -183,7 +187,7 @@
 			</div>
 		</div>
 		<div class="dash-unit">
-	      		<dtitle>Сооющения</dtitle>
+	      		<dtitle>Сообщения</dtitle>
 	      		<hr>
 				<div class="info-user">
 					<span aria-hidden="true" class="li_megaphone fs2"></span>
@@ -196,18 +200,27 @@
 				<script src="http://api.twitter.com/1/statuses/user_timeline/wrapbootstrap.json?callback=twitterCallback2&amp;count=1"></script>
 				<!-- To show your tweets replace "wrapbootstrap", in the line above, with your user. -->
 				<div class="text">
-				<p><grey>Show your tweets here!</grey></p>
-				<p><grey>Show your tweets here!</grey></p>
-				<p><grey>Show your tweets here!</grey></p>
-				<p><grey>Show your tweets here!</grey></p>
-				<p><grey>Show your tweets here!</grey></p>
-				<p><grey>Show your tweets here!</grey></p>
+				<p><grey  style=" font-size: 17px; "  >Дорогой игрок вы взяли квест Расскажи о себе миру. Награда за выполнения будет ждать тебя!</grey></p>
+
 				</div>
 			</div>
       	</div>
-
-    
-
-
-
+      	<script>
+      	$.ajax({
+      		url: '/path/to/file',
+      		type: 'POST',
+      		dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+      		data: {param1: 'value1'},
+      	})
+      	.done(function() {
+      		console.log("success");
+      	})
+      	.fail(function() {
+      		console.log("error");
+      	})
+      	.always(function() {
+      		console.log("complete");
+      	});
+      	
+      	</script>
 @stop

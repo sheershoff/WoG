@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActionTrancactionTable extends Migration
+class CreateActionTransactionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateActionTrancactionTable extends Migration
      */
     public function up()
     {
-        Schema::create('ActionTrancaction', function (Blueprint $table) {
+        Schema::create('ActionTransaction', function (Blueprint $table) {
             $table->increments('id')->comment('история изменений (приобретений) игрока');
             $table->integer('userId')->unsigned();
             $table->foreign('userId')->references('id')->on('User');
@@ -33,7 +33,7 @@ class CreateActionTrancactionTable extends Migration
      */
     public function down()
     {
-        Schema::drop('ActionTrancaction', function (Blueprint $table) {
+        Schema::drop('ActionTransaction', function (Blueprint $table) {
         });
     }
 }

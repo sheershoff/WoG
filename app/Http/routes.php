@@ -33,6 +33,11 @@ Route::group(
 		Route::resource('robots','Rest\RobotsController');
 		Route::resource("users", 'Rest\UsersController');
 		Route::resource("userProfiles", 'Rest\UserProfilesController');
+		Route::resource("users.billing", 'Rest\BillingController');
+		//Route::resource('users.quests', 'Rest\UserQuestController')
+
+
+		Route::resource("users.messages", 'Rest\MessagesController');
 
 
   //   	Route::get('robot/{id}', 'Rest\RobotsController@get');
@@ -60,6 +65,9 @@ Route::resource('Pages','PagesController');
 // });
 
 Route::get('/', 'WogController@index');
+Route::get('/personal-data', 'WogController@personalData');
+
+
 
 //Route::auth();
 // Маршруты авторизации...
