@@ -17,19 +17,47 @@ Route::group(['prefix'=>'adminzone'], function()
      {
          return view('admin.dashboard');
      });
-/*     Route::resource('Roles','RolesController');
+/*   Route::resource('Roles','RolesController');
      Route::resource('Users','UsersController');
      Route::resource('Currencies','CurrenciesController');
      Route::resource('Actions','ActionsController');
      Route::resource('Letters','LettersController');*/
-//     Route::resource('Pages','PagesController');
+//   Route::resource('Pages','PagesController');
 });
 
-     Route::resource('Pages','PagesController');
+//Мэппинг для Rest API
+Route::group(
+	['prefix'=>'rest'], 
+	function(){
 
-Route::get('/', function () {
-    return view('welcome');
-});
+		Route::resource('robots','Rest\RobotsController');
+
+
+    	Route::get('robot/{id}', 'Rest\RobotsController@get');
+	    // Create robot
+		Route::post('robot', 'Rest\RobotsController@create');
+		// Delete robot
+		Route::delete('robot/{$id}', 'Rest\RobotsController@delete');
+		// Execute robot
+		Route::put('robot/{$id}', 'Rest\RobotsController@execute');
+		// Get all robots 
+		Route::get('robots', 'Rest\RobotsController@getAll');
+	}
+);
+
+
+
+Route::resource('Pages','PagesController');
+
+//Route::resource('robots', 'Rest\RobotsController');
+
+   
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'WogController@index');
 
 //Route::auth();
 // Маршруты авторизации...
