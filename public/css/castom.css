@@ -1,3 +1,11 @@
 body {
 	background-image: url('../img/bg.jpg');
 }
+
+.dash-unit dtitle {
+	font-size: 15px;
+}
+
+.half-unit dtitle {
+	font-size: 15px;
+}

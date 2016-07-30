@@ -17,24 +17,24 @@
 		      		</div>
 			</div> -->
 			<div class="half-unit">
-	      		<dtitle>Last Registered User</dtitle>
+	      		<dtitle>Новые задания</dtitle>
 	      		<hr>
 	      			<div class="cont2">
-	      				<img src="http://www.prepbootstrap.com/Content/images/shared/single-page-admin/user-avatar.jpg" alt="">
+	      				<img style="height: 45px; width: 45px;" src="{{asset('img/photo01.jpeg')}}" alt="">
 	      				<br>
 	      				<br>
-	      				<p>Paul Smith</p>
-	      				<p><bold>Liverpool, England</bold></p>
+	      				<p>Система</p>
+	      				<p><bold>Заполни профиль</bold></p>
 	      			</div>
 			</div>
       		<div class="dash-unit">
 	      		<dtitle>Профиль пользователя</dtitle>
 	      		<hr>
 				<div class="thumbnail">
-					<img src="http://www.prepbootstrap.com/Content/images/shared/single-page-admin/face80x80.jpg" alt="Marcel Newman" class="img-circle">
+					<img style=" height: 80px; " src="{{asset('img/face80x80.jpg')}}" alt="Marcel Newman" class="img-circle">
 				</div><!-- /thumbnail -->
 				<h1>{{ Auth::user()->name }}</h1>
-				{{-- <h3>{{ $staus[0]->name }}</h3> --}}
+				<h3>{{ $staus[0]->name }}</h3>
 				<br>
 					<div class="info-user">
 						<span aria-hidden="true" class="li_user fs1"></span>
@@ -44,15 +44,15 @@
 					</div>
 				</div>
 				<div class="dash-unit">
-	      		<dtitle>Валюта</dtitle>
+	      		<dtitle>Балансы</dtitle>
 	      		<hr>
 	      		<div class="cont">
-	      			{{-- @foreach ($cash as $val) --}}
+	      			@foreach ($cash as $val)
 					
-					{{-- <p style="text-align: left;">{{$val->name}} - <bold>{{$val->value}}</bold> | <ok>{{$val->unit}}</ok></p> --}}
+					<p style="text-align: left;">{{$val->name}} - <bold>{{$val->value}}</bold> | <ok>{{$val->unit}}</ok></p>
 					
 
-	      			{{-- @endforeach --}}
+	      			@endforeach
 					
 				{{-- 	<br>
 					<p><bold>$377</bold> | Pending</p>
@@ -82,26 +82,37 @@
       	<div class="col-sm-3 col-lg-9">
 	  
 	  <!-- BARS CHART - lineandbars.js file -->     
-      		<div class="half-unit">
-	      		<dtitle>To Do List</dtitle>
+      		<div style=" height: 450px; " class="half-unit">
+	      		<dtitle>Скилы</dtitle>
 	      		<hr>
 	      		<div class="cont">
-					<p><bold>13</bold> | Pending Tasks</p>
+					<p><bold>234</bold> | Спикер   Навык красиво говорить</p>
 				</div>
 		             <div class="progress">
 				        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"><span class="sr-only">60% Complete</span>
 					        
 				        </div>
 				     </div>
-				     		             <div class="progress">
-				        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"><span class="sr-only">60% Complete</span>
-					        
+				     <div class="cont">
+					<p><bold>32</bold> | Слушатель  Навык внимательно слушать и не перебивать</p>
+				</div>
+
+				    <div class="progress">
+				        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:10%;"><span class="sr-only">60% Complete</span>
+				        </div>
+				     </div>
+				      <div class="cont">
+					<p><bold>13</bold> | Powerpoint Навык красиво рисовать презентации</p>
+				</div>
+
+				    <div class="progress">
+				        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:4%;"><span class="sr-only">60% Complete</span>
 				        </div>
 				     </div>
       		</div>
 
 	  <!-- TO DO LIST -->     
-      		<div class="half-unit">
+{{--       		<div class="half-unit">
 	      		<dtitle>To Do List</dtitle>
 	      		<hr>
 	      		<div class="cont">
@@ -112,18 +123,18 @@
 					        
 				        </div>
 				     </div>
-      		</div>
+      		</div> --}}
       		<div class="dash-unit">
-      		<dtitle>Inbox (1)</dtitle>
+      		<dtitle>Игровая зона | Квесты</dtitle>
       		<hr>
       		<div class="framemail">
     			<div class="window">
 			        <ul class="mail">
 			            <li>
 			                <i class="unread"></i>
-			                <img class="avatar" src="http://www.prepbootstrap.com/Content/images/shared/single-page-admin/photo01.jpeg" alt="avatar">
-			                <p class="sender">Adam W.</p>
-			                <p class="message"><strong>Working</strong> - This is the last...</p>
+			                <img class="avatar" src="{{asset('img/photo01.jpeg')}}" alt="avatar">
+			                <p class="sender">Бог</p>
+			                <p class="message"><strong>Квест</strong> - Расскажи о себе миру...</p>
 			                <div class="actions">
 			                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
 			                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/star_fav.png" alt="favourite"></a>
@@ -133,9 +144,9 @@
 			            </li>
 			            <li>
 			                <i class="read"></i>
-			                <img class="avatar" src="http://www.prepbootstrap.com/Content/images/shared/single-page-admin/photo02.jpg" alt="avatar">
-			                <p class="sender">Dan E.</p>
-			                <p class="message"><strong>Hey man!</strong> - You have to taste ...</p>
+			                <img class="avatar" src="{{asset('img/photo01.jpeg')}}" alt="avatar">
+			                <p class="sender">Бог</p>
+			                <p class="message"><strong>Квест</strong> - Исправь 10 багов...</p>
 			                <div class="actions">
 			                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
 			                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/star_fav.png" alt="favourite"></a>
@@ -145,9 +156,9 @@
 			            </li>
 			            <li>
 			                <i class="read"></i>
-			                <img class="avatar" src="http://www.prepbootstrap.com/Content/images/shared/single-page-admin/photo03.jpg" alt="avatar">
-			                <p class="sender">Leonard N.</p>
-			                <p class="message"><strong>New Mac :D</strong> - So happy with ...</p>
+			                <img class="avatar" src="{{asset('img/photo01.jpeg')}}" alt="avatar">
+			                <p class="sender">Бог</p>
+			                <p class="message"><strong>Квест</strong> - Заполни весь профиль ...</p>
 			                <div class="actions">
 			                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
 			                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/star_fav.png" alt="favourite"></a>
@@ -157,9 +168,9 @@
 			            </li>
 			            <li>
 			                <i class="read"></i>
-			                <img class="avatar" src="http://www.prepbootstrap.com/Content/images/shared/single-page-admin/photo04.jpg" alt="avatar">
-			                <p class="sender">Peter B.</p>
-			                <p class="message"><strong>Thank you</strong> - Finally I can ...</p>
+			                <img class="avatar" src="{{asset('img/photo01.jpeg')}}" alt="avatar">
+			                <p class="sender">Бог</p>
+			                <p class="message"><strong>Квест</strong> - Победи релиз ...</p>
 			                <div class="actions">
 			                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
 			                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/star_fav.png" alt="favourite"></a>
@@ -172,7 +183,7 @@
 			</div>
 		</div>
 		<div class="dash-unit">
-	      		<dtitle>Twitter Widget</dtitle>
+	      		<dtitle>Сооющения</dtitle>
 	      		<hr>
 				<div class="info-user">
 					<span aria-hidden="true" class="li_megaphone fs2"></span>
