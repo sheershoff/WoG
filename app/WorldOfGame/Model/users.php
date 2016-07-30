@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace App\WorldOfGame\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model{
+class users extends Model{
     public $timestamps = false;
-    protected $table = "User";
+    protected $table = "users";
 	protected $fillables = ["name", "userType", "userProfileId", "userStatusId", "photo"];
 }

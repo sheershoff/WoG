@@ -31,17 +31,19 @@ Route::group(
 	function(){
 
 		Route::resource('robots','Rest\RobotsController');
+		Route::resource("users", 'Rest\UsersController');
+		Route::resource("userProfiles", 'Rest\UserProfilesController');
 
 
-    	Route::get('robot/{id}', 'Rest\RobotsController@get');
-	    // Create robot
-		Route::post('robot', 'Rest\RobotsController@create');
-		// Delete robot
-		Route::delete('robot/{$id}', 'Rest\RobotsController@delete');
-		// Execute robot
-		Route::put('robot/{$id}', 'Rest\RobotsController@execute');
-		// Get all robots 
-		Route::get('robots', 'Rest\RobotsController@getAll');
+  //   	Route::get('robot/{id}', 'Rest\RobotsController@get');
+	 //    // Create robot
+		// Route::post('robot', 'Rest\RobotsController@create');
+		// // Delete robot
+		// Route::delete('robot/{$id}', 'Rest\RobotsController@delete');
+		// // Execute robot
+		// Route::put('robot/{$id}', 'Rest\RobotsController@execute');
+		// // Get all robots 
+		// Route::get('robots', 'Rest\RobotsController@getAll');
 	}
 );
 
