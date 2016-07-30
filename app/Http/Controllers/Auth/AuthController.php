@@ -30,6 +30,9 @@ class AuthController extends Controller
      */
     protected $redirectTo = '/';
 
+    //Для LDAP
+    //protected $username = 'username';
+
     /**
      * Create a new authentication controller instance.
      *

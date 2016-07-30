@@ -157,6 +157,10 @@ return [
         App\Providers\RouteServiceProvider::class,
         Orangehill\Iseed\IseedServiceProvider::class,
 
+        /*
+        *   LDAP Authentication provider
+        */
+        //Dsdevbe\LdapConnector\LdapConnectorServiceProvider::class
     ],
 
     /*
