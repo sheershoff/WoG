@@ -22,7 +22,7 @@ if ($UserQuest)
 {
 	$quest =  DB::select('select * from "wog_UserQuest" where "wog_Quest"."id" = '.$UserQuest[0]->id);
 	//	dd($quest);
-	$Actions =  DB::select('select * from "wog_Action" where "wog_Action"."questId" = '.$UserQuest[0]->id);
+	$Actions =  DB::select('select * from "wog_Action" where "wog_Action"."questId" = '.$UserQuest[0]->id.' order by id desc');
 		//	dd($Actions);
 	if ($Actions)
 	{
@@ -33,7 +33,8 @@ if ($UserQuest)
 	try
 	{
 	$ActionTransaction = DB::insert('insert into ActionTransaction set user_id ='.id.' actionId = '.$Actions[0]->id.' mailTemplateId = '.$MailTemplate[0]->id.' created_at sysdate');
-	$CurrencyTransaction = DB::insert('insert into CurrencyTransaction set value ='.$ActionsCurrency[0]->value.' currencyId = '.$ActionsCurrency[0]->id.' ')
+	$CurrencyTransaction = DB::insert('insert into CurrencyTransaction set value ='.$ActionsCurrency[0]->value.' currencyId = '.$ActionsCurrency[0]->id.' ');
+	$Balance = DB::update('update wog_Balance set value=value+'.ActionsCurrency[0]->value.' update_at = sysdate where userId='.id.' and currencyId='.$ActionsCurrency[0]->id);
 		}
 	catch{
 		$error='Error on DB'

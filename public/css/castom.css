@@ -15,3 +15,13 @@ body {
     color: #fff;
     border-radius: 4px;
 }
+
+{
+	background: none;
+	display: inline-block;
+	height: 16px;
+	margin-left: 6px;
+	opacity: .1;
+	position: relative;
+	width: 16px;
+}

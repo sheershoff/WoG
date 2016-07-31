@@ -66,6 +66,7 @@ Route::resource('Pages','PagesController');
 
 Route::get('/', 'WogController@index');
 Route::get('/personal-data', 'WogController@personalData');
+Route::get('/add-quest', 'WogController@addQuest');
 
 
 
