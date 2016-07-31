@@ -7,7 +7,7 @@
 
 
       <!-- USER PROFILE BLOCK -->
-        <div class="col-sm-3 col-lg-3">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 <!--         	<div class="half-unit">
 	      		<dtitle>Local Time</dtitle>
 	      		<hr>
@@ -16,7 +16,7 @@
 						<p>StatCounter Information</p>
 		      		</div>
 			</div> -->
-			<div style=" height: 170px; " class="half-unit">
+			<div id='Quest' style=" height: 170px; " class="half-unit">
 	      		<dtitle>Новые задания</dtitle>
 	      		<hr>
 	      			<div class="cont2">
@@ -24,9 +24,9 @@
 	      				<br>
 	      				<br>
 	      				<p>Система</p>
-	      				<p><bold>Заполни профиль</bold></p>
-	      				   <button type="button" class="btn btn-default btn-xs">Принять</button>
-	      				   <button type="button" class="btn btn-default btn-xs">Отклонить</button>
+	      				<p><bold>{{$QustByUser[0]->name}}</bold></p>
+	      				   <button data-user-id="{{Auth::user()->id}}" data-quest-id="{{$QustByUser[0]->id}}" data-type="true" type="button" class="add-dell-new-qvest btn btn-default btn-xs">Принять</button>
+	      				   <button data-user-id="{{Auth::user()->id}}" data-quest-id="{{$QustByUser[0]->id}}" data-type="false" type="button" class="add-dell-new-qvest btn btn-default btn-xs">Отклонить</button>
 	      			</div>
 			</div>
       		<div class="dash-unit">
@@ -81,7 +81,7 @@
 				</div>
 			</div> --}}
         </div>
-      	<div class="col-sm-3 col-lg-9">
+      	<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
 	  
 	  <!-- BARS CHART - lineandbars.js file -->     
       		<div style=" height: 450px; " class="half-unit">
@@ -132,11 +132,13 @@
       		<div class="framemail">
     			<div class="window">
 			        <ul class="mail">
-			            <li>
+
+	      			@foreach ($MyQustByUser as $val)
+  						<li>
 			                <i class="unread"></i>
 			                <img class="avatar" src="{{asset('img/photo01.jpeg')}}" alt="avatar">
 			                <p class="sender">Бог</p>
-			                <p class="message"><strong>Квест</strong> - Расскажи о себе миру...</p>
+			                <p class="message"><strong>{{$val->name}}</strong> - {{ $val->description}}...</p>
 			                <div class="actions">
 			                	  <button style="margin-top: 14px;  margin-right: 5px; margin-left: -25px;" type="button" class="btn btn-default btn-xs">Завершить квест</button>
 			                	{{-- <a href="#"><img></a> --}}
@@ -146,7 +148,8 @@
 			                    {{-- <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/trash.png" alt="delete"></a> --}}
 			                </div>
 			            </li>
-			            <li>
+	      			@endforeach
+{{-- 			            <li>
 			                <i class="read"></i>
 			                <img class="avatar" src="{{asset('img/photo01.jpeg')}}" alt="avatar">
 			                <p class="sender">Бог</p>
@@ -181,7 +184,7 @@
 			                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/tag.png" alt="label"></a>
 			                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/trash.png" alt="delete"></a>
 			                </div>
-			            </li>
+			            </li> --}}
 			        </ul>
     			</div>
 			</div>
@@ -206,21 +209,32 @@
 			</div>
       	</div>
       	<script>
-      	$.ajax({
-      		url: '/path/to/file',
-      		type: 'POST',
-      		dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
-      		data: {param1: 'value1'},
-      	})
-      	.done(function() {
-      		console.log("success");
-      	})
-      	.fail(function() {
-      		console.log("error");
-      	})
-      	.always(function() {
-      		console.log("complete");
-      	});
+
+	$('.add-dell-new-qvest').click(function(event) {
+		console.log($(this).data());
+		$.get('/add-quest?userID=' + $(this).data().userId + '&questId=' + $(this).data().questId, function(data) {
+			/*optional stuff to do after success */
+		});
+		$('#Quest').html(' ');
+		
+	});
+
+
+      	// $.ajax({
+      	// 	url: '/path/to/file',
+      	// 	type: 'POST',
+      	// 	dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+      	// 	data: {param1: 'value1'},
+      	// })
+      	// .done(function() {
+      	// 	console.log("success");
+      	// })
+      	// .fail(function() {
+      	// 	console.log("error");
+      	// })
+      	// .always(function() {
+      	// 	console.log("complete");
+      	// });
       	
       	</script>
 @stop
