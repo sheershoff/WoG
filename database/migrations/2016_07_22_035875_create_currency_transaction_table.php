@@ -22,7 +22,7 @@ class CreateCurrencyTransactionTable extends Migration
             $table->integer('actionCurrencyId')->unsigned();
             $table->foreign('actionCurrencyId')->references('id')->on('ActionCurrency');
             $table->integer('actionTrancactionId')->unsigned();
-            $table->foreign('actionTrancactionId')->references('id')->on('ActionTrancaction');
+            $table->foreign('actionTrancactionId')->references('id')->on('ActionTransaction');
             $table->timestamps();
 			$table->softDeletes();
         });
