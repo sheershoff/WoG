@@ -14,8 +14,8 @@ class CreateCurrencyTypesTable extends Migration
     {
         Schema::create('CurrencyTypes', function (Blueprint $table) {
             $table->increments('id')->comment('типы игровыех валют');
-            $table->string('name')->unique()->comment('скилы, платёжные валюты, значки, рейтинги и тп');
-            $table->string('unit')->unique()->comment('единицы измерения');
+            $table->string('name',255)->unique()->comment('скилы, платёжные валюты, значки, рейтинги и тп');
+            $table->string('unit',255)->unique()->comment('единицы измерения');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -13,18 +13,18 @@ class CreateUserTable extends Migration
     public function up()
     {
         	
-        Schema::create('User', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->increments('id')->comment('Пользователи');
-            $table->string('login')->nullable()->comment('Логин')->unique();
-            $table->string('name')->nullable()->comment('ФИО или имя команды')->unique();
-            $table->string('email')->unique()->nullable();
-            $table->string('password')->nullable();
+            $table->string('login',30)->nullable()->comment('Логин')->unique();
+            $table->string('name',255)->nullable()->comment('ФИО или имя команды')->unique();
+            $table->string('email',60)->unique()->nullable();
+            $table->string('password',60)->nullable();
             $table->integer('userType')->default(1)->comment('1 - пользователь, 2 - команда, 3 - робот');
             $table->integer('userStatusId')->default(1)->unsigned()->comment('Статус пользователя. 1-активен, 0-не активен');
             $table->foreign('userStatusId')->references('id')->on('UserStatus');
-            $table->string('psLogin')->unique()->nullable();
-            $table->string('phoneNumber')->nullable();
-            $table->string('tabNumber')->nullable();
+            $table->string('psLogin',30)->unique()->nullable()->comment('логин в пс');
+            $table->string('phoneNumber',11)->nullable()->comment('телефонный номер без - с +7');
+            $table->string('tabNumber',30)->nullable()->comment('Табельный номер');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
@@ -39,6 +39,6 @@ class CreateUserTable extends Migration
      */
     public function down()
     {
-        Schema::drop('User');
+        Schema::drop('users');
     }
 }

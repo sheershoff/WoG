@@ -17,13 +17,13 @@ class CreateUserQuestTable extends Migration
             $table->increments('id')->comment('Квесты у пользователя');
             $table->integer('questId')->unsigned();
             $table->foreign('questId')->references('id')->on('Quest');
-            $table->integer('questType')->unsigned();
+            $table->integer('questType')->unsigned()->default(1)->comment('Тип квеста - зачем поле тут не помню');
             $table->integer('userId')->unsigned();
-            $table->foreign('userId')->references('id')->on('User');
-            $table->integer('userQuestStatusId')->unsigned();
+            $table->foreign('userId')->references('id')->on('users');
+            $table->integer('userQuestStatusId')->unsigned()->comment('Статус квеста - доступен, начат и т.п.');
             $table->foreign('userQuestStatusId')->references('id')->on('Quest');
             $table->timestamps();
-			$table->softDeletes();
+	    $table->softDeletes();
         });
 		
 	}

@@ -16,12 +16,12 @@ class CreateActionTable extends Migration
 
         Schema::create('Action', function (Blueprint $table) {
             $table->increments('id')->comment('Дейстивий возможные с валютой');
-            $table->string('name')->comment('Н:расход на... начислено за...');
+            $table->string('name',255)->comment('Н:расход на... начислено за...');
             $table->text('description')->nullable()->comment('Описание действия');
             $table->integer('questId')->unsigned();
             $table->foreign('questId')->references('id')->on('Quest');
             $table->timestamps();
-			$table->softDeletes();
+	    $table->softDeletes();
         });
 
 	}

@@ -12,15 +12,15 @@ class CreateMailTemplateTable extends Migration
      */
     public function up()
     {
-		Schema::create('MailTemplate', function (Blueprint $table) {
+	Schema::create('MailTemplate', function (Blueprint $table) {
             $table->increments('id')->comment('Шаблоны писем, на каждое действие может быть несколько действий');
-            $table->string('name')->unique()->comment('Название шаблона');
+            $table->string('name',255)->unique()->comment('Название шаблона');
             $table->text('body')->nullable()->comment('Тело шаблона');
             $table->integer('size')->default(1)->comment('Вес, для рандобного выбора');
             $table->integer('actionId')->unsigned();
             $table->foreign('actionId')->references('id')->on('Action');
             $table->timestamps();
-			$table->softDeletes();
+	    $table->softDeletes();
         });
 	}
 
