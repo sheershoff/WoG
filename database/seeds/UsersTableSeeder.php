@@ -11,7 +11,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('User')->delete();
+/*        DB::table('User')->delete();
         DB::table('User')->insert(array (
             0 => 
             array (
@@ -27,6 +27,6 @@ class UsersTableSeeder extends Seeder
                 'email' => 'ruslan@mail.com',
                 'password' => '$2y$10$E/3OahJvTElVLt6i6vT/BOzLEBWxQ6TnR/X8u9pjGFua/jrXR/eYu',
             ),
-        ));
+        ));*/
     }
 }
