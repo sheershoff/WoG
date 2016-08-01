@@ -17,6 +17,6 @@ php artisan iseed Action
 php artisan iseed UserQuest
 php artisan iseed ActionCurrency
 php artisan iseed MailTemplate
-php artisan iseed ActionTrancaction
-php artisan iseed CurrencyTrancaction
+php artisan iseed ActionTransaction
+php artisan iseed CurrencyTransaction
 php artisan iseed UserSkill

@@ -29,10 +29,7 @@ class DatabaseSeeder extends Seeder
         $this->call('UserQuestTableSeeder');
         $this->call('ActionCurrencyTableSeeder');
         $this->call('MailTemplateTableSeeder');
-        $this->call('ActionTrancactionTableSeeder');
-        $this->call('CurrencyTrancactionTableSeeder');
         $this->call('UserSkillTableSeeder');
-        $this->call('UsersTableSeeder');
         $this->call('PasswordResetsTableSeeder');
     }
 }

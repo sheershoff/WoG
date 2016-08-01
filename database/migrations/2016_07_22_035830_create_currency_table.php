@@ -18,7 +18,7 @@ class CreateCurrencyTable extends Migration
             $table->text('description')->nullable();
             $table->string('function')->nullable()->comment('функции пересчитывает количество начисляемой валюты.null 1=1');
             $table->json('options')->nullable()->comment('прочие настройки');
-            $table->binary('photo')->comment('Картинка валюты');
+            $table->binary('photo')->nullable()->comment('Картинка валюты');
             $table->boolean('topMenu')->default(0)->comment('показывать в меню');
             $table->integer('roleId')->unsigned();
             $table->foreign('roleId')->references('id')->on('Role');

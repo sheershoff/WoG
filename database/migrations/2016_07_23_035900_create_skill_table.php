@@ -19,7 +19,7 @@ class CreateSkillTable extends Migration
             $table->json('options')->nullable()->comment('прочие настройки');
             $table->integer('currencyId')->nullable()->unsigned()->comment('Связка с валютой в которой считается навык у пользователя');
             $table->foreign('currencyId')->references('id')->on('Currency');
-            $table->integer('skillId')->unsigned()->comment('Связка с валютой в которой считается навык у пользователя');
+            $table->integer('skillId')->unsigned()->nullable()->comment('Связка с валютой в которой считается навык у пользователя');
             $table->boolean('appoint')->default(1)->comment('Может назначаться пользователю');
             $table->timestamps();
             $table->softDeletes();
