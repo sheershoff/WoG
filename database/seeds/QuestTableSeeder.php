@@ -27,6 +27,16 @@ class QuestTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
+            1 => 
+            array (
+                'id' => 2,
+                'name' => 'Заполни профиль',
+                'description' => 'Дорогой друг, заполни профиль своего персонажа. Награда ждет тебя.',
+                'roleId' => 1,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
         ));
         
         

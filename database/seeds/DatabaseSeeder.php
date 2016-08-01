@@ -32,5 +32,7 @@ class DatabaseSeeder extends Seeder
         $this->call('ActionTrancactionTableSeeder');
         $this->call('CurrencyTrancactionTableSeeder');
         $this->call('UserSkillTableSeeder');
+        $this->call('UsersTableSeeder');
+        $this->call('PasswordResetsTableSeeder');
     }
 }

@@ -21,25 +21,25 @@ class CurrencyTypesTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'name' => 'Карма',
-                'unit' => 'СеперМегаСпасибо',
+                'unit' => 'СуперМегаСпасибо',
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
             1 => 
             array (
-                'id' => 2,
-                'name' => 'Голда',
-                'unit' => 'Тугрики',
+                'id' => 3,
+                'name' => 'Навык',
+                'unit' => 'Звезд',
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
             2 => 
             array (
-                'id' => 3,
-                'name' => 'Навык',
-                'unit' => 'Звезда',
+                'id' => 2,
+                'name' => 'Голда',
+                'unit' => 'Тугриков',
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
