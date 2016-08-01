@@ -6,7 +6,6 @@ php artisan iseed password_resets
 php artisan iseed Role
 php artisan iseed UserQuestStatus
 php artisan iseed jobs
-php artisan iseed User
 php artisan iseed UserProfile
 php artisan iseed TeamUser
 php artisan iseed Quest
