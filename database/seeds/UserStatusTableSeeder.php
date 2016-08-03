@@ -14,9 +14,9 @@ class UserStatusTableSeeder extends Seeder
     {
         
 
-        \DB::table('UserStatus')->delete();
+        \DB::table('user_statuses')->delete();
         
-        \DB::table('UserStatus')->insert(array (
+        \DB::table('user_statuses')->insert(array (
             0 => 
             array (
                 'id' => 1,

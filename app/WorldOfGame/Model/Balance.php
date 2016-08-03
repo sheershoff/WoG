@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Balance extends Model;
 	public $timestamps = false;
-	protected $table = "Balance";
-	protected $fillables = ["value", "currencyId", "userId"];
+	protected $table = "balances";
+	protected $fillables = ["value", "currency_id", "user_id"];
 }

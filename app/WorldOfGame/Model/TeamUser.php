@@ -6,14 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class TeamUser extends Model{
 	public $timestamps = false;
-	protected $table = "TeamUser";
+	protected $table = "team_users";
 	protected $fillables = 
 		[
-		"userId", 
-		"teamId", 
-		"isLeader",
-		"isActive",
-		"startDate",
-		"endDate"
+		"user_id", 
+		"team_user_id", 
+		"is_leader",
 		];
 }

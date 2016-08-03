@@ -14,15 +14,15 @@ class ActionTableSeeder extends Seeder
     {
         
 
-        \DB::table('Action')->delete();
+        \DB::table('actions')->delete();
         
-        \DB::table('Action')->insert(array (
+        \DB::table('actions')->insert(array (
             0 => 
             array (
                 'id' => 1,
                 'name' => 'Взятие квеста игроком',
                 'description' => '',
-                'questId' => 1,
+                'quest_id' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -32,7 +32,7 @@ class ActionTableSeeder extends Seeder
                 'id' => 2,
                 'name' => 'Выполнение квеста игроком',
                 'description' => '',
-                'questId' => 1,
+                'quest_id' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -42,7 +42,7 @@ class ActionTableSeeder extends Seeder
                 'id' => 3,
                 'name' => 'Взятие квеста Заполни профиль',
                 'description' => NULL,
-                'questId' => 2,
+                'quest_id' => 2,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -52,7 +52,7 @@ class ActionTableSeeder extends Seeder
                 'id' => 4,
                 'name' => 'Завершение квеста Заполни профиль',
                 'description' => NULL,
-                'questId' => 2,
+                'quest_id' => 2,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

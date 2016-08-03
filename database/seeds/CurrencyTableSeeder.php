@@ -14,9 +14,9 @@ class CurrencyTableSeeder extends Seeder
     {
         
 
-        \DB::table('Currency')->delete();
+        \DB::table('currencies')->delete();
         
-        \DB::table('Currency')->insert(array (
+        \DB::table('currencies')->insert(array (
             0 => 
             array (
                 'id' => 3,
@@ -25,9 +25,9 @@ class CurrencyTableSeeder extends Seeder
                 'function' => NULL,
                 'options' => NULL,
                 'photo' => NULL,
-                'topMenu' => false,
-                'roleId' => 1,
-                'currencyTypesId' => 1,
+                'top_menu' => false,
+                'role_id' => 1,
+                'currency_type_id' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -40,9 +40,9 @@ class CurrencyTableSeeder extends Seeder
                 'function' => NULL,
                 'options' => NULL,
                 'photo' => NULL,
-                'topMenu' => false,
-                'roleId' => 1,
-                'currencyTypesId' => 2,
+                'top_menu' => false,
+                'role_id' => 1,
+                'currency_type_id' => 2,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -55,9 +55,9 @@ class CurrencyTableSeeder extends Seeder
                 'function' => NULL,
                 'options' => NULL,
                 'photo' => NULL,
-                'topMenu' => false,
-                'roleId' => 1,
-                'currencyTypesId' => 3,
+                'top_menu' => false,
+                'role_id' => 1,
+                'currency_type_id' => 3,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

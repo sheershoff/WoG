@@ -14,7 +14,7 @@ class ActionTransactionTableSeeder extends Seeder
     {
         
 
-        \DB::table('ActionTransaction')->delete();
+        \DB::table('action_transactions')->delete();
         
         
         

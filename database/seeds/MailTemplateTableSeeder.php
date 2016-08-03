@@ -14,9 +14,9 @@ class MailTemplateTableSeeder extends Seeder
     {
         
 
-        \DB::table('MailTemplate')->delete();
+        \DB::table('mail_templates')->delete();
         
-        \DB::table('MailTemplate')->insert(array (
+        \DB::table('mail_templates')->insert(array (
             0 => 
             array (
                 'id' => 1,
@@ -27,7 +27,7 @@ class MailTemplateTableSeeder extends Seeder
 
 Награда за выполнение не заставить себя ждать.',
                 'size' => 1,
-                'actionId' => 3,
+                'action_id' => 3,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -40,7 +40,7 @@ class MailTemplateTableSeeder extends Seeder
 
 Ваша награда: карма повышена на 5 супермегаспасибо, а голда - на 10 тугриков  ',
                 'size' => 1,
-                'actionId' => 4,
+                'action_id' => 4,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

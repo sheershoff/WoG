@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class MailTemplate extends Model{
 	public $timestamps = false;
-	protected $table = "MailTemplate";
-	protected $fillables = ["actionId", "body", "size"];
+	protected $table = "mail_templates";
+	protected $fillables = ["action_id", "body", "size"];
 }

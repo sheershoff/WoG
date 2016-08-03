@@ -12,17 +12,15 @@ class CreateUserSkillTable extends Migration
      */
     public function up()
     {
-        Schema::create('UserSkill', function (Blueprint $table) {
+        Schema::create('user_skills', function (Blueprint $table) {
             $table->increments('id')->comment('Навыки конкретного пользователя');
-            $table->integer('userId')->unsigned()->comment('ключ на таблицу User');
-            $table->foreign('userId')->references('id')->on('users');
-            $table->integer('skillId')->unsigned();
-            $table->foreign('skillId')->references('id')->on('Skill')->comment('ключ на таблицу Skill');
+            $table->integer('user_id')->unsigned()->comment('ключ на таблицу User');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('skill_id')->unsigned()->comment('навык');
+            $table->foreign('skill_id')->references('id')->on('skills');
             $table->integer('value')->unsigned()->nullable()->comment('оценка');
-            $table->integer('valueUser')->unsigned()->nullable()->comment('самооценка (устаревшее)');
-            $table->integer('valueExpert')->unsigned()->nullable()->comment('прочая сводная оценка. (устаревшее)');
-            $table->integer('expertUserId')->unsigned()->nullable()->comment('Ключ на пользователя который проставил оценку. Если = userId, то самооценка, если =null то тоже самое');
-            $table->foreign('expertUserId')->references('id')->on('users');
+            $table->integer('expert_user_id')->unsigned()->nullable()->comment('Ключ на пользователя который проставил оценку. Если = userId, то самооценка, если =null то тоже самое');
+            $table->foreign('expert_user_id')->references('id')->on('users');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -35,7 +33,7 @@ class CreateUserSkillTable extends Migration
      */
     public function down()
     {
-        Schema::drop('UserSkill', function (Blueprint $table) {
+        Schema::drop('user_skills', function (Blueprint $table) {
         });
     }
 }

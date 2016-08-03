@@ -14,15 +14,15 @@ class QuestTableSeeder extends Seeder
     {
         
 
-        \DB::table('Quest')->delete();
+        \DB::table('quests')->delete();
         
-        \DB::table('Quest')->insert(array (
+        \DB::table('quests')->insert(array (
             0 => 
             array (
                 'id' => 1,
                 'name' => 'Расскажи о себе миру',
                 'description' => 'необходимо ответственно и вдумчиво заполнить о себе 5 профессиональных навыков',
-                'roleId' => 1,
+                'role_id' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -32,7 +32,7 @@ class QuestTableSeeder extends Seeder
                 'id' => 2,
                 'name' => 'Заполни профиль',
                 'description' => 'Дорогой друг, заполни профиль своего персонажа. Награда ждет тебя.',
-                'roleId' => 1,
+                'role_id' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

@@ -12,7 +12,7 @@ class CreateMailAggTable extends Migration
      */
     public function up()
     {
-        Schema::create('MailAgg', function (Blueprint $table) {
+        Schema::create('mail_aggs', function (Blueprint $table) {
             $table->increments('id')->comment('Виды агрегации почты');
             $table->string('name',255);
             $table->integer('value')->unsigned()->nullable()->comment('длинна периода в секундах, null -  не применимо, 0 - мгновенно');
@@ -28,6 +28,6 @@ class CreateMailAggTable extends Migration
      */
     public function down()
     {
-        Schema::drop('MailAgg');
+        Schema::drop('mail_aggs');
     }
 }

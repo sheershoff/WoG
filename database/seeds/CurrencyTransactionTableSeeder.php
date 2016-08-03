@@ -14,7 +14,7 @@ class CurrencyTransactionTableSeeder extends Seeder
     {
         
 
-        \DB::table('CurrencyTransaction')->delete();
+        \DB::table('currency_transactions')->delete();
         
         
         

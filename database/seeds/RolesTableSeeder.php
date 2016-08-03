@@ -14,32 +14,32 @@ class RolesTableSeeder extends Seeder
     {
         
 
-        DB::table('Role')->delete();
-        DB::table('Role')->insert(array (
+        DB::table('roles')->delete();
+        DB::table('roles')->insert(array (
             0 => 
             array (
-                'id' => 1,
+                'id' => -1,
                 'name' => 'Admin',
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
             1 => 
             array (
-                'id' => 2,
+                'id' => -2,
                 'name' => 'Guest',
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
             2 => 
             array (
-                'id' => 3,
+                'id' => 8,
                 'name' => 'lvl1',
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
             3 => 
             array (
-                'id' => 4,
+                'id' => 9,
                 'name' => 'lvl2',
                 'created_at' => NULL,
                 'updated_at' => NULL,
@@ -64,6 +64,38 @@ class RolesTableSeeder extends Seeder
                 'name' => 'lvl5',
                 'created_at' => NULL,
                 'updated_at' => NULL,
+            ),
+            7 => 
+            array (
+                'id' => 1,
+                'name' => 'Дух',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            8 => 
+            array (
+                'id' => 2,
+                'name' => 'Солдат',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            9 => 
+            array (
+                'id' => 4,
+                'name' => 'Командир',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            10 => 
+            array (
+                'id' => 3,
+                'name' => 'Эксперт',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
             ),
         ));
         

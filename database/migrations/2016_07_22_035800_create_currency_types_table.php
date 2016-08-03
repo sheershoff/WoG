@@ -12,7 +12,7 @@ class CreateCurrencyTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('CurrencyTypes', function (Blueprint $table) {
+        Schema::create('currency_types', function (Blueprint $table) {
             $table->increments('id')->comment('типы игровыех валют');
             $table->string('name',255)->unique()->comment('скилы, платёжные валюты, значки, рейтинги и тп');
             $table->string('unit',255)->unique()->comment('единицы измерения');
@@ -28,7 +28,7 @@ class CreateCurrencyTypesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('CurrencyTypes', function (Blueprint $table) {
+        Schema::drop('currency_types', function (Blueprint $table) {
         });
     }
 }

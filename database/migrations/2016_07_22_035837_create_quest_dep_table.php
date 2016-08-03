@@ -12,12 +12,12 @@ class CreateQuestDepTable extends Migration
      */
     public function up()
     {
-        Schema::create('QuestDepend', function (Blueprint $table) {
+        Schema::create('quest_depends', function (Blueprint $table) {
             $table->increments('id')->comment('Работы-квестодатели/считатели');
-            $table->integer('questId')->unsigned()->comment('данный квест можно выполнить только после выполнения связанных квестов');
-            $table->foreign('questId')->references('id')->on('Quest')->onDelete('cascade');
-            $table->integer('dependQuestId')->unsigned()->comment('только после этого');
-            $table->foreign('dependQuestId')->references('id')->on('Quest')->onDelete('cascade');
+            $table->integer('quest_id')->unsigned()->comment('данный квест можно выполнить только после выполнения связанных квестов');
+            $table->foreign('quest_id')->references('id')->on('quests')->onDelete('cascade');
+            $table->integer('depend_quest_id')->unsigned()->comment('только после этого');
+            $table->foreign('depend_quest_id')->references('id')->on('quests')->onDelete('cascade');
             //todo: написать робота, который будет накидывать квесты пользователю
             $table->timestamps();
 	    $table->softDeletes();
@@ -32,7 +32,7 @@ class CreateQuestDepTable extends Migration
      */
     public function down()
     {
-        Schema::drop('QuestDepend', function (Blueprint $table) {
+        Schema::drop('quest_depends', function (Blueprint $table) {
         });
     }
 }

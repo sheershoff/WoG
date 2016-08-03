@@ -212,7 +212,7 @@
 
 	$('.add-dell-new-qvest').click(function(event) {
 		console.log($(this).data());
-		$.get('/add-quest?userID=' + $(this).data().userId + '&questId=' + $(this).data().questId, function(data) {
+		$.get('/add-user-quest?userID=' + $(this).data().userId + '&questId=' + $(this).data().questId, function(data) {
 			/*optional stuff to do after success */
 		});
 		$('#Quest').html(' ');

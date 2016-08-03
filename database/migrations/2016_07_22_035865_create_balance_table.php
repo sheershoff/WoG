@@ -12,13 +12,13 @@ class CreateBalanceTable extends Migration
      */
     public function up()
     {
-        Schema::create('Balance', function (Blueprint $table) {
+        Schema::create('balances', function (Blueprint $table) {
             $table->increments('id')->comment('балансы игрока, вернее все его приобретения');
             $table->integer('value')->unsigned();
-            $table->integer('currencyId')->unsigned();
-            $table->foreign('currencyId')->references('id')->on('Currency');
-            $table->integer('userId')->unsigned();
-            $table->foreign('userId')->references('id')->on('users');
+            $table->integer('currency_id')->unsigned();
+            $table->foreign('currency_id')->references('id')->on('currencies');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });		
 	}
@@ -30,7 +30,7 @@ class CreateBalanceTable extends Migration
      */
     public function down()
     {
-        Schema::drop('Balance', function (Blueprint $table) {
+        Schema::drop('balances', function (Blueprint $table) {
         });
     }
 }

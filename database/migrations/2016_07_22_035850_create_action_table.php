@@ -14,12 +14,12 @@ class CreateActionTable extends Migration
     {
 
 
-        Schema::create('Action', function (Blueprint $table) {
+        Schema::create('actions', function (Blueprint $table) {
             $table->increments('id')->comment('Дейстивий возможные с валютой');
             $table->string('name',255)->comment('Н:расход на... начислено за...');
             $table->text('description')->nullable()->comment('Описание действия');
-            $table->integer('questId')->unsigned();
-            $table->foreign('questId')->references('id')->on('Quest');
+            $table->integer('quest_id')->unsigned();
+            $table->foreign('quest_id')->references('id')->on('quests');
             $table->timestamps();
 	    $table->softDeletes();
         });
@@ -33,7 +33,7 @@ class CreateActionTable extends Migration
      */
     public function down()
     {
-        Schema::drop('Action', function (Blueprint $table) {
+        Schema::drop('actions', function (Blueprint $table) {
         });
     }
 }

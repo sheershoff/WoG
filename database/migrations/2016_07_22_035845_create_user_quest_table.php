@@ -13,15 +13,15 @@ class CreateUserQuestTable extends Migration
     public function up()
     {
 
-        Schema::create('UserQuest', function (Blueprint $table) {
+        Schema::create('user_quests', function (Blueprint $table) {
             $table->increments('id')->comment('Квесты у пользователя');
-            $table->integer('questId')->unsigned();
-            $table->foreign('questId')->references('id')->on('Quest');
-            $table->integer('questType')->unsigned()->default(1)->comment('Тип квеста - зачем поле тут не помню');
-            $table->integer('userId')->unsigned();
-            $table->foreign('userId')->references('id')->on('users');
-            $table->integer('userQuestStatusId')->unsigned()->comment('Статус квеста - доступен, начат и т.п.');
-            $table->foreign('userQuestStatusId')->references('id')->on('Quest');
+            $table->integer('quest_id')->unsigned();
+            $table->foreign('quest_id')->references('id')->on('quests');
+            $table->integer('quest_type')->unsigned()->default(1)->comment('Тип квеста - зачем поле тут не помню');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('user_quest_status_id')->unsigned()->comment('Статус квеста - доступен, начат и т.п.');
+            $table->foreign('user_quest_status_id')->references('id')->on('user_quest_statuses');
             $table->timestamps();
 	    $table->softDeletes();
         });
@@ -35,7 +35,7 @@ class CreateUserQuestTable extends Migration
      */
     public function down()
     {
-        Schema::drop('UserQuest', function (Blueprint $table) {
+        Schema::drop('user_quests', function (Blueprint $table) {
         });
 
     }

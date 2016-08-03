@@ -14,17 +14,17 @@ class SkillTableSeeder extends Seeder
     {
         
 
-        \DB::table('Skill')->delete();
+        \DB::table('skills')->delete();
         
-        \DB::table('Skill')->insert(array (
+        \DB::table('skills')->insert(array (
             0 => 
             array (
                 'id' => 1,
                 'name' => 'Спикер',
                 'description' => 'Навык красиво говорить',
                 'options' => NULL,
-                'currencyId' => 6,
-                'skillId' => NULL,
+                'currency_id' => 6,
+                'parent_skill_id' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -35,8 +35,8 @@ class SkillTableSeeder extends Seeder
                 'name' => 'Слушатель',
                 'description' => 'Навык внимательно слушать и не перебивать',
                 'options' => NULL,
-                'currencyId' => 6,
-                'skillId' => NULL,
+                'currency_id' => 6,
+                'parent_skill_id' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -47,8 +47,8 @@ class SkillTableSeeder extends Seeder
                 'name' => 'Powerpoint',
                 'description' => 'Навык красиво рисовать презентации',
                 'options' => NULL,
-                'currencyId' => 6,
-                'skillId' => NULL,
+                'currency_id' => 6,
+                'parent_skill_id' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -59,8 +59,8 @@ class SkillTableSeeder extends Seeder
                 'name' => ' Бэкэнд',
                 'description' => NULL,
                 'options' => NULL,
-                'currencyId' => 6,
-                'skillId' => NULL,
+                'currency_id' => 6,
+                'parent_skill_id' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -71,8 +71,8 @@ class SkillTableSeeder extends Seeder
                 'name' => 'Фронтэнд',
                 'description' => NULL,
                 'options' => NULL,
-                'currencyId' => 6,
-                'skillId' => NULL,
+                'currency_id' => 6,
+                'parent_skill_id' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

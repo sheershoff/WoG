@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserQuest extends Model{
 	public $timestamps = false;
-	protected $table = "UserQuest";
-	protected $fillables = ["userId", "questId", "userQuestStatusId", "startDate", "endDate"];
+	protected $table = "user_quests";
+	protected $fillables = ["user_id", "quest_id", "user_quest_status_id"];
 }

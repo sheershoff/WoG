@@ -12,14 +12,14 @@ class CreateSkillTable extends Migration
      */
     public function up()
     {
-        Schema::create('Skill', function (Blueprint $table) {
+        Schema::create('skills', function (Blueprint $table) {
             $table->increments('id')->comment('Навыки');
             $table->string('name')->unique()->comment('Наименование');
             $table->text('description')->nullable();
             $table->json('options')->nullable()->comment('прочие настройки');
-            $table->integer('currencyId')->nullable()->unsigned()->comment('Связка с валютой в которой считается навык у пользователя');
-            $table->foreign('currencyId')->references('id')->on('Currency');
-            $table->integer('skillId')->unsigned()->nullable()->comment('Связка с валютой в которой считается навык у пользователя');
+            $table->integer('currency_id')->nullable()->unsigned()->comment('Связка с валютой в которой считается навык у пользователя');
+            $table->foreign('currency_id')->references('id')->on('currencies');
+            $table->integer('parent_skill_id')->unsigned()->nullable()->comment('Родительский скил. Null - это root');
             $table->boolean('appoint')->default(1)->comment('Может назначаться пользователю');
             $table->timestamps();
             $table->softDeletes();
@@ -34,7 +34,7 @@ class CreateSkillTable extends Migration
      */
     public function down()
     {
-        Schema::drop('Skill', function (Blueprint $table) {
+        Schema::drop('skills', function (Blueprint $table) {
         });
     }
 }

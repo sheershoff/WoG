@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserProfile extends Model{
 	public $timestamps = false;
-	protected $table = "UserProfile";
-	protected $fillables = ["userId", "psLogin", "email", "phoneNumber", "description"];
+	protected $table = "user_profiles";
+	protected $fillables = ["user_id", "ext_login", "email", "phone_number", "description"];
 }

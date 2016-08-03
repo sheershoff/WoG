@@ -14,18 +14,18 @@ class ActionCurrencyTableSeeder extends Seeder
     {
         
 
-        \DB::table('ActionCurrency')->delete();
+        \DB::table('action_currencies')->delete();
         
-        \DB::table('ActionCurrency')->insert(array (
+        \DB::table('action_currencies')->insert(array (
             0 => 
             array (
                 'id' => 2,
                 'name' => 'Повысить карму',
                 'description' => NULL,
-                'currencyId' => 3,
-                'actionId' => 4,
+                'currency_id' => 3,
+                'action_id' => 4,
                 'value' => 5,
-                'transactionUser' => true,
+                'transaction_user' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -35,10 +35,10 @@ class ActionCurrencyTableSeeder extends Seeder
                 'id' => 3,
                 'name' => 'Повысить голду',
                 'description' => NULL,
-                'currencyId' => 4,
-                'actionId' => 4,
+                'currency_id' => 4,
+                'action_id' => 4,
                 'value' => 10,
-                'transactionUser' => true,
+                'transaction_user' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

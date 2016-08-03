@@ -14,7 +14,7 @@ class UserQuestTableSeeder extends Seeder
     {
         
 
-        \DB::table('UserQuest')->delete();
+        \DB::table('user_quests')->delete();
         
         
         

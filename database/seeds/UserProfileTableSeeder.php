@@ -14,7 +14,7 @@ class UserProfileTableSeeder extends Seeder
     {
         
 
-        \DB::table('UserProfile')->delete();
+        \DB::table('user_profiles')->delete();
         
         
         

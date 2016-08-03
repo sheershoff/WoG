@@ -12,19 +12,19 @@ class CreateCurrencyTransactionTable extends Migration
      */
     public function up()
     {
-        Schema::create('CurrencyTransaction', function (Blueprint $table) {
+        Schema::create('currency_transactions', function (Blueprint $table) {
             $table->increments('id')->comment('история история изменений баланса игрока');
             $table->integer('value')->unsigned();
-            $table->integer('currencyId')->unsigned();
-            $table->foreign('currencyId')->references('id')->on('Currency');
-            $table->integer('userId')->unsigned();
-            $table->foreign('userId')->references('id')->on('users');
-            $table->integer('actionCurrencyId')->unsigned();
-            $table->foreign('actionCurrencyId')->references('id')->on('ActionCurrency');
-            $table->integer('actionTrancactionId')->unsigned();
-            $table->foreign('actionTrancactionId')->references('id')->on('ActionTransaction');
+            $table->integer('currency_id')->unsigned();
+            $table->foreign('currency_id')->references('id')->on('currencies');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('action_currency_id')->unsigned();
+            $table->foreign('action_currency_id')->references('id')->on('action_currencies');
+            $table->integer('action_trancaction_id')->unsigned();
+            $table->foreign('action_trancaction_id')->references('id')->on('action_transactions');
             $table->timestamps();
-			$table->softDeletes();
+            $table->softDeletes();
         });
 		
 	}
@@ -36,7 +36,7 @@ class CreateCurrencyTransactionTable extends Migration
      */
     public function down()
     {
-        Schema::drop('CurrencyTransaction', function (Blueprint $table) {
+        Schema::drop('currency_transactions', function (Blueprint $table) {
         });
     }
 }

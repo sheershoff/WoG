@@ -14,15 +14,15 @@ class TeamUserTableSeeder extends Seeder
     {
         
 
-        \DB::table('TeamUser')->delete();
+        \DB::table('team_users')->delete();
         
-        \DB::table('TeamUser')->insert(array (
+        \DB::table('team_users')->insert(array (
             0 => 
             array (
                 'id' => 1,
-                'userId' => 2,
-                'teamUserId' => 4,
-                'isLeader' => NULL,
+                'user_id' => 2,
+                'team_user_id' => 4,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -30,9 +30,9 @@ class TeamUserTableSeeder extends Seeder
             1 => 
             array (
                 'id' => 2,
-                'userId' => 3,
-                'teamUserId' => 4,
-                'isLeader' => NULL,
+                'user_id' => 3,
+                'team_user_id' => 4,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -40,9 +40,9 @@ class TeamUserTableSeeder extends Seeder
             2 => 
             array (
                 'id' => 3,
-                'userId' => 5,
-                'teamUserId' => 4,
-                'isLeader' => true,
+                'user_id' => 5,
+                'team_user_id' => 4,
+                'is_leader' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -50,9 +50,9 @@ class TeamUserTableSeeder extends Seeder
             3 => 
             array (
                 'id' => 4,
-                'userId' => 6,
-                'teamUserId' => 4,
-                'isLeader' => NULL,
+                'user_id' => 6,
+                'team_user_id' => 4,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -60,9 +60,9 @@ class TeamUserTableSeeder extends Seeder
             4 => 
             array (
                 'id' => 5,
-                'userId' => 7,
-                'teamUserId' => 4,
-                'isLeader' => NULL,
+                'user_id' => 7,
+                'team_user_id' => 4,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -70,9 +70,9 @@ class TeamUserTableSeeder extends Seeder
             5 => 
             array (
                 'id' => 6,
-                'userId' => 8,
-                'teamUserId' => 4,
-                'isLeader' => NULL,
+                'user_id' => 8,
+                'team_user_id' => 4,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -80,9 +80,9 @@ class TeamUserTableSeeder extends Seeder
             6 => 
             array (
                 'id' => 7,
-                'userId' => 9,
-                'teamUserId' => 4,
-                'isLeader' => NULL,
+                'user_id' => 9,
+                'team_user_id' => 4,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -90,9 +90,9 @@ class TeamUserTableSeeder extends Seeder
             7 => 
             array (
                 'id' => 8,
-                'userId' => 10,
-                'teamUserId' => 4,
-                'isLeader' => NULL,
+                'user_id' => 10,
+                'team_user_id' => 4,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -100,9 +100,9 @@ class TeamUserTableSeeder extends Seeder
             8 => 
             array (
                 'id' => 9,
-                'userId' => 26,
-                'teamUserId' => 66,
-                'isLeader' => NULL,
+                'user_id' => 26,
+                'team_user_id' => 66,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -110,9 +110,9 @@ class TeamUserTableSeeder extends Seeder
             9 => 
             array (
                 'id' => 10,
-                'userId' => 30,
-                'teamUserId' => 66,
-                'isLeader' => NULL,
+                'user_id' => 30,
+                'team_user_id' => 66,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -120,9 +120,9 @@ class TeamUserTableSeeder extends Seeder
             10 => 
             array (
                 'id' => 11,
-                'userId' => 35,
-                'teamUserId' => 66,
-                'isLeader' => NULL,
+                'user_id' => 35,
+                'team_user_id' => 66,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -130,9 +130,9 @@ class TeamUserTableSeeder extends Seeder
             11 => 
             array (
                 'id' => 12,
-                'userId' => 37,
-                'teamUserId' => 66,
-                'isLeader' => NULL,
+                'user_id' => 37,
+                'team_user_id' => 66,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -140,9 +140,9 @@ class TeamUserTableSeeder extends Seeder
             12 => 
             array (
                 'id' => 13,
-                'userId' => 40,
-                'teamUserId' => 66,
-                'isLeader' => NULL,
+                'user_id' => 40,
+                'team_user_id' => 66,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -150,9 +150,9 @@ class TeamUserTableSeeder extends Seeder
             13 => 
             array (
                 'id' => 14,
-                'userId' => 22,
-                'teamUserId' => 67,
-                'isLeader' => NULL,
+                'user_id' => 22,
+                'team_user_id' => 67,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -160,9 +160,9 @@ class TeamUserTableSeeder extends Seeder
             14 => 
             array (
                 'id' => 15,
-                'userId' => 23,
-                'teamUserId' => 67,
-                'isLeader' => NULL,
+                'user_id' => 23,
+                'team_user_id' => 67,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -170,9 +170,9 @@ class TeamUserTableSeeder extends Seeder
             15 => 
             array (
                 'id' => 16,
-                'userId' => 27,
-                'teamUserId' => 67,
-                'isLeader' => NULL,
+                'user_id' => 27,
+                'team_user_id' => 67,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -180,9 +180,9 @@ class TeamUserTableSeeder extends Seeder
             16 => 
             array (
                 'id' => 17,
-                'userId' => 50,
-                'teamUserId' => 67,
-                'isLeader' => NULL,
+                'user_id' => 50,
+                'team_user_id' => 67,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -190,9 +190,9 @@ class TeamUserTableSeeder extends Seeder
             17 => 
             array (
                 'id' => 18,
-                'userId' => 60,
-                'teamUserId' => 67,
-                'isLeader' => NULL,
+                'user_id' => 60,
+                'team_user_id' => 67,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -200,9 +200,9 @@ class TeamUserTableSeeder extends Seeder
             18 => 
             array (
                 'id' => 19,
-                'userId' => 24,
-                'teamUserId' => 68,
-                'isLeader' => NULL,
+                'user_id' => 24,
+                'team_user_id' => 68,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -210,9 +210,9 @@ class TeamUserTableSeeder extends Seeder
             19 => 
             array (
                 'id' => 20,
-                'userId' => 33,
-                'teamUserId' => 68,
-                'isLeader' => NULL,
+                'user_id' => 33,
+                'team_user_id' => 68,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -220,9 +220,9 @@ class TeamUserTableSeeder extends Seeder
             20 => 
             array (
                 'id' => 21,
-                'userId' => 34,
-                'teamUserId' => 68,
-                'isLeader' => NULL,
+                'user_id' => 34,
+                'team_user_id' => 68,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -230,9 +230,9 @@ class TeamUserTableSeeder extends Seeder
             21 => 
             array (
                 'id' => 22,
-                'userId' => 36,
-                'teamUserId' => 68,
-                'isLeader' => NULL,
+                'user_id' => 36,
+                'team_user_id' => 68,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -240,9 +240,9 @@ class TeamUserTableSeeder extends Seeder
             22 => 
             array (
                 'id' => 23,
-                'userId' => 38,
-                'teamUserId' => 68,
-                'isLeader' => NULL,
+                'user_id' => 38,
+                'team_user_id' => 68,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -250,9 +250,9 @@ class TeamUserTableSeeder extends Seeder
             23 => 
             array (
                 'id' => 24,
-                'userId' => 39,
-                'teamUserId' => 68,
-                'isLeader' => NULL,
+                'user_id' => 39,
+                'team_user_id' => 68,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -260,9 +260,9 @@ class TeamUserTableSeeder extends Seeder
             24 => 
             array (
                 'id' => 25,
-                'userId' => 42,
-                'teamUserId' => 68,
-                'isLeader' => NULL,
+                'user_id' => 42,
+                'team_user_id' => 68,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -270,9 +270,9 @@ class TeamUserTableSeeder extends Seeder
             25 => 
             array (
                 'id' => 26,
-                'userId' => 43,
-                'teamUserId' => 68,
-                'isLeader' => NULL,
+                'user_id' => 43,
+                'team_user_id' => 68,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -280,9 +280,9 @@ class TeamUserTableSeeder extends Seeder
             26 => 
             array (
                 'id' => 27,
-                'userId' => 47,
-                'teamUserId' => 68,
-                'isLeader' => NULL,
+                'user_id' => 47,
+                'team_user_id' => 68,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -290,9 +290,9 @@ class TeamUserTableSeeder extends Seeder
             27 => 
             array (
                 'id' => 28,
-                'userId' => 16,
-                'teamUserId' => 58,
-                'isLeader' => NULL,
+                'user_id' => 16,
+                'team_user_id' => 58,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -300,9 +300,9 @@ class TeamUserTableSeeder extends Seeder
             28 => 
             array (
                 'id' => 29,
-                'userId' => 17,
-                'teamUserId' => 58,
-                'isLeader' => NULL,
+                'user_id' => 17,
+                'team_user_id' => 58,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -310,9 +310,9 @@ class TeamUserTableSeeder extends Seeder
             29 => 
             array (
                 'id' => 30,
-                'userId' => 18,
-                'teamUserId' => 58,
-                'isLeader' => NULL,
+                'user_id' => 18,
+                'team_user_id' => 58,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -320,9 +320,9 @@ class TeamUserTableSeeder extends Seeder
             30 => 
             array (
                 'id' => 31,
-                'userId' => 19,
-                'teamUserId' => 58,
-                'isLeader' => NULL,
+                'user_id' => 19,
+                'team_user_id' => 58,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -330,9 +330,9 @@ class TeamUserTableSeeder extends Seeder
             31 => 
             array (
                 'id' => 32,
-                'userId' => 20,
-                'teamUserId' => 58,
-                'isLeader' => NULL,
+                'user_id' => 20,
+                'team_user_id' => 58,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -340,9 +340,9 @@ class TeamUserTableSeeder extends Seeder
             32 => 
             array (
                 'id' => 33,
-                'userId' => 21,
-                'teamUserId' => 58,
-                'isLeader' => NULL,
+                'user_id' => 21,
+                'team_user_id' => 58,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -350,9 +350,9 @@ class TeamUserTableSeeder extends Seeder
             33 => 
             array (
                 'id' => 34,
-                'userId' => 48,
-                'teamUserId' => 4,
-                'isLeader' => NULL,
+                'user_id' => 48,
+                'team_user_id' => 4,
+                'is_leader' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
