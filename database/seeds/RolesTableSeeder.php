@@ -71,7 +71,6 @@ class RolesTableSeeder extends Seeder
                 'name' => 'Дух',
                 'created_at' => NULL,
                 'updated_at' => NULL,
-                'deleted_at' => NULL,
             ),
             8 => 
             array (
@@ -79,7 +78,6 @@ class RolesTableSeeder extends Seeder
                 'name' => 'Солдат',
                 'created_at' => NULL,
                 'updated_at' => NULL,
-                'deleted_at' => NULL,
             ),
             9 => 
             array (
@@ -87,7 +85,6 @@ class RolesTableSeeder extends Seeder
                 'name' => 'Командир',
                 'created_at' => NULL,
                 'updated_at' => NULL,
-                'deleted_at' => NULL,
             ),
             10 => 
             array (
@@ -95,7 +92,6 @@ class RolesTableSeeder extends Seeder
                 'name' => 'Эксперт',
                 'created_at' => NULL,
                 'updated_at' => NULL,
-                'deleted_at' => NULL,
             ),
         ));
         
