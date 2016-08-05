@@ -11,8 +11,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property integer $value
  * @property string $created_at
  * @property string $updated_at
- * @property WogCurrencies $wogCurrencies
- * @property WogUsers $wogUsers
+ * @property Currencies $Currencies
+ * @property Users $Users
  */
 class Balance extends Model
 {
@@ -21,7 +21,7 @@ class Balance extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_balances';
+    protected $table = 'balances';
 
     /**
      * @var array
@@ -31,16 +31,16 @@ class Balance extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogCurrencies()
+    public function Currencies()
     {
-        return $this->belongsTo('WogCurrencies', 'currency_id');
+        return $this->belongsTo('Currencies', 'currency_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogUsers()
+    public function Users()
     {
-        return $this->belongsTo('WogUsers', 'user_id');
+        return $this->belongsTo('Users', 'user_id');
     }
 }

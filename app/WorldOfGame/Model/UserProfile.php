@@ -15,8 +15,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogUsers $wogUsers
- * @property WogMailAggs $wogMailAggs
+ * @property Users $Users
+ * @property MailAggs $MailAggs
  */
 class UserProfile extends Model
 {
@@ -25,7 +25,7 @@ class UserProfile extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_user_profiles';
+    protected $table = 'user_profiles';
 
     /**
      * @var array
@@ -35,16 +35,16 @@ class UserProfile extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogUsers()
+    public function Users()
     {
-        return $this->belongsTo('WogUsers', 'user_id');
+        return $this->belongsTo('Users', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogMailAggs()
+    public function MailAggs()
     {
-        return $this->belongsTo('WogMailAggs', 'mail_agg_id');
+        return $this->belongsTo('MailAggs', 'mail_agg_id');
     }
 }

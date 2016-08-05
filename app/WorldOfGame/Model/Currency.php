@@ -17,12 +17,12 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogRoles $wogRoles
- * @property WogCurrencyTypes $wogCurrencyTypes
- * @property WogActionCurrencies[] $wogActionCurrencies
- * @property WogBalances[] $wogBalances
- * @property WogSkills[] $wogSkills
- * @property WogCurrencyTransactions[] $wogCurrencyTransactions
+ * @property Roles $Roles
+ * @property CurrencyTypes $CurrencyTypes
+ * @property ActionCurrencies[] $ActionCurrencies
+ * @property Balances[] $Balances
+ * @property Skills[] $Skills
+ * @property CurrencyTransactions[] $CurrencyTransactions
  */
 class Currency extends Model
 {
@@ -31,7 +31,7 @@ class Currency extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_currencies';
+    protected $table = 'currencies';
 
     /**
      * @var array
@@ -41,48 +41,48 @@ class Currency extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogRoles()
+    public function Roles()
     {
-        return $this->belongsTo('WogRoles', 'role_id');
+        return $this->belongsTo('Roles', 'role_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogCurrencyTypes()
+    public function CurrencyTypes()
     {
-        return $this->belongsTo('WogCurrencyTypes', 'currency_type_id');
+        return $this->belongsTo('CurrencyTypes', 'currency_type_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogActionCurrencies()
+    public function ActionCurrencies()
     {
-        return $this->hasMany('WogActionCurrencies', 'currency_id');
+        return $this->hasMany('ActionCurrencies', 'currency_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogBalances()
+    public function Balances()
     {
-        return $this->hasMany('WogBalances', 'currency_id');
+        return $this->hasMany('Balances', 'currency_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogSkills()
+    public function Skills()
     {
-        return $this->hasMany('WogSkills', 'currency_id');
+        return $this->hasMany('Skills', 'currency_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogCurrencyTransactions()
+    public function CurrencyTransactions()
     {
-        return $this->hasMany('WogCurrencyTransactions', 'currency_id');
+        return $this->hasMany('CurrencyTransactions', 'currency_id');
     }
 }

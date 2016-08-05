@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogCurrencies[] $wogCurrencies
+ * @property Currencies[] $Currencies
  */
 class CurrencyType extends Model
 {
@@ -20,7 +20,7 @@ class CurrencyType extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_currency_types';
+    protected $table = 'currency_types';
 
     /**
      * @var array
@@ -30,8 +30,8 @@ class CurrencyType extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogCurrencies()
+    public function Currencies()
     {
-        return $this->hasMany('WogCurrencies', 'currency_type_id');
+        return $this->hasMany('Currencies', 'currency_type_id');
     }
 }

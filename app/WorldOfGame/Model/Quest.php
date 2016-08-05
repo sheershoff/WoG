@@ -19,13 +19,13 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogRoles $wogRoles
- * @property WogUsers $wogUsers
- * @property WogRobots $wogRobots
- * @property WogQuestDepends[] $wogQuestDepends
- * @property WogQuestDepends[] $wogQuestDepends
- * @property WogUserQuests[] $wogUserQuests
- * @property WogActions[] $wogActions
+ * @property Roles $Roles
+ * @property Users $Users
+ * @property Robots $Robots
+ * @property QuestDepends[] $QuestDepends
+ * @property QuestDepends[] $QuestDepends
+ * @property UserQuests[] $UserQuests
+ * @property Actions[] $Actions
  */
 class Quest extends Model
 {
@@ -34,7 +34,7 @@ class Quest extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_quests';
+    protected $table = 'quests';
 
     /**
      * @var array
@@ -44,56 +44,56 @@ class Quest extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogRoles()
+    public function Roles()
     {
-        return $this->belongsTo('WogRoles', 'role_id');
+        return $this->belongsTo('Roles', 'role_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogUsers()
+    public function Users()
     {
-        return $this->belongsTo('WogUsers', 'author_user_id');
+        return $this->belongsTo('Users', 'author_user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogRobots()
+    public function Robots()
     {
-        return $this->belongsTo('WogRobots', 'robot_id');
+        return $this->belongsTo('Robots', 'robot_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogQuestDepends()
+    public function QuestDepends()
     {
-        return $this->hasMany('WogQuestDepends', 'quest_id');
+        return $this->hasMany('QuestDepends', 'quest_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogQuestDepends()
+    public function QuestDepends()
     {
-        return $this->hasMany('WogQuestDepends', 'depend_quest_id');
+        return $this->hasMany('QuestDepends', 'depend_quest_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogUserQuests()
+    public function UserQuests()
     {
-        return $this->hasMany('WogUserQuests', 'quest_id');
+        return $this->hasMany('UserQuests', 'quest_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogActions()
+    public function Actions()
     {
-        return $this->hasMany('WogActions', 'quest_id');
+        return $this->hasMany('Actions', 'quest_id');
     }
 }

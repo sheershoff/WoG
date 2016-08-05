@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * @property integer $id
@@ -19,135 +20,143 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogUserStatuses $wogUserStatuses
- * @property WogTeamUsers[] $wogTeamUsers
- * @property WogTeamUsers[] $wogTeamUsers
- * @property WogUserProfiles[] $wogUserProfiles
- * @property WogRoleUser[] $wogRoleUsers
- * @property WogRobots[] $wogRobots
- * @property WogUserQuests[] $wogUserQuests
- * @property WogQuests[] $wogQuests
- * @property WogBalances[] $wogBalances
- * @property WogActionTransactions[] $wogActionTransactions
- * @property WogCurrencyTransactions[] $wogCurrencyTransactions
- * @property WogUserSkills[] $wogUserSkills
- * @property WogUserSkills[] $wogUserSkills
+ * @property UserStatuses $UserStatuses
+ * @property TeamUsers[] $TeamUsers
+ * @property TeamUsers[] $TeamUsers
+ * @property UserProfiles[] $UserProfiles
+ * @property RoleUser[] $RoleUsers
+ * @property Robots[] $Robots
+ * @property UserQuests[] $UserQuests
+ * @property Quests[] $Quests
+ * @property Balances[] $Balances
+ * @property ActionTransactions[] $ActionTransactions
+ * @property CurrencyTransactions[] $CurrencyTransactions
+ * @property UserSkills[] $UserSkills
+ * @property UserSkills[] $UserSkills
  */
-class User extends Model
+class User extends Authenticatable
 {
     /**
      * The table associated with the model.
      * 
      * @var string
      */
-    protected $table = 'wog_users';
+    protected $table = 'users';
 
     /**
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
      * @var array
      */
-    protected $fillable = ['user_status_id', 'login', 'name', 'email', 'password', 'user_type', 'ext_login', 'phone_number', 'tab_number', 'remember_token', 'created_at', 'updated_at', 'deleted_at'];
+    protected $hidden = [
+        'password', 'remember_token',
+    ];     * @var array
+     */
+    protected $fillable = ['user_status_id', 'login', 'name', 'email', 'user_type', 'ext_login', 'phone_number', 'tab_number', 'created_at', 'updated_at', 'deleted_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogUserStatuses()
+    public function UserStatuses()
     {
-        return $this->belongsTo('WogUserStatuses', 'user_status_id');
+        return $this->belongsTo('UserStatuses', 'user_status_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogTeamUsers()
+    public function TeamUsers()
     {
-        return $this->hasMany('WogTeamUsers', 'user_id');
+        return $this->hasMany('TeamUsers', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogTeamUsers()
+    public function TeamUsers()
     {
-        return $this->hasMany('WogTeamUsers', 'team_user_id');
+        return $this->hasMany('TeamUsers', 'team_user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogUserProfiles()
+    public function UserProfiles()
     {
-        return $this->hasMany('WogUserProfiles', 'user_id');
+        return $this->hasMany('UserProfiles', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogRoleUsers()
+    public function RoleUsers()
     {
-        return $this->hasMany('WogRoleUser', 'user_id');
+        return $this->hasMany('RoleUser', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogRobots()
+    public function Robots()
     {
-        return $this->hasMany('WogRobots', 'user_id');
+        return $this->hasMany('Robots', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogUserQuests()
+    public function UserQuests()
     {
-        return $this->hasMany('WogUserQuests', 'user_id');
+        return $this->hasMany('UserQuests', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogQuests()
+    public function Quests()
     {
-        return $this->hasMany('WogQuests', 'author_user_id');
+        return $this->hasMany('Quests', 'author_user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogBalances()
+    public function Balances()
     {
-        return $this->hasMany('WogBalances', 'user_id');
+        return $this->hasMany('Balances', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogActionTransactions()
+    public function ActionTransactions()
     {
-        return $this->hasMany('WogActionTransactions', 'user_id');
+        return $this->hasMany('ActionTransactions', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogCurrencyTransactions()
+    public function CurrencyTransactions()
     {
-        return $this->hasMany('WogCurrencyTransactions', 'user_id');
+        return $this->hasMany('CurrencyTransactions', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogUserSkills()
+    public function UserSkills()
     {
-        return $this->hasMany('WogUserSkills', 'user_id');
+        return $this->hasMany('UserSkills', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogUserSkills()
+    public function UserSkills()
     {
-        return $this->hasMany('WogUserSkills', 'expert_user_id');
+        return $this->hasMany('UserSkills', 'expert_user_id');
     }
 }

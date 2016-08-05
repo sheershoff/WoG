@@ -15,8 +15,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogCurrencies $wogCurrencies
- * @property WogUserSkills[] $wogUserSkills
+ * @property Currencies $Currencies
+ * @property UserSkills[] $UserSkills
  */
 class Skill extends Model
 {
@@ -25,7 +25,7 @@ class Skill extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_skills';
+    protected $table = 'skills';
 
     /**
      * @var array
@@ -35,16 +35,16 @@ class Skill extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogCurrencies()
+    public function Currencies()
     {
-        return $this->belongsTo('WogCurrencies', 'currency_id');
+        return $this->belongsTo('Currencies', 'currency_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogUserSkills()
+    public function UserSkills()
     {
-        return $this->hasMany('WogUserSkills', 'skill_id');
+        return $this->hasMany('UserSkills', 'skill_id');
     }
 }

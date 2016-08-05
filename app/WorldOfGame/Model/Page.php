@@ -21,7 +21,7 @@ class Page extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_pages';
+    protected $table = 'pages';
 
     /**
      * @var array

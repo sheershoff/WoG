@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogUsers[] $wogUsers
+ * @property Users[] $Users
  */
 class UserStatus extends Model
 {
@@ -19,7 +19,7 @@ class UserStatus extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_user_statuses';
+    protected $table = 'user_statuses';
 
     /**
      * @var array
@@ -29,8 +29,8 @@ class UserStatus extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogUsers()
+    public function Users()
     {
-        return $this->hasMany('WogUsers', 'user_status_id');
+        return $this->hasMany('Users', 'user_status_id');
     }
 }

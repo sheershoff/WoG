@@ -14,10 +14,10 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogCurrencies $wogCurrencies
- * @property WogUsers $wogUsers
- * @property WogActionCurrencies $wogActionCurrencies
- * @property WogActionTransactions $wogActionTransactions
+ * @property Currencies $Currencies
+ * @property Users $Users
+ * @property ActionCurrencies $ActionCurrencies
+ * @property ActionTransactions $ActionTransactions
  */
 class CurrencyTransaction extends Model
 {
@@ -26,7 +26,7 @@ class CurrencyTransaction extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_currency_transactions';
+    protected $table = 'currency_transactions';
 
     /**
      * @var array
@@ -36,32 +36,32 @@ class CurrencyTransaction extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogCurrencies()
+    public function Currencies()
     {
-        return $this->belongsTo('WogCurrencies', 'currency_id');
+        return $this->belongsTo('Currencies', 'currency_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogUsers()
+    public function Users()
     {
-        return $this->belongsTo('WogUsers', 'user_id');
+        return $this->belongsTo('Users', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogActionCurrencies()
+    public function ActionCurrencies()
     {
-        return $this->belongsTo('WogActionCurrencies', 'action_currency_id');
+        return $this->belongsTo('ActionCurrencies', 'action_currency_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogActionTransactions()
+    public function ActionTransactions()
     {
-        return $this->belongsTo('WogActionTransactions', 'action_trancaction_id');
+        return $this->belongsTo('ActionTransactions', 'action_trancaction_id');
     }
 }

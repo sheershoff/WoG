@@ -13,9 +13,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogUsers $wogUsers
- * @property WogSkills $wogSkills
- * @property WogUsers $wogUsers
+ * @property Users $Users
+ * @property Skills $Skills
+ * @property Users $Users
  */
 class UserSkill extends Model
 {
@@ -24,7 +24,7 @@ class UserSkill extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_user_skills';
+    protected $table = 'user_skills';
 
     /**
      * @var array
@@ -34,24 +34,24 @@ class UserSkill extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogUsers()
+    public function Users()
     {
-        return $this->belongsTo('WogUsers', 'user_id');
+        return $this->belongsTo('Users', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogSkills()
+    public function Skills()
     {
-        return $this->belongsTo('WogSkills', 'skill_id');
+        return $this->belongsTo('Skills', 'skill_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogUsers()
+    public function Users()
     {
-        return $this->belongsTo('WogUsers', 'expert_user_id');
+        return $this->belongsTo('Users', 'expert_user_id');
     }
 }

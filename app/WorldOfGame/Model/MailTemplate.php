@@ -13,8 +13,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogActions $wogActions
- * @property WogActionTransactions[] $wogActionTransactions
+ * @property Actions $Actions
+ * @property ActionTransactions[] $ActionTransactions
  */
 class MailTemplate extends Model
 {
@@ -23,7 +23,7 @@ class MailTemplate extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_mail_templates';
+    protected $table = 'mail_templates';
 
     /**
      * @var array
@@ -33,16 +33,16 @@ class MailTemplate extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogActions()
+    public function Actions()
     {
-        return $this->belongsTo('WogActions', 'action_id');
+        return $this->belongsTo('Actions', 'action_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogActionTransactions()
+    public function ActionTransactions()
     {
-        return $this->hasMany('WogActionTransactions', 'mail_template_id');
+        return $this->hasMany('ActionTransactions', 'mail_template_id');
     }
 }

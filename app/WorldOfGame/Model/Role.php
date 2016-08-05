@@ -10,9 +10,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogRoleUser[] $wogRoleUsers
- * @property WogCurrencies[] $wogCurrencies
- * @property WogQuests[] $wogQuests
+ * @property RoleUser[] $RoleUsers
+ * @property Currencies[] $Currencies
+ * @property Quests[] $Quests
  */
 class Role extends Model
 {
@@ -21,7 +21,7 @@ class Role extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_roles';
+    protected $table = 'roles';
 
     /**
      * @var array
@@ -31,24 +31,24 @@ class Role extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogRoleUsers()
+    public function RoleUsers()
     {
-        return $this->hasMany('WogRoleUser', 'role_id');
+        return $this->hasMany('RoleUser', 'role_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogCurrencies()
+    public function Currencies()
     {
-        return $this->hasMany('WogCurrencies', 'role_id');
+        return $this->hasMany('Currencies', 'role_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogQuests()
+    public function Quests()
     {
-        return $this->hasMany('WogQuests', 'role_id');
+        return $this->hasMany('Quests', 'role_id');
     }
 }

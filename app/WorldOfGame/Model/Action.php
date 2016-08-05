@@ -1,3 +1,4 @@
+
 <?php
 
 namespace App\WorldOfGame\Model;
@@ -12,10 +13,10 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogQuests $wogQuests
- * @property WogActionCurrencies[] $wogActionCurrencies
- * @property WogActionTransactions[] $wogActionTransactions
- * @property WogMailTemplates[] $wogMailTemplates
+ * @property Quests $Quests
+ * @property ActionCurrencies[] $ActionCurrencies
+ * @property ActionTransactions[] $ActionTransactions
+ * @property MailTemplates[] $MailTemplates
  */
 class Action extends Model
 {
@@ -24,7 +25,7 @@ class Action extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_actions';
+    protected $table = 'actions';
 
     /**
      * @var array
@@ -34,32 +35,32 @@ class Action extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogQuests()
+    public function Quests()
     {
-        return $this->belongsTo('WogQuests', 'quest_id');
+        return $this->belongsTo('Quests', 'quest_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogActionCurrencies()
+    public function ActionCurrencies()
     {
-        return $this->hasMany('WogActionCurrencies', 'action_id');
+        return $this->hasMany('ActionCurrencies', 'action_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogActionTransactions()
+    public function ActionTransactions()
     {
-        return $this->hasMany('WogActionTransactions', 'action_id');
+        return $this->hasMany('ActionTransactions', 'action_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogMailTemplates()
+    public function MailTemplates()
     {
-        return $this->hasMany('WogMailTemplates', 'action_id');
+        return $this->hasMany('MailTemplates', 'action_id');
     }
 }

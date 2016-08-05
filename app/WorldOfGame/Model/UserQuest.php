@@ -13,9 +13,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogQuests $wogQuests
- * @property WogUsers $wogUsers
- * @property WogUserQuestStatuses $wogUserQuestStatuses
+ * @property Quests $Quests
+ * @property Users $Users
+ * @property UserQuestStatuses $UserQuestStatuses
  */
 class UserQuest extends Model
 {
@@ -24,7 +24,7 @@ class UserQuest extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_user_quests';
+    protected $table = 'user_quests';
 
     /**
      * @var array
@@ -34,24 +34,24 @@ class UserQuest extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogQuests()
+    public function Quests()
     {
-        return $this->belongsTo('WogQuests', 'quest_id');
+        return $this->belongsTo('Quests', 'quest_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogUsers()
+    public function Users()
     {
-        return $this->belongsTo('WogUsers', 'user_id');
+        return $this->belongsTo('Users', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogUserQuestStatuses()
+    public function UserQuestStatuses()
     {
-        return $this->belongsTo('WogUserQuestStatuses', 'user_quest_status_id');
+        return $this->belongsTo('UserQuestStatuses', 'user_quest_status_id');
     }
 }

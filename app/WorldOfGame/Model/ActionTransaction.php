@@ -13,10 +13,10 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogUsers $wogUsers
- * @property WogActions $wogActions
- * @property WogMailTemplates $wogMailTemplates
- * @property WogCurrencyTransactions[] $wogCurrencyTransactions
+ * @property Users $Users
+ * @property Actions $Actions
+ * @property MailTemplates $MailTemplates
+ * @property CurrencyTransactions[] $CurrencyTransactions
  */
 class ActionTransaction extends Model
 {
@@ -25,7 +25,7 @@ class ActionTransaction extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_action_transactions';
+    protected $table = 'action_transactions';
 
     /**
      * @var array
@@ -35,32 +35,32 @@ class ActionTransaction extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogUsers()
+    public function Users()
     {
-        return $this->belongsTo('WogUsers', 'user_id');
+        return $this->belongsTo('Users', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogActions()
+    public function Actions()
     {
-        return $this->belongsTo('WogActions', 'action_id');
+        return $this->belongsTo('Actions', 'action_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogMailTemplates()
+    public function MailTemplates()
     {
-        return $this->belongsTo('WogMailTemplates', 'mail_template_id');
+        return $this->belongsTo('MailTemplates', 'mail_template_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogCurrencyTransactions()
+    public function CurrencyTransactions()
     {
-        return $this->hasMany('WogCurrencyTransactions', 'action_trancaction_id');
+        return $this->hasMany('CurrencyTransactions', 'action_trancaction_id');
     }
 }

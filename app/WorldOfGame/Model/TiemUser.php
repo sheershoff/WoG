@@ -12,8 +12,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogUsers $wogUsers
- * @property WogUsers $wogUsers
+ * @property Users $Users
+ * @property Users $Users
  */
 class TiemUser extends Model
 {
@@ -22,7 +22,7 @@ class TiemUser extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_team_users';
+    protected $table = 'team_users';
 
     /**
      * @var array
@@ -32,16 +32,16 @@ class TiemUser extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogUsers()
+    public function Users()
     {
-        return $this->belongsTo('WogUsers', 'user_id');
+        return $this->belongsTo('Users', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogUsers()
+    public function Users()
     {
-        return $this->belongsTo('WogUsers', 'team_user_id');
+        return $this->belongsTo('Users', 'team_user_id');
     }
 }

@@ -15,9 +15,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property WogCurrencies $wogCurrencies
- * @property WogActions $wogActions
- * @property WogCurrencyTransactions[] $wogCurrencyTransactions
+ * @property Currencies $Currencies
+ * @property Actions $Actions
+ * @property CurrencyTransactions[] $CurrencyTransactions
  */
 class ActionCurrency extends Model
 {
@@ -26,7 +26,7 @@ class ActionCurrency extends Model
      * 
      * @var string
      */
-    protected $table = 'wog_action_currencies';
+    protected $table = 'action_currencies';
 
     /**
      * @var array
@@ -36,24 +36,24 @@ class ActionCurrency extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogCurrencies()
+    public function Currencies()
     {
-        return $this->belongsTo('WogCurrencies', 'currency_id');
+        return $this->belongsTo('Currencies', 'currency_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function wogActions()
+    public function Actions()
     {
-        return $this->belongsTo('WogActions', 'action_id');
+        return $this->belongsTo('Actions', 'action_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function wogCurrencyTransactions()
+    public function CurrencyTransactions()
     {
-        return $this->hasMany('WogCurrencyTransactions', 'action_currency_id');
+        return $this->hasMany('CurrencyTransactions', 'action_currency_id');
     }
 }
