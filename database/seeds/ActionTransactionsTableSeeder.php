@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class UserProfileTableSeeder extends Seeder
+class ActionTransactionsTableSeeder extends Seeder
 {
 
     /**
@@ -14,7 +14,7 @@ class UserProfileTableSeeder extends Seeder
     {
         
 
-        \DB::table('user_profiles')->delete();
+        \DB::table('action_transactions')->delete();
         
         
         

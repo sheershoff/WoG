@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class MailTemplateTableSeeder extends Seeder
+class MailTemplatesTableSeeder extends Seeder
 {
 
     /**

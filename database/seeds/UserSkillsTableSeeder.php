@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ActionTransactionTableSeeder extends Seeder
+class UserSkillsTableSeeder extends Seeder
 {
 
     /**
@@ -14,7 +14,7 @@ class ActionTransactionTableSeeder extends Seeder
     {
         
 
-        \DB::table('action_transactions')->delete();
+        \DB::table('user_skills')->delete();
         
         
         

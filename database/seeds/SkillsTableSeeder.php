@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class SkillTableSeeder extends Seeder
+class SkillsTableSeeder extends Seeder
 {
 
     /**
@@ -25,6 +25,7 @@ class SkillTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => 6,
                 'parent_skill_id' => NULL,
+                'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -37,6 +38,7 @@ class SkillTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => 6,
                 'parent_skill_id' => NULL,
+                'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -49,6 +51,7 @@ class SkillTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => 6,
                 'parent_skill_id' => NULL,
+                'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -61,6 +64,7 @@ class SkillTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => 6,
                 'parent_skill_id' => NULL,
+                'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -73,6 +77,7 @@ class SkillTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => 6,
                 'parent_skill_id' => NULL,
+                'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

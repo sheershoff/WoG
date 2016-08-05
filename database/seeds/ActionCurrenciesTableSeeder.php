@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ActionCurrencyTableSeeder extends Seeder
+class ActionCurrenciesTableSeeder extends Seeder
 {
 
     /**

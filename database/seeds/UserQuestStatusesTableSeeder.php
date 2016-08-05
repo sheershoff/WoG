@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class UserStatusTableSeeder extends Seeder
+class UserQuestStatusesTableSeeder extends Seeder
 {
 
     /**
@@ -14,21 +14,21 @@ class UserStatusTableSeeder extends Seeder
     {
         
 
-        \DB::table('user_statuses')->delete();
+        \DB::table('user_quest_statuses')->delete();
         
-        \DB::table('user_statuses')->insert(array (
+        \DB::table('user_quest_statuses')->insert(array (
             0 => 
             array (
                 'id' => 1,
-                'name' => 'В Игре',
+                'name' => 'Доступен для выбора',
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
             1 => 
             array (
-                'id' => 2,
-                'name' => 'Game over',
+                'id' => 3,
+                'name' => 'Завершён',
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

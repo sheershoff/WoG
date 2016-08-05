@@ -11,27 +11,27 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call('UserStatusTableSeeder');
+        $this->call('UserStatusesTableSeeder');
         $this->call('UsersTableSeeder');
         $this->call('PagesTableSeeder');
         $this->call('CurrencyTypesTableSeeder');
-        $this->call('RolesTableSeeder');
-        $this->call('UserQuestStatusTableSeeder');
-        $this->call('JobsTableSeeder');
-        $this->call('UserProfileTableSeeder');
-        $this->call('TeamUserTableSeeder');
-        $this->call('QuestTableSeeder');
-        $this->call('RoleUserTableSeeder');
-        $this->call('CurrencyTableSeeder');
-        $this->call('SkillTableSeeder');
-        $this->call('BalanceTableSeeder');
-        $this->call('ActionTableSeeder');
-        $this->call('UserQuestTableSeeder');
-        $this->call('ActionCurrencyTableSeeder');
-        $this->call('MailTemplateTableSeeder');
-        $this->call('UserSkillTableSeeder');
         $this->call('PasswordResetsTableSeeder');
-        $this->call('ActionTransactionTableSeeder');
-        $this->call('CurrencyTransactionTableSeeder');
+        $this->call('RolesTableSeeder');
+        $this->call('UserQuestStatusesTableSeeder');
+        $this->call('JobsTableSeeder');
+        $this->call('UserProfilesTableSeeder');
+        $this->call('TeamUsersTableSeeder');
+        $this->call('QuestsTableSeeder');
+        $this->call('RoleUserTableSeeder');
+        $this->call('CurrenciesTableSeeder');
+        $this->call('SkillsTableSeeder');
+        $this->call('BalancesTableSeeder');
+        $this->call('ActionsTableSeeder');
+        $this->call('UserQuestsTableSeeder');
+        $this->call('ActionCurrenciesTableSeeder');
+        $this->call('MailTemplatesTableSeeder');
+        $this->call('ActionTransactionsTableSeeder');
+        $this->call('CurrencyTransactionsTableSeeder');
+        $this->call('UserSkillsTableSeeder');
     }
 }

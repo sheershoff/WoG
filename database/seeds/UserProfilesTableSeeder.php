@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class UserSkillTableSeeder extends Seeder
+class UserProfilesTableSeeder extends Seeder
 {
 
     /**
@@ -14,10 +14,8 @@ class UserSkillTableSeeder extends Seeder
     {
         
 
-        \DB::table('user_skills')->delete();
+        \DB::table('user_profiles')->delete();
         
-        \DB::table('user_skills')->insert(array (
-        ));
         
         
     }

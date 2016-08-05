@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class BalanceTableSeeder extends Seeder
+class BalancesTableSeeder extends Seeder
 {
 
     /**

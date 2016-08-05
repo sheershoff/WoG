@@ -14,14 +14,16 @@ class RolesTableSeeder extends Seeder
     {
         
 
-        DB::table('roles')->delete();
-        DB::table('roles')->insert(array (
+        \DB::table('roles')->delete();
+        
+        \DB::table('roles')->insert(array (
             0 => 
             array (
                 'id' => -1,
                 'name' => 'Admin',
                 'created_at' => NULL,
                 'updated_at' => NULL,
+                'deleted_at' => NULL,
             ),
             1 => 
             array (
@@ -29,6 +31,7 @@ class RolesTableSeeder extends Seeder
                 'name' => 'Guest',
                 'created_at' => NULL,
                 'updated_at' => NULL,
+                'deleted_at' => NULL,
             ),
             2 => 
             array (
@@ -36,6 +39,7 @@ class RolesTableSeeder extends Seeder
                 'name' => 'lvl1',
                 'created_at' => NULL,
                 'updated_at' => NULL,
+                'deleted_at' => NULL,
             ),
             3 => 
             array (
@@ -43,6 +47,7 @@ class RolesTableSeeder extends Seeder
                 'name' => 'lvl2',
                 'created_at' => NULL,
                 'updated_at' => NULL,
+                'deleted_at' => NULL,
             ),
             4 => 
             array (
@@ -50,6 +55,7 @@ class RolesTableSeeder extends Seeder
                 'name' => 'lvl3',
                 'created_at' => NULL,
                 'updated_at' => NULL,
+                'deleted_at' => NULL,
             ),
             5 => 
             array (
@@ -57,6 +63,7 @@ class RolesTableSeeder extends Seeder
                 'name' => 'lvl4',
                 'created_at' => NULL,
                 'updated_at' => NULL,
+                'deleted_at' => NULL,
             ),
             6 => 
             array (
@@ -64,6 +71,7 @@ class RolesTableSeeder extends Seeder
                 'name' => 'lvl5',
                 'created_at' => NULL,
                 'updated_at' => NULL,
+                'deleted_at' => NULL,
             ),
             7 => 
             array (
@@ -71,6 +79,7 @@ class RolesTableSeeder extends Seeder
                 'name' => 'Дух',
                 'created_at' => NULL,
                 'updated_at' => NULL,
+                'deleted_at' => NULL,
             ),
             8 => 
             array (
@@ -78,6 +87,7 @@ class RolesTableSeeder extends Seeder
                 'name' => 'Солдат',
                 'created_at' => NULL,
                 'updated_at' => NULL,
+                'deleted_at' => NULL,
             ),
             9 => 
             array (
@@ -85,6 +95,7 @@ class RolesTableSeeder extends Seeder
                 'name' => 'Командир',
                 'created_at' => NULL,
                 'updated_at' => NULL,
+                'deleted_at' => NULL,
             ),
             10 => 
             array (
@@ -92,6 +103,7 @@ class RolesTableSeeder extends Seeder
                 'name' => 'Эксперт',
                 'created_at' => NULL,
                 'updated_at' => NULL,
+                'deleted_at' => NULL,
             ),
         ));
         
