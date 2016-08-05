@@ -17,7 +17,7 @@ class CreateCurrencyTable extends Migration
             $table->string('name',255)->unique()->comment('gold, мана, значёк ГТО, рейтин и тп');
             $table->text('description')->nullable();
             $table->string('function')->nullable()->comment('функции пересчитывает количество начисляемой валюты.null 1=1');
-            $table->json('options')->nullable()->comment('прочие настройки');
+            $table->text('options')->nullable()->comment('прочие настройки');
             $table->binary('photo')->nullable()->comment('Картинка валюты');
             $table->boolean('top_menu')->default(0)->comment('показывать в меню');
             $table->integer('role_id')->unsigned();

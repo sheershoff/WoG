@@ -20,7 +20,7 @@ class CreateActionTransactionTable extends Migration
             $table->foreign('action_id')->references('id')->on('actions');
             $table->integer('mail_template_id')->unsigned();
             $table->foreign('mail_template_id')->references('id')->on('mail_templates');
-            $table->json('message')->nullable()->comment('сообщение от робота');
+            $table->text('message')->nullable()->comment('сообщение от робота');
             $table->timestamps();
             $table->softDeletes();
         });

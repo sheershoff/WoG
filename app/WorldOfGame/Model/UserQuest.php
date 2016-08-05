@@ -4,8 +4,54 @@ namespace App\WorldOfGame\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserQuest extends Model{
-	public $timestamps = false;
-	protected $table = "user_quests";
-	protected $fillables = ["user_id", "quest_id", "user_quest_status_id"];
+/**
+ * @property integer $id
+ * @property integer $quest_id
+ * @property integer $user_id
+ * @property integer $user_quest_status_id
+ * @property integer $quest_type
+ * @property string $created_at
+ * @property string $updated_at
+ * @property string $deleted_at
+ * @property WogQuests $wogQuests
+ * @property WogUsers $wogUsers
+ * @property WogUserQuestStatuses $wogUserQuestStatuses
+ */
+class UserQuest extends Model
+{
+    /**
+     * The table associated with the model.
+     * 
+     * @var string
+     */
+    protected $table = 'wog_user_quests';
+
+    /**
+     * @var array
+     */
+    protected $fillable = ['quest_id', 'user_id', 'user_quest_status_id', 'quest_type', 'created_at', 'updated_at', 'deleted_at'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function wogQuests()
+    {
+        return $this->belongsTo('WogQuests', 'quest_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function wogUsers()
+    {
+        return $this->belongsTo('WogUsers', 'user_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function wogUserQuestStatuses()
+    {
+        return $this->belongsTo('WogUserQuestStatuses', 'user_quest_status_id');
+    }
 }

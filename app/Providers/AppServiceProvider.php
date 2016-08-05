@@ -26,6 +26,8 @@ class AppServiceProvider extends ServiceProvider
 	//composer require laracasts/generators --dev
         if ($this->app->environment() == 'local') {
             $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
+	    //$this->app->register('Iber\Generator\ModelGeneratorProvider');
+	    $this->app->register('Krlove\EloquentModelGenerator\Provider\GeneratorServiceProvider');
         }
     }
 }
