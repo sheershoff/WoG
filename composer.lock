@@ -2452,7 +2452,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/xvlady/eloquent-model-generator",
-                "reference": "b083e88640870860c71e514d3b98af4816d01248"
+                "reference": "7e81e6f9ed9eb7131409c8700c4d1822b2a3ab6e"
             },
             "require": {
                 "doctrine/dbal": "^2.5",
@@ -2469,7 +2469,7 @@
                 "MIT"
             ],
             "description": "Eloquent Model Generator",
-            "time": "2016-08-08 03:32:08"
+            "time": "2016-08-08 09:39:51"
         },
         {
             "name": "laracasts/generators",

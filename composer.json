@@ -52,7 +52,7 @@
     "repositories":[
             {
                         "type":"git",
-                                    "url":"https://github.com/xvlady/eloquent-model-generator"
+                                    "url":"https://github.com/krlove/eloquent-model-generator"
                                             }],
     "config": {
         "preferred-install": "dist"
