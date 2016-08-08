@@ -44,15 +44,16 @@ class User extends Authenticatable
     protected $table = 'users';
 
     /**
-
-    /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
     protected $hidden = [
         'password', 'remember_token',
-    ];     * @var array
+    ];
+    
+    /**
+     * @var array
      */
     protected $fillable = ['user_status_id', 'login', 'name', 'email', 'user_type', 'ext_login', 'phone_number', 'tab_number', 'created_at', 'updated_at', 'deleted_at'];
 
@@ -66,15 +67,15 @@ class User extends Authenticatable
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
+     *
     public function TeamUsers()
     {
         return $this->hasMany('TeamUsers', 'user_id');
     }
 
-    /**
+     **
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
+     *
     public function TeamUsers()
     {
         return $this->hasMany('TeamUsers', 'team_user_id');
@@ -155,7 +156,7 @@ class User extends Authenticatable
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function UserSkills()
+    public function ExpertUserSkills()
     {
         return $this->hasMany('UserSkills', 'expert_user_id');
     }

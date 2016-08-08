@@ -10,21 +10,23 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+/*
 Route::group(['prefix'=>'adminzone'], function()
 {
      Route::get('/', function()
      {
-         return view('admin.dashboard');
+         if (Auth::check()) {
+            return view('admin.dashboard');
+        } else 
      });
-/*   Route::resource('Roles','RolesController');
+*   Route::resource('Roles','RolesController');
      Route::resource('Users','UsersController');
      Route::resource('Currencies','CurrenciesController');
      Route::resource('Actions','ActionsController');
-     Route::resource('Letters','LettersController');*/
+     Route::resource('Letters','LettersController');
 //   Route::resource('Pages','PagesController');
-});
-
+//});
+*/
 //Мэппинг для Rest API
 Route::group(
 	['prefix'=>'rest'], 

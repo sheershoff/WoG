@@ -14,6 +14,9 @@ class WogController extends Controller
 {
    public function index()
    {
+    if (!Auth::check()) {
+    return view('welcome');
+    } else {
    		//dd(Users::all());
 //Auth::user()->id
          $QustByUser = DB::select('SELECT id, name, description FROM wog_quests'); 
@@ -37,6 +40,7 @@ class WogController extends Controller
             'QustByUser' => $QustByUser,
             'MyQustByUser' => $MyQustByUser
    			]);
+    }
    }  
    public function personalData()
    {

@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3140cce58521c911894b2e150109e027",
-    "content-hash": "f591e03624c40925c8774d5c9f22c1dd",
+    "hash": "c991ec04ef87b14b7925b3af005c624c",
+    "content-hash": "9071c4f69d8d683d37ac68840461fd20",
     "packages": [
         {
             "name": "caouecs/laravel-lang",
-            "version": "3.0.9",
+            "version": "3.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caouecs/Laravel-lang.git",
-                "reference": "898129ee7dd8fc5fc3e102c00b625dc0052b9a55"
+                "reference": "1d0034078611dd0b0e1955693d00e2edbec7d0df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/898129ee7dd8fc5fc3e102c00b625dc0052b9a55",
-                "reference": "898129ee7dd8fc5fc3e102c00b625dc0052b9a55",
+                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/1d0034078611dd0b0e1955693d00e2edbec7d0df",
+                "reference": "1d0034078611dd0b0e1955693d00e2edbec7d0df",
                 "shasum": ""
             },
             "require-dev": {
@@ -45,7 +45,7 @@
                 "laravel",
                 "lpm"
             ],
-            "time": "2016-07-28 06:20:23"
+            "time": "2016-08-05 13:52:38"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -2448,17 +2448,11 @@
         },
         {
             "name": "krlove/eloquent-model-generator",
-            "version": "1.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/krlove/eloquent-model-generator.git",
-                "reference": "e809c32f89380ea82bada13906cfa4ba97884865"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/krlove/eloquent-model-generator/zipball/e809c32f89380ea82bada13906cfa4ba97884865",
-                "reference": "e809c32f89380ea82bada13906cfa4ba97884865",
-                "shasum": ""
+                "url": "https://github.com/xvlady/eloquent-model-generator",
+                "reference": "b083e88640870860c71e514d3b98af4816d01248"
             },
             "require": {
                 "doctrine/dbal": "^2.5",
@@ -2471,12 +2465,11 @@
                     "Krlove\\EloquentModelGenerator\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Eloquent Model Generator",
-            "time": "2016-07-15 21:33:48"
+            "time": "2016-08-08 03:32:08"
         },
         {
             "name": "laracasts/generators",
@@ -3748,7 +3741,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "krlove/eloquent-model-generator": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

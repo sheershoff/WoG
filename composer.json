@@ -18,7 +18,7 @@
         "symfony/css-selector": "2.8.*|3.0.*",
         "symfony/dom-crawler": "2.8.*|3.0.*",
         "laracasts/generators": "^1.1",
-        "krlove/eloquent-model-generator": "^1.1"
+        "Krlove/eloquent-model-generator": "dev-master"
     },
     "autoload": {
         "classmap": [
@@ -49,6 +49,11 @@
             "php artisan optimize"
         ]
     },
+    "repositories":[
+            {
+                        "type":"git",
+                                    "url":"https://github.com/xvlady/eloquent-model-generator"
+                                            }],
     "config": {
         "preferred-install": "dist"
     }
