@@ -4,7 +4,7 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class dbTest extends TestCase
+class ldapTest extends TestCase
 {
     /**
      * A basic test example.
@@ -13,6 +13,8 @@ class dbTest extends TestCase
      */
     public function testExample()
     {
-        $this->seeInDatabase('users', ['email' => 'vladimir.khonin@megafon.ru']);
+	$user = Adldap::search()->users()->find('vladimir khonin');
+//        $this->assertFalse(Adldap::auth()->attempt('Vladimir.Khonin', 'jhjkahk'));
+	$this->assertTrue(True);
     }
 }

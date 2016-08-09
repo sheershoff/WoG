@@ -2,8 +2,13 @@
 
 namespace App;
 
+use Adldap\Laravel\Traits\AdldapUserModelTrait;
+use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+//use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Auth\Passwords\CanResetPassword;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
 /**
  * @property integer $id
@@ -34,15 +39,18 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @property UserSkills[] $UserSkills
  * @property UserSkills[] $UserSkills
  */
-class User extends Authenticatable
+class User extends Model implements AuthenticatableContract, CanResetPasswordContract
 {
+    use Authenticatable, CanResetPassword, AdldapUserModelTrait; // Insert trait here
     /**
      * The table associated with the model.
      * 
      * @var string
      */
     protected $table = 'users';
-
+    
+    //protected $redirectPath = '/';
+    
     /**
      * The attributes that should be hidden for arrays.
      *

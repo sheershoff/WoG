@@ -56,7 +56,7 @@ Route::group(
 
 
 
-Route::resource('Pages','PagesController');
+//Route::resource('Pages','PagesController');
 
 //Route::resource('robots', 'Rest\RobotsController');
 
@@ -70,8 +70,6 @@ Route::get('/', 'WogController@index');
 Route::get('/personal-data', 'WogController@personalData');
 Route::get('/add-user-quest', 'WogController@addUserQuest');
 
-
-
 //Route::auth();
 // Маршруты авторизации...
 Route::get('login', 'Auth\AuthController@showLoginForm');
@@ -79,7 +77,7 @@ Route::post('login', 'Auth\AuthController@login');
 Route::get('logout', 'Auth\AuthController@logout');
 
 // Маршруты регистрации...
-Route::get('register', 'Auth\AuthController@showRegistrationForm');
-Route::post('register', 'Auth\AuthController@register');
+//Route::get('register', 'Auth\AuthController@showRegistrationForm');
+//Route::post('register', 'Auth\AuthController@register');
 
-Route::get('/home', 'HomeController@index');
+//Route::get('/home', 'HomeController@index');

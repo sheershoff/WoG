@@ -13,9 +13,11 @@ class MailTest extends TestCase
      */
     public function testMail()
     {
+/*
         Mail::send('emails.welcome', ["title"=>"sdfasdf", "body"=>"dfasdfasd"], function($message)
     	    {
     		$message->to('vladimir.khonin@megafon.ru', 'Джон Смит')->subject('Привет!');
             });
+*/            
     }
 }
