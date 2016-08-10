@@ -6,16 +6,16 @@
     <meta name="description" content="">
     <meta name="author" content="Carlos Alvarez - Alvarez.is">
 
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
-    <link href="http://www.prepbootstrap.com/Content/css/single-page-admin/main.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('bootstrap/css/bootstrap.min.css')}}" />
+    <link href="{{asset('/css/main.css')}}" rel="stylesheet">
     <link href="{{asset('/css/castom.css')}}" rel="stylesheet">
     <link href="{{asset('/css/register.css')}}" rel="stylesheet">
-    <link href="http://www.prepbootstrap.com/Content/css/single-page-admin/font-style.css" rel="stylesheet">
-    <link href="http://www.prepbootstrap.com/Content/css/single-page-admin/flexslider.css" rel="stylesheet">
+    <link href="{{asset('/css/font-style.css')}}" rel="stylesheet">
+    <link href="{{asset('/css/flexslider.css')}}" rel="stylesheet">
     <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/jquery-1.10.2.min.js"></script>
         
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/single-page-admin/bootstrap.js"></script>
+    <script type="text/javascript" src="{{asset('/js/bootstrap.js')}}"></script>
 	<script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/single-page-admin/lineandbars.js"></script>
     
 	<script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/single-page-admin/dash-charts.js"></script>

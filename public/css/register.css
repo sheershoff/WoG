@@ -1,4 +1,4 @@
-/* $REGISTER */
+﻿/* $REGISTER */
 #register-wraper {
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -52,7 +52,7 @@
 }
 
 .register-info-wraper {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 #register-info {

@@ -1,1 +1,8 @@
+Ресурсы
 http://iconbird.com/view/37678_iconki_minon_gadkiy_ya_minion_banan
+laravel
+  Подсказки
+    http://cheats.jesse-obrien.ca/
+    http://learninglaravel.net/cheatsheet/
+  Дока, но понятней чем дока
+    https://laravel.ru/docs/v4/eloquent

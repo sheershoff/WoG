@@ -1,7 +1,7 @@
 
 <?php
 
-namespace App\WorldOfGame\Model;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

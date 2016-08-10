@@ -6,3 +6,5 @@ Homestead.json
 composer
 .env
 /nbproject/private/
+*.log
+/composer.bat
