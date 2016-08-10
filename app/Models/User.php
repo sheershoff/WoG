@@ -1,14 +1,14 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-use Adldap\Laravel\Traits\AdldapUserModelTrait;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 //use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Adldap\Laravel\Traits\AdldapUserModelTrait;
 
 /**
  * @property integer $id

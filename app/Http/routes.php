@@ -70,16 +70,15 @@ Route::get('/', 'WogController@index');
 Route::get('/personal-data', 'WogController@personalData');
 Route::get('/add-user-quest', 'WogController@addUserQuest');
 
-//Route::auth();
 // Маршруты авторизации...
-//Route::get('login', 'Auth\AuthController@showLoginForm');
-//Route::post('login', 'Auth\AuthController@login');
-//Route::get('logout', 'Auth\AuthController@logout');
+Route::get('login', 'Auth\AuthController@showLoginForm');
+Route::post('login', 'Auth\AuthController@login');
+Route::get('logout', 'Auth\AuthController@logout');
 
 //Authentication Routes...
-Route::get('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@showLoginForm']);
-Route::post('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@login'])->middleware('prelogin.ldap');
-Route::get('logout', ['as' => 'auth.logout', 'uses' => 'Auth\AuthController@logout']);
+//Route::get('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@showLoginForm']);
+//Route::post('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@login'])->middleware('prelogin.ldap');
+//Route::get('logout', ['as' => 'auth.logout', 'uses' => 'Auth\AuthController@logout']);
 
 
 // Маршруты регистрации...
@@ -87,3 +86,4 @@ Route::get('logout', ['as' => 'auth.logout', 'uses' => 'Auth\AuthController@logo
 //Route::post('register', 'Auth\AuthController@register');
 
 //Route::get('/home', 'HomeController@index');
+

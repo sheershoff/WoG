@@ -162,6 +162,7 @@ return [
         */
         //Dsdevbe\LdapConnector\LdapConnectorServiceProvider::class
         Adldap\Laravel\AdldapServiceProvider::class,
+        Adldap\Laravel\AdldapAuthServiceProvider::class,
     ],
 
     /*
