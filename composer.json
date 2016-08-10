@@ -10,11 +10,7 @@
         "caouecs/laravel-lang": "^3.0",
         "orangehill/iseed": "^2.1",
         "doctrine/dbal": "^2.5",
-        "adldap2/adldap2-laravel": "^2.1",
-        "robloach/component-installer": "^0.2.3",
-        "components/jquery": "^3.1",
-        "aFarkas/html5shiv": "^3.7",
-        "DataTables/DataTables": "^1.10"
+        "adldap2/adldap2-laravel": "^2.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -60,8 +56,6 @@
                                     "url":"https://github.com/krlove/eloquent-model-generator"
                                             }],
     "config": {
-        "preferred-install": "dist",
-        "component-dir": "public/assets",
-        "component-baseurl": "/assets"
+        "preferred-install": "dist"
     }
 }
