@@ -51,6 +51,23 @@ class QuestsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
+            2 => 
+            array (
+                'id' => 0,
+                'name' => 'Получи инвайт',
+            'description' => 'Вы можете присоединиться к системе только если от кого-то получите приглашение (invite).',
+                'role_id' => -2,
+                'author_user_id' => NULL,
+                'is_hide' => false,
+                'is_auto' => true,
+                'time_recheck' => 86400,
+                'function_time_recheck' => NULL,
+                'function_check' => NULL,
+                'robot_id' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
         ));
         
         

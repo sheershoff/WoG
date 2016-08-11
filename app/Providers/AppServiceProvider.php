@@ -28,6 +28,8 @@ class AppServiceProvider extends ServiceProvider
             $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
 	    //$this->app->register('Iber\Generator\ModelGeneratorProvider');
 	    $this->app->register('Krlove\EloquentModelGenerator\Provider\GeneratorServiceProvider');
+	    $this->app->register('Barryvdh\Debugbar\ServiceProvider');
+	    $this->app->register('Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider');
         }
     }
 }

@@ -143,7 +143,7 @@ return [
     |
     */
 
-    'bind_user_to_model' => env('ADLDAP_BIND_USER_TO_MODEL', false),
+    'bind_user_to_model' => env('ADLDAP_BIND_USER_TO_MODEL', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -185,7 +185,7 @@ return [
 
     'select_attributes' => [
 
-        //
+        'uid', 'givenname', 'mail'
 
     ],
 

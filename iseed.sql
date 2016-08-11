@@ -20,3 +20,9 @@ and tablename!='wog_migrations'
 ) select 'php artisan iseed '|| substr(m,5) from x
 group by m
 order by max(poid)
+
+SELECT table_name
+FROM information_schema.columns
+WHERE table_schema = 'wog'
+  AND table_name   like 'wog_%'
+  and column_name='id'

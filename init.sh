@@ -10,6 +10,8 @@ composer update
 php artisan migrate
 php artisan migrate --seed
 php artisan vendor:publish
+#как минимум двигаем последовательности
+./vendor/bin/phpunit
 
 npm link gulp
 npm link laravel-elixir

@@ -8,7 +8,7 @@ php artisan iseed user_quest_statuses
 php artisan iseed jobs
 php artisan iseed user_profiles
 php artisan iseed team_users
-php artisan iseed quest
+php artisan iseed quests
 php artisan iseed role_user
 php artisan iseed currencies
 php artisan iseed skills

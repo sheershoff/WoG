@@ -14,33 +14,52 @@ class WogController extends Controller
 {
    public function index()
    {
+	return view('welcome');
     if (!Auth::check()) {
-    return view('welcome');
+	return view('welcome');
     } else {
+	//var_dump(Auth::user()->id);
    		//dd(Users::all());
 //Auth::user()->id
          $QustByUser = DB::select('SELECT id, name, description FROM wog_quests'); 
          $MyQustByUser = DB::select ('select q.id, q.name, q.description '
                  . 'from wog_quests q '
                  . ' join wog_user_quests uq on q.id=uq.quest_id '
-                 . 'where uq.user_id='. Auth::user()->id);
+                 . 'where uq.user_id=:id', ['id'=>Auth::user()->id]);
          $cash = DB::select('select c.name, b.value, ct.unit '
             . 'from wog_balances b '
             . ' join wog_currencies c on b.currency_id = c.id '
             . ' join wog_currency_types ct on c.currency_type_id = ct.id'
-            . ' where b.user_id = ' . Auth::user()->id);
+            . ' where b.user_id = ?', [Auth::user()->id]);
          $status =  DB::select('select r.name '
                  . 'from wog_users u '
                  . ' join wog_role_user ru on u.id = ru.user_id '
                  . ' join wog_roles r on ru.role_id = r.id '
-                 . 'where u.id = ' . Auth::user()->id . '');
+                 . 'where u.id = ?', [Auth::user()->id]);
+	//var_dump($QustByUser);
+	/*
+	if ($status==array()) {
+         $status =  DB::select('select r.name '
+                 . 'from  wog_roles r '
+                 . 'where r.id = -2');
+	
+         $cash = DB::select('select c.name, 0, ct.unit '
+            . 'from  wog_currencies c  '
+            . ' join wog_currency_types ct on c.currency_type_id = ct.id');
+            
+         $MyQustByUser = DB::select ('select q.id, q.name, q.description '
+                 . 'from wog_quests q where q.id = 0');
+	};
+	var_dump($cash);*/
+	//var_dump($QustByUser);
    		return view('public.page.index', [
    			'staus' => $status,
    			'cash' => $cash,
-            'QustByUser' => $QustByUser,
-            'MyQustByUser' => $MyQustByUser
+	                'QustByUser' => $QustByUser,
+        		'MyQustByUser' => $MyQustByUser
    			]);
     }
+    
    }  
    public function personalData()
    {
