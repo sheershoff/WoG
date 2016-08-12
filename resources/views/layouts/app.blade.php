@@ -10,29 +10,18 @@
     <meta name="author" content="Vladimir.Khonin">
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
+    <!-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous" -->
+    <!-- link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" -->
+    <link href="{{asset('/css/font-style.css')}}" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{asset('/css/all.css') }}" rel="stylesheet">
 
-    <link href="{{asset('/css/font-style.css')}}" rel="stylesheet">
-    
-    <link href="{{asset('/css/app.css') }}" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Lato';
-        }
-
-        .fa-btn {
-            margin-right: 6px;
-        }
-    </style>
 </head>
 <body id="app-layout">
-    <!-- NAVIGATION MENU -->
-    <nav class="navbar navbar-default navbar-static-top">
+    <!-- NAVIGATION MENU navbar navbar-default navbar-static-top-->
+    <nav class="navbar-nav navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
 
@@ -62,6 +51,7 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://megawiki.megafon.ru/display/WOG">WiKi</a></li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
@@ -127,6 +117,6 @@
     <!-- JavaScripts -->
     <script type="text/javascript" src="{{asset('/js/jquery.js') }}"></script>
     <script type="text/javascript" src="{{asset('/js/bootstrap.js')}}"></script>
-    <script type="text/javascript" src="{{asset('/js/app.js') }}"></script>
+    <script type="text/javascript" src="{{asset('/js/all.js') }}"></script>
 </body>
 </html>

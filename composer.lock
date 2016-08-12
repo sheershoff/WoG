@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "eaa368fcbb6541b5ab0e775d0778cbf0",
+    "hash": "9c9944d21b18bf3c40448bc24c59f53f",
     "content-hash": "a745772865ead9603bf18c6454ce6a59",
     "packages": [
         {
@@ -61,16 +61,16 @@
         },
         {
             "name": "adldap2/adldap2-laravel",
-            "version": "v2.1.0",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Adldap2/Adldap2-Laravel.git",
-                "reference": "09d40db21c5485af247cddeeef2d54a72afbeac2"
+                "reference": "88ea93d681fb4d7808a18fde836fedbf99a41541"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Adldap2/Adldap2-Laravel/zipball/09d40db21c5485af247cddeeef2d54a72afbeac2",
-                "reference": "09d40db21c5485af247cddeeef2d54a72afbeac2",
+                "url": "https://api.github.com/repos/Adldap2/Adldap2-Laravel/zipball/88ea93d681fb4d7808a18fde836fedbf99a41541",
+                "reference": "88ea93d681fb4d7808a18fde836fedbf99a41541",
                 "shasum": ""
             },
             "require": {
@@ -97,7 +97,7 @@
                 "laravel",
                 "ldap"
             ],
-            "time": "2016-07-28 16:19:38"
+            "time": "2016-08-11 15:26:14"
         },
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -216,16 +216,16 @@
         },
         {
             "name": "caouecs/laravel-lang",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caouecs/Laravel-lang.git",
-                "reference": "1d0034078611dd0b0e1955693d00e2edbec7d0df"
+                "reference": "812bedaea2c2fcf8bc2219cb0729116cf96380ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/1d0034078611dd0b0e1955693d00e2edbec7d0df",
-                "reference": "1d0034078611dd0b0e1955693d00e2edbec7d0df",
+                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/812bedaea2c2fcf8bc2219cb0729116cf96380ef",
+                "reference": "812bedaea2c2fcf8bc2219cb0729116cf96380ef",
                 "shasum": ""
             },
             "require-dev": {
@@ -252,7 +252,7 @@
                 "laravel",
                 "lpm"
             ],
-            "time": "2016-08-05 13:52:38"
+            "time": "2016-08-10 19:34:20"
         },
         {
             "name": "classpreloader/classpreloader",

@@ -8,3 +8,4 @@ composer
 /nbproject/private/
 *.log
 /composer.bat
+composer.lock
