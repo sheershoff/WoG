@@ -6,13 +6,14 @@
     <meta name="description" content="">
     <meta name="author" content="Carlos Alvarez - Alvarez.is">
 
-    <link rel="stylesheet" type="text/css" href="{{asset('bootstrap/css/bootstrap.min.css')}}" />
-    <link href="{{asset('/css/main.css')}}" rel="stylesheet">
-    <link href="{{asset('/css/castom.css')}}" rel="stylesheet">
-    <link href="{{asset('/css/register.css')}}" rel="stylesheet">
+    <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet">
+    
     <link href="{{asset('/css/font-style.css')}}" rel="stylesheet">
-    <link href="{{asset('/css/flexslider.css')}}" rel="stylesheet">
-    <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/jquery-1.10.2.min.js"></script>
+    
+    <link href="{{asset('/css/app.css') }}" rel="stylesheet">
+    
+    
+    <script type="text/javascript" src="{{asset('/js/jquery.js') }}"></script>
         
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="{{asset('/js/bootstrap.js')}}"></script>
@@ -32,7 +33,6 @@
 	<script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/single-page-admin/noty/themes/default.js"></script>
     <!-- <script type="text/javascript" src="assets/js/dash-noty.js"></script> This is a Noty bubble when you init the theme-->
 	<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
-	<script src="http://www.prepbootstrap.com/Content/js/single-page-admin/jquery.flexslider.js" type="text/javascript"></script>
 
     <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/single-page-admin/admin.js"></script>
       

@@ -21,7 +21,7 @@
         "symfony/css-selector": "2.8.*|3.0.*",
         "symfony/dom-crawler": "2.8.*|3.0.*",
         "laracasts/generators": "^1.1",
-        "Krlove/eloquent-model-generator": "dev-master",
+        "krlove/eloquent-model-generator": "^1",
         "barryvdh/laravel-debugbar": "^2.2"
     },
     "autoload": {
@@ -50,16 +50,11 @@
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-	    "php artisan ide-helper:generate",
+            "php artisan ide-helper:generate",
             "php artisan ide-helper:meta",
             "php artisan optimize"
         ]
     },
-    "repositories":[
-            {
-                        "type":"git",
-                                    "url":"https://github.com/krlove/eloquent-model-generator"
-                                            }],
     "config": {
         "preferred-install": "dist"
     }

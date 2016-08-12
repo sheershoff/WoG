@@ -15,6 +15,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "resources/views/public/page/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 10401,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/layouts/app.blade.php",
+			"settings":
+			{
+				"buffer_size": 4653,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -65,15 +81,37 @@
 		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app",
 		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Http",
 		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Http/Controllers",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models",
 		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/resources",
 		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/resources/views",
-		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/resources/views/public",
 		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/resources/views/public/page"
 	],
 	"file_history":
 	[
-		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/imodel.sh",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/User.php",
 		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Http/Controllers/WogController.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/Action.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/ActionCurrency.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/ActionTransaction.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/Balance.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/Currency.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/CurrencyTransaction.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/CurrencyType.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/MailTemplate.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/Page.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/Quest.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/Role.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/RoleUser.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/Skill.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/TeamUser.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/TiemUser.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/UserGuestStatus.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/UserProfile.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/UserQuest.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/UserQuestStatus.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/UserSkill.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/Models/UserStatus.php",
+		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/imodel.sh",
 		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/resources/views/public/page/index.blade.php",
 		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/iseed.sh",
 		"//megafon/ural/docs/vladimir.khonin/Documents/php/WoG/app/User.php",
@@ -123,7 +161,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -138,6 +176,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"MyQustByUser",
 			"wog_",
 			"wog",
 			"'Wog",
@@ -164,8 +203,74 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "resources/views/public/page/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10401,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								809,
+								819
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "resources/views/layouts/app.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4653,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -250,7 +355,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 336.0,
+	"side_bar_width": 394.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

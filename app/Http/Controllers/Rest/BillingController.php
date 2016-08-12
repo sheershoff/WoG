@@ -32,9 +32,18 @@ class BillingController extends Controller
                     $ActionTransaction = DB::insert('insert into action_transactions set user_id ='.id.' actionId = '.$Actions[0]->id.' mail_template_id = '.$MailTemplate[0]->id.' created_at sysdate');
                     $CurrencyTransaction = DB::insert('insert into currency_transactions set value ='.$ActionsCurrency[0]->value.' currency_id = '.$ActionsCurrency[0]->id.' ');
                     //ToDo:insert в балансы, если нет ни одной строчки или upsert использовать
-                    $Balance = DB::update('update wog_balance set value=value+'.ActionsCurrency[0]->value.' update_at = sysdate where user_id='.id.' and currency_id='.$ActionsCurrency[0]->id);
-		} catch {
-                    $error='Error on DB'
+                    $Balance = 
+                            DB::update('update wog_balance '
+                                    . '    set value=value+:val,'
+                                    . '        update_at = sysdate '
+                                    . '  where user_id=:user'
+                                    . '    and currency_id=:cur', 
+                               ['val'=>$ActionsCurrency[0]->value,
+                                'user'=>$id,
+                                'cur'=>$ActionsCurrency[0]->id
+                               ]);
+		} catch (Exception$uc) {
+                    $error='Error on DB'||$uc->getMessage();
                     $state = 'Error found';
                 }   
             }
