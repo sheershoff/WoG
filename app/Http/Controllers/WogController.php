@@ -8,17 +8,18 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use App\Http\Requests;
 
-use App\WorldOfGame\Model\users;
+use App\Models\User;
+use App\Models\ActionTransaction;
 
 class WogController extends Controller
 {
    public function index()
    {
-	return view('welcome');
-    if (!Auth::check()) {
-	return view('welcome');
+	  if (!Auth::check()) {
+	   return view('welcome',['log'=>ActionTransaction::orderBy('created_at', 'desc')->take(5)->get()]);
     } else {
-	//var_dump(Auth::user()->id);
+	   return view('welcome');
+  //var_dump(Auth::user()->id);
    		//dd(Users::all());
 //Auth::user()->id
          $QustByUser = DB::select('SELECT id, name, description FROM wog_quests'); 
