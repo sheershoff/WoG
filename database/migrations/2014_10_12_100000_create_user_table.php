@@ -25,6 +25,12 @@ class CreateUserTable extends Migration
             $table->string('ext_login',30)->unique()->nullable()->comment('логин в пс');
             $table->string('phone_number',11)->nullable()->comment('телефонный номер без - с +7');
             $table->string('tab_number',30)->nullable()->comment('Табельный номер');
+            $table->string('description',255)->nullable()->comment('Описание');
+            $table->string('status',255)->nullable()->comment('Статус (настроение)');
+            $table->binary('photo')->nullable();
+            $table->integer('mail_agg_id')->nullable()->unsigned()->comment('Частота агрегации сообщений');
+            $table->foreign('mail_agg_id')->references('id')->on('mail_aggs');
+            $table->integer('mail_hour')->nullable()->unsigned()->comment('Частота агрегации сообщений');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

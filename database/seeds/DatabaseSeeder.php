@@ -19,7 +19,6 @@ class DatabaseSeeder extends Seeder
         $this->call('RolesTableSeeder');
         $this->call('UserQuestStatusesTableSeeder');
         $this->call('JobsTableSeeder');
-        $this->call('UserProfilesTableSeeder');
         $this->call('TeamUsersTableSeeder');
         $this->call('QuestsTableSeeder');
         $this->call('RoleUserTableSeeder');
