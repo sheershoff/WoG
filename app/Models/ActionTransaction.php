@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @property integer $id
@@ -19,9 +17,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property MailTemplates $MailTemplates
  * @property CurrencyTransactions[] $CurrencyTransactions
  */
-class ActionTransaction extends Model {
+class ActionTransaction extends BaseModelWithSoftDeletes {
 
-    use SoftDeletes;
     /**
      * The table associated with the model.
      * 
@@ -32,7 +29,6 @@ class ActionTransaction extends Model {
      * @var array
      */
     protected $fillable = ['user_id', 'action_id', 'mail_template_id', 'message', 'created_at', 'updated_at'];
-    protected $dates = ['deleted_at'];
 
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

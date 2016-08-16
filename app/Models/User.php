@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
 //use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
@@ -39,7 +38,7 @@ use Adldap\Laravel\Traits\AdldapUserModelTrait;
  * @property UserSkills[] $UserSkills
  * @property UserSkills[] $UserSkills
  */
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract
+class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, CanResetPasswordContract
 {
     use Authenticatable, CanResetPassword, AdldapUserModelTrait; // Insert trait here
     /**
@@ -63,7 +62,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     /**
      * @var array
      */
-    protected $fillable = ['user_status_id', 'login', 'name', 'email', 'user_type', 'ext_login', 'phone_number', 'tab_number', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['user_status_id', 'login', 'name', 'email', 'user_type', 'ext_login', 'phone_number', 'tab_number', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

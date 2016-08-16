@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 /**
  * @property integer $id
  * @property integer $quest_id
@@ -17,7 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property Users $Users
  * @property UserQuestStatuses $UserQuestStatuses
  */
-class UserQuest extends Model
+class UserQuest extends BaseModelWithSoftDeletes
 {
     /**
      * The table associated with the model.
@@ -29,7 +27,7 @@ class UserQuest extends Model
     /**
      * @var array
      */
-    protected $fillable = ['quest_id', 'user_id', 'user_quest_status_id', 'quest_type', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['quest_id', 'user_id', 'user_quest_status_id', 'quest_type', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

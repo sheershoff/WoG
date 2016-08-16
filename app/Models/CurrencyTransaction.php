@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 /**
  * @property integer $id
  * @property integer $currency_id
@@ -19,7 +17,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property ActionCurrencies $ActionCurrencies
  * @property ActionTransactions $ActionTransactions
  */
-class CurrencyTransaction extends Model
+class CurrencyTransaction extends BaseModelWithSoftDeletes
 {
     /**
      * The table associated with the model.
@@ -31,7 +29,7 @@ class CurrencyTransaction extends Model
     /**
      * @var array
      */
-    protected $fillable = ['currency_id', 'user_id', 'action_currency_id', 'action_trancaction_id', 'value', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['currency_id', 'user_id', 'action_currency_id', 'action_trancaction_id', 'value', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

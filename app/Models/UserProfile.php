@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property Users $Users
  * @property MailAggs $MailAggs
  */
-class UserProfile extends Model
+class UserProfile extends BaseModelWithSoftDeletes
 {
     /**
      * The table associated with the model.
@@ -30,7 +30,7 @@ class UserProfile extends Model
     /**
      * @var array
      */
-    protected $fillable = ['user_id', 'mail_agg_id', 'description', 'status', 'photo', 'mail_hour', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['user_id', 'mail_agg_id', 'description', 'status', 'photo', 'mail_hour', 'created_at', 'updated_at'];
 
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

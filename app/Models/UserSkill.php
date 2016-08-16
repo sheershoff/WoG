@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 /**
  * @property integer $id
  * @property integer $user_id
@@ -17,7 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property Skills $Skills
  * @property Users $Users
  */
-class UserSkill extends Model
+class UserSkill extends BaseModelWithSoftDeletes
 {
     /**
      * The table associated with the model.
@@ -29,7 +27,7 @@ class UserSkill extends Model
     /**
      * @var array
      */
-    protected $fillable = ['user_id', 'skill_id', 'expert_user_id', 'value', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['user_id', 'skill_id', 'expert_user_id', 'value', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

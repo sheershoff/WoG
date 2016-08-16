@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 /**
  * @property integer $id
  * @property integer $currency_id
@@ -14,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property Currencies $Currencies
  * @property Users $Users
  */
-class Balance extends Model
+class Balance extends BaseModel
 {
     /**
      * The table associated with the model.

@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @property integer $id
@@ -25,9 +23,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property Skill[] $skills
  * @property CurrencyTransaction[] $currencyTransactions
  */
-class Currency extends Model
+class Currency extends BaseModelWithSoftDeletes
 {
-    use SoftDeletes;
     /**
      * The table associated with the model.
      * 
@@ -39,7 +36,6 @@ class Currency extends Model
      * @var array
      */
     protected $fillable = ['role_id', 'currency_type_id', 'name', 'description', 'function', 'options', 'photo', 'top_menu', 'created_at', 'updated_at'];
-    protected $dates = ['deleted_at'];
 
     /**
      * Scope a query to only include popular users.

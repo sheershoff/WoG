@@ -1,7 +1,7 @@
-@extends('public.app')
-
+@extends('layouts.app')
 
 @section('content')
+
 
 
         	<div style="margin-bottom: 40px;" class="col-lg-6">

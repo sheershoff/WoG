@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
-use App\Http\Requests;
+//use App\Http\Requests;
 
-use App\Models\User;
-use App\Models\Action;
+//use App\Models\User;
+//use App\Models\Action;
 use App\Models\Balance;
-use App\Models\Currency;
+//use App\Models\Currency;
 use App\Models\ActionTransaction;
+use App\Models\Quest;
 
 class WogController extends Controller
 {
@@ -30,7 +31,6 @@ class WogController extends Controller
   //var_dump(Auth::user()->id);
    		//dd(Users::all());
 //Auth::user()->id
-         $QustByUser = DB::select('SELECT id, name, description FROM wog_quests'); 
          $MyQustByUser = DB::select ('select q.id, q.name, q.description '
                  . 'from wog_quests q '
                  . ' join wog_user_quests uq on q.id=uq.quest_id '
@@ -64,7 +64,7 @@ class WogController extends Controller
    		return view('home', [
    			'staus' => $status,
    			'cash' => $cash,
-	                'QustByUser' => $QustByUser,
+	                'QustByUser' => Quest::orderBy('created_at', 'asc')->get(),
         		'MyQustByUser' => $MyQustByUser
    			]);
     }
@@ -82,7 +82,7 @@ class WogController extends Controller
                  . ' join wog_role_user ru on u.id = ru.user_id'
                  . ' join wog_roles r on ru.role_id = r.id '
                  . 'where u.id = ' . Auth::user()->id . '');
-         return view('public.page.personal_data', [
+         return view('personal_data', [
             'status' => $status,
             'cash' => $cash
    		]);

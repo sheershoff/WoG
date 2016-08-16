@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $deleted_at
  * @property UserQuests[] $UserQuests
  */
-class UserGuestStatus extends Model
+class UserGuestStatus extends BaseModelWithSoftDeletes
 {
     /**
      * The table associated with the model.
@@ -24,7 +24,7 @@ class UserGuestStatus extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['name', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

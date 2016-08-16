@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property integer $id
@@ -27,7 +26,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property UserQuests[] $UserQuests
  * @property Actions[] $Actions
  */
-class Quest extends Model
+class Quest extends BaseModelWithSoftDeletes
 {
     /**
      * The table associated with the model.
@@ -39,61 +38,61 @@ class Quest extends Model
     /**
      * @var array
      */
-    protected $fillable = ['role_id', 'author_user_id', 'robot_id', 'name', 'description', 'is_hide', 'is_auto', 'time_recheck', 'function_time_recheck', 'function_check', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['role_id', 'author_user_id', 'robot_id', 'name', 'description', 'is_hide', 'is_auto', 'time_recheck', 'function_time_recheck', 'function_check', 'created_at', 'updated_at'];
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function Roles()
-    {
-        return $this->belongsTo('Roles', 'role_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function Users()
-    {
-        return $this->belongsTo('Users', 'author_user_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function Robots()
-    {
-        return $this->belongsTo('Robots', 'robot_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function QuestDepends()
-    {
-        return $this->hasMany('QuestDepends', 'quest_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function QuestDepends()
-    {
-        return $this->hasMany('QuestDepends', 'depend_quest_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function UserQuests()
-    {
-        return $this->hasMany('UserQuests', 'quest_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function Actions()
-    {
-        return $this->hasMany('Actions', 'quest_id');
-    }
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+//     */
+//    public function Roles()
+//    {
+//        return $this->belongsTo('Roles', 'role_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+//     */
+//    public function Users()
+//    {
+//        return $this->belongsTo('Users', 'author_user_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+//     */
+//    public function Robots()
+//    {
+//        return $this->belongsTo('Robots', 'robot_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function QuestDepends()
+//    {
+//        return $this->hasMany('QuestDepends', 'quest_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function QuestDepends()
+//    {
+//        return $this->hasMany('QuestDepends', 'depend_quest_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function UserQuests()
+//    {
+//        return $this->hasMany('UserQuests', 'quest_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function Actions()
+//    {
+//        return $this->hasMany('Actions', 'quest_id');
+//    }
 }

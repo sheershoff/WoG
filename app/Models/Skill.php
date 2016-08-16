@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 /**
  * @property integer $id
  * @property integer $currency_id
@@ -18,7 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property Currencies $Currencies
  * @property UserSkills[] $UserSkills
  */
-class Skill extends Model
+class Skill extends BaseModelWithSoftDeletes
 {
     /**
      * The table associated with the model.
@@ -30,7 +28,7 @@ class Skill extends Model
     /**
      * @var array
      */
-    protected $fillable = ['currency_id', 'name', 'description', 'options', 'parent_skill_id', 'appoint', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['currency_id', 'name', 'description', 'options', 'parent_skill_id', 'appoint', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

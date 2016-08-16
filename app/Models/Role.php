@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 /**
  * @property integer $id
  * @property string $name
@@ -14,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property Currencies[] $Currencies
  * @property Quests[] $Quests
  */
-class Role extends Model
+class Role extends BaseModelWithSoftDeletes
 {
     /**
      * The table associated with the model.
@@ -26,7 +24,7 @@ class Role extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['name', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
