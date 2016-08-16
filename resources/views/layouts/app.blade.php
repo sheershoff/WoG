@@ -15,10 +15,16 @@
     <link href="{{asset('/css/font-style.css')}}" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet">
     <link href="{{asset('/css/normalize.css')}}" rel="stylesheet">
+    <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet">
     <link href="{{asset('/css/all.css') }}" rel="stylesheet">
-
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+    <!-- JavaScripts -->
+    <script type="text/javascript" src="{{asset('/js/jquery.js') }}"></script>
 </head>
 <body id="app-layout">
     <!-- NAVIGATION MENU navbar navbar-default navbar-static-top-->
@@ -83,7 +89,7 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-			    <li><a href="/gantt/">gantt</a></li>
+			    <li><a href="/gantt/index.html">gantt</a></li>
 			    <li><a href="/gantt/toweek.html">недельные задачи</a></li>
                         </ul>
                     </li>                        
@@ -92,31 +98,16 @@
             </div>
         </div>
     </nav>
+  
 
-    <div class="container">
-
-        <!-- FIRST ROW OF BLOCKS -->     
-        <div class="row">
             @yield('content')
-        </div><!--/row -->
 
 
-
-    </div> <!-- /container -->
-    <div id="footerwrap">
-        <footer class="clearfix"></footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-lg-12">
-                    <p>© Vladimir Khonin & 2016 ПАО «МегаФон»</p>
-                </div>
-
-            </div><!-- /row -->
-        </div><!-- /container -->		
-    </div><!-- /footerwrap -->
+    <div id="footer">
+                    <p class="text-muted">© Vladimir Khonin & 2016 ПАО «МегаФон»</p>
+    </div>
 
     <!-- JavaScripts -->
-    <script type="text/javascript" src="{{asset('/js/jquery.js') }}"></script>
     <script type="text/javascript" src="{{asset('/js/bootstrap.js')}}"></script>
     <script type="text/javascript" src="{{asset('/js/all.js') }}"></script>
 </body>
