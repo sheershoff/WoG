@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @property integer $id
@@ -20,12 +21,13 @@ use Illuminate\Database\Eloquent\Model;
  * @property Roles $Roles
  * @property CurrencyTypes $CurrencyTypes
  * @property ActionCurrencies[] $ActionCurrencies
- * @property Balances[] $Balances
- * @property Skills[] $Skills
- * @property CurrencyTransactions[] $CurrencyTransactions
+ * @property Balance[] $balances
+ * @property Skill[] $skills
+ * @property CurrencyTransaction[] $currencyTransactions
  */
 class Currency extends Model
 {
+    use SoftDeletes;
     /**
      * The table associated with the model.
      * 
@@ -36,53 +38,73 @@ class Currency extends Model
     /**
      * @var array
      */
-    protected $fillable = ['role_id', 'currency_type_id', 'name', 'description', 'function', 'options', 'photo', 'top_menu', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['role_id', 'currency_type_id', 'name', 'description', 'function', 'options', 'photo', 'top_menu', 'created_at', 'updated_at'];
+    protected $dates = ['deleted_at'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * Scope a query to only include popular users.
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function Roles()
+    public function scopeXP($query)
     {
-        return $this->belongsTo('Roles', 'role_id');
+        return $query->where('currency_type_id', 1);
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * Scope a query to only include active users.
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function CurrencyTypes()
+    public function scopeMedal($query)
     {
-        return $this->belongsTo('CurrencyTypes', 'currency_type_id');
-    }
-
+        return $query->where('currency_type_id', 2);
+    }    
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+//     */
+//    public function Roles()
+//    {
+//        return $this->belongsTo('Roles', 'role_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+//     */
+//    public function CurrencyTypes()
+//    {
+//        return $this->belongsTo('CurrencyTypes', 'currency_type_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function ActionCurrencies()
+//    {
+//        return $this->hasMany('ActionCurrencies', 'currency_id');
+//    }
+//
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function ActionCurrencies()
-    {
-        return $this->hasMany('ActionCurrencies', 'currency_id');
+    public function balances()
+    {//echo "dsgfasgkjsdfl";
+        return $this->hasMany(Balance::class, 'currency_id');
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function Balances()
-    {
-        return $this->hasMany('Balances', 'currency_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function Skills()
-    {
-        return $this->hasMany('Skills', 'currency_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function CurrencyTransactions()
-    {
-        return $this->hasMany('CurrencyTransactions', 'currency_id');
-    }
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function Skills()
+//    {
+//        return $this->hasMany('Skills', 'currency_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function CurrencyTransactions()
+//    {
+//        return $this->hasMany('CurrencyTransactions', 'currency_id');
+//    }
 }

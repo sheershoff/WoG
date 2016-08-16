@@ -10,6 +10,8 @@ use App\Http\Requests;
 
 use App\Models\User;
 use App\Models\Action;
+use App\Models\Balance;
+use App\Models\Currency;
 use App\Models\ActionTransaction;
 
 class WogController extends Controller
@@ -18,7 +20,11 @@ class WogController extends Controller
    {
 //ini_set('memory_limit', '1024M');       
 	  if (!Auth::check()) {
-	   return view('welcome',['ats'=>ActionTransaction::orderBy('created_at', 'desc')->take(5)->get()/*,'users'=>  User::index()*/]);
+	   return view('welcome',[
+               'ats'=>ActionTransaction::orderBy('created_at', 'desc')->take(5)->get(),
+               'bls'=>Balance::XP()->orderBy('value', 'desc')->take(5)->get(),
+               'bl2s'=>Balance::Medal()->orderBy('created_at', 'desc')->take(5)->get(),
+                   ]);
     } else {
 //	   return view('welcome',['log'=>array(['id'=>1],['id'=>2])]);
   //var_dump(Auth::user()->id);

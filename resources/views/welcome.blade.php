@@ -16,27 +16,39 @@
 <div class="container">
     <div class="row">
 
+        <!--Награды-->
+        <div class="col-lg-4 col-md-4">
+            <div class="panel panel-default">
+                <h2>Награды</h2>
+                <div class="framemail">
+                    <div class="window">
+                        <ul class="mail">
+                            @foreach ($bl2s as $bl)
+                            <li>
+                                <i class="read"></i>
+                                <img class="avatar" src="UserProfile/Photo/{{$bl->user_id}}.jpeg" alt="avatar">
+                                <p class="sender">{{$bl->user->name}}</p>
+                                <p class="message"><b>{{$bl->name}}</b> {{$bl->description}}</p>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <div class="col-lg-4 col-md-4 ">
             <div class="panel panel-group">
-                <h2>Награды</h2>
-                            @foreach ($ats as $user)
-                <p>{{$user->action->name}}</p>
-                <p>{{$user->user->name}}</p>
-                @endforeach
-</div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 ">
-            <div class="panel panel-default">
                 <h2>Текущая активность</h2>
                 <div class="framemail">
                     <div class="window">
                         <ul class="mail">
+                            @foreach ($ats as $at)
                             <li>
                                 <i class="unread"></i>
-                                <img class="avatar" src="assets/img/photo01.jpeg" alt="avatar">
-                                <p class="sender">Adam W.</p>
-                                <p class="message"><strong>Working</strong> - This is the last...</p>
+                                <img class="avatar" src="UserProfile/Photo/{{$at->user_id}}.jpeg" alt="avatar">
+                                <p class="sender">{{$at->user->name}}</p>
+                                <p class="message">{{$at->action->name}}</p>
                                 <div class="actions">
                                     <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
                                     <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/star_fav.png" alt="favourite"></a>
@@ -44,52 +56,31 @@
                                     <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/trash.png" alt="delete"></a>
                                 </div>
                             </li>
-                            <li>
-                                <i class="read"></i>
-                                <img class="avatar" src="assets/img/photo02.jpg" alt="avatar">
-                                <p class="sender">Dan E.</p>
-                                <p class="message"><strong>Hey man!</strong> - You have to taste ...</p>
-                                <div class="actions">
-                                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
-                                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/star_fav.png" alt="favourite"></a>
-                                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/tag.png" alt="label"></a>
-                                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/trash.png" alt="delete"></a>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="read"></i>
-                                <img class="avatar" src="assets/img/photo03.jpg" alt="avatar">
-                                <p class="sender">Leonard N.</p>
-                                <p class="message"><strong>New Mac :D</strong> - So happy with ...</p>
-                                <div class="actions">
-                                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
-                                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/star_fav.png" alt="favourite"></a>
-                                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/tag.png" alt="label"></a>
-                                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/trash.png" alt="delete"></a>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="read"></i>
-                                <img class="avatar" src="assets/img/photo04.jpg" alt="avatar">
-                                <p class="sender">Peter B.</p>
-                                <p class="message"><strong>Thank you</strong> - Finally I can ...</p>
-                                <div class="actions">
-                                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
-                                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/star_fav.png" alt="favourite"></a>
-                                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/tag.png" alt="label"></a>
-                                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/trash.png" alt="delete"></a>
-                                </div>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!--тек активность-->
+        <!--Top рейтинга-->
         <div class="col-lg-4 col-md-4">
             <div class="panel panel-default">
                 <h2>Top рейтинга</h2>
+                <div class="framemail">
+                    <div class="window">
+                        <ul class="mail">
+                            @foreach ($bls as $bl)
+                            <li>
+                                <i class="read"></i>
+                                <img class="avatar" src="UserProfile/Photo/{{$bl->user_id}}.jpeg" alt="avatar">
+                                <p class="sender">{{$bl->user->name}}</p>
+                                <p class="message">{{$bl->value}}<b>{{$bl->name}}</b> {{$bl->description}}</p>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
