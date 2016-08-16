@@ -16,9 +16,9 @@ class WogController extends Controller
    public function index()
    {
 	  if (!Auth::check()) {
-	   return view('welcome',['log'=>ActionTransaction::orderBy('created_at', 'desc')->take(5)->get()]);
+	   return view('welcome',['ats'=>ActionTransaction::orderBy('created_at', 'desc')->take(5)->get()/*,'users'=>  User::index()*/]);
     } else {
-	   return view('welcome');
+//	   return view('welcome',['log'=>array(['id'=>1],['id'=>2])]);
   //var_dump(Auth::user()->id);
    		//dd(Users::all());
 //Auth::user()->id
@@ -53,7 +53,7 @@ class WogController extends Controller
 	};
 	var_dump($cash);*/
 	//var_dump($QustByUser);
-   		return view('public.page.index', [
+   		return view('home', [
    			'staus' => $status,
    			'cash' => $cash,
 	                'QustByUser' => $QustByUser,

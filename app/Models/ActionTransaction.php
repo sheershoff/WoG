@@ -18,8 +18,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property MailTemplates $MailTemplates
  * @property CurrencyTransactions[] $CurrencyTransactions
  */
-class ActionTransaction extends Model
-{
+class ActionTransaction extends Model {
+
     /**
      * The table associated with the model.
      * 
@@ -35,32 +35,29 @@ class ActionTransaction extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function Users()
-    {
+    public function Users() {
         return $this->belongsTo('Users', 'user_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function Actions()
-    {
-        return $this->belongsTo('Actions', 'action_id');
+    public function actions() {
+        return $this->belongsTo(Action::class, 'action_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function MailTemplates()
-    {
+    public function MailTemplates() {
         return $this->belongsTo('MailTemplates', 'mail_template_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function CurrencyTransactions()
-    {
+    public function CurrencyTransactions() {
         return $this->hasMany('CurrencyTransactions', 'action_trancaction_id');
     }
+
 }
