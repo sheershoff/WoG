@@ -49,7 +49,7 @@ class Balance extends BaseModel
      */
     public function scopeXP($query)
     {
-        return $query->join('currencies', 'currencies.id','=','balances.currency_id')->where('currencies.currency_type_id', 9)->select('balances.*', 'currencies.name', 'currencies.description');
+        return $query->join('currencies', 'currencies.id','=','balances.currency_id')->where('currencies.currency_type_id', 1)->select('balances.*', 'currencies.name', 'currencies.description');
     }
 
     /**
@@ -59,7 +59,7 @@ class Balance extends BaseModel
      */
     public function scopeMedal($query)
     {
-        return $query->join('currencies', 'currencies.id','=','balances.currency_id')->where('currencies.currency_type_id', 10)->select('balances.*', 'currencies.name', 'currencies.description');
+        return $query->join('currencies', 'currencies.id','=','balances.currency_id')->where('currencies.currency_type_id', 2)->select('balances.*', 'currencies.name', 'currencies.description');
     }    
     
 }
