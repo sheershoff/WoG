@@ -75,6 +75,10 @@ Route::get('login', 'Auth\AuthController@showLoginForm');
 Route::post('login', 'Auth\AuthController@login');
 Route::get('logout', 'Auth\AuthController@logout');
 
+//Route::post('/profile/image',[
+//    'before'  => 'csrf',
+//    'as'      => 'viewprofileimage',
+//    'uses'    => 'ProfileimageController@index']);
 //Authentication Routes...
 //Route::get('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@showLoginForm']);
 //Route::post('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@login'])->middleware('prelogin.ldap');
@@ -87,3 +91,19 @@ Route::get('logout', 'Auth\AuthController@logout');
 
 //Route::get('/home', 'HomeController@index');
 
+//Route::get('user/{id}/image', function($id)
+//{
+//    $user = User::find($id);
+//    $response = Response::make($user->image, 200);
+//    $response->header('Content-Type', 'image/jpeg');
+//    return $response;
+//});
+// usage inside a laravel route
+//    $img = Image::make('foo.jpg')->resize(300, 200);
+//    return $img->response('jpg');
+//});
+
+Route::get('list', 'PictureController@showPictureList');
+Route::get('pic/{id}', 'PictureController@showPicture');
+Route::get('add', 'PictureController@addPicture');
+Route::post('add', 'PictureController@savePicture');

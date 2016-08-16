@@ -92,7 +92,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function UserProfiles()
+    public function userProfile()
     {
         return $this->hasMany('UserProfiles', 'user_id');
     }
@@ -100,72 +100,72 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function RoleUsers()
-    {
-        return $this->hasMany('RoleUser', 'user_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function Robots()
-    {
-        return $this->hasMany('Robots', 'user_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function UserQuests()
-    {
-        return $this->hasMany('UserQuests', 'user_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function Quests()
-    {
-        return $this->hasMany('Quests', 'author_user_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function Balances()
-    {
-        return $this->hasMany('Balances', 'user_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function ActionTransactions()
-    {
-        return $this->hasMany('ActionTransactions', 'user_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function CurrencyTransactions()
-    {
-        return $this->hasMany('CurrencyTransactions', 'user_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function UserSkills()
-    {
-        return $this->hasMany('UserSkills', 'user_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function ExpertUserSkills()
-    {
-        return $this->hasMany('UserSkills', 'expert_user_id');
-    }
+//    public function RoleUsers()
+//    {
+//        return $this->hasMany('RoleUser', 'user_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function Robots()
+//    {
+//        return $this->hasMany('Robots', 'user_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function UserQuests()
+//    {
+//        return $this->hasMany('UserQuests', 'user_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function Quests()
+//    {
+//        return $this->hasMany('Quests', 'author_user_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function Balances()
+//    {
+//        return $this->hasMany('Balances', 'user_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function ActionTransactions()
+//    {
+//        return $this->hasMany('ActionTransactions', 'user_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function CurrencyTransactions()
+//    {
+//        return $this->hasMany('CurrencyTransactions', 'user_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function UserSkills()
+//    {
+//        return $this->hasMany('UserSkills', 'user_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function ExpertUserSkills()
+//    {
+//        return $this->hasMany('UserSkills', 'expert_user_id');
+//    }
 }

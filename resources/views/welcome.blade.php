@@ -19,10 +19,11 @@
         <div class="col-lg-4 col-md-4 ">
             <div class="panel panel-group">
                 <h2>Награды</h2>
-                @foreach ($ats as $user)
-                <p>{{ var_dump($user->actions()) }}</p>
+                            @foreach ($ats as $user)
+                <p>{{$user->action->name}}</p>
+                <p>{{$user->user->name}}</p>
                 @endforeach
-            </div>
+</div>
         </div>
 
         <div class="col-lg-4 col-md-4 ">

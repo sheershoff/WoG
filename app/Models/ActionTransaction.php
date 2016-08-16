@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @property integer $id
@@ -20,44 +21,45 @@ use Illuminate\Database\Eloquent\Model;
  */
 class ActionTransaction extends Model {
 
+    use SoftDeletes;
     /**
      * The table associated with the model.
      * 
      * @var string
      */
     protected $table = 'action_transactions';
-
     /**
      * @var array
      */
-    protected $fillable = ['user_id', 'action_id', 'mail_template_id', 'message', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['user_id', 'action_id', 'mail_template_id', 'message', 'created_at', 'updated_at'];
+    protected $dates = ['deleted_at'];
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function Users() {
-        return $this->belongsTo('Users', 'user_id');
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+//     */
+    public function user() {
+        return $this->belongsTo(User::class);
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function actions() {
-        return $this->belongsTo(Action::class, 'action_id');
+    public function action() {
+        return $this->belongsTo(Action::class);
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function MailTemplates() {
-        return $this->belongsTo('MailTemplates', 'mail_template_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function CurrencyTransactions() {
-        return $this->hasMany('CurrencyTransactions', 'action_trancaction_id');
-    }
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+//     */
+//    public function MailTemplates() {
+//        return $this->belongsTo('MailTemplates', 'mail_template_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function CurrencyTransactions() {
+//        return $this->hasMany('CurrencyTransactions', 'action_trancaction_id');
+//    }
 
 }

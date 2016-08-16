@@ -32,19 +32,19 @@ class UserProfile extends Model
      */
     protected $fillable = ['user_id', 'mail_agg_id', 'description', 'status', 'photo', 'mail_hour', 'created_at', 'updated_at', 'deleted_at'];
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function Users()
-    {
-        return $this->belongsTo('Users', 'user_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function MailAggs()
-    {
-        return $this->belongsTo('MailAggs', 'mail_agg_id');
-    }
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+//     */
+//    public function Users()
+//    {
+//        return $this->belongsTo('Users', 'user_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+//     */
+//    public function MailAggs()
+//    {
+//        return $this->belongsTo('MailAggs', 'mail_agg_id');
+//    }
 }

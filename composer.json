@@ -11,7 +11,8 @@
         "orangehill/iseed": "^2.1",
         "doctrine/dbal": "^2.5",
         "adldap2/adldap2-laravel": "^2",
-        "laravelcollective/html": "^5.2"
+        "laravelcollective/html": "^5.2",
+        "intervention/image": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -9,12 +9,14 @@ use Illuminate\Support\Facades\Input;
 use App\Http\Requests;
 
 use App\Models\User;
+use App\Models\Action;
 use App\Models\ActionTransaction;
 
 class WogController extends Controller
 {
    public function index()
    {
+//ini_set('memory_limit', '1024M');       
 	  if (!Auth::check()) {
 	   return view('welcome',['ats'=>ActionTransaction::orderBy('created_at', 'desc')->take(5)->get()/*,'users'=>  User::index()*/]);
     } else {
