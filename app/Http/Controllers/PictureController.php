@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\UserProfile;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -15,7 +15,7 @@ use Image;
 class PictureController extends Controller {
 
     public function showPictureList() {
-        $pictures = UserProfile::all();
+        $pictures = User::all();
         return view('picturelist')->with('pictures', $pictures);
     }
 
@@ -29,10 +29,8 @@ class PictureController extends Controller {
         $img = Image::make($file);
         Response::make($img->encode('jpeg'));
 
-        $picture = new UserProfile;
-        $picture->name = $request->get('name');
-        $picture->pic = $img;
-        $picture->save();
+        Auth::user()->photo = $img;
+        Auth::user()->save();
 
 
         return Redirect::to('list');
@@ -43,8 +41,8 @@ class PictureController extends Controller {
      */
 
     public function showPicture($id) {
-        $picture = UserProfile::findOrFail($id);
-        $pic = Image::make($picture->pic);
+        $picture = User::findOrFail($id);
+        $pic = Image::make($picture->photo);
         $response = Response::make($pic->encode('jpeg'));
 
         //setting content-type

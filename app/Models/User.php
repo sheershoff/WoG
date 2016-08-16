@@ -37,6 +37,13 @@ use Adldap\Laravel\Traits\AdldapUserModelTrait;
  * @property CurrencyTransactions[] $CurrencyTransactions
  * @property UserSkills[] $UserSkills
  * @property UserSkills[] $UserSkills
+ * @property integer $mail_agg_id
+ * @property string $description
+ * @property string $status
+ * @property string $photo
+ * @property integer $mail_hour
+ * @property MailAggs $MailAggs
+* 
  */
 class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, CanResetPasswordContract
 {
@@ -62,7 +69,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
     /**
      * @var array
      */
-    protected $fillable = ['user_status_id', 'login', 'name', 'email', 'user_type', 'ext_login', 'phone_number', 'tab_number', 'created_at', 'updated_at'];
+    protected $fillable = ['user_status_id', 'login', 'name', 'email', 'user_type', 'ext_login', 'phone_number', 'tab_number', 'mail_agg_id', 'description', 'status', 'photo', 'mail_hour', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -167,4 +174,22 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //    {
 //        return $this->hasMany('UserSkills', 'expert_user_id');
 //    }
+
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+//     */
+//    public function Users()
+//    {
+//        return $this->belongsTo('Users', 'user_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+//     */
+//    public function MailAggs()
+//    {
+//        return $this->belongsTo('MailAggs', 'mail_agg_id');
+//    }
+    
+    
 }
