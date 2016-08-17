@@ -18,7 +18,7 @@ class CreateMailTemplateTable extends Migration
             $table->text('body')->nullable()->comment('Тело шаблона');
             $table->integer('size')->default(1)->comment('Вес, для рандобного выбора');
             $table->integer('action_id')->unsigned();
-            $table->foreign('action_id')->references('id')->on('actions');
+            $table->foreign('action_id')->references('id')->on('actions')->onDelete('cascade');
             $table->timestamps();
 	    $table->softDeletes();
         });

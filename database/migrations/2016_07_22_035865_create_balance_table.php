@@ -16,9 +16,9 @@ class CreateBalanceTable extends Migration
             $table->increments('id')->comment('балансы игрока, вернее все его приобретения');
             $table->integer('value')->unsigned();
             $table->integer('currency_id')->unsigned();
-            $table->foreign('currency_id')->references('id')->on('currencies');
+            $table->foreign('currency_id')->references('id')->on('currencies')->onDelete('cascade');
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });		
 	}

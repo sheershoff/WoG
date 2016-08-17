@@ -57,6 +57,46 @@ class ActionsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
+            4 => 
+            array (
+                'id' => 6,
+                'name' => 'Маленькая крассная бутылка',
+                'description' => 'Увеличивает HP',
+                'quest_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            5 => 
+            array (
+                'id' => 7,
+                'name' => 'Средняя красная бутылка',
+                'description' => 'Увеличивает HP',
+                'quest_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            6 => 
+            array (
+                'id' => 8,
+                'name' => 'invite',
+                'description' => 'Можно пригласить друга в игру. Открывает квест - прокачай друга.',
+                'quest_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            7 => 
+            array (
+                'id' => 9,
+                'name' => 'Использовать',
+                'description' => 'маленькую красную',
+                'quest_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
         ));
         
         

@@ -57,6 +57,16 @@ class RobotsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
+            4 => 
+            array (
+                'id' => 5,
+                'name' => 'WoG Team',
+                'description' => 'Командные квесты',
+                'user_id' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
         ));
         
         

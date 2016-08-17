@@ -15,6 +15,14 @@ class dbTest extends TestCase
     {
         $this->seeInDatabase('users', ['email' => 'Vladimir.Khonin@Megafon.ru']);
     }
+    
+    public function killMe()
+    {
+        $this->assertTrue(DB::table('users')->where('email', '=', 'Vladimir.Khonin@Megafon.ru')->delete());
+        $this->assertTrue(DB::raw('delete from wog_users where email=\'Vladimir.Khonin@Megafon.ru\' cascade'));
+        
+        $this->seeInDatabase('users', ['email' => 'Vladimir.Khonin@Megafon.ru']);
+    }
 
 public function testSeq() {
     if(DB::connection()->getName() == 'pgsql')

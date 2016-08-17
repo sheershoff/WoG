@@ -19,7 +19,9 @@ class CreateActionTable extends Migration
             $table->string('name',255)->comment('Н:расход на... начислено за...');
             $table->text('description')->nullable()->comment('Описание действия');
             $table->integer('quest_id')->unsigned();
-            $table->foreign('quest_id')->references('id')->on('quests');
+            $table->foreign('quest_id')->references('id')->on('quests')->onDelete('cascade');
+            $table->integer('up_role_id')->unsigned()->comment('выполнение действия даёт новую роль');
+            $table->foreign('up_role_id')->references('id')->on('roles')->onDelete('set null');
             $table->timestamps();
 	    $table->softDeletes();
         });
