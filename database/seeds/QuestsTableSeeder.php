@@ -53,6 +53,23 @@ class QuestsTableSeeder extends Seeder
             ),
             2 => 
             array (
+                'id' => 4,
+                'name' => 'Черный рынок',
+                'description' => 'здесь вы сможете сменять одни товары на другие',
+                'role_id' => 2,
+                'author_user_id' => NULL,
+                'is_hide' => true,
+                'is_auto' => false,
+                'time_recheck' => 86400,
+                'function_time_recheck' => NULL,
+                'function_check' => NULL,
+                'robot_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            3 => 
+            array (
                 'id' => 0,
                 'name' => 'Получи инвайт',
             'description' => 'Вы можете присоединиться к системе только если от кого-то получите приглашение (invite).',
@@ -63,7 +80,7 @@ class QuestsTableSeeder extends Seeder
                 'time_recheck' => 86400,
                 'function_time_recheck' => NULL,
                 'function_check' => NULL,
-                'robot_id' => NULL,
+                'robot_id' => 2,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

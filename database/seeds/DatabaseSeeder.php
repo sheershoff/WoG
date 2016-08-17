@@ -33,5 +33,6 @@ class DatabaseSeeder extends Seeder
         $this->call('ActionTransactionsTableSeeder');
         $this->call('CurrencyTransactionsTableSeeder');
         $this->call('UserSkillsTableSeeder');
+        $this->call('RobotsTableSeeder');
     }
 }

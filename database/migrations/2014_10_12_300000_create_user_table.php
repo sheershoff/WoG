@@ -27,7 +27,7 @@ class CreateUserTable extends Migration
             $table->string('tab_number',30)->nullable()->comment('Табельный номер');
             $table->string('description',255)->nullable()->comment('Описание');
             $table->string('status',255)->nullable()->comment('Статус (настроение)');
-            $table->binary('photo')->nullable();
+            //$table->binary('photo')->nullable();//file, name=id
             $table->integer('mail_agg_id')->nullable()->unsigned()->comment('Частота агрегации сообщений');
             $table->foreign('mail_agg_id')->references('id')->on('mail_aggs');
             $table->integer('mail_hour')->nullable()->unsigned()->comment('Частота агрегации сообщений');

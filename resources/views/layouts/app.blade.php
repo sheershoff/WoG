@@ -63,6 +63,7 @@
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
                     @else
+                        <li><a href="/shop">Shop</a></li>
                         <li class="dropdown">
                             <a href="/i/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 Admin <span class="caret"></span>

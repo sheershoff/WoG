@@ -69,11 +69,15 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
     /**
      * @var array
      */
-    protected $fillable = ['user_status_id', 'login', 'name', 'email', 'user_type', 'ext_login', 'phone_number', 'tab_number', 'mail_agg_id', 'description', 'status', 'photo', 'mail_hour', 'created_at', 'updated_at'];
+    protected $fillable = ['user_status_id', 'login', 'name', 'email', 'user_type', 'ext_login', 'phone_number', 'tab_number', 'mail_agg_id', 'description', 'status', 'mail_hour', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
+    public function photo() {
+        return '/User/Photo/'.$this->id;
+    }
+    
     public function UserStatuses()
     {
         return $this->belongsTo('UserStatuses', 'user_status_id');

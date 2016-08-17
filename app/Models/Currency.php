@@ -35,8 +35,12 @@ class Currency extends BaseModelWithSoftDeletes
     /**
      * @var array
      */
-    protected $fillable = ['role_id', 'currency_type_id', 'name', 'description', 'function', 'options', 'photo', 'top_menu', 'created_at', 'updated_at'];
+    protected $fillable = ['role_id', 'currency_type_id', 'name', 'description', 'function', 'options', 'top_menu', 'created_at', 'updated_at'];
 
+
+    public function photo() {
+        return '/Currency/Photo/'.$this->id;
+    }
     /**
      * Scope a query to only include popular users.
      *
