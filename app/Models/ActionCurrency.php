@@ -35,24 +35,24 @@ class ActionCurrency extends BaseModelWithSoftDeletes
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function Currencies()
+    public function currency()
     {
-        return $this->belongsTo('Currencies', 'currency_id');
+        return $this->belongsTo(Currency::clas);
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function Actions()
+    public function action()
     {
-        return $this->belongsTo('Actions', 'action_id');
+        return $this->belongsTo(Action::class);
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function CurrencyTransactions()
+    public function currencyTransactions()
     {
-        return $this->hasMany('CurrencyTransactions', 'action_currency_id');
+        return $this->hasMany(CurrencyTransaction::class, 'action_currency_id');
     }
 }

@@ -103,7 +103,7 @@ Route::get('logout', 'Auth\AuthController@logout');
 //    return $img->response('jpg');
 //});
 
-Route::get('list', 'PictureController@showPictureList');
-Route::get('pic/{id}', 'PictureController@showPicture');
-Route::get('add', 'PictureController@addPicture');
-Route::post('add', 'PictureController@savePicture');
+//Route::get('list', 'PictureController@showPictureList');
+//Route::get('pic/{id}', 'PictureController@showPicture');
+//Route::get('add', 'PictureController@addPicture');
+//Route::post('add', 'PictureController@savePicture');
