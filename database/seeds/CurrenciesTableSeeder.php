@@ -24,7 +24,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => NULL,
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 3,
@@ -39,7 +39,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => 'Опыт взаимоотношений',
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 1,
@@ -54,7 +54,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => 'Золото',
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 2,
@@ -69,7 +69,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => 'Приглашение в игру',
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => false,
                 'role_id' => 2,
                 'currency_type_id' => 1,
@@ -84,7 +84,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => 'Опыт',
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => true,
                 'role_id' => 1,
                 'currency_type_id' => 10,
@@ -99,7 +99,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => '1й CLM создан',
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 9,
@@ -114,7 +114,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => 'Создано 100 CLM. Ты набираешь обороты!',
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 9,
@@ -129,7 +129,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => 'Не бывалый рекорд!',
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 9,
@@ -144,7 +144,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => 'Уровень жизни. Следи за ним - как только он будет равен нулю - твои действия в игре будут заблокированы.',
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => false,
                 'role_id' => 2,
                 'currency_type_id' => 2,
@@ -159,7 +159,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => 'Жизни',
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => false,
                 'role_id' => 3,
                 'currency_type_id' => 2,
@@ -174,7 +174,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => 'Награждается за участие',
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 9,
@@ -189,7 +189,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => 'Награждается за участие в старте ЕБ',
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 9,
@@ -204,7 +204,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => 'Магическая энергия этого мира',
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => true,
                 'role_id' => 3,
                 'currency_type_id' => 2,
@@ -219,7 +219,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => NULL,
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 4,
@@ -234,7 +234,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => NULL,
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => false,
                 'role_id' => 2,
                 'currency_type_id' => 4,
@@ -249,7 +249,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => NULL,
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => false,
                 'role_id' => 3,
                 'currency_type_id' => 4,
@@ -264,7 +264,7 @@ class CurrenciesTableSeeder extends Seeder
                 'description' => 'Рейтинг прокачки друзей',
                 'function' => NULL,
                 'options' => NULL,
-                'photo' => NULL,
+               
                 'top_menu' => false,
                 'role_id' => 2,
                 'currency_type_id' => 10,

@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call('UserQuestStatusesTableSeeder');
         $this->call('JobsTableSeeder');
         $this->call('TeamUsersTableSeeder');
+        $this->call('RobotsTableSeeder');
         $this->call('QuestsTableSeeder');
         $this->call('RoleUserTableSeeder');
         $this->call('CurrenciesTableSeeder');
@@ -33,6 +34,5 @@ class DatabaseSeeder extends Seeder
         $this->call('ActionTransactionsTableSeeder');
         $this->call('CurrencyTransactionsTableSeeder');
         $this->call('UserSkillsTableSeeder');
-        $this->call('RobotsTableSeeder');
     }
 }

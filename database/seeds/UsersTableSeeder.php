@@ -31,7 +31,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -53,7 +53,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -75,7 +75,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -97,7 +97,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => 'za2qHqX09fTnUnzCeJOLCojjVFAn6FfSu1GAvYWPjsyFpaLE4JmVtXK9ozSE',
@@ -119,7 +119,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -141,7 +141,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -163,7 +163,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -185,7 +185,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => '123456',
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -207,7 +207,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -229,7 +229,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -251,7 +251,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -273,7 +273,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -295,7 +295,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -317,7 +317,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -339,7 +339,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -361,7 +361,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -383,7 +383,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -405,7 +405,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -427,7 +427,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -449,7 +449,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -471,7 +471,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -493,7 +493,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -515,7 +515,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -537,7 +537,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -559,7 +559,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -581,7 +581,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -603,7 +603,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -625,7 +625,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -647,7 +647,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -669,7 +669,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -691,7 +691,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -713,7 +713,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -735,7 +735,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -757,7 +757,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -779,7 +779,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -801,7 +801,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -823,7 +823,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -845,7 +845,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -867,7 +867,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -889,7 +889,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -911,7 +911,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -933,7 +933,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -955,7 +955,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -977,7 +977,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -999,7 +999,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1021,7 +1021,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1043,7 +1043,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1065,7 +1065,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1087,7 +1087,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1109,7 +1109,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1131,7 +1131,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1153,7 +1153,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1175,7 +1175,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1197,7 +1197,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1219,7 +1219,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1241,7 +1241,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1263,7 +1263,7 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-                'photo' => NULL,
+               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
