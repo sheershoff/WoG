@@ -130,7 +130,7 @@
         <div class="row">
             <div class="col-sm-12 col-lg-12">
                 <!-- <p><img src="http://www.prepbootstrap.com/Content/images/shared/single-page-admin/logo.png" alt=""></p> -->
-                <p>© 2016 ПАО «МегаФон»</p>
+                <p>© V.Khonin, R.Revel &  2016 ПАО «МегаФон»</p>
             </div>
 
         </div><!-- /row -->

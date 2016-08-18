@@ -207,7 +207,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
         if (!empty($this->email)) {
           $i=mb_strrpos($this->email, '.');
           $this->email=mb_convert_case(mb_substr($this->email,0,$i), MB_CASE_TITLE, "UTF-8").
-                       mb_convert_case(mb_substr($this->email,$i+1), MB_CASE_LOWER, "UTF-8");          
+                       mb_convert_case(mb_substr($this->email,$i), MB_CASE_LOWER, "UTF-8");          
         }  
         DB::beginTransaction();
         //try {
