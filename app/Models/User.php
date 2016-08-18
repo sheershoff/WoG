@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Auth\Authenticatable;
 //use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
@@ -99,21 +100,27 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
         return $this->hasMany('TeamUsers', 'team_user_id');
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function userProfile()
-    {
-        return $this->hasMany('UserProfiles', 'user_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function userProfile()
+//    {
+//        return $this->hasMany('UserProfiles', 'user_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
 //    public function RoleUsers()
 //    {
 //        return $this->hasMany('RoleUser', 'user_id');
 //    }
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);//, 'role_user', 'user_id', 'role_id'
+    }
+
+
 //
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -126,10 +133,10 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
 //     */
-//    public function UserQuests()
-//    {
-//        return $this->hasMany('UserQuests', 'user_id');
-//    }
+    public function quests()
+    {
+        return $this->belongsToMany(Role::class, 'user_quests');
+    }
 //
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -194,6 +201,39 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //    {
 //        return $this->belongsTo('MailAggs', 'mail_agg_id');
 //    }
-    
+    public function save(array $options = []){
+        // assume it won't work
+        $success = false;
+        if (!empty($this->email)) {
+          $i=mb_strrpos($this->email, '.');
+          $this->email=mb_convert_case(mb_substr($this->email,0,$i), MB_CASE_TITLE, "UTF-8").
+                       mb_convert_case(mb_substr($this->email,$i+1), MB_CASE_LOWER, "UTF-8");          
+        }  
+        DB::beginTransaction();
+        //try {
+            if (empty($this->status)) {
+                $this->status='я родился!';
+            }
+            if (parent::save()) {
+                $this->addRole([-2]);
+                $success = true;
+            }
+        //} catch (\Exception $e) {
+            // maybe log this exception, but basically it's just here so we can rollback if we get a surprise
+        //}
+
+        if ($success) {
+            DB::commit();
+            return true; //Redirect::back()->withSuccessMessage('Post saved');
+        } else {
+            DB::rollback();
+            return false; //Redirect::back()->withErrorMessage('Something went wrong');
+        }
+    }
+    //it is the MainRobot
+    public function addRole(array $roleId) {
+        $this->roles()->sync($roleId);
+        //$this->quests()->autoAdd();
+    }
     
 }

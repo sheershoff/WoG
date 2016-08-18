@@ -95,4 +95,17 @@ class Quest extends BaseModelWithSoftDeletes
 //    {
 //        return $this->hasMany('Actions', 'quest_id');
 //    }
+    public function scopeAutoActiveted($query)
+    {
+        return $query->join('roles', 'roles.id','quests.role_id')
+                ->join('role_user', 'roles.id','role_user.role_id')
+                ->where('role_user.user_id', Auth::user()->id) //for role
+//                ->join('role_user', 'roles.id','role_user.role_id')
+//                ->where('role_user.user_id', Auth::user()->id) //for role
+                
+                ;//->select('balances.*', 'currencies.name', 'currencies.description');
+    }
+//    public function autoAdd() {
+//        return true;
+//    }
 }

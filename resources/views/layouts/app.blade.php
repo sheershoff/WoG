@@ -59,10 +59,20 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                         <li><a href="https://megawiki.megafon.ru/display/WOG">WiKi</a></li>
+                        <li class="dropdown">
+                            <a href="/i/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                Рейтинги <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+				<li><a href="/Rating/XP">Опыт</a></li>
+				<li><a href="/Rating/Gold">Gold</a></li>
+                            </ul>
+                        </li>                        
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
-                    @else
+                    @else 
                         <li><a href="/shop">Shop</a></li>
                         <li class="dropdown">
                             <a href="/i/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -81,6 +91,7 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                <li><a href="{{ url('/Achievements') }}">Достижения</a></li>
                             </ul>
                         </li>
                     @endif

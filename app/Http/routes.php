@@ -28,31 +28,31 @@ Route::group(['prefix'=>'adminzone'], function()
 //});
 */
 //Мэппинг для Rest API
-Route::group(
-	['prefix'=>'rest'], 
-	function(){
-
-		Route::resource('robots','Rest\RobotsController');
-		Route::resource("users", 'Rest\UsersController');
-		Route::resource("userProfiles", 'Rest\UserProfilesController');
-		Route::resource("users.billing", 'Rest\BillingController');
-		//Route::resource('users.quests', 'Rest\UserQuestController')
-
-
-		Route::resource("users.messages", 'Rest\MessagesController');
-
-
-  //   	Route::get('robot/{id}', 'Rest\RobotsController@get');
-	 //    // Create robot
-		// Route::post('robot', 'Rest\RobotsController@create');
-		// // Delete robot
-		// Route::delete('robot/{$id}', 'Rest\RobotsController@delete');
-		// // Execute robot
-		// Route::put('robot/{$id}', 'Rest\RobotsController@execute');
-		// // Get all robots 
-		// Route::get('robots', 'Rest\RobotsController@getAll');
-	}
-);
+//Route::group(
+//	['prefix'=>'rest', 'as'=>'rest'], 
+//	function(){
+//
+//		Route::resource('robots','Rest\RobotsController');//<a href="{{ route('rest.home')}}">
+//		Route::resource("users", 'Rest\UsersController');
+//		Route::resource("userProfiles", 'Rest\UserProfilesController');
+//		Route::resource("users.billing", 'Rest\BillingController');
+//		//Route::resource('users.quests', 'Rest\UserQuestController')
+//
+//
+//		Route::resource("users.messages", 'Rest\MessagesController');
+//
+//
+//  //   	Route::get('robot/{id}', 'Rest\RobotsController@get');
+//	 //    // Create robot
+//		// Route::post('robot', 'Rest\RobotsController@create');
+//		// // Delete robot
+//		// Route::delete('robot/{$id}', 'Rest\RobotsController@delete');
+//		// // Execute robot
+//		// Route::put('robot/{$id}', 'Rest\RobotsController@execute');
+//		// // Get all robots 
+//		// Route::get('robots', 'Rest\RobotsController@getAll');
+//	}
+//);
 
 
 
@@ -66,7 +66,7 @@ Route::group(
 //     return view('welcome');
 // });
 
-Route::get('/', 'WogController@index');
+Route::get('/', 'WogController@index');//<a href="{{ route('home')}}"> 'as' => 'home'
 Route::get('/personal-data', 'WogController@personalData');
 Route::get('/add-user-quest', 'WogController@addUserQuest');
 
@@ -88,7 +88,8 @@ Route::get('logout', 'Auth\AuthController@logout');
 // Маршруты регистрации...
 //Route::get('register', 'Auth\AuthController@showRegistrationForm');
 //Route::post('register', 'Auth\AuthController@register');
-
+//http://web-programming.com.ua/registraciya-po-invajtam-v-laravel/
+//
 //Route::get('/home', 'HomeController@index');
 
 //Route::get('user/{id}/image', function($id)

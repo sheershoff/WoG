@@ -32,24 +32,26 @@ class UserQuest extends BaseModelWithSoftDeletes
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function Quests()
+    public function quests()
     {
-        return $this->belongsTo('Quests', 'quest_id');
+        return $this->belongsTo(Quest::class);
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function Users()
+    public function users()
     {
-        return $this->belongsTo('Users', 'user_id');
+        return $this->belongsTo(User::class);
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function UserQuestStatuses()
+    public function userQuestStatuses()
     {
-        return $this->belongsTo('UserQuestStatuses', 'user_quest_status_id');
+        return $this->belongsTo(UserQuestStatus::class);
     }
+    
+           
 }
