@@ -9,3 +9,4 @@ composer
 *.log
 /composer.bat
 composer.lock
+.htaccess

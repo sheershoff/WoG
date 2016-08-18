@@ -1,0 +1,50 @@
+
+
+body {
+	background-image: url('../img/bg.jpg');
+	background-size: cover;
+}
+
+.main-wog {
+	min-height: 95vh;
+}
+
+
+
+/***** ИНВЕНТАРЬ ****/
+
+.Inventory {
+	width: 94%;
+	margin-left: 3%;
+}
+
+.InventoryItem {
+    box-shadow: 0 1px 3px rgb(41, 41, 41) inset;
+    width: 31.33333333%;
+    background: #A0A0A0;
+    overflow: hidden;
+    float: left;
+    margin: 1%;
+}
+
+.InventoryItem:before {
+  content: "";
+  padding-top: 100%;
+  float: left;
+}
+
+/**----------------**/
+
+.Inventory:before, .Inventory:after {
+    content: " ";
+    display: table;
+}
+
+.Inventory:after {
+    clear: both;
+}
+
+#footerwrap {
+	margin-bottom: -26px;	
+}
+

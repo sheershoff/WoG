@@ -18,18 +18,19 @@
     <link href="{{asset('/css/normalize.css')}}" rel="stylesheet">
     <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet">
     <link href="{{asset('/css/all.css') }}" rel="stylesheet">
+    <link href="{{asset('/css/wog.css') }}" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
-      }
-    </style>
-    <!-- JavaScripts -->
-    <script type="text/javascript" src="{{asset('/js/jquery.js') }}"></script>
+    }
+</style>
+<!-- JavaScripts -->
+<script type="text/javascript" src="{{asset('/js/jquery.js') }}"></script>
 </head>
-<body id="app-layout">
+<body>
     <!-- NAVIGATION MENU navbar navbar-default navbar-static-top-->
     <nav class="navbar-nav navbar-inverse navbar-fixed-top">
-        <div class="container">
+    <div class="container ">
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
@@ -52,37 +53,36 @@
                     <li><a href="{{ url('/') }}">WoG</a></li>
                     @if (Auth::guest())
                     @else
-                        <li><a href="/personal-data"><i class="icon-th icon-white"></i> Персонаж</a></li>
+                    <li><a href="/personal-data"><i class="icon-th icon-white"></i> Персонаж</a></li>
                     @endif
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
-                        <li><a href="https://megawiki.megafon.ru/display/WOG">WiKi</a></li>
+                    <li><a href="https://megawiki.megafon.ru/display/WOG">WiKi</a></li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
+                    <li><a href="{{ url('/login') }}">Login</a></li>
                     @else
-                        <li><a href="/shop">Shop</a></li>
-                        <li class="dropdown">
-                            <a href="/i/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                Admin <span class="caret"></span>
-                            </a>
+                    <li class="dropdown">
+                        <a href="/i/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Admin <span class="caret"></span>
+                        </a>
 
-                            <ul class="dropdown-menu" role="menu">
-				<li><a href="/phpinfo.php">phpinfo.php</a></li>
-				<li><a href="/i/adminer.php">Adminer</a></li>
-                            </ul>
-                        </li>                        
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/phpinfo.php">phpinfo.php</a></li>
+                            <li><a href="/i/adminer.php">Adminer</a></li>
+                        </ul>
+                    </li>                        
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
 
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                        </ul>
+                    </li>
                     @endif
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -90,26 +90,48 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-			    <li><a href="/gantt/index.html">gantt</a></li>
-			    <li><a href="/gantt/toweek.html">недельные задачи</a></li>
-                        </ul>
-                    </li>                        
-                    
-                </ul>
+                         <li><a href="/gantt/index.html">gantt</a></li>
+                         <li><a href="/gantt/toweek.html">недельные задачи</a></li>
+                     </ul>
+                 </li>                        
+
+             </ul>
+         </div>
+     </div>
+ </nav>
+
+
+ <div class="container main-wog">
+
+  <!-- FIRST ROW OF BLOCKS -->     
+  <div class="row">
+
+
+      @yield('content')
+
+
+  </div><!--/row -->
+
+
+
+</div> <!-- /container -->
+
+
+<div id="footerwrap">
+    <footer class="clearfix"></footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <!-- <p><img src="http://www.prepbootstrap.com/Content/images/shared/single-page-admin/logo.png" alt=""></p> -->
+                <p>© 2016 ПАО «МегаФон»</p>
             </div>
-        </div>
-    </nav>
-  
 
-            @yield('content')
+        </div><!-- /row -->
+    </div><!-- /container -->       
+</div><!-- /footerwrap -->
 
-
-    <div id="footer">
-                    <p class="text-muted">© Vladimir Khonin & 2016 ПАО «МегаФон»</p>
-    </div>
-
-    <!-- JavaScripts -->
-    <script type="text/javascript" src="{{asset('/js/bootstrap.js')}}"></script>
-    <script type="text/javascript" src="{{asset('/js/all.js') }}"></script>
+<!-- JavaScripts -->
+<script type="text/javascript" src="{{asset('/js/bootstrap.js')}}"></script>
+<script type="text/javascript" src="{{asset('/js/all.js') }}"></script>
 </body>
 </html>
