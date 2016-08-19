@@ -44,20 +44,23 @@ use Adldap\Laravel\Traits\AdldapUserModelTrait;
  * @property string $photo
  * @property integer $mail_hour
  * @property MailAggs $MailAggs
-* 
+ * 
  */
-class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, CanResetPasswordContract
-{
-    use Authenticatable, CanResetPassword, AdldapUserModelTrait; // Insert trait here
+class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, CanResetPasswordContract {
+
+    use Authenticatable,
+        CanResetPassword,
+        AdldapUserModelTrait; // Insert trait here
     /**
      * The table associated with the model.
      * 
      * @var string
      */
+
     protected $table = 'users';
-    
+
     //protected $redirectPath = '/';
-    
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -66,7 +69,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
     protected $hidden = [
         'password', 'remember_token',
     ];
-    
+
     /**
      * @var array
      */
@@ -76,33 +79,32 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function photo() {
-        return '/User/Photo/'.$this->id;
+        return '/User/Photo/' . $this->id;
     }
-    
-    public function UserStatuses()
-    {
+
+    public function UserStatuses() {
         return $this->belongsTo('UserStatuses', 'user_status_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      *
-    public function TeamUsers()
-    {
-        return $this->hasMany('TeamUsers', 'user_id');
-    }
+      public function TeamUsers()
+      {
+      return $this->hasMany('TeamUsers', 'user_id');
+      }
 
-     **
+     * *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      *
-    public function TeamUsers()
-    {
-        return $this->hasMany('TeamUsers', 'team_user_id');
-    }
+      public function TeamUsers()
+      {
+      return $this->hasMany('TeamUsers', 'team_user_id');
+      }
 
-//    /**
-//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-//     */
+      //    /**
+      //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+      // */
 //    public function userProfile()
 //    {
 //        return $this->hasMany('UserProfiles', 'user_id');
@@ -115,11 +117,9 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //    {
 //        return $this->hasMany('RoleUser', 'user_id');
 //    }
-    public function roles()
-    {
-        return $this->belongsToMany(Role::class);//, 'role_user', 'user_id', 'role_id'
+    public function roles() {
+        return $this->belongsToMany(Role::class); //, 'role_user', 'user_id', 'role_id'
     }
-
 
 //
 //    /**
@@ -133,10 +133,10 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
 //     */
-    public function quests()
-    {
+    public function quests() {
         return $this->belongsToMany(Role::class, 'user_quests');
     }
+
 //
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -185,7 +185,6 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //    {
 //        return $this->hasMany('UserSkills', 'expert_user_id');
 //    }
-
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
 //     */
@@ -201,25 +200,37 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //    {
 //        return $this->belongsTo('MailAggs', 'mail_agg_id');
 //    }
-    public function save(array $options = []){
+    protected function emailCamel($str) {
+        $x = mb_convert_case($str, MB_CASE_TITLE, "UTF-8");
+        $i = 0;
+        while ($i = mb_strpos($x, '@', $i + 1)) {
+            $x = mb_substr($x, 0, $i + 1) . mb_convert_case(mb_substr($x, $i + 1, 1), MB_CASE_UPPER, "UTF-8") . mb_substr($x, $i + 2);
+        }
+        $i2 = 0;
+        while (mb_strpos($x, '.', $i2 + 1)) {
+            $i2 = mb_strpos($x, '.', $i2 + 1);
+            $x = mb_substr($x, 0, $i2 + 1) . mb_convert_case(mb_substr($x, $i2 + 1, 1), MB_CASE_UPPER, "UTF-8") . mb_substr($x, $i2 + 2);
+        }
+        return mb_substr($x, 0, $i2 + 1) . mb_convert_case(mb_substr($x, $i2 + 1, 1), MB_CASE_LOWER, "UTF-8") . mb_substr($x, $i2 + 2);
+    }
+
+    function save(array $options = []) {
         // assume it won't work
         $success = false;
         if (!empty($this->email)) {
-          $i=mb_strrpos($this->email, '.');
-          $this->email=mb_convert_case(mb_substr($this->email,0,$i), MB_CASE_TITLE, "UTF-8").
-                       mb_convert_case(mb_substr($this->email,$i), MB_CASE_LOWER, "UTF-8");          
-        }  
+            $this->email = $this->emailCamel($this->email);
+        }
         DB::beginTransaction();
         //try {
-            if (empty($this->status)) {
-                $this->status='я родился!';
-            }
-            if (parent::save()) {
-                $this->addRole([-2]);
-                $success = true;
-            }
+        if (empty($this->status)) {
+            $this->status = 'я родился!';
+        }
+        if (parent::save()) {
+            $this->addRole([-2]);
+            $success = true;
+        }
         //} catch (\Exception $e) {
-            // maybe log this exception, but basically it's just here so we can rollback if we get a surprise
+        // maybe log this exception, but basically it's just here so we can rollback if we get a surprise
         //}
 
         if ($success) {
@@ -230,10 +241,11 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
             return false; //Redirect::back()->withErrorMessage('Something went wrong');
         }
     }
+
     //it is the MainRobot
     public function addRole(array $roleId) {
         $this->roles()->sync($roleId);
         //$this->quests()->autoAdd();
     }
-    
+
 }
