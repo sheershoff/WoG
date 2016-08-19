@@ -214,17 +214,18 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
         return mb_substr($x, 0, $i2 + 1) . mb_convert_case(mb_substr($x, $i2 + 1, 1), MB_CASE_LOWER, "UTF-8") . mb_substr($x, $i2 + 2);
     }
 
+    protected $attributes = array(
+       'status' => 'я родился!',
+    );
+
     function save(array $options = []) {
         // assume it won't work
         $success = false;
-        if (!empty($this->email)) {
-            $this->email = $this->emailCamel($this->email);
-        }
+//        if (!empty($this->email)) {
+//            $this->email = mb_convert_case($this->email, MB_CASE_LOWER, "UTF-8");
+//        }
         DB::beginTransaction();
         //try {
-        if (empty($this->status)) {
-            $this->status = 'я родился!';
-        }
         if (parent::save()) {
             $this->addRole([-2]);
             $success = true;
@@ -248,4 +249,25 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
         //$this->quests()->autoAdd();
     }
 
+    /**
+     * Set the user's first name.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function setEmailAttribute($value)
+    {
+        $this->attributes['email'] = strtolower($value);
+    }    
+    
+        /**
+     * Get the user's first name.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getEmailAttribute($value)
+    {
+        return strtolower($value);
+    }
 }

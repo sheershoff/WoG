@@ -16,7 +16,7 @@ class CreateUserTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id')->comment('Пользователи');
             $table->string('login',30)->nullable()->comment('Логин')->unique();
-            $table->string('name',255)->nullable()->comment('ФИО или имя команды')->unique();
+            $table->string('name',255)->nullable()->comment('ФИО или имя команды');
             $table->string('email',60)->unique()->nullable();
             $table->string('password',60)->nullable();
             $table->integer('user_type')->default(1)->comment('1 - пользователь, 2 - команда, 3 - робот');
