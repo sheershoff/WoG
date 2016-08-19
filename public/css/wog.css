@@ -3,12 +3,13 @@
 body {
 	background-image: url('../img/bg.jpg');
 	background-size: cover;
-  padding-top: 60px;
 }
 
 .main-wog {
-	min-height: 89vh;
+	min-height: 95vh;
 }
+
+
 
 /***** ИНВЕНТАРЬ ****/
 
