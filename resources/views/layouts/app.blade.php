@@ -15,7 +15,6 @@
     <link href="{{asset('/css/font-style.css')}}" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{asset('/css/normalize.css')}}" rel="stylesheet">
     <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet">
     <link href="{{asset('/css/all.css') }}" rel="stylesheet">
     <link href="{{asset('/css/wog.css') }}" rel="stylesheet">
@@ -53,29 +52,33 @@
                     @endif
                      </ul>
                     </li>
+                    <li><a href="/"><i class="icon-th icon-white"></i> WoG</a></li>
                     @if (Auth::guest())
                     @else
                     <li><a href="/personal-data"><i class="icon-th icon-white"></i> Персонаж</a></li>
                     @endif
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
                     @else 
-                        <li><a href="/shop">Shop</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                                 <li><a href="{{ url('/Achievements') }}">Достижения</a></li>
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>
+                    @endif
+                </ul>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Auth::guest())
+                    @else 
+                        <li><a href="/shop">Shop</a></li>
                     @endif
                         <li><a href="https://megawiki.megafon.ru/display/WOG">WiKi</a></li>
                         <li class="dropdown">

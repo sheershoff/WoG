@@ -100,6 +100,10 @@ class Quest extends BaseModelWithSoftDeletes
         return $query->join('roles', 'roles.id','quests.role_id')
                 ->join('role_user', 'roles.id','role_user.role_id')
                 ->where('role_user.user_id', Auth::user()->id) //for role
+                //->join('user_quest', 'roles.id','role_user.role_id')
+
+                ->where('is_hide',false)
+                ->where('is_auto',false)
 //                ->join('role_user', 'roles.id','role_user.role_id')
 //                ->where('role_user.user_id', Auth::user()->id) //for role
                 

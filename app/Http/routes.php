@@ -66,6 +66,14 @@ Route::group(['prefix'=>'adminzone'], function()
 //     return view('welcome');
 // });
 
+
+Route::group(['prefix'=>'administrator'], function()
+{
+
+   Route::get('/','AdminController@index');
+
+});
+
 Route::get('/', 'WogController@index');//<a href="{{ route('home')}}"> 'as' => 'home'
 Route::get('/personal-data', 'WogController@personalData');
 Route::get('/add-user-quest', 'WogController@addUserQuest');
