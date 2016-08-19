@@ -15,7 +15,7 @@ class CreateUserTable extends Migration
         	
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id')->comment('Пользователи');
-            $table->string('login',30)->nullable()->comment('Логин')->unique();
+            $table->string('login',40)->nullable()->comment('Логин')->unique();
             $table->string('name',255)->nullable()->comment('ФИО или имя команды');
             $table->string('email',60)->unique()->nullable();
             $table->string('password',60)->nullable();
@@ -23,7 +23,7 @@ class CreateUserTable extends Migration
             $table->integer('user_status_id')->default(1)->unsigned()->comment('Статус пользователя. 1-активен, 0-не активен');
             $table->foreign('user_status_id')->references('id')->on('user_statuses')->onDelete('set null');
             $table->string('ext_login',30)->unique()->nullable()->comment('логин в пс');
-            $table->string('phone_number',11)->nullable()->comment('телефонный номер без - с +7');
+            $table->string('phone_number',30)->nullable()->comment('телефонный номер без - с +7');
             $table->string('tab_number',30)->nullable()->comment('Табельный номер');
             $table->string('description',255)->nullable()->comment('Описание');
             $table->string('status',255)->nullable()->comment('Статус (настроение)');
