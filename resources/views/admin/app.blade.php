@@ -1,10 +1,11 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" ng-app="app">
   <head>
+    <script src="{{ asset('admin-lib/angular.min.js') }}"></script>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{{--     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
     <meta name="description" content="">
     <meta name="author" content="">
     {{-- <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> --}}
@@ -16,6 +17,8 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('admin-lib/dashboard.css') }}" rel="stylesheet">
+
+
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -58,7 +61,7 @@
       <div class="row">
         @include('admin.form.menu')
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-         @yield('content')
+        @yield('content')
       </div>
         
       </div>
@@ -67,9 +70,10 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{{ asset('admin-lib/jquery.min.js') }}"></script>
+    {{-- <script src="{{ asset('admin-lib/jquery.min.js') }}"></script> --}}
     <script src="{{ asset('admin-lib/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('admin-lib/docs.min.js') }}"></script>
+    {{-- <script src="{{ asset('admin-lib/docs.min.js') }}"></script> --}}
+    <script src="{{ asset('admin-lib/angular/app.js') }}"></script>
     @yield('script')
   </body>
 </html>

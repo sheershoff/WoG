@@ -71,6 +71,9 @@ Route::group(['prefix'=>'administrator'], function()
 {
 
    Route::get('/','AdminController@index');
+   Route::get('/quests','AdminController@questsShow');
+   Route::get('/skills','AdminController@skillsShow');
+   Route::get('/shop','AdminController@shopShow');
 
 });
 
