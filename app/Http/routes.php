@@ -74,15 +74,29 @@ Route::group(['prefix'=>'administrator'], function()
 
 });
 
-Route::get('/', 'WogController@index');//<a href="{{ route('home')}}"> 'as' => 'home'
-Route::get('/personal-data', 'WogController@personalData');
-Route::get('/add-user-quest', 'WogController@addUserQuest');
+Route::group(['prefix'=>'jira-team-boadr'], function()
+{
+
+   Route::get('/','AdminController@index');
+
+});
+
+//Section::inject('version', 'Мой сайт');
+
+Route::get('/', 'WogController@index')->name('home');//<a href="{{ route('home')}}"> 'as' => 'home'
+Route::get('/personal-data', 'WogController@personalData')->name('personal-data');
+Route::get('/add-user-quest', 'WogController@addUserQuest')->name('add-user-quest');
+Route::get('/achievements', 'WogController@personalData')->name('achievements');;
+//Route::get('posts/{post}/comments/{comment}', function ($postId, $commentId) {}); ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
+Route::get('/rating/{currency?}', 'WogController@personalData')->name('rating');//function ($name = null) {
 
 // Маршруты авторизации...
 Route::get('login', 'Auth\AuthController@showLoginForm');
 Route::post('login', 'Auth\AuthController@login');
 Route::get('logout', 'Auth\AuthController@logout');
 
+// 
+//);
 //Route::post('/profile/image',[
 //    'before'  => 'csrf',
 //    'as'      => 'viewprofileimage',

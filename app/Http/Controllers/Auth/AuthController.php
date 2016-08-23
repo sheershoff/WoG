@@ -74,7 +74,7 @@ use AuthenticatesAndRegistersUsers,
     protected function create(array $data) {
         return User::create([
                     'name' => $data['name'],
-                    'email' => mb_convert_case($data['email'], MB_CASE_LOWER, "UTF-8"),
+                    'email' => $data['email'], 
                     'password' => bcrypt($data['password']),
         ]);
     }
@@ -88,7 +88,6 @@ use AuthenticatesAndRegistersUsers,
 //        }    
 //        
 //    public function login(Request $request) {
-//        var_dump($request);
 //        parent::login($request);
 //    }
 //

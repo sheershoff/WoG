@@ -49,6 +49,7 @@
                     @else
 				<li><a href="/phpinfo.php">phpinfo.php</a></li>
 				<li><a href="/i/adminer.php">Adminer</a></li>
+				<li><a href="/jira-team-boadr/">JiraTeamBoadr</a></li>
                     @endif
                      </ul>
                     </li>
@@ -67,7 +68,8 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/Achievements') }}">Достижения</a></li>
+                                <li><a href="{{ url('/achievements') }}">Достижения</a></li>
+                                <li><a href="{{ url('/administrator') }}">Настройка</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>
@@ -87,8 +89,9 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-				<li><a href="/Rating/XP">Опыт</a></li>
-				<li><a href="/Rating/Gold">Gold</a></li>
+				<li><a href="/rating/xp">Опыт</a></li>
+				<li><a href="/rating/team"></a></li>
+				<li><a href="/rating/gold">Gold</a></li>
                             </ul>
                         </li>                        
 
@@ -97,6 +100,13 @@
      </div>
  </nav>
 
+    @if (Session::has('message'))
+    <div class="row">
+        <div class=”col-md-12">
+            <div class=”alert alert-info”>{{ Session::get('message') }}</div>
+        </div>
+    </div><!--/row -->
+    @endif
 
  <div class="container main-wog">
 
@@ -120,7 +130,8 @@
         <div class="row">
             <div class="col-sm-12 col-lg-12">
                 <!-- <p><img src="http://www.prepbootstrap.com/Content/images/shared/single-page-admin/logo.png" alt=""></p> -->
-                <p>© V.Khonin, R.Revel &  2016 ПАО «МегаФон»</p>
+                <p> {{ shell_exec("git log -1 --pretty=format:'%h - %s (%ci)' --abbrev-commit `git merge-base local-dev dev`") }}
+     © V.Khonin, R.Revel &  2016 ПАО «МегаФон»</p>
             </div>
 
         </div><!-- /row -->

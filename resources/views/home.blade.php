@@ -12,19 +12,25 @@
 						<p>StatCounter Information</p>
 		      		</div>
 		      	</div> -->
-		      	<div id='Quest' style=" height: 170px; " class="half-unit">
-		      		<dtitle>Новые задания</dtitle>
-		      		<hr>
-		      		<div class="cont2">
-		      			<img style="height: 45px; width: 45px;" src="{{asset('img/photo01.jpeg')}}" alt="">
-		      			<br>
-		      			<br>
-		      			<p>Система</p>
-		      			<p><bold>{{$QustByUser[0]->name}}</bold></p>
-		      			<button data-user-id="{{Auth::user()->id}}" data-quest-id="{{$QustByUser[0]->id}}" data-type="true" type="button" class="add-dell-new-qvest btn btn-default btn-xs">Принять</button>
-		      			<button data-user-id="{{Auth::user()->id}}" data-quest-id="{{$QustByUser[0]->id}}" data-type="false" type="button" class="add-dell-new-qvest btn btn-default btn-xs">Отклонить</button>
-		      		</div>
-		      	</div>
+
+                        @if (count($QustsByUser) > 0)
+                        <div id='Quest'  class="half-unit">
+                            <dtitle>Новые задания</dtitle>
+                            <hr>
+                            @foreach ($QustsByUser as $q)
+                            <div class="cont2">
+                                <img style="height: 45px; width: 45px;" src="{{asset($q->photo())}}" alt="">
+                                <br>
+                                <br>
+                                <p>Система</p>
+                                <p><bold>{{$q->name}}</bold></p>
+                                <p><bold>{{$q->description}}</bold></p>
+                                <button data-user-id="{{Auth::user()->id}}" data-quest-id="{{$q->id}}" data-type="true" type="button" class="add-dell-new-qvest btn btn-default btn-xs">Принять</button>
+                            </div>
+                            @endforeach
+                        </div>
+                        @endif
+                        
 		      	<div class="dash-unit">
 		      		<dtitle>Профиль пользователя</dtitle>
 		      		<hr>
@@ -32,7 +38,7 @@
 		      			<img style=" height: 80px; " src="{{asset('img/face80x80.jpg')}}" alt="Marcel Newman" class="img-circle">
 		      		</div><!-- /thumbnail -->
 		      		<h1>{{ Auth::user()->name }}</h1>
-		      		{{-- <h3>{{ $staus[0]->name }}</h3> --}}
+		      		<h3>{{ Auth::user()->staus }}</h3> 
 		      		<br>
 		      		<div class="info-user">
 		      			<span aria-hidden="true" class="li_user fs1"></span>
@@ -123,7 +129,7 @@
 				     </div>
 				 </div> --}}
 				 <div class="dash-unit">
-				 	<dtitle>Игровая зона | Квесты</dtitle>
+				 	<dtitle>Квесты в работе</dtitle>
 				 	<hr>
 				 	<div class="framemail">
 				 		<div class="window">
@@ -132,17 +138,17 @@
 				 				@foreach ($MyQustByUser as $val)
 				 				<li>
 				 					<i class="unread"></i>
-				 					<img class="avatar" src="{{asset('img/photo01.jpeg')}}" alt="avatar">
-				 					<p class="sender">Бог</p>
-				 					<p class="message"><strong>{{$val->name}}</strong> - {{ $val->description}}...</p>
-				 					<div class="actions">
+				 					<img class="avatar" src="{{asset($val->photo())}}" alt="avatar">
+				 					<p class="sender">{{ $val->name }}</p>
+				 					<p class="message">{{ $val->description }}</p>
+				 					{{--<div class="actions">
 				 						<button style="margin-top: 14px;  margin-right: 5px; margin-left: -25px;" type="button" class="btn btn-default btn-xs">Завершить квест</button>
-				 						{{-- <a href="#"><img></a> --}}
-{{-- 			                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
+				 						 <a href="#"><img></a> 
+ 			                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
 			                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/star_fav.png" alt="favourite"></a>
-			                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/tag.png" alt="label"></a> --}}
-			                    {{-- <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/trash.png" alt="delete"></a> --}}
-			                </div>
+			                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/tag.png" alt="label"></a> 
+			                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/trash.png" alt="delete"></a> 
+			                </div>--}}
 			            </li>
 			            @endforeach
 {{-- 			            <li>
