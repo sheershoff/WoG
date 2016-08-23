@@ -29,10 +29,11 @@ class WogController extends Controller
     } else {
               Auth::user()->addAutoQuest();
    		return view('home', [
-   			'staus' => Auth::user()->roles()->get(),
-   			'cash' => Auth::user()->currency()->get(),
+   			'staus' => Auth::user()->teams()->get(),
+   			'cash' => Auth::user()->cash()->get(),
 	                'QustsByUser' => Auth::user()->passiveQuests()->get(),
         		'MyQustByUser' => Auth::user()->activeQuests()->take(1)->get(),
+   			'inventary' => Auth::user()->inventary()->get(),
    			]);
     }
     

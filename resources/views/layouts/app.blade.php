@@ -90,7 +90,7 @@
 
                             <ul class="dropdown-menu" role="menu">
 				<li><a href="/rating/xp">Опыт</a></li>
-				<li><a href="/rating/team"></a></li>
+				<li><a href="/rating/team">Team</a></li>
 				<li><a href="/rating/gold">Gold</a></li>
                             </ul>
                         </li>                        

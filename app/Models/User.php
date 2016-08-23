@@ -72,6 +72,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
         'password', 'remember_token',
     ];
 
+    
     /**
      * @var array
      */
@@ -93,7 +94,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
      */
       public function teams()
       {
-      return $this->belongsToMany(User::class,'TeamUsers', 'user_id', 'team_user_id');
+      return $this->belongsToMany(User::class, 'team_users', 'user_id', 'team_user_id');
       }
 
 //    /**
@@ -153,7 +154,14 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
     }
 
     public function currency() {
-        return $this->belongsToMany(Currency::class, 'balances')->wherePivot('value','<>', 1)->select('balances.value', 'currencies.*');
+        return $this->belongsToMany(Currency::class, 'balances')->wherePivot('value','<>', 0)->select('balances.value', 'currencies.*');
+    }
+
+    public function inventary() {
+        return $this->currency()->where('currencies.currency_type_id','=',4);
+    }
+    public function cash() {
+        return $this->currency()->whereIn('currencies.currency_type_id',[1,2,10]);
     }
 
 //    /**
@@ -204,7 +212,9 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //    }
 
     protected $attributes = array(
-       'status' => 'я родился!',
+        'status' => 'я родился!',
+        'user_type'=>1,
+        'user_status_id'=>1,
     );
 
     function save(array $options = []) {

@@ -198,11 +198,13 @@
 	      		<dtitle>Инвентарь</dtitle>
 	      		<hr>
       			<div class="Inventory">
+				 				@foreach ($inventary as $val)
       				<div class="InventoryItem">
 						<div style=" padding-top: 15px; " class="info-user">
-							<span aria-hidden="true" class="li_news fs2"></span>
+							<span aria-hidden="true" class="li_news fs2">{{$val->name}}</span>
 						</div>
       				</div>
+			            @endforeach
       				<div class="InventoryItem"></div>
       				<div class="InventoryItem"></div>
       				<div class="InventoryItem"></div>
