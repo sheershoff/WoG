@@ -10,25 +10,25 @@
         			<div id="register-info">
         				<div class="cont2">
         					<div class="thumbnail">
-								<img style=" height: 190px; " src="{{asset('img/face80x80.jpg')}}" alt="Marcel Newman" class="img-circle">
+								<img style=" min-height: 190px; " src="{{asset('img/face80x80.jpg')}}" alt="Marcel Newman" class="img-circle">
 							</div><!-- /thumbnail -->
 							<h2>{{ Auth::user()->name }}</h2>
         				</div>
         				<div class="row">
         					<div class="col-lg-5">
         						<div class="cont3">
-        							<p><ok>Имя пользователя:</ok> {{ Auth::user()->name }}</p>
-        							{{-- <p><ok>Статус:</ok> <br> {{ Auth::user()->name }}</p> --}}
-        							<p><ok>E-mail:</ok>  {{ Auth::user()->email }}</p>
-        							{{-- <p><ok>Страна:</ok> Madrid, Spain</p> --}}
-        							{{-- <p><ok>Адрес:</ok> Blahblah Ave. 879</p> --}}
+        							<p><ok>Имя пользователя: </ok> {{ Auth::user()->name }}</p>
+        							{{-- <p><ok>Статус: </ok> <br> {{ Auth::user()->name }}</p> --}}
+        							<p><ok>E-mail: </ok>  {{ Auth::user()->email }}</p>
+        							{{-- <p><ok>Страна: </ok> Madrid, Spain</p> --}}
+        							{{-- <p><ok>Адрес: </ok> Blahblah Ave. 879</p> --}}
         						</div>
         					</div>
         					<div class="col-lg-3">
         						<div class="cont3">
-        						<p><ok>Дата регистрации:</ok> April 9, 2010</p>
+        						<p><ok>Дата регистрации: </ok>{{ Auth::user()->created_at}}</p>
         						{{-- <p><ok>Last Login:</ok> January 29, 2013</p> --}}
-        						<p><ok>Телефон:</ok> {{ Auth::user()->phoneNumber }}</p>
+        						<p><ok>Телефон: </ok> {{ Auth::user()->phoneNumber }}</p>
         						{{-- <p><ok>Mobile</ok> +34 603 093384</p> --}}
         						</div>
         					</div>

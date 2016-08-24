@@ -8,12 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
     <meta name="description" content="">
     <meta name="author" content="">
-    {{-- <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> --}}
 
     <title>Dashboard Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ asset('admin-lib/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('admin-lib/dashboard.css') }}" rel="stylesheet">
@@ -74,6 +73,11 @@
     <script src="{{ asset('admin-lib/bootstrap.min.js') }}"></script>
     {{-- <script src="{{ asset('admin-lib/docs.min.js') }}"></script> --}}
     <script src="{{ asset('admin-lib/angular/app.js') }}"></script>
+
+    <script src="{{ asset('/js/jquery.js') }}"></script>
+    <script src="{{ asset('/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('admin-lib/docs.min.js') }}"></script>
+
     @yield('script')
   </body>
 </html>

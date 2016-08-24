@@ -37,7 +37,15 @@ class Currency extends BaseModelWithSoftDeletes
      */
     protected $fillable = ['role_id', 'currency_type_id', 'name', 'description', 'function', 'options', 'top_menu', 'created_at', 'updated_at'];
 
-
+    /**
+     * The attributes that should be casted to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'options' => 'array',
+    ];
+    
     public function photo() {
         return '/Currency/Photo/'.$this->id;
     }
@@ -71,10 +79,10 @@ class Currency extends BaseModelWithSoftDeletes
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
 //     */
-//    public function CurrencyTypes()
-//    {
-//        return $this->belongsTo('CurrencyTypes', 'currency_type_id');
-//    }
+    public function currencyTypes()
+    {
+        return $this->belongsTo(CurrencyTypes::class, 'currency_type_id');
+    }
 //
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
