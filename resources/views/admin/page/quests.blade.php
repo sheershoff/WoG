@@ -46,22 +46,30 @@
   </div>
 </div>
 {{-- <div ng-include="'{{ asset('') }}admin-lib/form/questsForm.html'" onload="parts = current"></div> --}}
-<div  ng-controller="myFormController">
+<div  ng-controller="MyFormController">
   <div my-custom-url></div>
 </div>
 @stop
 
 @section('script')
 	<script type="text/javascript">
-   var app = angular.module('app', []) .controller("myFormController", function ($scope) {
-
+   var app = angular.module('app', []) .controller("MyFormController", function ($scope) {
+      $scope.posts = [];
     });
+    app.controller('myCtrl', function($scope, $element, $attrs) {
+      console.log('ctrl scope', $scope );
+    this.name = 'myCtrl'
+    });
+
     app.directive('myCustomUrl', function ($templateCache) {
       return {
-        restrict: "E",
+     //   restrict: "E",
+        controller: 'myCtrl',
         templateUrl: '{{ asset('') }}admin-lib/form/questsForm.html',
         link: function(scope, iElement, iAttrs) {
-         console.log('dire')
+         console.log('dire');
+         console.log('scope', scope);
+
         }
       };
     });
