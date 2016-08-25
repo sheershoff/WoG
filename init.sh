@@ -1,6 +1,10 @@
 #устанавливаем окружение
+
+
+#ставим WoG
 git clone https://github.com/xvlady/WoG.git
 cp .env.example .env
+nano .env
 php artisan key:generate
 
 npm update

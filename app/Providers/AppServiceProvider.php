@@ -23,13 +23,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-	//composer require laracasts/generators --dev
+        //composer require laracasts/generators --dev
         if ($this->app->environment() == 'local') {
             $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
-	    //$this->app->register('Iber\Generator\ModelGeneratorProvider');
-	    $this->app->register('Krlove\EloquentModelGenerator\Provider\GeneratorServiceProvider');
-	    $this->app->register('Barryvdh\Debugbar\ServiceProvider');
-	    $this->app->register('Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider');
+           //$this->app->register('Iber\Generator\ModelGeneratorProvider');
+           $this->app->register('Krlove\EloquentModelGenerator\Provider\GeneratorServiceProvider');
+           $this->app->register('Barryvdh\Debugbar\ServiceProvider');
+           $this->app->register('Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider');
         }
     }
 }

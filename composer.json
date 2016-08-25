@@ -6,12 +6,12 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.2.*",
+        "laravel/framework": "5.3.*",
         "caouecs/laravel-lang": "^3.0",
         "orangehill/iseed": "^2.1",
         "doctrine/dbal": "^2.5",
         "adldap2/adldap2-laravel": "^2",
-        "laravelcollective/html": "^5.2"
+        "laravelcollective/html": "5.3.*@dev"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -19,7 +19,7 @@
         "phpunit/phpunit": "~4.0",
         "symfony/css-selector": "2.8.*|3.0.*",
         "symfony/dom-crawler": "2.8.*|3.0.*",
-        "laracasts/generators": "^1.1",
+        "laracasts/generators": "^1",
         "krlove/eloquent-model-generator": "^1",
         "barryvdh/laravel-debugbar": "^2.2",
         "barryvdh/laravel-ide-helper": "^2.2"
@@ -50,8 +50,6 @@
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "php artisan ide-helper:generate",
-            "php artisan ide-helper:meta",
             "php artisan optimize"
         ]
     },
