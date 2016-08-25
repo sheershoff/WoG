@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 /**
  * @property integer $id
  * @property string $name
@@ -13,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $deleted_at
  * @property Currencies[] $Currencies
  */
-class CurrencyType extends Model
+class CurrencyType extends BaseModelWithSoftDeletes
 {
     /**
      * The table associated with the model.
@@ -25,7 +23,7 @@ class CurrencyType extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name', 'unit', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['name', 'unit', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

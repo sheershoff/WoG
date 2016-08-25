@@ -38,7 +38,7 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'adldap',
+            'provider' => env('LDAP',true)?'adldap':'users',
         ],
 
         'api' => [
@@ -71,7 +71,7 @@ return [
         ],
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Models\User::class,
         ],
 
     // Для LDAP

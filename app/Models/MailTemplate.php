@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 /**
  * @property integer $id
  * @property integer $action_id
@@ -16,7 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property Actions $Actions
  * @property ActionTransactions[] $ActionTransactions
  */
-class MailTemplate extends Model
+class MailTemplate extends BaseModelWithSoftDeletes
 {
     /**
      * The table associated with the model.
@@ -28,7 +26,7 @@ class MailTemplate extends Model
     /**
      * @var array
      */
-    protected $fillable = ['action_id', 'name', 'body', 'size', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['action_id', 'name', 'body', 'size', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

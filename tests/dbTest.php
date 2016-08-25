@@ -15,12 +15,20 @@ class dbTest extends TestCase
     {
         $this->seeInDatabase('users', ['email' => 'Vladimir.Khonin@Megafon.ru']);
     }
+    
+    public function killMe()
+    {
+        $this->assertTrue(DB::table('users')->where('email', '=', 'vladimir.khonin@megafon.ru')->delete());
+        $this->assertTrue(DB::raw('delete from wog_users where email=\'Vladimir.Khonin@Megafon.ru\' cascade'));
+        
+        $this->seeInDatabase('users', ['email' => 'Vladimir.Khonin@Megafon.ru']);
+    }
 
 public function testSeq() {
     if(DB::connection()->getName() == 'pgsql')
     {
         DB::setFetchMode(PDO::FETCH_CLASS);
-        $tablesToCheck = \DB::select("select substring(table_name,5) n from information_schema.columns where table_name!='wog_migrations' and table_schema='wog' and column_name='id'");
+        $tablesToCheck = \DB::select("select substring(table_name,5) n from information_schema.columns where table_name!='wog_migrations' and table_name!='wog_notifications' and table_name!='wog_sessions' and table_schema='wog' and column_name='id'");
         foreach($tablesToCheck as $tableToCheckN) {
             $tableToCheck=$tableToCheckN->n;
     	$x=DB::table($tableToCheck)->select(DB::raw('\''.$tableToCheck.'\' n, max(id) max, nextval(\'wog_'.$tableToCheck.'_id_seq\') nextval'))->first();

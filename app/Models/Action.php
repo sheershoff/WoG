@@ -1,9 +1,6 @@
-
 <?php
 
 namespace App\Models;
-
-use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property integer $id
@@ -18,7 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property ActionTransactions[] $ActionTransactions
  * @property MailTemplates[] $MailTemplates
  */
-class Action extends Model
+class Action extends BaseModelWithSoftDeletes
 {
     /**
      * The table associated with the model.
@@ -30,37 +27,36 @@ class Action extends Model
     /**
      * @var array
      */
-    protected $fillable = ['quest_id', 'name', 'description', 'created_at', 'updated_at', 'deleted_at'];
-
+    protected $fillable = ['quest_id', 'name', 'description', 'created_at', 'updated_at'];
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function Quests()
-    {
-        return $this->belongsTo('Quests', 'quest_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function ActionCurrencies()
-    {
-        return $this->hasMany('ActionCurrencies', 'action_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function ActionTransactions()
-    {
-        return $this->hasMany('ActionTransactions', 'action_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function MailTemplates()
-    {
-        return $this->hasMany('MailTemplates', 'action_id');
-    }
+//    public function Quests()
+//    {
+//        return $this->belongsTo('Quests', 'quest_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function ActionCurrencies()
+//    {
+//        return $this->hasMany('ActionCurrencies', 'action_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function ActionTransactions()
+//    {
+//        return $this->hasMany('ActionTransactions', 'action_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+//     */
+//    public function MailTemplates()
+//    {
+//        return $this->hasMany('MailTemplates', 'action_id');
+//    }
 }

@@ -13,8 +13,10 @@ class ldapTest extends TestCase
      */
     public function testExample()
     {
+    if (env('LDAP',true)==true) {
 	$user = Adldap::search()->users()->find('vladimir khonin');
 //        $this->assertFalse(Adldap::auth()->attempt('Vladimir.Khonin', 'jhjkahk'));
+    }
 	$this->assertTrue(True);
     }
 }

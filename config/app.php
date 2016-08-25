@@ -163,7 +163,11 @@ return [
         //Dsdevbe\LdapConnector\LdapConnectorServiceProvider::class
         Adldap\Laravel\AdldapServiceProvider::class,
         Adldap\Laravel\AdldapAuthServiceProvider::class,
-    ],
+        Intervention\Image\ImageServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        NotificationChannels\Telegram\TelegramServiceProvider::class,
+        ],
 
     /*
     |--------------------------------------------------------------------------
@@ -209,6 +213,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 	'Adldap' => Adldap\Laravel\Facades\Adldap::class,
+	'Image' => Intervention\Image\Facades\Image::class,
+	'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];

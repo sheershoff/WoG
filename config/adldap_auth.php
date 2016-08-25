@@ -193,10 +193,18 @@ return [
 
     'sync_attributes' => [
 
-        'name' => 'cn',
+        'name' => 'description',//cn
+        'login' => 'samaccountname',
+        'phone_number' => 'mobile',
+        'email' => 'App\Handlers\LdapAttributeHandler@email',
 
     ],
-
+    
+//    'name' => 'displayName',
+//    'firstname' => 'givenName',
+//    'lastname' => 'sn',
+//    'groups' => 'memberOf',
+    
     /*
     |--------------------------------------------------------------------------
     | Select Attributes

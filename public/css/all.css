@@ -22,7 +22,27 @@
 - #bdbdbd & #fff (Font colors)
 */
 
-
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
 /**********BASE CONFIGURATIONS**********/   
 body {
 	background:#1f1f1f;
@@ -832,11 +852,11 @@ a:hover {
 
 /**********Media Styles**********/   
 
-@media (max-width: 360px){
+@media (max-width: 360px) {
 /*Calendar Adsjustments*/
 .fc-header {margin-top:15px;}
 .fc-header-title h2{font-size:10px; }
-.fc-header-right {display:none}
+.fc-header-right {display:none; }
 }
 
 /* portrait tablet */

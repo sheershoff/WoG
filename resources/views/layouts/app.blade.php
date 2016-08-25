@@ -16,108 +16,130 @@
 
     <!-- Styles -->
     <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet">
-    <link href="{{asset('/css/normalize.css')}}" rel="stylesheet">
     <link href="{{asset('/css/all.css') }}" rel="stylesheet">
-
+    <link href="{{asset('/css/wog.css') }}" rel="stylesheet">
+<!-- JavaScripts -->
+<script type="text/javascript" src="{{asset('/js/jquery.js') }}"></script>
 </head>
-<body id="app-layout">
+<body>
     <!-- NAVIGATION MENU navbar navbar-default navbar-static-top-->
     <nav class="navbar-nav navbar-inverse navbar-fixed-top">
-        <div class="container">
+    <div class="container ">
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button type="button" class="navbar-toggle collapsed dropdown" data-toggle="collapse" data-target="#app-navbar-collapse">
+                    <span class="sr-only">WoG</span>
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    <img style=" margin-top: -7px; " src="{{asset('img/logo30.png')}}" alt="">
-                </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/') }}">WoG</a></li>
+                    <li class="dropdown">
+                <a href="{{ url('/') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <img style=" margin-top: -7px; " src="{{asset('img/logo30.png')}}" alt="WoG">
+                </a>
+                        <ul class="dropdown-menu" role="menu">
+                         <li><a href="/gantt/index.html">gantt</a></li>
+                         <li><a href="/gantt/toweek.html">недельные задачи</a></li>
                     @if (Auth::guest())
                     @else
-                        <li><a href="/personal-data"><i class="icon-th icon-white"></i> Персонаж</a></li>
+				<li><a href="/phpinfo.php">phpinfo.php</a></li>
+				<li><a href="/i/adminer.php">Adminer</a></li>
+				<li><a href="/jira-team-boadr/">JiraTeamBoadr</a></li>
                     @endif
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                        <li><a href="https://megawiki.megafon.ru/display/WOG">WiKi</a></li>
+                     </ul>
+                    </li>
+                    <li><a href="/"><i class="icon-th icon-white"></i> WoG</a></li>
+                    @if (Auth::guest())
+                    @else
+                    <li><a href="/personal-data"><i class="icon-th icon-white"></i> Персонаж</a></li>
+                    @endif
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="/i/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                Admin <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-				<li><a href="/phpinfo.php">phpinfo.php</a></li>
-				<li><a href="/i/adminer.php">Adminer</a></li>
-                            </ul>
-                        </li>                        
+                    @else 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/achievements') }}">Достижения</a></li>
+                                <li><a href="{{ url('/administrator') }}">Настройка</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>
                     @endif
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            не WoG <span class="caret"></span>
-                        </a>
-
-                        <ul class="dropdown-menu" role="menu">
-			    <li><a href="/gantt/">gantt</a></li>
-			    <li><a href="/gantt/toweek.html">недельные задачи</a></li>
-                        </ul>
-                    </li>                        
-                    
                 </ul>
-            </div>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Auth::guest())
+                    @else 
+                        <li><a href="/shop">Shop</a></li>
+                    @endif
+                        <li><a href="https://megawiki.megafon.ru/display/WOG">WiKi</a></li>
+                        <li class="dropdown">
+                            <a href="/i/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                Рейтинги <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+				<li><a href="/rating/xp">Опыт</a></li>
+				<li><a href="/rating/team">Team</a></li>
+				<li><a href="/rating/gold">Gold</a></li>
+                            </ul>
+                        </li>                        
+
+             </ul>
+         </div>
+     </div>
+ </nav>
+
+    @if (Session::has('message'))
+    <div class="row">
+        <div class=”col-md-12">
+            <div class=”alert alert-info”>{{ Session::get('message') }}</div>
         </div>
-    </nav>
+    </div><!--/row -->
+    @endif
 
+ <div class="container main-wog">
+
+  <!-- FIRST ROW OF BLOCKS -->     
+  <div class="row">
+
+
+      @yield('content')
+
+
+  </div><!--/row -->
+
+
+
+</div> <!-- /container -->
+
+
+<div id="footerwrap">
+    <footer class="clearfix"></footer>
     <div class="container">
-
-        <!-- FIRST ROW OF BLOCKS -->     
         <div class="row">
-            @yield('content')
-        </div><!--/row -->
+            <div class="col-sm-12 col-lg-12">
+                <!-- <p><img src="http://www.prepbootstrap.com/Content/images/shared/single-page-admin/logo.png" alt=""></p> -->
+                <p> {{ shell_exec("git log -1 --pretty=format:'%h - %s (%ci)' --abbrev-commit `git merge-base local-dev dev`") }}
+     © V.Khonin, R.Revel &  2016 ПАО «МегаФон»</p>
+            </div>
 
+        </div><!-- /row -->
+    </div><!-- /container -->       
+</div><!-- /footerwrap -->
 
-
-    </div> <!-- /container -->
-    <div id="footerwrap">
-        <footer class="clearfix"></footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-lg-12">
-                    <p>© Vladimir Khonin & 2016 ПАО «МегаФон»</p>
-                </div>
-
-            </div><!-- /row -->
-        </div><!-- /container -->		
-    </div><!-- /footerwrap -->
-
-    <!-- JavaScripts -->
-    <script type="text/javascript" src="{{asset('/js/jquery.js') }}"></script>
-    <script type="text/javascript" src="{{asset('/js/bootstrap.js')}}"></script>
-    <script type="text/javascript" src="{{asset('/js/all.js') }}"></script>
+<!-- JavaScripts -->
+<script type="text/javascript" src="{{asset('/js/bootstrap.js')}}"></script>
+<script type="text/javascript" src="{{asset('/js/all.js') }}"></script>
 </body>
 </html>

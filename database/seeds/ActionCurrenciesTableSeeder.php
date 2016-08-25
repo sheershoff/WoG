@@ -43,6 +43,32 @@ class ActionCurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
+            2 => 
+            array (
+                'id' => 5,
+                'name' => 'Цена',
+                'description' => NULL,
+                'currency_id' => 4,
+                'action_id' => 8,
+                'value' => -100,
+                'transaction_user' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            3 => 
+            array (
+                'id' => 6,
+                'name' => 'Покупка invite',
+                'description' => NULL,
+                'currency_id' => 1,
+                'action_id' => 8,
+                'value' => 1,
+                'transaction_user' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
         ));
         
         

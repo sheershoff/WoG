@@ -17,7 +17,7 @@ class CreateRobotsTable extends Migration
             $table->string('name')->comment('название');
             $table->text('description')->nullable()->comment('Описание действия');
             $table->integer('user_id')->unsigned()->nullable()->comment('ссылка на юзера-авторизацию');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
             $table->timestamps();
 	    $table->softDeletes();
         });

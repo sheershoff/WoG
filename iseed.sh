@@ -10,6 +10,7 @@ php artisan iseed users
 php artisan iseed robots
 php artisan iseed team_users
 php artisan iseed user_profiles
+php artisan iseed robots
 php artisan iseed quests
 php artisan iseed role_user
 php artisan iseed currencies

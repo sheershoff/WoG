@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 /**
  * @property integer $id
  * @property integer $currency_id
@@ -14,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property Currencies $Currencies
  * @property Users $Users
  */
-class Balance extends Model
+class Balance extends BaseModel
 {
     /**
      * The table associated with the model.
@@ -31,16 +29,37 @@ class Balance extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function Currencies()
+    public function currency()
     {
-        return $this->belongsTo('Currencies', 'currency_id');
+        return $this->belongsTo(Currency::class);
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function Users()
+    public function user()
     {
-        return $this->belongsTo('Users', 'user_id');
+        return $this->belongsTo(User::class);
     }
+    
+    /**
+     * Scope a query to only include popular users.
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeXP($query)
+    {
+        return $query->join('currencies', 'currencies.id','=','balances.currency_id')->where('currencies.currency_type_id', 1)->select('balances.*', 'currencies.name', 'currencies.description');
+    }
+
+    /**
+     * Scope a query to only include active users.
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeMedal($query)
+    {
+        return $query->join('currencies', 'currencies.id','=','balances.currency_id')->where('currencies.currency_type_id', 2)->select('balances.*', 'currencies.name', 'currencies.description');
+    }    
+    
 }

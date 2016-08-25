@@ -34,6 +34,9 @@ elixir(function(mix) {
     // объединяем все CSS
     mix.styles([path+'bootstrap/dist/css/bootstrap.css'],'public/css/bootstrap.css', './');
 //    mix.styles(['resources/assets/theme/flexslider.css'],'public/css/flexslider.css', './');
+    mix.styles([path+'normalize-css/normalize.css'],'public/css/normalize.css', './');
+//    mix.styles([path+'.css'],'public/css/.css', './');
+
 
     mix.styles([
 //        paths.colorbox + '/example3/colorbox.css',
@@ -48,10 +51,13 @@ elixir(function(mix) {
     //Объединяем скрипты
     mix.scripts([path+'jquery/dist/jquery.js',], 'public/js/jquery.js', './');
     mix.scripts([path+'bootstrap/dist/js/bootstrap.js',], 'public/js/bootstrap.js', './');
+    mix.scripts([path+'typed.js/js/typed.js',], 'public/js/typed.js', './');
+    mix.scripts(['resources/typedRun.js',], 'public/js/typedRun.js', './');
     
     mix.scripts([
 //        paths.colorbox + '/jquery.colorbox.js',
 //        paths.metisMenu + '/metisMenu.js'
+
 	'resources/app.js',
     ], 'public/js/all.js', './');
  
