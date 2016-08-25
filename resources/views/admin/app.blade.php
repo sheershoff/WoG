@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="ru" ng-app="app">
   <head>
-    <script src="{{ asset('admin-lib/angular.min.js') }}"></script>
     <meta charset="utf-8">
 {{--     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
@@ -10,12 +9,10 @@
     <meta name="author" content="">
 
     <title>Dashboard Template for Bootstrap</title>
-
     <!-- Bootstrap core CSS -->
-    <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('admin-lib/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="{{ asset('admin-lib/dashboard.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin-lib/css/dashboard.css') }}" rel="stylesheet">
 
 
 
@@ -69,14 +66,14 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    {{-- <script src="{{ asset('admin-lib/jquery.min.js') }}"></script> --}}
-    <script src="{{ asset('admin-lib/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('admin-lib/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('admin-lib/js/bootstrap.min.js') }}"></script>
     {{-- <script src="{{ asset('admin-lib/docs.min.js') }}"></script> --}}
     <script src="{{ asset('admin-lib/angular/app.js') }}"></script>
 
-    <script src="{{ asset('/js/jquery.js') }}"></script>
-    <script src="{{ asset('/js/bootstrap.js') }}"></script>
-    <script src="{{ asset('admin-lib/docs.min.js') }}"></script>
+
+    {{-- <script src="{{ asset('admin-lib/js/docs.min.js') }}"></script> --}}
+    <script src="{{ asset('admin-lib/js/angular.min.js') }}"></script>
 
     @yield('script')
   </body>

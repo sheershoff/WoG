@@ -7,7 +7,7 @@
   <div>
 <div class="col-md-3 ">
   <div class="panel panel-default">
-    <div class="panel-heading">Автомобили </div>
+    <div class="panel-heading">Валюта </div>
     <div class="panel-body">
       <button id="button_add" onclick="getFormProduct_new()" class="btn btn-default product_add" style="display: none;"><span class="glyphicon glyphicon-plus"></span>Добавить</button>
       <table class="table" ng-cloak>
@@ -26,7 +26,7 @@
           <th><div class="btn btn-default btn-xs del" data-id="22"><span class="glyphicon glyphicon-remove"></span></div></th> 
           </tr>
         @endforeach
-      
+        
 {{--           <tr>
           <td id="nameProductID-24">Nissan Serena</td>        
           <th><div class="btn btn-default btn-xs edit" data-get-id="http://prokatlider.com/adminzone/Product/24" data-id="24"><span class="glyphicon glyphicon-pencil"></span></div></th> 
@@ -53,17 +53,34 @@
 
 @section('script')
 	<script type="text/javascript">
-   var app = angular.module('app', []) .controller("myFormController", function ($scope) {
+  angular.module('app', []); 
+  angular.module('app').controller("myFormController", function ($scope) {
+    console.log('myFormController');
+  });
 
-    });
-    app.directive('myCustomUrl', function ($templateCache) {
-      return {
-        restrict: "E",
-        templateUrl: '{{ asset('') }}admin-lib/form/questsForm.html',
-        link: function(scope, iElement, iAttrs) {
-         console.log('dire')
-        }
-      };
-    });
+    angular.module('app').controller('qustCtrl', function () {
+    this.name = "BiCoin";
+    this.lists = [
+      {
+        name: 'list1'
+      },
+      {
+        name: 'list2'
+      }
+    ]
+
+  });
+
+  angular.module('app').directive('myCustomUrl', function ($templateCache) {
+    return {
+      controller: 'qustCtrl as qustCtrl',
+      templateUrl: '{{ asset('') }}admin-lib/form/questsForm.html',
+      link: function(scope, iElement, iAttrs, ctrl) {
+        scope = $.extend(scope, ctrl);
+       console.log('ctrl ' , ctrl);
+       console.log('scope' , scope);
+      }
+    };
+  });
   </script>
 @stop
