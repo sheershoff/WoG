@@ -20,6 +20,9 @@
     "datatables": "^1.10.12",
     "font-awesome": "^4.6.3",
     "normalize-css": "normalize.css#^4.2.0",
-    "typed.js": "^1.1.4"
+    "typed.js": "^1.1.4",
+    "datatables.net": "^1.10.12",
+    "datatables.net-dt": "^1.10.12",
+    "angular": "^1.5.8"
   }
 }

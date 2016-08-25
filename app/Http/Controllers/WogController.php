@@ -38,6 +38,21 @@ class WogController extends Controller
     }
     
    }  
+
+public function rating($type) {
+$bls=Balance::XP()->orderBy('value', 'desc')->get();
+$t=[];
+$v=[];
+foreach ($bls as $b) {
+//    if (!array_key_exists($t,$b->name)) {
+$t[$b->name]=['photo'=>'photo', 'name'=>$b->name];
+//}
+$v[$b->user->name]['name']=$b->user->name;
+$v[$b->user->name]['photo']=$b->user->photo();
+    $v[$b->user->name][$b->name]=$b->value;
+} 
+return view('rating', ['v'=>$v, 't'=>$t]);
+}
    public function personalData()
    {
          $cash =	DB::select('select c.name, b.value, ct.unit '
