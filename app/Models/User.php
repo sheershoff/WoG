@@ -9,6 +9,8 @@ use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Adldap\Laravel\Traits\AdldapUserModelTrait;
+use Illuminate\Support\Facades\Auth;
+use Session;
 
 /**
  * @property integer $id
@@ -70,46 +72,31 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
         'password', 'remember_token',
     ];
 
+    
     /**
      * @var array
      */
     protected $fillable = ['user_status_id', 'login', 'name', 'email', 'user_type', 'ext_login', 'phone_number', 'tab_number', 'mail_agg_id', 'description', 'status', 'mail_hour', 'created_at', 'updated_at'];
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
     public function photo() {
         return '/User/Photo/' . $this->id;
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function UserStatuses() {
         return $this->belongsTo('UserStatuses', 'user_status_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     *
-      public function TeamUsers()
+     */
+      public function teams()
       {
-      return $this->hasMany('TeamUsers', 'user_id');
+      return $this->belongsToMany(User::class, 'team_users', 'user_id', 'team_user_id');
       }
 
-     * *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     *
-      public function TeamUsers()
-      {
-      return $this->hasMany('TeamUsers', 'team_user_id');
-      }
-
-      //    /**
-      //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-      // */
-//    public function userProfile()
-//    {
-//        return $this->hasMany('UserProfiles', 'user_id');
-//    }
-//
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
 //     */
@@ -117,6 +104,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //    {
 //        return $this->hasMany('RoleUser', 'user_id');
 //    }
+    
     public function roles() {
         return $this->belongsToMany(Role::class); //, 'role_user', 'user_id', 'role_id'
     }
@@ -134,26 +122,48 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
 //     */
     public function quests() {
-        return $this->belongsToMany(Role::class, 'user_quests');
+        return $this->belongsToMany(Quest::class, 'user_quests');
+    }
+    
+    public function okQuests() {
+        return $this->belongsToMany(Quest::class, 'user_quests')->wherePivot('user_quest_status_id', 3);
+    }
+    public function activeQuests() {
+        return $this->belongsToMany(Quest::class, 'user_quests')->wherePivot('user_quest_status_id', 2);
+    }
+    
+    public function passiveQuests() {
+        return $this->belongsToMany(Quest::class, 'user_quests')->wherePivot('user_quest_status_id', 1);
     }
 
 //
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
 //     */
-//    public function Quests()
+//    public function authorQuests()
 //    {
 //        return $this->hasMany('Quests', 'author_user_id');
 //    }
-//
-//    /**
-//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-//     */
-//    public function Balances()
-//    {
-//        return $this->hasMany('Balances', 'user_id');
-//    }
-//
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function balances()
+    {
+        return $this->hasMany('Balances', 'user_id');
+    }
+
+    public function currency() {
+        return $this->belongsToMany(Currency::class, 'balances')->wherePivot('value','<>', 0)->select('balances.value', 'currencies.*');
+    }
+
+    public function inventary() {
+        return $this->currency()->where('currencies.currency_type_id','=',4);
+    }
+    public function cash() {
+        return $this->currency()->whereIn('currencies.currency_type_id',[1,2,10]);
+    }
+
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
 //     */
@@ -200,31 +210,21 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //    {
 //        return $this->belongsTo('MailAggs', 'mail_agg_id');
 //    }
-    protected function emailCamel($str) {
-        $x = mb_convert_case($str, MB_CASE_TITLE, "UTF-8");
-        $i = 0;
-        while ($i = mb_strpos($x, '@', $i + 1)) {
-            $x = mb_substr($x, 0, $i + 1) . mb_convert_case(mb_substr($x, $i + 1, 1), MB_CASE_UPPER, "UTF-8") . mb_substr($x, $i + 2);
-        }
-        $i2 = 0;
-        while (mb_strpos($x, '.', $i2 + 1)) {
-            $i2 = mb_strpos($x, '.', $i2 + 1);
-            $x = mb_substr($x, 0, $i2 + 1) . mb_convert_case(mb_substr($x, $i2 + 1, 1), MB_CASE_UPPER, "UTF-8") . mb_substr($x, $i2 + 2);
-        }
-        return mb_substr($x, 0, $i2 + 1) . mb_convert_case(mb_substr($x, $i2 + 1, 1), MB_CASE_LOWER, "UTF-8") . mb_substr($x, $i2 + 2);
-    }
+
+    protected $attributes = array(
+        'status' => 'я родился!',
+        'user_type'=>1,
+        'user_status_id'=>1,
+    );
 
     function save(array $options = []) {
         // assume it won't work
         $success = false;
-        if (!empty($this->email)) {
-            $this->email = $this->emailCamel($this->email);
-        }
+//        if (!empty($this->email)) {
+//            $this->email = mb_convert_case($this->email, MB_CASE_LOWER, "UTF-8");
+//        }
         DB::beginTransaction();
         //try {
-        if (empty($this->status)) {
-            $this->status = 'я родился!';
-        }
         if (parent::save()) {
             $this->addRole([-2]);
             $success = true;
@@ -235,17 +235,73 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 
         if ($success) {
             DB::commit();
+            $this->addAutoQuest();
             return true; //Redirect::back()->withSuccessMessage('Post saved');
         } else {
             DB::rollback();
             return false; //Redirect::back()->withErrorMessage('Something went wrong');
         }
     }
+    
+//        static::created(function ($model) {
+//            // blah blah
+//        });
 
     //it is the MainRobot
     public function addRole(array $roleId) {
         $this->roles()->sync($roleId);
-        //$this->quests()->autoAdd();
     }
 
+    public function addAutoQuest() {
+        if (!Auth::check()) {
+            return;
+        }
+        $qs=DB::select ('select q.id, q.is_auto
+            from '.DB::getTablePrefix() . 'quests q
+            inner join '.DB::getTablePrefix() . 'roles r on r.id = q.role_id
+            inner join '.DB::getTablePrefix() . 'role_user ru on r.id = ru.role_id
+            where ru.user_id = ? '. 
+              'and not exists (select 1 from '.DB::getTablePrefix() . 'user_quests uq where uq.quest_id = q.id and uq.user_id = ru.user_id) 
+              and not exists (select 1 from '.DB::getTablePrefix() . 'quest_depends qd 
+                                  left join '.DB::getTablePrefix() . 'user_quests uqd on uqd.quest_id = qd.depend_quest_id
+                                    and uqd.user_id = ru.user_id
+                                    and uqd.user_quest_status_id <> 3 
+                               where qd.quest_id = q.id) 
+              and q.deleted_at is null 
+             order by q.created_at desc',[$this->id]);
+        //$qs=Quest::Activeted()->get('id', 'is_auto');
+        foreach ($qs as $q) {         
+            $uq = new UserQuest;
+            $uq->user_id = $this->id;
+            $uq->quest_id = $q->id;
+            $uq->user_quest_status_id = $uq->is_auto ? 2: 1;//open - can open
+            $uq->save(); // <~ this is your "insert" statement
+        }
+        if (count($qs)>0) {
+            Session::flash('message', 'Quest added!');
+        }
+      
+    }
+
+    /**
+     * Set the user's first name.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function setEmailAttribute($value)
+    {
+        $this->attributes['email'] = strtolower($value);
+    }    
+    
+        /**
+     * Get the user's first name.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getEmailAttribute($value)
+    {
+        return strtolower($value);
+    }
 }

@@ -33,6 +33,14 @@ class UserQuestStatusesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
+            2 => 
+            array (
+                'id' => 2,
+                'name' => 'Выбран',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
         ));
         
         

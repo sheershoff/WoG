@@ -1394,6 +1394,474 @@ class BalancesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
+            153 => 
+            array (
+                'id' => 210,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            154 => 
+            array (
+                'id' => 211,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 10,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            155 => 
+            array (
+                'id' => 212,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 20,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            156 => 
+            array (
+                'id' => 213,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 9,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            157 => 
+            array (
+                'id' => 214,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 8,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            158 => 
+            array (
+                'id' => 215,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            159 => 
+            array (
+                'id' => 216,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            160 => 
+            array (
+                'id' => 217,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 3,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            161 => 
+            array (
+                'id' => 218,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 25,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            162 => 
+            array (
+                'id' => 219,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 33,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            163 => 
+            array (
+                'id' => 220,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 34,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            164 => 
+            array (
+                'id' => 221,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 36,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            165 => 
+            array (
+                'id' => 222,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 38,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            166 => 
+            array (
+                'id' => 223,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 40,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            167 => 
+            array (
+                'id' => 224,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 43,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            168 => 
+            array (
+                'id' => 225,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 21,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            169 => 
+            array (
+                'id' => 226,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 16,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            170 => 
+            array (
+                'id' => 227,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 17,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            171 => 
+            array (
+                'id' => 228,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 18,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            172 => 
+            array (
+                'id' => 229,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 19,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            173 => 
+            array (
+                'id' => 230,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 22,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            174 => 
+            array (
+                'id' => 231,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 23,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            175 => 
+            array (
+                'id' => 232,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 30,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            176 => 
+            array (
+                'id' => 233,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 24,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            177 => 
+            array (
+                'id' => 234,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 26,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            178 => 
+            array (
+                'id' => 235,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 27,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            179 => 
+            array (
+                'id' => 236,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 32,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            180 => 
+            array (
+                'id' => 237,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 28,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            181 => 
+            array (
+                'id' => 238,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 35,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            182 => 
+            array (
+                'id' => 239,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 37,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            183 => 
+            array (
+                'id' => 240,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 39,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            184 => 
+            array (
+                'id' => 241,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 42,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            185 => 
+            array (
+                'id' => 242,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 45,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            186 => 
+            array (
+                'id' => 243,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 49,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            187 => 
+            array (
+                'id' => 244,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 47,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            188 => 
+            array (
+                'id' => 245,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 48,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            189 => 
+            array (
+                'id' => 246,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 53,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            190 => 
+            array (
+                'id' => 247,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 50,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            191 => 
+            array (
+                'id' => 248,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 52,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            192 => 
+            array (
+                'id' => 249,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 56,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            193 => 
+            array (
+                'id' => 250,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 54,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            194 => 
+            array (
+                'id' => 251,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 55,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            195 => 
+            array (
+                'id' => 252,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 57,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            196 => 
+            array (
+                'id' => 253,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 59,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            197 => 
+            array (
+                'id' => 254,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 60,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            198 => 
+            array (
+                'id' => 255,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 61,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            199 => 
+            array (
+                'id' => 256,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 62,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            200 => 
+            array (
+                'id' => 257,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 63,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            201 => 
+            array (
+                'id' => 258,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 64,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            202 => 
+            array (
+                'id' => 259,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 65,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            203 => 
+            array (
+                'id' => 260,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 7,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+            204 => 
+            array (
+                'id' => 261,
+                'value' => 1,
+                'currency_id' => 1,
+                'user_id' => 69,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
         ));
         
         

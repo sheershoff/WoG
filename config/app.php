@@ -165,7 +165,8 @@ return [
         Adldap\Laravel\AdldapAuthServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-    ],
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        ],
 
     /*
     |--------------------------------------------------------------------------
