@@ -32,7 +32,7 @@ class WogController extends Controller
    			'staus' => Auth::user()->teams()->get(),
    			'cash' => Auth::user()->cash()->get(),
 	                'QustsByUser' => Auth::user()->passiveQuests()->get(),
-        		'MyQustByUser' => Auth::user()->activeQuests()->take(1)->get(),
+        		'MyQustByUser' => Auth::user()->activeQuests()->take(5)->get(),
    			'inventary' => Auth::user()->inventary()->get(),
    			]);
     }

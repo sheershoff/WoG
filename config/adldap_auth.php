@@ -195,8 +195,9 @@ return [
 
         'name' => 'description',//cn
         'login' => 'samaccountname',
-        'phone_number' => 'mobile',
+        'phone_number' => 'App\Handlers\LdapAttributeHandler@mobile',
         'email' => 'App\Handlers\LdapAttributeHandler@email',
+//        'thumbnailphoto' => 'App\Handlers\LdapAttributeHandler@photo',
 
     ],
     

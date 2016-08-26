@@ -22,8 +22,7 @@
                                 <img style="height: 45px; width: 45px;" src="{{asset($q->photo())}}" alt="">
                                 <br>
                                 <br>
-                                <p>Система</p>
-                                <p><bold>{{$q->name}}</bold></p>
+                                <p>{{$q->name}}</p>
                                 <p><bold>{{$q->description}}</bold></p>
                                 <button data-user-id="{{Auth::user()->id}}" data-quest-id="{{$q->id}}" data-type="true" type="button" class="add-dell-new-qvest btn btn-default btn-xs">Принять</button>
                             </div>

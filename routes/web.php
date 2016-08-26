@@ -97,7 +97,7 @@ Route::get('/rating/{currency?}', 'WogController@rating')->name('rating');//func
 Auth::routes();
 //assword/resetegisterRoute::get('login', ['as' => 'auth.login', 'uses' => 'App\Http\Controllers\Auth\LoginController@showLoginForm']);
 //Route::post('login', ['as' => 'auth.login', 'uses' => 'App\Http\Controllers\Auth\LoginController@login']);//->middleware('prelogin.ldap');
-//Route::get('logout', ['as' => 'auth.logout', 'uses' => 'App\Http\Controllers\Auth\LoginController@logout']);
+Route::get('logout', ['as' => 'auth.logout', 'uses' => 'Auth\LoginController@logout']);
 //Route::post('logout', ['as' => 'auth.logout', 'uses' => 'App\Http\Controllers\Auth\LoginController@logout']);
 
 // 
