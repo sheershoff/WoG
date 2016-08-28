@@ -22,6 +22,8 @@ class CreateTeamUserTable extends Migration
             $table->boolean('is_leader')->nullable()->default(0)->comment('маркер капитана, если капитанов несколько - они равназначны');
             //todo: сделать квест поиска команд без капитанов и процедуры выбора капитана (голосованием), а также команд из мёртвых игроков и зарытия их
             //todo: сделать квест поиска мёртвых игроков их вовлечения обратно + выпинывания их из капитанов
+            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+	    $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

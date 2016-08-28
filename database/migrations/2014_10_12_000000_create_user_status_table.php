@@ -14,6 +14,9 @@ class CreateUserStatusTable extends Migration
     {
         Schema::create('user_statuses', function (Blueprint $table) {
             $table->increments('id')->comment('Статус пользователя');
+	    $table->string('cod',30)->comment('Код статуса');
+	    $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->string('name',255);
             $table->timestamps();
             $table->softDeletes();

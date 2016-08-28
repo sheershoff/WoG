@@ -16,6 +16,8 @@ class CreateMailAggTable extends Migration
             $table->increments('id')->comment('Виды агрегации почты');
             $table->string('name',255);
             $table->integer('value')->unsigned()->nullable()->comment('длинна периода в секундах, null -  не применимо, 0 - мгновенно');
+            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });		

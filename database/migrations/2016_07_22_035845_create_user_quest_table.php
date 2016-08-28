@@ -22,6 +22,8 @@ class CreateUserQuestTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('user_quest_status_id')->unsigned()->comment('Статус квеста - доступен, начат и т.п.');
             $table->foreign('user_quest_status_id')->references('id')->on('user_quest_statuses')->onDelete('set null');
+            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
 	    $table->softDeletes();
         });

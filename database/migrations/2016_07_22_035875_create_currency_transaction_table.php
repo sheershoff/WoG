@@ -23,6 +23,8 @@ class CreateCurrencyTransactionTable extends Migration
             $table->foreign('action_currency_id')->references('id')->on('action_currencies')->onDelete('set null');
             $table->integer('action_trancaction_id')->unsigned();
             $table->foreign('action_trancaction_id')->references('id')->on('action_transactions')->onDelete('cascade');
+            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

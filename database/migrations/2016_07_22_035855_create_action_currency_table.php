@@ -22,6 +22,8 @@ class CreateActionCurrencyTable extends Migration
             $table->foreign('action_id')->references('id')->on('actions')->onDelete('cascade');
             $table->integer('value')->unsigned()->comment('Cумма на которую меняется');
             $table->boolean('transaction_user')->unsigned()->default(1)->comment('Пользователь списания А (истина) или Б (лож)');
+            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
 	    $table->softDeletes();
         });

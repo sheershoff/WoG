@@ -15,7 +15,7 @@ class CreateUserTable extends Migration
         	
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id')->comment('Пользователи');
-            $table->string('login',40)->nullable()->comment('Логин')->unique();
+            $table->string('login',40)->nullable()->comment('Логин');
             $table->string('name',255)->nullable()->comment('ФИО или имя команды');
             $table->string('email',60)->unique()->nullable();
             $table->string('password',60)->nullable();
@@ -35,8 +35,11 @@ class CreateUserTable extends Migration
             $table->string('telegram_user_id',30)->nullable()->unsigned()->comment('id телеграмовского пользователя или чата для команды');
             $table->dateTime('last_login ')->nullable()->comment('Дата последнего входа');
             $table->rememberToken();
+            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
+            $table->unique('login','organization_id');
         });
 		
     }

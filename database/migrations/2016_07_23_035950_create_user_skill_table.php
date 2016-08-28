@@ -21,6 +21,8 @@ class CreateUserSkillTable extends Migration
             $table->integer('value')->unsigned()->nullable()->comment('оценка');
             $table->integer('expert_user_id')->unsigned()->nullable()->comment('Ключ на пользователя который проставил оценку. Если = userId, то самооценка, если =null то тоже самое');
             $table->foreign('expert_user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });

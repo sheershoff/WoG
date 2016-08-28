@@ -28,6 +28,10 @@ class CreateQuestTable extends Migration
             $table->string('function_check',255)->nullable()->comment('функция для проверки выполненности квеста или какой-то его части');
             $table->integer('robot_id')->unsigned()->nullable()->comment('Робот которому принадлежит квест, null - системный');
             $table->foreign('robot_id')->references('id')->on('robots')->onDelete('cascade');
+            
+            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
+            
             $table->timestamps();
 	    $table->softDeletes();
         });

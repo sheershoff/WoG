@@ -14,10 +14,13 @@ class CreateRobotsTable extends Migration
     {
         Schema::create('robots', function (Blueprint $table) {
             $table->increments('id')->comment('Работы-квестодатели/считатели');
+            $table->string('cod',30)->comment('Код статуса');
             $table->string('name')->comment('название');
             $table->text('description')->nullable()->comment('Описание действия');
             $table->integer('user_id')->unsigned()->nullable()->comment('ссылка на юзера-авторизацию');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
+            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
 	    $table->softDeletes();
         });

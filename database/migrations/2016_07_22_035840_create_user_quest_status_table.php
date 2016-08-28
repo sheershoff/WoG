@@ -15,6 +15,8 @@ class CreateUserQuestStatusTable extends Migration
         Schema::create('user_quest_statuses', function (Blueprint $table) {
             $table->increments('id')->comment('Статус квеста у пользователя');
             $table->string('name',255)->comment('название');
+            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
 			$table->softDeletes();
         });

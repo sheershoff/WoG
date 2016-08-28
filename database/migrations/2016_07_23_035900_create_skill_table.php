@@ -21,6 +21,8 @@ class CreateSkillTable extends Migration
             $table->foreign('currency_id')->references('id')->on('currencies')->onDelete('set null');
             $table->integer('parent_skill_id')->unsigned()->nullable()->comment('Родительский скил. Null - это root');
             $table->boolean('appoint')->default(1)->comment('Может назначаться пользователю');
+            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });
