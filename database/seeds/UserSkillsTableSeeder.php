@@ -14,9 +14,9 @@ class UserSkillsTableSeeder extends Seeder
     {
         
 
-        \DB::table('user_skills')->delete();
+        \DB::connection('pgsql')->table('user_skills')->delete();
         
         
-        
+    	
     }
 }

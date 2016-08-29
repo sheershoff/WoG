@@ -14,9 +14,9 @@ class MailTemplatesTableSeeder extends Seeder
     {
         
 
-        \DB::table('mail_templates')->delete();
+        \DB::connection('pgsql')->table('mail_templates')->delete();
         
-        \DB::table('mail_templates')->insert(array (
+        \DB::connection('pgsql')->table('mail_templates')->insert(array (
             0 => 
             array (
                 'id' => 1,
@@ -47,6 +47,6 @@ class MailTemplatesTableSeeder extends Seeder
             ),
         ));
         
-        
+    	
     }
 }

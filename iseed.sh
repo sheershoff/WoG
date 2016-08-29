@@ -1,30 +1,30 @@
-php artisan iseed organizations
-php artisan iseed jobs
-php artisan iseed user_quest_statuses
-php artisan iseed currency_types
-php artisan iseed roles
-php artisan iseed mail_aggs
-php artisan iseed pages
-php artisan iseed user_statuses
-php artisan iseed password_resets
-php artisan iseed users
-php artisan iseed robots
-php artisan iseed team_users
-php artisan iseed user_profiles
-php artisan iseed robots
-php artisan iseed quests
-php artisan iseed role_user
-php artisan iseed currencies
-php artisan iseed balances
-php artisan iseed skill_levels
-php artisan iseed skills
-php artisan iseed actions
-php artisan iseed commands
-php artisan iseed action_command
-php artisan iseed quest_depends
-php artisan iseed user_quests
-php artisan iseed action_currencies
-php artisan iseed mail_templates
-php artisan iseed action_transactions
-php artisan iseed currency_transactions
-php artisan iseed user_skills
+php artisan iseed organizations --force
+php artisan iseed jobs --force
+php artisan iseed user_quest_statuses --force
+php artisan iseed currency_types --force
+php artisan iseed roles --force
+php artisan iseed mail_aggs --force
+php artisan iseed pages --force
+php artisan iseed user_statuses --force
+php artisan iseed password_resets --force
+php artisan iseed users --force
+php artisan iseed robots --force
+php artisan iseed team_users --force
+php artisan iseed user_profiles --force
+php artisan iseed robots --force
+php artisan iseed quests --force
+php artisan iseed role_user --force
+php artisan iseed currencies --force
+php artisan iseed balances --force
+php artisan iseed skill_levels --force
+php artisan iseed skills --force
+php artisan iseed actions --force
+php artisan iseed commands --force
+php artisan iseed action_command --force
+php artisan iseed quest_depends --force
+php artisan iseed user_quests --force
+php artisan iseed action_currencies --force
+php artisan iseed mail_templates --force
+php artisan iseed action_transactions --force
+php artisan iseed currency_transactions --force
+php artisan iseed user_skills --force

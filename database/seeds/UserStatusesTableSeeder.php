@@ -14,9 +14,9 @@ class UserStatusesTableSeeder extends Seeder
     {
         
 
-        \DB::table('user_statuses')->delete();
+        \DB::connection('pgsql')->table('user_statuses')->delete();
         
-        \DB::table('user_statuses')->insert(array (
+        \DB::connection('pgsql')->table('user_statuses')->insert(array (
             0 => 
             array (
                 'id' => 1,
@@ -35,6 +35,6 @@ class UserStatusesTableSeeder extends Seeder
             ),
         ));
         
-        
+    	
     }
 }

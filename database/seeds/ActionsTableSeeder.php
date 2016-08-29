@@ -14,15 +14,16 @@ class ActionsTableSeeder extends Seeder
     {
         
 
-        \DB::table('actions')->delete();
+        \DB::connection('pgsql')->table('actions')->delete();
         
-        \DB::table('actions')->insert(array (
+        \DB::connection('pgsql')->table('actions')->insert(array (
             0 => 
             array (
                 'id' => 1,
                 'name' => 'Взятие квеста игроком',
                 'description' => '',
                 'quest_id' => 1,
+                'up_role_id' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -33,6 +34,7 @@ class ActionsTableSeeder extends Seeder
                 'name' => 'Выполнение квеста игроком',
                 'description' => '',
                 'quest_id' => 1,
+                'up_role_id' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -43,6 +45,7 @@ class ActionsTableSeeder extends Seeder
                 'name' => 'Взятие квеста Заполни профиль',
                 'description' => NULL,
                 'quest_id' => 2,
+                'up_role_id' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -53,6 +56,7 @@ class ActionsTableSeeder extends Seeder
                 'name' => 'Завершение квеста Заполни профиль',
                 'description' => NULL,
                 'quest_id' => 2,
+                'up_role_id' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -63,6 +67,7 @@ class ActionsTableSeeder extends Seeder
                 'name' => 'Маленькая крассная бутылка',
                 'description' => 'Увеличивает HP',
                 'quest_id' => 4,
+                'up_role_id' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -73,6 +78,7 @@ class ActionsTableSeeder extends Seeder
                 'name' => 'Средняя красная бутылка',
                 'description' => 'Увеличивает HP',
                 'quest_id' => 4,
+                'up_role_id' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -83,6 +89,7 @@ class ActionsTableSeeder extends Seeder
                 'name' => 'invite',
                 'description' => 'Можно пригласить друга в игру. Открывает квест - прокачай друга.',
                 'quest_id' => 4,
+                'up_role_id' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -93,12 +100,13 @@ class ActionsTableSeeder extends Seeder
                 'name' => 'Использовать',
                 'description' => 'маленькую красную',
                 'quest_id' => 5,
+                'up_role_id' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
         ));
         
-        
+    	
     }
 }

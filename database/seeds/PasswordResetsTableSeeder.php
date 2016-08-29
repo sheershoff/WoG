@@ -14,9 +14,9 @@ class PasswordResetsTableSeeder extends Seeder
     {
         
 
-        \DB::table('password_resets')->delete();
+        \DB::connection('pgsql')->table('password_resets')->delete();
         
         
-        
+    	
     }
 }

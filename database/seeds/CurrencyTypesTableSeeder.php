@@ -19,15 +19,6 @@ class CurrencyTypesTableSeeder extends Seeder
         \DB::connection('pgsql')->table('currency_types')->insert(array (
             0 => 
             array (
-                'id' => 1,
-                'name' => 'Карма',
-                'unit' => 'СуперМегаСпасибо',
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            1 => 
-            array (
                 'id' => 2,
                 'name' => 'Голда',
                 'unit' => 'Тугриков',
@@ -35,7 +26,7 @@ class CurrencyTypesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
+            1 => 
             array (
                 'id' => 10,
                 'name' => 'Рейтинг',
@@ -44,7 +35,7 @@ class CurrencyTypesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            3 => 
+            2 => 
             array (
                 'id' => 9,
                 'name' => 'Медаль',
@@ -53,7 +44,7 @@ class CurrencyTypesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            4 => 
+            3 => 
             array (
                 'id' => 4,
                 'name' => 'Шмот',
@@ -62,7 +53,7 @@ class CurrencyTypesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            5 => 
+            4 => 
             array (
                 'id' => 3,
                 'name' => 'Сноровка',
@@ -71,8 +62,35 @@ class CurrencyTypesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
+            5 => 
+            array (
+                'id' => 5,
+                'name' => 'Титул',
+                'unit' => 'восхищений',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            6 => 
+            array (
+                'id' => 6,
+                'name' => 'Достижения',
+                'unit' => '',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            7 => 
+            array (
+                'id' => 1,
+                'name' => 'Карма',
+                'unit' => 'СуперСпасибо',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
         ));
         
-        
+    	
     }
 }

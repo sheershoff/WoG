@@ -14,9 +14,9 @@ class CurrencyTransactionsTableSeeder extends Seeder
     {
         
 
-        \DB::table('currency_transactions')->delete();
+        \DB::connection('pgsql')->table('currency_transactions')->delete();
         
         
-        
+    	
     }
 }

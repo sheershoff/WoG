@@ -14,10 +14,31 @@ class UsersTableSeeder extends Seeder
     {
         
 
-        \DB::table('users')->delete();
+        \DB::connection('pgsql')->table('users')->delete();
         
-        \DB::table('users')->insert(array (
+        \DB::connection('pgsql')->table('users')->insert(array (
             0 => 
+            array (
+                'id' => 2,
+                'login' => 'vladimir.khonin',
+                'name' => 'Хонин Владимир Вячеславович',
+                'email' => 'vladimir.khonin@megafon.ru',
+                'password' => '$2y$10$mWEeFiZ5fsb6mepiNuVY9eNiSgky.TbpemRpVa0sjfZ2xjc7mzW4q',
+                'user_type' => 1,
+                'user_status_id' => 1,
+                'ext_login' => NULL,
+                'phone_number' => '+79226028866',
+                'tab_number' => NULL,
+                'description' => NULL,
+                'status' => NULL,
+                'mail_agg_id' => NULL,
+                'mail_hour' => NULL,
+                'remember_token' => 'inKhzxCAYmKql5yZ4B8IxOYf1FbNkVwRKtX2kjiJbMQaqhQAlhs1YBcLYGbI',
+                'created_at' => NULL,
+                'updated_at' => '2016-08-29 08:28:40',
+                'deleted_at' => NULL,
+            ),
+            1 => 
             array (
                 'id' => 4,
                 'login' => NULL,
@@ -31,29 +52,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
-                'mail_agg_id' => NULL,
-                'mail_hour' => NULL,
-                'remember_token' => NULL,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            1 => 
-            array (
-                'id' => 2,
-                'login' => 'Vladimir.Khonin',
-                'name' => 'Владимир Хонин',
-                'email' => 'Vladimir.Khonin@Megafon.ru',
-                'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
-                'user_type' => 1,
-                'user_status_id' => 1,
-                'ext_login' => NULL,
-                'phone_number' => NULL,
-                'tab_number' => NULL,
-                'description' => NULL,
-                'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -66,7 +64,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 10,
                 'login' => 'yuri.trigub',
                 'name' => 'Юрий Тригуб',
-                'email' => 'Yuri.Trigub@Megafon.ru',
+                'email' => 'yuri.trigub@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -75,7 +73,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -88,7 +85,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 20,
                 'login' => 'Vyacheslav.Sitnikov',
                 'name' => 'Вячеслав Ситников',
-                'email' => 'Vyacheslav.Sitnikov@Megafon.ru',
+                'email' => 'vyacheslav.sitnikov@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -97,7 +94,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => 'za2qHqX09fTnUnzCeJOLCojjVFAn6FfSu1GAvYWPjsyFpaLE4JmVtXK9ozSE',
@@ -110,7 +106,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 9,
                 'login' => 'alexey.y.zverev',
                 'name' => 'Алексей Зверев',
-                'email' => 'Alexey.Y.Zverev@Megafon.ru',
+                'email' => 'alexey.y.zverev@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -119,7 +115,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -132,7 +127,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 8,
                 'login' => 'yuri.tsay',
                 'name' => 'Юрий Цай',
-                'email' => 'Yuri.Tsay@Megafon.ru',
+                'email' => 'yuri.tsay@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -141,7 +136,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -154,7 +148,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 6,
                 'login' => 'sergey.kadilenko',
                 'name' => 'Сергей Кадиленко',
-                'email' => 'Sergey.Kadilenko@Megafon.ru',
+                'email' => 'sergey.kadilenko@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -163,7 +157,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -176,7 +169,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 5,
                 'login' => 'yuriy.berezin',
                 'name' => 'Юрий Березин',
-                'email' => 'Yuriy.Berezin@Megafon.ru',
+                'email' => 'yuriy.berezin@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -185,7 +178,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => '123456',
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -198,7 +190,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 3,
                 'login' => 'Anna.Protko',
                 'name' => 'Анна Протько',
-                'email' => 'Anna.Protko@Megafon.ru',
+                'email' => 'anna.protko@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -207,7 +199,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -220,7 +211,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 25,
                 'login' => 'alexander.fetisov',
                 'name' => 'Александр Фетисов',
-                'email' => 'Alexander.Fetisov@Megafon.ru',
+                'email' => 'alexander.fetisov@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -229,7 +220,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -242,7 +232,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 33,
                 'login' => 'eduard.pavlov',
                 'name' => 'Эдуард Павлов',
-                'email' => 'Eduard.Pavlov@Megafon.ru',
+                'email' => 'eduard.pavlov@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -251,7 +241,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -264,7 +253,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 34,
                 'login' => 'Fedor.Volokhin',
                 'name' => 'Федор Волохин',
-                'email' => 'Fedor.Volokhin@Megafon.ru',
+                'email' => 'fedor.volokhin@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -273,7 +262,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -286,7 +274,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 36,
                 'login' => 'Oleg.Skorobogaty',
                 'name' => 'Олег Скоробогатый',
-                'email' => 'Oleg.Skorobogaty@Megafon.ru',
+                'email' => 'oleg.skorobogaty@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -295,7 +283,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -308,7 +295,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 38,
                 'login' => 'egor.budrin',
                 'name' => 'Егор Будрин',
-                'email' => 'Egor.Budrin@Megafon.ru',
+                'email' => 'egor.budrin@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -317,7 +304,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -330,7 +316,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 40,
                 'login' => 'Denis.Sorokovik',
                 'name' => 'Денис Сороковик',
-                'email' => 'Denis.Sorokovik@Megafon.ru',
+                'email' => 'denis.sorokovik@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -339,7 +325,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -352,7 +337,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 43,
                 'login' => 'Evgeny.Beliakov',
                 'name' => 'Евгений Беляков',
-                'email' => 'Evgeny.Beliakov@Megafon.ru',
+                'email' => 'evgeny.beliakov@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -361,7 +346,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -374,7 +358,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 21,
                 'login' => 'Dmitriy.Orlov',
                 'name' => 'Дмитрий Орлов',
-                'email' => 'Dmitriy.Orlov@Billing.ru',
+                'email' => 'dmitriy.orlov@billing.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -383,7 +367,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -396,7 +379,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 16,
                 'login' => 'anton.khlevitsky',
                 'name' => 'Антон Хлевицкий',
-                'email' => 'Anton.Khlevitsky@Megafon.ru',
+                'email' => 'anton.khlevitsky@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -405,7 +388,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -418,7 +400,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 17,
                 'login' => 'nikolay.bagrov',
                 'name' => 'Николай Багров',
-                'email' => 'Nikolay.Bagrov@Megafon.ru',
+                'email' => 'nikolay.bagrov@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -427,7 +409,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -440,7 +421,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 18,
                 'login' => 'edgar.rubtsov',
                 'name' => 'Эдгар Рубцов',
-                'email' => 'Edgar.Rubtsov@Megafon.ru',
+                'email' => 'edgar.rubtsov@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -449,7 +430,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -462,7 +442,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 19,
                 'login' => 'dmitry.litokh',
                 'name' => 'Дмитрий Литох',
-                'email' => 'Dmitry.Litokh@Megafon.ru',
+                'email' => 'dmitry.litokh@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -471,7 +451,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -484,7 +463,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 22,
                 'login' => 'Egor.Mamontov',
                 'name' => 'Егор Мамонтов',
-                'email' => 'Egor.Mamontov@Billing.ru',
+                'email' => 'egor.mamontov@billing.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -493,7 +472,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -506,7 +484,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 23,
                 'login' => 'igor.a.romanov',
                 'name' => 'Игорь Романов',
-                'email' => 'Igor.A.Romanov@Megafon.ru',
+                'email' => 'igor.a.romanov@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -515,7 +493,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -528,7 +505,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 30,
                 'login' => 'alexander.a.grischenko',
                 'name' => 'Александр Грищенко',
-                'email' => 'Alexander.A.Grischenko@Megafon.ru',
+                'email' => 'alexander.a.grischenko@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -537,7 +514,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -550,7 +526,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 24,
                 'login' => 'Varvara.Pyatkova',
                 'name' => 'Варвара Пяткова',
-                'email' => 'Varvara.Pyatkova@Billing.ru',
+                'email' => 'varvara.pyatkova@billing.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -559,7 +535,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -572,7 +547,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 26,
                 'login' => 'Mikhail.Vysokolian',
                 'name' => 'Михаил Высоколян',
-                'email' => 'Mikhail.Vysokolian@Megafon.ru',
+                'email' => 'mikhail.vysokolian@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -581,7 +556,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -594,7 +568,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 27,
                 'login' => 'Alexander.Mikhaylov',
                 'name' => 'Александр Михайлов',
-                'email' => 'Alexander.Mikhaylov@Billing.ru',
+                'email' => 'alexander.mikhaylov@billing.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -603,7 +577,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -616,7 +589,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 32,
                 'login' => 'sergey.rzhevsky',
                 'name' => 'Сергей Ржевский',
-                'email' => 'Sergey.Rzhevsky@Megafon.ru',
+                'email' => 'sergey.rzhevsky@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -625,7 +598,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -638,7 +610,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 28,
                 'login' => 'sergey.grishaev',
                 'name' => 'Сергей Гришаев',
-                'email' => 'Sergey.Grishaev@Megafon.ru',
+                'email' => 'sergey.grishaev@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -647,7 +619,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -660,7 +631,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 35,
                 'login' => 'alexander.karpachev',
                 'name' => 'Александр Карпачев',
-                'email' => 'Alexander.Karpachev@Megafon.ru',
+                'email' => 'alexander.karpachev@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -669,7 +640,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -682,7 +652,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 37,
                 'login' => 'egor.kovalchuk',
                 'name' => 'Егор Ковальчук',
-                'email' => 'Egor.Kovalchuk@Megafon.ru',
+                'email' => 'egor.kovalchuk@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -691,7 +661,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -704,7 +673,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 39,
                 'login' => 'Alexey.Vyunnikov',
                 'name' => 'Алексей Вьюнников',
-                'email' => 'Alexey.Vyunnikov@Megafon.ru',
+                'email' => 'alexey.vyunnikov@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -713,7 +682,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -726,7 +694,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 42,
                 'login' => 'sergey.batin',
                 'name' => 'Сергей Батин',
-                'email' => 'Sergey.Batin@Megafon.ru',
+                'email' => 'sergey.batin@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -735,7 +703,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -748,7 +715,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 45,
                 'login' => 'Gennady.Martyushov',
                 'name' => 'Геннадий Мартюшов',
-                'email' => 'Gennady.Martyushov@Billing.ru',
+                'email' => 'gennady.martyushov@billing.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -757,7 +724,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -770,7 +736,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 49,
                 'login' => 'roman.pyatyshev',
                 'name' => 'Роман Пятышев',
-                'email' => 'Roman.Pyatyshev@Megafon.ru',
+                'email' => 'roman.pyatyshev@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -779,7 +745,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -792,7 +757,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 47,
                 'login' => 'Sergey.Semka',
                 'name' => 'Сергей Семка',
-                'email' => 'Sergey.Semka@Billing.ru',
+                'email' => 'sergey.semka@billing.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -801,7 +766,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -814,7 +778,7 @@ class UsersTableSeeder extends Seeder
                 'id' => 48,
                 'login' => 'Egor.Vershinin',
                 'name' => 'Егор Вершинин',
-                'email' => 'Egor.Vershinin@Billing.ru',
+                'email' => 'egor.vershinin@billing.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -823,7 +787,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -833,10 +796,10 @@ class UsersTableSeeder extends Seeder
             ),
             37 => 
             array (
-                'id' => 53,
-                'login' => 'mikhail.pavlov',
-                'name' => 'Михаил Павлов',
-                'email' => 'Mikhail.Pavlov@Megafon.ru',
+                'id' => 50,
+                'login' => 'denis.lykov',
+                'name' => 'Денис Лыков',
+                'email' => 'denis.lykov@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -845,7 +808,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -855,10 +817,10 @@ class UsersTableSeeder extends Seeder
             ),
             38 => 
             array (
-                'id' => 50,
-                'login' => 'denis.lykov',
-                'name' => 'Денис Лыков',
-                'email' => 'Denis.Lykov@Megafon.ru',
+                'id' => 52,
+                'login' => 'Valentin.Kovalchuk',
+                'name' => 'Валентин Ковальчук',
+                'email' => 'valentin.kovalchuk@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -867,7 +829,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -877,10 +838,10 @@ class UsersTableSeeder extends Seeder
             ),
             39 => 
             array (
-                'id' => 52,
-                'login' => 'Valentin.Kovalchuk',
-                'name' => 'Валентин Ковальчук',
-                'email' => 'Valentin.Kovalchuk@Megafon.ru',
+                'id' => 56,
+                'login' => 'sergey.gomzyakov',
+                'name' => 'Сергей Гомзяков',
+                'email' => 'sergey.gomzyakov@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -889,7 +850,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -898,28 +858,6 @@ class UsersTableSeeder extends Seeder
                 'deleted_at' => NULL,
             ),
             40 => 
-            array (
-                'id' => 56,
-                'login' => 'sergey.gomzyakov',
-                'name' => 'Сергей Гомзяков',
-                'email' => 'Sergey.Gomzyakov@Megafon.ru',
-                'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
-                'user_type' => 1,
-                'user_status_id' => 1,
-                'ext_login' => NULL,
-                'phone_number' => NULL,
-                'tab_number' => NULL,
-                'description' => NULL,
-                'status' => NULL,
-               
-                'mail_agg_id' => NULL,
-                'mail_hour' => NULL,
-                'remember_token' => NULL,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            41 => 
             array (
                 'id' => 58,
                 'login' => '',
@@ -933,7 +871,27 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
+                'mail_agg_id' => NULL,
+                'mail_hour' => NULL,
+                'remember_token' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            41 => 
+            array (
+                'id' => 54,
+                'login' => 'anna.y.aleshina',
+                'name' => 'Анна Алешина',
+                'email' => 'anna.y.aleshina@megafon.ru',
+                'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
+                'user_type' => 1,
+                'user_status_id' => 1,
+                'ext_login' => NULL,
+                'phone_number' => NULL,
+                'tab_number' => NULL,
+                'description' => NULL,
+                'status' => NULL,
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -943,10 +901,10 @@ class UsersTableSeeder extends Seeder
             ),
             42 => 
             array (
-                'id' => 54,
-                'login' => 'anna.y.aleshina',
-                'name' => 'Анна Алешина',
-                'email' => 'Anna.Y.Aleshina@Megafon.ru',
+                'id' => 55,
+                'login' => 'alexander.surkov',
+                'name' => 'Александр Сурков',
+                'email' => 'alexander.surkov@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -955,7 +913,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -965,10 +922,10 @@ class UsersTableSeeder extends Seeder
             ),
             43 => 
             array (
-                'id' => 55,
-                'login' => 'alexander.surkov',
-                'name' => 'Александр Сурков',
-                'email' => 'Alexander.Surkov@Megafon.ru',
+                'id' => 57,
+                'login' => 'yana.baranova',
+                'name' => 'Яна Баранова',
+                'email' => 'yana.baranova@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -977,7 +934,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -987,10 +943,10 @@ class UsersTableSeeder extends Seeder
             ),
             44 => 
             array (
-                'id' => 57,
-                'login' => 'yana.baranova',
-                'name' => 'Яна Баранова',
-                'email' => 'Yana.Baranova@Megafon.ru',
+                'id' => 59,
+                'login' => 'dmitry.v.tarasov',
+                'name' => 'Дмитрий Тарасов',
+                'email' => 'dmitry.v.tarasov@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -999,7 +955,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1009,10 +964,10 @@ class UsersTableSeeder extends Seeder
             ),
             45 => 
             array (
-                'id' => 59,
-                'login' => 'dmitry.v.tarasov',
-                'name' => 'Дмитрий Тарасов',
-                'email' => 'Dmitry.V.Tarasov@Megafon.ru',
+                'id' => 60,
+                'login' => 'ruslan.kazimukhometo',
+                'name' => 'Руслан Казимухометов',
+                'email' => 'ruslan.kazimukhometo@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -1021,7 +976,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1031,10 +985,10 @@ class UsersTableSeeder extends Seeder
             ),
             46 => 
             array (
-                'id' => 60,
-                'login' => 'ruslan.kazimukhometo',
-                'name' => 'Руслан Казимухометов',
-                'email' => 'Ruslan.Kazimukhometo@Megafon.ru',
+                'id' => 61,
+                'login' => 'artem.trikashny',
+                'name' => 'Артем Трикашный',
+                'email' => 'artem.trikashny@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -1043,7 +997,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1053,10 +1006,10 @@ class UsersTableSeeder extends Seeder
             ),
             47 => 
             array (
-                'id' => 61,
-                'login' => 'artem.trikashny',
-                'name' => 'Артем Трикашный',
-                'email' => 'Artem.Trikashny@Megafon.ru',
+                'id' => 62,
+                'login' => 'svetlana.a.kuznetsova',
+                'name' => 'Светлана Кузнецова',
+                'email' => 'svetlana.a.kuznetsova@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -1065,7 +1018,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1075,10 +1027,10 @@ class UsersTableSeeder extends Seeder
             ),
             48 => 
             array (
-                'id' => 62,
-                'login' => 'svetlana.a.kuznetsova',
-                'name' => 'Светлана Кузнецова',
-                'email' => 'Svetlana.A.Kuznetsova@Megafon.ru',
+                'id' => 63,
+                'login' => 'evgeny.fomenko',
+                'name' => 'Евгений Фоменко',
+                'email' => 'evgeny.fomenko@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -1087,7 +1039,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1097,10 +1048,10 @@ class UsersTableSeeder extends Seeder
             ),
             49 => 
             array (
-                'id' => 63,
-                'login' => 'evgeny.fomenko',
-                'name' => 'Евгений Фоменко',
-                'email' => 'Evgeny.Fomenko@Megafon.ru',
+                'id' => 64,
+                'login' => 'Irina.Imaykina',
+                'name' => 'Ирина Имайкина',
+                'email' => 'irina.imaykina@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -1109,7 +1060,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1119,10 +1069,10 @@ class UsersTableSeeder extends Seeder
             ),
             50 => 
             array (
-                'id' => 64,
-                'login' => 'Irina.Imaykina',
-                'name' => 'Ирина Имайкина',
-                'email' => 'Irina.Imaykina@Megafon.ru',
+                'id' => 65,
+                'login' => 'grigory.osipenkov',
+                'name' => 'Григорий Осипенков',
+                'email' => 'grigory.osipenkov@megafon.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -1131,7 +1081,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1140,28 +1089,6 @@ class UsersTableSeeder extends Seeder
                 'deleted_at' => NULL,
             ),
             51 => 
-            array (
-                'id' => 65,
-                'login' => 'grigory.osipenkov',
-                'name' => 'Григорий Осипенков',
-                'email' => 'Grigory.Osipenkov@Megafon.ru',
-                'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
-                'user_type' => 1,
-                'user_status_id' => 1,
-                'ext_login' => NULL,
-                'phone_number' => NULL,
-                'tab_number' => NULL,
-                'description' => NULL,
-                'status' => NULL,
-               
-                'mail_agg_id' => NULL,
-                'mail_hour' => NULL,
-                'remember_token' => NULL,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            52 => 
             array (
                 'id' => 66,
                 'login' => NULL,
@@ -1175,7 +1102,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1183,7 +1109,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            53 => 
+            52 => 
             array (
                 'id' => 67,
                 'login' => NULL,
@@ -1197,7 +1123,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1205,7 +1130,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            54 => 
+            53 => 
             array (
                 'id' => 68,
                 'login' => NULL,
@@ -1219,7 +1144,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1227,34 +1151,12 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            55 => 
-            array (
-                'id' => 7,
-                'login' => 'ruslan.revel',
-                'name' => 'Руслан Ревель',
-                'email' => 'Ruslan.Revel@Megafon.ru',
-                'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
-                'user_type' => 1,
-                'user_status_id' => 1,
-                'ext_login' => NULL,
-                'phone_number' => '9247274966',
-                'tab_number' => NULL,
-                'description' => NULL,
-                'status' => NULL,
-               
-                'mail_agg_id' => NULL,
-                'mail_hour' => NULL,
-                'remember_token' => NULL,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            56 => 
+            54 => 
             array (
                 'id' => 69,
                 'login' => NULL,
                 'name' => 'Vyuacheslav',
-                'email' => 'Vyacjeslav.Sitnikov@Megafon.ru',
+                'email' => 'vyacjeslav.sitnikov@megafon.ru',
                 'password' => '$2y$10$mkVLQ69UWlfPeu933N2ceu.wJLbTtDTJzTpRHfO.NCe4SAv5YpYL6',
                 'user_type' => 1,
                 'user_status_id' => 1,
@@ -1263,7 +1165,6 @@ class UsersTableSeeder extends Seeder
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
-               
                 'mail_agg_id' => NULL,
                 'mail_hour' => NULL,
                 'remember_token' => NULL,
@@ -1271,8 +1172,50 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => '2016-07-30 08:43:50',
                 'deleted_at' => NULL,
             ),
+            55 => 
+            array (
+                'id' => 53,
+                'login' => 'mikhail.pavlov',
+                'name' => 'Павлов Михаил Аркадьевич',
+                'email' => 'mikhail.pavlov@megafon.ru',
+                'password' => '$2y$10$j.7vPJCCCd.jgMPG9GRS7OpkvtafNKGLydZv6hilHnH6xnKoM.oJq',
+                'user_type' => 1,
+                'user_status_id' => 1,
+                'ext_login' => NULL,
+                'phone_number' => '+79990778197',
+                'tab_number' => NULL,
+                'description' => NULL,
+                'status' => NULL,
+                'mail_agg_id' => NULL,
+                'mail_hour' => NULL,
+                'remember_token' => 'p8WuEyEdfhCcN1AMl0MstEiCbToMwclcEwEWlWCIlmWZEMVIC6Fo6cG9GZlD',
+                'created_at' => NULL,
+                'updated_at' => '2016-08-26 09:07:31',
+                'deleted_at' => NULL,
+            ),
+            56 => 
+            array (
+                'id' => 7,
+                'login' => 'ruslan.revel',
+                'name' => 'Ревель Руслан Сергеевич',
+                'email' => 'ruslan.revel@megafon.ru',
+                'password' => '$2y$10$wk1p3xkIK6PwLWsbJ1VZcuw7V0HETAcFHUR8wDD.AtyTpl0CaIkBe',
+                'user_type' => 1,
+                'user_status_id' => 1,
+                'ext_login' => NULL,
+            'phone_number' => '+7 (924) 426-6193',
+                'tab_number' => NULL,
+                'description' => NULL,
+                'status' => NULL,
+                'mail_agg_id' => NULL,
+                'mail_hour' => NULL,
+                'remember_token' => 'HV3XJ3HRbv5LARVv8DufibxvVzfEijXrqD09ebMm7UR5t1pwFExQmffaX46P',
+                'created_at' => NULL,
+                'updated_at' => '2016-08-24 04:40:18',
+                'deleted_at' => NULL,
+            ),
         ));
         
-        
+    	
     }
 }

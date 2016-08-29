@@ -14,9 +14,9 @@ class ActionTransactionsTableSeeder extends Seeder
     {
         
 
-        \DB::table('action_transactions')->delete();
+        \DB::connection('pgsql')->table('action_transactions')->delete();
         
-        \DB::table('action_transactions')->insert(array (
+        \DB::connection('pgsql')->table('action_transactions')->insert(array (
             0 => 
             array (
                 'id' => 2,
@@ -52,6 +52,6 @@ class ActionTransactionsTableSeeder extends Seeder
             ),
         ));
         
-        
+    	
     }
 }

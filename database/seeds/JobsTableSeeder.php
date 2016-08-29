@@ -14,9 +14,9 @@ class JobsTableSeeder extends Seeder
     {
         
 
-        \DB::table('jobs')->delete();
+        \DB::connection('pgsql')->table('jobs')->delete();
         
         
-        
+    	
     }
 }

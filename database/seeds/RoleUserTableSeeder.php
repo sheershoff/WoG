@@ -14,19 +14,10 @@ class RoleUserTableSeeder extends Seeder
     {
         
 
-        \DB::table('role_user')->delete();
+        \DB::connection('pgsql')->table('role_user')->delete();
         
-        \DB::table('role_user')->insert(array (
+        \DB::connection('pgsql')->table('role_user')->insert(array (
             0 => 
-            array (
-                'id' => 1,
-                'role_id' => 4,
-                'user_id' => 2,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            1 => 
             array (
                 'id' => 2,
                 'role_id' => 3,
@@ -35,16 +26,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
-            array (
-                'id' => 3,
-                'role_id' => 2,
-                'user_id' => 7,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            3 => 
+            1 => 
             array (
                 'id' => 4,
                 'role_id' => 3,
@@ -53,7 +35,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            4 => 
+            2 => 
             array (
                 'id' => 5,
                 'role_id' => 2,
@@ -62,7 +44,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            5 => 
+            3 => 
             array (
                 'id' => 6,
                 'role_id' => 2,
@@ -71,7 +53,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            6 => 
+            4 => 
             array (
                 'id' => 7,
                 'role_id' => 2,
@@ -80,7 +62,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            7 => 
+            5 => 
             array (
                 'id' => 335,
                 'role_id' => 2,
@@ -89,7 +71,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            8 => 
+            6 => 
             array (
                 'id' => 336,
                 'role_id' => 2,
@@ -98,7 +80,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            9 => 
+            7 => 
             array (
                 'id' => 337,
                 'role_id' => 2,
@@ -107,7 +89,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            10 => 
+            8 => 
             array (
                 'id' => 338,
                 'role_id' => 2,
@@ -116,7 +98,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            11 => 
+            9 => 
             array (
                 'id' => 339,
                 'role_id' => 2,
@@ -125,7 +107,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            12 => 
+            10 => 
             array (
                 'id' => 340,
                 'role_id' => 2,
@@ -134,7 +116,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            13 => 
+            11 => 
             array (
                 'id' => 341,
                 'role_id' => 2,
@@ -143,7 +125,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            14 => 
+            12 => 
             array (
                 'id' => 342,
                 'role_id' => 2,
@@ -152,7 +134,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            15 => 
+            13 => 
             array (
                 'id' => 343,
                 'role_id' => 2,
@@ -161,7 +143,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            16 => 
+            14 => 
             array (
                 'id' => 344,
                 'role_id' => 2,
@@ -170,7 +152,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            17 => 
+            15 => 
             array (
                 'id' => 345,
                 'role_id' => 2,
@@ -179,7 +161,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            18 => 
+            16 => 
             array (
                 'id' => 346,
                 'role_id' => 2,
@@ -188,7 +170,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            19 => 
+            17 => 
             array (
                 'id' => 347,
                 'role_id' => 2,
@@ -197,7 +179,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            20 => 
+            18 => 
             array (
                 'id' => 348,
                 'role_id' => 2,
@@ -206,7 +188,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            21 => 
+            19 => 
             array (
                 'id' => 349,
                 'role_id' => 2,
@@ -215,7 +197,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            22 => 
+            20 => 
             array (
                 'id' => 350,
                 'role_id' => 2,
@@ -224,7 +206,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            23 => 
+            21 => 
             array (
                 'id' => 351,
                 'role_id' => 2,
@@ -233,7 +215,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            24 => 
+            22 => 
             array (
                 'id' => 352,
                 'role_id' => 2,
@@ -242,7 +224,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            25 => 
+            23 => 
             array (
                 'id' => 353,
                 'role_id' => 2,
@@ -251,7 +233,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            26 => 
+            24 => 
             array (
                 'id' => 354,
                 'role_id' => 2,
@@ -260,7 +242,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            27 => 
+            25 => 
             array (
                 'id' => 355,
                 'role_id' => 2,
@@ -269,7 +251,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            28 => 
+            26 => 
             array (
                 'id' => 356,
                 'role_id' => 2,
@@ -278,7 +260,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            29 => 
+            27 => 
             array (
                 'id' => 357,
                 'role_id' => 2,
@@ -287,7 +269,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            30 => 
+            28 => 
             array (
                 'id' => 358,
                 'role_id' => 2,
@@ -296,7 +278,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            31 => 
+            29 => 
             array (
                 'id' => 359,
                 'role_id' => 2,
@@ -305,7 +287,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            32 => 
+            30 => 
             array (
                 'id' => 360,
                 'role_id' => 2,
@@ -314,7 +296,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            33 => 
+            31 => 
             array (
                 'id' => 361,
                 'role_id' => 2,
@@ -323,7 +305,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            34 => 
+            32 => 
             array (
                 'id' => 362,
                 'role_id' => 2,
@@ -332,7 +314,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            35 => 
+            33 => 
             array (
                 'id' => 363,
                 'role_id' => 2,
@@ -341,7 +323,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            36 => 
+            34 => 
             array (
                 'id' => 364,
                 'role_id' => 2,
@@ -350,7 +332,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            37 => 
+            35 => 
             array (
                 'id' => 365,
                 'role_id' => 2,
@@ -359,7 +341,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            38 => 
+            36 => 
             array (
                 'id' => 366,
                 'role_id' => 2,
@@ -368,7 +350,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            39 => 
+            37 => 
             array (
                 'id' => 367,
                 'role_id' => 2,
@@ -377,16 +359,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            40 => 
-            array (
-                'id' => 368,
-                'role_id' => 2,
-                'user_id' => 53,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            41 => 
+            38 => 
             array (
                 'id' => 369,
                 'role_id' => 2,
@@ -395,7 +368,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            42 => 
+            39 => 
             array (
                 'id' => 370,
                 'role_id' => 2,
@@ -404,7 +377,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            43 => 
+            40 => 
             array (
                 'id' => 371,
                 'role_id' => 2,
@@ -413,7 +386,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            44 => 
+            41 => 
             array (
                 'id' => 372,
                 'role_id' => 2,
@@ -422,7 +395,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            45 => 
+            42 => 
             array (
                 'id' => 373,
                 'role_id' => 2,
@@ -431,7 +404,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            46 => 
+            43 => 
             array (
                 'id' => 374,
                 'role_id' => 2,
@@ -440,7 +413,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            47 => 
+            44 => 
             array (
                 'id' => 375,
                 'role_id' => 2,
@@ -449,7 +422,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            48 => 
+            45 => 
             array (
                 'id' => 376,
                 'role_id' => 2,
@@ -458,7 +431,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            49 => 
+            46 => 
             array (
                 'id' => 377,
                 'role_id' => 2,
@@ -467,7 +440,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            50 => 
+            47 => 
             array (
                 'id' => 378,
                 'role_id' => 2,
@@ -476,7 +449,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            51 => 
+            48 => 
             array (
                 'id' => 379,
                 'role_id' => 2,
@@ -485,8 +458,35 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
+            49 => 
+            array (
+                'id' => 382,
+                'role_id' => -2,
+                'user_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            50 => 
+            array (
+                'id' => 383,
+                'role_id' => -2,
+                'user_id' => 7,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            51 => 
+            array (
+                'id' => 384,
+                'role_id' => -2,
+                'user_id' => 53,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
         ));
         
-        
+    	
     }
 }

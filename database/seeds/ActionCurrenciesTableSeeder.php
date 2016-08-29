@@ -14,9 +14,9 @@ class ActionCurrenciesTableSeeder extends Seeder
     {
         
 
-        \DB::table('action_currencies')->delete();
+        \DB::connection('pgsql')->table('action_currencies')->delete();
         
-        \DB::table('action_currencies')->insert(array (
+        \DB::connection('pgsql')->table('action_currencies')->insert(array (
             0 => 
             array (
                 'id' => 2,
@@ -71,6 +71,6 @@ class ActionCurrenciesTableSeeder extends Seeder
             ),
         ));
         
-        
+    	
     }
 }

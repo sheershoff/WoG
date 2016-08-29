@@ -67,8 +67,18 @@ class RobotsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
+            5 => 
+            array (
+                'id' => 7,
+                'name' => 'Инвентарь',
+                'description' => 'Активация элементов в инвентаре',
+                'user_id' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
         ));
         
-        
+    	
     }
 }

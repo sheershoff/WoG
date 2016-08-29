@@ -1405,6 +1405,6 @@ class BalancesTableSeeder extends Seeder
             ),
         ));
         
-        
+    	
     }
 }

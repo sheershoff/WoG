@@ -61,48 +61,6 @@ class CurrenciesTableSeeder extends Seeder
             ),
             3 => 
             array (
-                'id' => 8,
-                'name' => '1й CLM',
-                'description' => '1й CLM создан',
-                'function' => NULL,
-                'options' => NULL,
-                'top_menu' => false,
-                'role_id' => 1,
-                'currency_type_id' => 9,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            4 => 
-            array (
-                'id' => 9,
-                'name' => '100 CLM ',
-                'description' => 'Создано 100 CLM. Ты набираешь обороты!',
-                'function' => NULL,
-                'options' => NULL,
-                'top_menu' => false,
-                'role_id' => 1,
-                'currency_type_id' => 9,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            5 => 
-            array (
-                'id' => 10,
-                'name' => '1000 CLM',
-                'description' => 'Не бывалый рекорд!',
-                'function' => NULL,
-                'options' => NULL,
-                'top_menu' => false,
-                'role_id' => 1,
-                'currency_type_id' => 9,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            6 => 
-            array (
                 'id' => 5,
                 'name' => 'HP',
                 'description' => 'Уровень жизни. Следи за ним - как только он будет равен нулю - твои действия в игре будут заблокированы.',
@@ -115,7 +73,7 @@ class CurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            7 => 
+            4 => 
             array (
                 'id' => 7,
                 'name' => 'Live',
@@ -129,7 +87,7 @@ class CurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            8 => 
+            5 => 
             array (
                 'id' => 11,
                 'name' => 'Хакатон 2016',
@@ -143,7 +101,7 @@ class CurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            9 => 
+            6 => 
             array (
                 'id' => 12,
                 'name' => 'ЕБ 2015-12-15',
@@ -157,7 +115,7 @@ class CurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            10 => 
+            7 => 
             array (
                 'id' => 13,
                 'name' => 'Mana',
@@ -171,7 +129,7 @@ class CurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            11 => 
+            8 => 
             array (
                 'id' => 14,
                 'name' => 'Маленькая красная бутылка',
@@ -185,7 +143,7 @@ class CurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            12 => 
+            9 => 
             array (
                 'id' => 15,
                 'name' => 'Средняя красная бутылка',
@@ -199,7 +157,7 @@ class CurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            13 => 
+            10 => 
             array (
                 'id' => 16,
                 'name' => 'Большая красная бутылка',
@@ -213,7 +171,7 @@ class CurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            14 => 
+            11 => 
             array (
                 'id' => 17,
                 'name' => 'Baddy',
@@ -227,7 +185,7 @@ class CurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            15 => 
+            12 => 
             array (
                 'id' => 1,
                 'name' => 'invite',
@@ -241,8 +199,135 @@ class CurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
+            13 => 
+            array (
+                'id' => 8,
+                'name' => '1й CLM',
+                'description' => '1й CLM создан',
+                'function' => NULL,
+                'options' => NULL,
+                'top_menu' => false,
+                'role_id' => 1,
+                'currency_type_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            14 => 
+            array (
+                'id' => 9,
+                'name' => '100 CLM ',
+                'description' => 'Создано 100 CLM. Ты набираешь обороты!',
+                'function' => NULL,
+                'options' => NULL,
+                'top_menu' => false,
+                'role_id' => 1,
+                'currency_type_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            15 => 
+            array (
+                'id' => 10,
+                'name' => '1000 CLM',
+                'description' => 'Не бывалый рекорд!',
+                'function' => NULL,
+                'options' => NULL,
+                'top_menu' => false,
+                'role_id' => 1,
+                'currency_type_id' => 6,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            16 => 
+            array (
+                'id' => 778,
+                'name' => 'RaidTeamBonus',
+                'description' => 'Командные бонусы за выполненый рейд',
+                'function' => NULL,
+                'options' => NULL,
+                'top_menu' => false,
+                'role_id' => 4,
+                'currency_type_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            17 => 
+            array (
+                'id' => 779,
+                'name' => 'Карма очки',
+                'description' => 'Очки для распределения. Скидываются в стартовое положение ежемесячно.',
+                'function' => NULL,
+                'options' => NULL,
+                'top_menu' => false,
+                'role_id' => 8,
+                'currency_type_id' => 1,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            18 => 
+            array (
+                'id' => 777,
+                'name' => 'Эксперт',
+                'description' => 'Вас признали как эксперта. Вопрос, в чём?',
+                'function' => NULL,
+                'options' => NULL,
+                'top_menu' => false,
+                'role_id' => 12,
+                'currency_type_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            19 => 
+            array (
+                'id' => 775,
+                'name' => 'Рядовой',
+                'description' => NULL,
+                'function' => NULL,
+                'options' => NULL,
+                'top_menu' => false,
+                'role_id' => 12,
+                'currency_type_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            20 => 
+            array (
+                'id' => 776,
+                'name' => 'Командир',
+                'description' => NULL,
+                'function' => NULL,
+                'options' => NULL,
+                'top_menu' => false,
+                'role_id' => 12,
+                'currency_type_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            21 => 
+            array (
+                'id' => 774,
+                'name' => 'Дух',
+                'description' => 'Вы получили всой первый титул!
+Поздравляем!',
+                'function' => NULL,
+                'options' => NULL,
+                'top_menu' => false,
+                'role_id' => 12,
+                'currency_type_id' => 5,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
         ));
         
-        
+    	
     }
 }

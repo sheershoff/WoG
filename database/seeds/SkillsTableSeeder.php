@@ -14,75 +14,10 @@ class SkillsTableSeeder extends Seeder
     {
         
 
-        \DB::table('skills')->delete();
+        \DB::connection('pgsql')->table('skills')->delete();
         
-        \DB::table('skills')->insert(array (
+        \DB::connection('pgsql')->table('skills')->insert(array (
             0 => 
-            array (
-                'id' => 1,
-                'name' => 'Спикер',
-                'description' => 'Навык красиво говорить',
-                'options' => NULL,
-                'currency_id' => 6,
-                'parent_skill_id' => NULL,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            1 => 
-            array (
-                'id' => 4,
-                'name' => 'Слушатель',
-                'description' => 'Навык внимательно слушать и не перебивать',
-                'options' => NULL,
-                'currency_id' => 6,
-                'parent_skill_id' => NULL,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            2 => 
-            array (
-                'id' => 5,
-                'name' => 'Powerpoint',
-                'description' => 'Навык красиво рисовать презентации',
-                'options' => NULL,
-                'currency_id' => 6,
-                'parent_skill_id' => NULL,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            3 => 
-            array (
-                'id' => 6,
-                'name' => ' Бэкэнд',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => 6,
-                'parent_skill_id' => NULL,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            4 => 
-            array (
-                'id' => 8,
-                'name' => 'Фронтэнд',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => 6,
-                'parent_skill_id' => NULL,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            5 => 
             array (
                 'id' => 10,
                 'name' => 'Направления работы',
@@ -95,7 +30,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            6 => 
+            1 => 
             array (
                 'id' => 11,
             'name' => 'Управление (людьми)',
@@ -108,7 +43,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            7 => 
+            2 => 
             array (
                 'id' => 12,
                 'name' => 'it',
@@ -121,7 +56,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            8 => 
+            3 => 
             array (
                 'id' => 13,
                 'name' => 'Техническая постановка',
@@ -134,7 +69,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            9 => 
+            4 => 
             array (
                 'id' => 14,
                 'name' => 'Техническая координация',
@@ -147,7 +82,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            10 => 
+            5 => 
             array (
                 'id' => 15,
                 'name' => 'Тестирование',
@@ -160,85 +95,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            11 => 
-            array (
-                'id' => 16,
-                'name' => 'Сопровождение',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 12,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            12 => 
-            array (
-                'id' => 17,
-                'name' => 'Руководство проектом',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 12,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            13 => 
-            array (
-                'id' => 18,
-                'name' => 'Разработка',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 12,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            14 => 
-            array (
-                'id' => 19,
-                'name' => 'Документирование',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 12,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            15 => 
-            array (
-                'id' => 20,
-                'name' => 'Проектирование архитектуры',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 12,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            16 => 
-            array (
-                'id' => 21,
-                'name' => 'Проектирование UI',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 12,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            17 => 
+            6 => 
             array (
                 'id' => 22,
                 'name' => 'Внедрение',
@@ -251,2867 +108,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            18 => 
-            array (
-                'id' => 23,
-                'name' => 'Бизнес-анализ, управление требованиями',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 12,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            19 => 
-            array (
-                'id' => 24,
-                'name' => 'Автоматизированное тестирование',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 12,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            20 => 
-            array (
-                'id' => 25,
-                'name' => 'Oracle DBA',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 12,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            21 => 
-            array (
-                'id' => 26,
-                'name' => 'Продажи',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 10,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            22 => 
-            array (
-                'id' => 27,
-                'name' => 'Обучение',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 10,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            23 => 
-            array (
-                'id' => 28,
-                'name' => 'Маркетинг',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 10,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            24 => 
-            array (
-                'id' => 29,
-                'name' => 'личностные навыки',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => NULL,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            25 => 
-            array (
-                'id' => 30,
-                'name' => 'Решение стратегических задач',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 29,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            26 => 
-            array (
-                'id' => 31,
-                'name' => 'Аналитическое мышление',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 29,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            27 => 
-            array (
-                'id' => 32,
-                'name' => 'Инициативность',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 29,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            28 => 
-            array (
-                'id' => 33,
-            'name' => 'Умение искать ошибки (может как-то перефразировать)',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 29,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            29 => 
-            array (
-                'id' => 34,
-                'name' => 'Ответственность',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 29,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            30 => 
-            array (
-                'id' => 35,
-                'name' => 'Выполнение задач в срок',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 29,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            31 => 
-            array (
-                'id' => 36,
-                'name' => 'Достижение результата',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 29,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            32 => 
-            array (
-                'id' => 37,
-                'name' => 'Стремление к развитию',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 29,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            33 => 
-            array (
-                'id' => 38,
-                'name' => 'Работа в команде',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 29,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            34 => 
-            array (
-                'id' => 39,
-                'name' => 'IT технологии',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => NULL,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            35 => 
-            array (
-                'id' => 40,
-                'name' => 'Continuous Delivery',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            36 => 
-            array (
-                'id' => 41,
-                'name' => 'Puppet',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 40,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            37 => 
-            array (
-                'id' => 42,
-                'name' => 'Docker',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 40,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            38 => 
-            array (
-                'id' => 43,
-                'name' => 'Chef',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 40,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            39 => 
-            array (
-                'id' => 44,
-                'name' => 'Ansible',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 40,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            40 => 
-            array (
-                'id' => 45,
-                'name' => 'Cервера приложений',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            41 => 
-            array (
-                'id' => 46,
-                'name' => 'WebLogic',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 45,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            42 => 
-            array (
-                'id' => 47,
-                'name' => 'Tomcat',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 45,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            43 => 
-            array (
-                'id' => 48,
-                'name' => 'OC4J',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 45,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            44 => 
-            array (
-                'id' => 49,
-                'name' => 'Jetty',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 45,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            45 => 
-            array (
-                'id' => 50,
-                'name' => 'Glassfish',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 45,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            46 => 
-            array (
-                'id' => 51,
-                'name' => 'Java technology',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            47 => 
-            array (
-                'id' => 52,
-                'name' => 'Vaadin',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 51,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            48 => 
-            array (
-                'id' => 53,
-                'name' => 'Spring mvc',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 51,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            49 => 
-            array (
-                'id' => 54,
-                'name' => 'Spring core',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 51,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            50 => 
-            array (
-                'id' => 55,
-                'name' => 'Servlets',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 51,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            51 => 
-            array (
-                'id' => 56,
-                'name' => 'RMI',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 51,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            52 => 
-            array (
-                'id' => 57,
-                'name' => 'MyBatis',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 51,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            53 => 
-            array (
-                'id' => 58,
-                'name' => 'JSP',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 51,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            54 => 
-            array (
-                'id' => 59,
-                'name' => 'JSF=',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 51,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            55 => 
-            array (
-                'id' => 60,
-                'name' => 'JNI',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 51,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            56 => 
-            array (
-                'id' => 61,
-                'name' => 'JMS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 51,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            57 => 
-            array (
-                'id' => 62,
-                'name' => 'JAX-WS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 51,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            58 => 
-            array (
-                'id' => 63,
-                'name' => 'JAX-RS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 51,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            59 => 
-            array (
-                'id' => 64,
-                'name' => 'JAXB,JNDI',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 51,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            60 => 
-            array (
-                'id' => 65,
-                'name' => 'J2SE',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 51,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            61 => 
-            array (
-                'id' => 66,
-                'name' => 'EJB',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 51,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            62 => 
-            array (
-                'id' => 67,
-                'name' => 'Message Queues',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            63 => 
-            array (
-                'id' => 68,
-                'name' => 'RabbitMQ',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 67,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            64 => 
-            array (
-                'id' => 69,
-                'name' => 'OracleAQ',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 67,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            65 => 
-            array (
-                'id' => 70,
-                'name' => 'ØMQ',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 67,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            66 => 
-            array (
-                'id' => 71,
-                'name' => 'Technology',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            67 => 
-            array (
-                'id' => 72,
-                'name' => 'Шаблоны программирования',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 71,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            68 => 
-            array (
-                'id' => 73,
-                'name' => 'Регулярные выражения',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 71,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            69 => 
-            array (
-                'id' => 74,
-                'name' => 'Распределённые вычисления',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 71,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            70 => 
-            array (
-                'id' => 75,
-                'name' => 'Разработка компиляторов',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 71,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            71 => 
-            array (
-                'id' => 76,
-                'name' => 'Парсеры грамматик',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 71,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            72 => 
-            array (
-                'id' => 77,
-                'name' => 'Метапрограммирование',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 71,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            73 => 
-            array (
-                'id' => 78,
-                'name' => 'Кросс-платформенное программирование',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 71,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            74 => 
-            array (
-                'id' => 79,
-                'name' => 'Балансирование нагрузки',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 71,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            75 => 
-            array (
-                'id' => 80,
-                'name' => 'Machine Learning',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 71,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            76 => 
-            array (
-                'id' => 81,
-                'name' => 'High Load',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 71,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            77 => 
-            array (
-                'id' => 82,
-                'name' => 'High Availability',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 71,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            78 => 
-            array (
-                'id' => 83,
-                'name' => 'DSL',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 71,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            79 => 
-            array (
-                'id' => 84,
-                'name' => 'Web technology',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            80 => 
-            array (
-                'id' => 85,
-                'name' => 'XSLT',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 84,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            81 => 
-            array (
-                'id' => 86,
-                'name' => 'XML',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 84,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            82 => 
-            array (
-                'id' => 87,
-                'name' => 'Websockets',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 84,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            83 => 
-            array (
-                'id' => 88,
-                'name' => 'Web Security Practices',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 84,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            84 => 
-            array (
-                'id' => 89,
-                'name' => 'REST',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 84,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            85 => 
-            array (
-                'id' => 90,
-                'name' => 'JQuery',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 84,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            86 => 
-            array (
-                'id' => 91,
-                'name' => 'HTML5',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 84,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            87 => 
-            array (
-                'id' => 92,
-                'name' => 'HTML',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 84,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            88 => 
-            array (
-                'id' => 93,
-                'name' => 'CSS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 84,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            89 => 
-            array (
-                'id' => 94,
-                'name' => 'Comet',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 84,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            90 => 
-            array (
-                'id' => 95,
-                'name' => 'Ajax',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 84,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            91 => 
-            array (
-                'id' => 96,
-                'name' => 'Базы данных',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            92 => 
-            array (
-                'id' => 97,
-                'name' => 'Redis',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 96,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            93 => 
-            array (
-                'id' => 98,
-                'name' => 'PostgreSQL',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 96,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            94 => 
-            array (
-                'id' => 99,
-                'name' => 'Oracle',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 96,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            95 => 
-            array (
-                'id' => 100,
-                'name' => 'Neo4J',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 96,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            96 => 
-            array (
-                'id' => 101,
-                'name' => 'MySql Cluster',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 96,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            97 => 
-            array (
-                'id' => 102,
-            'name' => 'MySQL (MariaDB)',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 96,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            98 => 
-            array (
-                'id' => 103,
-                'name' => 'MySQL',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 96,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            99 => 
-            array (
-                'id' => 104,
-                'name' => 'LevelDB',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 96,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            100 => 
-            array (
-                'id' => 105,
-                'name' => 'Hadoop',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 96,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            101 => 
-            array (
-                'id' => 106,
-                'name' => 'Couchbase',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 96,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            102 => 
-            array (
-                'id' => 107,
-                'name' => 'Cassandra',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 96,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            103 => 
-            array (
-                'id' => 108,
-                'name' => 'Безопасность',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            104 => 
-            array (
-                'id' => 109,
-                'name' => 'Шифрование',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 108,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            105 => 
-            array (
-                'id' => 110,
-                'name' => 'Безопасность данных в Web',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 108,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            106 => 
-            array (
-                'id' => 111,
-                'name' => 'SSO',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 108,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            107 => 
-            array (
-                'id' => 112,
-                'name' => 'OAuth',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 108,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            108 => 
-            array (
-                'id' => 113,
-                'name' => 'Kerberos',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 108,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            109 => 
-            array (
-                'id' => 114,
-                'name' => 'Библиотеки',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            110 => 
-            array (
-                'id' => 115,
-                'name' => 'STL',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 114,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            111 => 
-            array (
-                'id' => 116,
-                'name' => 'Boost',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 114,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            112 => 
-            array (
-                'id' => 117,
-                'name' => 'Графический дизайн',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            113 => 
-            array (
-                'id' => 118,
-                'name' => 'Цветокоррекция и ретушь',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 117,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            114 => 
-            array (
-                'id' => 119,
-                'name' => 'Создание иллюстраций',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 117,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            115 => 
-            array (
-                'id' => 120,
-                'name' => 'Разработка шрифтов и каллиграфия',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 117,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            116 => 
-            array (
-                'id' => 121,
-                'name' => 'Разработка фирменного стиля',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 117,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            117 => 
-            array (
-                'id' => 122,
-                'name' => 'Разработка пиктограмм',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 117,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            118 => 
-            array (
-                'id' => 123,
-                'name' => 'Предпечатная подготовка',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 117,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            119 => 
-            array (
-                'id' => 124,
-                'name' => 'Верстка полиграфической продукции',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 117,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            120 => 
-            array (
-                'id' => 125,
-                'name' => 'Flash-анимация',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 117,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            121 => 
-            array (
-                'id' => 126,
-                'name' => '3D-графика',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 117,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            122 => 
-            array (
-                'id' => 127,
-                'name' => 'Инструментарий для аналитиков и архитекторов',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            123 => 
-            array (
-                'id' => 128,
-                'name' => 'UML',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 127,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            124 => 
-            array (
-                'id' => 129,
-                'name' => 'RUP',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 127,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            125 => 
-            array (
-                'id' => 130,
-                'name' => 'IDEF',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 127,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            126 => 
-            array (
-                'id' => 131,
-                'name' => 'BPMN',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 127,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            127 => 
-            array (
-                'id' => 132,
-                'name' => 'ARIS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 127,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            128 => 
-            array (
-                'id' => 133,
-                'name' => 'Методологии',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            129 => 
-            array (
-                'id' => 134,
-                'name' => 'Test-Driven-Development',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 133,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            130 => 
-            array (
-                'id' => 135,
-            'name' => 'Human Computer Interactions (HCI)',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 133,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            131 => 
-            array (
-                'id' => 136,
-                'name' => 'DevOps',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 133,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            132 => 
-            array (
-                'id' => 137,
-                'name' => 'Behavior-Driven Development',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 133,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            133 => 
-            array (
-                'id' => 138,
-            'name' => 'Мобильные платформы (программирование)',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            134 => 
-            array (
-                'id' => 139,
-                'name' => 'Windows 8',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 138,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            135 => 
-            array (
-                'id' => 140,
-                'name' => 'Win Phone',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 138,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            136 => 
-            array (
-                'id' => 141,
-            'name' => 'iOS (Object C)',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 138,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            137 => 
-            array (
-                'id' => 142,
-            'name' => 'Android (Java)',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 138,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            138 => 
-            array (
-                'id' => 143,
-                'name' => 'Операционные системы',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            139 => 
-            array (
-                'id' => 144,
-                'name' => 'Windows',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 143,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            140 => 
-            array (
-                'id' => 145,
-                'name' => 'OS/2',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 143,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            141 => 
-            array (
-                'id' => 146,
-                'name' => 'MacOS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 143,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            142 => 
-            array (
-                'id' => 147,
-                'name' => 'Linux',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 143,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            143 => 
-            array (
-                'id' => 148,
-                'name' => 'HPUX',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 143,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            144 => 
-            array (
-                'id' => 149,
-                'name' => 'Протоколы',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            145 => 
-            array (
-                'id' => 150,
-                'name' => 'TCP, UDP',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 149,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            146 => 
-            array (
-                'id' => 151,
-                'name' => 'SMPP',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 149,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            147 => 
-            array (
-                'id' => 152,
-                'name' => 'Rx/Ry',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 149,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            148 => 
-            array (
-                'id' => 153,
-                'name' => 'LDAP',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 149,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            149 => 
-            array (
-                'id' => 154,
-                'name' => 'DIAMETER Gy и Gx',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 149,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            150 => 
-            array (
-                'id' => 155,
-                'name' => 'ASN.1',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 149,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            151 => 
-            array (
-                'id' => 156,
-                'name' => 'Фреймворки',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            152 => 
-            array (
-                'id' => 157,
-                'name' => 'Vaadin=',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 156,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            153 => 
-            array (
-                'id' => 158,
-                'name' => 'Spring',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 156,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            154 => 
-            array (
-                'id' => 159,
-                'name' => 'Ruby on Rails',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 156,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            155 => 
-            array (
-                'id' => 161,
-                'name' => 'MS Sharepoint',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 156,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            156 => 
-            array (
-                'id' => 162,
-                'name' => 'JSF',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 156,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            157 => 
-            array (
-                'id' => 163,
-                'name' => 'JQueryUI',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 156,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            158 => 
-            array (
-                'id' => 164,
-                'name' => 'Hibernate',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 156,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            159 => 
-            array (
-                'id' => 165,
-                'name' => 'GWT',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 156,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            160 => 
-            array (
-                'id' => 166,
-                'name' => 'Grails',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 156,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            161 => 
-            array (
-                'id' => 167,
-                'name' => 'Bootstrap',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 156,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            162 => 
-            array (
-                'id' => 168,
-                'name' => 'Bindows',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 156,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            163 => 
-            array (
-                'id' => 169,
-                'name' => 'Apache Camel',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 156,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            164 => 
-            array (
-                'id' => 170,
-                'name' => 'AngularJS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 156,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            165 => 
-            array (
-                'id' => 171,
-                'name' => 'Языки программирования',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 39,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            166 => 
-            array (
-                'id' => 172,
-                'name' => 'Visual Basic Script',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            167 => 
-            array (
-                'id' => 173,
-                'name' => 'Tcl',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            168 => 
-            array (
-                'id' => 174,
-                'name' => 'PL/SQL',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            169 => 
-            array (
-                'id' => 175,
-                'name' => 'Scala',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            170 => 
-            array (
-                'id' => 176,
-                'name' => 'RUBY',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            171 => 
-            array (
-                'id' => 177,
-                'name' => 'Python',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            172 => 
-            array (
-                'id' => 178,
-                'name' => 'Prolog',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            173 => 
-            array (
-                'id' => 179,
-                'name' => 'Powershell',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            174 => 
-            array (
-                'id' => 180,
-                'name' => 'PHP',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            175 => 
-            array (
-                'id' => 181,
-                'name' => 'Perl',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            176 => 
-            array (
-                'id' => 182,
-                'name' => 'Objective-C',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            177 => 
-            array (
-                'id' => 183,
-                'name' => 'Lua',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            178 => 
-            array (
-                'id' => 184,
-                'name' => 'Lisp',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            179 => 
-            array (
-                'id' => 185,
-                'name' => 'Javascript',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            180 => 
-            array (
-                'id' => 186,
-                'name' => 'Java',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            181 => 
-            array (
-                'id' => 187,
-                'name' => 'Haskell',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            182 => 
-            array (
-                'id' => 188,
-                'name' => 'Groovy',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            183 => 
-            array (
-                'id' => 189,
-                'name' => 'Erlang/OTP',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            184 => 
-            array (
-                'id' => 190,
-                'name' => 'Delphi',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            185 => 
-            array (
-                'id' => 191,
-                'name' => 'Closure',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            186 => 
-            array (
-                'id' => 192,
-                'name' => 'C#',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            187 => 
-            array (
-                'id' => 193,
-                'name' => 'C plus plus',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            188 => 
-            array (
-                'id' => 194,
-                'name' => 'Basic',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            189 => 
-            array (
-                'id' => 195,
-                'name' => 'Bash script',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            190 => 
-            array (
-                'id' => 196,
-                'name' => 'ActionScript',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 171,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            191 => 
-            array (
-                'id' => 197,
-                'name' => 'Продукция ПС',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => NULL,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            192 => 
-            array (
-                'id' => 198,
-                'name' => 'Группы продуктов',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 197,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            193 => 
-            array (
-                'id' => 199,
-                'name' => 'Группа продуктов WBMS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            194 => 
-            array (
-                'id' => 200,
-                'name' => 'Группа продуктов VAS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            195 => 
-            array (
-                'id' => 201,
-                'name' => 'Группа продуктов TDP',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            196 => 
-            array (
-                'id' => 202,
-                'name' => 'Группа продуктов SYSTEM_SOFT',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            197 => 
-            array (
-                'id' => 203,
-                'name' => 'Группа продуктов SPS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            198 => 
-            array (
-                'id' => 204,
-                'name' => 'Группа продуктов SOL',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            199 => 
-            array (
-                'id' => 205,
-                'name' => 'Группа продуктов SM',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            200 => 
-            array (
-                'id' => 206,
-                'name' => 'Группа продуктов SFA',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            201 => 
-            array (
-                'id' => 207,
-                'name' => 'Группа продуктов SCC',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            202 => 
-            array (
-                'id' => 208,
-                'name' => 'Группа продуктов SBMS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            203 => 
-            array (
-                'id' => 209,
-                'name' => 'Группа продуктов RSS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            204 => 
-            array (
-                'id' => 210,
-                'name' => 'Группа продуктов RND',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            205 => 
-            array (
-                'id' => 211,
-                'name' => 'Группа продуктов RMS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            206 => 
-            array (
-                'id' => 212,
-                'name' => 'Группа продуктов RIM',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            207 => 
-            array (
-                'id' => 213,
-                'name' => 'Группа продуктов RESEARCH',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            208 => 
-            array (
-                'id' => 214,
-                'name' => 'Группа продуктов RBSM',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            209 => 
-            array (
-                'id' => 215,
-                'name' => 'Группа продуктов PSC',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            210 => 
-            array (
-                'id' => 216,
-                'name' => 'Группа продуктов PS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            211 => 
-            array (
-                'id' => 217,
-                'name' => 'Группа продуктов PRM',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            212 => 
-            array (
-                'id' => 218,
-                'name' => 'Группа продуктов PAYS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            213 => 
-            array (
-                'id' => 219,
-                'name' => 'Группа продуктов OTHER',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            214 => 
-            array (
-                'id' => 220,
-                'name' => 'Группа продуктов ORACLE',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            215 => 
-            array (
-                'id' => 221,
-                'name' => 'Группа продуктов NS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            216 => 
-            array (
-                'id' => 222,
-                'name' => 'Группа продуктов MON',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            217 => 
-            array (
-                'id' => 223,
-                'name' => 'Группа продуктов MNP',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            218 => 
-            array (
-                'id' => 224,
-                'name' => 'Группа продуктов MD',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            219 => 
-            array (
-                'id' => 225,
-                'name' => 'Группа продуктов LCCM',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            220 => 
-            array (
-                'id' => 226,
-                'name' => 'Группа продуктов ITC',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            221 => 
-            array (
-                'id' => 475,
-                'name' => 'PCCT',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 473,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            222 => 
-            array (
-                'id' => 227,
-                'name' => 'Группа продуктов ISEM',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            223 => 
-            array (
-                'id' => 228,
-                'name' => 'Группа продуктов ICMS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            224 => 
-            array (
-                'id' => 229,
-                'name' => 'Группа продуктов HRS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            225 => 
-            array (
-                'id' => 230,
-                'name' => 'Группа продуктов HEX',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            226 => 
-            array (
-                'id' => 231,
-                'name' => 'Группа продуктов HAS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            227 => 
-            array (
-                'id' => 232,
-                'name' => 'Группа продуктов HARDWARE',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            228 => 
-            array (
-                'id' => 233,
-                'name' => 'Группа продуктов DPI',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            229 => 
-            array (
-                'id' => 234,
-                'name' => 'Группа продуктов CS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            230 => 
-            array (
-                'id' => 235,
-                'name' => 'Группа продуктов CRM',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            231 => 
-            array (
-                'id' => 236,
-                'name' => 'Группа продуктов BS_PETERSTAR',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            232 => 
-            array (
-                'id' => 237,
-                'name' => 'Группа продуктов BIS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            233 => 
-            array (
-                'id' => 238,
-                'name' => 'Группа продуктов BIN',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            234 => 
-            array (
-                'id' => 239,
-                'name' => 'Группа продуктов BIDM',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            235 => 
-            array (
-                'id' => 240,
-                'name' => 'Группа продуктов BFN',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            236 => 
-            array (
-                'id' => 241,
-                'name' => 'Группа продуктов BFAM',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 198,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            237 => 
-            array (
-                'id' => 242,
-                'name' => 'Продукты группы BFAM',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 197,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            238 => 
+            7 => 
             array (
                 'id' => 243,
                 'name' => 'FMC',
@@ -3124,62 +121,2350 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            239 => 
+            8 => 
             array (
-                'id' => 244,
-                'name' => 'BFAM_WEB',
+                'id' => 16,
+                'name' => 'Сопровождение',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 242,
+                'parent_skill_id' => 12,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            240 => 
+            9 => 
             array (
-                'id' => 245,
-                'name' => 'BFAM_SCRIPTS',
+                'id' => 17,
+                'name' => 'Руководство проектом',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 242,
+                'parent_skill_id' => 12,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            241 => 
+            10 => 
             array (
-                'id' => 246,
-                'name' => 'BFAM_BASE_RUS',
+                'id' => 18,
+                'name' => 'Разработка',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 242,
+                'parent_skill_id' => 12,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            242 => 
+            11 => 
             array (
-                'id' => 247,
-                'name' => 'BFAM_BASE',
+                'id' => 19,
+                'name' => 'Документирование',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 242,
+                'parent_skill_id' => 12,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            243 => 
+            12 => 
             array (
-                'id' => 248,
-                'name' => 'Продукты группы BFN',
+                'id' => 20,
+                'name' => 'Проектирование архитектуры',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 12,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            13 => 
+            array (
+                'id' => 21,
+                'name' => 'Проектирование UI',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 12,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            14 => 
+            array (
+                'id' => 23,
+                'name' => 'Бизнес-анализ, управление требованиями',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 12,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            15 => 
+            array (
+                'id' => 24,
+                'name' => 'Автоматизированное тестирование',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 12,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            16 => 
+            array (
+                'id' => 25,
+                'name' => 'Oracle DBA',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 12,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            17 => 
+            array (
+                'id' => 26,
+                'name' => 'Продажи',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 10,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            18 => 
+            array (
+                'id' => 27,
+                'name' => 'Обучение',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 10,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            19 => 
+            array (
+                'id' => 28,
+                'name' => 'Маркетинг',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 10,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            20 => 
+            array (
+                'id' => 29,
+                'name' => 'личностные навыки',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => NULL,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            21 => 
+            array (
+                'id' => 30,
+                'name' => 'Решение стратегических задач',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 29,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            22 => 
+            array (
+                'id' => 31,
+                'name' => 'Аналитическое мышление',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 29,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            23 => 
+            array (
+                'id' => 32,
+                'name' => 'Инициативность',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 29,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            24 => 
+            array (
+                'id' => 33,
+            'name' => 'Умение искать ошибки (может как-то перефразировать)',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 29,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            25 => 
+            array (
+                'id' => 34,
+                'name' => 'Ответственность',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 29,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            26 => 
+            array (
+                'id' => 35,
+                'name' => 'Выполнение задач в срок',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 29,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            27 => 
+            array (
+                'id' => 36,
+                'name' => 'Достижение результата',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 29,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            28 => 
+            array (
+                'id' => 37,
+                'name' => 'Стремление к развитию',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 29,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            29 => 
+            array (
+                'id' => 38,
+                'name' => 'Работа в команде',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 29,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            30 => 
+            array (
+                'id' => 39,
+                'name' => 'IT технологии',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => NULL,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            31 => 
+            array (
+                'id' => 40,
+                'name' => 'Continuous Delivery',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            32 => 
+            array (
+                'id' => 41,
+                'name' => 'Puppet',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 40,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            33 => 
+            array (
+                'id' => 42,
+                'name' => 'Docker',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 40,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            34 => 
+            array (
+                'id' => 43,
+                'name' => 'Chef',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 40,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            35 => 
+            array (
+                'id' => 44,
+                'name' => 'Ansible',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 40,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            36 => 
+            array (
+                'id' => 45,
+                'name' => 'Cервера приложений',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            37 => 
+            array (
+                'id' => 46,
+                'name' => 'WebLogic',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 45,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            38 => 
+            array (
+                'id' => 47,
+                'name' => 'Tomcat',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 45,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            39 => 
+            array (
+                'id' => 48,
+                'name' => 'OC4J',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 45,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            40 => 
+            array (
+                'id' => 49,
+                'name' => 'Jetty',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 45,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            41 => 
+            array (
+                'id' => 50,
+                'name' => 'Glassfish',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 45,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            42 => 
+            array (
+                'id' => 51,
+                'name' => 'Java technology',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            43 => 
+            array (
+                'id' => 52,
+                'name' => 'Vaadin',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 51,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            44 => 
+            array (
+                'id' => 53,
+                'name' => 'Spring mvc',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 51,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            45 => 
+            array (
+                'id' => 54,
+                'name' => 'Spring core',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 51,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            46 => 
+            array (
+                'id' => 55,
+                'name' => 'Servlets',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 51,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            47 => 
+            array (
+                'id' => 56,
+                'name' => 'RMI',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 51,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            48 => 
+            array (
+                'id' => 57,
+                'name' => 'MyBatis',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 51,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            49 => 
+            array (
+                'id' => 58,
+                'name' => 'JSP',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 51,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            50 => 
+            array (
+                'id' => 59,
+                'name' => 'JSF=',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 51,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            51 => 
+            array (
+                'id' => 60,
+                'name' => 'JNI',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 51,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            52 => 
+            array (
+                'id' => 61,
+                'name' => 'JMS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 51,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            53 => 
+            array (
+                'id' => 62,
+                'name' => 'JAX-WS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 51,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            54 => 
+            array (
+                'id' => 63,
+                'name' => 'JAX-RS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 51,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            55 => 
+            array (
+                'id' => 64,
+                'name' => 'JAXB,JNDI',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 51,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            56 => 
+            array (
+                'id' => 65,
+                'name' => 'J2SE',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 51,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            57 => 
+            array (
+                'id' => 66,
+                'name' => 'EJB',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 51,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            58 => 
+            array (
+                'id' => 67,
+                'name' => 'Message Queues',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            59 => 
+            array (
+                'id' => 68,
+                'name' => 'RabbitMQ',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 67,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            60 => 
+            array (
+                'id' => 69,
+                'name' => 'OracleAQ',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 67,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            61 => 
+            array (
+                'id' => 70,
+                'name' => 'ØMQ',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 67,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            62 => 
+            array (
+                'id' => 71,
+                'name' => 'Technology',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            63 => 
+            array (
+                'id' => 72,
+                'name' => 'Шаблоны программирования',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 71,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            64 => 
+            array (
+                'id' => 73,
+                'name' => 'Регулярные выражения',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 71,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            65 => 
+            array (
+                'id' => 74,
+                'name' => 'Распределённые вычисления',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 71,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            66 => 
+            array (
+                'id' => 75,
+                'name' => 'Разработка компиляторов',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 71,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            67 => 
+            array (
+                'id' => 76,
+                'name' => 'Парсеры грамматик',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 71,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            68 => 
+            array (
+                'id' => 77,
+                'name' => 'Метапрограммирование',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 71,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            69 => 
+            array (
+                'id' => 78,
+                'name' => 'Кросс-платформенное программирование',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 71,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            70 => 
+            array (
+                'id' => 79,
+                'name' => 'Балансирование нагрузки',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 71,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            71 => 
+            array (
+                'id' => 80,
+                'name' => 'Machine Learning',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 71,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            72 => 
+            array (
+                'id' => 81,
+                'name' => 'High Load',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 71,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            73 => 
+            array (
+                'id' => 82,
+                'name' => 'High Availability',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 71,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            74 => 
+            array (
+                'id' => 83,
+                'name' => 'DSL',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 71,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            75 => 
+            array (
+                'id' => 84,
+                'name' => 'Web technology',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            76 => 
+            array (
+                'id' => 85,
+                'name' => 'XSLT',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 84,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            77 => 
+            array (
+                'id' => 86,
+                'name' => 'XML',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 84,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            78 => 
+            array (
+                'id' => 87,
+                'name' => 'Websockets',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 84,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            79 => 
+            array (
+                'id' => 88,
+                'name' => 'Web Security Practices',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 84,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            80 => 
+            array (
+                'id' => 89,
+                'name' => 'REST',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 84,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            81 => 
+            array (
+                'id' => 90,
+                'name' => 'JQuery',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 84,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            82 => 
+            array (
+                'id' => 91,
+                'name' => 'HTML5',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 84,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            83 => 
+            array (
+                'id' => 92,
+                'name' => 'HTML',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 84,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            84 => 
+            array (
+                'id' => 93,
+                'name' => 'CSS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 84,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            85 => 
+            array (
+                'id' => 94,
+                'name' => 'Comet',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 84,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            86 => 
+            array (
+                'id' => 95,
+                'name' => 'Ajax',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 84,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            87 => 
+            array (
+                'id' => 96,
+                'name' => 'Базы данных',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            88 => 
+            array (
+                'id' => 97,
+                'name' => 'Redis',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 96,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            89 => 
+            array (
+                'id' => 98,
+                'name' => 'PostgreSQL',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 96,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            90 => 
+            array (
+                'id' => 99,
+                'name' => 'Oracle',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 96,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            91 => 
+            array (
+                'id' => 100,
+                'name' => 'Neo4J',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 96,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            92 => 
+            array (
+                'id' => 101,
+                'name' => 'MySql Cluster',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 96,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            93 => 
+            array (
+                'id' => 102,
+            'name' => 'MySQL (MariaDB)',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 96,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            94 => 
+            array (
+                'id' => 103,
+                'name' => 'MySQL',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 96,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            95 => 
+            array (
+                'id' => 104,
+                'name' => 'LevelDB',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 96,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            96 => 
+            array (
+                'id' => 105,
+                'name' => 'Hadoop',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 96,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            97 => 
+            array (
+                'id' => 106,
+                'name' => 'Couchbase',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 96,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            98 => 
+            array (
+                'id' => 107,
+                'name' => 'Cassandra',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 96,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            99 => 
+            array (
+                'id' => 108,
+                'name' => 'Безопасность',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            100 => 
+            array (
+                'id' => 109,
+                'name' => 'Шифрование',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 108,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            101 => 
+            array (
+                'id' => 110,
+                'name' => 'Безопасность данных в Web',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 108,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            102 => 
+            array (
+                'id' => 111,
+                'name' => 'SSO',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 108,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            103 => 
+            array (
+                'id' => 112,
+                'name' => 'OAuth',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 108,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            104 => 
+            array (
+                'id' => 113,
+                'name' => 'Kerberos',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 108,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            105 => 
+            array (
+                'id' => 114,
+                'name' => 'Библиотеки',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            106 => 
+            array (
+                'id' => 115,
+                'name' => 'STL',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 114,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            107 => 
+            array (
+                'id' => 116,
+                'name' => 'Boost',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 114,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            108 => 
+            array (
+                'id' => 117,
+                'name' => 'Графический дизайн',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            109 => 
+            array (
+                'id' => 118,
+                'name' => 'Цветокоррекция и ретушь',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 117,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            110 => 
+            array (
+                'id' => 119,
+                'name' => 'Создание иллюстраций',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 117,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            111 => 
+            array (
+                'id' => 120,
+                'name' => 'Разработка шрифтов и каллиграфия',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 117,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            112 => 
+            array (
+                'id' => 121,
+                'name' => 'Разработка фирменного стиля',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 117,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            113 => 
+            array (
+                'id' => 122,
+                'name' => 'Разработка пиктограмм',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 117,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            114 => 
+            array (
+                'id' => 123,
+                'name' => 'Предпечатная подготовка',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 117,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            115 => 
+            array (
+                'id' => 124,
+                'name' => 'Верстка полиграфической продукции',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 117,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            116 => 
+            array (
+                'id' => 125,
+                'name' => 'Flash-анимация',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 117,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            117 => 
+            array (
+                'id' => 126,
+                'name' => '3D-графика',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 117,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            118 => 
+            array (
+                'id' => 127,
+                'name' => 'Инструментарий для аналитиков и архитекторов',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            119 => 
+            array (
+                'id' => 128,
+                'name' => 'UML',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 127,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            120 => 
+            array (
+                'id' => 129,
+                'name' => 'RUP',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 127,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            121 => 
+            array (
+                'id' => 130,
+                'name' => 'IDEF',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 127,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            122 => 
+            array (
+                'id' => 131,
+                'name' => 'BPMN',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 127,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            123 => 
+            array (
+                'id' => 132,
+                'name' => 'ARIS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 127,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            124 => 
+            array (
+                'id' => 133,
+                'name' => 'Методологии',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            125 => 
+            array (
+                'id' => 134,
+                'name' => 'Test-Driven-Development',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 133,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            126 => 
+            array (
+                'id' => 135,
+            'name' => 'Human Computer Interactions (HCI)',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 133,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            127 => 
+            array (
+                'id' => 136,
+                'name' => 'DevOps',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 133,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            128 => 
+            array (
+                'id' => 137,
+                'name' => 'Behavior-Driven Development',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 133,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            129 => 
+            array (
+                'id' => 138,
+            'name' => 'Мобильные платформы (программирование)',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            130 => 
+            array (
+                'id' => 139,
+                'name' => 'Windows 8',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 138,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            131 => 
+            array (
+                'id' => 140,
+                'name' => 'Win Phone',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 138,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            132 => 
+            array (
+                'id' => 141,
+            'name' => 'iOS (Object C)',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 138,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            133 => 
+            array (
+                'id' => 142,
+            'name' => 'Android (Java)',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 138,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            134 => 
+            array (
+                'id' => 143,
+                'name' => 'Операционные системы',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            135 => 
+            array (
+                'id' => 144,
+                'name' => 'Windows',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 143,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            136 => 
+            array (
+                'id' => 145,
+                'name' => 'OS/2',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 143,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            137 => 
+            array (
+                'id' => 146,
+                'name' => 'MacOS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 143,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            138 => 
+            array (
+                'id' => 147,
+                'name' => 'Linux',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 143,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            139 => 
+            array (
+                'id' => 148,
+                'name' => 'HPUX',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 143,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            140 => 
+            array (
+                'id' => 149,
+                'name' => 'Протоколы',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            141 => 
+            array (
+                'id' => 150,
+                'name' => 'TCP, UDP',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 149,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            142 => 
+            array (
+                'id' => 151,
+                'name' => 'SMPP',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 149,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            143 => 
+            array (
+                'id' => 152,
+                'name' => 'Rx/Ry',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 149,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            144 => 
+            array (
+                'id' => 153,
+                'name' => 'LDAP',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 149,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            145 => 
+            array (
+                'id' => 154,
+                'name' => 'DIAMETER Gy и Gx',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 149,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            146 => 
+            array (
+                'id' => 155,
+                'name' => 'ASN.1',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 149,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            147 => 
+            array (
+                'id' => 156,
+                'name' => 'Фреймворки',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            148 => 
+            array (
+                'id' => 157,
+                'name' => 'Vaadin=',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 156,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            149 => 
+            array (
+                'id' => 158,
+                'name' => 'Spring',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 156,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            150 => 
+            array (
+                'id' => 159,
+                'name' => 'Ruby on Rails',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 156,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            151 => 
+            array (
+                'id' => 161,
+                'name' => 'MS Sharepoint',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 156,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            152 => 
+            array (
+                'id' => 162,
+                'name' => 'JSF',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 156,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            153 => 
+            array (
+                'id' => 163,
+                'name' => 'JQueryUI',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 156,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            154 => 
+            array (
+                'id' => 164,
+                'name' => 'Hibernate',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 156,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            155 => 
+            array (
+                'id' => 165,
+                'name' => 'GWT',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 156,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            156 => 
+            array (
+                'id' => 166,
+                'name' => 'Grails',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 156,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            157 => 
+            array (
+                'id' => 167,
+                'name' => 'Bootstrap',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 156,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            158 => 
+            array (
+                'id' => 168,
+                'name' => 'Bindows',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 156,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            159 => 
+            array (
+                'id' => 169,
+                'name' => 'Apache Camel',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 156,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            160 => 
+            array (
+                'id' => 170,
+                'name' => 'AngularJS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 156,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            161 => 
+            array (
+                'id' => 171,
+                'name' => 'Языки программирования',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 39,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            162 => 
+            array (
+                'id' => 172,
+                'name' => 'Visual Basic Script',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            163 => 
+            array (
+                'id' => 173,
+                'name' => 'Tcl',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            164 => 
+            array (
+                'id' => 174,
+                'name' => 'PL/SQL',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            165 => 
+            array (
+                'id' => 175,
+                'name' => 'Scala',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            166 => 
+            array (
+                'id' => 176,
+                'name' => 'RUBY',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            167 => 
+            array (
+                'id' => 177,
+                'name' => 'Python',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            168 => 
+            array (
+                'id' => 178,
+                'name' => 'Prolog',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            169 => 
+            array (
+                'id' => 179,
+                'name' => 'Powershell',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            170 => 
+            array (
+                'id' => 180,
+                'name' => 'PHP',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            171 => 
+            array (
+                'id' => 181,
+                'name' => 'Perl',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            172 => 
+            array (
+                'id' => 182,
+                'name' => 'Objective-C',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            173 => 
+            array (
+                'id' => 183,
+                'name' => 'Lua',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            174 => 
+            array (
+                'id' => 184,
+                'name' => 'Lisp',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            175 => 
+            array (
+                'id' => 185,
+                'name' => 'Javascript',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            176 => 
+            array (
+                'id' => 186,
+                'name' => 'Java',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            177 => 
+            array (
+                'id' => 187,
+                'name' => 'Haskell',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            178 => 
+            array (
+                'id' => 188,
+                'name' => 'Groovy',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            179 => 
+            array (
+                'id' => 189,
+                'name' => 'Erlang/OTP',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            180 => 
+            array (
+                'id' => 190,
+                'name' => 'Delphi',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            181 => 
+            array (
+                'id' => 191,
+                'name' => 'Closure',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            182 => 
+            array (
+                'id' => 192,
+                'name' => 'C#',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            183 => 
+            array (
+                'id' => 193,
+                'name' => 'C plus plus',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            184 => 
+            array (
+                'id' => 194,
+                'name' => 'Basic',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            185 => 
+            array (
+                'id' => 195,
+                'name' => 'Bash script',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            186 => 
+            array (
+                'id' => 196,
+                'name' => 'ActionScript',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 171,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            187 => 
+            array (
+                'id' => 197,
+                'name' => 'Продукция ПС',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => NULL,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            188 => 
+            array (
+                'id' => 198,
+                'name' => 'Группы продуктов',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
@@ -3189,956 +2474,124 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            244 => 
+            189 => 
             array (
-                'id' => 249,
-                'name' => 'PSTN_XML_REPORT_API',
+                'id' => 199,
+                'name' => 'Группа продуктов WBMS',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 248,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            245 => 
+            190 => 
             array (
-                'id' => 250,
-                'name' => 'PSTN_WRP_RGSTR',
+                'id' => 200,
+                'name' => 'Группа продуктов VAS',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 248,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            246 => 
+            191 => 
             array (
-                'id' => 251,
-                'name' => 'PSTN_UNI',
+                'id' => 201,
+                'name' => 'Группа продуктов TDP',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 248,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            247 => 
+            192 => 
             array (
-                'id' => 252,
-                'name' => 'PSTN_RPS',
+                'id' => 202,
+                'name' => 'Группа продуктов SYSTEM_SOFT',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 248,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            248 => 
+            193 => 
             array (
-                'id' => 253,
-                'name' => 'PSTN_QUEUES',
+                'id' => 203,
+                'name' => 'Группа продуктов SPS',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 248,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            249 => 
+            194 => 
             array (
-                'id' => 254,
-                'name' => 'PSTN_PERIPHERY',
+                'id' => 204,
+                'name' => 'Группа продуктов SOL',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 248,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            250 => 
+            195 => 
             array (
-                'id' => 255,
-                'name' => 'PSTN_PAY_API',
+                'id' => 205,
+                'name' => 'Группа продуктов SM',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 248,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            251 => 
+            196 => 
             array (
-                'id' => 256,
-                'name' => 'PSTN_MNL_ADVICE',
+                'id' => 206,
+                'name' => 'Группа продуктов SFA',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 248,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            252 => 
+            197 => 
             array (
-                'id' => 257,
-                'name' => 'PSTN_INQ',
+                'id' => 207,
+                'name' => 'Группа продуктов SCC',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 248,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            253 => 
-            array (
-                'id' => 258,
-                'name' => 'PSTN_IAC_LISTS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 248,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            254 => 
-            array (
-                'id' => 259,
-                'name' => 'PSTN_FI_ADVICE',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 248,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            255 => 
-            array (
-                'id' => 260,
-                'name' => 'PSTN_EPAYS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 248,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            256 => 
-            array (
-                'id' => 261,
-                'name' => 'PSTN_DELIVERY',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 248,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            257 => 
-            array (
-                'id' => 262,
-                'name' => 'PSTN_DEBT',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 248,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            258 => 
-            array (
-                'id' => 263,
-                'name' => 'PSTN_CK_ADVICE',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 248,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            259 => 
-            array (
-                'id' => 264,
-                'name' => 'PSTN_CASH',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 248,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            260 => 
-            array (
-                'id' => 265,
-                'name' => 'PSTN_BANK',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 248,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            261 => 
-            array (
-                'id' => 266,
-                'name' => 'BFN_TDS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 248,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            262 => 
-            array (
-                'id' => 267,
-                'name' => 'BFN',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 248,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            263 => 
-            array (
-                'id' => 268,
-                'name' => 'Продукты группы BIDM',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 197,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            264 => 
-            array (
-                'id' => 269,
-                'name' => 'MDW_SCRIPTS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 268,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            265 => 
-            array (
-                'id' => 270,
-                'name' => 'MDW_GOLDENGATE_INT',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 268,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            266 => 
-            array (
-                'id' => 271,
-                'name' => 'DWH_FCP',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 268,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            267 => 
-            array (
-                'id' => 272,
-                'name' => 'DWH_CIS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 268,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            268 => 
-            array (
-                'id' => 273,
-                'name' => 'DWH_BIS_CLIENTS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 268,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            269 => 
-            array (
-                'id' => 274,
-                'name' => 'DATA_ARCHIVER',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 268,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            270 => 
-            array (
-                'id' => 275,
-                'name' => 'CRM_DWH',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 268,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            271 => 
-            array (
-                'id' => 276,
-                'name' => 'Продукты группы BIN',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 197,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            272 => 
-            array (
-                'id' => 277,
-                'name' => 'TOKEN_INT',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            273 => 
-            array (
-                'id' => 278,
-                'name' => 'SYSTEM_LOGGING',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            274 => 
-            array (
-                'id' => 279,
-                'name' => 'SMSC_INT',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            275 => 
-            array (
-                'id' => 280,
-                'name' => 'SMSC_EMU',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            276 => 
-            array (
-                'id' => 281,
-                'name' => 'PS_SHELL',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            277 => 
-            array (
-                'id' => 282,
-                'name' => 'PCXFILES',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            278 => 
-            array (
-                'id' => 283,
-                'name' => 'PARAMETER_SUPPORT',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            279 => 
-            array (
-                'id' => 284,
-                'name' => 'OPENAPI_ESB',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            280 => 
-            array (
-                'id' => 285,
-                'name' => 'OBJMGR_INT',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            281 => 
-            array (
-                'id' => 286,
-                'name' => 'MBUS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            282 => 
-            array (
-                'id' => 287,
-                'name' => 'MAIL2FILE',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            283 => 
-            array (
-                'id' => 288,
-                'name' => 'LDAP_SEC',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            284 => 
-            array (
-                'id' => 289,
-                'name' => 'HISTORY_AUDIT',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            285 => 
-            array (
-                'id' => 290,
-                'name' => 'HAS_LUA_LIBS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            286 => 
-            array (
-                'id' => 291,
-                'name' => 'ELOG',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            287 => 
-            array (
-                'id' => 292,
-                'name' => 'COMMON_SCHEME',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            288 => 
-            array (
-                'id' => 293,
-                'name' => 'COMMON_FORM',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            289 => 
-            array (
-                'id' => 294,
-                'name' => 'BIN_SCRIPTS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            290 => 
-            array (
-                'id' => 295,
-                'name' => 'BIN_KEYS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            291 => 
-            array (
-                'id' => 296,
-                'name' => 'APACHE_SERVER',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            292 => 
-            array (
-                'id' => 297,
-                'name' => 'AIR_COMMON_DOC',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            293 => 
-            array (
-                'id' => 298,
-                'name' => 'AIR',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            294 => 
-            array (
-                'id' => 299,
-                'name' => 'AIM',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            295 => 
-            array (
-                'id' => 300,
-                'name' => 'ADDR',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            296 => 
-            array (
-                'id' => 301,
-                'name' => 'ACCESS_CONTROL',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 276,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            297 => 
-            array (
-                'id' => 302,
-                'name' => 'Продукты группы BIS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 197,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            298 => 
-            array (
-                'id' => 303,
-                'name' => 'UNI_RUS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            299 => 
-            array (
-                'id' => 304,
-                'name' => 'SUBS_LIMITS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            300 => 
-            array (
-                'id' => 305,
-                'name' => 'STABPROC',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            301 => 
-            array (
-                'id' => 306,
-                'name' => 'SSR',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            302 => 
-            array (
-                'id' => 307,
-                'name' => 'SMS_NOTIFICATION',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            303 => 
-            array (
-                'id' => 308,
-                'name' => 'SERV_PARAMETERS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            304 => 
-            array (
-                'id' => 309,
-                'name' => 'R_APPL_SERV',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            305 => 
-            array (
-                'id' => 310,
-                'name' => 'R_APPL_CH_RP',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            306 => 
-            array (
-                'id' => 312,
-                'name' => 'PROC',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            307 => 
-            array (
-                'id' => 313,
-                'name' => 'PRM',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            308 => 
-            array (
-                'id' => 314,
-                'name' => 'PREPAID_LIFECYCLE',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            309 => 
-            array (
-                'id' => 315,
-                'name' => 'OPENAPI_BIS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            310 => 
-            array (
-                'id' => 316,
-                'name' => 'OCX_SUBS_BASE_STATS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            311 => 
-            array (
-                'id' => 317,
-                'name' => 'OCX_CREDITCARD',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            312 => 
-            array (
-                'id' => 318,
-                'name' => 'MOVE_SCRIPTS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            313 => 
-            array (
-                'id' => 319,
-                'name' => 'INDUP',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            314 => 
-            array (
-                'id' => 320,
-                'name' => 'GROUP_OPS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            315 => 
-            array (
-                'id' => 321,
-                'name' => 'FIB',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            316 => 
-            array (
-                'id' => 322,
-                'name' => 'DLV',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 302,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            317 => 
+            198 => 
             array (
                 'id' => 323,
                 'name' => 'CLI_INQ',
@@ -4151,332 +2604,267 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            318 => 
+            199 => 
             array (
-                'id' => 324,
-                'name' => 'CFG_ARCHIVER',
+                'id' => 208,
+                'name' => 'Группа продуктов SBMS',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 302,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            319 => 
+            200 => 
             array (
-                'id' => 325,
-                'name' => 'CAMEL_GROUPS',
+                'id' => 209,
+                'name' => 'Группа продуктов RSS',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 302,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            320 => 
+            201 => 
             array (
-                'id' => 326,
-                'name' => 'BP_SCHEDULER',
+                'id' => 210,
+                'name' => 'Группа продуктов RND',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 302,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            321 => 
+            202 => 
             array (
-                'id' => 327,
-                'name' => 'BLACK_LIST',
+                'id' => 211,
+                'name' => 'Группа продуктов RMS',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 302,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            322 => 
+            203 => 
             array (
-                'id' => 328,
-                'name' => 'BIS_UNI',
+                'id' => 212,
+                'name' => 'Группа продуктов RIM',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 302,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            323 => 
+            204 => 
             array (
-                'id' => 329,
-                'name' => 'BIS_TAR',
+                'id' => 213,
+                'name' => 'Группа продуктов RESEARCH',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 302,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            324 => 
+            205 => 
             array (
-                'id' => 330,
-                'name' => 'BIS_LEGACY_GUI',
+                'id' => 214,
+                'name' => 'Группа продуктов RBSM',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 302,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            325 => 
+            206 => 
             array (
-                'id' => 331,
-                'name' => 'BIS_CDMA',
+                'id' => 215,
+                'name' => 'Группа продуктов PSC',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 302,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            326 => 
+            207 => 
             array (
-                'id' => 332,
-                'name' => 'BALANCE_WARNINGS',
+                'id' => 216,
+                'name' => 'Группа продуктов PS',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 302,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            327 => 
+            208 => 
             array (
-                'id' => 333,
-                'name' => 'Продукты группы CRM',
+                'id' => 217,
+                'name' => 'Группа продуктов PRM',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 197,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            328 => 
+            209 => 
             array (
-                'id' => 334,
-                'name' => 'CUSTOMER_POLLS',
+                'id' => 218,
+                'name' => 'Группа продуктов PAYS',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 333,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            329 => 
+            210 => 
             array (
-                'id' => 335,
-                'name' => 'CRM_UDS',
+                'id' => 219,
+                'name' => 'Группа продуктов OTHER',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 333,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            330 => 
+            211 => 
             array (
-                'id' => 336,
-                'name' => 'CRM_MNP',
+                'id' => 220,
+                'name' => 'Группа продуктов ORACLE',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 333,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            331 => 
+            212 => 
             array (
-                'id' => 337,
-                'name' => 'CRM_CMS',
+                'id' => 221,
+                'name' => 'Группа продуктов NS',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 333,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            332 => 
+            213 => 
             array (
-                'id' => 338,
-                'name' => 'CMS_HPSM_ADAPTER',
+                'id' => 222,
+                'name' => 'Группа продуктов MON',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 333,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            333 => 
+            214 => 
             array (
-                'id' => 339,
-                'name' => 'CMS_HPSD_ADAPTER',
+                'id' => 223,
+                'name' => 'Группа продуктов MNP',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 333,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            334 => 
+            215 => 
             array (
-                'id' => 340,
-                'name' => 'CMS_BIS_EVENT_PROC',
+                'id' => 224,
+                'name' => 'Группа продуктов MD',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 333,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            335 => 
+            216 => 
             array (
-                'id' => 341,
-                'name' => 'CMS_ARCHIVER_CFG',
+                'id' => 225,
+                'name' => 'Группа продуктов LCCM',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 333,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            336 => 
+            217 => 
             array (
-                'id' => 342,
-                'name' => 'Продукты группы HAS',
+                'id' => 226,
+                'name' => 'Группа продуктов ITC',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 197,
+                'parent_skill_id' => 198,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            337 => 
+            218 => 
             array (
-                'id' => 344,
-                'name' => 'HAS_KIT',
+                'id' => 475,
+                'name' => 'PCCT',
                 'description' => NULL,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 342,
+                'parent_skill_id' => 473,
                 'appoint' => true,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            338 => 
-            array (
-                'id' => 345,
-                'name' => 'HAS_KEYS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 342,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            339 => 
-            array (
-                'id' => 346,
-                'name' => 'HAS_CCINT',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 342,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            340 => 
-            array (
-                'id' => 347,
-                'name' => 'HAS_ACCESS_MANAGER',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 342,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            341 => 
-            array (
-                'id' => 348,
-                'name' => 'HAS',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 342,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            342 => 
-            array (
-                'id' => 349,
-                'name' => 'Продукты группы HEX',
-                'description' => NULL,
-                'options' => NULL,
-                'currency_id' => NULL,
-                'parent_skill_id' => 197,
-                'appoint' => true,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            343 => 
+            219 => 
             array (
                 'id' => 350,
                 'name' => 'PREPAID_GATEWAY',
@@ -4489,7 +2877,1554 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            344 => 
+            220 => 
+            array (
+                'id' => 227,
+                'name' => 'Группа продуктов ISEM',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 198,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            221 => 
+            array (
+                'id' => 228,
+                'name' => 'Группа продуктов ICMS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 198,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            222 => 
+            array (
+                'id' => 229,
+                'name' => 'Группа продуктов HRS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 198,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            223 => 
+            array (
+                'id' => 230,
+                'name' => 'Группа продуктов HEX',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 198,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            224 => 
+            array (
+                'id' => 231,
+                'name' => 'Группа продуктов HAS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 198,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            225 => 
+            array (
+                'id' => 232,
+                'name' => 'Группа продуктов HARDWARE',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 198,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            226 => 
+            array (
+                'id' => 233,
+                'name' => 'Группа продуктов DPI',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 198,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            227 => 
+            array (
+                'id' => 234,
+                'name' => 'Группа продуктов CS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 198,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            228 => 
+            array (
+                'id' => 235,
+                'name' => 'Группа продуктов CRM',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 198,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            229 => 
+            array (
+                'id' => 236,
+                'name' => 'Группа продуктов BS_PETERSTAR',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 198,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            230 => 
+            array (
+                'id' => 237,
+                'name' => 'Группа продуктов BIS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 198,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            231 => 
+            array (
+                'id' => 238,
+                'name' => 'Группа продуктов BIN',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 198,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            232 => 
+            array (
+                'id' => 239,
+                'name' => 'Группа продуктов BIDM',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 198,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            233 => 
+            array (
+                'id' => 240,
+                'name' => 'Группа продуктов BFN',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 198,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            234 => 
+            array (
+                'id' => 241,
+                'name' => 'Группа продуктов BFAM',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 198,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            235 => 
+            array (
+                'id' => 242,
+                'name' => 'Продукты группы BFAM',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 197,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            236 => 
+            array (
+                'id' => 244,
+                'name' => 'BFAM_WEB',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 242,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            237 => 
+            array (
+                'id' => 245,
+                'name' => 'BFAM_SCRIPTS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 242,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            238 => 
+            array (
+                'id' => 246,
+                'name' => 'BFAM_BASE_RUS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 242,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            239 => 
+            array (
+                'id' => 247,
+                'name' => 'BFAM_BASE',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 242,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            240 => 
+            array (
+                'id' => 248,
+                'name' => 'Продукты группы BFN',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 197,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            241 => 
+            array (
+                'id' => 249,
+                'name' => 'PSTN_XML_REPORT_API',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            242 => 
+            array (
+                'id' => 250,
+                'name' => 'PSTN_WRP_RGSTR',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            243 => 
+            array (
+                'id' => 251,
+                'name' => 'PSTN_UNI',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            244 => 
+            array (
+                'id' => 252,
+                'name' => 'PSTN_RPS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            245 => 
+            array (
+                'id' => 253,
+                'name' => 'PSTN_QUEUES',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            246 => 
+            array (
+                'id' => 254,
+                'name' => 'PSTN_PERIPHERY',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            247 => 
+            array (
+                'id' => 255,
+                'name' => 'PSTN_PAY_API',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            248 => 
+            array (
+                'id' => 256,
+                'name' => 'PSTN_MNL_ADVICE',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            249 => 
+            array (
+                'id' => 257,
+                'name' => 'PSTN_INQ',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            250 => 
+            array (
+                'id' => 258,
+                'name' => 'PSTN_IAC_LISTS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            251 => 
+            array (
+                'id' => 259,
+                'name' => 'PSTN_FI_ADVICE',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            252 => 
+            array (
+                'id' => 260,
+                'name' => 'PSTN_EPAYS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            253 => 
+            array (
+                'id' => 261,
+                'name' => 'PSTN_DELIVERY',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            254 => 
+            array (
+                'id' => 262,
+                'name' => 'PSTN_DEBT',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            255 => 
+            array (
+                'id' => 263,
+                'name' => 'PSTN_CK_ADVICE',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            256 => 
+            array (
+                'id' => 264,
+                'name' => 'PSTN_CASH',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            257 => 
+            array (
+                'id' => 265,
+                'name' => 'PSTN_BANK',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            258 => 
+            array (
+                'id' => 266,
+                'name' => 'BFN_TDS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            259 => 
+            array (
+                'id' => 267,
+                'name' => 'BFN',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 248,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            260 => 
+            array (
+                'id' => 268,
+                'name' => 'Продукты группы BIDM',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 197,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            261 => 
+            array (
+                'id' => 269,
+                'name' => 'MDW_SCRIPTS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 268,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            262 => 
+            array (
+                'id' => 270,
+                'name' => 'MDW_GOLDENGATE_INT',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 268,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            263 => 
+            array (
+                'id' => 271,
+                'name' => 'DWH_FCP',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 268,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            264 => 
+            array (
+                'id' => 272,
+                'name' => 'DWH_CIS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 268,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            265 => 
+            array (
+                'id' => 273,
+                'name' => 'DWH_BIS_CLIENTS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 268,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            266 => 
+            array (
+                'id' => 274,
+                'name' => 'DATA_ARCHIVER',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 268,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            267 => 
+            array (
+                'id' => 275,
+                'name' => 'CRM_DWH',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 268,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            268 => 
+            array (
+                'id' => 276,
+                'name' => 'Продукты группы BIN',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 197,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            269 => 
+            array (
+                'id' => 277,
+                'name' => 'TOKEN_INT',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            270 => 
+            array (
+                'id' => 278,
+                'name' => 'SYSTEM_LOGGING',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            271 => 
+            array (
+                'id' => 279,
+                'name' => 'SMSC_INT',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            272 => 
+            array (
+                'id' => 280,
+                'name' => 'SMSC_EMU',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            273 => 
+            array (
+                'id' => 281,
+                'name' => 'PS_SHELL',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            274 => 
+            array (
+                'id' => 282,
+                'name' => 'PCXFILES',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            275 => 
+            array (
+                'id' => 283,
+                'name' => 'PARAMETER_SUPPORT',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            276 => 
+            array (
+                'id' => 284,
+                'name' => 'OPENAPI_ESB',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            277 => 
+            array (
+                'id' => 285,
+                'name' => 'OBJMGR_INT',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            278 => 
+            array (
+                'id' => 286,
+                'name' => 'MBUS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            279 => 
+            array (
+                'id' => 287,
+                'name' => 'MAIL2FILE',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            280 => 
+            array (
+                'id' => 288,
+                'name' => 'LDAP_SEC',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            281 => 
+            array (
+                'id' => 289,
+                'name' => 'HISTORY_AUDIT',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            282 => 
+            array (
+                'id' => 290,
+                'name' => 'HAS_LUA_LIBS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            283 => 
+            array (
+                'id' => 291,
+                'name' => 'ELOG',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            284 => 
+            array (
+                'id' => 292,
+                'name' => 'COMMON_SCHEME',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            285 => 
+            array (
+                'id' => 293,
+                'name' => 'COMMON_FORM',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            286 => 
+            array (
+                'id' => 294,
+                'name' => 'BIN_SCRIPTS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            287 => 
+            array (
+                'id' => 295,
+                'name' => 'BIN_KEYS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            288 => 
+            array (
+                'id' => 296,
+                'name' => 'APACHE_SERVER',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            289 => 
+            array (
+                'id' => 297,
+                'name' => 'AIR_COMMON_DOC',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            290 => 
+            array (
+                'id' => 298,
+                'name' => 'AIR',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            291 => 
+            array (
+                'id' => 299,
+                'name' => 'AIM',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            292 => 
+            array (
+                'id' => 300,
+                'name' => 'ADDR',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            293 => 
+            array (
+                'id' => 301,
+                'name' => 'ACCESS_CONTROL',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 276,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            294 => 
+            array (
+                'id' => 302,
+                'name' => 'Продукты группы BIS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 197,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            295 => 
+            array (
+                'id' => 303,
+                'name' => 'UNI_RUS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            296 => 
+            array (
+                'id' => 304,
+                'name' => 'SUBS_LIMITS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            297 => 
+            array (
+                'id' => 305,
+                'name' => 'STABPROC',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            298 => 
+            array (
+                'id' => 306,
+                'name' => 'SSR',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            299 => 
+            array (
+                'id' => 307,
+                'name' => 'SMS_NOTIFICATION',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            300 => 
+            array (
+                'id' => 308,
+                'name' => 'SERV_PARAMETERS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            301 => 
+            array (
+                'id' => 309,
+                'name' => 'R_APPL_SERV',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            302 => 
+            array (
+                'id' => 310,
+                'name' => 'R_APPL_CH_RP',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            303 => 
+            array (
+                'id' => 312,
+                'name' => 'PROC',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            304 => 
+            array (
+                'id' => 313,
+                'name' => 'PRM',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            305 => 
+            array (
+                'id' => 314,
+                'name' => 'PREPAID_LIFECYCLE',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            306 => 
+            array (
+                'id' => 315,
+                'name' => 'OPENAPI_BIS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            307 => 
+            array (
+                'id' => 316,
+                'name' => 'OCX_SUBS_BASE_STATS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            308 => 
+            array (
+                'id' => 317,
+                'name' => 'OCX_CREDITCARD',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            309 => 
+            array (
+                'id' => 318,
+                'name' => 'MOVE_SCRIPTS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            310 => 
+            array (
+                'id' => 319,
+                'name' => 'INDUP',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            311 => 
+            array (
+                'id' => 320,
+                'name' => 'GROUP_OPS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            312 => 
+            array (
+                'id' => 321,
+                'name' => 'FIB',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            313 => 
+            array (
+                'id' => 322,
+                'name' => 'DLV',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            314 => 
+            array (
+                'id' => 324,
+                'name' => 'CFG_ARCHIVER',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            315 => 
+            array (
+                'id' => 325,
+                'name' => 'CAMEL_GROUPS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            316 => 
+            array (
+                'id' => 326,
+                'name' => 'BP_SCHEDULER',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            317 => 
+            array (
+                'id' => 327,
+                'name' => 'BLACK_LIST',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            318 => 
+            array (
+                'id' => 328,
+                'name' => 'BIS_UNI',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            319 => 
+            array (
+                'id' => 329,
+                'name' => 'BIS_TAR',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            320 => 
+            array (
+                'id' => 330,
+                'name' => 'BIS_LEGACY_GUI',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            321 => 
+            array (
+                'id' => 331,
+                'name' => 'BIS_CDMA',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            322 => 
+            array (
+                'id' => 332,
+                'name' => 'BALANCE_WARNINGS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 302,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            323 => 
+            array (
+                'id' => 333,
+                'name' => 'Продукты группы CRM',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 197,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            324 => 
+            array (
+                'id' => 334,
+                'name' => 'CUSTOMER_POLLS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 333,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            325 => 
+            array (
+                'id' => 335,
+                'name' => 'CRM_UDS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 333,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            326 => 
+            array (
+                'id' => 336,
+                'name' => 'CRM_MNP',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 333,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            327 => 
+            array (
+                'id' => 337,
+                'name' => 'CRM_CMS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 333,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            328 => 
+            array (
+                'id' => 338,
+                'name' => 'CMS_HPSM_ADAPTER',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 333,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            329 => 
+            array (
+                'id' => 339,
+                'name' => 'CMS_HPSD_ADAPTER',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 333,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            330 => 
+            array (
+                'id' => 340,
+                'name' => 'CMS_BIS_EVENT_PROC',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 333,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            331 => 
+            array (
+                'id' => 341,
+                'name' => 'CMS_ARCHIVER_CFG',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 333,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            332 => 
+            array (
+                'id' => 342,
+                'name' => 'Продукты группы HAS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 197,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            333 => 
+            array (
+                'id' => 344,
+                'name' => 'HAS_KIT',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 342,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            334 => 
+            array (
+                'id' => 345,
+                'name' => 'HAS_KEYS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 342,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            335 => 
+            array (
+                'id' => 346,
+                'name' => 'HAS_CCINT',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 342,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            336 => 
+            array (
+                'id' => 347,
+                'name' => 'HAS_ACCESS_MANAGER',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 342,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            337 => 
+            array (
+                'id' => 348,
+                'name' => 'HAS',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 342,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            338 => 
+            array (
+                'id' => 349,
+                'name' => 'Продукты группы HEX',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 197,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            339 => 
             array (
                 'id' => 351,
                 'name' => 'HEX_TELNET2COM',
@@ -4502,7 +4437,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            345 => 
+            340 => 
             array (
                 'id' => 352,
                 'name' => 'HEX_SCRIPTS',
@@ -4515,7 +4450,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            346 => 
+            341 => 
             array (
                 'id' => 353,
                 'name' => 'HEX_REQ_ADAPTER',
@@ -4528,7 +4463,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            347 => 
+            342 => 
             array (
                 'id' => 354,
                 'name' => 'HEX_PRFL',
@@ -4541,7 +4476,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            348 => 
+            343 => 
             array (
                 'id' => 355,
                 'name' => 'HEX_KEYS',
@@ -4554,7 +4489,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            349 => 
+            344 => 
             array (
                 'id' => 356,
                 'name' => 'HEX_COMMON_DOC',
@@ -4567,7 +4502,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            350 => 
+            345 => 
             array (
                 'id' => 357,
                 'name' => 'GUP_SERVER_COMMON_DOC',
@@ -4580,7 +4515,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            351 => 
+            346 => 
             array (
                 'id' => 358,
                 'name' => 'GUP_SERVER',
@@ -4593,7 +4528,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            352 => 
+            347 => 
             array (
                 'id' => 359,
                 'name' => 'EQUIPMENT_CONTROL',
@@ -4606,7 +4541,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            353 => 
+            348 => 
             array (
                 'id' => 360,
                 'name' => 'CCNT_Q3_SIEMENS',
@@ -4619,7 +4554,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            354 => 
+            349 => 
             array (
                 'id' => 361,
                 'name' => 'Продукты группы HRS',
@@ -4632,7 +4567,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            355 => 
+            350 => 
             array (
                 'id' => 363,
                 'name' => 'MDF_KEYS',
@@ -4645,7 +4580,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            356 => 
+            351 => 
             array (
                 'id' => 364,
                 'name' => 'MDF',
@@ -4658,7 +4593,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            357 => 
+            352 => 
             array (
                 'id' => 365,
                 'name' => 'HRS_KEYS',
@@ -4671,7 +4606,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            358 => 
+            353 => 
             array (
                 'id' => 366,
                 'name' => 'HRS_COMMON_DOC',
@@ -4684,7 +4619,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            359 => 
+            354 => 
             array (
                 'id' => 367,
                 'name' => 'HRS_ADAPTER',
@@ -4697,7 +4632,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            360 => 
+            355 => 
             array (
                 'id' => 368,
                 'name' => 'HRS',
@@ -4710,7 +4645,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            361 => 
+            356 => 
             array (
                 'id' => 369,
                 'name' => 'CHARGESDB',
@@ -4723,7 +4658,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            362 => 
+            357 => 
             array (
                 'id' => 370,
                 'name' => 'ARES_SCRIPTS',
@@ -4736,7 +4671,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            363 => 
+            358 => 
             array (
                 'id' => 371,
                 'name' => 'ARES_KEYS',
@@ -4749,7 +4684,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            364 => 
+            359 => 
             array (
                 'id' => 372,
                 'name' => 'ARES',
@@ -4762,7 +4697,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            365 => 
+            360 => 
             array (
                 'id' => 373,
                 'name' => 'Продукты группы ISEM',
@@ -4775,7 +4710,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            366 => 
+            361 => 
             array (
                 'id' => 374,
                 'name' => 'WPSEC',
@@ -4788,7 +4723,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            367 => 
+            362 => 
             array (
                 'id' => 376,
                 'name' => 'TDM',
@@ -4801,7 +4736,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            368 => 
+            363 => 
             array (
                 'id' => 377,
                 'name' => 'SVC_BASE',
@@ -4814,7 +4749,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            369 => 
+            364 => 
             array (
                 'id' => 378,
                 'name' => 'SSP',
@@ -4827,7 +4762,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            370 => 
+            365 => 
             array (
                 'id' => 380,
                 'name' => 'PS_CA_ADAPTERS',
@@ -4840,7 +4775,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            371 => 
+            366 => 
             array (
                 'id' => 381,
                 'name' => 'OPENAPI',
@@ -4853,7 +4788,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            372 => 
+            367 => 
             array (
                 'id' => 382,
                 'name' => 'MDH',
@@ -4866,7 +4801,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            373 => 
+            368 => 
             array (
                 'id' => 384,
                 'name' => 'FGAC_FRAMEWORK',
@@ -4879,7 +4814,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            374 => 
+            369 => 
             array (
                 'id' => 385,
                 'name' => 'DRS_BFN_ADAPTER',
@@ -4892,7 +4827,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            375 => 
+            370 => 
             array (
                 'id' => 386,
                 'name' => 'DRS',
@@ -4905,7 +4840,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            376 => 
+            371 => 
             array (
                 'id' => 387,
                 'name' => 'DATA_CRYPTER',
@@ -4918,7 +4853,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            377 => 
+            372 => 
             array (
                 'id' => 388,
                 'name' => 'Продукты группы ITC',
@@ -4931,7 +4866,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            378 => 
+            373 => 
             array (
                 'id' => 389,
                 'name' => 'LCR',
@@ -4944,7 +4879,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            379 => 
+            374 => 
             array (
                 'id' => 390,
                 'name' => 'ITC_BDP',
@@ -4957,7 +4892,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            380 => 
+            375 => 
             array (
                 'id' => 391,
                 'name' => 'ITC',
@@ -4970,7 +4905,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            381 => 
+            376 => 
             array (
                 'id' => 392,
                 'name' => 'Продукты группы LCCM',
@@ -4983,7 +4918,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            382 => 
+            377 => 
             array (
                 'id' => 393,
                 'name' => 'LOYALTY_PR',
@@ -4996,7 +4931,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            383 => 
+            378 => 
             array (
                 'id' => 394,
                 'name' => 'DCS_ACUDISCONT',
@@ -5009,7 +4944,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            384 => 
+            379 => 
             array (
                 'id' => 395,
                 'name' => 'CRM_DCS',
@@ -5022,7 +4957,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            385 => 
+            380 => 
             array (
                 'id' => 396,
                 'name' => 'CRM_CIS',
@@ -5035,7 +4970,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            386 => 
+            381 => 
             array (
                 'id' => 397,
                 'name' => 'CIS_SCRIPTS',
@@ -5048,7 +4983,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            387 => 
+            382 => 
             array (
                 'id' => 398,
                 'name' => 'CIS',
@@ -5061,7 +4996,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            388 => 
+            383 => 
             array (
                 'id' => 399,
                 'name' => 'CIS_DWH_BONSRC_ADP',
@@ -5074,7 +5009,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            389 => 
+            384 => 
             array (
                 'id' => 400,
                 'name' => 'CIS_DCS_SEGM_ADP',
@@ -5087,7 +5022,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            390 => 
+            385 => 
             array (
                 'id' => 401,
                 'name' => 'CIS_BIS_SEGM_ADP',
@@ -5100,7 +5035,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            391 => 
+            386 => 
             array (
                 'id' => 402,
                 'name' => 'CIS_BIS_BONSRC_ADP',
@@ -5113,7 +5048,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            392 => 
+            387 => 
             array (
                 'id' => 403,
                 'name' => 'CIS_BIS_ADP',
@@ -5126,7 +5061,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            393 => 
+            388 => 
             array (
                 'id' => 404,
                 'name' => 'CIS_BFN_BONSRC_ADP',
@@ -5139,7 +5074,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            394 => 
+            389 => 
             array (
                 'id' => 405,
                 'name' => 'CIS_BFN_ADP',
@@ -5152,7 +5087,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            395 => 
+            390 => 
             array (
                 'id' => 406,
                 'name' => 'BONUS_PR',
@@ -5165,7 +5100,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            396 => 
+            391 => 
             array (
                 'id' => 407,
                 'name' => 'ACRS_KEYS',
@@ -5178,7 +5113,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            397 => 
+            392 => 
             array (
                 'id' => 408,
                 'name' => 'ACRS',
@@ -5191,7 +5126,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            398 => 
+            393 => 
             array (
                 'id' => 409,
                 'name' => 'Продукты группы MD',
@@ -5204,7 +5139,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            399 => 
+            394 => 
             array (
                 'id' => 410,
                 'name' => 'TAP3_HANDLERS',
@@ -5217,7 +5152,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            400 => 
+            395 => 
             array (
                 'id' => 411,
                 'name' => 'RADIUS_AAA_HANDLERS',
@@ -5230,7 +5165,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            401 => 
+            396 => 
             array (
                 'id' => 412,
                 'name' => 'NOKIA_HANDLERS',
@@ -5243,7 +5178,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            402 => 
+            397 => 
             array (
                 'id' => 413,
                 'name' => 'MD_KEYS',
@@ -5256,7 +5191,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            403 => 
+            398 => 
             array (
                 'id' => 414,
                 'name' => 'MD_BASE',
@@ -5269,7 +5204,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            404 => 
+            399 => 
             array (
                 'id' => 415,
                 'name' => 'CHR_ZTE',
@@ -5282,7 +5217,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            405 => 
+            400 => 
             array (
                 'id' => 416,
                 'name' => 'CHR_SSP',
@@ -5295,7 +5230,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            406 => 
+            401 => 
             array (
                 'id' => 417,
                 'name' => 'CHR_NORTEL_CDMA',
@@ -5308,7 +5243,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            407 => 
+            402 => 
             array (
                 'id' => 418,
                 'name' => 'CHR_NETFLOW',
@@ -5321,7 +5256,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            408 => 
+            403 => 
             array (
                 'id' => 419,
                 'name' => 'CHR_N_MMS',
@@ -5334,7 +5269,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            409 => 
+            404 => 
             array (
                 'id' => 420,
                 'name' => 'CHR_N_GPRS',
@@ -5347,7 +5282,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            410 => 
+            405 => 
             array (
                 'id' => 421,
                 'name' => 'CHR_N_CAMEL',
@@ -5360,7 +5295,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            411 => 
+            406 => 
             array (
                 'id' => 422,
                 'name' => 'CHR_N',
@@ -5373,7 +5308,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            412 => 
+            407 => 
             array (
                 'id' => 423,
                 'name' => 'CHR_LUCENT_CDMA',
@@ -5386,7 +5321,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            413 => 
+            408 => 
             array (
                 'id' => 424,
                 'name' => 'CHR_HUAWEI_SOFTX',
@@ -5399,7 +5334,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            414 => 
+            409 => 
             array (
                 'id' => 425,
                 'name' => 'CHR_HUAWEI',
@@ -5412,7 +5347,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            415 => 
+            410 => 
             array (
                 'id' => 426,
                 'name' => 'CHR_GPRS',
@@ -5425,7 +5360,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            416 => 
+            411 => 
             array (
                 'id' => 427,
                 'name' => 'CHR_EWSD',
@@ -5438,7 +5373,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            417 => 
+            412 => 
             array (
                 'id' => 428,
                 'name' => 'CHR_ELSIS',
@@ -5451,7 +5386,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            418 => 
+            413 => 
             array (
                 'id' => 429,
                 'name' => 'CHR_E_MMS',
@@ -5464,7 +5399,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            419 => 
+            414 => 
             array (
                 'id' => 430,
                 'name' => 'CHR_DATA_CDMA',
@@ -5477,7 +5412,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            420 => 
+            415 => 
             array (
                 'id' => 431,
                 'name' => 'CDR_CONVERTER',
@@ -5490,7 +5425,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            421 => 
+            416 => 
             array (
                 'id' => 433,
                 'name' => 'Продукты группы MON',
@@ -5503,7 +5438,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            422 => 
+            417 => 
             array (
                 'id' => 434,
                 'name' => 'WEB_FORMS_MON',
@@ -5516,7 +5451,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            423 => 
+            418 => 
             array (
                 'id' => 435,
                 'name' => 'SNMP_INT',
@@ -5529,7 +5464,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            424 => 
+            419 => 
             array (
                 'id' => 436,
                 'name' => 'MON_KEYS',
@@ -5542,7 +5477,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            425 => 
+            420 => 
             array (
                 'id' => 437,
                 'name' => 'APACHE_MON',
@@ -5555,7 +5490,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            426 => 
+            421 => 
             array (
                 'id' => 438,
                 'name' => 'Продукты группы NS',
@@ -5568,7 +5503,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            427 => 
+            422 => 
             array (
                 'id' => 439,
                 'name' => 'NS_NTF',
@@ -5581,7 +5516,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            428 => 
+            423 => 
             array (
                 'id' => 440,
                 'name' => 'NS_CDR_PROCESSING',
@@ -5594,7 +5529,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            429 => 
+            424 => 
             array (
                 'id' => 441,
                 'name' => 'NS_CART',
@@ -5607,7 +5542,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            430 => 
+            425 => 
             array (
                 'id' => 442,
                 'name' => 'NS_BRT_SYNC',
@@ -5620,7 +5555,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            431 => 
+            426 => 
             array (
                 'id' => 443,
                 'name' => 'HZS',
@@ -5633,7 +5568,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            432 => 
+            427 => 
             array (
                 'id' => 444,
                 'name' => 'BRT_TOOLS',
@@ -5646,7 +5581,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            433 => 
+            428 => 
             array (
                 'id' => 445,
                 'name' => 'BRT_PROTEI_ADAPTER',
@@ -5659,7 +5594,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            434 => 
+            429 => 
             array (
                 'id' => 446,
                 'name' => 'BRT_LUCENT_ADAPTER',
@@ -5672,7 +5607,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            435 => 
+            430 => 
             array (
                 'id' => 447,
                 'name' => 'BRT_DIAMETER_ADAPTER',
@@ -5685,7 +5620,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            436 => 
+            431 => 
             array (
                 'id' => 448,
                 'name' => 'BRT_BERCUT_ADAPTER',
@@ -5698,7 +5633,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            437 => 
+            432 => 
             array (
                 'id' => 449,
                 'name' => 'BRT',
@@ -5711,7 +5646,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            438 => 
+            433 => 
             array (
                 'id' => 450,
                 'name' => 'Продукты группы OTHER',
@@ -5724,7 +5659,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            439 => 
+            434 => 
             array (
                 'id' => 451,
                 'name' => 'OTHER_WORKS',
@@ -5737,7 +5672,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            440 => 
+            435 => 
             array (
                 'id' => 452,
                 'name' => 'Продукты группы PAYS',
@@ -5750,7 +5685,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            441 => 
+            436 => 
             array (
                 'id' => 453,
                 'name' => 'UNIPAY_MASTERCARD_INT',
@@ -5763,7 +5698,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            442 => 
+            437 => 
             array (
                 'id' => 454,
                 'name' => 'UNIPAY_COMMON_DOC',
@@ -5776,7 +5711,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            443 => 
+            438 => 
             array (
                 'id' => 455,
                 'name' => 'UNIPAY',
@@ -5789,7 +5724,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            444 => 
+            439 => 
             array (
                 'id' => 456,
                 'name' => 'SBMS_PULSAR',
@@ -5802,7 +5737,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            445 => 
+            440 => 
             array (
                 'id' => 457,
                 'name' => 'SBMS_PAYMENT',
@@ -5815,7 +5750,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            446 => 
+            441 => 
             array (
                 'id' => 458,
                 'name' => 'SBMS_ONYMA',
@@ -5828,7 +5763,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            447 => 
+            442 => 
             array (
                 'id' => 459,
                 'name' => 'SBMS_ISKRA',
@@ -5841,7 +5776,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            448 => 
+            443 => 
             array (
                 'id' => 460,
                 'name' => 'SBMS_FR_SHTRIKH',
@@ -5854,7 +5789,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            449 => 
+            444 => 
             array (
                 'id' => 461,
                 'name' => 'SBMS_EXTPAYMENT_COMMON_DOC',
@@ -5867,7 +5802,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            450 => 
+            445 => 
             array (
                 'id' => 462,
                 'name' => 'SBMS_DATECS',
@@ -5880,7 +5815,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            451 => 
+            446 => 
             array (
                 'id' => 463,
                 'name' => 'SBMS_BIS_PAYMENT_INT',
@@ -5893,7 +5828,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            452 => 
+            447 => 
             array (
                 'id' => 464,
                 'name' => 'SBMS_AZEPSON',
@@ -5906,7 +5841,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            453 => 
+            448 => 
             array (
                 'id' => 465,
                 'name' => 'SBMS_AMC',
@@ -5919,7 +5854,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            454 => 
+            449 => 
             array (
                 'id' => 466,
                 'name' => 'PAYS_SCRIPTS',
@@ -5932,7 +5867,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            455 => 
+            450 => 
             array (
                 'id' => 467,
                 'name' => 'PAYS_OAPI',
@@ -5945,7 +5880,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            456 => 
+            451 => 
             array (
                 'id' => 468,
                 'name' => 'PAYS_AGNT',
@@ -5958,7 +5893,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            457 => 
+            452 => 
             array (
                 'id' => 469,
                 'name' => 'INT_ESPP',
@@ -5971,7 +5906,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            458 => 
+            453 => 
             array (
                 'id' => 470,
                 'name' => 'FFP_XML',
@@ -5984,7 +5919,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            459 => 
+            454 => 
             array (
                 'id' => 471,
                 'name' => 'CRT_COMMON_DOC',
@@ -5997,7 +5932,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            460 => 
+            455 => 
             array (
                 'id' => 472,
                 'name' => 'CCI_1.0',
@@ -6010,7 +5945,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            461 => 
+            456 => 
             array (
                 'id' => 473,
                 'name' => 'Продукты группы PRM',
@@ -6023,7 +5958,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            462 => 
+            457 => 
             array (
                 'id' => 474,
                 'name' => 'PSCP',
@@ -6036,7 +5971,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            463 => 
+            458 => 
             array (
                 'id' => 476,
                 'name' => 'Продукты группы RBSM',
@@ -6049,7 +5984,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            464 => 
+            459 => 
             array (
                 'id' => 477,
                 'name' => 'WLP',
@@ -6062,7 +5997,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            465 => 
+            460 => 
             array (
                 'id' => 478,
                 'name' => 'VSP',
@@ -6075,7 +6010,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            466 => 
+            461 => 
             array (
                 'id' => 479,
                 'name' => 'RBSM_DRA',
@@ -6088,7 +6023,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            467 => 
+            462 => 
             array (
                 'id' => 480,
                 'name' => 'NS_PCCM',
@@ -6101,7 +6036,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            468 => 
+            463 => 
             array (
                 'id' => 481,
                 'name' => 'NS_BRM_HUAWEI_ADP',
@@ -6114,7 +6049,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            469 => 
+            464 => 
             array (
                 'id' => 482,
                 'name' => 'NS_BRM_ERICSSON_ADP',
@@ -6127,7 +6062,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            470 => 
+            465 => 
             array (
                 'id' => 483,
                 'name' => 'NS_BIM',
@@ -6140,7 +6075,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            471 => 
+            466 => 
             array (
                 'id' => 484,
                 'name' => 'BRM_ZTE_ADAPTER',
@@ -6153,7 +6088,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            472 => 
+            467 => 
             array (
                 'id' => 485,
                 'name' => 'BRM_JUNIPER_ADAPTER',
@@ -6166,7 +6101,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            473 => 
+            468 => 
             array (
                 'id' => 486,
                 'name' => 'BRM_CISCO_AS_ADAPTER',
@@ -6179,7 +6114,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            474 => 
+            469 => 
             array (
                 'id' => 487,
                 'name' => 'BRM_CISCO_ADAPTER',
@@ -6192,7 +6127,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            475 => 
+            470 => 
             array (
                 'id' => 488,
                 'name' => 'BRM_ALCATEL_ADAPTER',
@@ -6205,7 +6140,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            476 => 
+            471 => 
             array (
                 'id' => 489,
                 'name' => 'BRM',
@@ -6218,7 +6153,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            477 => 
+            472 => 
             array (
                 'id' => 490,
                 'name' => 'Продукты группы RIM',
@@ -6231,7 +6166,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            478 => 
+            473 => 
             array (
                 'id' => 491,
                 'name' => 'WMS',
@@ -6244,7 +6179,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            479 => 
+            474 => 
             array (
                 'id' => 492,
                 'name' => 'WH_INT',
@@ -6257,7 +6192,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            480 => 
+            475 => 
             array (
                 'id' => 493,
                 'name' => 'SCRATCH',
@@ -6270,7 +6205,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            481 => 
+            476 => 
             array (
                 'id' => 494,
                 'name' => 'SCM',
@@ -6283,7 +6218,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            482 => 
+            477 => 
             array (
                 'id' => 495,
                 'name' => 'SBMS_WAREHOUSE',
@@ -6296,7 +6231,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            483 => 
+            478 => 
             array (
                 'id' => 496,
                 'name' => 'RIM_WEB',
@@ -6309,7 +6244,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            484 => 
+            479 => 
             array (
                 'id' => 497,
                 'name' => 'RIM_BASE',
@@ -6322,7 +6257,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            485 => 
+            480 => 
             array (
                 'id' => 498,
                 'name' => 'OCX_AUXILIARY_SIM',
@@ -6335,7 +6270,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            486 => 
+            481 => 
             array (
                 'id' => 499,
                 'name' => 'NRI',
@@ -6348,7 +6283,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            487 => 
+            482 => 
             array (
                 'id' => 500,
                 'name' => 'INST_COMPLECTS',
@@ -6361,7 +6296,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            488 => 
+            483 => 
             array (
                 'id' => 501,
                 'name' => 'CPS',
@@ -6374,7 +6309,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            489 => 
+            484 => 
             array (
                 'id' => 502,
                 'name' => 'Продукты группы RMS',
@@ -6387,7 +6322,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            490 => 
+            485 => 
             array (
                 'id' => 503,
                 'name' => 'UFM',
@@ -6400,7 +6335,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            491 => 
+            486 => 
             array (
                 'id' => 504,
                 'name' => 'RMS_PREVENT',
@@ -6413,7 +6348,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            492 => 
+            487 => 
             array (
                 'id' => 505,
                 'name' => 'RMS_ODPS_ADAPTER',
@@ -6426,7 +6361,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            493 => 
+            488 => 
             array (
                 'id' => 506,
                 'name' => 'RMS_MULTI_BIS_ADAPTER',
@@ -6439,7 +6374,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            494 => 
+            489 => 
             array (
                 'id' => 507,
                 'name' => 'RMS_DEBT',
@@ -6452,7 +6387,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            495 => 
+            490 => 
             array (
                 'id' => 508,
                 'name' => 'RMS_COURT',
@@ -6465,7 +6400,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            496 => 
+            491 => 
             array (
                 'id' => 509,
                 'name' => 'RMS',
@@ -6478,7 +6413,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            497 => 
+            492 => 
             array (
                 'id' => 510,
                 'name' => 'RMS_CMS_ADAPTER',
@@ -6491,7 +6426,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            498 => 
+            493 => 
             array (
                 'id' => 511,
                 'name' => 'RMS_BIS_ADAPTER',
@@ -6504,7 +6439,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            499 => 
+            494 => 
             array (
                 'id' => 512,
                 'name' => 'Продукты группы RND',
@@ -6517,9 +6452,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-        ));
-        \DB::table('skills')->insert(array (
-            0 => 
+            495 => 
             array (
                 'id' => 513,
                 'name' => 'UBS',
@@ -6532,7 +6465,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            1 => 
+            496 => 
             array (
                 'id' => 514,
                 'name' => 'TREC_ANALYSER',
@@ -6545,7 +6478,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
+            497 => 
             array (
                 'id' => 515,
                 'name' => 'TARIFF_BOOK',
@@ -6558,7 +6491,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            3 => 
+            498 => 
             array (
                 'id' => 516,
                 'name' => 'SPP',
@@ -6571,7 +6504,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            4 => 
+            499 => 
             array (
                 'id' => 517,
                 'name' => 'PSC',
@@ -6584,7 +6517,9 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            5 => 
+        ));
+        \DB::connection('pgsql')->table('skills')->insert(array (
+            0 => 
             array (
                 'id' => 518,
                 'name' => 'NGDR',
@@ -6597,7 +6532,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            6 => 
+            1 => 
             array (
                 'id' => 519,
                 'name' => 'LIS',
@@ -6610,7 +6545,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            7 => 
+            2 => 
             array (
                 'id' => 520,
                 'name' => 'HTTP_METADATA_PROBE',
@@ -6623,7 +6558,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            8 => 
+            3 => 
             array (
                 'id' => 521,
                 'name' => 'DPI_PROBE',
@@ -6636,7 +6571,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            9 => 
+            4 => 
             array (
                 'id' => 522,
                 'name' => 'DPI_GRID',
@@ -6649,7 +6584,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            10 => 
+            5 => 
             array (
                 'id' => 523,
                 'name' => 'CRIS',
@@ -6662,7 +6597,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            11 => 
+            6 => 
             array (
                 'id' => 524,
                 'name' => 'CRAB',
@@ -6675,7 +6610,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            12 => 
+            7 => 
             array (
                 'id' => 525,
                 'name' => 'CNC',
@@ -6688,7 +6623,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            13 => 
+            8 => 
             array (
                 'id' => 526,
                 'name' => 'CDR_SERVER_SIEMENS_ICAMA',
@@ -6701,7 +6636,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            14 => 
+            9 => 
             array (
                 'id' => 527,
                 'name' => 'CDR_SERVER_LEGACY_MEDIATOR',
@@ -6714,7 +6649,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            15 => 
+            10 => 
             array (
                 'id' => 528,
                 'name' => 'CDR_SERVER_ISKRA_SI2000',
@@ -6727,7 +6662,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            16 => 
+            11 => 
             array (
                 'id' => 529,
                 'name' => 'CDR_SERVER_HUAWEI_FIXED',
@@ -6740,7 +6675,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            17 => 
+            12 => 
             array (
                 'id' => 530,
                 'name' => 'CDR_SERVER_GPRS_LTE_3GPP',
@@ -6753,7 +6688,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            18 => 
+            13 => 
             array (
                 'id' => 531,
                 'name' => 'CDR_SERVER_ALCATEL_BIN',
@@ -6766,7 +6701,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            19 => 
+            14 => 
             array (
                 'id' => 532,
                 'name' => 'CDR_SERVER_ALCATEL_ASN',
@@ -6779,7 +6714,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            20 => 
+            15 => 
             array (
                 'id' => 533,
                 'name' => 'CDR_SERVER',
@@ -6792,7 +6727,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            21 => 
+            16 => 
             array (
                 'id' => 534,
                 'name' => 'CCM_PORTAL',
@@ -6805,7 +6740,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            22 => 
+            17 => 
             array (
                 'id' => 535,
                 'name' => 'CCM',
@@ -6818,7 +6753,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            23 => 
+            18 => 
             array (
                 'id' => 536,
                 'name' => 'CA',
@@ -6831,7 +6766,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            24 => 
+            19 => 
             array (
                 'id' => 537,
                 'name' => 'AOC',
@@ -6844,7 +6779,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            25 => 
+            20 => 
             array (
                 'id' => 538,
                 'name' => 'Продукты группы RSS',
@@ -6857,7 +6792,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            26 => 
+            21 => 
             array (
                 'id' => 539,
                 'name' => 'XRS',
@@ -6870,7 +6805,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            27 => 
+            22 => 
             array (
                 'id' => 540,
                 'name' => 'RSS_SURTAP',
@@ -6883,7 +6818,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            28 => 
+            23 => 
             array (
                 'id' => 541,
                 'name' => 'RSS_SURP',
@@ -6896,7 +6831,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            29 => 
+            24 => 
             array (
                 'id' => 542,
                 'name' => 'RSS',
@@ -6909,7 +6844,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            30 => 
+            25 => 
             array (
                 'id' => 543,
                 'name' => 'RRF',
@@ -6922,7 +6857,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            31 => 
+            26 => 
             array (
                 'id' => 544,
                 'name' => 'RFR',
@@ -6935,7 +6870,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            32 => 
+            27 => 
             array (
                 'id' => 545,
                 'name' => 'RDX',
@@ -6948,7 +6883,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            33 => 
+            28 => 
             array (
                 'id' => 546,
                 'name' => 'RCF',
@@ -6961,7 +6896,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            34 => 
+            29 => 
             array (
                 'id' => 548,
                 'name' => 'ASN_XML_EDITOR',
@@ -6974,7 +6909,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            35 => 
+            30 => 
             array (
                 'id' => 550,
                 'name' => 'Продукты группы SBMS',
@@ -6987,7 +6922,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            36 => 
+            31 => 
             array (
                 'id' => 551,
                 'name' => 'SBMS_RETWIN',
@@ -7000,7 +6935,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            37 => 
+            32 => 
             array (
                 'id' => 552,
                 'name' => 'SBMS_REFERENCE_DATA',
@@ -7013,7 +6948,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            38 => 
+            33 => 
             array (
                 'id' => 553,
                 'name' => 'SBMS_MOBIL_WH_INT',
@@ -7026,7 +6961,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            39 => 
+            34 => 
             array (
                 'id' => 554,
                 'name' => 'SBMS_HMC',
@@ -7039,7 +6974,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            40 => 
+            35 => 
             array (
                 'id' => 555,
                 'name' => 'SBMS_FORMS_MON',
@@ -7052,7 +6987,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            41 => 
+            36 => 
             array (
                 'id' => 556,
                 'name' => 'SBMS_FKK',
@@ -7065,7 +7000,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            42 => 
+            37 => 
             array (
                 'id' => 557,
                 'name' => 'SBMS_FGAC_ADP',
@@ -7078,7 +7013,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            43 => 
+            38 => 
             array (
                 'id' => 558,
                 'name' => 'SBMS_EXTPAYMENT',
@@ -7091,7 +7026,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            44 => 
+            39 => 
             array (
                 'id' => 560,
                 'name' => 'SBMS_CORPWIN',
@@ -7104,7 +7039,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            45 => 
+            40 => 
             array (
                 'id' => 561,
                 'name' => 'SBMS_CCWIN',
@@ -7117,7 +7052,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            46 => 
+            41 => 
             array (
                 'id' => 562,
                 'name' => 'SBMS_BIS_FKK_INT',
@@ -7130,7 +7065,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            47 => 
+            42 => 
             array (
                 'id' => 563,
                 'name' => 'SBMS_BIS_AGENT_INT',
@@ -7143,7 +7078,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            48 => 
+            43 => 
             array (
                 'id' => 564,
                 'name' => 'SBMS_BIS_ACCOUNT_INT',
@@ -7156,7 +7091,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            49 => 
+            44 => 
             array (
                 'id' => 565,
                 'name' => 'SBMS_BFN_PAYMENT_INT',
@@ -7169,7 +7104,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            50 => 
+            45 => 
             array (
                 'id' => 566,
                 'name' => 'SBMS_BASE',
@@ -7182,7 +7117,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            51 => 
+            46 => 
             array (
                 'id' => 567,
                 'name' => 'SBMS_ACCOUNT',
@@ -7195,7 +7130,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            52 => 
+            47 => 
             array (
                 'id' => 569,
                 'name' => 'MOBILE_RETWIN',
@@ -7208,7 +7143,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            53 => 
+            48 => 
             array (
                 'id' => 570,
                 'name' => 'IBR_SCRIPTS',
@@ -7221,7 +7156,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            54 => 
+            49 => 
             array (
                 'id' => 571,
                 'name' => 'Продукты группы SCC',
@@ -7234,7 +7169,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            55 => 
+            50 => 
             array (
                 'id' => 572,
                 'name' => 'SCC_USDA',
@@ -7247,7 +7182,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            56 => 
+            51 => 
             array (
                 'id' => 573,
                 'name' => 'SCC_UNIPAY',
@@ -7260,7 +7195,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            57 => 
+            52 => 
             array (
                 'id' => 574,
                 'name' => 'SCC_SCRIPTS',
@@ -7273,7 +7208,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            58 => 
+            53 => 
             array (
                 'id' => 575,
                 'name' => 'SCC_ROUTER',
@@ -7286,7 +7221,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            59 => 
+            54 => 
             array (
                 'id' => 576,
                 'name' => 'SCC_PSMS',
@@ -7299,7 +7234,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            60 => 
+            55 => 
             array (
                 'id' => 577,
                 'name' => 'SCC_PC',
@@ -7312,7 +7247,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            61 => 
+            56 => 
             array (
                 'id' => 578,
                 'name' => 'SCC_CP',
@@ -7325,7 +7260,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            62 => 
+            57 => 
             array (
                 'id' => 579,
                 'name' => 'SCC_CORE',
@@ -7338,7 +7273,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            63 => 
+            58 => 
             array (
                 'id' => 580,
                 'name' => 'SCC_BFN_ADAPTER',
@@ -7351,7 +7286,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            64 => 
+            59 => 
             array (
                 'id' => 581,
                 'name' => 'SCC',
@@ -7364,7 +7299,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            65 => 
+            60 => 
             array (
                 'id' => 582,
                 'name' => 'M2M_CC',
@@ -7377,7 +7312,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            66 => 
+            61 => 
             array (
                 'id' => 583,
                 'name' => 'CRT_BIS_ADAPTER',
@@ -7390,7 +7325,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            67 => 
+            62 => 
             array (
                 'id' => 584,
                 'name' => 'CRT',
@@ -7403,7 +7338,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            68 => 
+            63 => 
             array (
                 'id' => 585,
                 'name' => 'CMS_SCC_ADDON',
@@ -7416,7 +7351,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            69 => 
+            64 => 
             array (
                 'id' => 586,
                 'name' => 'CIC',
@@ -7429,7 +7364,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            70 => 
+            65 => 
             array (
                 'id' => 587,
                 'name' => 'Продукты группы SFA',
@@ -7442,7 +7377,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            71 => 
+            66 => 
             array (
                 'id' => 588,
                 'name' => 'SFA_TOOLS',
@@ -7455,7 +7390,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            72 => 
+            67 => 
             array (
                 'id' => 589,
                 'name' => 'SFA_SALE',
@@ -7468,7 +7403,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            73 => 
+            68 => 
             array (
                 'id' => 590,
                 'name' => 'SFA_IMPORT',
@@ -7481,7 +7416,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            74 => 
+            69 => 
             array (
                 'id' => 591,
                 'name' => 'SFA_ACCOUNT',
@@ -7494,7 +7429,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            75 => 
+            70 => 
             array (
                 'id' => 592,
                 'name' => 'SFA',
@@ -7507,7 +7442,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            76 => 
+            71 => 
             array (
                 'id' => 593,
                 'name' => 'Продукты группы SYSTEM_SOFT',
@@ -7520,7 +7455,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            77 => 
+            72 => 
             array (
                 'id' => 594,
                 'name' => 'XSTREAM',
@@ -7533,7 +7468,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            78 => 
+            73 => 
             array (
                 'id' => 595,
                 'name' => 'TOMCAT',
@@ -7546,7 +7481,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            79 => 
+            74 => 
             array (
                 'id' => 596,
                 'name' => 'SPRINGFRAMEWORK',
@@ -7559,7 +7494,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            80 => 
+            75 => 
             array (
                 'id' => 598,
                 'name' => 'REAL_SPEAK_TTS',
@@ -7572,7 +7507,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            81 => 
+            76 => 
             array (
                 'id' => 599,
                 'name' => 'ORACLE_DB',
@@ -7585,7 +7520,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            82 => 
+            77 => 
             array (
                 'id' => 600,
                 'name' => 'OPENLDAP',
@@ -7598,7 +7533,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            83 => 
+            78 => 
             array (
                 'id' => 601,
                 'name' => 'NETCAT',
@@ -7611,7 +7546,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            84 => 
+            79 => 
             array (
                 'id' => 602,
                 'name' => 'MSXML',
@@ -7624,7 +7559,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            85 => 
+            80 => 
             array (
                 'id' => 603,
                 'name' => 'LOKI',
@@ -7637,7 +7572,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            86 => 
+            81 => 
             array (
                 'id' => 604,
                 'name' => 'JQUERY',
@@ -7650,7 +7585,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            87 => 
+            82 => 
             array (
                 'id' => 605,
                 'name' => 'JAVASSIST',
@@ -7663,7 +7598,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            88 => 
+            83 => 
             array (
                 'id' => 606,
                 'name' => 'GCC_LIB',
@@ -7676,7 +7611,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            89 => 
+            84 => 
             array (
                 'id' => 607,
                 'name' => 'ECLIPSE_RE',
@@ -7689,7 +7624,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            90 => 
+            85 => 
             array (
                 'id' => 608,
                 'name' => 'DIALOGIC_DRV',
@@ -7702,7 +7637,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            91 => 
+            86 => 
             array (
                 'id' => 609,
                 'name' => 'COUCHBASE',
@@ -7715,7 +7650,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            92 => 
+            87 => 
             array (
                 'id' => 610,
                 'name' => 'CODEJOCK',
@@ -7728,7 +7663,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            93 => 
+            88 => 
             array (
                 'id' => 611,
                 'name' => 'CASSANDRA',
@@ -7741,7 +7676,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            94 => 
+            89 => 
             array (
                 'id' => 612,
                 'name' => 'BOOST',
@@ -7754,7 +7689,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            95 => 
+            90 => 
             array (
                 'id' => 613,
                 'name' => 'BINDOWS',
@@ -7767,7 +7702,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            96 => 
+            91 => 
             array (
                 'id' => 614,
                 'name' => 'BDE',
@@ -7780,7 +7715,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            97 => 
+            92 => 
             array (
                 'id' => 615,
                 'name' => 'APACHE_FOP',
@@ -7793,7 +7728,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            98 => 
+            93 => 
             array (
                 'id' => 616,
                 'name' => 'ACTIVE_PERL',
@@ -7806,7 +7741,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            99 => 
+            94 => 
             array (
                 'id' => 617,
                 'name' => 'Продукты группы TDP',
@@ -7819,7 +7754,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            100 => 
+            95 => 
             array (
                 'id' => 618,
                 'name' => 'TDP_SCRIPTS',
@@ -7832,7 +7767,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            101 => 
+            96 => 
             array (
                 'id' => 619,
                 'name' => 'TDP_KEYS',
@@ -7845,7 +7780,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            102 => 
+            97 => 
             array (
                 'id' => 620,
                 'name' => 'REPORT_SUPPORT',
@@ -7858,7 +7793,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            103 => 
+            98 => 
             array (
                 'id' => 621,
                 'name' => 'REPORT_ENGINE',
@@ -7871,7 +7806,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            104 => 
+            99 => 
             array (
                 'id' => 622,
                 'name' => 'ODPS_GRPT',
@@ -7884,7 +7819,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            105 => 
+            100 => 
             array (
                 'id' => 623,
                 'name' => 'ODPS_DLVR',
@@ -7897,7 +7832,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            106 => 
+            101 => 
             array (
                 'id' => 624,
                 'name' => 'ODPS',
@@ -7910,7 +7845,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            107 => 
+            102 => 
             array (
                 'id' => 625,
                 'name' => 'ODPS_CDOR',
@@ -7923,7 +7858,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            108 => 
+            103 => 
             array (
                 'id' => 626,
                 'name' => 'ODPS_BIS_ADAPTER',
@@ -7936,7 +7871,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            109 => 
+            104 => 
             array (
                 'id' => 627,
                 'name' => 'CDM',
@@ -7949,7 +7884,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            110 => 
+            105 => 
             array (
                 'id' => 628,
                 'name' => 'Продукты группы WBMS',
@@ -7962,7 +7897,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            111 => 
+            106 => 
             array (
                 'id' => 629,
                 'name' => 'WBMS_KEYS',
@@ -7975,7 +7910,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            112 => 
+            107 => 
             array (
                 'id' => 630,
                 'name' => 'WBMS_INQ',
@@ -7988,7 +7923,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            113 => 
+            108 => 
             array (
                 'id' => 631,
                 'name' => 'WBMS_EXT4TDS',
@@ -8001,7 +7936,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            114 => 
+            109 => 
             array (
                 'id' => 632,
                 'name' => 'WBMS_COMMON_DOC',
@@ -8014,7 +7949,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            115 => 
+            110 => 
             array (
                 'id' => 633,
                 'name' => 'WBMS_CLI',
@@ -8027,7 +7962,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            116 => 
+            111 => 
             array (
                 'id' => 635,
                 'name' => 'Программные средства',
@@ -8040,7 +7975,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            117 => 
+            112 => 
             array (
                 'id' => 636,
                 'name' => 'Oracle Applications',
@@ -8053,7 +7988,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            118 => 
+            113 => 
             array (
                 'id' => 637,
                 'name' => 'Oracle E-Business Suite',
@@ -8066,7 +8001,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            119 => 
+            114 => 
             array (
                 'id' => 638,
                 'name' => 'Oracle BI',
@@ -8079,7 +8014,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            120 => 
+            115 => 
             array (
                 'id' => 639,
                 'name' => 'Performance testing and measurement',
@@ -8092,7 +8027,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            121 => 
+            116 => 
             array (
                 'id' => 640,
                 'name' => 'SoapUI',
@@ -8105,7 +8040,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            122 => 
+            117 => 
             array (
                 'id' => 641,
                 'name' => 'JMeter',
@@ -8118,7 +8053,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            123 => 
+            118 => 
             array (
                 'id' => 642,
                 'name' => 'Caliper',
@@ -8131,7 +8066,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            124 => 
+            119 => 
             array (
                 'id' => 643,
                 'name' => 'Testing technology',
@@ -8144,7 +8079,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            125 => 
+            120 => 
             array (
                 'id' => 644,
                 'name' => 'WATIR',
@@ -8157,7 +8092,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            126 => 
+            121 => 
             array (
                 'id' => 645,
                 'name' => 'TestNG',
@@ -8170,7 +8105,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            127 => 
+            122 => 
             array (
                 'id' => 646,
                 'name' => 'Testlink',
@@ -8183,7 +8118,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            128 => 
+            123 => 
             array (
                 'id' => 647,
                 'name' => 'Selenium',
@@ -8196,7 +8131,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            129 => 
+            124 => 
             array (
                 'id' => 648,
                 'name' => 'Robot Framework',
@@ -8209,7 +8144,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            130 => 
+            125 => 
             array (
                 'id' => 649,
                 'name' => 'Mockito',
@@ -8222,7 +8157,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            131 => 
+            126 => 
             array (
                 'id' => 650,
                 'name' => 'Junit',
@@ -8235,7 +8170,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            132 => 
+            127 => 
             array (
                 'id' => 651,
                 'name' => 'Google Test/Google Mock',
@@ -8248,7 +8183,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            133 => 
+            128 => 
             array (
                 'id' => 652,
                 'name' => 'Web сервера',
@@ -8261,7 +8196,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            134 => 
+            129 => 
             array (
                 'id' => 653,
                 'name' => 'nginx',
@@ -8274,7 +8209,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            135 => 
+            130 => 
             array (
                 'id' => 654,
                 'name' => 'Apache',
@@ -8287,7 +8222,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            136 => 
+            131 => 
             array (
                 'id' => 655,
                 'name' => 'Дизайн, проектирование и прототипирование GUI',
@@ -8300,7 +8235,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            137 => 
+            132 => 
             array (
                 'id' => 656,
                 'name' => 'QuarkXPress',
@@ -8313,7 +8248,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            138 => 
+            133 => 
             array (
                 'id' => 657,
                 'name' => 'Microsoft Visio',
@@ -8326,7 +8261,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            139 => 
+            134 => 
             array (
                 'id' => 658,
                 'name' => 'LibreOffice Draw',
@@ -8339,7 +8274,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            140 => 
+            135 => 
             array (
                 'id' => 659,
                 'name' => 'Justinmind Prototyper',
@@ -8352,7 +8287,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            141 => 
+            136 => 
             array (
                 'id' => 660,
                 'name' => 'GIMP',
@@ -8365,7 +8300,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            142 => 
+            137 => 
             array (
                 'id' => 661,
                 'name' => 'Corel PHOTO-PAINT',
@@ -8378,7 +8313,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            143 => 
+            138 => 
             array (
                 'id' => 662,
                 'name' => 'Corel DRAW',
@@ -8391,7 +8326,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            144 => 
+            139 => 
             array (
                 'id' => 663,
                 'name' => 'Balsamiq',
@@ -8404,7 +8339,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            145 => 
+            140 => 
             array (
                 'id' => 664,
                 'name' => 'Axure',
@@ -8417,7 +8352,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            146 => 
+            141 => 
             array (
                 'id' => 665,
                 'name' => 'Adobe Photoshop',
@@ -8430,7 +8365,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            147 => 
+            142 => 
             array (
                 'id' => 666,
                 'name' => 'Adobe Indesign',
@@ -8443,7 +8378,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            148 => 
+            143 => 
             array (
                 'id' => 667,
                 'name' => 'Adobe Illustrator',
@@ -8456,7 +8391,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            149 => 
+            144 => 
             array (
                 'id' => 668,
                 'name' => 'Adobe Flash',
@@ -8469,7 +8404,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            150 => 
+            145 => 
             array (
                 'id' => 669,
                 'name' => 'Adobe Fireworks',
@@ -8482,7 +8417,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            151 => 
+            146 => 
             array (
                 'id' => 670,
                 'name' => 'Adobe Dreamweaver',
@@ -8495,7 +8430,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            152 => 
+            147 => 
             array (
                 'id' => 671,
                 'name' => 'Презентации и продажи',
@@ -8508,7 +8443,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            153 => 
+            148 => 
             array (
                 'id' => 672,
                 'name' => 'MS Power Point',
@@ -8521,7 +8456,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            154 => 
+            149 => 
             array (
                 'id' => 673,
                 'name' => 'Camtasia Studio',
@@ -8534,7 +8469,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            155 => 
+            150 => 
             array (
                 'id' => 674,
                 'name' => 'Программная архитектура',
@@ -8547,7 +8482,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            156 => 
+            151 => 
             array (
                 'id' => 675,
                 'name' => 'Sybase Power Designer',
@@ -8560,7 +8495,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            157 => 
+            152 => 
             array (
                 'id' => 676,
                 'name' => 'Sparx Enterprise Architect',
@@ -8573,7 +8508,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            158 => 
+            153 => 
             array (
                 'id' => 677,
                 'name' => 'Power Architect',
@@ -8586,7 +8521,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            159 => 
+            154 => 
             array (
                 'id' => 678,
                 'name' => 'ERwin Data Modeler',
@@ -8599,7 +8534,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            160 => 
+            155 => 
             array (
                 'id' => 679,
                 'name' => 'Системы управления версиями и системы сборки',
@@ -8612,7 +8547,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            161 => 
+            156 => 
             array (
                 'id' => 680,
                 'name' => 'WIX',
@@ -8625,7 +8560,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            162 => 
+            157 => 
             array (
                 'id' => 681,
             'name' => 'SVN (Subversion)',
@@ -8638,7 +8573,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            163 => 
+            158 => 
             array (
                 'id' => 682,
                 'name' => 'Microsoft VSS',
@@ -8651,7 +8586,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            164 => 
+            159 => 
             array (
                 'id' => 683,
                 'name' => 'Mercurial',
@@ -8664,7 +8599,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            165 => 
+            160 => 
             array (
                 'id' => 684,
                 'name' => 'IBM ClearCase',
@@ -8677,7 +8612,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            166 => 
+            161 => 
             array (
                 'id' => 685,
                 'name' => 'Git',
@@ -8690,7 +8625,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            167 => 
+            162 => 
             array (
                 'id' => 686,
                 'name' => 'GitLabs',
@@ -8703,7 +8638,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            168 => 
+            163 => 
             array (
                 'id' => 687,
                 'name' => 'CVS',
@@ -8716,7 +8651,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            169 => 
+            164 => 
             array (
                 'id' => 688,
                 'name' => 'Atlassian Bamboo',
@@ -8729,7 +8664,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            170 => 
+            165 => 
             array (
                 'id' => 689,
                 'name' => 'Apache Maven',
@@ -8742,7 +8677,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            171 => 
+            166 => 
             array (
                 'id' => 690,
                 'name' => 'Apache Ant',
@@ -8755,7 +8690,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            172 => 
+            167 => 
             array (
                 'id' => 691,
                 'name' => 'Системы управления проектами',
@@ -8768,7 +8703,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            173 => 
+            168 => 
             array (
                 'id' => 692,
                 'name' => 'TeamLab',
@@ -8781,7 +8716,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            174 => 
+            169 => 
             array (
                 'id' => 693,
                 'name' => 'SAP Professional Services Automation',
@@ -8794,7 +8729,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            175 => 
+            170 => 
             array (
                 'id' => 694,
                 'name' => 'Microsoft Project Professional',
@@ -8807,7 +8742,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            176 => 
+            171 => 
             array (
                 'id' => 695,
                 'name' => 'Atlassian Jira',
@@ -8820,7 +8755,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            177 => 
+            172 => 
             array (
                 'id' => 696,
                 'name' => 'Средства разработки',
@@ -8833,7 +8768,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            178 => 
+            173 => 
             array (
                 'id' => 697,
                 'name' => 'PL/SQL Developer',
@@ -8846,7 +8781,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            179 => 
+            174 => 
             array (
                 'id' => 698,
                 'name' => 'NetBeans',
@@ -8859,7 +8794,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            180 => 
+            175 => 
             array (
                 'id' => 699,
                 'name' => 'Microsoft Visual Studio',
@@ -8872,7 +8807,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            181 => 
+            176 => 
             array (
                 'id' => 700,
                 'name' => 'JetBrains IntelliJ IDEA',
@@ -8885,7 +8820,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            182 => 
+            177 => 
             array (
                 'id' => 701,
                 'name' => 'Eclipse',
@@ -8898,7 +8833,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            183 => 
+            178 => 
             array (
                 'id' => 702,
                 'name' => 'Altova XMLSpy',
@@ -8911,7 +8846,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            184 => 
+            179 => 
             array (
                 'id' => 703,
                 'name' => 'Стандарты и методологии',
@@ -8924,7 +8859,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            185 => 
+            180 => 
             array (
                 'id' => 704,
                 'name' => 'Стандарты для ПО',
@@ -8937,7 +8872,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            186 => 
+            181 => 
             array (
                 'id' => 705,
                 'name' => 'TickIT',
@@ -8950,7 +8885,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            187 => 
+            182 => 
             array (
                 'id' => 706,
                 'name' => 'SEI SW-CMM',
@@ -8963,7 +8898,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            188 => 
+            183 => 
             array (
                 'id' => 707,
                 'name' => 'ITIL',
@@ -8976,7 +8911,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            189 => 
+            184 => 
             array (
                 'id' => 708,
                 'name' => 'ISO 9000',
@@ -8989,7 +8924,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            190 => 
+            185 => 
             array (
                 'id' => 709,
                 'name' => 'Технологии управления',
@@ -9002,7 +8937,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            191 => 
+            186 => 
             array (
                 'id' => 710,
                 'name' => 'Scrum',
@@ -9015,7 +8950,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            192 => 
+            187 => 
             array (
                 'id' => 711,
                 'name' => 'PMI PMBoK',
@@ -9028,7 +8963,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            193 => 
+            188 => 
             array (
                 'id' => 712,
                 'name' => 'Agile',
@@ -9041,7 +8976,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            194 => 
+            189 => 
             array (
                 'id' => 713,
                 'name' => 'Телекоммуникации',
@@ -9054,7 +8989,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            195 => 
+            190 => 
             array (
                 'id' => 715,
                 'name' => 'TCAP ANSI',
@@ -9067,7 +9002,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            196 => 
+            191 => 
             array (
                 'id' => 716,
                 'name' => 'TCAP',
@@ -9080,7 +9015,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            197 => 
+            192 => 
             array (
                 'id' => 717,
                 'name' => 'SIP',
@@ -9093,7 +9028,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            198 => 
+            193 => 
             array (
                 'id' => 718,
                 'name' => 'MAP',
@@ -9106,7 +9041,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            199 => 
+            194 => 
             array (
                 'id' => 719,
                 'name' => 'ISUP',
@@ -9119,7 +9054,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            200 => 
+            195 => 
             array (
                 'id' => 720,
             'name' => 'IS-41 (WIN)',
@@ -9132,7 +9067,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            201 => 
+            196 => 
             array (
                 'id' => 721,
                 'name' => 'INAP',
@@ -9145,7 +9080,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            202 => 
+            197 => 
             array (
                 'id' => 722,
                 'name' => 'CAP',
@@ -9158,7 +9093,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            203 => 
+            198 => 
             array (
                 'id' => 723,
                 'name' => 'Рекомендации, спецификации, стандарты',
@@ -9171,7 +9106,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            204 => 
+            199 => 
             array (
                 'id' => 724,
                 'name' => 'TM Forum',
@@ -9184,7 +9119,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            205 => 
+            200 => 
             array (
                 'id' => 725,
                 'name' => 'ITU-T',
@@ -9197,7 +9132,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            206 => 
+            201 => 
             array (
                 'id' => 726,
                 'name' => 'ETSI',
@@ -9210,7 +9145,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            207 => 
+            202 => 
             array (
                 'id' => 727,
                 'name' => '3GPP2',
@@ -9223,7 +9158,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            208 => 
+            203 => 
             array (
                 'id' => 728,
                 'name' => '3GPP',
@@ -9236,7 +9171,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            209 => 
+            204 => 
             array (
                 'id' => 729,
                 'name' => 'Телекоммуникационные компании',
@@ -9249,7 +9184,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            210 => 
+            205 => 
             array (
                 'id' => 730,
                 'name' => 'Старт',
@@ -9262,7 +9197,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            211 => 
+            206 => 
             array (
                 'id' => 731,
                 'name' => 'СBOSS',
@@ -9275,7 +9210,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            212 => 
+            207 => 
             array (
                 'id' => 732,
                 'name' => 'Протей',
@@ -9288,7 +9223,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            213 => 
+            208 => 
             array (
                 'id' => 733,
                 'name' => 'Поток',
@@ -9301,7 +9236,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            214 => 
+            209 => 
             array (
                 'id' => 734,
                 'name' => 'Комплит',
@@ -9314,7 +9249,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            215 => 
+            210 => 
             array (
                 'id' => 735,
                 'name' => 'Аргус',
@@ -9327,7 +9262,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            216 => 
+            211 => 
             array (
                 'id' => 736,
                 'name' => 'ZTE',
@@ -9340,7 +9275,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            217 => 
+            212 => 
             array (
                 'id' => 737,
                 'name' => 'Yota',
@@ -9353,7 +9288,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            218 => 
+            213 => 
             array (
                 'id' => 738,
                 'name' => 'Sitronics',
@@ -9366,7 +9301,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            219 => 
+            214 => 
             array (
                 'id' => 739,
                 'name' => 'Siemens',
@@ -9379,7 +9314,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            220 => 
+            215 => 
             array (
                 'id' => 740,
                 'name' => 'Siebel',
@@ -9392,7 +9327,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            221 => 
+            216 => 
             array (
                 'id' => 741,
                 'name' => 'Orga',
@@ -9405,7 +9340,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            222 => 
+            217 => 
             array (
                 'id' => 742,
                 'name' => 'Onyma',
@@ -9418,7 +9353,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            223 => 
+            218 => 
             array (
                 'id' => 743,
                 'name' => 'NetCracker',
@@ -9431,7 +9366,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            224 => 
+            219 => 
             array (
                 'id' => 744,
                 'name' => 'Huawei',
@@ -9444,7 +9379,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            225 => 
+            220 => 
             array (
                 'id' => 745,
                 'name' => 'Hewlett-Packard',
@@ -9457,7 +9392,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            226 => 
+            221 => 
             array (
                 'id' => 746,
                 'name' => 'Ericsson',
@@ -9470,7 +9405,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            227 => 
+            222 => 
             array (
                 'id' => 747,
                 'name' => 'Comverse',
@@ -9483,7 +9418,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            228 => 
+            223 => 
             array (
                 'id' => 748,
                 'name' => 'Bercut',
@@ -9496,7 +9431,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            229 => 
+            224 => 
             array (
                 'id' => 749,
                 'name' => 'Amdocs',
@@ -9509,7 +9444,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            230 => 
+            225 => 
             array (
                 'id' => 750,
                 'name' => 'Технологии',
@@ -9522,7 +9457,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            231 => 
+            226 => 
             array (
                 'id' => 751,
             'name' => 'ШПД (проводной)',
@@ -9535,7 +9470,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            232 => 
+            227 => 
             array (
                 'id' => 752,
             'name' => 'ШПД (беспроводной)',
@@ -9548,7 +9483,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            233 => 
+            228 => 
             array (
                 'id' => 753,
                 'name' => 'Другие технологии',
@@ -9561,7 +9496,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            234 => 
+            229 => 
             array (
                 'id' => 754,
                 'name' => 'WiMax',
@@ -9574,7 +9509,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            235 => 
+            230 => 
             array (
                 'id' => 755,
                 'name' => 'UMTS',
@@ -9587,7 +9522,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            236 => 
+            231 => 
             array (
                 'id' => 756,
             'name' => 'TV (кабельное)',
@@ -9600,7 +9535,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            237 => 
+            232 => 
             array (
                 'id' => 757,
                 'name' => 'PSTN',
@@ -9613,7 +9548,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            238 => 
+            233 => 
             array (
                 'id' => 758,
                 'name' => 'LTE',
@@ -9626,7 +9561,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            239 => 
+            234 => 
             array (
                 'id' => 759,
                 'name' => 'IPTV',
@@ -9639,7 +9574,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            240 => 
+            235 => 
             array (
                 'id' => 760,
                 'name' => 'GSM',
@@ -9652,7 +9587,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            241 => 
+            236 => 
             array (
                 'id' => 761,
                 'name' => 'CDMA',
@@ -9665,7 +9600,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            242 => 
+            237 => 
             array (
                 'id' => 762,
                 'name' => 'Образование',
@@ -9678,7 +9613,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            243 => 
+            238 => 
             array (
                 'id' => 763,
                 'name' => 'Иностранные языки',
@@ -9691,7 +9626,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            244 => 
+            239 => 
             array (
                 'id' => 764,
                 'name' => 'Шведский язык',
@@ -9704,7 +9639,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            245 => 
+            240 => 
             array (
                 'id' => 765,
                 'name' => 'Французский язык',
@@ -9717,7 +9652,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            246 => 
+            241 => 
             array (
                 'id' => 766,
                 'name' => 'Украинский язык',
@@ -9730,7 +9665,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            247 => 
+            242 => 
             array (
                 'id' => 767,
                 'name' => 'Турецкий язык',
@@ -9743,7 +9678,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            248 => 
+            243 => 
             array (
                 'id' => 768,
                 'name' => 'Немецкий язык',
@@ -9756,7 +9691,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            249 => 
+            244 => 
             array (
                 'id' => 769,
                 'name' => 'Китайский язык',
@@ -9769,7 +9704,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            250 => 
+            245 => 
             array (
                 'id' => 770,
                 'name' => 'Итальянский язык',
@@ -9782,7 +9717,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            251 => 
+            246 => 
             array (
                 'id' => 771,
                 'name' => 'Испанский язык',
@@ -9795,7 +9730,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            252 => 
+            247 => 
             array (
                 'id' => 772,
                 'name' => 'Иврит',
@@ -9808,7 +9743,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            253 => 
+            248 => 
             array (
                 'id' => 773,
                 'name' => 'Английский язык',
@@ -9821,8 +9756,73 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
+            249 => 
+            array (
+                'id' => 1,
+                'name' => 'Спикер',
+                'description' => 'Навык красиво говорить',
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => NULL,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            250 => 
+            array (
+                'id' => 4,
+                'name' => 'Слушатель',
+                'description' => 'Навык внимательно слушать и не перебивать',
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => NULL,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            251 => 
+            array (
+                'id' => 5,
+                'name' => 'Powerpoint',
+                'description' => 'Навык красиво рисовать презентации',
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => NULL,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            252 => 
+            array (
+                'id' => 6,
+                'name' => ' Бэкэнд',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => NULL,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            253 => 
+            array (
+                'id' => 8,
+                'name' => 'Фронтэнд',
+                'description' => NULL,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => NULL,
+                'appoint' => true,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
         ));
         
-        
+    	
     }
 }

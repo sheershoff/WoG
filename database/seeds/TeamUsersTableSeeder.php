@@ -14,9 +14,9 @@ class TeamUsersTableSeeder extends Seeder
     {
         
 
-        \DB::table('team_users')->delete();
+        \DB::connection('pgsql')->table('team_users')->delete();
         
-        \DB::table('team_users')->insert(array (
+        \DB::connection('pgsql')->table('team_users')->insert(array (
             0 => 
             array (
                 'id' => 1,
@@ -359,6 +359,6 @@ class TeamUsersTableSeeder extends Seeder
             ),
         ));
         
-        
+    	
     }
 }

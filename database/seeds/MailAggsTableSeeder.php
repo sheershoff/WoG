@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PagesTableSeeder extends Seeder
+class MailAggsTableSeeder extends Seeder
 {
 
     /**
@@ -14,7 +14,7 @@ class PagesTableSeeder extends Seeder
     {
         
 
-        \DB::connection('pgsql')->table('pages')->delete();
+        \DB::connection('pgsql')->table('mail_aggs')->delete();
         
         
     	

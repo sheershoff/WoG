@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PagesTableSeeder extends Seeder
+class QuestDependsTableSeeder extends Seeder
 {
 
     /**
@@ -14,7 +14,7 @@ class PagesTableSeeder extends Seeder
     {
         
 
-        \DB::connection('pgsql')->table('pages')->delete();
+        \DB::connection('pgsql')->table('quest_depends')->delete();
         
         
     	
