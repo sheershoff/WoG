@@ -3,15 +3,14 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBalanceTable extends Migration
-{
+class CreateBalanceTable extends Migration {
+
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('balances', function (Blueprint $table) {
             $table->increments('id')->comment('балансы игрока, вернее все его приобретения');
             $table->integer('value')->unsigned();
@@ -22,18 +21,20 @@ class CreateBalanceTable extends Migration
             $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
-            $table->unique('user_id','currency_id','deleted_at');
-        });		
-	}
+            $table->softDeletes();
+            $table->unique(['user_id', 'currency_id', 'deleted_at']);
+        });
+    }
 
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::drop('balances', function (Blueprint $table) {
+
         });
     }
+
 }

@@ -3,18 +3,17 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSkillTable extends Migration
-{
+class CreateSkillTable extends Migration {
+
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('skills', function (Blueprint $table) {
             $table->increments('id')->comment('Навыки');
-	    $table->string('code',30)->comment('Код');
+            $table->string('code', 30)->nullable()->comment('Код');
             $table->string('name')->comment('Наименование');
             $table->text('description')->nullable();
             $table->text('options')->nullable()->comment('прочие настройки');
@@ -26,20 +25,20 @@ class CreateSkillTable extends Migration
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
-            $table->unique('code','organization_id');
-            $table->unique('name','organization_id');            
+            $table->unique(['code', 'organization_id']);
+            $table->unique(['name', 'organization_id']);
         });
-
-	}
+    }
 
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::drop('skills', function (Blueprint $table) {
+
         });
     }
+
 }

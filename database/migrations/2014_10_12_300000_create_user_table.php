@@ -39,11 +39,11 @@ class CreateUserTable extends Migration
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
-            $table->unique('login','organization_id');
-            $table->unique('email','organization_id');
-            $table->unique('jira','organization_id');
-            $table->unique('telegram','organization_id');
-            $table->unique('telegram_id_user','organization_id');
+            $table->unique(['login','organization_id']);
+            $table->unique(['email','organization_id']);
+            $table->unique(['jira','organization_id']);
+            $table->unique(['telegram','organization_id']);
+            $table->unique(['telegram_id_user','organization_id']);
         });
 		
     }

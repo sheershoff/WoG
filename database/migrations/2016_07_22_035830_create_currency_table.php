@@ -3,19 +3,18 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCurrencyTable extends Migration
-{
+class CreateCurrencyTable extends Migration {
+
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('currencies', function (Blueprint $table) {
             $table->increments('id')->comment('Игровые валюты');
-	    $table->string('code',30)->comment('Код');
-            $table->string('name',255)->comment('gold, мана, значёк ГТО, рейтин и тп');
+            $table->string('code', 30)->nullable()->comment('Код');
+            $table->string('name', 255)->comment('gold, мана, значёк ГТО, рейтин и тп');
             $table->text('description')->nullable()->comment('desc');
             $table->string('function')->nullable()->comment('функции пересчитывает количество начисляемой валюты.null 1=1');
             $table->text('options')->nullable()->comment('прочие настройки');
@@ -29,8 +28,8 @@ class CreateCurrencyTable extends Migration
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
-            $table->unique('code','organization_id');
-            $table->unique('name','organization_id');            
+            $table->unique(['code', 'organization_id']);
+            $table->unique(['name', 'organization_id']);
         });
     }
 
@@ -39,9 +38,10 @@ class CreateCurrencyTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::drop('currencies', function (Blueprint $table) {
+
         });
     }
+
 }

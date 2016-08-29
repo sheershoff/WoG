@@ -3,25 +3,24 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActionCommandTable extends Migration
-{
+class CreateActionCommandTable extends Migration {
+
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('action_command', function (Blueprint $table) {
             $table->increments('id');
-	    $table->integer('action_id')->unsigned()->index();
-            $table->foreign('action_id')->references('id')->on('action')->onDelete('cascade')->onDelete('cascade');
+            $table->integer('action_id')->unsigned()->index();
+            $table->foreign('action_id')->references('id')->on('actions')->onDelete('cascade')->onDelete('cascade');
             $table->integer('command_id')->unsigned()->index();
-            $table->foreign('command_id')->references('id')->on('command')->onDelete('cascade')->onDelete('cascade');
+            $table->foreign('command_id')->references('id')->on('commands')->onDelete('cascade')->onDelete('cascade');
             $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
-	    $table->softDeletes();
+            $table->softDeletes();
         });
     }
 
@@ -30,8 +29,8 @@ class CreateActionCommandTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::drop('action_command');
     }
+
 }

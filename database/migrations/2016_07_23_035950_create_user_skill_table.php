@@ -25,7 +25,7 @@ class CreateUserSkillTable extends Migration
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
-            $table->unique('user_id','skill_id','expert_user_id','deleted_at');
+            $table->unique(['user_id','skill_id','expert_user_id','deleted_at']);
 
         });
     }
