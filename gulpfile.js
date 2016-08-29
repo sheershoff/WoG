@@ -37,6 +37,9 @@ elixir(function(mix) {
     mix.styles([path+'normalize-css/normalize.css'],'public/css/normalize.css', './');
 //    mix.styles([path+'.css'],'public/css/.css', './');
 
+//copy
+//vendor/caouecs/laravel-lang/src/ru into resources/lang/ru
+
 
     mix.styles([
 //        paths.colorbox + '/example3/colorbox.css',

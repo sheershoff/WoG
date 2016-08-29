@@ -1,3 +1,4 @@
+php artisan iseed organizations
 php artisan iseed jobs
 php artisan iseed user_quest_statuses
 php artisan iseed currency_types
@@ -15,8 +16,11 @@ php artisan iseed quests
 php artisan iseed role_user
 php artisan iseed currencies
 php artisan iseed balances
+php artisan iseed skill_levels
 php artisan iseed skills
 php artisan iseed actions
+php artisan iseed commands
+php artisan iseed action_command
 php artisan iseed quest_depends
 php artisan iseed user_quests
 php artisan iseed action_currencies

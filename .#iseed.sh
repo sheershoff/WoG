@@ -1,1 +1,0 @@
-ansible@url-wog-app01.megafon.ru.18866

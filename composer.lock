@@ -101,16 +101,16 @@
         },
         {
             "name": "caouecs/laravel-lang",
-            "version": "3.0.11",
+            "version": "3.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caouecs/Laravel-lang.git",
-                "reference": "812bedaea2c2fcf8bc2219cb0729116cf96380ef"
+                "reference": "76f0d558ea0f8607b2916553e4f61876d72af587"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/812bedaea2c2fcf8bc2219cb0729116cf96380ef",
-                "reference": "812bedaea2c2fcf8bc2219cb0729116cf96380ef",
+                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/76f0d558ea0f8607b2916553e4f61876d72af587",
+                "reference": "76f0d558ea0f8607b2916553e4f61876d72af587",
                 "shasum": ""
             },
             "require-dev": {
@@ -137,7 +137,7 @@
                 "laravel",
                 "lpm"
             ],
-            "time": "2016-08-10 19:34:20"
+            "time": "2016-08-23 07:36:00"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -4723,12 +4723,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/xvlady/iseed.git",
-                "reference": "d7cbcd69eb83234ba8d80799f89653de67c3e43d"
+                "reference": "31d9e3df9e1b1c3ed1e05edbae376e76b796b754"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xvlady/iseed/zipball/d7cbcd69eb83234ba8d80799f89653de67c3e43d",
-                "reference": "d7cbcd69eb83234ba8d80799f89653de67c3e43d",
+                "url": "https://api.github.com/repos/xvlady/iseed/zipball/31d9e3df9e1b1c3ed1e05edbae376e76b796b754",
+                "reference": "31d9e3df9e1b1c3ed1e05edbae376e76b796b754",
                 "shasum": ""
             },
             "require": {
@@ -4766,7 +4766,7 @@
             "support": {
                 "source": "https://github.com/xvlady/iseed/tree/master"
             },
-            "time": "2016-08-27 05:37:15"
+            "time": "2016-08-27 07:24:39"
         }
     ],
     "aliases": [],
