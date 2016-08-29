@@ -23,6 +23,8 @@ class CreateRobotsTable extends Migration
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
 	    $table->softDeletes();
+            $table->unique('code','organization_id');
+            $table->unique('name','organization_id');            
         });
 	
 	}

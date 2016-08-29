@@ -22,6 +22,7 @@ class CreateBalanceTable extends Migration
             $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
+            $table->unique('user_id','currency_id','deleted_at');
         });		
 	}
 

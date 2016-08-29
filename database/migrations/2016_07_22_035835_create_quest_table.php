@@ -14,7 +14,8 @@ class CreateQuestTable extends Migration
     {
         Schema::create('quests', function (Blueprint $table) {
             $table->increments('id')->comment('Работы-квестодатели/считатели');
-            $table->string('name')->comment('название');
+	    $table->string('code',30)->comment('Код');
+            $table->string('name',200)->comment('название');
             $table->text('description')->nullable()->comment('Описание действия');
             $table->integer('role_id')->unsigned();
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
@@ -28,12 +29,12 @@ class CreateQuestTable extends Migration
             $table->string('function_check',255)->nullable()->comment('функция для проверки выполненности квеста или какой-то его части');
             $table->integer('robot_id')->unsigned()->nullable()->comment('Робот которому принадлежит квест, null - системный');
             $table->foreign('robot_id')->references('id')->on('robots')->onDelete('cascade');
-            
             $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
-            
             $table->timestamps();
 	    $table->softDeletes();
+            $table->unique('code','organization_id');
+            $table->unique('name','organization_id');            
         });
 	
 	}

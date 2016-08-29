@@ -16,6 +16,7 @@ class CreateActionTable extends Migration
 
         Schema::create('actions', function (Blueprint $table) {
             $table->increments('id')->comment('Дейстивий возможные с валютой');
+	    $table->string('code',30)->comment('Код');
             $table->string('name',255)->comment('Н:расход на... начислено за...');
             $table->text('description')->nullable()->comment('Описание действия');
             $table->integer('quest_id')->unsigned();
@@ -26,6 +27,8 @@ class CreateActionTable extends Migration
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
 	    $table->softDeletes();
+            $table->unique('code','quest_id','organization_id');
+            //$table->unique('name','organization_id');            
         });
 
 	}

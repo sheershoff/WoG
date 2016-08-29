@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRoleTable extends Migration
+class CreateActionCommandTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,17 +12,16 @@ class CreateRoleTable extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
+        Schema::create('action_command', function (Blueprint $table) {
             $table->increments('id');
-	    $table->string('code',30)->comment('Код');
-            $table->string('name',200)->comment('name role long');
-            $table->text('description')->nullable()->comment('desc');
+	    $table->integer('action_id')->unsigned()->index();
+            $table->foreign('action_id')->references('id')->on('action')->onDelete('cascade')->onDelete('cascade');
+            $table->integer('command_id')->unsigned()->index();
+            $table->foreign('command_id')->references('id')->on('command')->onDelete('cascade')->onDelete('cascade');
             $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
-            $table->softDeletes();
-            $table->unique('code','organization_id');
-            $table->unique('name','organization_id');            
+	    $table->softDeletes();
         });
     }
 
@@ -33,6 +32,6 @@ class CreateRoleTable extends Migration
      */
     public function down()
     {
-        Schema::drop('roles');
+        Schema::drop('action_command');
     }
 }

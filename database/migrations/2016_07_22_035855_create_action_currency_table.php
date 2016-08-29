@@ -14,6 +14,7 @@ class CreateActionCurrencyTable extends Migration
     {
         Schema::create('action_currencies', function (Blueprint $table) {
             $table->increments('id')->comment('Дейстивий возможные с валютой');
+	    $table->string('code',30)->comment('Код');
             $table->string('name',255)->nullable()->comment('Н:расход на... начислено за...');
             $table->text('description')->nullable()->comment('Описание действия');
             $table->integer('currency_id')->unsigned();
@@ -26,6 +27,8 @@ class CreateActionCurrencyTable extends Migration
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
 	    $table->softDeletes();
+            $table->unique('code','action_id','currency_id','organization_id');
+//            $table->unique('name','organization_id');            
         });
 	}
 

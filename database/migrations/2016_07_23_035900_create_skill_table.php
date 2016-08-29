@@ -14,7 +14,8 @@ class CreateSkillTable extends Migration
     {
         Schema::create('skills', function (Blueprint $table) {
             $table->increments('id')->comment('Навыки');
-            $table->string('name')->unique()->comment('Наименование');
+	    $table->string('code',30)->comment('Код');
+            $table->string('name')->comment('Наименование');
             $table->text('description')->nullable();
             $table->text('options')->nullable()->comment('прочие настройки');
             $table->integer('currency_id')->nullable()->unsigned()->comment('Связка с валютой в которой считается навык у пользователя');
@@ -25,6 +26,8 @@ class CreateSkillTable extends Migration
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
+            $table->unique('code','organization_id');
+            $table->unique('name','organization_id');            
         });
 
 	}
