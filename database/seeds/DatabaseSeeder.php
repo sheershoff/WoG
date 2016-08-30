@@ -37,5 +37,7 @@ class DatabaseSeeder extends Seeder
         $this->call('MailAggsTableSeeder');
         $this->call('SkillLevelsTableSeeder');
         $this->call('QuestDependsTableSeeder');
+        $this->call('CommandsTableSeeder');
+        $this->call('ActionCommandTableSeeder');
     }
 }

@@ -4723,12 +4723,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/xvlady/iseed.git",
-                "reference": "86d01cce3b60bc924be4ab3ffcba35f5acadd54c"
+                "reference": "7658fd524a45a906aaa734a7017e9873783fa6f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xvlady/iseed/zipball/86d01cce3b60bc924be4ab3ffcba35f5acadd54c",
-                "reference": "86d01cce3b60bc924be4ab3ffcba35f5acadd54c",
+                "url": "https://api.github.com/repos/xvlady/iseed/zipball/7658fd524a45a906aaa734a7017e9873783fa6f5",
+                "reference": "7658fd524a45a906aaa734a7017e9873783fa6f5",
                 "shasum": ""
             },
             "require": {
@@ -4766,7 +4766,7 @@
             "support": {
                 "source": "https://github.com/xvlady/iseed/tree/master"
             },
-            "time": "2016-08-29 08:39:17"
+            "time": "2016-08-30 05:47:35"
         }
     ],
     "aliases": [],

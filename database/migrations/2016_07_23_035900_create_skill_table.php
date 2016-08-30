@@ -16,6 +16,7 @@ class CreateSkillTable extends Migration {
             $table->string('code', 30)->nullable()->comment('Код');
             $table->string('name')->comment('Наименование');
             $table->text('description')->nullable();
+            $table->boolean('is_hide')->nullable()->default(true)->comment('if hide - user can t show ');
             $table->text('options')->nullable()->comment('прочие настройки');
             $table->integer('currency_id')->nullable()->unsigned()->comment('Связка с валютой в которой считается навык у пользователя');
             $table->foreign('currency_id')->references('id')->on('currencies')->onDelete('set null');

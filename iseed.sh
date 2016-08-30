@@ -10,7 +10,6 @@ php artisan iseed password_resets --force
 php artisan iseed users --force
 php artisan iseed robots --force
 php artisan iseed team_users --force
-php artisan iseed user_profiles --force
 php artisan iseed robots --force
 php artisan iseed quests --force
 php artisan iseed role_user --force

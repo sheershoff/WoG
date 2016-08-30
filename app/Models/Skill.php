@@ -16,11 +16,11 @@ namespace App\Models;
  * @property Currencies $Currencies
  * @property UserSkills[] $UserSkills
  */
-class Skill extends BaseModelWithSoftDeletes
-{
+class Skill extends BaseModelWithSoftDeletes {
+
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'skills';
@@ -33,16 +33,19 @@ class Skill extends BaseModelWithSoftDeletes
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function Currencies()
-    {
+    public function currencies() {
         return $this->belongsTo('Currencies', 'currency_id');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function UserSkills()
-    {
+    public function UserSkills() {
         return $this->hasMany('UserSkills', 'skill_id');
     }
+
+    public function balance() {
+        return $this->belongsToMany(Balance::class, 'currencies', 'id', 'currency_id')->select('balance.value', 'skills.*');
+    }
+
 }

@@ -15,11 +15,11 @@ namespace App\Models;
  * @property Skills $Skills
  * @property Users $Users
  */
-class UserSkill extends BaseModelWithSoftDeletes
-{
+class UserSkill extends BaseModelWithSoftDeletes {
+
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'user_skills';
@@ -32,24 +32,24 @@ class UserSkill extends BaseModelWithSoftDeletes
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function Users()
-    {
-        return $this->belongsTo('Users', 'user_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function Skills()
-    {
-        return $this->belongsTo('Skills', 'skill_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function Users()
-    {
-        return $this->belongsTo('Users', 'expert_user_id');
-    }
+//    public function Users()
+//    {
+//        return $this->belongsTo('Users', 'user_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+//     */
+//    public function Skills()
+//    {
+//        return $this->belongsTo('Skills', 'skill_id');
+//    }
+//
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+//     */
+//    public function Users()
+//    {
+//        return $this->belongsTo('Users', 'expert_user_id');
+//    }
 }

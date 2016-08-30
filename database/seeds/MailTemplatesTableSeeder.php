@@ -19,8 +19,26 @@ class MailTemplatesTableSeeder extends Seeder
         \DB::connection('pgsql')->table('mail_templates')->insert(array (
             0 => 
             array (
+                'id' => 2,
+                'code' => NULL,
+                'name' => 'Выполнение квеста игроком',
+                'description' => NULL,
+                'body' => 'Дорогой игрок! Квест "Заполни профиль" успешно выполнен. Вы - большой молодец!
+
+Ваша награда: карма повышена на 5 супермегаспасибо, а голда - на 10 тугриков  ',
+                'size' => 1,
+                'action_id' => 4,
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
                 'id' => 1,
+                'code' => NULL,
                 'name' => 'Взятие квеста игроком',
+                'description' => NULL,
                 'body' => 'Дорогой игрок! Вы участвуете в квесте "Заполни профиль"
 
 Описание квеста: необходимо ответственно и вдумчиво заполнить профиль своего персонажа
@@ -28,19 +46,7 @@ class MailTemplatesTableSeeder extends Seeder
 Награда за выполнение не заставить себя ждать.',
                 'size' => 1,
                 'action_id' => 3,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            1 => 
-            array (
-                'id' => 2,
-                'name' => 'Выполнение квеста игроком',
-                'body' => 'Дорогой игрок! Квест "Заполни профиль" успешно выполнен. Вы - большой молодец!
-
-Ваша награда: карма повышена на 5 супермегаспасибо, а голда - на 10 тугриков  ',
-                'size' => 1,
-                'action_id' => 4,
+                'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

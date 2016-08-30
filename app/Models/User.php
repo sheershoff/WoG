@@ -21,7 +21,7 @@ use Session;
  * @property string $email
  * @property string $password
  * @property integer $user_type
- * @property string $ext_login
+ * @property string $jira
  * @property string $phone_number
  * @property string $tab_number
  * @property string $remember_token
@@ -47,7 +47,7 @@ use Session;
  * @property string $photo
  * @property integer $mail_hour
  * @property MailAggs $MailAggs
- * 
+ *
  */
 class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, CanResetPasswordContract {
 
@@ -55,12 +55,12 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
         CanResetPassword,
         AdldapUserModelTrait, // Insert trait here
         Notifiable;
+
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
-
     protected $table = 'users';
 
     //protected $redirectPath = '/';
@@ -74,11 +74,10 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
         'password', 'remember_token',
     ];
 
-    
     /**
      * @var array
      */
-    protected $fillable = ['user_status_id', 'login', 'name', 'email', 'user_type', 'ext_login', 'phone_number', 'tab_number', 'mail_agg_id', 'description', 'status', 'mail_hour', 'created_at', 'updated_at'];
+    protected $fillable = ['user_status_id', 'login', 'name', 'email', 'user_type', 'jira', 'phone_number', 'tab_number', 'mail_agg_id', 'description', 'status', 'mail_hour', 'created_at', 'updated_at'];
 
     public function photo() {
         return '/User/Photo/' . $this->id;
@@ -89,8 +88,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
      *
      * @return string
      */
-    public function routeNotificationForMail()
-    {
+    public function routeNotificationForMail() {
         return $this->email;
     }
 
@@ -104,10 +102,9 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-      public function teams()
-      {
-      return $this->belongsToMany(User::class, 'team_users', 'user_id', 'team_user_id');
-      }
+    public function teams() {
+        return $this->belongsToMany(User::class, 'team_users', 'user_id', 'team_user_id');
+    }
 
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -116,7 +113,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //    {
 //        return $this->hasMany('RoleUser', 'user_id');
 //    }
-    
+
     public function roles() {
         return $this->belongsToMany(Role::class); //, 'role_user', 'user_id', 'role_id'
     }
@@ -136,14 +133,15 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
     public function quests() {
         return $this->belongsToMany(Quest::class, 'user_quests');
     }
-    
+
     public function okQuests() {
         return $this->belongsToMany(Quest::class, 'user_quests')->wherePivot('user_quest_status_id', 3);
     }
+
     public function activeQuests() {
         return $this->belongsToMany(Quest::class, 'user_quests')->wherePivot('user_quest_status_id', 2);
     }
-    
+
     public function passiveQuests() {
         return $this->belongsToMany(Quest::class, 'user_quests')->wherePivot('user_quest_status_id', 1);
     }
@@ -160,20 +158,20 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function balances()
-    {
+    public function balances() {
         return $this->hasMany('Balances', 'user_id');
     }
 
     public function currency() {
-        return $this->belongsToMany(Currency::class, 'balances')->wherePivot('value','<>', 0)->select('balances.value', 'currencies.*');
+        return $this->belongsToMany(Currency::class, 'balances')->wherePivot('value', '<>', 0)->select('balances.value', 'currencies.*');
     }
 
     public function inventary() {
-        return $this->currency()->where('currencies.currency_type_id','=',4);
+        return $this->currency()->where('currencies.currency_type_id', '=', 4);
     }
+
     public function cash() {
-        return $this->currency()->whereIn('currencies.currency_type_id',[1,2,10]);
+        return $this->currency()->whereIn('currencies.currency_type_id', [1, 2, 10]);
     }
 
 //    /**
@@ -192,12 +190,17 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //        return $this->hasMany('CurrencyTransactions', 'user_id');
 //    }
 //
-//    /**
-//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-//     */
-//    public function UserSkills()
-//    {
-//        return $this->hasMany('UserSkills', 'user_id');
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function skill() {
+        return $this->join('user_skills', 'user_skills.user_id', '=', 'users.id');
+
+//                belongsToMany(Skills::class, 'skills')->wherePivot('expert_user_id', '=', $this->id)->select('user_skills.value', 'skills.*');
+    }
+
+//    public function expertSkills() {
+//        return $this->belongsToMany(Skills::class, 'skills')->wherePivot('expert_user_id', '<>', $this->id)->select('user_skills.value', 'user_skills.expert_user_id', 'skills.*');
 //    }
 //
 //    /**
@@ -225,8 +228,8 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 
     protected $attributes = array(
         'status' => 'я родился!',
-        'user_type'=>1,
-        'user_status_id'=>1,
+        'user_type' => 1,
+        'user_status_id' => 1,
     );
 
     function save(array $options = []) {
@@ -254,11 +257,10 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
             return false; //Redirect::back()->withErrorMessage('Something went wrong');
         }
     }
-    
+
 //        static::created(function ($model) {
 //            // blah blah
 //        });
-
     //it is the MainRobot
     public function addRole(array $roleId) {
         $this->roles()->sync($roleId);
@@ -268,31 +270,30 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
         if (!Auth::check()) {
             return;
         }
-        $qs=DB::select ('select q.id, q.is_auto
-            from '.DB::getTablePrefix() . 'quests q
-            inner join '.DB::getTablePrefix() . 'roles r on r.id = q.role_id
-            inner join '.DB::getTablePrefix() . 'role_user ru on r.id = ru.role_id
-            where ru.user_id = ? '. 
-              'and not exists (select 1 from '.DB::getTablePrefix() . 'user_quests uq where uq.quest_id = q.id and uq.user_id = ru.user_id) 
-              and not exists (select 1 from '.DB::getTablePrefix() . 'quest_depends qd 
-                                  left join '.DB::getTablePrefix() . 'user_quests uqd on uqd.quest_id = qd.depend_quest_id
+        $qs = DB::select('select q.id, q.is_auto
+            from ' . DB::getTablePrefix() . 'quests q
+            inner join ' . DB::getTablePrefix() . 'roles r on r.id = q.role_id
+            inner join ' . DB::getTablePrefix() . 'role_user ru on r.id = ru.role_id
+            where ru.user_id = ? ' .
+                        'and not exists (select 1 from ' . DB::getTablePrefix() . 'user_quests uq where uq.quest_id = q.id and uq.user_id = ru.user_id)
+              and not exists (select 1 from ' . DB::getTablePrefix() . 'quest_depends qd
+                                  left join ' . DB::getTablePrefix() . 'user_quests uqd on uqd.quest_id = qd.depend_quest_id
                                     and uqd.user_id = ru.user_id
-                                    and uqd.user_quest_status_id <> 3 
-                               where qd.quest_id = q.id) 
-              and q.deleted_at is null 
-             order by q.created_at desc',[$this->id]);
+                                    and uqd.user_quest_status_id <> 3
+                               where qd.quest_id = q.id)
+              and q.deleted_at is null
+             order by q.created_at desc', [$this->id]);
         //$qs=Quest::Activeted()->get('id', 'is_auto');
-        foreach ($qs as $q) {         
+        foreach ($qs as $q) {
             $uq = new UserQuest;
             $uq->user_id = $this->id;
             $uq->quest_id = $q->id;
-            $uq->user_quest_status_id = $uq->is_auto ? 2: 1;//open - can open
+            $uq->user_quest_status_id = $uq->is_auto ? 2 : 1; //open - can open
             $uq->save(); // <~ this is your "insert" statement
         }
-        if (count($qs)>0) {
+        if (count($qs) > 0) {
             Session::flash('message', 'Quest added!');
         }
-      
     }
 
     /**
@@ -301,19 +302,18 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
      * @param  string  $value
      * @return string
      */
-    public function setEmailAttribute($value)
-    {
+    public function setEmailAttribute($value) {
         $this->attributes['email'] = strtolower($value);
-    }    
-    
-        /**
+    }
+
+    /**
      * Get the user's first name.
      *
      * @param  string  $value
      * @return string
      */
-    public function getEmailAttribute($value)
-    {
+    public function getEmailAttribute($value) {
         return strtolower($value);
     }
+
 }
