@@ -24,14 +24,14 @@
             <br>
             <p>{{$q->name}}</p>
             <p><bold>{{$q->description}}</bold></p>
-            <button data-user-quest-id="{{$q->user_quests_id}}" data-quest-id="{{$q->id}}" data-type="true" type="submit" class="add-dell-new-qvest btn btn-default btn-xs">Принять</button>
+            <button data-user-quest-id="{{$q->user_quests_id}}" data-quest-id="{{$q->id}}" data-type="true" type="submit" class="open-quest btn btn-default btn-xs">Принять</button>
         </div>
         @endforeach
     </div>
     @endif
 
     <div class="dash-unit">
-        <dtitle>Профиль пользователя</dtitle>
+        <dtitle>Персонаж</dtitle>
         <hr>
         <div class="thumbnail">
             <img style=" height: 80px; " src="{{asset('img/face80x80.jpg')}}" alt="Marcel Newman" class="img-circle">
@@ -41,8 +41,8 @@
         <br>
         <div class="info-user">
             <span aria-hidden="true" class="li_user fs1"></span>
-            <span aria-hidden="true" class="li_settings fs1"></span>
-            <span aria-hidden="true" class="li_mail fs1"></span>
+            <a href="/personal-data"><span aria-hidden="true" class="li_settings fs1"></span></a>
+            <a href="/quests"><span aria-hidden="true" class="li_mail fs1"></span></a>
             <span aria-hidden="true" class="li_key fs1"></span>
         </div>
     </div>
@@ -233,8 +233,7 @@
 </div>
 <script>
 
-$('.add-dell-new-qvest').click(function (event) {
-    console.log($(this).data());
+$('.open-quest').click(function (event) {
     $.get('/user/quest/' + $(this).data().userQuestId + '/open', function (data) {
         /*optional stuff to do after success */
     });
@@ -242,7 +241,6 @@ $('.add-dell-new-qvest').click(function (event) {
     location.reload();
 
 });
-
 
 // $.ajax({
 // 	url: '/path/to/file',

@@ -77,6 +77,7 @@ Route::group(['prefix' => 'jira-team-boadr'], function() {
 
 Route::get('/', 'WogController@index')->name('home'); //<a href="{{ route('home')}}"> 'as' => 'home'
 Route::get('/personal-data', 'WogController@personalData')->name('personal-data');
+Route::get('/quests', 'WogController@quests')->name('quests');
 Route::get('/user/quest/{id}/open', 'WogController@openUserQuest')->name('user-quest');
 //Route::bind('userquest', function ($value) {
 //    $userQuest = App\Models\UserQuest::find($value);

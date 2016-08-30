@@ -77,6 +77,13 @@ class WogController extends Controller
         ]);
     }
 
+    public function quests()
+    {
+        return view('quests', [
+            'quests' => Auth::user()->quests()->get(),
+        ]);
+    }
+
     public function openUserQuest($id)//UserQuest
     {
         if (!Auth::check()) {
