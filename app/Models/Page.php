@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,13 +16,6 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Page extends Model
 {
-    /**
-     * The table associated with the model.
-     * 
-     * @var string
-     */
-    protected $table = 'pages';
-
     /**
      * @var array
      */

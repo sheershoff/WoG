@@ -2,34 +2,41 @@
 
 namespace App\Models;
 
+use BaseModelWithSoftDeletes;
+
 /**
  * @property integer $id
+ * @property integer $organization_id
+ * @property string $code
  * @property string $name
+ * @property string $description
  * @property string $unit
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property Currencies[] $Currencies
+ * @property Organization $organization
+ * @property Currency[] $currencies
  */
 class CurrencyType extends BaseModelWithSoftDeletes
 {
     /**
-     * The table associated with the model.
-     * 
-     * @var string
-     */
-    protected $table = 'currency_types';
-
-    /**
      * @var array
      */
-    protected $fillable = ['name', 'unit', 'created_at', 'updated_at'];
+    protected $fillable = ['organization_id', 'code', 'name', 'description', 'unit', 'created_at', 'updated_at', 'deleted_at'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function organization()
+    {
+        return $this->belongsTo('App\Models\Organization');
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function Currencies()
+    public function currencies()
     {
-        return $this->hasMany('Currencies', 'currency_type_id');
+        return $this->hasMany('App\Models\Currency');
     }
 }

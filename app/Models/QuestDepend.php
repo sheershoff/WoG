@@ -2,48 +2,41 @@
 
 namespace App\Models;
 
-use BaseModel;
+use BaseModelWithSoftDeletes;
 
 /**
  * @property integer $id
- * @property integer $role_id
- * @property integer $user_id
+ * @property integer $quest_id
+ * @property integer $depend_quest_id
  * @property integer $organization_id
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property Role $role
- * @property User $user
+ * @property Quest $quest
+ * @property Quest $quest
  * @property Organization $organization
  */
-class RoleUser extends BaseModel
+class QuestDepend extends BaseModelWithSoftDeletes
 {
-    /**
-     * The table associated with the model.
-     * 
-     * @var string
-     */
-    protected $table = 'role_user';
-
     /**
      * @var array
      */
-    protected $fillable = ['role_id', 'user_id', 'organization_id', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['quest_id', 'depend_quest_id', 'organization_id', 'created_at', 'updated_at', 'deleted_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function role()
+    public function quest()
     {
-        return $this->belongsTo('App\Models\Role');
+        return $this->belongsTo('App\Models\Quest');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function user()
+    public function quest()
     {
-        return $this->belongsTo('App\Models\User');
+        return $this->belongsTo('App\Models\Quest', 'depend_quest_id');
     }
 
     /**

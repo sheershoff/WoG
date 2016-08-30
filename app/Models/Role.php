@@ -2,51 +2,67 @@
 
 namespace App\Models;
 
+use BaseModelWithSoftDeletes;
+
 /**
  * @property integer $id
+ * @property integer $organization_id
+ * @property string $code
  * @property string $name
+ * @property string $description
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property RoleUser[] $RoleUsers
- * @property Currencies[] $Currencies
- * @property Quests[] $Quests
+ * @property Organization $organization
+ * @property RoleUser[] $roleUsers
+ * @property Currency[] $currencies
+ * @property Quest[] $quests
+ * @property Action[] $actions
  */
 class Role extends BaseModelWithSoftDeletes
 {
     /**
-     * The table associated with the model.
-     * 
-     * @var string
-     */
-    protected $table = 'roles';
-
-    /**
      * @var array
      */
-    protected $fillable = ['name', 'created_at', 'updated_at'];
+    protected $fillable = ['organization_id', 'code', 'name', 'description', 'created_at', 'updated_at', 'deleted_at'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function RoleUsers()
+    public function organization()
     {
-        return $this->hasMany('RoleUser', 'role_id');
+        return $this->belongsTo('App\Models\Organization');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function Currencies()
+    public function roleUsers()
     {
-        return $this->hasMany('Currencies', 'role_id');
+        return $this->hasMany('App\Models\RoleUser');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function Quests()
+    public function currencies()
     {
-        return $this->hasMany('Quests', 'role_id');
+        return $this->hasMany('App\Models\Currency');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function quests()
+    {
+        return $this->hasMany('App\Models\Quest');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function actions()
+    {
+        return $this->hasMany('App\Models\Action', 'up_role_id');
     }
 }

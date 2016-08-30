@@ -2,11 +2,14 @@
 
 namespace App\Models;
 
+use BaseModelWithSoftDeletes;
 
 /**
  * @property integer $id
  * @property integer $currency_id
  * @property integer $action_id
+ * @property integer $organization_id
+ * @property string $code
  * @property string $name
  * @property string $description
  * @property integer $value
@@ -14,30 +17,24 @@ namespace App\Models;
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property Currencies $Currencies
- * @property Actions $Actions
- * @property CurrencyTransactions[] $CurrencyTransactions
+ * @property Currency $currency
+ * @property Action $action
+ * @property Organization $organization
+ * @property CurrencyTransaction[] $currencyTransactions
  */
 class ActionCurrency extends BaseModelWithSoftDeletes
 {
     /**
-     * The table associated with the model.
-     * 
-     * @var string
-     */
-    protected $table = 'action_currencies';
-
-    /**
      * @var array
      */
-    protected $fillable = ['currency_id', 'action_id', 'name', 'description', 'value', 'transaction_user', 'created_at', 'updated_at'];
+    protected $fillable = ['currency_id', 'action_id', 'organization_id', 'code', 'name', 'description', 'value', 'transaction_user', 'created_at', 'updated_at', 'deleted_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function currency()
     {
-        return $this->belongsTo(Currency::clas);
+        return $this->belongsTo('App\Models\Currency');
     }
 
     /**
@@ -45,7 +42,15 @@ class ActionCurrency extends BaseModelWithSoftDeletes
      */
     public function action()
     {
-        return $this->belongsTo(Action::class);
+        return $this->belongsTo('App\Models\Action');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function organization()
+    {
+        return $this->belongsTo('App\Models\Organization');
     }
 
     /**
@@ -53,6 +58,6 @@ class ActionCurrency extends BaseModelWithSoftDeletes
      */
     public function currencyTransactions()
     {
-        return $this->hasMany(CurrencyTransaction::class, 'action_currency_id');
+        return $this->hasMany('App\Models\CurrencyTransaction');
     }
 }

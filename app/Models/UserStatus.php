@@ -2,33 +2,40 @@
 
 namespace App\Models;
 
+use BaseModelWithSoftDeletes;
+
 /**
  * @property integer $id
+ * @property integer $organization_id
+ * @property string $code
  * @property string $name
+ * @property string $description
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
- * @property Users[] $Users
+ * @property Organization $organization
+ * @property User[] $users
  */
 class UserStatus extends BaseModelWithSoftDeletes
 {
     /**
-     * The table associated with the model.
-     * 
-     * @var string
-     */
-    protected $table = 'user_statuses';
-
-    /**
      * @var array
      */
-    protected $fillable = ['name', 'created_at', 'updated_at'];
+    protected $fillable = ['organization_id', 'code', 'name', 'description', 'created_at', 'updated_at', 'deleted_at'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function organization()
+    {
+        return $this->belongsTo('App\Models\Organization');
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function Users()
+    public function users()
     {
-        return $this->hasMany('Users', 'user_status_id');
+        return $this->hasMany('App\Models\User');
     }
 }
