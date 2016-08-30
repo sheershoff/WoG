@@ -1573,7 +1573,7 @@ class UsersTableSeeder extends Seeder
                 'login' => 'vladimir.khonin',
                 'name' => 'Хонин Владимир Вячеславович',
                 'email' => 'vladimir.khonin@megafon.ru',
-                'password' => '$2y$10$eQh/ZRvSPTS.OMG5BobWi.2hUb8L9tOyT8.cM8aIJQ/wOWGOLizSC',
+                'password' => '$2y$10$4OUkT7JNoAnq8qgHAv8AoekSHFqXikj8a5Qy/BL3yuTHmocTbH99C',
                 'user_type' => 1,
                 'user_status_id' => 1,
                 'jira' => NULL,
@@ -1589,7 +1589,7 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => 'inKhzxCAYmKql5yZ4B8IxOYf1FbNkVwRKtX2kjiJbMQaqhQAlhs1YBcLYGbI',
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-08-30 03:27:34',
+                'updated_at' => '2016-08-30 12:12:39',
                 'deleted_at' => NULL,
             ),
         ));

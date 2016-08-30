@@ -155,10 +155,10 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_id' => 0,
                 'quest_type' => 1,
                 'user_id' => 2,
-                'user_quest_status_id' => 1,
+                'user_quest_status_id' => 2,
                 'organization_id' => 0,
                 'created_at' => '2016-08-23 17:46:04',
-                'updated_at' => '2016-08-23 17:46:04',
+                'updated_at' => '2016-08-30 18:27:52',
                 'deleted_at' => NULL,
             ),
             12 => 
