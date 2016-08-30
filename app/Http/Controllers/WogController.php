@@ -11,14 +11,17 @@ use App\Models\User;
 //use App\Models\Action;
 use App\Models\ActionTransaction;
 use App\Models\Quest;
+use App\Models\UserQuest;
 use App\Models\Skill;
 use App\Models\UserSkill;
 use App\Models\Currency;
 use App\Models\Balance;
 
-class WogController extends Controller {
+class WogController extends Controller
+{
 
-    public function index() {
+    public function index()
+    {
         if (!Auth::check()) {
             return view('welcome', [
                 'ats' => ActionTransaction::orderBy('created_at', 'desc')->take(5)->get(),
@@ -26,11 +29,12 @@ class WogController extends Controller {
                 'bl2s' => Balance::Medal()->orderBy('created_at', 'desc')->take(5)->get(),
             ]);
         } else {
-            Auth::user()->addAutoQuest();
+            $this->addUserQuests();
+            $this->execAutoAction();
             return view('home', [
                 'staus' => Auth::user()->teams()->get(),
                 'cash' => Auth::user()->cash()->get(),
-                'QustsByUser' => Auth::user()->passiveQuests()->get(),
+                'passiveQuests' => Auth::user()->passiveQuests()->get(),
                 'MyQustByUser' => Auth::user()->activeQuests()->take(5)->get(),
                 'inventary' => Auth::user()->inventary()->get(),
                 'skill' => Auth::user()->skill()->get(),
@@ -39,7 +43,8 @@ class WogController extends Controller {
         }
     }
 
-    public function rating($type) {
+    public function rating($type)
+    {
         $bls = Balance::XP()->orderBy('value', 'desc')->get();
         $t = [];
         $v = [];
@@ -54,7 +59,8 @@ class WogController extends Controller {
         return view('rating', ['v' => $v, 't' => $t]);
     }
 
-    public function personalData() {
+    public function personalData()
+    {
         $cash = DB::select('select c.name, b.value, ct.unit '
                         . 'from wog_balances b'
                         . ' join wog_currencies c on b.currency_id = c.id'
@@ -71,12 +77,108 @@ class WogController extends Controller {
         ]);
     }
 
-    public function addUserQuest() {
-        // dd(Input::get('userID'));
-        // dd(Input::get('questId'));
-        dd(DB::insert('insert into wog_user_quests (id,quest_id,quest_type,user_id,user_quest_status_id) values (nextval(\'wog_user_quest_id_seq\'), ' . Input::get('questId') . ' ,1, ' . Input::get('userID') . ',1)'));
-        Session::flash('message', 'Successfully posted your blog!');
-        //return Redirect::to(‘/admin/posts’);
+    public function openUserQuest($id)//UserQuest
+    {
+        if (!Auth::check()) {
+            return;
+        }
+        $userQuest = UserQuest::Where('id', '=', $id)->where('user_quest_status_id', '=', 1)->where('user_id', '=', Auth::user()->id)->first();
+        if (isset($userQuest)) {
+            $userQuest->user_quest_status_id = 2;
+            $userQuest->save();
+            \Session::flash('message', 'Квест взят!');
+            return 'ok';
+        } else {
+            \Session::flash('message', '404');
+            return '404';
+        }
+    }
+
+    public function addUserQuests()
+    {
+        if (!Auth::check()) {
+            return;
+        }
+        $qs = DB::select('select q.id, q.is_auto
+            from ' . DB::getTablePrefix() . 'quests q
+            inner join ' . DB::getTablePrefix() . 'roles r on r.id = q.role_id
+            inner join ' . DB::getTablePrefix() . 'role_user ru on r.id = ru.role_id
+            where ru.user_id = ?
+              and not exists (select 1 from ' . DB::getTablePrefix() . 'user_quests uq where uq.quest_id = q.id and uq.user_id = ru.user_id)
+              and not exists (select 1 from ' . DB::getTablePrefix() . 'quest_depends qd
+                                  left join ' . DB::getTablePrefix() . 'user_quests uqd on uqd.quest_id = qd.depend_quest_id
+                                    and uqd.user_id = ru.user_id
+                                    and uqd.user_quest_status_id <> 3
+                               where qd.quest_id = q.id)
+              and q.deleted_at is null
+             order by q.created_at desc', [Auth::user()->id]);
+        //$qs=Quest::Activeted()->get('id', 'is_auto');
+        foreach ($qs as $q) {
+            $uq = new UserQuest;
+            $uq->user_id = Auth::user()->id;
+            $uq->quest_id = $q->id;
+            $uq->user_quest_status_id = $uq->is_auto ? 2 : 1; //open - can open
+            $uq->save(); // <~ this is your "insert" statement
+        }
+        if (count($qs) > 0) {
+            \Session::flash('message', 'Quest added!');
+        }
+    }
+
+    public function execAutoAction()
+    {
+        if (!Auth::check()) {
+            return;
+        }
+        $userId = Auth::user()->id;
+        $sql = 'select a.id, a.quest_id, uq.id as user_quest_id
+            from ' . DB::getTablePrefix() . 'user_quests uq
+            inner join ' . DB::getTablePrefix() . 'actions a on a.quest_id = uq.quest_id
+            inner join ' . DB::getTablePrefix() . 'action_command ac on ac.action_id = a.id
+            inner join ' . DB::getTablePrefix() . 'commands c on ac.command_id = c.id
+            where not exists (select 1 from ' . DB::getTablePrefix() . 'action_transactions at --нет записей в транзакциях
+                               where at.action_id = a.id and at.user_id = uq.user_id and at.deleted_at is null)
+              and uq.user_id = ?
+              and c.code = ?
+              and uq.user_quest_status_id = ?
+             order by uq.created_at desc';
+        $qs = DB::select($sql, [$userId, 'Init', 1]);
+        foreach ($qs as $q) {
+            $uq = new ActionTransaction();
+            $uq->user_id = $userId;
+            $uq->quest_id = $q->quest_id;
+            $uq->action_id = $q->id;
+            $uq->save(); // <~ this is your "insert" statement
+        }
+        $qs = DB::select($sql, [$userId, 'Open', 2]);
+        foreach ($qs as $q) {
+            $uq = new ActionTransaction();
+            $uq->user_id = $userId;
+            $uq->quest_id = $q->quest_id;
+            $uq->action_id = $q->id;
+            $uq->save(); // <~ this is your "insert" statement
+        }
+//        $qs = DB::select($sql, [$userId, 'AutoClosed', 3]);
+//        foreach ($qs as $q) {
+//            $userQuest = UserQuest::find($q->user_quest_id);
+//            $userQuest->user_quest_status_id = 3;
+//            $userQuest->save();
+//        }
+        $sql = 'select a.id, a.quest_id, uq.id as user_quest_id
+            from ' . DB::getTablePrefix() . 'user_quests uq
+            inner join ' . DB::getTablePrefix() . 'actions a on a.quest_id = uq.quest_id
+            inner join ' . DB::getTablePrefix() . 'action_command ac on ac.action_id = a.id
+            inner join ' . DB::getTablePrefix() . 'commands c on ac.command_id = c.id
+
+            where not exists (select 1 from ' . DB::getTablePrefix() . 'action_currencies c
+                                  left join ' . DB::getTablePrefix() . 'balances b on b.user_id = uq.user_id and c.currency_id = b.currency_id
+                                      where c.action_id = a.id and c.value<0 and c.transaction_user=true
+                                        and coalesce(c.value,0)+coalesce(b.value)<0)
+              and uq.user_id = ?
+              and c.code = ?
+              and uq.user_quest_status_id = ?
+             order by uq.created_at desc';
+        $qs = DB::select($sql, [$userId, 'Inventary', 2]);
     }
 
 }

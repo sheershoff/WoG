@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use BaseModelWithSoftDeletes;
-
 /**
  * @property integer $id
  * @property integer $user_id
@@ -22,6 +20,7 @@ use BaseModelWithSoftDeletes;
  */
 class ActionTransaction extends BaseModelWithSoftDeletes
 {
+
     /**
      * @var array
      */
@@ -66,4 +65,5 @@ class ActionTransaction extends BaseModelWithSoftDeletes
     {
         return $this->hasMany('App\Models\CurrencyTransaction', 'action_trancaction_id');
     }
+
 }

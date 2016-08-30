@@ -28,11 +28,12 @@ use Illuminate\Support\Facades\DB;
  * @property UserQuests[] $UserQuests
  * @property Actions[] $Actions
  */
-class Quest extends BaseModelWithSoftDeletes {
+class Quest extends BaseModelWithSoftDeletes
+{
 
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'quests';
@@ -40,9 +41,10 @@ class Quest extends BaseModelWithSoftDeletes {
     /**
      * @var array
      */
-    protected $fillable = ['id', 'role_id', 'author_user_id', 'robot_id', 'name', 'description', 'is_hide', 'is_auto', 'time_recheck', 'function_time_recheck', 'function_check', 'created_at', 'updated_at'];
+    protected $fillable = ['id', 'role_id', 'code', 'author_user_id', 'robot_id', 'name', 'description', 'is_hide', 'is_auto', 'time_recheck', 'function_time_recheck', 'function_check', 'created_at', 'updated_at'];
 
-    public function photo() {
+    public function photo()
+    {
         return '/Quest/Photo/' . $this->id;
     }
 
@@ -112,32 +114,32 @@ class Quest extends BaseModelWithSoftDeletes {
 //        return $this->hasMany('Actions', 'quest_id');
 //    }
 //    public function scopeActiveted($query) {
-////return DB::select ('select q.* 
+////return DB::select ('select q.*
 //// from '.DB::getTablePrefix() . 'quests q
 //// inner join '.DB::getTablePrefix() . 'roles r on r.id = q.role_id
 //// inner join '.DB::getTablePrefix() . 'role_user ru on r.id = ru.role_id
-//// where ru.user_id = '.(Auth::user() ? Auth::user()->id : 0). 
-////   'and not exists (select 1 from '.DB::getTablePrefix() . 'user_quests uq where uq.quest_id = q.id and uq.user_id = ru.user_id) 
-////   and not exists (select 1 from '.DB::getTablePrefix() . 'quest_depends qd 
+//// where ru.user_id = '.(Auth::user() ? Auth::user()->id : 0).
+////   'and not exists (select 1 from '.DB::getTablePrefix() . 'user_quests uq where uq.quest_id = q.id and uq.user_id = ru.user_id)
+////   and not exists (select 1 from '.DB::getTablePrefix() . 'quest_depends qd
 ////                       left join '.DB::getTablePrefix() . 'user_quests uqd on uqd.quest_id = qd.depend_quest_id
 ////                         and uqd.user_id = ru.user_id
-////                         and uqd.user_quest_status_id <> 3 
-////                    where qd.quest_id = q.id) 
-////   and q.deleted_at is null 
+////                         and uqd.user_quest_status_id <> 3
+////                    where qd.quest_id = q.id)
+////   and q.deleted_at is null
 ////  order by q.created_at desc');
 //        if (!Auth::check()) {
 //            var_dump($query);
-//          return $query;    
+//          return $query;
 //        }
 //        return $query->whereHas('roles')
-//                
-//                ->join('roles', 'roles.id', '=', 'quests.role_id') 
+//
+//                ->join('roles', 'roles.id', '=', 'quests.role_id')
 //                        ->join('role_user as ru', 'roles.id', '=', 'ru.role_id')
 //                        ->where('ru.user_id', '=', (Auth::user() ? Auth::user()->id : '0')) //for role
 //                        ->leftJoin('user_quests as uq', 'uq.user_id', '=', 'ru.user_id')
 //                            ->where('quests.id', '=', 'uq.quest_id') //minus geting Quest
 //        //->orWhere
-//                            
+//
 //          //              })
 ////                        ->whereNotExists(function($query) {
 ////                            $query->select(DB::raw(1))
@@ -185,5 +187,4 @@ class Quest extends BaseModelWithSoftDeletes {
 //
 //        ;
 //    }
-
 }

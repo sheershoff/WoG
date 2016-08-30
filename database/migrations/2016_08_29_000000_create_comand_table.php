@@ -3,20 +3,22 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateComandTable extends Migration {
+class CreateComandTable extends Migration
+{
 
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up() {
+    public function up()
+    {
         Schema::create('commands', function (Blueprint $table) {
             $table->increments('id')->comment('command from actions');
             $table->string('code', 30)->nullable()->comment('Код');
             $table->string('name')->comment('Наименование');
             $table->text('description')->nullable();
-            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->integer('organization_id')->nullable()->unsigned()->comment('Организация');
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
@@ -30,7 +32,8 @@ class CreateComandTable extends Migration {
      *
      * @return void
      */
-    public function down() {
+    public function down()
+    {
         Schema::drop('commands', function (Blueprint $table) {
 
         });

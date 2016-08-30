@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use BaseModelWithSoftDeletes;
+
 
 /**
  * @property integer $id
