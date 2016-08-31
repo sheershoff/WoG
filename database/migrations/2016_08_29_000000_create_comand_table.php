@@ -15,15 +15,11 @@ class CreateComandTable extends Migration
     {
         Schema::create('commands', function (Blueprint $table) {
             $table->increments('id')->comment('command from actions');
-            $table->string('code', 30)->nullable()->comment('Код');
-            $table->string('name')->comment('Наименование');
+            $table->string('code', 30)->nullable()->comment('Код')->unique;
+            $table->string('name')->comment('Наименование')->unique;
             $table->text('description')->nullable();
-            $table->integer('organization_id')->nullable()->unsigned()->comment('Организация');
-            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
-            $table->unique(['code', 'organization_id']);
-            $table->unique(['name', 'organization_id']);
         });
     }
 

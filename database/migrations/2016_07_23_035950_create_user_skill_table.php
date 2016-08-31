@@ -5,6 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateUserSkillTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -21,12 +22,9 @@ class CreateUserSkillTable extends Migration
             $table->integer('value')->unsigned()->nullable()->comment('оценка');
             $table->integer('expert_user_id')->unsigned()->nullable()->comment('Ключ на пользователя который проставил оценку. Если = userId, то самооценка, если =null то тоже самое');
             $table->foreign('expert_user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
-            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
-            $table->unique(['user_id','skill_id','expert_user_id','deleted_at']);
-
+            $table->unique(['user_id', 'skill_id', 'expert_user_id', 'deleted_at']);
         });
     }
 
@@ -38,6 +36,8 @@ class CreateUserSkillTable extends Migration
     public function down()
     {
         Schema::drop('user_skills', function (Blueprint $table) {
+
         });
     }
+
 }

@@ -3,14 +3,16 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRobotsTable extends Migration {
+class CreateRobotsTable extends Migration
+{
 
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up() {
+    public function up()
+    {
         Schema::create('robots', function (Blueprint $table) {
             $table->increments('id')->comment('Работы-квестодатели/считатели');
             $table->string('code', 30)->nullable()->comment('Код');
@@ -18,7 +20,7 @@ class CreateRobotsTable extends Migration {
             $table->text('description')->nullable()->comment('Описание действия');
             $table->integer('user_id')->unsigned()->nullable()->comment('ссылка на юзера-авторизацию');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
-            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->integer('organization_id')->default(0)->unsigned()->comment('Организация');
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
@@ -32,7 +34,8 @@ class CreateRobotsTable extends Migration {
      *
      * @return void
      */
-    public function down() {
+    public function down()
+    {
         Schema::drop('robots', function (Blueprint $table) {
 
         });

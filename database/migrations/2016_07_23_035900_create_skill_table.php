@@ -3,14 +3,16 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSkillTable extends Migration {
+class CreateSkillTable extends Migration
+{
 
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up() {
+    public function up()
+    {
         Schema::create('skills', function (Blueprint $table) {
             $table->increments('id')->comment('Навыки');
             $table->string('code', 30)->nullable()->comment('Код');
@@ -22,7 +24,7 @@ class CreateSkillTable extends Migration {
             $table->foreign('currency_id')->references('id')->on('currencies')->onDelete('set null');
             $table->integer('parent_skill_id')->unsigned()->nullable()->comment('Родительский скил. Null - это root');
             $table->boolean('appoint')->default(1)->comment('Может назначаться пользователю');
-            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->integer('organization_id')->default(0)->unsigned()->comment('Организация');
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
@@ -36,7 +38,8 @@ class CreateSkillTable extends Migration {
      *
      * @return void
      */
-    public function down() {
+    public function down()
+    {
         Schema::drop('skills', function (Blueprint $table) {
 
         });

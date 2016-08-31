@@ -3,25 +3,23 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserStatusTable extends Migration {
+class CreateUserStatusTable extends Migration
+{
 
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up() {
+    public function up()
+    {
         Schema::create('user_statuses', function (Blueprint $table) {
             $table->increments('id')->comment('Статус пользователя');
-            $table->string('code', 30)->nullable()->comment('Код');
-            $table->string('name', 255);
+            $table->string('code', 30)->nullable()->comment('Код')->unique();
+            $table->string('name', 255)->unique();
             $table->text('description')->nullable()->comment('desc');
-            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
-            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
-            $table->unique(['code', 'organization_id']);
-            $table->unique(['name', 'organization_id']);
         });
     }
 
@@ -30,7 +28,8 @@ class CreateUserStatusTable extends Migration {
      *
      * @return void
      */
-    public function down() {
+    public function down()
+    {
         Schema::drop('user_statuses');
     }
 

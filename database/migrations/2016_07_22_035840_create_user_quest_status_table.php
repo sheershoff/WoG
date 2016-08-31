@@ -14,15 +14,12 @@ class CreateUserQuestStatusTable extends Migration
     public function up()
     {
         Schema::create('user_quest_statuses', function (Blueprint $table) {
-            $table->increments('id')->comment('Статус квеста у пользователя, табличка не пополняемая общая');
+            $table->increments('id')->comment('Статус квеста у пользователя')->unique;
             //$table->string('code', 30)->nullable()->comment('Код');
             $table->string('name', 255)->comment('название');
-            $table->integer('organization_id')->nullable()->unsigned()->comment('Организация если заполнена, то запись применима только к ней');
-            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
             //$table->unique(['code', 'organization_id']);
-            $table->unique(['name', 'organization_id']);
         });
     }
 

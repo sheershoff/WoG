@@ -3,14 +3,16 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActionTable extends Migration {
+class CreateActionTable extends Migration
+{
 
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up() {
+    public function up()
+    {
 
 
         Schema::create('actions', function (Blueprint $table) {
@@ -22,7 +24,7 @@ class CreateActionTable extends Migration {
             $table->foreign('quest_id')->references('id')->on('quests')->onDelete('cascade');
             $table->integer('up_role_id')->nullable()->unsigned()->comment('выполнение действия даёт новую роль');
             $table->foreign('up_role_id')->references('id')->on('roles')->onDelete('set null');
-            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->integer('organization_id')->default(0)->unsigned()->comment('Организация');
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
@@ -36,7 +38,8 @@ class CreateActionTable extends Migration {
      *
      * @return void
      */
-    public function down() {
+    public function down()
+    {
         Schema::drop('actions', function (Blueprint $table) {
 
         });

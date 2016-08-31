@@ -5,6 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateOrganizationTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -12,15 +13,14 @@ class CreateOrganizationTable extends Migration
      */
     public function up()
     {
-        	
+
         Schema::create('organizations', function (Blueprint $table) {
-            $table->increments('id')->comment('Пользователи');
-            $table->string('name',255)->nullable()->comment('название');
-            $table->string('description',255)->nullable()->comment('Описание');
+            $table->increments('id')->comment('организация');
+            $table->string('name', 255)->nullable()->comment('название');
+            $table->string('description', 255)->nullable()->comment('Описание');
             $table->timestamps();
             $table->softDeletes();
         });
-		
     }
 
     /**
@@ -32,4 +32,5 @@ class CreateOrganizationTable extends Migration
     {
         Schema::drop('organizations');
     }
+
 }

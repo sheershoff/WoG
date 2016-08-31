@@ -3,14 +3,16 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActionCurrencyTable extends Migration {
+class CreateActionCurrencyTable extends Migration
+{
 
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up() {
+    public function up()
+    {
         Schema::create('action_currencies', function (Blueprint $table) {
             $table->increments('id')->comment('Дейстивий возможные с валютой');
             $table->string('code', 30)->nullable()->comment('Код');
@@ -22,7 +24,7 @@ class CreateActionCurrencyTable extends Migration {
             $table->foreign('action_id')->references('id')->on('actions')->onDelete('cascade');
             $table->integer('value')->unsigned()->comment('Cумма на которую меняется');
             $table->boolean('transaction_user')->unsigned()->default(1)->comment('Пользователь списания А (истина) или Б (лож)');
-            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->integer('organization_id')->default(0)->unsigned()->comment('Организация');
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
@@ -36,7 +38,8 @@ class CreateActionCurrencyTable extends Migration {
      *
      * @return void
      */
-    public function down() {
+    public function down()
+    {
         Schema::drop('action_currencies', function (Blueprint $table) {
 
         });

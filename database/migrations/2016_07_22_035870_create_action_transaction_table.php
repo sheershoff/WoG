@@ -5,6 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateActionTransactionTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -21,12 +22,10 @@ class CreateActionTransactionTable extends Migration
             $table->integer('mail_template_id')->unsigned();
             $table->foreign('mail_template_id')->references('id')->on('mail_templates')->onDelete('cascade');
             $table->text('message')->nullable()->comment('сообщение от робота');
-            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
-            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });
-	}
+    }
 
     /**
      * Reverse the migrations.
@@ -36,6 +35,8 @@ class CreateActionTransactionTable extends Migration
     public function down()
     {
         Schema::drop('action_transactions', function (Blueprint $table) {
+
         });
     }
+
 }

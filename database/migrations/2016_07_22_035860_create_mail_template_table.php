@@ -3,14 +3,16 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMailTemplateTable extends Migration {
+class CreateMailTemplateTable extends Migration
+{
 
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up() {
+    public function up()
+    {
         Schema::create('mail_templates', function (Blueprint $table) {
             $table->increments('id')->comment('Шаблоны писем, на каждое действие может быть несколько действий');
             $table->string('code', 30)->nullable()->comment('Код');
@@ -20,7 +22,7 @@ class CreateMailTemplateTable extends Migration {
             $table->integer('size')->default(1)->comment('Вес, для рандобного выбора');
             $table->integer('action_id')->unsigned();
             $table->foreign('action_id')->references('id')->on('actions')->onDelete('cascade');
-            $table->integer('organization_id')->default(0)->nullable()->unsigned()->comment('Организация');
+            $table->integer('organization_id')->default(0)->unsigned()->comment('Организация');
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
@@ -34,7 +36,8 @@ class CreateMailTemplateTable extends Migration {
      *
      * @return void
      */
-    public function down() {
+    public function down()
+    {
         Schema::drop('mail_templates', function (Blueprint $table) {
 
         });
