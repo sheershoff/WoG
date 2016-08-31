@@ -64,7 +64,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
      */
     protected $table = 'users';
 
-    //protected $redirectPath = '/';
+//protected $redirectPath = '/';
 
     /**
      * The attributes that should be hidden for arrays.
@@ -245,28 +245,45 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
         'status' => 'я родился!',
         'user_type' => 1,
         'user_status_id' => 1,
+        'organization_id' => -1,
     );
+
+    public function __construct(array $attributes = array())
+    {
+        $o = config('wog.organization');
+        if (isset($o) && ($o <> 0)) {
+            $this->attributes['organization_id'] = config('wog.organization');
+        } else if (in_array('organization', $attributes)) {
+            $this->attributes['organization_id'] = $attributes['organization'];
+        } else if (in_array('organization_id', $attributes)) {
+            $this->attributes['organization_id'] = $attributes['organization_id'];
+        } else {
+            throw new Exception('organization_id by zero.');
+        }
+        parent::__construct($attributes);
+    }
 
     function save(array $options = [])
     {
-        // assume it won't work
+// assume it won't work
         $success = false;
 //        if (!empty($this->email)) {
 //            $this->email = mb_convert_case($this->email, MB_CASE_LOWER, "UTF-8");
 //        }
         DB::beginTransaction();
-        //try {
+
+//try {
         if (parent::save()) {
             $this->addRole([-2]);
             $success = true;
         }
-        //} catch (\Exception $e) {
-        // maybe log this exception, but basically it's just here so we can rollback if we get a surprise
-        //}
+//} catch (\Exception $e) {
+// maybe log this exception, but basically it's just here so we can rollback if we get a surprise
+//}
 
         if ($success) {
             DB::commit();
-            $this->addAutoQuest();
+            \App\Http\Controllers\WogController::addUserQuests();
             return true; //Redirect::back()->withSuccessMessage('Post saved');
         } else {
             DB::rollback();
@@ -277,7 +294,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //        static::created(function ($model) {
 //            // blah blah
 //        });
-    //it is the MainRobot
+//it is the MainRobot
     public function addRole(array $roleId)
     {
         $this->roles()->sync($roleId);

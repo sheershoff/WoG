@@ -51,19 +51,8 @@
         <hr>
         <div class="cont">
             @foreach ($cash as $val)
-
-            <p style="text-align: left;">{{$val->name}} - <bold>{{$val->value}}</bold> | <ok>{{$val->unit}}</ok></p>
-
-
+            <p style="text-align: left;">{{$val->name}} <bold>{{$val->value}}</bold></p>
             @endforeach
-
-            {{-- 					<br>
-					<p><bold>$377</bold> | Pending</p>
-					<br>
-					<p><bold>$156</bold> | <bad>Denied</bad></p>
-					<br>
-					<p><img src="http://www.prepbootstrap.com/Content/images/shared/single-page-admin/up-small.png" alt=""> 12% Compared Last Month</p> --}}
-
         </div>
 
     </div>
@@ -222,9 +211,6 @@
         <div id="jstwitter" class="clearfix">
             <ul id="twitter_update_list"></ul>
         </div>
-        <script src="http://twitter.com/javascripts/blogger.js"></script><!-- Script Needed to load the Tweets -->
-        <script src="http://api.twitter.com/1/statuses/user_timeline/wrapbootstrap.json?callback=twitterCallback2&amp;count=1"></script>
-        <!-- To show your tweets replace "wrapbootstrap", in the line above, with your user. -->
         <div class="text">
             <p><grey  style=" font-size: 17px; "  >Дорогой игрок вы взяли квест Расскажи о себе миру. Награда за выполнения будет ждать тебя!</grey></p>
 
@@ -233,14 +219,14 @@
 </div>
 <script>
 
-$('.open-quest').click(function (event) {
-    $.get('/user/quest/' + $(this).data().userQuestId + '/open', function (data) {
-        /*optional stuff to do after success */
-    });
-    $('#Quest').html(' ');
-    location.reload();
+    $('.open-quest').click(function (event) {
+        $.get('/user/quest/' + $(this).data().userQuestId + '/open', function (data) {
+            /*optional stuff to do after success */
+        });
+        $('#Quest').html(' ');
+        location.reload();
 
-});
+    });
 
 // $.ajax({
 // 	url: '/path/to/file',

@@ -10,5 +10,5 @@ return [
       |
      */
 
-    'driver' => env('ORGANIZATION', 0),
+    'organization' => env('ORGANIZATION', 0),
 ];

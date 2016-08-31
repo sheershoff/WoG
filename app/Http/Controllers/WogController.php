@@ -8,13 +8,16 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 //use App\Http\Requests;
 use App\Models\User;
-//use App\Models\Action;
+use App\Models\Action;
 use App\Models\ActionTransaction;
 use App\Models\Quest;
 use App\Models\UserQuest;
 use App\Models\Skill;
 use App\Models\UserSkill;
 use App\Models\Currency;
+use App\Models\CurrencyType;
+use App\Models\MailTemplate;
+use App\Models\Command;
 use App\Models\Balance;
 
 class WogController extends Controller
@@ -101,7 +104,7 @@ class WogController extends Controller
         }
     }
 
-    public function addUserQuests()
+    public static function addUserQuests()
     {
         if (!Auth::check()) {
             return;
@@ -153,7 +156,6 @@ class WogController extends Controller
         foreach ($qs as $q) {
             $uq = new ActionTransaction();
             $uq->user_id = $userId;
-            $uq->quest_id = $q->quest_id;
             $uq->action_id = $q->id;
             $uq->save(); // <~ this is your "insert" statement
         }
@@ -161,7 +163,6 @@ class WogController extends Controller
         foreach ($qs as $q) {
             $uq = new ActionTransaction();
             $uq->user_id = $userId;
-            $uq->quest_id = $q->quest_id;
             $uq->action_id = $q->id;
             $uq->save(); // <~ this is your "insert" statement
         }
@@ -188,7 +189,61 @@ class WogController extends Controller
         $qs = DB::select($sql, [$userId, 'Inventary', 2]);
     }
 
-}
+    public function test()
+    {
+        $a = '';
 
-//
-//insert into wog_user_quests (id,questId,questType,userId,user_quest_status_id) values (nextval('wog_user_quests_id_seq'),1,1,2,1)
+        $a .= '<h1>Command</h1>';
+        $x = Command::orderBy('id')->get();
+        $a .= '<table>';
+        foreach ($x as $v) {
+            $a .= '<tr><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td></tr>';
+        }
+        $a .= '</table>';
+
+        $a .= '<h1><a href="http://url-wog-app01/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog&select=wog_currencies">CurrencyType</a></h1>';
+        $x = CurrencyType::orderBy('id')->get();
+        $a .= '<table>';
+        foreach ($x as $v) {
+            $a .= '<tr><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td></tr>';
+        }
+        $a .= '</table>';
+
+        $a .= '<h1>Currency</h1>';
+        $x = Currency::orderBy('id')->get();
+        $a .= '<table>';
+        foreach ($x as $v) {
+            $a .= '<tr><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->currency_type_id . '</td><td>' . $v->description . '</td></tr>';
+        }
+        $a .= '</table>';
+
+        $a .= '<h1><a href="http://url-wog-app01/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog&select=wog_quests">Quest</a></h1>';
+        $x = Quest::orderBy('id')->get();
+        $a .= '<table>';
+        foreach ($x as $v) {
+            $a .= '<tr><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td></tr>';
+        }
+        $a .= '</table>';
+
+        $a .= '<h1><a href="http://url-wog-app01/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog&select=wog_actions">Action</a></h1>';
+        $x = Action::orderBy('id')->get();
+        $a .= '<table>';
+        foreach ($x as $v) {
+            $a .= '<tr><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td></tr>';
+        }
+        $a .= '</table>';
+
+        $a .= '<h1><a href="http://url-wog-app01/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog&select=wog_action_currencies">ActionCurrency</a></h1>';
+        $a .= '<h1><a href="http://url-wog-app01/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog&select=wog_action_command">ActionCommand</a></h1>';
+        $a .= '<h1><a href="http://url-wog-app01/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog&select=wog_mail_templates">MailTemplate</a></h1>';
+        $x = MailTemplate::orderBy('id')->get();
+        $a .= '<table>';
+        foreach ($x as $v) {
+            $a .= '<tr><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td><td>' . $v->body . '</td></tr>';
+        }
+        $a .= '</table>';
+
+        return $a;
+    }
+
+}

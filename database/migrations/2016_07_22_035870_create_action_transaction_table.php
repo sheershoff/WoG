@@ -19,7 +19,7 @@ class CreateActionTransactionTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('action_id')->unsigned();
             $table->foreign('action_id')->references('id')->on('actions')->onDelete('cascade');
-            $table->integer('mail_template_id')->unsigned();
+            $table->integer('mail_template_id')->nullable()->unsigned();
             $table->foreign('mail_template_id')->references('id')->on('mail_templates')->onDelete('cascade');
             $table->text('message')->nullable()->comment('сообщение от робота');
             $table->timestamps();

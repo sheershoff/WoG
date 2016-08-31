@@ -79,6 +79,7 @@ Route::get('/', 'WogController@index')->name('home'); //<a href="{{ route('home'
 Route::get('/personal-data', 'WogController@personalData')->name('personal-data');
 Route::get('/quests', 'WogController@quests')->name('quests');
 Route::get('/user/quest/{id}/open', 'WogController@openUserQuest')->name('user-quest');
+Route::get('/test', 'WogController@test')->name('test');
 //Route::bind('userquest', function ($value) {
 //    $userQuest = App\Models\UserQuest::find($value);
 //    if (isset($userQuest)) {
@@ -90,6 +91,12 @@ Route::get('/user/quest/{id}/open', 'WogController@openUserQuest')->name('user-q
 //Route::get('/user/quest/{userquest}/open', function (App\Models\UserQuest $post) {
 //    // be awesome. enjoy having the $post object
 //});
+Route::get('/{obj}/{id}/photo', function($obj, $id) {
+//    $user = User::find($id);
+//    $response = Response::make($user->image, 200);
+    $response->header('Content-Type', 'image/jpeg');
+//    return $response;
+});
 
 
 Route::get('/achievements', 'WogController@personalData')->name('achievements');

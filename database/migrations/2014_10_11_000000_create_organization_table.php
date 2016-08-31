@@ -16,6 +16,7 @@ class CreateOrganizationTable extends Migration
 
         Schema::create('organizations', function (Blueprint $table) {
             $table->increments('id')->comment('организация');
+            $table->string('code', 30)->nullable()->comment('url');
             $table->string('name', 255)->nullable()->comment('название');
             $table->string('description', 255)->nullable()->comment('Описание');
             $table->timestamps();
