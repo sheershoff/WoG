@@ -19,6 +19,18 @@ class ActionTransactionsTableSeeder extends Seeder
         \DB::connection('pgsql')->table('action_transactions')->insert(array (
             0 => 
             array (
+                'id' => 9,
+                'user_id' => 2,
+                'action_id' => 12,
+                'mail_template_id' => NULL,
+                'message' => NULL,
+                'organization_id' => 0,
+                'created_at' => '2016-08-31 11:36:20',
+                'updated_at' => '2016-08-31 11:36:20',
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
                 'id' => 6,
                 'user_id' => 4,
                 'action_id' => 3,
@@ -29,7 +41,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            1 => 
+            2 => 
             array (
                 'id' => 3,
                 'user_id' => 2,
@@ -41,7 +53,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
+            3 => 
             array (
                 'id' => 2,
                 'user_id' => 5,

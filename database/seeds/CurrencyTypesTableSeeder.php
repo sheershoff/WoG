@@ -19,8 +19,32 @@ class CurrencyTypesTableSeeder extends Seeder
         \DB::connection('pgsql')->table('currency_types')->insert(array (
             0 => 
             array (
+                'id' => 13,
+                'code' => 'body',
+                'name' => 'слоты для инвентаря',
+            'description' => 'слоты для носимого инвентаря (тела игрока)',
+                'unit' => '',
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
+                'id' => 12,
+                'code' => 'max',
+                'name' => 'максимальное значение',
+                'description' => 'максимальное значение, которое может приобретать навык',
+                'unit' => '',
+                'organization_id' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            2 => 
+            array (
                 'id' => 10,
-                'code' => NULL,
+                'code' => 'xp',
                 'name' => 'Рейтинг',
                 'description' => NULL,
                 'unit' => 'XP',
@@ -29,7 +53,7 @@ class CurrencyTypesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            1 => 
+            3 => 
             array (
                 'id' => 9,
                 'code' => NULL,
@@ -41,10 +65,10 @@ class CurrencyTypesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
+            4 => 
             array (
                 'id' => 6,
-                'code' => NULL,
+                'code' => 'achivment',
                 'name' => 'Достижения',
                 'description' => NULL,
                 'unit' => '',
@@ -53,10 +77,10 @@ class CurrencyTypesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            3 => 
+            5 => 
             array (
                 'id' => 5,
-                'code' => NULL,
+                'code' => 'titul',
                 'name' => 'Титул',
                 'description' => NULL,
                 'unit' => 'восхищений',
@@ -65,7 +89,7 @@ class CurrencyTypesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            4 => 
+            6 => 
             array (
                 'id' => 4,
                 'code' => NULL,
@@ -77,31 +101,31 @@ class CurrencyTypesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            5 => 
+            7 => 
             array (
                 'id' => 3,
-                'code' => NULL,
+                'code' => 'skill',
                 'name' => 'Сноровка',
                 'description' => NULL,
                 'unit' => 'Звезд',
-                'organization_id' => 0,
+                'organization_id' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            6 => 
+            8 => 
             array (
                 'id' => 2,
-                'code' => NULL,
-                'name' => 'Голда',
-                'description' => NULL,
+                'code' => 'gold',
+                'name' => 'Платёжные балансы',
+                'description' => 'Платёжные балансы, такие как gold, mana и т.п.',
                 'unit' => 'Тугриков',
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            7 => 
+            9 => 
             array (
                 'id' => 1,
                 'code' => NULL,

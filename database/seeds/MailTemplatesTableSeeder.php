@@ -19,6 +19,48 @@ class MailTemplatesTableSeeder extends Seeder
         \DB::connection('pgsql')->table('mail_templates')->insert(array (
             0 => 
             array (
+                'id' => 7,
+                'code' => NULL,
+                'name' => 'активация3',
+                'description' => NULL,
+                'body' => 'Инвайт активирован!',
+                'size' => 1,
+                'action_id' => 13,
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
+                'id' => 6,
+                'code' => NULL,
+                'name' => 'активация2',
+                'description' => NULL,
+                'body' => 'Входи дорогой друг!',
+                'size' => 1,
+                'action_id' => 13,
+                'organization_id' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            2 => 
+            array (
+                'id' => 4,
+                'code' => NULL,
+                'name' => 'активация1',
+                'description' => NULL,
+                'body' => 'Ура! Вход свободен. приключения ждут тебя!',
+                'size' => 1,
+                'action_id' => 13,
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            3 => 
+            array (
                 'id' => 2,
                 'code' => NULL,
                 'name' => 'Выполнение квеста игроком',
@@ -33,7 +75,7 @@ class MailTemplatesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            1 => 
+            4 => 
             array (
                 'id' => 1,
                 'code' => NULL,

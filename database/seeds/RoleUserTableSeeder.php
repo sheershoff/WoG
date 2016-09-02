@@ -19,6 +19,16 @@ class RoleUserTableSeeder extends Seeder
         \DB::connection('pgsql')->table('role_user')->insert(array (
             0 => 
             array (
+                'id' => 390,
+                'role_id' => -2,
+                'user_id' => 56,
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
                 'id' => 389,
                 'role_id' => -2,
                 'user_id' => 9,
@@ -27,7 +37,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            1 => 
+            2 => 
             array (
                 'id' => 388,
                 'role_id' => -2,
@@ -37,7 +47,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
+            3 => 
             array (
                 'id' => 387,
                 'role_id' => -2,
@@ -47,7 +57,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            3 => 
+            4 => 
             array (
                 'id' => 386,
                 'role_id' => -2,
@@ -57,7 +67,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            4 => 
+            5 => 
             array (
                 'id' => 384,
                 'role_id' => -2,
@@ -67,7 +77,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            5 => 
+            6 => 
             array (
                 'id' => 383,
                 'role_id' => -2,
@@ -77,7 +87,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            6 => 
+            7 => 
             array (
                 'id' => 382,
                 'role_id' => -2,
@@ -87,7 +97,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            7 => 
+            8 => 
             array (
                 'id' => 379,
                 'role_id' => 2,
@@ -97,7 +107,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            8 => 
+            9 => 
             array (
                 'id' => 378,
                 'role_id' => 2,
@@ -107,7 +117,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            9 => 
+            10 => 
             array (
                 'id' => 377,
                 'role_id' => 2,
@@ -117,7 +127,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            10 => 
+            11 => 
             array (
                 'id' => 375,
                 'role_id' => 2,
@@ -127,7 +137,7 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            11 => 
+            12 => 
             array (
                 'id' => 373,
                 'role_id' => 2,
@@ -137,21 +147,11 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            12 => 
+            13 => 
             array (
                 'id' => 372,
                 'role_id' => 2,
                 'user_id' => 57,
-                'organization_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            13 => 
-            array (
-                'id' => 371,
-                'role_id' => 2,
-                'user_id' => 56,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,

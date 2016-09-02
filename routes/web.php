@@ -98,6 +98,7 @@ Route::get('/{obj}/{id}/photo', function($obj, $id) {
 //    return $response;
 });
 
+Route::get('/questinfo', 'WogController@questinfo')->name('questinfo');
 
 Route::get('/achievements', 'WogController@personalData')->name('achievements');
 ;

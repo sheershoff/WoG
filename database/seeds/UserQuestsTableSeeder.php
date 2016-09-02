@@ -19,6 +19,18 @@ class UserQuestsTableSeeder extends Seeder
         \DB::connection('pgsql')->table('user_quests')->insert(array (
             0 => 
             array (
+                'id' => 16,
+                'quest_id' => 0,
+                'quest_type' => 1,
+                'user_id' => 56,
+                'user_quest_status_id' => 2,
+                'organization_id' => 0,
+                'created_at' => '2016-08-31 06:17:38',
+                'updated_at' => '2016-08-31 06:17:54',
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
                 'id' => 15,
                 'quest_id' => 0,
                 'quest_type' => 1,
@@ -29,7 +41,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-08-30 05:09:44',
                 'deleted_at' => NULL,
             ),
-            1 => 
+            2 => 
             array (
                 'id' => 14,
                 'quest_id' => 0,
@@ -41,7 +53,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-08-30 05:06:50',
                 'deleted_at' => NULL,
             ),
-            2 => 
+            3 => 
             array (
                 'id' => 13,
                 'quest_id' => 0,
@@ -53,7 +65,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-08-30 05:06:40',
                 'deleted_at' => NULL,
             ),
-            3 => 
+            4 => 
             array (
                 'id' => 12,
                 'quest_id' => 0,
@@ -65,7 +77,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-08-30 05:01:57',
                 'deleted_at' => NULL,
             ),
-            4 => 
+            5 => 
             array (
                 'id' => 10,
                 'quest_id' => 0,
@@ -77,7 +89,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-08-30 04:58:53',
                 'deleted_at' => NULL,
             ),
-            5 => 
+            6 => 
             array (
                 'id' => 9,
                 'quest_id' => 0,
@@ -89,7 +101,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-08-30 04:56:42',
                 'deleted_at' => NULL,
             ),
-            6 => 
+            7 => 
             array (
                 'id' => 8,
                 'quest_id' => 0,
@@ -101,7 +113,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-08-30 04:52:59',
                 'deleted_at' => NULL,
             ),
-            7 => 
+            8 => 
             array (
                 'id' => 7,
                 'quest_id' => 0,
@@ -113,7 +125,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-08-30 04:51:19',
                 'deleted_at' => NULL,
             ),
-            8 => 
+            9 => 
             array (
                 'id' => 6,
                 'quest_id' => 0,
@@ -125,7 +137,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-08-30 04:27:57',
                 'deleted_at' => NULL,
             ),
-            9 => 
+            10 => 
             array (
                 'id' => 5,
                 'quest_id' => 0,
@@ -137,7 +149,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-08-26 09:07:31',
                 'deleted_at' => NULL,
             ),
-            10 => 
+            11 => 
             array (
                 'id' => 4,
                 'quest_id' => 0,
@@ -149,7 +161,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-08-24 03:42:31',
                 'deleted_at' => NULL,
             ),
-            11 => 
+            12 => 
             array (
                 'id' => 3,
                 'quest_id' => 0,
@@ -161,7 +173,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-08-30 18:27:52',
                 'deleted_at' => NULL,
             ),
-            12 => 
+            13 => 
             array (
                 'id' => 2,
                 'quest_id' => 0,
@@ -173,7 +185,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-08-30 03:38:44',
                 'deleted_at' => NULL,
             ),
-            13 => 
+            14 => 
             array (
                 'id' => 1,
                 'quest_id' => 0,

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 //use App\Http\Requests;
 use App\Models\User;
+use App\Models\Role;
 use App\Models\Action;
 use App\Models\ActionTransaction;
 use App\Models\Quest;
@@ -244,6 +245,13 @@ class WogController extends Controller
         $a .= '</table>';
 
         return $a;
+    }
+
+    public function questinfo()
+    {
+        return view('questinfo', [
+            'roles' => Role::orderBy('id', 'asc')->get(),
+        ]);
     }
 
 }

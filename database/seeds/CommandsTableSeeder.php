@@ -19,6 +19,17 @@ class CommandsTableSeeder extends Seeder
         \DB::connection('pgsql')->table('commands')->insert(array (
             0 => 
             array (
+                'id' => 4,
+                'code' => 'Inventary',
+                'name' => 'Добавляется к товару в багаже',
+                'description' => 'действие видно на товаре в багаже который в результате его будет уменьшен на 1',
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
                 'id' => 3,
                 'code' => 'AutoClosed',
                 'name' => 'Автозакрытие квеста',
@@ -28,7 +39,7 @@ class CommandsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            1 => 
+            2 => 
             array (
                 'id' => 2,
                 'code' => 'Open',
@@ -39,7 +50,7 @@ class CommandsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
+            3 => 
             array (
                 'id' => 1,
                 'code' => 'Init',

@@ -19,12 +19,13 @@ class OrganizationsTableSeeder extends Seeder
         \DB::connection('pgsql')->table('organizations')->insert(array (
             0 => 
             array (
-                'id' => 4,
+                'id' => 5,
                 'name' => 'MegaFon',
                 'description' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'code' => 'MegaFon                       ',
             ),
             1 => 
             array (
@@ -34,6 +35,7 @@ class OrganizationsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'code' => 'Test2                         ',
             ),
             2 => 
             array (
@@ -43,6 +45,7 @@ class OrganizationsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'code' => 'Test1                         ',
             ),
             3 => 
             array (
@@ -52,6 +55,7 @@ class OrganizationsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'code' => 'Demo                          ',
             ),
             4 => 
             array (
@@ -61,6 +65,7 @@ class OrganizationsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'code' => 'Def                           ',
             ),
         ));
         
