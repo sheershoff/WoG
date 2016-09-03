@@ -24,7 +24,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'action_id' => 12,
                 'mail_template_id' => NULL,
                 'message' => NULL,
-                'organization_id' => 0,
+                
                 'created_at' => '2016-08-31 11:36:20',
                 'updated_at' => '2016-08-31 11:36:20',
                 'deleted_at' => NULL,
@@ -36,7 +36,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'action_id' => 3,
                 'mail_template_id' => 1,
                 'message' => 'fd dfg gefgerg',
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -48,7 +48,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'action_id' => 2,
                 'mail_template_id' => 1,
                 'message' => 'fgsdfg dfg asdfg sdf',
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -60,7 +60,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'action_id' => 1,
                 'mail_template_id' => 1,
                 'message' => 'sdkfl vjdfkj kldfjklgj',
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

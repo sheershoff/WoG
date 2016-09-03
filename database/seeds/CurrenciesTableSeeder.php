@@ -28,7 +28,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 8,
                 'currency_type_id' => 1,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -44,7 +44,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 4,
                 'currency_type_id' => 2,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -60,7 +60,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 12,
                 'currency_type_id' => 5,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -76,7 +76,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 12,
                 'currency_type_id' => 5,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -92,7 +92,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 12,
                 'currency_type_id' => 5,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -109,7 +109,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 12,
                 'currency_type_id' => 5,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -125,7 +125,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 2,
                 'currency_type_id' => 10,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -141,7 +141,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 3,
                 'currency_type_id' => 4,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -157,7 +157,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 2,
                 'currency_type_id' => 4,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -173,7 +173,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 4,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -189,7 +189,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => true,
                 'role_id' => 3,
                 'currency_type_id' => 2,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -205,7 +205,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 9,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -221,7 +221,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 9,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -237,7 +237,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 6,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -253,7 +253,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 6,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -269,7 +269,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 6,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -285,7 +285,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 3,
                 'currency_type_id' => 2,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -301,7 +301,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 2,
                 'currency_type_id' => 2,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -317,7 +317,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 2,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -333,7 +333,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 1,
                 'currency_type_id' => 1,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -349,7 +349,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => true,
                 'role_id' => 1,
                 'currency_type_id' => 10,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -365,7 +365,7 @@ class CurrenciesTableSeeder extends Seeder
                 'top_menu' => false,
                 'role_id' => 2,
                 'currency_type_id' => 4,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

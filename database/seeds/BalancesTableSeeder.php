@@ -23,7 +23,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 69,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -34,7 +34,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 7,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -45,7 +45,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 65,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -56,7 +56,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 64,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -67,7 +67,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 63,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -78,7 +78,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 62,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -89,7 +89,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 61,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -100,7 +100,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 60,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -111,7 +111,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 59,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -122,7 +122,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 57,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -133,7 +133,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 55,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -144,7 +144,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 54,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -155,7 +155,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 56,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -166,7 +166,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 52,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -177,7 +177,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 50,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -188,7 +188,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 53,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -199,7 +199,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 48,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -210,7 +210,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 47,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -221,7 +221,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 49,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -232,7 +232,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 45,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -243,7 +243,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 42,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -254,7 +254,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 39,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -265,7 +265,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 37,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -276,7 +276,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 35,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -287,7 +287,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 28,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -298,7 +298,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 32,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -309,7 +309,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 27,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -320,7 +320,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 26,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -331,7 +331,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 24,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -342,7 +342,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 30,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -353,7 +353,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 23,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -364,7 +364,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 22,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -375,7 +375,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 19,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -386,7 +386,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 18,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -397,7 +397,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 17,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -408,7 +408,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 16,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -419,7 +419,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 21,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -430,7 +430,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 43,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -441,7 +441,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 40,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -452,7 +452,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 38,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -463,7 +463,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 36,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -474,7 +474,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 34,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -485,7 +485,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 33,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -496,7 +496,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 25,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -507,7 +507,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 3,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -518,7 +518,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 5,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -529,7 +529,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 6,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -540,7 +540,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 8,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -551,7 +551,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 9,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -562,7 +562,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 20,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -573,7 +573,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 10,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -584,7 +584,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 1,
                 'currency_id' => 1,
                 'user_id' => 2,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -595,7 +595,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 65,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -606,7 +606,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 64,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -617,7 +617,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 63,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -628,7 +628,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 62,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -639,7 +639,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 61,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -650,7 +650,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 60,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -661,7 +661,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 59,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -672,7 +672,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 57,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -683,7 +683,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 56,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -694,7 +694,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 55,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -705,7 +705,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 54,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -716,7 +716,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 53,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -727,7 +727,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 52,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -738,7 +738,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 50,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -749,7 +749,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 49,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -760,7 +760,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 48,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -771,7 +771,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 47,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -782,7 +782,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 45,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -793,7 +793,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 43,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -804,7 +804,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 42,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -815,7 +815,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 40,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -826,7 +826,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 39,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -837,7 +837,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 38,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -848,7 +848,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 37,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -859,7 +859,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 36,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -870,7 +870,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 35,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -881,7 +881,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 34,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -892,7 +892,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 33,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -903,7 +903,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 32,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -914,7 +914,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 30,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -925,7 +925,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 28,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -936,7 +936,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 27,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -947,7 +947,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 26,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -958,7 +958,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 25,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -969,7 +969,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 24,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -980,7 +980,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 23,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -991,7 +991,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 22,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1002,7 +1002,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 21,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1013,7 +1013,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 20,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1024,7 +1024,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 19,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1035,7 +1035,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 18,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1046,7 +1046,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 17,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1057,7 +1057,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 16,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1068,7 +1068,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 10,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1079,7 +1079,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 9,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1090,7 +1090,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 8,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1101,7 +1101,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 6,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1112,7 +1112,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 5,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1123,7 +1123,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 3,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1134,7 +1134,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 5,
                 'currency_id' => 3,
                 'user_id' => 2,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1145,7 +1145,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 65,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1156,7 +1156,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 64,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1167,7 +1167,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 63,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1178,7 +1178,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 62,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1189,7 +1189,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 61,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1200,7 +1200,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 60,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1211,7 +1211,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 59,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1222,7 +1222,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 57,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1233,7 +1233,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 56,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1244,7 +1244,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 55,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1255,7 +1255,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 54,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1266,7 +1266,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 53,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1277,7 +1277,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 52,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1288,7 +1288,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 50,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1299,7 +1299,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 49,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1310,7 +1310,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 48,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1321,7 +1321,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 47,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1332,7 +1332,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 45,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1343,7 +1343,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 43,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1354,7 +1354,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 42,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1365,7 +1365,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 40,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1376,7 +1376,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 39,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1387,7 +1387,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 38,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1398,7 +1398,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 37,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1409,7 +1409,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 36,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1420,7 +1420,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 35,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1431,7 +1431,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 34,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1442,7 +1442,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 33,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1453,7 +1453,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 32,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1464,7 +1464,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 30,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1475,7 +1475,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 28,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1486,7 +1486,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 27,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1497,7 +1497,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 26,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1508,7 +1508,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 25,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1519,7 +1519,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 24,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1530,7 +1530,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 23,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1541,7 +1541,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 22,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1552,7 +1552,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 21,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1563,7 +1563,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 20,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1574,7 +1574,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 19,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1585,7 +1585,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 18,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1596,7 +1596,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 17,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1607,7 +1607,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 16,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1618,7 +1618,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 10,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1629,7 +1629,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 9,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1640,7 +1640,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 8,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1651,7 +1651,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 6,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1662,7 +1662,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 5,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1673,7 +1673,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 3,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1684,7 +1684,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 100,
                 'currency_id' => 4,
                 'user_id' => 2,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1695,7 +1695,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 45,
                 'currency_id' => 4,
                 'user_id' => 7,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -1706,7 +1706,7 @@ class BalancesTableSeeder extends Seeder
                 'value' => 13,
                 'currency_id' => 3,
                 'user_id' => 7,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

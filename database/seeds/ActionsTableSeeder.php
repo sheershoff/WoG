@@ -25,7 +25,7 @@ class ActionsTableSeeder extends Seeder
                 'description' => 'Инвайт есть и он берётся из инвентаря',
                 'quest_id' => 0,
                 'up_role_id' => 1,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -38,7 +38,7 @@ class ActionsTableSeeder extends Seeder
                 'description' => 'Игрок захотел присоединиться',
                 'quest_id' => 0,
                 'up_role_id' => NULL,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -51,7 +51,7 @@ class ActionsTableSeeder extends Seeder
                 'description' => 'Доступен для взятия 1й квест',
                 'quest_id' => 0,
                 'up_role_id' => NULL,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -64,7 +64,7 @@ class ActionsTableSeeder extends Seeder
                 'description' => 'маленькую красную',
                 'quest_id' => 5,
                 'up_role_id' => NULL,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -77,7 +77,7 @@ class ActionsTableSeeder extends Seeder
                 'description' => 'Можно пригласить друга в игру. Открывает квест - прокачай друга.',
                 'quest_id' => 4,
                 'up_role_id' => NULL,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -90,7 +90,7 @@ class ActionsTableSeeder extends Seeder
                 'description' => 'Увеличивает HP',
                 'quest_id' => 4,
                 'up_role_id' => NULL,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -103,7 +103,7 @@ class ActionsTableSeeder extends Seeder
                 'description' => 'Увеличивает HP',
                 'quest_id' => 4,
                 'up_role_id' => NULL,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -116,7 +116,7 @@ class ActionsTableSeeder extends Seeder
                 'description' => NULL,
                 'quest_id' => 2,
                 'up_role_id' => NULL,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -129,7 +129,7 @@ class ActionsTableSeeder extends Seeder
                 'description' => NULL,
                 'quest_id' => 2,
                 'up_role_id' => NULL,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -142,7 +142,7 @@ class ActionsTableSeeder extends Seeder
                 'description' => '',
                 'quest_id' => 1,
                 'up_role_id' => NULL,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -155,7 +155,7 @@ class ActionsTableSeeder extends Seeder
                 'description' => '',
                 'quest_id' => 1,
                 'up_role_id' => NULL,
-                'organization_id' => 0,
+                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
