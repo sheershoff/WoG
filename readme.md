@@ -65,3 +65,7 @@
     7.	весь список моих квестов?;Пройденых?
 
   6.	журнал событий. (Trancaction Action)
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
