@@ -193,7 +193,7 @@ return [
 
     'sync_attributes' => [
 
-        'name' => 'description',//cn
+        'name' => 'App\Handlers\LdapAttributeHandler@name',//cn
         'login' => 'samaccountname',
         'phone_number' => 'App\Handlers\LdapAttributeHandler@mobile',
         'email' => 'App\Handlers\LdapAttributeHandler@email',

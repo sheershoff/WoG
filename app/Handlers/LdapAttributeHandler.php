@@ -18,5 +18,16 @@ class LdapAttributeHandler
         return preg_replace('![^\d\+]*!','',$user->getAttribute('mobile')[0]);
         
     }
+
+    public function name(User $user)
+    {
+
+        $array = explode(' ',$user->getAttribute('description'));
+        if (count($array)>=2) {
+            return $array[0].' '.$array[1];
+        } 
+        return $user->getAttribute('description');
+        
+    }
     
 }
