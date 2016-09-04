@@ -2,87 +2,64 @@
 
 @section('content')
 
-<div class="page-header" style="min-height:167px">
-    <div style=" height: 170px; " class="panel panel-default">
+<div class="page-header" style="min-height:500px">
+    <div style=" min-height: 400px; " class="panel panel-default">
 
         <span class="to-type">
             <h1 class="css-typing">Добро пожаловать, дорогой друг!</h1>
             <p class=lead css-typing>Это портал Wold of Game. 
                 <br/>Мы рады приветствовать тебя здесь.</p>
-            <p><a href="/login">Авторизуйся</a> используя рабочий е-mail и пароль от AD.</p>
+            <p><a href="/login">Авторизуйся</a> используя рабочий е-mail и код организации.</p>
+	    <p>Если ты здесь первый раз, то позволь рассказать подробнее о портале.</p>
+<p>Во первых, это не игра.</p> 
+<p>Это инструмент.</p>
+<p>Это инструмент для работы.</p>
+<p>Это инструмент для работы команды.</p>
+<p>Это инструмент для мотивации работы команды.</p>
+<p>Это инструмент для работы с мотивацией команды.</p>
+<p>Это инструмент для работы с мотивацией команды команд.</p>
+
+<h2>Как?</h2>
+
+<p>Делай своё дело хорошо и получай бонусы.</p>
+<p>Делай его лучше - получай много бонусов.</p>
+<p>Делаешь что-то не так? Получи обратную связь без демотивации.</p>
+<p>Хочешь подвиг? Вот он, возьми его - и получи супер приз - очередную веху в проекте вовремя и с надлежащим качеством.</p>
+
+<ul>Чего здесь нет?
+<li>- Это не ToDo</li>
+<li>- Это не BugTracer</li>
+<li>- Это не SocialNet</li>
+<li>- Это не Chat</li>
+</ul>
+
+<ul>Что здесь есть?
+<li>Учёт. Кому, сколько, за что.</li>
+<li>Публичность. Вы уверены, что все в курсе, что Вася и Оля получили грамоты и об этом знают все?</li>
+<li>Возможность подарить 1/10 ценного приза.</li>
+<li>Интеграция. Интеграция с внешними системами через API.</li>
+<li>Возможность создавать свои "квесты" - системы получения бонусов-манусов.</li>
+</ul>
+
+<ul>Что ещё?
+<li><b>Привычки</b> - вырабатываем правильные привычки работы в команде</li>
+<li><b>Правила</b> - контролируй правила принятые в команде</li>
+<li><b>Навыки</b> - хорошее место, чтоб их учесть, а также видеть их использование и эффект</li>
+<li><b>Рейтинги</b> - команд, лидеров и инженеров. Почему бы при повышении зарплаты и продвижении по службе их не учесть? Да и механизм рассчёта премии можно построить на них.</li>
+</ul>
         </span>
     </div>
 </div>
 <div class="container">
     <div class="row">
 
-        <!--Награды-->
-        <div class="col-lg-4 col-md-4">
+        <div class="col-lg-12 col-md-12">
             <div class="panel panel-default">
-                <h2>Награды</h2>
-                <div class="framemail">
-                    <div class="window">
-                        <ul class="mail">
-                            @foreach ($bl2s as $bl)
-                            <li>
-                                <i class="read"></i>
-                                <img class="avatar" src="UserProfile/Photo/{{$bl->user_id}}.jpeg" alt="avatar">
-                                <p class="sender">{{$bl->user->name}}</p>
-                                <p class="message"><b>{{$bl->name}}</b> {{$bl->description}}</p>
-                            </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-4 ">
-            <div class="panel panel-group">
-                <h2>Текущая активность</h2>
-                <div class="framemail">
-                    <div class="window">
-                        <ul class="mail">
-                            @foreach ($ats as $at)
-                            <li>
-                                <i class="unread"></i>
-                                <img class="avatar" src="UserProfile/Photo/{{$at->user_id}}.jpeg" alt="avatar">
-                                <p class="sender">{{$at->user->name}}</p>
-                                <p class="message">{{$at->action->name}}</p>
-                                <div class="actions">
-                                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
-                                    <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/star_fav.png" alt="favourite"></a>
-                                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/tag.png" alt="label"></a>
-                                    <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/trash.png" alt="delete"></a>
-                                </div>
-                            </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
+                <h2>Прайс</h2>
+<p>До 10 пользователей и без интеграций - бесплатно. Больше - пишите xw@ya.ru</p><a class="btn btn-large btn-success" href="registre">Зарегистрироваться</a>
             </div>
         </div>
 
-        <!--Top рейтинга-->
-        <div class="col-lg-4 col-md-4">
-            <div class="panel panel-default">
-                <h2>Top рейтинга</h2>
-                <div class="framemail">
-                    <div class="window">
-                        <ul class="mail">
-                            @foreach ($bls as $bl)
-                            <li>
-                                <i class="read"></i>
-                                <img class="avatar" src="UserProfile/Photo/{{$bl->user_id}}.jpeg" alt="avatar">
-                                <p class="sender">{{$bl->user->name}}</p>
-                                <p class="message">{{$bl->value}}<b>{{$bl->name}}</b> {{$bl->description}}</p>
-                            </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 

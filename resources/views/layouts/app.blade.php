@@ -53,7 +53,7 @@
                                 @endif
                             </ul>
                         </li>
-                        <li><a href="/"><i class="icon-th icon-white"></i> WoG</a></li>
+                        <li><a href="/home"><i class="icon-th icon-white"></i> WoG</a></li>
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>

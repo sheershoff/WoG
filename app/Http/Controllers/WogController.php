@@ -26,13 +26,20 @@ class WogController extends Controller
 
     public function index()
     {
-        if (!Auth::check()) {
-            return view('welcome', [
+	$o = config('wog.organization');
+        if (isset($o) && ($o <> 0)) {
+            return view('main', [
                 'ats' => ActionTransaction::orderBy('created_at', 'desc')->take(5)->get(),
                 'bls' => Balance::XP()->orderBy('value', 'desc')->take(5)->get(),
                 'bl2s' => Balance::Medal()->orderBy('created_at', 'desc')->take(5)->get(),
             ]);
-        } else {
+	} else {
+            return view('welcome');
+	}
+    }
+
+    public function home()
+    {
             $this->addUserQuests();
             $this->execAutoAction();
             return view('home', [
@@ -44,7 +51,6 @@ class WogController extends Controller
                 'skill' => Auth::user()->skill()->get(),
 //                'skill_balance' => Auth::user()->skills()->balance()->get(),
             ]);
-        }
     }
 
     public function rating($type)

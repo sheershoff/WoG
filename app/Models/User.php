@@ -250,17 +250,14 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 
     public function __construct(array $attributes = array())
     {
+        parent::__construct($attributes);
         $o = config('wog.organization');
         if (isset($o) && ($o <> 0)) {
-            $this->attributes['organization_id'] = config('wog.organization');
-        } else if (in_array('organization', $attributes)) {
-            $this->attributes['organization_id'] = $attributes['organization'];
-        } else if (in_array('organization_id', $attributes)) {
-            $this->attributes['organization_id'] = $attributes['organization_id'];
-        } else {
-            throw new Exception('organization_id by zero.');
+            $this->organization_id = $o;
+        } 
+	if (!isset($this->organization_id) || ($this->organization_id==0)) {
+            throw new Exception('organization_id by zero.'); //todo: Class 'App\Models\Exception' not found
         }
-        parent::__construct($attributes);
     }
 
     function save(array $options = [])
