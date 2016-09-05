@@ -10,7 +10,7 @@ return [
       |
      */
 
-    'host' => env('JIRAVLADYHOST', ''),
-    'login' => env('JIRAVLADYLOGIN', ''),
+    'apiurl' => env('JIRAVLADYAPIURL', ''),
+    'username' => env('JIRAVLADYUSERNAME', ''),
     'password' => env('JIRAVLADYPASSWORD', ''),
 ];

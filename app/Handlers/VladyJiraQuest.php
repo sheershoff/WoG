@@ -5,30 +5,28 @@
  *
  * @author xvv
  */
-class VladyJiraQuest {
-    
-    protected $host='';
-    protected $login='';
-    protected $password='';
-    
-    public function __construct() {
-        $this->host=config('wogJiraVlady.host');
-        $this->login=config('wogJiraVlady.login');
-        $this->password=config('wogJiraVlady.password');
-        if (($this->host=='') || ($this->login=='') || ($this->password=='')) {
-             throw new Exception('Не заданы реквизиты jira');
-        }
+class VladyJiraQuest extends Jira
+{
+
+    protected $jira = NULL;
+
+    public function __construct()
+    {
+        $apiurl = config('wogJiraVlady.apiurl');
+        $username = config('wogJiraVlady.username');
+        $password = config('wogJiraVlady.password');
+        $jira = new Jira($apiurl, $username, $password);
     }
-    
+
     //GET /rest/api/2/user/search
     //https://docs.atlassian.com/jira/REST/cloud/#api/2/user-findUsersWithBrowsePermission
-    public function questFindLogin() {
-        
+    public function questFindLogin()
+    {
+
     }
-    
+
     //Договорённости о коммуникациях - почта и встречи
     //https://habrahabr.ru/post/309130/
-    
     //о вреде привет
     //https://habrahabr.ru/post/298928/
 }
