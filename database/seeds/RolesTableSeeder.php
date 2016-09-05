@@ -20,7 +20,7 @@ class RolesTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 12,
-                'code' => NULL,
+                'code' => 'titul',
                 'name' => 'titul',
                 'description' => NULL,
                 'organization_id' => 0,
@@ -31,7 +31,7 @@ class RolesTableSeeder extends Seeder
             1 => 
             array (
                 'id' => 9,
-                'code' => NULL,
+                'code' => 'Skill',
                 'name' => 'Skill',
                 'description' => NULL,
                 'organization_id' => 0,
@@ -42,7 +42,7 @@ class RolesTableSeeder extends Seeder
             2 => 
             array (
                 'id' => 8,
-                'code' => NULL,
+                'code' => 'karma',
                 'name' => 'karma',
                 'description' => NULL,
                 'organization_id' => 0,
@@ -53,7 +53,7 @@ class RolesTableSeeder extends Seeder
             3 => 
             array (
                 'id' => 7,
-                'code' => NULL,
+                'code' => 'mana',
                 'name' => 'mana',
                 'description' => NULL,
                 'organization_id' => 0,
@@ -64,7 +64,7 @@ class RolesTableSeeder extends Seeder
             4 => 
             array (
                 'id' => 6,
-                'code' => NULL,
+                'code' => 'TeamRaid',
                 'name' => 'TeamRaid',
                 'description' => NULL,
                 'organization_id' => 0,
@@ -75,7 +75,7 @@ class RolesTableSeeder extends Seeder
             5 => 
             array (
                 'id' => 5,
-                'code' => NULL,
+                'code' => 'lvl5',
                 'name' => 'lvl5',
                 'description' => NULL,
                 'organization_id' => 0,
@@ -86,7 +86,7 @@ class RolesTableSeeder extends Seeder
             6 => 
             array (
                 'id' => 4,
-                'code' => NULL,
+                'code' => 'lvl4',
                 'name' => 'lvl4',
                 'description' => NULL,
                 'organization_id' => 0,
@@ -97,7 +97,7 @@ class RolesTableSeeder extends Seeder
             7 => 
             array (
                 'id' => 3,
-                'code' => NULL,
+                'code' => 'lvl3',
                 'name' => 'lvl3',
                 'description' => NULL,
                 'organization_id' => 0,
@@ -108,7 +108,7 @@ class RolesTableSeeder extends Seeder
             8 => 
             array (
                 'id' => 2,
-                'code' => NULL,
+                'code' => 'lvl2',
                 'name' => 'lvl2',
                 'description' => NULL,
                 'organization_id' => 0,
@@ -119,7 +119,7 @@ class RolesTableSeeder extends Seeder
             9 => 
             array (
                 'id' => 1,
-                'code' => NULL,
+                'code' => 'lvl1',
                 'name' => 'lvl1',
                 'description' => NULL,
                 'organization_id' => 0,
@@ -130,7 +130,7 @@ class RolesTableSeeder extends Seeder
             10 => 
             array (
                 'id' => -1,
-                'code' => NULL,
+                'code' => 'Admin',
                 'name' => 'Admin',
                 'description' => NULL,
                 'organization_id' => 0,
@@ -141,9 +141,31 @@ class RolesTableSeeder extends Seeder
             11 => 
             array (
                 'id' => -2,
-                'code' => NULL,
+                'code' => 'Guest',
                 'name' => 'Guest',
                 'description' => NULL,
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            12 => 
+            array (
+                'id' => -3,
+                'code' => 'AdminBalance',
+                'name' => 'AdminBalance',
+                'description' => 'Даёт право балансировать вознаграждения',
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            13 => 
+            array (
+                'id' => -4,
+                'code' => 'Admin0',
+                'name' => 'Admin0',
+                'description' => 'Даёт право править настройки с организацией = 0',
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,

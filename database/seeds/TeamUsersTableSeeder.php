@@ -23,7 +23,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 48,
                 'team_user_id' => 4,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -34,7 +33,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 21,
                 'team_user_id' => 58,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -45,7 +43,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 20,
                 'team_user_id' => 58,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -56,7 +53,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 19,
                 'team_user_id' => 58,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -67,7 +63,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 18,
                 'team_user_id' => 58,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -78,7 +73,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 17,
                 'team_user_id' => 58,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -89,7 +83,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 16,
                 'team_user_id' => 58,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -100,7 +93,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 47,
                 'team_user_id' => 68,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -111,7 +103,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 43,
                 'team_user_id' => 68,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -122,7 +113,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 42,
                 'team_user_id' => 68,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -133,7 +123,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 39,
                 'team_user_id' => 68,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -144,7 +133,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 38,
                 'team_user_id' => 68,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -155,7 +143,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 36,
                 'team_user_id' => 68,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -166,7 +153,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 34,
                 'team_user_id' => 68,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -177,7 +163,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 33,
                 'team_user_id' => 68,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -188,7 +173,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 24,
                 'team_user_id' => 68,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -199,7 +183,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 60,
                 'team_user_id' => 67,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -210,7 +193,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 50,
                 'team_user_id' => 67,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -221,7 +203,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 27,
                 'team_user_id' => 67,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -232,7 +213,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 23,
                 'team_user_id' => 67,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -243,7 +223,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 22,
                 'team_user_id' => 67,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -254,7 +233,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 40,
                 'team_user_id' => 66,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -265,7 +243,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 37,
                 'team_user_id' => 66,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -276,7 +253,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 35,
                 'team_user_id' => 66,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -287,7 +263,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 30,
                 'team_user_id' => 66,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -298,7 +273,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 26,
                 'team_user_id' => 66,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -309,7 +283,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 10,
                 'team_user_id' => 4,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -320,7 +293,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 9,
                 'team_user_id' => 4,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -331,7 +303,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 8,
                 'team_user_id' => 4,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -342,7 +313,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 7,
                 'team_user_id' => 4,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -353,7 +323,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 6,
                 'team_user_id' => 4,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -364,7 +333,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 5,
                 'team_user_id' => 4,
                 'is_leader' => true,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -375,7 +343,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 3,
                 'team_user_id' => 4,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -386,7 +353,6 @@ class TeamUsersTableSeeder extends Seeder
                 'user_id' => 2,
                 'team_user_id' => 4,
                 'is_leader' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

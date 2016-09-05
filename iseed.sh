@@ -18,8 +18,6 @@ php artisan iseed balances --force
 php artisan iseed skill_levels --force
 php artisan iseed skills --force
 php artisan iseed actions --force
-php artisan iseed commands --force
-php artisan iseed action_command --force
 php artisan iseed quest_depends --force
 php artisan iseed user_quests --force
 php artisan iseed action_currencies --force

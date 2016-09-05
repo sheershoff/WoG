@@ -20,52 +20,52 @@ class OrganizationsTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 5,
+                'code' => 'MegaFon                       ',
                 'name' => 'MegaFon',
                 'description' => NULL,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
-                'code' => 'MegaFon                       ',
             ),
             1 => 
             array (
                 'id' => 3,
+                'code' => 'Test2                         ',
                 'name' => 'Test2',
                 'description' => 'Для тестирования но другой группы',
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
-                'code' => 'Test2                         ',
             ),
             2 => 
             array (
                 'id' => 2,
+                'code' => 'Test1                         ',
                 'name' => 'Test1',
                 'description' => 'Для тестирования',
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
-                'code' => 'Test1                         ',
             ),
             3 => 
             array (
                 'id' => 1,
+                'code' => 'Demo                          ',
                 'name' => 'Demo',
                 'description' => 'Для показа',
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
-                'code' => 'Demo                          ',
             ),
             4 => 
             array (
                 'id' => 0,
+                'code' => 'Def                           ',
                 'name' => 'Def',
                 'description' => 'Значения по умолчанию',
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
-                'code' => 'Def                           ',
             ),
         ));
         

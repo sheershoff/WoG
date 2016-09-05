@@ -75,9 +75,9 @@ Route::group(['prefix' => 'jira-team-boadr'], function() {
 
 //Section::inject('version', 'Мой сайт');
 
-Route::get('/', 'WogController@index')->name('index'); //<a href="{{ route('index')}}"> 
+Route::get('/', 'WogController@index')->name('index'); //<a href="{{ route('index')}}">
 Route::get('/home', 'WogController@home')->name('home');
-Route::get('/personal-dats', 'WogController@personalData')->name('personal-data');
+Route::get('/personal-data', 'WogController@personalData')->name('personal-data');
 Route::get('/quests', 'WogController@quests')->name('quests');
 Route::get('/user/quest/{id}/open', 'WogController@openUserQuest')->name('user-quest');
 Route::get('/test', 'WogController@test')->name('test');

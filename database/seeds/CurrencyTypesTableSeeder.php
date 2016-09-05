@@ -53,7 +53,7 @@ class CurrencyTypesTableSeeder extends Seeder
             3 => 
             array (
                 'id' => 9,
-                'code' => NULL,
+                'code' => 'medal',
                 'name' => 'Медаль',
                 'description' => NULL,
                 'unit' => 'Шт',
@@ -86,7 +86,7 @@ class CurrencyTypesTableSeeder extends Seeder
             6 => 
             array (
                 'id' => 4,
-                'code' => NULL,
+                'code' => 'armor',
                 'name' => 'Шмот',
                 'description' => NULL,
                 'unit' => 'шт',
@@ -112,17 +112,6 @@ class CurrencyTypesTableSeeder extends Seeder
                 'name' => 'Платёжные балансы',
                 'description' => 'Платёжные балансы, такие как gold, mana и т.п.',
                 'unit' => 'Тугриков',
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
-            ),
-            9 => 
-            array (
-                'id' => 1,
-                'code' => NULL,
-                'name' => 'Карма',
-                'description' => NULL,
-                'unit' => 'СуперСпасибо',
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

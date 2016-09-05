@@ -26,7 +26,7 @@ class MailTemplatesTableSeeder extends Seeder
                 'body' => 'Инвайт активирован!',
                 'size' => 1,
                 'action_id' => 13,
-                
+                'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -40,6 +40,7 @@ class MailTemplatesTableSeeder extends Seeder
                 'body' => 'Входи дорогой друг!',
                 'size' => 1,
                 'action_id' => 13,
+                'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -53,7 +54,7 @@ class MailTemplatesTableSeeder extends Seeder
                 'body' => 'Ура! Вход свободен. приключения ждут тебя!',
                 'size' => 1,
                 'action_id' => 13,
-                
+                'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -69,7 +70,7 @@ class MailTemplatesTableSeeder extends Seeder
 Ваша награда: карма повышена на 5 супермегаспасибо, а голда - на 10 тугриков  ',
                 'size' => 1,
                 'action_id' => 4,
-                
+                'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -87,7 +88,7 @@ class MailTemplatesTableSeeder extends Seeder
 Награда за выполнение не заставить себя ждать.',
                 'size' => 1,
                 'action_id' => 3,
-                
+                'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

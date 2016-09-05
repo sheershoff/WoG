@@ -31,7 +31,6 @@ class QuestsTableSeeder extends Seeder
                 'function_time_recheck' => NULL,
                 'function_check' => NULL,
                 'robot_id' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -50,7 +49,6 @@ class QuestsTableSeeder extends Seeder
                 'function_time_recheck' => NULL,
                 'function_check' => NULL,
                 'robot_id' => 4,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -71,7 +69,6 @@ currency_types=4
                 'function_time_recheck' => NULL,
                 'function_check' => NULL,
                 'robot_id' => 7,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -90,7 +87,6 @@ currency_types=4
                 'function_time_recheck' => NULL,
                 'function_check' => NULL,
                 'robot_id' => 2,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -109,7 +105,6 @@ currency_types=4
                 'function_time_recheck' => NULL,
                 'function_check' => NULL,
                 'robot_id' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -128,7 +123,6 @@ currency_types=4
                 'function_time_recheck' => NULL,
                 'function_check' => NULL,
                 'robot_id' => NULL,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -147,7 +141,6 @@ currency_types=4
                 'function_time_recheck' => NULL,
                 'function_check' => NULL,
                 'robot_id' => 2,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

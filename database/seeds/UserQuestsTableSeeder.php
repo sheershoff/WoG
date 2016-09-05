@@ -24,7 +24,6 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_type' => 1,
                 'user_id' => 56,
                 'user_quest_status_id' => 2,
-                
                 'created_at' => '2016-08-31 06:17:38',
                 'updated_at' => '2016-08-31 06:17:54',
                 'deleted_at' => NULL,
@@ -36,7 +35,6 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_type' => 1,
                 'user_id' => 9,
                 'user_quest_status_id' => 1,
-                
                 'created_at' => '2016-08-30 05:09:44',
                 'updated_at' => '2016-08-30 05:09:44',
                 'deleted_at' => NULL,
@@ -48,7 +46,6 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_type' => 1,
                 'user_id' => 72,
                 'user_quest_status_id' => 1,
-                
                 'created_at' => '2016-08-30 05:06:50',
                 'updated_at' => '2016-08-30 05:06:50',
                 'deleted_at' => NULL,
@@ -60,7 +57,6 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_type' => 1,
                 'user_id' => 71,
                 'user_quest_status_id' => 1,
-                
                 'created_at' => '2016-08-30 05:06:40',
                 'updated_at' => '2016-08-30 05:06:40',
                 'deleted_at' => NULL,
@@ -72,7 +68,6 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_type' => 1,
                 'user_id' => 16,
                 'user_quest_status_id' => 1,
-                
                 'created_at' => '2016-08-30 05:01:57',
                 'updated_at' => '2016-08-30 05:01:57',
                 'deleted_at' => NULL,
@@ -84,7 +79,6 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_type' => 1,
                 'user_id' => 15,
                 'user_quest_status_id' => 1,
-                
                 'created_at' => '2016-08-30 04:58:53',
                 'updated_at' => '2016-08-30 04:58:53',
                 'deleted_at' => NULL,
@@ -96,7 +90,6 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_type' => 1,
                 'user_id' => 14,
                 'user_quest_status_id' => 1,
-                
                 'created_at' => '2016-08-30 04:56:42',
                 'updated_at' => '2016-08-30 04:56:42',
                 'deleted_at' => NULL,
@@ -108,7 +101,6 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_type' => 1,
                 'user_id' => 37,
                 'user_quest_status_id' => 1,
-                
                 'created_at' => '2016-08-30 04:52:59',
                 'updated_at' => '2016-08-30 04:52:59',
                 'deleted_at' => NULL,
@@ -120,7 +112,6 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_type' => 1,
                 'user_id' => 13,
                 'user_quest_status_id' => 1,
-                
                 'created_at' => '2016-08-30 04:51:19',
                 'updated_at' => '2016-08-30 04:51:19',
                 'deleted_at' => NULL,
@@ -132,7 +123,6 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_type' => 1,
                 'user_id' => 12,
                 'user_quest_status_id' => 1,
-                
                 'created_at' => '2016-08-30 04:27:57',
                 'updated_at' => '2016-08-30 04:27:57',
                 'deleted_at' => NULL,
@@ -144,7 +134,6 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_type' => 1,
                 'user_id' => 53,
                 'user_quest_status_id' => 1,
-                
                 'created_at' => '2016-08-26 09:07:31',
                 'updated_at' => '2016-08-26 09:07:31',
                 'deleted_at' => NULL,
@@ -156,7 +145,6 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_type' => 1,
                 'user_id' => 7,
                 'user_quest_status_id' => 1,
-                
                 'created_at' => '2016-08-24 03:42:31',
                 'updated_at' => '2016-08-24 03:42:31',
                 'deleted_at' => NULL,
@@ -168,7 +156,6 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_type' => 1,
                 'user_id' => 2,
                 'user_quest_status_id' => 2,
-                
                 'created_at' => '2016-08-23 17:46:04',
                 'updated_at' => '2016-08-30 18:27:52',
                 'deleted_at' => NULL,
@@ -180,7 +167,6 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_type' => 1,
                 'user_id' => 60,
                 'user_quest_status_id' => 1,
-                
                 'created_at' => '2016-08-30 03:38:44',
                 'updated_at' => '2016-08-30 03:38:44',
                 'deleted_at' => NULL,
@@ -192,7 +178,6 @@ class UserQuestsTableSeeder extends Seeder
                 'quest_type' => 1,
                 'user_id' => 62,
                 'user_quest_status_id' => 1,
-                
                 'created_at' => '2016-08-30 03:28:55',
                 'updated_at' => '2016-08-30 03:28:55',
                 'deleted_at' => NULL,

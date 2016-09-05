@@ -22,7 +22,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 390,
                 'role_id' => -2,
                 'user_id' => 56,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -32,7 +31,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 389,
                 'role_id' => -2,
                 'user_id' => 9,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -42,7 +40,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 388,
                 'role_id' => -2,
                 'user_id' => 72,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -52,7 +49,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 387,
                 'role_id' => -2,
                 'user_id' => 71,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -62,7 +58,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 386,
                 'role_id' => -2,
                 'user_id' => 16,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -72,7 +67,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 384,
                 'role_id' => -2,
                 'user_id' => 53,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -82,7 +76,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 383,
                 'role_id' => -2,
                 'user_id' => 7,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -92,7 +85,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 382,
                 'role_id' => -2,
                 'user_id' => 2,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -102,7 +94,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 379,
                 'role_id' => 2,
                 'user_id' => 65,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -112,7 +103,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 378,
                 'role_id' => 2,
                 'user_id' => 64,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -122,7 +112,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 377,
                 'role_id' => 2,
                 'user_id' => 63,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -132,7 +121,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 375,
                 'role_id' => 2,
                 'user_id' => 61,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -142,7 +130,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 373,
                 'role_id' => 2,
                 'user_id' => 59,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -152,7 +139,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 372,
                 'role_id' => 2,
                 'user_id' => 57,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -162,7 +148,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 370,
                 'role_id' => 2,
                 'user_id' => 55,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -172,7 +157,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 369,
                 'role_id' => 2,
                 'user_id' => 54,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -182,7 +166,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 367,
                 'role_id' => 2,
                 'user_id' => 52,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -192,7 +175,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 366,
                 'role_id' => 2,
                 'user_id' => 50,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -202,7 +184,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 365,
                 'role_id' => 2,
                 'user_id' => 49,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -212,7 +193,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 364,
                 'role_id' => 2,
                 'user_id' => 48,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -222,7 +202,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 363,
                 'role_id' => 2,
                 'user_id' => 47,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -232,7 +211,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 362,
                 'role_id' => 2,
                 'user_id' => 45,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -242,7 +220,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 361,
                 'role_id' => 2,
                 'user_id' => 43,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -252,7 +229,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 360,
                 'role_id' => 2,
                 'user_id' => 42,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -262,7 +238,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 359,
                 'role_id' => 2,
                 'user_id' => 40,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -272,7 +247,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 358,
                 'role_id' => 2,
                 'user_id' => 39,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -282,7 +256,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 357,
                 'role_id' => 2,
                 'user_id' => 38,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -292,7 +265,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 355,
                 'role_id' => 2,
                 'user_id' => 36,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -302,7 +274,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 354,
                 'role_id' => 2,
                 'user_id' => 35,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -312,7 +283,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 353,
                 'role_id' => 2,
                 'user_id' => 34,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -322,7 +292,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 352,
                 'role_id' => 2,
                 'user_id' => 33,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -332,7 +301,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 351,
                 'role_id' => 2,
                 'user_id' => 32,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -342,7 +310,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 350,
                 'role_id' => 2,
                 'user_id' => 30,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -352,7 +319,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 349,
                 'role_id' => 2,
                 'user_id' => 28,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -362,7 +328,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 348,
                 'role_id' => 2,
                 'user_id' => 27,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -372,7 +337,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 347,
                 'role_id' => 2,
                 'user_id' => 26,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -382,7 +346,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 346,
                 'role_id' => 2,
                 'user_id' => 25,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -392,7 +355,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 345,
                 'role_id' => 2,
                 'user_id' => 24,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -402,7 +364,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 344,
                 'role_id' => 2,
                 'user_id' => 23,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -412,7 +373,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 343,
                 'role_id' => 2,
                 'user_id' => 22,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -422,7 +382,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 342,
                 'role_id' => 2,
                 'user_id' => 21,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -432,7 +391,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 341,
                 'role_id' => 2,
                 'user_id' => 20,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -442,7 +400,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 340,
                 'role_id' => 2,
                 'user_id' => 19,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -452,7 +409,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 339,
                 'role_id' => 2,
                 'user_id' => 18,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -462,7 +418,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 338,
                 'role_id' => 2,
                 'user_id' => 17,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -472,7 +427,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 336,
                 'role_id' => 2,
                 'user_id' => 10,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -482,7 +436,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 12,
                 'role_id' => -2,
                 'user_id' => 15,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -492,7 +445,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 11,
                 'role_id' => -2,
                 'user_id' => 14,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -502,7 +454,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 10,
                 'role_id' => -2,
                 'user_id' => 37,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -512,7 +463,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 9,
                 'role_id' => -2,
                 'user_id' => 13,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -522,7 +472,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 8,
                 'role_id' => -2,
                 'user_id' => 12,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -532,7 +481,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 7,
                 'role_id' => 2,
                 'user_id' => 8,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -542,7 +490,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 6,
                 'role_id' => 2,
                 'user_id' => 6,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -552,7 +499,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 5,
                 'role_id' => 2,
                 'user_id' => 4,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -562,7 +508,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 4,
                 'role_id' => 3,
                 'user_id' => 5,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -572,7 +517,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 3,
                 'role_id' => -2,
                 'user_id' => 60,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -582,7 +526,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 2,
                 'role_id' => 3,
                 'user_id' => 3,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
@@ -592,7 +535,6 @@ class RoleUserTableSeeder extends Seeder
                 'id' => 1,
                 'role_id' => -2,
                 'user_id' => 62,
-                
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

@@ -26,31 +26,31 @@ class WogController extends Controller
 
     public function index()
     {
-	$o = config('wog.organization');
+        $o = config('wog.organization');
         if (isset($o) && ($o <> 0)) {
             return view('main', [
                 'ats' => ActionTransaction::orderBy('created_at', 'desc')->take(5)->get(),
                 'bls' => Balance::XP()->orderBy('value', 'desc')->take(5)->get(),
                 'bl2s' => Balance::Medal()->orderBy('created_at', 'desc')->take(5)->get(),
             ]);
-	} else {
+        } else {
             return view('welcome');
-	}
+        }
     }
 
     public function home()
     {
-            $this->addUserQuests();
-            $this->execAutoAction();
-            return view('home', [
-                'staus' => Auth::user()->teams()->get(),
-                'cash' => Auth::user()->cash()->get(),
-                'passiveQuests' => Auth::user()->passiveQuests()->get(),
-                'MyQustByUser' => Auth::user()->activeQuests()->take(5)->get(),
-                'inventary' => Auth::user()->inventary()->get(),
-                'skill' => Auth::user()->skill()->get(),
+        $this->addUserQuests();
+        $this->execAutoAction();
+        return view('home', [
+            'staus' => Auth::user()->teams()->get(),
+            'cash' => Auth::user()->cash()->get(),
+            'passiveQuests' => Auth::user()->passiveQuests()->get(),
+            'MyQustByUser' => Auth::user()->activeQuests()->take(5)->get(),
+            'inventary' => Auth::user()->inventary()->get(),
+            'skill' => Auth::user()->skill()->get(),
 //                'skill_balance' => Auth::user()->skills()->balance()->get(),
-            ]);
+        ]);
     }
 
     public function rating($type)
@@ -200,19 +200,12 @@ class WogController extends Controller
     {
         $a = '';
 
-        $a .= '<h1>Command</h1>';
-        $x = Command::orderBy('id')->get();
-        $a .= '<table>';
-        foreach ($x as $v) {
-            $a .= '<tr><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td></tr>';
-        }
-        $a .= '</table>';
 
         $a .= '<h1><a href="http://url-wog-app01/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog&select=wog_currencies">CurrencyType</a></h1>';
         $x = CurrencyType::orderBy('id')->get();
         $a .= '<table>';
         foreach ($x as $v) {
-            $a .= '<tr><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td></tr>';
+            $a .= '<tr><td>' . $v->id . '</td><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td></tr>';
         }
         $a .= '</table>';
 
@@ -220,7 +213,7 @@ class WogController extends Controller
         $x = Currency::orderBy('id')->get();
         $a .= '<table>';
         foreach ($x as $v) {
-            $a .= '<tr><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->currency_type_id . '</td><td>' . $v->description . '</td></tr>';
+            $a .= '<tr><td>' . $v->id . '</td><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->currency_type_id . '</td><td>' . $v->description . '</td></tr>';
         }
         $a .= '</table>';
 
@@ -228,7 +221,7 @@ class WogController extends Controller
         $x = Quest::orderBy('id')->get();
         $a .= '<table>';
         foreach ($x as $v) {
-            $a .= '<tr><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td></tr>';
+            $a .= '<tr><td>' . $v->id . '</td><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td></tr>';
         }
         $a .= '</table>';
 
@@ -236,7 +229,7 @@ class WogController extends Controller
         $x = Action::orderBy('id')->get();
         $a .= '<table>';
         foreach ($x as $v) {
-            $a .= '<tr><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td></tr>';
+            $a .= '<tr><td>' . $v->id . '</td><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td></tr>';
         }
         $a .= '</table>';
 
@@ -246,7 +239,7 @@ class WogController extends Controller
         $x = MailTemplate::orderBy('id')->get();
         $a .= '<table>';
         foreach ($x as $v) {
-            $a .= '<tr><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td><td>' . $v->body . '</td></tr>';
+            $a .= '<tr><td>' . $v->id . '</td><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td><td>' . $v->body . '</td></tr>';
         }
         $a .= '</table>';
 
