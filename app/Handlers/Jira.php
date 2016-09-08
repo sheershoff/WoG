@@ -1,11 +1,5 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace App\Handlers;
 
 /**
@@ -19,8 +13,9 @@ class Jira
     protected $apiurl = '';
     protected $username = '';
     protected $password = '';
+    protected $proxy = '';
 
-    public function __construct($apiurl, $username, $password)
+    public function __construct($apiurl, $username, $password, $proxy = '')
     {
         if (isset($apiurl) && ($apiurl != '')) {
             $this->apiurl = $apiurl;
@@ -30,6 +25,9 @@ class Jira
         }
         if (isset($password) && ($password != '')) {
             $this->password = $password;
+        }
+        if (isset($proxy) && ($proxy != '')) {
+            $this->proxy = $proxy;
         }
 
         if (($this->apiurl == '') || ($this->username == '') || ($this->password == '')) {
@@ -52,6 +50,13 @@ class Jira
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322)');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        if ($this->proxy != '') {
+            curl_setopt($ch, CURLOPT_PROXY, $this->proxy);
+        }
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+//        curl_setopt($ch, CURLOPT_HEADER, 1);
+//        curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
+//        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 //curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5000);
 //curl_setopt($ch, CURLOPT_TIMEOUT, 5000);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json", "X-Atlassian-Token: nocheck"));
@@ -67,7 +72,9 @@ class Jira
         }
         curl_setopt($ch, CURLOPT_USERPWD, "$this->username:$this->password");
 //curl_setopt($ch, CURLOPT_VERBOSE, true);
+        //dd($ch);
         $data = curl_exec($ch);
+        // dd($data);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         $ch_error = curl_error($ch);
         curl_close($ch);
@@ -174,8 +181,8 @@ class Jira
         //var_dump($req);
         $maxResults = array_key_exists("maxResults", $req) ? $req["maxResults"] : 0;
         $startAt = array_key_exists("startAt", $req) ? $req["startAt"] : 0;
-        $data = getJira('search', $req); //.'?jql='.urlencode('project=GFIMPL AND type=Bug AND status!=closed order by created desc')
-        $data = json_decode($data, TRUE);
+        $json = getJira('search', $req); //.'?jql='.urlencode('project=GFIMPL AND type=Bug AND status!=closed order by created desc')
+        $data = json_decode($json, TRUE);
         //echo $data["startAt"].'-'.$data["maxResults"].'('.$data["total"].")\n";
         if (($data["startAt"] + $data["maxResults"] < $data["total"]) &&
                 (($maxResults == 0) || ($data["startAt"] + $data["maxResults"] < $maxResults)) &&
@@ -189,6 +196,18 @@ class Jira
         } else {
             //echo ".f".count($data["issues"])."key=".$data["issues"][0]["key"]."\n";
             return $data["issues"];
+        }
+    }
+
+    public function getUserByEmail($email)
+    {
+        $json = $this->getJira('user/search?username=' . $email); //.'?jql='.urlencode('project=GFIMPL AND type=Bug AND status!=closed order by created desc')
+        //https://jira.billing.ru/rest/api/2/user/search?username=vladimir.khonin@megafon.ru
+        $data = json_decode($json, FALSE);
+        if (count($data) > 0) {
+            return $data[0]->key;
+        } else {
+            return FALSE;
         }
     }
 

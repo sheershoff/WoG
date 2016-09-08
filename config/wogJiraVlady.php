@@ -13,4 +13,5 @@ return [
     'apiurl' => env('JIRAVLADYAPIURL', ''),
     'username' => env('JIRAVLADYUSERNAME', ''),
     'password' => env('JIRAVLADYPASSWORD', ''),
+    'proxy' => env('PROXY', ''),
 ];

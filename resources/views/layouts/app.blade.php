@@ -48,7 +48,7 @@
                                 @if (Auth::guest())
                                 @else
                                 <li><a href="/phpinfo.php">phpinfo.php</a></li>
-                                <li><a href="/i/adminer.php">Adminer</a></li>
+                                <li><a href="/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog">Adminer</a></li>
                                 <li><a href="/jira-team-boadr/">JiraTeamBoadr</a></li>
                                 @endif
                             </ul>

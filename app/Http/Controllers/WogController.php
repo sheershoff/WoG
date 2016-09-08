@@ -18,8 +18,8 @@ use App\Models\UserSkill;
 use App\Models\Currency;
 use App\Models\CurrencyType;
 use App\Models\MailTemplate;
-use App\Models\Command;
 use App\Models\Balance;
+use App\Handlers\VladyJiraQuest;
 
 class WogController extends Controller
 {
@@ -40,6 +40,9 @@ class WogController extends Controller
 
     public function home()
     {
+        if (!Auth::check()) {
+            return;
+        }
         $this->addUserQuests();
         $this->execAutoAction();
         return view('home', [
@@ -150,23 +153,28 @@ class WogController extends Controller
         $userId = Auth::user()->id;
         $sql = 'select a.id, a.quest_id, uq.id as user_quest_id
             from ' . DB::getTablePrefix() . 'user_quests uq
-            inner join ' . DB::getTablePrefix() . 'actions a on a.quest_id = uq.quest_id
-            inner join ' . DB::getTablePrefix() . 'action_command ac on ac.action_id = a.id
-            inner join ' . DB::getTablePrefix() . 'commands c on ac.command_id = c.id
+            inner join ' . DB::getTablePrefix() . 'actions a on a.quest_id = uq.quest_id and a.init=true
             where not exists (select 1 from ' . DB::getTablePrefix() . 'action_transactions at --нет записей в транзакциях
                                where at.action_id = a.id and at.user_id = uq.user_id and at.deleted_at is null)
               and uq.user_id = ?
-              and c.code = ?
-              and uq.user_quest_status_id = ?
+              and uq.user_quest_status_id = 1
              order by uq.created_at desc';
-        $qs = DB::select($sql, [$userId, 'Init', 1]);
+        $qs = DB::select($sql, [$userId]);
         foreach ($qs as $q) {
             $uq = new ActionTransaction();
             $uq->user_id = $userId;
             $uq->action_id = $q->id;
             $uq->save(); // <~ this is your "insert" statement
         }
-        $qs = DB::select($sql, [$userId, 'Open', 2]);
+        $sql = 'select a.id, a.quest_id, uq.id as user_quest_id
+            from ' . DB::getTablePrefix() . 'user_quests uq
+            inner join ' . DB::getTablePrefix() . 'actions a on a.quest_id = uq.quest_id and a.open=true
+            where not exists (select 1 from ' . DB::getTablePrefix() . 'action_transactions at --нет записей в транзакциях
+                               where at.action_id = a.id and at.user_id = uq.user_id and at.deleted_at is null)
+              and uq.user_id = ?
+              and uq.user_quest_status_id = 2
+             order by uq.created_at desc';
+        $qs = DB::select($sql, [$userId]);
         foreach ($qs as $q) {
             $uq = new ActionTransaction();
             $uq->user_id = $userId;
@@ -181,22 +189,24 @@ class WogController extends Controller
 //        }
         $sql = 'select a.id, a.quest_id, uq.id as user_quest_id
             from ' . DB::getTablePrefix() . 'user_quests uq
-            inner join ' . DB::getTablePrefix() . 'actions a on a.quest_id = uq.quest_id
-            inner join ' . DB::getTablePrefix() . 'action_command ac on ac.action_id = a.id
-            inner join ' . DB::getTablePrefix() . 'commands c on ac.command_id = c.id
-
+            inner join ' . DB::getTablePrefix() . 'actions a on a.quest_id = uq.quest_id and a.inventary=true
             where not exists (select 1 from ' . DB::getTablePrefix() . 'action_currencies c
                                   left join ' . DB::getTablePrefix() . 'balances b on b.user_id = uq.user_id and c.currency_id = b.currency_id
                                       where c.action_id = a.id and c.value<0 and c.transaction_user=true
                                         and coalesce(c.value,0)+coalesce(b.value)<0)
               and uq.user_id = ?
-              and c.code = ?
-              and uq.user_quest_status_id = ?
+              and uq.user_quest_status_id = 2
              order by uq.created_at desc';
-        $qs = DB::select($sql, [$userId, 'Inventary', 2]);
+        $qs = DB::select($sql, [$userId]);
     }
 
     public function test()
+    {
+        $v = new VladyJiraQuest;
+        $v->questFindLogin();
+    }
+
+    public function info()
     {
         $a = '';
 
@@ -234,7 +244,6 @@ class WogController extends Controller
         $a .= '</table>';
 
         $a .= '<h1><a href="http://url-wog-app01/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog&select=wog_action_currencies">ActionCurrency</a></h1>';
-        $a .= '<h1><a href="http://url-wog-app01/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog&select=wog_action_command">ActionCommand</a></h1>';
         $a .= '<h1><a href="http://url-wog-app01/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog&select=wog_mail_templates">MailTemplate</a></h1>';
         $x = MailTemplate::orderBy('id')->get();
         $a .= '<table>';
