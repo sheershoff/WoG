@@ -7,7 +7,7 @@
 
         <span class="to-type">
             <h1 class="css-typing">Добро пожаловать, дорогой друг!</h1>
-            <p class=lead css-typing>Это портал Wold of Game. 
+            <p class=lead css-typing>Это портал World of Game.
                 <br/>Мы рады приветствовать тебя здесь.</p>
             <p><a href="/login">Авторизуйся</a> используя рабочий е-mail и пароль от AD.</p>
         </span>
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="col-lg-4 col-md-4 ">
             <div class="panel panel-group">
                 <h2>Текущая активность</h2>

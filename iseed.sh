@@ -7,7 +7,7 @@ php artisan iseed mail_aggs --force
 php artisan iseed pages --force
 php artisan iseed user_statuses --force
 php artisan iseed password_resets --force
-#php artisan iseed users --force
+php artisan iseed users --force
 php artisan iseed robots --force
 php artisan iseed team_users --force
 php artisan iseed robots --force
