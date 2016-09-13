@@ -36,7 +36,7 @@ class VladyJiraQuest extends Jira
         $x = User::/* where('jira', '=', '') -> */whereNull('jira')->whereNotNull('email')->get();
         foreach ($x as $u) {
             $e = $this->jira->getUserByEmail($u->email);
-            if (isset($e) && !$e && ($e != '')) {
+            if (isset($e) && ($e !== FALSE) && ($e != '')) {
                 $u->jira = $e;
                 $u->save();
             }

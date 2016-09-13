@@ -14,7 +14,8 @@
         "intervention/image": "^2.3",
         "webmozart/assert": "^1.1",
         "laravel/socialite": "^2.0",
-        "laravel-notification-channels/telegram": "^0.0.1"
+        "laravel-notification-channels/telegram": "^0.0.1",
+        "graham-campbell/exceptions": "^9.1"
     },
     "require-dev": {
         "xvlady/iseed": "@dev",
@@ -26,7 +27,8 @@
         "laracasts/generators": "^1",
         "krlove/eloquent-model-generator": "^1",
         "barryvdh/laravel-debugbar": "^2.2",
-        "barryvdh/laravel-ide-helper": "^2.2"
+        "barryvdh/laravel-ide-helper": "^2.2",
+        "filp/whoops": "^2.1"
     },
     "autoload": {
         "classmap": [

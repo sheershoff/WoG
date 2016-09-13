@@ -29,7 +29,7 @@ use AuthenticatesUsers;
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/home';
 
     /**
      * Show the application's login form.

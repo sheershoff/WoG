@@ -9,7 +9,11 @@
             <h1 class="css-typing">Добро пожаловать, дорогой друг!</h1>
             <p class=lead css-typing>Это портал World of Game.
                 <br/>Мы рады приветствовать тебя здесь.</p>
+            @if (Auth::check())
+            <p>Более подробно о себе <a href="/home">смотри здесь</a>.</p>
+            @else
             <p><a href="/login">Авторизуйся</a> используя рабочий е-mail и пароль от AD.</p>
+            @endif
         </span>
     </div>
 </div>

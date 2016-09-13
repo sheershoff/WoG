@@ -199,6 +199,10 @@ class Jira
         }
     }
 
+    /**
+     * @assert ('vladimir.khonin@mrgafon.ru') == 'vkhonin'
+     * @assert ('sjdhgjks@sdfkl.ru') == FALSE
+     */
     public function getUserByEmail($email)
     {
         $json = $this->getJira('user/search?username=' . $email); //.'?jql='.urlencode('project=GFIMPL AND type=Bug AND status!=closed order by created desc')
