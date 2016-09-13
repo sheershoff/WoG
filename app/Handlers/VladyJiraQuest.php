@@ -7,12 +7,10 @@ namespace App\Handlers;
  *
  * @author xvv
  */
-use App\Models\User;
-
 class VladyJiraQuest extends Jira
 {
 
-    protected $jira = NULL;
+    //protected $jira = NULL;
 
     public function __construct()
     {
@@ -20,27 +18,7 @@ class VladyJiraQuest extends Jira
         $username = config('wogJiraVlady.username');
         $password = config('wogJiraVlady.password');
         $proxy = config('wogJiraVlady.proxy');
-        $this->jira = new Jira($apiurl, $username, $password, $proxy);
-    }
-
-    /*
-     * Ищем пользователей в jira
-     * GET /rest/api/2/user/search
-     * https://docs.atlassian.com/jira/REST/cloud/#api/2/user-findUsersWithBrowsePermission
-     * @assert ()=1
-     *
-     */
-
-    public function questFindLogin()
-    {
-        $x = User::/* where('jira', '=', '') -> */whereNull('jira')->whereNotNull('email')->get();
-        foreach ($x as $u) {
-            $e = $this->jira->getUserByEmail($u->email);
-            if (isset($e) && ($e !== FALSE) && ($e != '')) {
-                $u->jira = $e;
-                $u->save();
-            }
-        }
+        parent::__construct($apiurl, $username, $password, $proxy);
     }
 
     //Договорённости о коммуникациях - почта и встречи
