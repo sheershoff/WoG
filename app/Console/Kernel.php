@@ -1,10 +1,8 @@
 <?php
-
 namespace App\Console;
-
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-
+use App\Console\Commands\VladyJiraFindLogin;
 class Kernel extends ConsoleKernel
 {
     /**
@@ -13,9 +11,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        VladyJiraFindLogin::class,
     ];
-
     /**
      * Define the application's command schedule.
      *
@@ -24,10 +21,12 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        $schedule->command('vladyjiraquest:findlogin')
+                ->dailyAt('23:10');
+//        $schedule->call(function () {
+//            DB::table('recent_users')->delete();
+//        })->daily();
     }
-
     /**
      * Register the Closure based commands for the application.
      *

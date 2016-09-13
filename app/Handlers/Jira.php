@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Handlers;
-
 /**
  * Description of jira
  *
@@ -9,12 +7,10 @@ namespace App\Handlers;
  */
 class Jira
 {
-
     protected $apiurl = '';
     protected $username = '';
     protected $password = '';
     protected $proxy = '';
-
     public function __construct($apiurl, $username, $password, $proxy = '')
     {
         if (isset($apiurl) && ($apiurl != '')) {
@@ -29,16 +25,13 @@ class Jira
         if (isset($proxy) && ($proxy != '')) {
             $this->proxy = $proxy;
         }
-
         if (($this->apiurl == '') || ($this->username == '') || ($this->password == '')) {
             throw new Exception('Не заданы реквизиты jira');
         }
     }
-
     /*
      * Базовый запрос к Jira
      */
-
     public function getJira($url, $req = FALSE)
     {
         $url = $this->apiurl . $url;
@@ -86,25 +79,22 @@ class Jira
         }
         return ($httpcode >= 200 && $httpcode < 300) ? $data : false;
     }
-
     /*
      * Получаем список полей
      */
-
     public function getJiraField($req)
     {
         $req["maxResults"] = 1;
         if (!array_key_exists('jql', $req)) {
             return "not jql field";
         }
-        $data = getJira('search', $req);
+        $data = $this->getJira('search', $req);
         $dataArray = json_decode($data, TRUE);
         $dataIssues = $dataArray["issues"];
         $dataIssue = $dataIssues[0];
         $dataFields = $dataIssue["fields"];
         return array_keys($dataFields);
     }
-
     /*
      * Выдираем из многоуровневой структуры на первый уровень то что нам нужно
      *  "assignee"=>"emailAddress", "status"=>"name",
@@ -128,10 +118,8 @@ class Jira
       "progress"=>["progress"=>"progress"]//,"progresstotal"=>"total"]
       ]);
      *  */
-
     public function flat_value_array($data, $param)
     {
-
         function itemWork($key, $value, $param, &$itemadd)
         {
             if (!array_key_exists($key, $param)) {
@@ -153,7 +141,6 @@ class Jira
                 $itemadd[$pkey] = $value[$pvalue];
             }
         }
-
         if (!isset($param)) {
             return $data;
         }
@@ -173,7 +160,6 @@ class Jira
         }
         return $data;
     }
-
 ///rest/api/2/issue/
     //";//?os_username=".$login."&os_password=".$password;
     public function getIssues($req)
@@ -181,7 +167,7 @@ class Jira
         //var_dump($req);
         $maxResults = array_key_exists("maxResults", $req) ? $req["maxResults"] : 0;
         $startAt = array_key_exists("startAt", $req) ? $req["startAt"] : 0;
-        $json = getJira('search', $req); //.'?jql='.urlencode('project=GFIMPL AND type=Bug AND status!=closed order by created desc')
+        $json = $this->getJira('search', $req); //.'?jql='.urlencode('project=GFIMPL AND type=Bug AND status!=closed order by created desc')
         $data = json_decode($json, TRUE);
         //echo $data["startAt"].'-'.$data["maxResults"].'('.$data["total"].")\n";
         if (($data["startAt"] + $data["maxResults"] < $data["total"]) &&
@@ -190,7 +176,7 @@ class Jira
         ) {
             $req["startAt"] = $startAt + $data["maxResults"];
             //echo ".z".count($data["issues"])."key=".$data["issues"][0]["key"]."\n";
-            $data = array_merge($data["issues"], getIssues($req));
+            $data = array_merge($data["issues"], $this->getIssues($req));
             //echo ".y".count($data)."key=".$data[0]["key"]."\n";
             return $data;
         } else {
@@ -198,7 +184,10 @@ class Jira
             return $data["issues"];
         }
     }
-
+    /**
+     * @assert ('vladimir.khonin@mrgafon.ru') == 'vkhonin'
+     * @assert ('sjdhgjks@sdfkl.ru') == FALSE
+     */
     public function getUserByEmail($email)
     {
         $json = $this->getJira('user/search?username=' . $email); //.'?jql='.urlencode('project=GFIMPL AND type=Bug AND status!=closed order by created desc')
@@ -210,7 +199,6 @@ class Jira
             return FALSE;
         }
     }
-
     /*
       $req = [//"jql"=>"project=GFIMPL AND type=Bug AND status!=closed order by created desc",
       "jql"=>'project = GFPMO AND status != closed AND status != resolved AND type = Story ORDER BY due ASC',
@@ -241,7 +229,6 @@ class Jira
       ];
       //,"startAt":'+$istartAt+',"maxResults":1000,"fields":["key","created","reporter","assignee","summary","status"]}';
      */
-
     /*
       $req = [//"jql"=>"project=GFIMPL AND type=Bug AND status!=closed order by created desc",
       "jql"=>'project = GFPMO AND ((status != closed AND status != resolved) or updated > -14d) AND type in (Story, Epic) ORDER BY$
@@ -292,6 +279,5 @@ class Jira
       $dataI);
       echo json_encode($links);
       file_put_contents('my.json', json_encode($data));
-
      */
 }

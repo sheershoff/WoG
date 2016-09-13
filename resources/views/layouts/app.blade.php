@@ -43,14 +43,13 @@
                                 <img style=" margin-top: -7px; " src="{{asset('img/logo30.png')}}" alt="WoG">
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="/gantt/index.html">gantt</a></li>
-                                <li><a href="/gantt/toweek.html">недельные задачи</a></li>
-                                <li><a href="/skills/">Скиллы</a></li>
+                                <li><a href="/i/gantt/index.html">gantt</a></li>
+                                <li><a href="/i/gantt/toweek.html">недельные задачи</a></li>
                                 @if (Auth::guest())
                                 @else
-                                    <li><a href="/phpinfo.php">phpinfo.php</a></li>
-                                    <li><a href="/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog">Adminer</a></li>
-                                    <li><a href="/jira-team-boadr/">JiraTeamBoadr</a></li>
+                                <li><a href="/phpinfo.php">phpinfo.php</a></li>
+                                <li><a href="/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog">Adminer</a></li>
+                                <li><a href="/jira-team-boadr/">JiraTeamBoadr</a></li>
                                 @endif
                             </ul>
                         </li>
@@ -66,7 +65,6 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/achievements') }}">Достижения</a></li>
-                                <li><a href="{{ url('/skills') }}">Навыки</a></li>
                                 <li><a href="{{ url('/administrator') }}">Настройка</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
@@ -105,23 +103,12 @@
             </div>
         </div><!--/row -->
         @endif
-
         <div class="container main-wog">
-
             <!-- FIRST ROW OF BLOCKS -->
             <div class="row">
-
-
                 @yield('content')
-
-
             </div><!--/row -->
-
-
-
         </div> <!-- /container -->
-
-
         <div id="footerwrap">
             <footer class="clearfix"></footer>
             <div class="container">
@@ -131,11 +118,9 @@
                         <p> {{ shell_exec("git log -1 --pretty=format:'%h - %s (%ci)' --abbrev-commit `git merge-base local-dev dev`") }}
                             © V.Khonin, R.Revel &  2016 ПАО «МегаФон»</p>
                     </div>
-
                 </div><!-- /row -->
             </div><!-- /container -->
         </div><!-- /footerwrap -->
-
         <!-- JavaScripts -->
         <script type="text/javascript" src="{{asset('/js/bootstrap.js')}}"></script>
         <script type="text/javascript" src="{{asset('/js/all.js') }}"></script>

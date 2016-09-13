@@ -1,12 +1,9 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Models\Organization;
 use Illuminate\Http\Request;
-
 class LoginController extends Controller
 {
     /*
@@ -19,18 +16,14 @@ class LoginController extends Controller
       | to conveniently provide its functionality to your applications.
       |
      */
-
 use AuthenticatesUsers;
-
     protected $username = 'email';
-
     /**
      * Where to redirect users after login / registration.
      *
      * @var string
      */
-    protected $redirectTo = '/';
-
+    protected $redirectTo = '/home';
     /**
      * Show the application's login form.
      *
@@ -44,9 +37,7 @@ use AuthenticatesUsers;
             return view('auth.login');
         }
     }
-
     protected $organization = 0;
-
     /**
      * Create a new controller instance.
      *
@@ -66,7 +57,6 @@ use AuthenticatesUsers;
         $this->middleware('guest', ['except' => 'logout']);
 //        if (Auth::attempt(['email' => strtolower($email), 'password' => $password, 'user_type' => 1, 'user_status_id' => 1, 'organization_id' => $o], $remember)) {
     }
-
     /**
      * Validate the user login request.
      *
@@ -83,5 +73,4 @@ use AuthenticatesUsers;
         }
         $this->validate($request, $validate);
     }
-
 }
