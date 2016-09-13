@@ -1,0 +1,28 @@
+{
+  "name": "WoG",
+  "version": "1.0",
+  "homepage": "https://github.com/xvlady/wog",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "jquery-ui": "^1.12.0",
+    "bootstrap": "^3.3.7",
+    "datatables": "^1.10.12",
+    "font-awesome": "^4.6.3",
+    "normalize-css": "normalize.css#^4.2.0",
+    "typed.js": "^1.1.4",
+    "datatables.net": "^1.10.12",
+    "datatables.net-dt": "^1.10.12",
+    "angular": "^1.5.8"
+  }
+}

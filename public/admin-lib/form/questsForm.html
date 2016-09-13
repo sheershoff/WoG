@@ -1,0 +1,22 @@
+<div class="col-md-9" id="product_edit">
+  <div id="product_edit_form" class="panel panel-default">
+    <div class="panel-heading">Редактирование</div>
+    <div class="panel-body">
+      <form id="ProductEditPOST" action="http://prokatlider.com/adminzone/Product/22" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_token" value="niaDtdbHJZuAZcyhR6RZAPWKksDDBvPDTE0TGSPI">
+        <input type="hidden" name="sid_id" value="1">
+          <input type="hidden" name="_method" value="PUT">
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon">Названия</span>
+            <input type="text" value="{{ name }}" name="name" class="form-control">
+          </div>
+        </div>
+        <input id="addClic" type="submit" value="Изменить " class="btn btn-default">
+        <div id="CancelClic" type="submit" class="btn btn-default">Отмена</div>
+        
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

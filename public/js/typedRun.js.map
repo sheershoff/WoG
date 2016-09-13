@@ -1,0 +1,1 @@
+{"version":3,"sources":["typedRun.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA","file":"typedRun.js","sourcesContent":["  $(function(){\n        $(\"#typed\").typed({\n            stringsElement: $('#typed-strings')\n        });\n    });\n"],"sourceRoot":"/source/"}

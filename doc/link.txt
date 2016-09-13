@@ -1,0 +1,19 @@
+  * Ресурсы
+    * <http://iconbird.com/view/37678_iconki_minon_gadkiy_ya_minion_banan>
+  * laravel
+    * <https://laravel.com/>
+    * <https://laravel.com/api/5.2/index.html>
+    * Подсказки
+      * <http://cheats.jesse-obrien.ca/>
+      * <http://learninglaravel.net/cheatsheet/>
+    * Дока, но понятней чем дока
+      * <https://laravel.ru/docs/v4/eloquent>
+    * Почитать на досуге
+      * <http://otdel-devsite.ru/laravel-5-%D0%BF%D0%B8%D1%88%D0%B5%D0%BC-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1/>
+  * Markdown
+    * <http://on.econ.msu.ru/help.php?file=markdown.html>
+angelarJs
+    https://scotch.io/tutorials/create-a-laravel-and-angular-single-page-comment-application
+    https://scotch.io/tutorials/quick-tip-using-laravel-blade-with-angularjs
+    @{{ yourName }}
+    http://angular-doc.herokuapp.com/guide/ie
