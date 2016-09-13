@@ -11,7 +11,7 @@ class SkillController extends Controller
     public function showskills() 
     {
         $treeData = $this->getCats(Skill::all());
-        return view('skills', [
+        return view('skills.allskills', [
             'treeData'=>$treeData
         ]);
     }
