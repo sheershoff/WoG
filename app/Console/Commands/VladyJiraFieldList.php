@@ -2,10 +2,7 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
-use Cache;
-
-class VladyJiraGantt extends Command
+class VladyJiraFieldList extends VladyJiraCommand
 {
 
     /**
@@ -13,14 +10,15 @@ class VladyJiraGantt extends Command
      *
      * @var string
      */
-    protected $signature = 'jira:ganttclear';
+    protected $signature = 'jira:fields';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Clear cache from json';
+    protected $description = 'Список полей';
+    protected $req = ["jql" => 'project = GFimpl ORDER BY key desc'];
 
     /**
      * Execute the console command.
@@ -34,11 +32,7 @@ class VladyJiraGantt extends Command
      */
     public function handle()
     {
-        if (Cache::has('gantt')) {
-            $this->line(json_decode(Cache::get('gantt'))->now);
-        }
-        Cache::forget('gantt');
-//        Cache::flush();
+        dd($this->jira->getJiraField($this->req));
     }
 
 }

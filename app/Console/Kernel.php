@@ -6,6 +6,8 @@ use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use App\Console\Commands\VladyJiraFindLogin;
 use App\Console\Commands\VladyJiraGantt;
+use App\Console\Commands\VladyJiraClosedBug;
+use App\Console\Commands\VladyJiraFieldList;
 
 class Kernel extends ConsoleKernel
 {
@@ -18,6 +20,8 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         VladyJiraFindLogin::class,
         VladyJiraGantt::class,
+        VladyJiraClosedBug::class,
+        VladyJiraFieldList::class,
     ];
 
     /**

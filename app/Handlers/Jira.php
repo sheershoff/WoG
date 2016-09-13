@@ -91,8 +91,16 @@ class Jira
      * Получаем список полей
      */
 
-    public function getJiraField($req)
+    public function getJiraField($req = FALSE)
     {
+        $dataAllFields = json_decode($this->getJira('field'), TRUE);
+        $dataAllFieldsName = [];
+        foreach ($dataAllFields as $v) {
+            $dataAllFieldsName[$v['id']] = $v['name'];
+        }
+        if (!$req) {
+            return $dataAllFieldsName;
+        }
         $req["maxResults"] = 1;
         if (!array_key_exists('jql', $req)) {
             return "not jql field";
@@ -102,7 +110,10 @@ class Jira
         $dataIssues = $dataArray["issues"];
         $dataIssue = $dataIssues[0];
         $dataFields = $dataIssue["fields"];
-        return array_keys($dataFields);
+        foreach ($dataFields as $f => &$v) {
+            $v = $dataAllFieldsName[$f];
+        }
+        return $dataFields;
     }
 
     /*
