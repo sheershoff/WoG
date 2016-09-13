@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Handlers\VladyJiraQuest;
-use App\Models\User;
+use Cache;
 
 class VladyJiraGantt extends Command
 {
@@ -56,6 +56,9 @@ class VladyJiraGantt extends Command
 
     protected function buildjson()
     {
+        if (Cache::has('gantt')) {
+            return Cache::get('gantt');
+        }
         $dataI = $this->jira->getIssues($this->req);
         if (!isset($dataI) || $dataI == []) {
             return FALSE;
@@ -176,8 +179,9 @@ class VladyJiraGantt extends Command
 
 
         $dataOut = ['data' => $data, 'collections' => ['links' => $links]];
-        file_put_contents('~/wog/public/gantt/my.json', json_encode($dataOut));
-        return cont($data);
+        file_put_contents('/data/ansible/wog/public/i/gantt/my.json', json_encode($dataOut));
+        Cache::put('gantt', json_encode($dataOut), 60 * 24);
+        return count($data);
     }
 
     /**

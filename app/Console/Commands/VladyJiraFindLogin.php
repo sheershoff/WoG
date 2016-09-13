@@ -60,9 +60,9 @@ class VladyJiraFindLogin extends Command
         $users = User::/* where('jira', '=', '') -> */whereNull('jira')->whereNotNull('email')->get();
         $bar = $this->output->createProgressBar(count($users));
         foreach ($users as $user) {
+            $bar->advance();
             $this->line($user->email);
             $this->getUserByEmail($user);
-            $bar->advance();
         }
     }
 

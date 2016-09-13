@@ -97,7 +97,7 @@ class Jira
         if (!array_key_exists('jql', $req)) {
             return "not jql field";
         }
-        $data = getJira('search', $req);
+        $data = $this->getJira('search', $req);
         $dataArray = json_decode($data, TRUE);
         $dataIssues = $dataArray["issues"];
         $dataIssue = $dataIssues[0];
@@ -181,7 +181,7 @@ class Jira
         //var_dump($req);
         $maxResults = array_key_exists("maxResults", $req) ? $req["maxResults"] : 0;
         $startAt = array_key_exists("startAt", $req) ? $req["startAt"] : 0;
-        $json = getJira('search', $req); //.'?jql='.urlencode('project=GFIMPL AND type=Bug AND status!=closed order by created desc')
+        $json = $this->getJira('search', $req); //.'?jql='.urlencode('project=GFIMPL AND type=Bug AND status!=closed order by created desc')
         $data = json_decode($json, TRUE);
         //echo $data["startAt"].'-'.$data["maxResults"].'('.$data["total"].")\n";
         if (($data["startAt"] + $data["maxResults"] < $data["total"]) &&
@@ -190,7 +190,7 @@ class Jira
         ) {
             $req["startAt"] = $startAt + $data["maxResults"];
             //echo ".z".count($data["issues"])."key=".$data["issues"][0]["key"]."\n";
-            $data = array_merge($data["issues"], getIssues($req));
+            $data = array_merge($data["issues"], $this->getIssues($req));
             //echo ".y".count($data)."key=".$data[0]["key"]."\n";
             return $data;
         } else {
