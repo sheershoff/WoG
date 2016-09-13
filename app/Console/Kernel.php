@@ -5,7 +5,6 @@ namespace App\Console;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use App\Console\Commands\VladyJiraFindLogin;
-use App\Console\Commands\VladyJiraGantt;
 
 class Kernel extends ConsoleKernel
 {
@@ -17,7 +16,6 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         VladyJiraFindLogin::class,
-        VladyJiraGantt::class,
     ];
 
     /**

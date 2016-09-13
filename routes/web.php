@@ -113,6 +113,8 @@ Auth::routes();
 Route::get('logout', ['as' => 'auth.logout', 'uses' => 'Auth\LoginController@logout']);
 //Route::post('logout', ['as' => 'auth.logout', 'uses' => 'App\Http\Controllers\Auth\LoginController@logout']);
 
+Route::get('/i/gantt/my.json', 'VladyJiraGanttController@index')->name('gantt');
+
 //
 //);
 //Route::post('/profile/image',[

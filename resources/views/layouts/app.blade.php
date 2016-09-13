@@ -43,8 +43,8 @@
                                 <img style=" margin-top: -7px; " src="{{asset('img/logo30.png')}}" alt="WoG">
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="/gantt/index.html">gantt</a></li>
-                                <li><a href="/gantt/toweek.html">недельные задачи</a></li>
+                                <li><a href="/i/gantt/index.html">gantt</a></li>
+                                <li><a href="/i/gantt/toweek.html">недельные задачи</a></li>
                                 @if (Auth::guest())
                                 @else
                                 <li><a href="/phpinfo.php">phpinfo.php</a></li>

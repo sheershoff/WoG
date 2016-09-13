@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Гантт</title>
+    <script src="dhtmlxgantt.js" type="text/javascript" charset="utf-8"></script>
+    <script src="locale_ru.js" charset="utf-8"></script>  
+    <script src="http://export.dhtmlx.com/gantt/api.js"></script>
+    <script src="dhtmlxgantt_csp.js"></script>
+    <link rel="stylesheet" href="dhtmlxgantt.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+	<style type="text/css">
+		html, body{ padding:0px; margin:0px; height:100%; overflow: hidden;}
+                .Closed{
+                    border:2px solid #d96c49;
+                    color: #777777;
+                    text-decoration:underline;
+                    background: #dddddd;
+                }
+                .Closed .gantt_task_progress{
+                    background: #aaaaaa;
+                    text-decoration:underline;
+                }
+                .Blocker{
+                    border:2px solid #d96c49;
+                    color: #ff6c49;
+                    text-decoration:underline;
+                    background: #ff6c49;
+                }
+                .Blocker .gantt_task_progress{
+                    background: #ff2536;
+                    text-decoration:underline;
+                }
+                .Critical{
+                    border:2px solid #d96c49;
+                    color: #d96c49;
+                    text-decoration:underline;
+                    background: #d96c49;
+                }
+                .Critical .gantt_task_progress{
+                    background: #db2536;
+                    text-decoration:underline;
+                }
+
+                .Major{
+                    border:2px solid #34c461;
+                    color:#34c461;
+                    text-decoration:line-through;
+                    background: #34c461;
+                }
+                .Major .gantt_task_progress{
+                    background: #23964d;
+                }
+
+                .Minor{
+                    border:2px solid #6ba8e3;
+                    color:#6ba8e3;
+                    text-decoration:line-through;
+                    background: #6ba8e3;
+                }
+                .Minor .gantt_task_progress{
+                    background: #547dab;
+                }
+                
+                .Trivial{
+                    border:2px solid #6ba8e3;
+                    color:#6bd8f3;
+                    text-decoration:line-through;
+                    background: #6ba8e3;
+                }
+                .Trivial .gantt_task_progress{
+                    background: #549ddb;
+                }
+                
+                .weekend{ background: #f4f7f4 !important;}
+                .xday{ background: #ff0000 !important;}
+        </style>
+        <input value="Export to PDF" type="button" onclick='gantt.exportToPDF()'>
+        <input value="Export to PNG" type="button" onclick='gantt.exportToPNG()'>
+	<div id="gantt_here" style='width:100%; height:100%;'></div>
+	<script type="text/javascript">
+            gantt.config.xml_date = "%Y-%m-%d";
+            gantt.config.scale_unit = "month";
+            gantt.config.date_scale = "%m";
+            gantt.config.step = 1;
+            gantt.config.subscales = [
+    {unit:"week", step:1, date:"#%W"}
+];
+            
+            gantt.config.highlight_critical_path = true;
+//gantt.config.start_date = new Date(2016, 02, 31);
+            gantt.config.end_date = new Date(2016, 08, 15);                
+            gantt.config.columns =  [
+                {name:"summary",       label:"Task name",  width:'*', tree:true },
+            ];                
+            gantt.templates.task_class  = function(start, end, task){
+                return task.priority;
+            };
+            gantt.config.grid_resize = true;             
+
+            Date.prototype.getWeek1 = function() {
+                var onejan = new Date(this.getFullYear(), 0, 1);
+                return Math.ceil((((this - onejan) / 86400000) + onejan.getDay() + 1) / 7);
+            }
+            
+            Date.prototype.getWeek = function(){
+                var d = new Date(+this);
+                d.setHours(0,0,0);
+                d.setDate(d.getDate()+4-(d.getDay()||7));
+                return Math.ceil((((d-new Date(d.getFullYear(),0,1))/8.64e7)+1)/7);
+            };            
+            
+            gantt.templates.task_cell_class = function(item,date){
+                if(date.getWeek()===(new Date).getWeek()){
+                    return "weekend" ;
+                }
+                if(date.getWeek()===(new Date(2016,7,15)).getWeek()){//7 'nj 8
+                    return "xday" ;
+                }
+            };
+
+    gantt.init("gantt_here");
+
+            gantt.load("my.json", "json");
+    
+    	</script>
+</body>

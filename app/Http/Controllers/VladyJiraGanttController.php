@@ -1,27 +1,13 @@
 <?php
 
-namespace App\Console\Commands;
+namespace App\Http\Controllers;
 
-use Illuminate\Console\Command;
 use App\Handlers\VladyJiraQuest;
 use Cache;
 
-class VladyJiraGantt extends Command
+class VladyJiraGanttController extends Controller
 {
 
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
-    protected $signature = 'jira:gantt';
-
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
-    protected $description = 'Find and add jira login by email';
     protected $jira = null;
 
     /**
@@ -31,13 +17,13 @@ class VladyJiraGantt extends Command
      */
     public function __construct()
     {
-        parent::__construct();
+        //parent::__construct();
         $this->jira = new VladyJiraQuest();
     }
 
     protected $req = [//"jql"=>"project=GFIMPL AND type=Bug AND status!=closed order by created desc",
         "jql" => //
-        'project = GFPMO AND ((status != closed AND status != resolved) or updated > -14d) AND type in (Story, Epic) ORDER BY type ASC, due ASC', //без ограничения до 15.08.2016
+        'project = GFPMO AND ((status != closed AND status != resolved) or (updated > -14d and type != Epic)) AND type in (Story, Epic) ORDER BY type ASC, due ASC', //без ограничения до 15.08.2016
         //'project = GFPMO AND ((status != closed AND status != resolved) or updated > -14d) AND ((type = Story and (duedate is null or duedate<=2016-08-31)) or type = Epic) ORDER BY type ASC, due ASC',
         //"maxResults"=>2,
         "fields" => [
@@ -54,11 +40,22 @@ class VladyJiraGantt extends Command
         ],
     ];
 
-    protected function buildjson()
+    public function index()
     {
         if (Cache::has('gantt')) {
             return Cache::get('gantt');
         }
+        $data = $this->buildData();
+        if (!$data) {
+            return false;
+        }
+        Cache::put('gantt', json_encode($data), 60 * 24);
+        return json_encode($data);
+    }
+
+    protected function buildData()
+    {
+
         $dataI = $this->jira->getIssues($this->req);
         if (!isset($dataI) || $dataI == []) {
             return FALSE;
@@ -178,10 +175,7 @@ class VladyJiraGantt extends Command
         }
 
 
-        $dataOut = ['data' => $data, 'collections' => ['links' => $links]];
-        file_put_contents('/data/ansible/wog/public/i/gantt/my.json', json_encode($dataOut));
-        Cache::put('gantt', json_encode($dataOut), 60 * 24);
-        return count($data);
+        return ['data' => $data, 'collections' => ['links' => $links], 'now' => date('c')];
     }
 
     /**
