@@ -146,7 +146,7 @@
 
         @foreach ($skill as $val)
         <div class="cont">
-            <p><bold>{{  $val->value  }}</bold> {{  $val->name  }} {{  $val->description  }}</p>
+            <p><bold>{{  $val->value  }} </bold> {{  $val->name  }} {{  $val->description  }}</p>
         </div>
         {{--надо придумать что такое макс - пока не понятно.
         <div class="progress">

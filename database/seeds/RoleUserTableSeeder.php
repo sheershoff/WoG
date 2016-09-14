@@ -553,15 +553,15 @@ class RoleUserTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            60 => 
-            array (
+             60 => 
+           array (
                 'id' => 1,
                 'role_id' => -2,
                 'user_id' => 62,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
-            ),
+            ), 
         ));
         
     	

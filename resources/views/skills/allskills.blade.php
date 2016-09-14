@@ -2,17 +2,9 @@
 
 @section('content')
 
-@include ('skills.skillview', $treeData)
 
-
-
-
-
-
-{{--
-
-@inject('skillCtrl', 'App\Http\Controllers\SkillController')
-
-{!!$skillCtrl->getTree($treeData)!!} --}}
+<div class="panel-group" id="accordion">
+    @include ('skills.skillview', $treeData)
+</div>
 
 @stop

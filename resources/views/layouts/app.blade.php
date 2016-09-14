@@ -65,6 +65,7 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/achievements') }}">Достижения</a></li>
+                                <li><a href="{{ url('/skills') }}">Навыки</a></li>
                                 <li><a href="{{ url('/administrator') }}">Настройка</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
