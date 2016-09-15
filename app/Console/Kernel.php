@@ -8,6 +8,7 @@ use App\Console\Commands\VladyJiraFindLogin;
 use App\Console\Commands\VladyJiraGantt;
 use App\Console\Commands\VladyJiraClosedBug;
 use App\Console\Commands\VladyJiraFieldList;
+use App\Console\Commands\VladyJiraEpic;
 
 class Kernel extends ConsoleKernel
 {
@@ -22,6 +23,7 @@ class Kernel extends ConsoleKernel
         VladyJiraGantt::class,
         VladyJiraClosedBug::class,
         VladyJiraFieldList::class,
+        VladyJiraEpic::class,
     ];
 
     /**
