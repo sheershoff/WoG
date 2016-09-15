@@ -91,20 +91,17 @@ class Jira
      * Получаем список полей
      */
 
-    public function getJiraField($req = FALSE)
+    public function getJiraField($project = FALSE)
     {
         $dataAllFields = json_decode($this->getJira('field'), TRUE);
         $dataAllFieldsName = [];
         foreach ($dataAllFields as $v) {
             $dataAllFieldsName[$v['id']] = $v['name'];
         }
-        if (!$req) {
+        if (!$project) {
             return $dataAllFieldsName;
         }
-        $req["maxResults"] = 1;
-        if (!array_key_exists('jql', $req)) {
-            return "not jql field";
-        }
+        $req = ["maxResults" => 1, "jql" => 'project = ' . $project];
         $data = $this->getJira('search', $req);
         $dataArray = json_decode($data, TRUE);
         $dataIssues = $dataArray["issues"];
@@ -236,24 +233,6 @@ class Jira
       "duedate","progress", //"issuelinks",
       "customfield_10201"//epic
       ],
-      //Получено через echo json_encode(getJiraField($req));
-      //["issuetype","timespent","project","customfield_11000","fixVersions","customfield_11200",
-      //"aggregatetimespent","resolution","customfield_10500","customfield_12206","customfield_12800",
-      //"customfield_12205","customfield_10700","customfield_12802","customfield_10701",
-      //"customfield_12801","customfield_10702","resolutiondate","workratio","lastViewed",
-      //"watches","created","priority","customfield_12202","customfield_12201",
-      //"customfield_10300","customfield_11511","customfield_12203","customfield_11900",
-      //"aggregatetimeoriginalestimate","timeestimate","versions","issuelinks","assignee",
-      //"updated","status","components","timeoriginalestimate","description",
-      //"customfield_11100","customfield_13200","customfield_10600","customfield_12304",
-      //"customfield_10601","customfield_10206","customfield_10207","aggregatetimeestimate",
-      //"customfield_10803","customfield_10804","summary","creator","subtasks","reporter",
-      //"aggregateprogress","customfield_10001","customfield_12103","customfield_10200",
-      //"customfield_10002","customfield_10201","customfield_10003","customfield_12105",
-      //"customfield_10202","customfield_10400","customfield_12104","customfield_12302",
-      //"customfield_11600","environment","customfield_11801","customfield_11800","customfield_11803",
-      //"customfield_11802","duedate","progress"]
-      ];
       //,"startAt":'+$istartAt+',"maxResults":1000,"fields":["key","created","reporter","assignee","summary","status"]}';
      */
 

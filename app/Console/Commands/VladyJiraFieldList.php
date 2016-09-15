@@ -10,15 +10,14 @@ class VladyJiraFieldList extends VladyJiraCommand
      *
      * @var string
      */
-    protected $signature = 'jira:fields';
+    protected $signature = 'jira:fields {project?}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Список полей';
-    protected $req = ["jql" => 'project = GFimpl ORDER BY key desc'];
+    protected $description = 'Список полей проекта или все';
 
     /**
      * Execute the console command.
@@ -32,7 +31,7 @@ class VladyJiraFieldList extends VladyJiraCommand
      */
     public function handle()
     {
-        dd($this->jira->getJiraField($this->req));
+        dd($this->jira->getJiraField($this->argument('project')));
     }
 
 }

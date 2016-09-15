@@ -24,9 +24,7 @@ class VladyJiraClosedBug extends VladyJiraCommand
     /*
      *  запрос для получения списка закрытых багов
      */
-    //project = GFPMO AND resolution = Unresolved AND issuetype = Story and "Epic Link"=GFPMO-512 ORDER BY priority DESC
-    protected $req = [//"jql"=>"project=GFIMPL AND type=Bug AND status!=closed order by created desc",
-        "jql" => 'project = GFimpl AND issuetype = bug and status=Closed and updated<-1h and updated>-1w and updated>=\'2016-09-11\' ORDER BY key desc',
+    protected $req = [
         "maxResults" => 2,
         "fields" => [
             "key",
@@ -63,6 +61,7 @@ class VladyJiraClosedBug extends VladyJiraCommand
      */
     public function handle()
     {
+        $this->req["jql"] = $this->jira->jql["VladyJiraClosedBug"];
         $issues = $this->jira->getIssues($this->req);
         //$users = User::/* where('jira', '=', '') -> */whereNull('jira')->whereNotNull('email')->get();
         dd($issues);
