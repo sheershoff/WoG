@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\User;
+use App\Http\Controllers\WogController;
 
 class VladyJiraClosedBug extends VladyJiraCommand
 {
@@ -39,7 +40,6 @@ class VladyJiraClosedBug extends VladyJiraCommand
             "customfield_14801", //Approved date
         ],
     ];
-
 //    protected function getUserByEmail($user)
 //    {
 //        if (isset($e) && ($e !== FALSE) && ($e != '')) {
@@ -48,6 +48,24 @@ class VladyJiraClosedBug extends VladyJiraCommand
 //            return $e;
 //        }
 //    }
+    protected $quest_id = 3;
+    protected $action_id = 3;
+
+    public function getUser($key, $email = null)
+    {
+        $u = User::where('jira', '=', $key)->first();
+        if (count($u) == 1) {
+            return $u;
+        }
+        if (isset($email)) {
+            $u = new User();
+            $u->jira = $key;
+            $u->email = $email;
+            $u->save;
+            return $u;
+        }
+        return NULL;
+    }
 
     /**
      * Execute the console command.
@@ -64,12 +82,15 @@ class VladyJiraClosedBug extends VladyJiraCommand
         $this->req["jql"] = $this->jira->jql["VladyJiraClosedBug"];
         $issues = $this->jira->getIssues($this->req);
         //$users = User::/* where('jira', '=', '') -> */whereNull('jira')->whereNotNull('email')->get();
-        dd($issues);
         $bar = $this->output->createProgressBar(count($issues));
         foreach ($issues as $issue) {
             $bar->advance();
-            $this->line($user->email);
-            $this->getUserByEmail($user);
+            $userId = $this->getUser($issue['fields']['assignee']['key'], $issue['fields']['assignee']['emailAddress']);
+            if (!isset($userId)) {
+                $this->line($issue['fields']['assignee']['key'] . ' not fond!');
+            }
+            WogController::newActionTransaction($userId, $this->action_id, $this->quest_id, $issue['key']);
+            $this->line($userId->email . ' ' . $issue['key']);
         }
     }
 
