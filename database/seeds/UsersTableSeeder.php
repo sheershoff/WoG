@@ -19,6 +19,31 @@ class UsersTableSeeder extends Seeder
         \DB::connection('pgsql')->table('users')->insert(array (
             0 => 
             array (
+                'id' => 80,
+                'login' => 'sergey.khomutinin',
+                'name' => 'Хомутинин Сергей',
+                'email' => 'sergey.khomutinin@megafon.ru',
+                'password' => '$2y$10$u6Vvh7gnThR5/emrCJ1zve78LL3BVO6Kl88Eg7lqF4wWHBwwhO3f2',
+                'user_type' => 1,
+                'user_status_id' => 1,
+                'jira' => NULL,
+                'phone_number' => '+79221291842',
+                'tab_number' => NULL,
+                'description' => NULL,
+                'status' => 'я родился!',
+                'mail_agg_id' => NULL,
+                'mail_hour' => NULL,
+                'telegram' => NULL,
+                'telegram_id_user' => NULL,
+                'last_login' => NULL,
+                'remember_token' => NULL,
+                'organization_id' => 5,
+                'created_at' => '2016-09-13 04:22:23',
+                'updated_at' => '2016-09-14 11:47:11',
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
                 'id' => 79,
                 'login' => 'maxim.golovanov',
                 'name' => 'Голованов Максим',
@@ -26,7 +51,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$MEUa76K3WzzS.3LYC3J7BOfucq.lplYXy6bbHwzxeK7854G2oSRIG',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'mgolovanov',
                 'phone_number' => '+79276000871',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -39,10 +64,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 5,
                 'created_at' => '2016-09-09 03:35:35',
-                'updated_at' => '2016-09-09 03:35:35',
+                'updated_at' => '2016-09-13 05:12:11',
                 'deleted_at' => NULL,
             ),
-            1 => 
+            2 => 
             array (
                 'id' => 76,
                 'login' => 'anton.maximov',
@@ -51,7 +76,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$KJtL0Qg5OIIlcmGgCGpyI.ESVact5PePBpIlP3MXrFN72h/viuXYS',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'amaksimov2',
                 'phone_number' => '+79276000490',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -64,10 +89,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 5,
                 'created_at' => '2016-09-08 06:46:53',
-                'updated_at' => '2016-09-08 08:38:52',
+                'updated_at' => '2016-09-13 05:12:35',
                 'deleted_at' => NULL,
             ),
-            2 => 
+            3 => 
             array (
                 'id' => 75,
                 'login' => 'vladimir.shestakov',
@@ -76,7 +101,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$WOA5XQqfr3KqCXqTYtTcteLKMrxxKa6uqflKlG9KJSIVxezJIDBTy',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'vshestakov',
                 'phone_number' => '+79276000196',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -89,10 +114,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 5,
                 'created_at' => '2016-09-08 06:35:49',
-                'updated_at' => '2016-09-08 08:38:51',
+                'updated_at' => '2016-09-13 05:12:35',
                 'deleted_at' => NULL,
             ),
-            3 => 
+            4 => 
             array (
                 'id' => 72,
                 'login' => 'sergey.martynov',
@@ -101,7 +126,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$/aamol1OAhaBu/YJkJ/yMO6QsP3YRWfkyVt4ML7zkJK1OtJYO320S',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'smartynov',
                 'phone_number' => '+79146994908',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -114,10 +139,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => '2016-08-30 05:06:50',
-                'updated_at' => '2016-09-08 08:38:31',
+                'updated_at' => '2016-09-13 05:12:16',
                 'deleted_at' => NULL,
             ),
-            4 => 
+            5 => 
             array (
                 'id' => 71,
                 'login' => 'ruslan.fomenko',
@@ -126,7 +151,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$V4h26HSG3PCanijLP46oeuYxoXz66TWYjxlugAG/E2zhM9C/gA75O',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'rfomenko',
                 'phone_number' => '+79241392021',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -139,10 +164,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => '2016-08-30 05:06:39',
-                'updated_at' => '2016-09-08 08:38:31',
+                'updated_at' => '2016-09-13 05:12:07',
                 'deleted_at' => NULL,
             ),
-            5 => 
+            6 => 
             array (
                 'id' => 69,
                 'login' => NULL,
@@ -167,7 +192,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => '2016-07-30 08:43:50',
                 'deleted_at' => NULL,
             ),
-            6 => 
+            7 => 
             array (
                 'id' => 68,
                 'login' => NULL,
@@ -192,7 +217,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            7 => 
+            8 => 
             array (
                 'id' => 67,
                 'login' => NULL,
@@ -217,7 +242,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            8 => 
+            9 => 
             array (
                 'id' => 66,
                 'login' => NULL,
@@ -242,7 +267,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            9 => 
+            10 => 
             array (
                 'id' => 65,
                 'login' => 'grigory.osipenkov',
@@ -251,7 +276,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'gosipenkov',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -264,10 +289,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:32',
+                'updated_at' => '2016-09-13 05:12:08',
                 'deleted_at' => NULL,
             ),
-            10 => 
+            11 => 
             array (
                 'id' => 64,
                 'login' => 'Irina.Imaykina',
@@ -276,7 +301,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'iimaykina',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -289,10 +314,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:32',
+                'updated_at' => '2016-09-13 05:12:12',
                 'deleted_at' => NULL,
             ),
-            11 => 
+            12 => 
             array (
                 'id' => 63,
                 'login' => 'evgeny.fomenko',
@@ -301,7 +326,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'efomenko',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -314,19 +339,19 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:33',
+                'updated_at' => '2016-09-13 05:12:13',
                 'deleted_at' => NULL,
             ),
-            12 => 
+            13 => 
             array (
                 'id' => 62,
                 'login' => 'svetlana.a.kuznetsov',
                 'name' => 'Кузнецова Светлана Александровна',
-                'email' => 'svetlana.a.kuznetsov@megafon.ru',
+                'email' => 'svetlana.a.kuznetsova@megafon.ru',
                 'password' => '$2y$10$I4peVyVdIeERWPbkEuFDPu7Y2WMjb/Svwkmgj4LhGsSWbFRhhqSra',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'skuznetsova',
                 'phone_number' => '+79242300834',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -339,10 +364,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:33',
+                'updated_at' => '2016-09-13 05:12:08',
                 'deleted_at' => NULL,
             ),
-            13 => 
+            14 => 
             array (
                 'id' => 61,
                 'login' => 'artem.trikashny',
@@ -367,7 +392,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            14 => 
+            15 => 
             array (
                 'id' => 60,
                 'login' => 'ruslan.kazimukhometo',
@@ -376,7 +401,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Mi2oK.hmsXDPwayB18mSU.MBb.PXwFic.Vp/7H8cvKKCbmt.tkfIm',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'rkazimukhometo',
                 'phone_number' => '+79677188444',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -389,10 +414,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => 'B9NkenbSD1wwaBXWvEkKsjPTTLo5hGppOGcpEwSnQCa81JutUjHzxMPgwjwR',
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:34',
+                'updated_at' => '2016-09-13 05:12:13',
                 'deleted_at' => NULL,
             ),
-            15 => 
+            16 => 
             array (
                 'id' => 59,
                 'login' => 'dmitry.v.tarasov',
@@ -401,7 +426,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'dtarasov',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -414,10 +439,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:34',
+                'updated_at' => '2016-09-13 05:12:14',
                 'deleted_at' => NULL,
             ),
-            16 => 
+            17 => 
             array (
                 'id' => 58,
                 'login' => '',
@@ -442,7 +467,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            17 => 
+            18 => 
             array (
                 'id' => 57,
                 'login' => 'yana.baranova',
@@ -451,7 +476,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'ybaranova',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -464,10 +489,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:35',
+                'updated_at' => '2016-09-13 05:12:14',
                 'deleted_at' => NULL,
             ),
-            18 => 
+            19 => 
             array (
                 'id' => 56,
                 'login' => 'sergey.gomzyakov',
@@ -476,7 +501,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$LzOs2KBlI5MxKdknPYZvzeZWMLfDYw7eDCGc6YorXBsRDaGIv2t0O',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'sgomzyakov',
                 'phone_number' => '+79630535440',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -489,10 +514,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:35',
+                'updated_at' => '2016-09-13 05:12:17',
                 'deleted_at' => NULL,
             ),
-            19 => 
+            20 => 
             array (
                 'id' => 55,
                 'login' => 'alexander.surkov',
@@ -501,7 +526,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'asurkov',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -514,10 +539,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:36',
+                'updated_at' => '2016-09-13 05:12:18',
                 'deleted_at' => NULL,
             ),
-            20 => 
+            21 => 
             array (
                 'id' => 54,
                 'login' => 'anna.y.aleshina',
@@ -526,7 +551,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'aaleshina',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -539,10 +564,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:37',
+                'updated_at' => '2016-09-13 05:12:19',
                 'deleted_at' => NULL,
             ),
-            21 => 
+            22 => 
             array (
                 'id' => 53,
                 'login' => 'mikhail.pavlov',
@@ -551,7 +576,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$j.7vPJCCCd.jgMPG9GRS7OpkvtafNKGLydZv6hilHnH6xnKoM.oJq',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'mpavlov',
                 'phone_number' => '+79990778197',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -564,10 +589,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => 'p8WuEyEdfhCcN1AMl0MstEiCbToMwclcEwEWlWCIlmWZEMVIC6Fo6cG9GZlD',
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:37',
+                'updated_at' => '2016-09-13 05:12:19',
                 'deleted_at' => NULL,
             ),
-            22 => 
+            23 => 
             array (
                 'id' => 52,
                 'login' => 'Valentin.Kovalchuk',
@@ -576,7 +601,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'vkovalchuk',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -589,10 +614,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:38',
+                'updated_at' => '2016-09-13 05:12:20',
                 'deleted_at' => NULL,
             ),
-            23 => 
+            24 => 
             array (
                 'id' => 50,
                 'login' => 'denis.lykov',
@@ -601,7 +626,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'dlykov',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -614,10 +639,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:38',
+                'updated_at' => '2016-09-13 05:12:20',
                 'deleted_at' => NULL,
             ),
-            24 => 
+            25 => 
             array (
                 'id' => 49,
                 'login' => 'roman.pyatyshev',
@@ -626,7 +651,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'rpyatyshev',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -639,44 +664,19 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:39',
-                'deleted_at' => NULL,
-            ),
-            25 => 
-            array (
-                'id' => 48,
-                'login' => 'Egor.Vershinin',
-                'name' => 'Егор Вершинин',
-                'email' => 'egor.vershinin@megafon.ru',
-                'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
-                'user_type' => 1,
-                'user_status_id' => 1,
-                'jira' => NULL,
-                'phone_number' => NULL,
-                'tab_number' => NULL,
-                'description' => NULL,
-                'status' => NULL,
-                'mail_agg_id' => NULL,
-                'mail_hour' => NULL,
-                'telegram' => NULL,
-                'telegram_id_user' => NULL,
-                'last_login' => NULL,
-                'remember_token' => NULL,
-                'organization_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:40',
+                'updated_at' => '2016-09-13 05:12:24',
                 'deleted_at' => NULL,
             ),
             26 => 
             array (
-                'id' => 47,
-                'login' => 'Sergey.Semka',
-                'name' => 'Сергей Семка',
-                'email' => 'sergey.semka@megafon.ru',
+                'id' => 48,
+                'login' => 'Egor.Vershinin',
+                'name' => 'Егор Вершинин',
+                'email' => 'egor.vershinin@billing.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'egor.vershinin',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -689,19 +689,19 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:40',
+                'updated_at' => '2016-09-13 05:12:21',
                 'deleted_at' => NULL,
             ),
             27 => 
             array (
-                'id' => 45,
-                'login' => 'Gennady.Martyushov',
-                'name' => 'Геннадий Мартюшов',
-                'email' => 'gennady.martyushov@megafon.ru',
+                'id' => 47,
+                'login' => 'Sergey.Semka',
+                'name' => 'Сергей Семка',
+                'email' => 'sergey.semka@billing.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'sergey.semka',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -714,10 +714,35 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:40',
+                'updated_at' => '2016-09-13 05:12:22',
                 'deleted_at' => NULL,
             ),
             28 => 
+            array (
+                'id' => 45,
+                'login' => 'Gennady.Martyushov',
+                'name' => 'Геннадий Мартюшов',
+                'email' => 'gennady.martyushov@billing.ru',
+                'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
+                'user_type' => 1,
+                'user_status_id' => 1,
+                'jira' => 'gennady.martyushov',
+                'phone_number' => NULL,
+                'tab_number' => NULL,
+                'description' => NULL,
+                'status' => NULL,
+                'mail_agg_id' => NULL,
+                'mail_hour' => NULL,
+                'telegram' => NULL,
+                'telegram_id_user' => NULL,
+                'last_login' => NULL,
+                'remember_token' => NULL,
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => '2016-09-13 05:12:22',
+                'deleted_at' => NULL,
+            ),
+            29 => 
             array (
                 'id' => 43,
                 'login' => 'Evgeny.Beliakov',
@@ -742,7 +767,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            29 => 
+            30 => 
             array (
                 'id' => 42,
                 'login' => 'sergey.batin',
@@ -751,7 +776,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'sbatin',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -764,10 +789,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:41',
+                'updated_at' => '2016-09-13 05:12:25',
                 'deleted_at' => NULL,
             ),
-            30 => 
+            31 => 
             array (
                 'id' => 40,
                 'login' => 'Denis.Sorokovik',
@@ -792,7 +817,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            31 => 
+            32 => 
             array (
                 'id' => 39,
                 'login' => 'Alexey.Vyunnikov',
@@ -801,7 +826,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'avyunnikov',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -814,10 +839,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:41',
+                'updated_at' => '2016-09-13 05:12:26',
                 'deleted_at' => NULL,
             ),
-            32 => 
+            33 => 
             array (
                 'id' => 38,
                 'login' => 'egor.budrin',
@@ -842,7 +867,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            33 => 
+            34 => 
             array (
                 'id' => 37,
                 'login' => 'egor.kovalchuk',
@@ -851,7 +876,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Dgw5vrVWYgLPnq/oqR3FReDIcQCC58fPUseHNvevCaQbgsEU1D3ou',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'ekovalchuk',
                 'phone_number' => '+79241200816',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -864,10 +889,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:42',
+                'updated_at' => '2016-09-13 05:12:26',
                 'deleted_at' => NULL,
             ),
-            34 => 
+            35 => 
             array (
                 'id' => 36,
                 'login' => 'Oleg.Skorobogaty',
@@ -892,7 +917,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            35 => 
+            36 => 
             array (
                 'id' => 35,
                 'login' => 'alexander.karpachev',
@@ -901,7 +926,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'akarpachev',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -914,10 +939,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:42',
+                'updated_at' => '2016-09-13 05:12:27',
                 'deleted_at' => NULL,
             ),
-            36 => 
+            37 => 
             array (
                 'id' => 34,
                 'login' => 'Fedor.Volokhin',
@@ -942,7 +967,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            37 => 
+            38 => 
             array (
                 'id' => 33,
                 'login' => 'eduard.pavlov',
@@ -967,7 +992,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            38 => 
+            39 => 
             array (
                 'id' => 32,
                 'login' => 'sergey.rzhevsky',
@@ -976,7 +1001,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'srzhevsky',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -989,10 +1014,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:43',
+                'updated_at' => '2016-09-13 05:12:27',
                 'deleted_at' => NULL,
             ),
-            39 => 
+            40 => 
             array (
                 'id' => 30,
                 'login' => 'alexander.a.grischenko',
@@ -1001,7 +1026,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'agrischenko',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1014,10 +1039,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:43',
+                'updated_at' => '2016-09-13 05:12:28',
                 'deleted_at' => NULL,
             ),
-            40 => 
+            41 => 
             array (
                 'id' => 28,
                 'login' => 'sergey.grishaev',
@@ -1042,16 +1067,16 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            41 => 
+            42 => 
             array (
                 'id' => 27,
                 'login' => 'Alexander.Mikhaylov',
                 'name' => 'Александр Михайлов',
-                'email' => 'alexander.mikhaylov@megafon.ru',
+                'email' => 'alexander.mikhaylov@billing.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'alexander.mikhaylov',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1064,10 +1089,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:43',
+                'updated_at' => '2016-09-13 05:12:23',
                 'deleted_at' => NULL,
             ),
-            42 => 
+            43 => 
             array (
                 'id' => 26,
                 'login' => 'Mikhail.Vysokolian',
@@ -1092,7 +1117,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            43 => 
+            44 => 
             array (
                 'id' => 25,
                 'login' => 'alexander.fetisov',
@@ -1117,16 +1142,16 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            44 => 
+            45 => 
             array (
                 'id' => 24,
                 'login' => 'Varvara.Pyatkova',
                 'name' => 'Варвара Пяткова',
-                'email' => 'varvara.pyatkova@megafon.ru',
+                'email' => 'varvara.pyatkova@billing.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'varvara.pyatkova',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1139,10 +1164,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:44',
+                'updated_at' => '2016-09-13 05:12:24',
                 'deleted_at' => NULL,
             ),
-            45 => 
+            46 => 
             array (
                 'id' => 23,
                 'login' => 'igor.a.romanov',
@@ -1151,7 +1176,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'iromanov1',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1164,44 +1189,19 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:44',
-                'deleted_at' => NULL,
-            ),
-            46 => 
-            array (
-                'id' => 22,
-                'login' => 'Egor.Mamontov',
-                'name' => 'Егор Мамонтов',
-                'email' => 'egor.mamontov@megafon.ru',
-                'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
-                'user_type' => 1,
-                'user_status_id' => 1,
-                'jira' => NULL,
-                'phone_number' => NULL,
-                'tab_number' => NULL,
-                'description' => NULL,
-                'status' => NULL,
-                'mail_agg_id' => NULL,
-                'mail_hour' => NULL,
-                'telegram' => NULL,
-                'telegram_id_user' => NULL,
-                'last_login' => NULL,
-                'remember_token' => NULL,
-                'organization_id' => 0,
-                'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:45',
+                'updated_at' => '2016-09-13 05:12:17',
                 'deleted_at' => NULL,
             ),
             47 => 
             array (
-                'id' => 21,
-                'login' => 'Dmitriy.Orlov',
-                'name' => 'Дмитрий Орлов',
-                'email' => 'dmitriy.orlov@megafon.ru',
+                'id' => 22,
+                'login' => 'Egor.Mamontov',
+                'name' => 'Егор Мамонтов',
+                'email' => 'egor.mamontov@billing.ru',
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'egor.mamontov',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1214,10 +1214,35 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:45',
+                'updated_at' => '2016-09-13 05:12:09',
                 'deleted_at' => NULL,
             ),
             48 => 
+            array (
+                'id' => 21,
+                'login' => 'Dmitriy.Orlov',
+                'name' => 'Дмитрий Орлов',
+                'email' => 'dmitriy.orlov@billing.ru',
+                'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
+                'user_type' => 1,
+                'user_status_id' => 1,
+                'jira' => 'dmitriy.orlov',
+                'phone_number' => NULL,
+                'tab_number' => NULL,
+                'description' => NULL,
+                'status' => NULL,
+                'mail_agg_id' => NULL,
+                'mail_hour' => NULL,
+                'telegram' => NULL,
+                'telegram_id_user' => NULL,
+                'last_login' => NULL,
+                'remember_token' => NULL,
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => '2016-09-13 05:12:10',
+                'deleted_at' => NULL,
+            ),
+            49 => 
             array (
                 'id' => 20,
                 'login' => 'Vyacheslav.Sitnikov',
@@ -1226,7 +1251,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'vsitnikov',
                 'phone_number' => '9265033074',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1239,10 +1264,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => 'za2qHqX09fTnUnzCeJOLCojjVFAn6FfSu1GAvYWPjsyFpaLE4JmVtXK9ozSE',
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:46',
+                'updated_at' => '2016-09-13 05:12:29',
                 'deleted_at' => NULL,
             ),
-            49 => 
+            50 => 
             array (
                 'id' => 19,
                 'login' => 'dmitry.litokh',
@@ -1251,7 +1276,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'dlitokh',
                 'phone_number' => '9241257955',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1264,10 +1289,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:46',
+                'updated_at' => '2016-09-13 05:12:29',
                 'deleted_at' => NULL,
             ),
-            50 => 
+            51 => 
             array (
                 'id' => 18,
                 'login' => 'edgar.rubtsov',
@@ -1276,7 +1301,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'erubtsov',
                 'phone_number' => '9264304300',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1289,10 +1314,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:47',
+                'updated_at' => '2016-09-13 05:12:10',
                 'deleted_at' => NULL,
             ),
-            51 => 
+            52 => 
             array (
                 'id' => 17,
                 'login' => 'nikolay.bagrov',
@@ -1301,7 +1326,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'nbagrov',
                 'phone_number' => '9247368055',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1314,10 +1339,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:47',
+                'updated_at' => '2016-09-13 05:12:15',
                 'deleted_at' => NULL,
             ),
-            52 => 
+            53 => 
             array (
                 'id' => 16,
                 'login' => 'anton.khlevitsky',
@@ -1326,7 +1351,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$moPRNIFUDLW1PQ2XBk/cUuXH4mTN1zGqACIzo/I1ASc4pWpfwDnqG',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'akhlevitsky',
                 'phone_number' => '+79242581163',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1339,10 +1364,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:47',
+                'updated_at' => '2016-09-13 05:12:16',
                 'deleted_at' => NULL,
             ),
-            53 => 
+            54 => 
             array (
                 'id' => 15,
                 'login' => 'yaroslav.belavin',
@@ -1351,7 +1376,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$1cGzvhT3zCToTbhBa03dUeHZlyAW0ZK.5zxWjZ7B3MGqupJ4bJ.fu',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'ybelavin',
                 'phone_number' => '+79242302965',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1364,10 +1389,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => '2016-08-30 04:58:53',
-                'updated_at' => '2016-09-08 08:38:48',
+                'updated_at' => '2016-09-13 05:12:30',
                 'deleted_at' => NULL,
             ),
-            54 => 
+            55 => 
             array (
                 'id' => 14,
                 'login' => 'sergey.syarg',
@@ -1376,7 +1401,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$AsGsLyH0JS4eGkYSXCP4j.qIms0dxIiQk3Jyr95yGSc9jHqEJXQry',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'ssyarg',
                 'phone_number' => '+79241291099',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1389,10 +1414,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => '2016-08-30 04:56:42',
-                'updated_at' => '2016-09-08 08:38:48',
+                'updated_at' => '2016-09-13 05:12:31',
                 'deleted_at' => NULL,
             ),
-            55 => 
+            56 => 
             array (
                 'id' => 13,
                 'login' => 'alexander.churakaev',
@@ -1401,7 +1426,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$dkdNu7P4Py/Ld5JMBXjH9Oaxj2GmTicch4vEmuhtWLU/GsYHgOme.',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'achurakaev',
                 'phone_number' => '+79242300748',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1414,10 +1439,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => '2016-08-30 04:51:19',
-                'updated_at' => '2016-09-08 08:38:49',
+                'updated_at' => '2016-09-13 05:12:32',
                 'deleted_at' => NULL,
             ),
-            56 => 
+            57 => 
             array (
                 'id' => 12,
                 'login' => 'alexander.gazha',
@@ -1426,7 +1451,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$LLZw6ntZGEPUsAWVF2NWNOkRWaDhNdi8HaTEEQv3MmL0/E2X1.thm',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'agazha',
                 'phone_number' => '+79242604295',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1439,10 +1464,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => 'saar4MX3p4MeTStWr0p2LSV0AMzFNieMciI7sV8TLzQWSdMfJ9Yn9dbf4xHw',
                 'organization_id' => 0,
                 'created_at' => '2016-08-30 04:26:27',
-                'updated_at' => '2016-09-08 08:38:49',
+                'updated_at' => '2016-09-13 05:12:32',
                 'deleted_at' => NULL,
             ),
-            57 => 
+            58 => 
             array (
                 'id' => 10,
                 'login' => 'yuri.trigub',
@@ -1467,7 +1492,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            58 => 
+            59 => 
             array (
                 'id' => 9,
                 'login' => 'alexey.y.zverev',
@@ -1476,7 +1501,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Cjf8w38yyuHJ2e4WooDmkul4f3.blVEZao9sxgRSh0Xrf1MBE7yc6',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'azverev',
                 'phone_number' => '+79244266215',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1489,10 +1514,10 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:50',
+                'updated_at' => '2016-09-13 05:12:33',
                 'deleted_at' => NULL,
             ),
-            59 => 
+            60 => 
             array (
                 'id' => 8,
                 'login' => 'yuri.tsay',
@@ -1517,7 +1542,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            60 => 
+            61 => 
             array (
                 'id' => 7,
                 'login' => 'ruslan.revel',
@@ -1526,7 +1551,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$wk1p3xkIK6PwLWsbJ1VZcuw7V0HETAcFHUR8wDD.AtyTpl0CaIkBe',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'rrevel',
             'phone_number' => '+7 (924) 426-6193',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1539,20 +1564,20 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => 'HV3XJ3HRbv5LARVv8DufibxvVzfEijXrqD09ebMm7UR5t1pwFExQmffaX46P',
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:50',
+                'updated_at' => '2016-09-13 05:12:33',
                 'deleted_at' => NULL,
             ),
-            61 => 
+            62 => 
             array (
                 'id' => 6,
-                'login' => 'sergey.kadilenko',
-                'name' => 'Сергей Кадиленко',
+                'login' => 'Sergey.Kadilenko',
+                'name' => 'Кадиленко Сергей',
                 'email' => 'sergey.kadilenko@megafon.ru',
-                'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
+                'password' => '$2y$10$0VyTZpmEya90eKi01U4TquU9k7SuqRDoJf1XZ5jhUjx6AUzBMChNy',
                 'user_type' => 1,
                 'user_status_id' => 1,
                 'jira' => 'skadilenko',
-                'phone_number' => '89201234567',
+                'phone_number' => '+79202909983',
                 'tab_number' => NULL,
                 'description' => NULL,
                 'status' => NULL,
@@ -1561,13 +1586,13 @@ class UsersTableSeeder extends Seeder
                 'telegram' => NULL,
                 'telegram_id_user' => NULL,
                 'last_login' => NULL,
-                'remember_token' => NULL,
+                'remember_token' => 'OeQQEmprLxLOtdbZ7sokTgsKNNC1Eod1z6tjgL3ABsIqXMxSyAcufrvpCPJj',
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2016-09-13 14:12:27',
                 'deleted_at' => NULL,
             ),
-            62 => 
+            63 => 
             array (
                 'id' => 5,
                 'login' => 'yuriy.berezin',
@@ -1592,7 +1617,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            63 => 
+            64 => 
             array (
                 'id' => 4,
                 'login' => NULL,
@@ -1617,7 +1642,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            64 => 
+            65 => 
             array (
                 'id' => 3,
                 'login' => 'Anna.Protko',
@@ -1626,7 +1651,7 @@ class UsersTableSeeder extends Seeder
                 'password' => '$2y$10$Iwe6HiQA2RD67Bi6ZAfyreLTuq45Ni5kmHVeyfZPjSAjp1m1ozh/G',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'aprotko',
                 'phone_number' => NULL,
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1639,19 +1664,19 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:51',
+                'updated_at' => '2016-09-13 05:12:34',
                 'deleted_at' => NULL,
             ),
-            65 => 
+            66 => 
             array (
                 'id' => 2,
                 'login' => 'vladimir.khonin',
                 'name' => 'Хонин Владимир',
                 'email' => 'vladimir.khonin@megafon.ru',
-                'password' => '$2y$10$9CShVuGdw3brBCrwddzUY.H6VPznrHqEeYypHrjFtPDVpyoKNEN7a',
+                'password' => '$2y$10$HKu3EH9zyKVtkc7XeoUg3O5gWRgDRctk2UdAcC5mj2ZYo5iDjacDK',
                 'user_type' => 1,
                 'user_status_id' => 1,
-                'jira' => NULL,
+                'jira' => 'vkhonin',
                 'phone_number' => '+79226028866',
                 'tab_number' => NULL,
                 'description' => NULL,
@@ -1661,10 +1686,10 @@ class UsersTableSeeder extends Seeder
                 'telegram' => NULL,
                 'telegram_id_user' => NULL,
                 'last_login' => NULL,
-                'remember_token' => 'HepFQrkaneQh8VvSs1FEtdpUDdBPZBk73dFWlCVFOZAogC9Eh4bL6dHD2s7o',
+                'remember_token' => 'HhGlvcrUiUY0hMkzYqqC1s2K4Dq5TcvL8RLIp6S2eJBA91F96DAaADUxed9L',
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => '2016-09-08 08:38:51',
+                'updated_at' => '2016-09-13 11:07:23',
                 'deleted_at' => NULL,
             ),
         ));
