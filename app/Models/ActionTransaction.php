@@ -7,18 +7,19 @@ use Illuminate\Support\Facades\Auth;
 
 /**
  * @property integer $id
+ * @property integer $uni_quest_id
  * @property integer $user_id
  * @property integer $action_id
  * @property integer $mail_template_id
- * @property integer $organization_id
  * @property string $message
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
+ * @property integer $uni_outkey
+ * @property Quest $quest
  * @property User $user
  * @property Action $action
  * @property MailTemplate $mailTemplate
- * @property Organization $organization
  * @property CurrencyTransaction[] $currencyTransactions
  */
 class ActionTransaction extends BaseModelWithSoftDeletes
@@ -27,7 +28,15 @@ class ActionTransaction extends BaseModelWithSoftDeletes
     /**
      * @var array
      */
-    protected $fillable = ['user_id', 'action_id', 'mail_template_id', 'organization_id', 'message', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['uni_quest_id', 'user_id', 'action_id', 'mail_template_id', 'message', 'created_at', 'updated_at', 'deleted_at', 'uni_outkey'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function quest()
+    {
+        return $this->belongsTo('App\Models\Quest', 'uni_quest_id');
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -59,19 +68,29 @@ class ActionTransaction extends BaseModelWithSoftDeletes
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function organization()
-    {
-        return $this->belongsTo('App\Models\Organization');
-    }
-
-    /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function currencyTransactions()
     {
         return $this->hasMany('App\Models\CurrencyTransaction', 'action_trancaction_id');
+    }
+
+    public static function newActionTransaction($userId, $action_id, $uni_quest_id = null, $uni_outkey = null)
+    {
+        if (isset($uni_outkey)) {
+            //Если есть требование уникальности? то проверяем и если нужно не вставляем
+            if (!ActionTransaction::where('uni_outkey', '=', $uni_outkey)->where('uni_quest_id', '=', $uni_quest_id)->count() == 0) {
+                return;
+            }
+        }
+        $uq = new ActionTransaction();
+        $uq->user_id = $userId;
+        $uq->action_id = $action_id;
+        if (isset($uni_outkey)) {
+            $uq->uni_outkey = $uni_outkey;
+            $uq->uni_quest_id = $uni_quest_id;
+        }
+        $uq->save(); // <~ this is your "insert" statement
     }
 
     function save(array $options = [])

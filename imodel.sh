@@ -3,14 +3,16 @@ N=App\\Models
 B1=App\\Models\\BaseModel
 B2=App\\Models\\BaseModelWithSoftDeletes
 
-php artisan krlove:generate:model Command --output-path=$P --namespace=$N --base-class-name=$B2
+php artisan krlove:generate:model ActionTransaction --output-path=$P --namespace=$N --base-class-name=$B2
+
 exit
 pause
 
 php artisan krlove:generate:model Action --output-path=$P --namespace=$N --base-class-name=$B2
 php artisan krlove:generate:model ActionCurrency --table-name=action_currencies --output-path=$P --namespace=$N --base-class-name=$B2
-php artisan krlove:generate:model ActionTransaction --output-path=$P --namespace=$N --base-class-name=$B2
+#php artisan krlove:generate:model ActionTransaction --output-path=$P --namespace=$N --base-class-name=$B2
 #php artisan krlove:generate:model Balance --output-path=$P --namespace=$N --base-class-name=$B2
+php artisan krlove:generate:model Command --output-path=$P --namespace=$N --base-class-name=$B2
 #php artisan krlove:generate:model Currency --table-name=currencies --output-path=$P --namespace=$N --base-class-name=$B2
 php artisan krlove:generate:model CurrencyTransaction --output-path=$P --namespace=$N --base-class-name=$B2
 php artisan krlove:generate:model CurrencyType --output-path=$P --namespace=$N --base-class-name=$B2

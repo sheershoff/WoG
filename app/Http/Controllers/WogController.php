@@ -145,17 +145,6 @@ class WogController extends Controller
         }
     }
 
-    public static function newActionTransaction($userId, $action_id, $uni_quest_id = null, $uni_outkey = null)
-    {
-        if (isset($unic_outkey)) {
-            dd(ActionTransaction::where('uni_outkey', '=', $uni_outkey)->where('uni_quest_id', '=', $uni_quest_id)->count());
-        }
-        $uq = new ActionTransaction();
-        $uq->user_id = $userId;
-        $uq->action_id = $action_id;
-        $uq->save(); // <~ this is your "insert" statement
-    }
-
     public function execAutoAction()
     {
         if (!Auth::check()) {
@@ -173,7 +162,7 @@ class WogController extends Controller
              order by uq.created_at desc';
         $qs = DB::select($sql, [$userId, 1]);
         foreach ($qs as $q) {
-            $this->newActionTransaction($userId, $q->id);
+            ActionTransaction::newActionTransaction($userId, $q->id);
         }
         //Выполняем openAction у квеста, при его взятии
         $sql = 'select a.id, a.quest_id, uq.id as user_quest_id
@@ -186,7 +175,7 @@ class WogController extends Controller
              order by uq.created_at desc';
         $qs = DB::select($sql, [$userId, 2]);
         foreach ($qs as $q) {
-            $this->newActionTransaction($userId, $q->id);
+            ActionTransaction::newActionTransaction($userId, $q->id);
         }
 //        Ищем квесты требующие чего-то в инвентаре и их автовыполняем
 //        $sql = 'select a.id, a.quest_id, uq.id as user_quest_id

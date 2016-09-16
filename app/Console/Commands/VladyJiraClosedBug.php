@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\User;
-use App\Http\Controllers\WogController;
+use App\Models\ActionTransaction;
 
 class VladyJiraClosedBug extends VladyJiraCommand
 {
@@ -26,7 +26,7 @@ class VladyJiraClosedBug extends VladyJiraCommand
      *  запрос для получения списка закрытых багов
      */
     protected $req = [
-        "maxResults" => 2,
+        "maxResults" => 5,
         "fields" => [
             "key",
             "assignee",
@@ -55,16 +55,17 @@ class VladyJiraClosedBug extends VladyJiraCommand
     {
         $u = User::where('jira', '=', $key)->first();
         if (count($u) == 1) {
-            return $u;
+            return $u->id;
         }
         if (isset($email)) {
             $u = new User();
             $u->jira = $key;
             $u->email = $email;
             $u->save;
-            return $u;
+            dd($u);
+            return $u->id;
         }
-        return NULL;
+        return FALSE;
     }
 
     /**
@@ -86,11 +87,12 @@ class VladyJiraClosedBug extends VladyJiraCommand
         foreach ($issues as $issue) {
             $bar->advance();
             $userId = $this->getUser($issue['fields']['assignee']['key'], $issue['fields']['assignee']['emailAddress']);
-            if (!isset($userId)) {
+            if (!$userId) {
                 $this->line($issue['fields']['assignee']['key'] . ' not fond!');
+            } else {
+                ActionTransaction::newActionTransaction($userId, $this->action_id, $this->quest_id, $issue['key']);
+                $this->line($userId . ' ' . $issue['fields']['assignee']['emailAddress'] . ' ' . $issue['key']);
             }
-            WogController::newActionTransaction($userId, $this->action_id, $this->quest_id, $issue['key']);
-            $this->line($userId->email . ' ' . $issue['key']);
         }
     }
 
