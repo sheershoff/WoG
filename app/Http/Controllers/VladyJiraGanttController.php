@@ -2,6 +2,12 @@
 
 namespace App\Http\Controllers;
 
+/**
+ * Ищем пользователей в jira
+ * GET /rest/api/2/user/search
+ * https://docs.atlassian.com/jira/REST/cloud/#api/2/user-findUsersWithBrowsePermission
+ *
+ */
 use App\Handlers\VladyJiraQuest;
 use Cache;
 
@@ -176,21 +182,6 @@ class VladyJiraGanttController extends Controller
 
 
         return ['data' => $data, 'collections' => ['links' => $links], 'now' => date('c')];
-    }
-
-    /**
-     * Execute the console command.
-     *
-     * @return mixed
-     *
-     * Ищем пользователей в jira
-     * GET /rest/api/2/user/search
-     * https://docs.atlassian.com/jira/REST/cloud/#api/2/user-findUsersWithBrowsePermission
-     *
-     */
-    public function handle()
-    {
-        $this->line($this->buildjson());
     }
 
 }

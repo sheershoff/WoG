@@ -2,11 +2,9 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
-use App\Handlers\VladyJiraQuest;
 use App\Models\User;
 
-class VladyJiraFindLogin extends Command
+class VladyJiraFindLogin extends VladyJiraCommand
 {
 
     /**
@@ -22,18 +20,6 @@ class VladyJiraFindLogin extends Command
      * @var string
      */
     protected $description = 'Find and add jira login by email';
-    protected $jira = null;
-
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-        $this->jira = new VladyJiraQuest();
-    }
 
     protected function getUserByEmail($user)
     {

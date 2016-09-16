@@ -151,59 +151,56 @@ class WogController extends Controller
             return;
         }
         $userId = Auth::user()->id;
+        //Выполняем initAction у квеста, при его создании
         $sql = 'select a.id, a.quest_id, uq.id as user_quest_id
             from ' . DB::getTablePrefix() . 'user_quests uq
             inner join ' . DB::getTablePrefix() . 'actions a on a.quest_id = uq.quest_id and a.init=true
             where not exists (select 1 from ' . DB::getTablePrefix() . 'action_transactions at --нет записей в транзакциях
                                where at.action_id = a.id and at.user_id = uq.user_id and at.deleted_at is null)
               and uq.user_id = ?
-              and uq.user_quest_status_id = 1
+              and uq.user_quest_status_id = ?
              order by uq.created_at desc';
-        $qs = DB::select($sql, [$userId]);
+        $qs = DB::select($sql, [$userId, 1]);
         foreach ($qs as $q) {
-            $uq = new ActionTransaction();
-            $uq->user_id = $userId;
-            $uq->action_id = $q->id;
-            $uq->save(); // <~ this is your "insert" statement
+            ActionTransaction::newActionTransaction($userId, $q->id);
         }
+        //Выполняем openAction у квеста, при его взятии
         $sql = 'select a.id, a.quest_id, uq.id as user_quest_id
             from ' . DB::getTablePrefix() . 'user_quests uq
             inner join ' . DB::getTablePrefix() . 'actions a on a.quest_id = uq.quest_id and a.open=true
             where not exists (select 1 from ' . DB::getTablePrefix() . 'action_transactions at --нет записей в транзакциях
                                where at.action_id = a.id and at.user_id = uq.user_id and at.deleted_at is null)
               and uq.user_id = ?
-              and uq.user_quest_status_id = 2
+              and uq.user_quest_status_id = ?
              order by uq.created_at desc';
-        $qs = DB::select($sql, [$userId]);
+        $qs = DB::select($sql, [$userId, 2]);
         foreach ($qs as $q) {
-            $uq = new ActionTransaction();
-            $uq->user_id = $userId;
-            $uq->action_id = $q->id;
-            $uq->save(); // <~ this is your "insert" statement
+            ActionTransaction::newActionTransaction($userId, $q->id);
         }
+//        Ищем квесты требующие чего-то в инвентаре и их автовыполняем
+//        $sql = 'select a.id, a.quest_id, uq.id as user_quest_id
+//            from ' . DB::getTablePrefix() . 'user_quests uq
+//            inner join ' . DB::getTablePrefix() . 'actions a on a.quest_id = uq.quest_id and a.inventary=true
+//            where not exists (select 1 from ' . DB::getTablePrefix() . 'action_currencies c
+//                                  left join ' . DB::getTablePrefix() . 'balances b on b.user_id = uq.user_id and c.currency_id = b.currency_id
+//                                      where c.action_id = a.id and c.value<0 and c.transaction_user=true
+//                                        and coalesce(c.value,0)+coalesce(b.value)<0)
+//              and uq.user_id = ?
+//              and uq.user_quest_status_id = 2
+//             order by uq.created_at desc';
+//        $qs = DB::select($sql, [$userId]);
+        //Закрытие квеста, если есть выполнено AutoClosed действие
 //        $qs = DB::select($sql, [$userId, 'AutoClosed', 3]);
 //        foreach ($qs as $q) {
 //            $userQuest = UserQuest::find($q->user_quest_id);
 //            $userQuest->user_quest_status_id = 3;
 //            $userQuest->save();
 //        }
-        $sql = 'select a.id, a.quest_id, uq.id as user_quest_id
-            from ' . DB::getTablePrefix() . 'user_quests uq
-            inner join ' . DB::getTablePrefix() . 'actions a on a.quest_id = uq.quest_id and a.inventary=true
-            where not exists (select 1 from ' . DB::getTablePrefix() . 'action_currencies c
-                                  left join ' . DB::getTablePrefix() . 'balances b on b.user_id = uq.user_id and c.currency_id = b.currency_id
-                                      where c.action_id = a.id and c.value<0 and c.transaction_user=true
-                                        and coalesce(c.value,0)+coalesce(b.value)<0)
-              and uq.user_id = ?
-              and uq.user_quest_status_id = 2
-             order by uq.created_at desc';
-        $qs = DB::select($sql, [$userId]);
     }
 
     public function test()
     {
-        $v = new VladyJiraQuest;
-        $v->questFindLogin();
+
     }
 
     public function info()
