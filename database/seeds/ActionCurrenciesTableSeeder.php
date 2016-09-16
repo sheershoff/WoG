@@ -19,6 +19,66 @@ class ActionCurrenciesTableSeeder extends Seeder
         \DB::connection('pgsql')->table('action_currencies')->insert(array (
             0 => 
             array (
+                'id' => 15,
+                'code' => NULL,
+                'name' => NULL,
+                'description' => NULL,
+                'currency_id' => 2,
+                'action_id' => 16,
+                'value' => 4,
+                'transaction_user' => true,
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
+                'id' => 14,
+                'code' => NULL,
+                'name' => NULL,
+                'description' => NULL,
+                'currency_id' => 2,
+                'action_id' => 16,
+                'value' => 3,
+                'transaction_user' => true,
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            2 => 
+            array (
+                'id' => 13,
+                'code' => '',
+                'name' => 'gold 4',
+                'description' => NULL,
+                'currency_id' => 4,
+                'action_id' => 17,
+                'value' => 4,
+                'transaction_user' => true,
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            3 => 
+            array (
+                'id' => 12,
+                'code' => NULL,
+                'name' => 'gold 3',
+                'description' => NULL,
+                'currency_id' => 4,
+                'action_id' => 16,
+                'value' => 3,
+                'transaction_user' => true,
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            4 => 
+            array (
                 'id' => 9,
                 'code' => NULL,
                 'name' => NULL,
@@ -32,7 +92,7 @@ class ActionCurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            1 => 
+            5 => 
             array (
                 'id' => 8,
                 'code' => NULL,
@@ -47,7 +107,7 @@ class ActionCurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
+            6 => 
             array (
                 'id' => 6,
                 'code' => NULL,
@@ -62,7 +122,7 @@ class ActionCurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            3 => 
+            7 => 
             array (
                 'id' => 5,
                 'code' => NULL,
@@ -77,7 +137,7 @@ class ActionCurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            4 => 
+            8 => 
             array (
                 'id' => 3,
                 'code' => NULL,
@@ -92,7 +152,7 @@ class ActionCurrenciesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            5 => 
+            9 => 
             array (
                 'id' => 2,
                 'code' => NULL,

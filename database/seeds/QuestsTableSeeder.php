@@ -19,11 +19,11 @@ class QuestsTableSeeder extends Seeder
         \DB::connection('pgsql')->table('quests')->insert(array (
             0 => 
             array (
-                'id' => 12,
-                'code' => 'JiraInit',
-                'name' => 'Наличие доступа в Jira детектированно!',
-                'description' => 'Квест назначается и выполняется роботом',
-                'role_id' => 1,
+                'id' => 13,
+                'code' => 'VladyJiraClosedBug',
+                'name' => 'Бонус за закрытые баги',
+                'description' => NULL,
+                'role_id' => -2,
                 'author_user_id' => NULL,
                 'is_hide' => true,
                 'is_auto' => false,
@@ -36,6 +36,24 @@ class QuestsTableSeeder extends Seeder
                 'deleted_at' => NULL,
             ),
             1 => 
+            array (
+                'id' => 12,
+                'code' => 'JiraInit',
+                'name' => 'Наличие доступа в Jira детектированно!',
+                'description' => 'Квест назначается и выполняется роботом',
+                'role_id' => -2,
+                'author_user_id' => NULL,
+                'is_hide' => true,
+                'is_auto' => false,
+                'time_recheck' => 86400,
+                'function_time_recheck' => NULL,
+                'function_check' => NULL,
+                'robot_id' => 4,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            2 => 
             array (
                 'id' => 9,
                 'code' => NULL,
@@ -53,7 +71,7 @@ class QuestsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
+            3 => 
             array (
                 'id' => 8,
                 'code' => NULL,
@@ -71,7 +89,7 @@ class QuestsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            3 => 
+            4 => 
             array (
                 'id' => 5,
                 'code' => NULL,
@@ -91,7 +109,7 @@ currency_types=4
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            4 => 
+            5 => 
             array (
                 'id' => 4,
                 'code' => NULL,
@@ -109,7 +127,7 @@ currency_types=4
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            5 => 
+            6 => 
             array (
                 'id' => 2,
                 'code' => NULL,
@@ -127,7 +145,7 @@ currency_types=4
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            6 => 
+            7 => 
             array (
                 'id' => 1,
                 'code' => NULL,
@@ -145,7 +163,7 @@ currency_types=4
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            7 => 
+            8 => 
             array (
                 'id' => 0,
                 'code' => NULL,

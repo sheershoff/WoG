@@ -48,8 +48,9 @@ class VladyJiraClosedBug extends VladyJiraCommand
 //            return $e;
 //        }
 //    }
-    protected $quest_id = 3;
-    protected $action_id = 3;
+    protected $quest_id = 13;
+    protected $lite_action_id = 16;
+    protected $full_action_id = 17;
 
     public function getUser($key, $email = null)
     {

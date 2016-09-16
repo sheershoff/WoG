@@ -19,6 +19,55 @@ class ActionsTableSeeder extends Seeder
         \DB::connection('pgsql')->table('actions')->insert(array (
             0 => 
             array (
+                'id' => 18,
+                'code' => 'VladyJiraInit',
+                'name' => 'У пользователя найден логин в Jira',
+                'description' => 'При нахождении логина автоматом назначается этот квест и
+сразу автоматом на создание выполняется это действие. Оно закрывает квест и даёт роль.',
+                'quest_id' => 12,
+                'up_role_id' => 15,
+                'init' => true,
+                'open' => true,
+                'close_quest' => true,
+                'inventary' => false,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
+                'id' => 17,
+                'code' => 'VladyJiraClosedBugFull',
+                'name' => 'Со всеми необходимыми атрибутами',
+                'description' => NULL,
+                'quest_id' => 13,
+                'up_role_id' => NULL,
+                'init' => false,
+                'open' => false,
+                'close_quest' => false,
+                'inventary' => false,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            2 => 
+            array (
+                'id' => 16,
+                'code' => 'VladyJiraClosedBugLite',
+                'name' => 'Бонус за закрытие бага',
+                'description' => NULL,
+                'quest_id' => 13,
+                'up_role_id' => NULL,
+                'init' => false,
+                'open' => false,
+                'close_quest' => false,
+                'inventary' => false,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            3 => 
+            array (
                 'id' => 13,
                 'code' => 'OpenInvite',
                 'name' => 'Открытие инвайта',
@@ -33,7 +82,7 @@ class ActionsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            1 => 
+            4 => 
             array (
                 'id' => 12,
                 'code' => 'FindInvite',
@@ -49,7 +98,7 @@ class ActionsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
+            5 => 
             array (
                 'id' => 11,
                 'code' => 'welcome',
@@ -65,7 +114,7 @@ class ActionsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            3 => 
+            6 => 
             array (
                 'id' => 9,
                 'code' => NULL,
@@ -81,7 +130,7 @@ class ActionsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            4 => 
+            7 => 
             array (
                 'id' => 8,
                 'code' => NULL,
@@ -97,7 +146,7 @@ class ActionsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            5 => 
+            8 => 
             array (
                 'id' => 7,
                 'code' => NULL,
@@ -113,7 +162,7 @@ class ActionsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            6 => 
+            9 => 
             array (
                 'id' => 6,
                 'code' => NULL,
@@ -129,7 +178,7 @@ class ActionsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            7 => 
+            10 => 
             array (
                 'id' => 4,
                 'code' => NULL,
@@ -145,7 +194,7 @@ class ActionsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            8 => 
+            11 => 
             array (
                 'id' => 3,
                 'code' => NULL,
@@ -161,7 +210,7 @@ class ActionsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            9 => 
+            12 => 
             array (
                 'id' => 2,
                 'code' => NULL,
@@ -177,7 +226,7 @@ class ActionsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            10 => 
+            13 => 
             array (
                 'id' => 1,
                 'code' => NULL,

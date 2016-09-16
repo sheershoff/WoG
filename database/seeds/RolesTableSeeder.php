@@ -19,6 +19,17 @@ class RolesTableSeeder extends Seeder
         \DB::connection('pgsql')->table('roles')->insert(array (
             0 => 
             array (
+                'id' => 15,
+                'code' => 'Jira',
+                'name' => 'Jira',
+                'description' => 'Набор квестов от Владимира',
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
                 'id' => 12,
                 'code' => 'titul',
                 'name' => 'titul',
@@ -28,7 +39,7 @@ class RolesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            1 => 
+            2 => 
             array (
                 'id' => 9,
                 'code' => 'Skill',
@@ -39,7 +50,7 @@ class RolesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
+            3 => 
             array (
                 'id' => 8,
                 'code' => 'karma',
@@ -50,7 +61,7 @@ class RolesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            3 => 
+            4 => 
             array (
                 'id' => 7,
                 'code' => 'mana',
@@ -61,7 +72,7 @@ class RolesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            4 => 
+            5 => 
             array (
                 'id' => 6,
                 'code' => 'TeamRaid',
@@ -72,7 +83,7 @@ class RolesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            5 => 
+            6 => 
             array (
                 'id' => 5,
                 'code' => 'lvl5',
@@ -83,7 +94,7 @@ class RolesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            6 => 
+            7 => 
             array (
                 'id' => 4,
                 'code' => 'lvl4',
@@ -94,7 +105,7 @@ class RolesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            7 => 
+            8 => 
             array (
                 'id' => 3,
                 'code' => 'lvl3',
@@ -105,7 +116,7 @@ class RolesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            8 => 
+            9 => 
             array (
                 'id' => 2,
                 'code' => 'lvl2',
@@ -116,7 +127,7 @@ class RolesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            9 => 
+            10 => 
             array (
                 'id' => 1,
                 'code' => 'lvl1',
@@ -127,7 +138,7 @@ class RolesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            10 => 
+            11 => 
             array (
                 'id' => -1,
                 'code' => 'Admin',
@@ -138,7 +149,7 @@ class RolesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            11 => 
+            12 => 
             array (
                 'id' => -2,
                 'code' => 'Guest',
@@ -149,7 +160,7 @@ class RolesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            12 => 
+            13 => 
             array (
                 'id' => -3,
                 'code' => 'AdminBalance',
@@ -160,7 +171,7 @@ class RolesTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            13 => 
+            14 => 
             array (
                 'id' => -4,
                 'code' => 'Admin0',
