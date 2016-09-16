@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Input;
 //use App\Http\Requests;
 use App\Models\User;
 use App\Models\Role;
+use App\Models\Robot;
 use App\Models\Action;
 use App\Models\ActionTransaction;
 use App\Models\Quest;
@@ -19,7 +20,6 @@ use App\Models\Currency;
 use App\Models\CurrencyType;
 use App\Models\MailTemplate;
 use App\Models\Balance;
-use App\Handlers\VladyJiraQuest;
 
 class WogController extends Controller
 {
@@ -224,11 +224,28 @@ class WogController extends Controller
         }
         $a .= '</table>';
 
+        $a .= '<h1><a href="http://url-wog-app01/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog&select=wog_robots">Robot</a></h1>';
+        $x = Robot::orderBy('id')->get();
+        $a .= '<table>';
+        foreach ($x as $v) {
+            $a .= '<tr><td>' . $v->id . '</td><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td></tr>';
+        }
+        $a .= '</table>';
+
+        $a .= '<h1><a href="http://url-wog-app01/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog&select=wog_roles">Role</a></h1>';
+        $x = Role::orderBy('id')->get();
+        $a .= '<table>';
+        foreach ($x as $v) {
+            $a .= '<tr><td>' . $v->id . '</td><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td></tr>';
+        }
+        $a .= '</table>';
+
+
         $a .= '<h1><a href="http://url-wog-app01/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog&select=wog_quests">Quest</a></h1>';
         $x = Quest::orderBy('id')->get();
         $a .= '<table>';
         foreach ($x as $v) {
-            $a .= '<tr><td>' . $v->id . '</td><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td></tr>';
+            $a .= '<tr><td>' . $v->id . '</td><td>' . $v->code . '</td><td>' . $v->name . '</td><td>' . $v->description . '</td><td>' . $v->robot_id . '</td></tr>';
         }
         $a .= '</table>';
 
