@@ -79,6 +79,7 @@ Route::get('/', 'WogController@index')->name('index'); //<a href="{{ route('inde
 Route::get('/home', 'WogController@home')->name('home')->middleware('auth');
 Route::get('/personal-data', 'WogController@personalData')->name('personal-data');
 Route::get('/quests', 'WogController@quests')->name('quests');
+Route::get('/user/skill/{id}/{value}/save', 'SkillController@userSkillSave')->name('user-skill-save');
 Route::get('/user/quest/{id}/open', 'WogController@openUserQuest')->name('user-quest');
 Route::get('/test', 'WogController@test')->name('test');
 Route::get('/info', 'WogController@info')->name('info');

@@ -888,6 +888,7 @@ a:hover {
 
 body {
     background-image: url('../img/bg.jpg');
+    background-attachment: scroll;
 }
 
 .dash-unit dtitle {
