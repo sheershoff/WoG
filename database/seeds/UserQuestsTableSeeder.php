@@ -1,10 +1,7 @@
 <?php
-
 use Illuminate\Database\Seeder;
-
 class UserQuestsTableSeeder extends Seeder
 {
-
     /**
      * Auto generated seed file
      *
@@ -13,7 +10,6 @@ class UserQuestsTableSeeder extends Seeder
     public function run()
     {
         
-
         \DB::connection('pgsql')->table('user_quests')->delete();
         
         \DB::connection('pgsql')->table('user_quests')->insert(array (

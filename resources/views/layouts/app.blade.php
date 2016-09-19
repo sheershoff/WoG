@@ -17,7 +17,7 @@
         <!-- Styles -->
         <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet">
         <link href="{{asset('/css/all.css') }}" rel="stylesheet">
-        <link href="{{asset('/css/wog.css') }}" rel="stylesheet">
+        <link href="{{asset('/css/wog.css') }}?" rel="stylesheet">
         <!-- JavaScripts -->
         <script type="text/javascript" src="{{asset('/js/jquery.js') }}"></script>
     </head>
@@ -65,6 +65,7 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/achievements') }}">Достижения</a></li>
+                                <li><a href="{{ url('/skills') }}">Навыки</a></li>
                                 <li><a href="{{ url('/administrator') }}">Настройка</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
@@ -103,23 +104,12 @@
             </div>
         </div><!--/row -->
         @endif
-
         <div class="container main-wog">
-
             <!-- FIRST ROW OF BLOCKS -->
             <div class="row">
-
-
                 @yield('content')
-
-
             </div><!--/row -->
-
-
-
         </div> <!-- /container -->
-
-
         <div id="footerwrap">
             <footer class="clearfix"></footer>
             <div class="container">
@@ -129,11 +119,9 @@
                         <p> {{ shell_exec("git log -1 --pretty=format:'%h - %s (%ci)' --abbrev-commit `git merge-base local-dev dev`") }}
                             © V.Khonin, R.Revel &  2016 ПАО «МегаФон»</p>
                     </div>
-
                 </div><!-- /row -->
             </div><!-- /container -->
         </div><!-- /footerwrap -->
-
         <!-- JavaScripts -->
         <script type="text/javascript" src="{{asset('/js/bootstrap.js')}}"></script>
         <script type="text/javascript" src="{{asset('/js/all.js') }}"></script>

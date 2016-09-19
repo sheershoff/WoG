@@ -3,6 +3,7 @@
 body {
 	background-image: url('../img/bg.jpg');
 	background-size: cover;
+        background-attachment: fixed;
   padding-top: 60px;
 }
 
@@ -54,4 +55,20 @@ body {
 }
 .half-unit {
   height: inherit;
+}
+
+/***** НАВЫКИ ****/
+
+.skillsBackground {
+    background-image: url('../img/sep-half.png');
+    background: #3d3d3d;
+}
+
+.skillsText {
+    color: grey;
+    font-size: 17px;
+}
+
+.skillsHeader {
+    margin-bottom: 10px;
 }

@@ -28,8 +28,8 @@
         "krlove/eloquent-model-generator": "^1",
         "barryvdh/laravel-debugbar": "^2.2",
         "barryvdh/laravel-ide-helper": "^2.2",
-        "filp/whoops": "^2.1"
-    },
+        "filp/whoops": "^2.1"    
+		},
     "autoload": {
         "classmap": [
             "database"

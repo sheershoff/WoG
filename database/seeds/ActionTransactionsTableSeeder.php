@@ -1,10 +1,7 @@
 <?php
-
 use Illuminate\Database\Seeder;
-
 class ActionTransactionsTableSeeder extends Seeder
 {
-
     /**
      * Auto generated seed file
      *
@@ -13,7 +10,6 @@ class ActionTransactionsTableSeeder extends Seeder
     public function run()
     {
         
-
         \DB::connection('pgsql')->table('action_transactions')->delete();
         
         \DB::connection('pgsql')->table('action_transactions')->insert(array (

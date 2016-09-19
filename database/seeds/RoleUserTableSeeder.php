@@ -1,10 +1,7 @@
 <?php
-
 use Illuminate\Database\Seeder;
-
 class RoleUserTableSeeder extends Seeder
 {
-
     /**
      * Auto generated seed file
      *
@@ -13,7 +10,6 @@ class RoleUserTableSeeder extends Seeder
     public function run()
     {
         
-
         \DB::connection('pgsql')->table('role_user')->delete();
         
         \DB::connection('pgsql')->table('role_user')->insert(array (
@@ -574,7 +570,7 @@ class RoleUserTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
-            ),
+            ), 
         ));
         
     	

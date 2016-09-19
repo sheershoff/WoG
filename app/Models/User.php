@@ -211,7 +211,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
     {
         return //$this->join('user_skills', 'user_skills.user_id', '=', 'users.id');
 
-                $this->belongsToMany(Skill::class, 'user_skills')->wherePivot('expert_user_id', '=', $this->id)->select('user_skills.value', 'skills.*');
+                $this->belongsToMany(Skill::class, 'user_skills')->wherePivot('expert_user_id', '=', $this->id)->select('user_skills.*', 'skills.*');
     }
 
 //    public function expertSkills() {

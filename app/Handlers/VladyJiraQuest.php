@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Handlers;
-
 /**
  * Description of VladyJiraQuest
  *
@@ -9,9 +7,7 @@ namespace App\Handlers;
  */
 class VladyJiraQuest extends Jira
 {
-
     //protected $jira = NULL;
-
     public function __construct()
     {
         $apiurl = config('wogJiraVlady.apiurl');
@@ -20,14 +16,12 @@ class VladyJiraQuest extends Jira
         $proxy = config('wogJiraVlady.proxy');
         parent::__construct($apiurl, $username, $password, $proxy);
     }
-
     public $jql = [
         //Закрытые баги в проекте GFimpl за последнюю неделю
         'VladyJiraClosedBug' => 'project = GFimpl AND issuetype = bug and status=Closed and updated<-1h and updated>-1w and updated>=\'2016-09-11\' ORDER BY key desc',
         //список эпиков
         'VladyJiraEpic' => 'project in (GFIMPL,"OneBSS PMO") AND status!=closed AND issuetype = Epic ORDER BY assignee',
     ];
-
     //project = GFPMO AND resolution = Unresolved AND issuetype = Story and "Epic Link"=GFPMO-512 ORDER BY priority DESC
     //project=GFIMPL AND type=Bug AND status!=closed order by created desc
     //Договорённости о коммуникациях - почта и встречи

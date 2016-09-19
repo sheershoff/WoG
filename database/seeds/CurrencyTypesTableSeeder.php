@@ -22,7 +22,7 @@ class CurrencyTypesTableSeeder extends Seeder
                 'id' => 13,
                 'code' => 'body',
                 'name' => 'слоты для инвентаря',
-            'description' => 'слоты для носимого инвентаря (тела игрока)',
+                'description' => 'слоты для носимого инвентаря (тела игрока)',
                 'unit' => '',
                 'created_at' => NULL,
                 'updated_at' => NULL,

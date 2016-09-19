@@ -79,6 +79,8 @@ Route::get('/', 'WogController@index')->name('index'); //<a href="{{ route('inde
 Route::get('/home', 'WogController@home')->name('home')->middleware('auth');
 Route::get('/personal-data', 'WogController@personalData')->name('personal-data');
 Route::get('/quests', 'WogController@quests')->name('quests');
+Route::get('/user/skill/{id}/{value}/save', 'SkillController@userSkillSave')->name('user-skill-save');
+Route::get('/user/skill/{id}/delete', 'SkillController@userSkillDelete')->name('user-skill-delete');
 Route::get('/user/quest/{id}/open', 'WogController@openUserQuest')->name('user-quest');
 Route::get('/test', 'WogController@test')->name('test');
 Route::get('/info', 'WogController@info')->name('info');
@@ -99,11 +101,9 @@ Route::get('/{obj}/{id}/photo', function($obj, $id) {
     $response->header('Content-Type', 'image/jpeg');
 //    return $response;
 });
-
+Route::get('/skills/', 'SkillController@showskills')->name('skills');
 Route::get('/questinfo', 'WogController@questinfo')->name('questinfo');
-
 Route::get('/achievements', 'WogController@personalData')->name('achievements');
-;
 //Route::get('posts/{post}/comments/{comment}', function ($postId, $commentId) {}); ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
 Route::get('/rating/{currency?}', 'WogController@rating')->name('rating'); //function ($name = null) {
 // Маршруты авторизации...

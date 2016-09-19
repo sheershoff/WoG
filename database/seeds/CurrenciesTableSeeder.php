@@ -218,7 +218,7 @@ class CurrenciesTableSeeder extends Seeder
                 'id' => 10,
                 'code' => NULL,
                 'name' => '1000 CLM',
-                'description' => 'Не бывалый рекорд!',
+                'description' => 'Небывалый рекорд!',
                 'function' => NULL,
                 'options' => NULL,
                 'top_menu' => false,
