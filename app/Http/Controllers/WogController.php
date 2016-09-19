@@ -51,7 +51,7 @@ class WogController extends Controller
             'passiveQuests' => Auth::user()->passiveQuests()->get(),
             'MyQustByUser' => Auth::user()->activeQuests()->take(5)->get(),
             'inventary' => Auth::user()->inventary()->get(),
-            'skill' => Auth::user()->skill()->get(),
+            'skill' => Auth::user()->skill()->take(5)->get(),
 //                'skill_balance' => Auth::user()->skills()->balance()->get(),
         ]);
     }
