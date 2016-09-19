@@ -68,3 +68,7 @@ body {
     color: grey;
     font-size: 17px;
 }
+
+.skillsHeader {
+    margin-bottom: 10px;
+}

@@ -17,7 +17,7 @@
         <!-- Styles -->
         <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet">
         <link href="{{asset('/css/all.css') }}" rel="stylesheet">
-        <link href="{{asset('/css/wog.css') }}" rel="stylesheet">
+        <link href="{{asset('/css/wog.css') }}?" rel="stylesheet">
         <!-- JavaScripts -->
         <script type="text/javascript" src="{{asset('/js/jquery.js') }}"></script>
     </head>
