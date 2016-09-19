@@ -39,7 +39,7 @@ class SkillController extends Controller {
     }
 
         public function showskills() {
-        if (Auth::check()) {
+ //       if (Auth::check()) {
             $userSkills = Auth::user()->skill()->get();
             $treeData = Skill::all()->toArray();
             $temp = array();
@@ -54,8 +54,8 @@ class SkillController extends Controller {
                 'treeData' => $treeData,
                 'skillsValue' => $skillsValue,
             ]);
-        } else
-            return Redirect::to('/');
+    //    } else
+    //        return Redirect::to('/');
     }
 
     function setSkill($treeData, $userSkills) {

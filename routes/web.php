@@ -101,7 +101,7 @@ Route::get('/{obj}/{id}/photo', function($obj, $id) {
     $response->header('Content-Type', 'image/jpeg');
 //    return $response;
 });
-Route::get('/skills/', 'SkillController@showskills')->name('skills');
+Route::get('/skills/', 'SkillController@showskills')->name('skills')->middleware('auth');
 Route::get('/questinfo', 'WogController@questinfo')->name('questinfo');
 Route::get('/achievements', 'WogController@personalData')->name('achievements');
 //Route::get('posts/{post}/comments/{comment}', function ($postId, $commentId) {}); ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);

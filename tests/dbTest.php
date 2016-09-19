@@ -29,10 +29,10 @@ class dbTest extends TestCase
     {
         if (DB::connection()->getName() == 'pgsql') {
             DB::setFetchMode(PDO::FETCH_CLASS);
-            $strQuery = "select substring(table_name, 3) n from information_schema.columns where table_name!='" . 
+            $strQuery = "select substring(table_name, " . (strlen((string)DB::getTablePrefix()) + 1) . ") n from information_schema.columns where table_name!='" . 
                     DB::getTablePrefix() . "migrations' and table_name!='" . 
                     DB::getTablePrefix() . "notifications' and table_name!='" . 
-                    DB::getTablePrefix() . "sessions' and table_schema='public' and column_name='id'";
+                    DB::getTablePrefix() . "sessions' and table_schema='" . env('DB_SCHEMA') . "' and column_name='id'";
             $tablesToCheck = \DB::select($strQuery);
             echo $strQuery;
             foreach ($tablesToCheck as $tableToCheckN) {
