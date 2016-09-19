@@ -20,9 +20,9 @@ class UserSkillsTableSeeder extends Seeder
         \DB::connection('pgsql')->table('user_skills')->insert(array (
             0 =>
                 array (
-                    'user_id' => 81,
+                    'user_id' => 80,
                     'skill_id' => 773,
-                    'expert_user_id' => 81,
+                    'expert_user_id' => 80,
                     'value' => 5,
                     'created_at' => NULL,
                     'updated_at' => NULL,

@@ -1688,31 +1688,6 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => '2016-09-13 11:07:23',
                 'deleted_at' => NULL,
             ),
-            66 =>
-            array (
-                'id' => 81,
-                'login' => 'sergey.khomutinin',
-                'name' => 'Хомутинин Сергей',
-                'email' => 'sergey.khomutinin@megafon.ru',
-                'password' => '$2y$10$r3ILd1sc59/DukUzNnrZoO41z7CH8xjMce0/xiANbVY3CUTl3/CB2',
-                'user_type' => 1,
-                'user_status_id' => 1,
-                'jira' => NULL,
-                'phone_number' => '+79221291842',
-                'tab_number' => NULL,
-                'description' => NULL,
-                'status' => 'я родился!',
-                'mail_agg_id' => NULL,
-                'mail_hour' => NULL,
-                'telegram' => NULL,
-                'telegram_id_user' => NULL,
-                'last_login' => NULL,
-                'remember_token' => NULL,
-                'organization_id' => 5,
-                'created_at' => '2016-09-14 05:49:22',
-                'updated_at' => '2016-09-14 05:49:22',
-                'deleted_at' => NULL,
-            )
         ));
         
     	

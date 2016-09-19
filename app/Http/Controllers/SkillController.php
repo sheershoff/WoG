@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Skill;
 use App\Models\User;
 use App\Models\UserSkill;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
@@ -29,7 +30,15 @@ class SkillController extends Controller {
         }
     }
 
-    public function showskills() {
+    public function userSkillDelete($id) {
+        if (!Auth::check())
+            return '404';
+        $userSkill = UserSkill::where('user_id', '=', Auth::user()->id)->where('skill_id', '=', $id)->first();
+        $userSkill->forceDelete();
+        return 'delete';
+    }
+
+        public function showskills() {
         if (Auth::check()) {
             $userSkills = Auth::user()->skill()->get();
             $treeData = Skill::all()->toArray();
@@ -39,28 +48,8 @@ class SkillController extends Controller {
             $treeData = $temp;
             $treeData = $this->setSkill($treeData, $userSkills);
             $treeData = $this->getCats($treeData);
-            $skillsValue = [
-                0 => [
-                    'id' => 1,
-                    'description' => 'Описание 1',
-                ],
-                1 => [
-                    'id' => 2,
-                    'description' => 'Описание 2',
-                ],
-                2 => [
-                    'id' => 3,
-                    'description' => 'Описание 3',
-                ],
-                3 => [
-                    'id' => 4,
-                    'description' => 'Описание 4',
-                ],
-                4 => [
-                    'id' => 5,
-                    'description' => 'Описание 5',
-                ],
-            ];
+            
+            $skillsValue = DB::table('skill_levels')->orderBy('id')->get();
             return view('skills.allskills', [
                 'treeData' => $treeData,
                 'skillsValue' => $skillsValue,
@@ -71,14 +60,7 @@ class SkillController extends Controller {
 
     function setSkill($treeData, $userSkills) {
         foreach ($userSkills as $skill) {
-            $treeData[$skill['id']]['isLearn'] = true;
             $treeData[$skill['id']]['skillValue'] = $skill->value;
-    /*        $description = 'Значение: ' . $skill->value . ' ';
-            if ($skill['expert_user_id'] == Auth::user()->id)
-                $description .= 'Самооценка.';
-            else
-                $description .= 'Оценил: ' . User::find($skill['expert_user_id'])->name . '. ' . $skill['id'];
-            $treeData[$skill['id']]['description'] = $description; */
         }
         return $treeData;
     }
@@ -93,17 +75,7 @@ class SkillController extends Controller {
             if (!isset($rows['parent_skill_id']))
                 $rows['parent_skill_id'] = 0;
             $cur = &$levels[$rows['id']];
-            $cur['parent_id'] = $rows['parent_skill_id'];
-            $cur['name'] = $rows['name'];
-            if (isset($rows['skillValue']))
-                $cur['skillValue'] = $rows['skillValue'];
-            $cur['description'] = $rows['description'];
-/*            if (isset($rows['description']))
-                $cur['description'] = $rows['description'];
-            else
-                $cur['description'] = 'Навык не приобретен.'; */
-            if (isset($rows['isLearn']))
-                $cur['isLearn'] = $rows['isLearn'];
+            $cur = array_merge((array)$cur, $rows);
             if ($rows['parent_skill_id'] == 0) {
                 $tree[$rows['id']] = &$cur;
             } else {

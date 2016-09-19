@@ -26,7 +26,7 @@ class Jira
             $this->proxy = $proxy;
         }
         if (($this->apiurl == '') || ($this->username == '') || ($this->password == '')) {
-            throw new Exception('Не заданы реквизиты jira');
+//            throw new Exception('Не заданы реквизиты jira');
         }
     }
     /*
