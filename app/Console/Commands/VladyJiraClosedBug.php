@@ -91,7 +91,7 @@ class VladyJiraClosedBug extends VladyJiraCommand
             if (!$userId) {
                 $this->line($issue['fields']['assignee']['key'] . ' not fond!');
             } else {
-                ActionTransaction::newActionTransaction($userId, $this->action_id, $this->quest_id, $issue['key']);
+                ActionTransaction::newActionTransaction($userId, $this->full_action_id, $this->quest_id, $issue['key']);
                 $this->line($userId . ' ' . $issue['fields']['assignee']['emailAddress'] . ' ' . $issue['key']);
             }
         }
