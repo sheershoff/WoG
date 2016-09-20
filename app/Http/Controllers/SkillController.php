@@ -18,15 +18,22 @@ class SkillController extends Controller {
         if (isset($userSkill)) {
             $userSkill->value = $value;
             $userSkill->save();
-            return 'save';
+            return json_encode([
+                'skillId' => $id,
+                'text' => 'Сохранено.',
+            ]);
         } else {
             $userSkill = UserSkill::create([
-                'user_id' => Auth::user()->id,
-                'skill_id' => $id,
-                'expert_user_id' => Auth::user()->id,
-                'value' => $value,
-                ]);
-            return 'add';
+                        'user_id' => Auth::user()->id,
+                        'skill_id' => $id,
+                        'expert_user_id' => Auth::user()->id,
+                        'value' => $value,
+            ]);
+            return json_encode([
+                'skillId' => $id,
+                'text' => 'Добавлено.',
+                'add' => true,
+            ]);
         }
     }
 
@@ -35,27 +42,27 @@ class SkillController extends Controller {
             return '404';
         $userSkill = UserSkill::where('user_id', '=', Auth::user()->id)->where('skill_id', '=', $id)->first();
         $userSkill->forceDelete();
-        return 'delete';
+        return json_encode([
+            'skillId' => $id,
+            'text' => 'Навык удален.',
+        ]);
     }
 
-        public function showskills() {
- //       if (Auth::check()) {
-            $userSkills = Auth::user()->skill()->get();
-            $treeData = Skill::all()->toArray();
-            $temp = array();
-            for ($i = 0; $i < count($treeData); $i++)
-                $temp[$treeData[$i]['id']] = $treeData[$i];
-            $treeData = $temp;
-            $treeData = $this->setSkill($treeData, $userSkills);
-            $treeData = $this->getCats($treeData);
-            
-            $skillsValue = DB::table('skill_levels')->orderBy('id')->get();
-            return view('skills.allskills', [
-                'treeData' => $treeData,
-                'skillsValue' => $skillsValue,
-            ]);
-    //    } else
-    //        return Redirect::to('/');
+    public function showskills() {
+        $userSkills = Auth::user()->skill()->get();
+        $treeData = Skill::orderBy('name')->get()->toArray();
+        $temp = array();
+        for ($i = 0; $i < count($treeData); $i++)
+            $temp[$treeData[$i]['id']] = $treeData[$i];
+        $treeData = $temp;
+        $treeData = $this->setSkill($treeData, $userSkills);
+        $treeData = $this->getCats($treeData);
+
+        $skillsValue = DB::table('skill_levels')->orderBy('id')->get();
+        return view('skills.allskills', [
+            'treeData' => $treeData,
+            'skillsValue' => $skillsValue,
+        ]);
     }
 
     function setSkill($treeData, $userSkills) {
@@ -75,7 +82,7 @@ class SkillController extends Controller {
             if (!isset($rows['parent_skill_id']))
                 $rows['parent_skill_id'] = 0;
             $cur = &$levels[$rows['id']];
-            $cur = array_merge((array)$cur, $rows);
+            $cur = array_merge((array) $cur, $rows);
             if ($rows['parent_skill_id'] == 0) {
                 $tree[$rows['id']] = &$cur;
             } else {
