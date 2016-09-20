@@ -19,7 +19,7 @@
         <hr>
         @foreach ($passiveQuests as $q)
         <div class="cont2">
-            <img style="height: 45px; width: 45px;" src="{{asset($q->photo())}}" alt="">
+            {{--<img style="height: 45px; width: 45px;" src="{{asset($q->photo())}}" alt="">--}}
             <br>
             <br>
             <p>{{$q->name}}</p>
@@ -141,20 +141,19 @@
     @if (count($skill) > 0)
     <!-- BARS CHART - lineandbars.js file -->
     <div style=" height: 450px; " class="half-unit">
-        <dtitle>Скилы</dtitle>
+        <dtitle>Сообщения</dtitle>
         <hr>
-
-        @foreach ($skill as $val)
-        <div class="cont">
-            <p><bold>{{  $val->value  }} </bold> {{  $val->name  }} {{  $val->description  }}</p>
+        <div class="info-user">
+            <span aria-hidden="true" class="li_megaphone fs2"></span>
         </div>
-        {{--надо придумать что такое макс - пока не понятно.
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"><span class="sr-only">60% Complete</span>
+        <br>
+        <div id="jstwitter" class="clearfix">
+            <ul id="twitter_update_list"></ul>
+        </div>
+        <div class="text">
+            <p><grey  style=" font-size: 17px; "  >Дорогой игрок вы взяли квест Расскажи о себе миру. Награда за выполнения будет ждать тебя!</grey></p>
 
-            </div>
-        </div>--}}
-        @endforeach
+        </div>
     </div>
     @endif
 
@@ -202,19 +201,20 @@
       			</div> --}}
     </div>
     <div class="dash-unit">
-        <dtitle>Сообщения</dtitle>
+        <dtitle>Скилы</dtitle>
         <hr>
-        <div class="info-user">
-            <span aria-hidden="true" class="li_megaphone fs2"></span>
-        </div>
-        <br>
-        <div id="jstwitter" class="clearfix">
-            <ul id="twitter_update_list"></ul>
-        </div>
-        <div class="text">
-            <p><grey  style=" font-size: 17px; "  >Дорогой игрок вы взяли квест Расскажи о себе миру. Награда за выполнения будет ждать тебя!</grey></p>
 
+        @foreach ($skill as $val)
+        <div class="cont">
+            <p><bold>{{  $val->value  }} </bold> {{  $val->name  }} {{  $val->description  }}</p>
         </div>
+        {{--надо придумать что такое макс - пока не понятно.
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"><span class="sr-only">60% Complete</span>
+
+            </div>
+        </div>--}}
+        @endforeach
     </div>
 </div>
 <script>
