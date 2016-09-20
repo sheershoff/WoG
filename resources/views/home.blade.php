@@ -13,6 +13,7 @@
                                     </div>
                             </div> -->
 
+
     @if (count($passiveQuests) > 0)
     <div id='Quest'  class="half-unit">
         <dtitle>Новые задания</dtitle>
@@ -151,7 +152,7 @@
             <ul id="twitter_update_list"></ul>
         </div>
         <div class="text">
-            <p><grey  style=" font-size: 17px; "  >Дорогой игрок вы взяли квест Расскажи о себе миру. Награда за выполнения будет ждать тебя!</grey></p>
+            <p><grey  style=" font-size: 17px; "  >--</grey></p>
 
         </div>
     </div>

@@ -45,11 +45,11 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="/i/gantt/index.html">gantt</a></li>
                                 <li><a href="/i/gantt/toweek.html">недельные задачи</a></li>
-                                @if (Auth::guest())
-                                @else
+                                @if (!Auth::guest())
                                 <li><a href="/phpinfo.php">phpinfo.php</a></li>
                                 <li><a href="/i/adminer.php?pgsql=localhost&username=wog&db=wog&ns=wog">Adminer</a></li>
                                 <li><a href="/jira-team-boadr/">JiraTeamBoadr</a></li>
+                                <li><a href="{{ url('/administrator') }}">Настройка</a></li>
                                 @endif
                             </ul>
                         </li>
@@ -66,7 +66,6 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/achievements') }}">Достижения</a></li>
                                 <li><a href="{{ url('/skills') }}">Навыки</a></li>
-                                <li><a href="{{ url('/administrator') }}">Настройка</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>
@@ -116,7 +115,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-lg-12">
                         <!-- <p><img src="http://www.prepbootstrap.com/Content/images/shared/single-page-admin/logo.png" alt=""></p> -->
-                        <p> {{ shell_exec("git log -1 --pretty=format:'%h - %s (%ci)' --abbrev-commit `git merge-base local-dev dev`") }}
+                        <p> {{-- shell_exec("git log -1 --pretty=format:'%h - %s (%ci)' --abbrev-commit `git merge-base local-dev dev`") --}}
                             © V.Khonin, R.Revel &  2016 ПАО «МегаФон»</p>
                     </div>
                 </div><!-- /row -->

@@ -124,6 +124,10 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
         return $this->belongsToMany(Role::class); //, 'role_user', 'user_id', 'role_id'
     }
 
+//    public function admin()
+//    {
+//        return roles()->where('role_id', -1)->count()->get(); //, 'role_user', 'user_id', 'role_id'
+//    }
 //
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -254,8 +258,8 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
         $o = config('wog.organization');
         if (isset($o) && ($o <> 0)) {
             $this->organization_id = $o;
-        } 
-	if (!isset($this->organization_id) || ($this->organization_id==0)) {
+        }
+        if (!isset($this->organization_id) || ($this->organization_id == 0)) {
             throw new Exception('organization_id by zero.'); //todo: Class 'App\Models\Exception' not found
         }
     }
