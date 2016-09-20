@@ -3,7 +3,7 @@
 
 @section('content')
 <!-- USER PROFILE BLOCK -->
-<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <!--         	<div class="half-unit">
                             <dtitle>Local Time</dtitle>
                             <hr>
@@ -12,7 +12,6 @@
                                                     <p>StatCounter Information</p>
                                     </div>
                             </div> -->
-
 
     @if (count($passiveQuests) > 0)
     <div id='Quest'  class="half-unit">
@@ -72,7 +71,7 @@
 				</div>
 			</div> --}}
 </div>
-<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
 
     <div class="dash-unit">
@@ -173,7 +172,7 @@
 				 </div> --}}
 
 </div>
-<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <div style=" height: inherit; " class="dash-unit">
         <dtitle>Инвентарь</dtitle>
         <hr>

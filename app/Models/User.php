@@ -32,7 +32,7 @@ use Session;
  * @property TeamUsers[] $TeamUsers
  * @property TeamUsers[] $TeamUsers
  * @property UserProfiles[] $UserProfiles
- * @property RoleUser[] $RoleUsers
+ * @property roleUser[] $roleUser
  * @property Robots[] $Robots
  * @property UserQuests[] $UserQuests
  * @property Quests[] $Quests
@@ -111,23 +111,24 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
         return $this->belongsToMany(User::class, 'team_users', 'user_id', 'team_user_id');
     }
 
-//    /**
-//     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-//     */
-//    public function RoleUsers()
-//    {
-//        return $this->hasMany('RoleUser', 'user_id');
-//    }
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function roleUser()
+    {
+        return $this->hasMany(RoleUser::class, 'user_id');
+    }
 
     public function roles()
     {
         return $this->belongsToMany(Role::class); //, 'role_user', 'user_id', 'role_id'
     }
 
-//    public function admin()
-//    {
-//        return roles()->where('role_id', -1)->count()->get(); //, 'role_user', 'user_id', 'role_id'
-//    }
+    public function admin()
+    {
+        return roleUsers()->where('role_id', -1)->count()->get();
+    }
+
 //
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
