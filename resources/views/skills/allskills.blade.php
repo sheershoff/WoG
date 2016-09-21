@@ -2,6 +2,20 @@
 
 @section('content')
 
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1 class="">Выбери навыки, которыми ты владеешь</h1>
+        </div>
+        <div class="panel-body">
+            <p class=lead>Поставь оценку от 1 до 5, чтобы указать степень владения определенным навыком:</p>
+            @foreach($skillsValue as $skill)
+                <p><b>{{ $skill->id }}</b> - {{ $skill->description }}</p>
+            @endforeach
+        </div>
+    </div>
+
+
 <script>
     var arr = [
             @foreach($skillsValue as $skill)
@@ -38,7 +52,7 @@ $('button[name="delete-skill"]').click(function() {
 });
 
 $('a[name="open-childs"]').click(function() {
-    $('div.' + $(this).data().skillId + '-text').text(arr[$('div.' + $(this).data().skillId + '-btn').find('label.active').find('input').data().skillValue]); 
+    $('div.' + $(this).data().skillId + '-text').text(arr[$('div.' + $(this).data().skillId + '-btn').find('label.active').find('input').data().skillValue - 1]); 
 });
 </script>
 @stop
