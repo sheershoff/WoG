@@ -201,12 +201,11 @@
       			</div> --}}
     </div>
     <div class="dash-unit">
-        <dtitle>Скилы</dtitle>
+        <dtitle>Навыки</dtitle>
         <hr>
-
         @foreach ($skill as $val)
         <div class="cont">
-            <p><bold>{{  $val->value  }} </bold> {{  $val->name  }} {{  $val->description  }}</p>
+            <p>{{  $val->name  }} <bold>{{  $val->value  }}</b></p>
         </div>
         {{--надо придумать что такое макс - пока не понятно.
         <div class="progress">

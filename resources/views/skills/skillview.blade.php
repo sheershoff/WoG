@@ -1,16 +1,20 @@
 @foreach($treeData as $k=>$v)
-<div class="panel-heading half-unit skillsHeader">
-    <h4 class="panel-title">
-        <a name="open-childs" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{ $k }}" data-skill-id="{{$k}}">
-            @if(!empty($v['skillValue']))
-                <dtitle><b>{{ $v['name'] }} ({{ $v['skillValue'] }})<b></dtitle>
-            @else
-                <dtitle>{{ $v['name'] }}</dtitle>
-            @endif 
-        </a>
-    </h4>
-</div>
-<div id="collapse-{{ $k }}" class="panel-collapse collapse skillsBackground">
+<a name="open-childs" data-toggle="collapse" data-parent="#{{$v['parent_skill_id']}}" href="#{{ $k }}" data-skill-id="{{$k}}">
+    <div class="panel-heading half-unit skillsHeader">
+        <h4 class="panel-title">
+                @if(!empty($v['skillValue']))
+                    <dtitle><b>{{ $v['name'] }} ({{ $v['skillValue'] }})<b></dtitle>
+                @else
+                    <dtitle>{{ $v['name'] }}</dtitle>
+                @endif 
+    {{--        <button type="button" name="delete-skill" data-skill-id="{{$k}}" class="btn btn-xs navbar-right">Удалить</button>
+            <button type="button" name="edit-skill" data-skill-id="{{$k}}" class="btn btn-xs navbar-right">Редактировать</button>
+            <button type="button" name="add-skill" data-skill-id="{{$k}}" class="btn btn-xs navbar-right">Добавить</button>         --}}
+        </h4>
+    </div>
+</a>
+
+<div id="{{ $k }}"  data-parent="#{{$v['parent_skill_id']}}" class="panel-collapse collapse skillsBackground">
     <div class="panel-body">
         @if($v['appoint'])
             @if(isset($skillsValue))
@@ -23,7 +27,7 @@
                         </label>
                     @endforeach
                 </div>
-                <button type="button" name ="delete-skill" data-skill-id="{{ $k }}" class="btn btn-default {{ $k }}-btn-delete" @if(empty($v['skillValue'])) disabled @endif >X</button>
+                <button type="button" name ="delete-user-skill" data-skill-id="{{ $k }}" class="btn btn-default {{ $k }}-btn-delete" @if(empty($v['skillValue'])) disabled @endif >X</button>
                 <div class="{{$k}}-alert skillsText"></div>
                 <div class="{{$k}}-text skillsText"></div>
             @endif

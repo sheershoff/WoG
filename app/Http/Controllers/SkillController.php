@@ -12,6 +12,22 @@ use Illuminate\Support\Facades\Redirect;
 class SkillController extends Controller
 {
 
+    public function skillAdd($id)
+    {
+        
+    }
+
+    public function skillEdit($id)
+    {
+        
+    }
+
+    public function skillDelete($id)
+    {
+        
+    }
+
+
     public function userSkillSave($id, $value)
     {
         if (!Auth::check())

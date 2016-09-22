@@ -73,14 +73,23 @@ Route::group(['prefix' => 'jira-team-boadr'], function() {
     Route::get('/', 'AdminController@index');
 });
 
+Route::group(['prefix' => 'user/skill'], function() {
+    Route::get('/{id}/{value}/save', 'SkillController@userSkillSave')->name('user-skill-save');
+    Route::get('/{id}/delete', 'SkillController@userSkillDelete')->name('user-skill-delete');
+});
+
+Route::group(['prefix' => 'skill/'], function() {
+    Route::get('/{id}/add', 'SkillController@skillAdd')->name('skill-add');
+    Route::get('/{id}/edit', 'SkillController@skillEdit')->name('skill-edit');
+    Route::get('/{id}/delete', 'SkillController@skillDelete')->name('skill-delete');
+});
+
 //Section::inject('version', 'Мой сайт');
 
 Route::get('/', 'WogController@index')->name('index'); //<a href="{{ route('index')}}">
 Route::get('/home', 'WogController@home')->name('home')->middleware('auth');
 Route::get('/personal-data', 'WogController@personalData')->name('personal-data');
 Route::get('/quests', 'WogController@quests')->name('quests');
-Route::get('/user/skill/{id}/{value}/save', 'SkillController@userSkillSave')->name('user-skill-save');
-Route::get('/user/skill/{id}/delete', 'SkillController@userSkillDelete')->name('user-skill-delete');
 Route::get('/user/quest/{id}/open', 'WogController@openUserQuest')->name('user-quest');
 Route::get('/test', 'WogController@test')->name('test');
 Route::get('/info', 'WogController@info')->name('info');
@@ -101,7 +110,7 @@ Route::get('/{obj}/{id}/photo', function($obj, $id) {
     $response->header('Content-Type', 'image/jpeg');
 //    return $response;
 });
-Route::get('/skills/', 'SkillController@showskills')->name('skills')->middleware('auth');
+Route::get('/skills/', 'SkillController@showskills')->name('skills');
 Route::get('/questinfo', 'WogController@questinfo')->name('questinfo');
 Route::get('/achievements', 'WogController@personalData')->name('achievements');
 //Route::get('posts/{post}/comments/{comment}', function ($postId, $commentId) {}); ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
