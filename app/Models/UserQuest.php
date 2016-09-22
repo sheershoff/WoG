@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-
-
 /**
  * @property integer $id
  * @property integer $quest_id
@@ -17,14 +15,14 @@ namespace App\Models;
  * @property Quest $quest
  * @property User $user
  * @property UserQuestStatus $userQuestStatus
- * @property Organization $organization
  */
 class UserQuest extends BaseModelWithSoftDeletes
 {
+
     /**
      * @var array
      */
-    protected $fillable = ['quest_id', 'user_id', 'user_quest_status_id', 'organization_id', 'quest_type', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['quest_id', 'user_id', 'user_quest_status_id', 'quest_type', 'created_at', 'updated_at', 'deleted_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -50,11 +48,4 @@ class UserQuest extends BaseModelWithSoftDeletes
         return $this->belongsTo('App\Models\UserQuestStatus');
     }
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function organization()
-    {
-        return $this->belongsTo('App\Models\Organization');
-    }
 }

@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Console;
+
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use App\Console\Commands\VladyJiraFindLogin;
@@ -7,8 +9,11 @@ use App\Console\Commands\VladyJiraGantt;
 use App\Console\Commands\VladyJiraClosedBug;
 use App\Console\Commands\VladyJiraFieldList;
 use App\Console\Commands\VladyJiraEpic;
+use App\Console\Commands\QuestAddAll;
+
 class Kernel extends ConsoleKernel
 {
+
     /**
      * The Artisan commands provided by your application.
      *
@@ -20,7 +25,9 @@ class Kernel extends ConsoleKernel
         VladyJiraClosedBug::class,
         VladyJiraFieldList::class,
         VladyJiraEpic::class,
+        QuestAddAll::class,
     ];
+
     /**
      * Define the application's command schedule.
      *
@@ -31,10 +38,13 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('vladyjiraquest:findlogin')
                 ->dailyAt('23:10');
+        $schedule->command('quest:addall')
+                ->dailyAt('23:10');
 //        $schedule->call(function () {
 //            DB::table('recent_users')->delete();
 //        })->daily();
     }
+
     /**
      * Register the Closure based commands for the application.
      *
@@ -44,4 +54,5 @@ class Kernel extends ConsoleKernel
     {
         require base_path('routes/console.php');
     }
+
 }

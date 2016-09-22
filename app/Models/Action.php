@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\BaseModelWithSoftDeletes;
-
 /**
  * @property integer $id
  * @property integer $quest_id
@@ -27,6 +25,7 @@ use App\Models\BaseModelWithSoftDeletes;
  */
 class Action extends BaseModelWithSoftDeletes
 {
+
     /**
      * @var array
      */
@@ -71,4 +70,5 @@ class Action extends BaseModelWithSoftDeletes
     {
         return $this->hasMany('App\Models\MailTemplate');
     }
+
 }

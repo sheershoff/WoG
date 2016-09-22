@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Handlers\VladyJiraQuest;
+use App\Models\UserQuest;
 
 class VladyJiraCommand extends Command
 {
@@ -19,6 +20,11 @@ class VladyJiraCommand extends Command
     {
         parent::__construct();
         $this->jira = new VladyJiraQuest();
+    }
+
+    public function questUsers($quest)
+    {
+        return UserQuest::where('quest_id', $quest)->where('user_quest_status_id', 2);
     }
 
 }

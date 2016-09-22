@@ -31,6 +31,13 @@ class VladyJiraFindLogin extends VladyJiraCommand
         }
     }
 
+    protected $quest = 12;
+
+    protected function questJiraInitComplite()
+    {
+        dd($this->questUsers($this->quest)->toSql());
+    }
+
     /**
      * Execute the console command.
      *
@@ -43,6 +50,7 @@ class VladyJiraFindLogin extends VladyJiraCommand
      */
     public function handle()
     {
+        $this->questJiraInitComplite();
         $users = User::/* where('jira', '=', '') -> */whereNull('jira')->whereNotNull('email')->get();
         $bar = $this->output->createProgressBar(count($users));
         foreach ($users as $user) {
