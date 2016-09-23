@@ -107,6 +107,11 @@ class ActionTransaction extends BaseModelWithSoftDeletes
             $this->mail_template_id = $x[$i]->id;
         }
 //try {
+        if ($this->action()->close_quest) {
+            $userQuest = UserQuest::where('quest_id', '=', $this->action()->quest_id)->get();
+            $userQuest->user_quest_status_id = 3;
+            $userQuest->save();
+        }
         if (parent::save()) {
             $qs = ActionCurrency::where('action_id', '=', $this->action_id)->get();
             foreach ($qs as $q) {
