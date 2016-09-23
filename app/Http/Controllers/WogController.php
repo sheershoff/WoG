@@ -30,9 +30,9 @@ class WogController extends Controller
 
         if (isset($o) && ($o <> 0)) {
             return view('main', [
-                'ats' => ActionTransaction::orderBy('created_at', 'desc')->take(5)->get(),
-                'bls' => Balance::XP()->orderBy('value', 'desc')->take(5)->get(),
-                'bl2s' => Balance::Medal()->orderBy('created_at', 'desc')->take(5)->get(),
+                'ats' => ActionTransaction::orderBy('created_at', 'asc')->take(5)->get(),
+                'bls' => Balance::XP()->orderBy('value', 'asc')->take(5)->get(),
+                'bl2s' => Balance::Medal()->orderBy('created_at', 'asc')->take(5)->get(),
                 'skills' => UserSkill::join('skills', 'user_skills.skill_id', '=', 'skills.id')
                         ->select('skills.name', DB::raw('count(' . env('DB_PREFIX') . 'skills.name)'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=1 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v1'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=2 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v2'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=3 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v3'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=4 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v4'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=5 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v5'))
                         ->groupBy('skills.name')
@@ -57,6 +57,7 @@ class WogController extends Controller
             'cash' => Auth::user()->cash()->get(),
             'passiveQuests' => Auth::user()->passiveQuests()->get(),
             'MyQustByUser' => Auth::user()->activeQuests()->take(5)->get(),
+            'action' => Auth::user()->actionTransactions()->join('actions', 'actions.id', 'action_transactions.action_id')->leftJoin('mail_templates', 'mail_templates.id', 'action_transactions.mail_template_id')->select('actions.*', 'action_transactions.message', 'mail_templates.body')->orderBy('action_transactions.created_at', 'asc')->take(5)->get(),
             'inventary' => Auth::user()->inventary()->get(),
             'skill' => Auth::user()->skill()->take(5)->get(),
 //                'skill_balance' => Auth::user()->skills()->balance()->get(),

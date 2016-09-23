@@ -37,8 +37,6 @@
 
     @include('home.quest_list')
 
-    @include('home.action_list')
-
     @include('home.mail')
 
 
