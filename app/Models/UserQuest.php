@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\DB;
+
 /**
  * @property integer $id
  * @property integer $quest_id
@@ -73,7 +75,7 @@ class UserQuest extends BaseModelWithSoftDeletes
 //try {
         if (parent::save()) {
             //Выполняем init/open Action у квеста, при его создании
-            createActionTransaction();
+            $this->createActionTransaction();
 
 //        Ищем квесты требующие чего-то в инвентаре и их автовыполняем
 //        $sql = 'select a.id, a.quest_id, uq.id as user_quest_id

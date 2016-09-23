@@ -51,7 +51,6 @@ class WogController extends Controller
             return;
         }
         $this->addUserQuests();
-        $this->execAutoAction();
         return view('home', [
             'staus' => Auth::user()->teams()->get(),
             'cash' => Auth::user()->cash()->get(),

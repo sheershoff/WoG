@@ -41,6 +41,7 @@ class VladyJiraFindLogin extends VladyJiraCommand
         foreach ($quests as $q) {
             ActionTransaction::newActionTransaction($q->user_id, $this->action_Ok);
         }
+        return count($quests);
     }
 
     /**
@@ -55,7 +56,6 @@ class VladyJiraFindLogin extends VladyJiraCommand
      */
     public function handle()
     {
-        $this->questJiraInitComplite();
         $users = User::/* where('jira', '=', '') -> */whereNull('jira')->whereNotNull('email')->get();
         $bar = $this->output->createProgressBar(count($users));
         foreach ($users as $user) {
@@ -63,6 +63,7 @@ class VladyJiraFindLogin extends VladyJiraCommand
             $this->line($user->email);
             $this->getUserByEmail($user);
         }
+        $this->line('Quest:' . $this->questJiraInitComplite());
     }
 
 }
