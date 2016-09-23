@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use BaseModel;
-
 /**
  * @property integer $id
  * @property integer $role_id

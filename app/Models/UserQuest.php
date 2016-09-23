@@ -59,11 +59,11 @@ class UserQuest extends BaseModelWithSoftDeletes
         $actions = Action::where('quest_id', '=', $this->quest_id)->where($field, '=', TRUE)->whereNotExists(function ($query) {
                     $query->select(DB::raw(1))
                             ->from('action_transactions')
-                            ->where('action_transactions.action_id', '=', 'actions.id')//DB::getTablePrefix()
+                            ->where('action_transactions.action_id', '=', DB::raw(DB::getTablePrefix() . 'actions.id'))//DB::getTablePrefix()
                             ->where('action_transactions.user_id', '=', $this->user_id);
                 })->get();
         foreach ($actions as $a) {
-            ActionTransaction::newActionTransaction($this->user_id, $q->id);
+            ActionTransaction::newActionTransaction($this->user_id, $a->id);
         }
     }
 
