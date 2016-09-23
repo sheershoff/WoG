@@ -78,10 +78,11 @@ Route::group(['prefix' => 'user/skill'], function() {
     Route::get('/{id}/delete', 'SkillController@userSkillDelete')->name('user-skill-delete');
 });
 
-Route::group(['prefix' => 'skill/'], function() {
-    Route::get('/{id}/add', 'SkillController@skillAdd')->name('skill-add');
-    Route::get('/{id}/edit', 'SkillController@skillEdit')->name('skill-edit');
-    Route::get('/{id}/delete', 'SkillController@skillDelete')->name('skill-delete');
+Route::group(['prefix' => 'skill'], function() {
+    Route::get('/{id}/add', 'SkillController@addSkill')->name('add-skill');
+    Route::get('/{id}/edit', 'SkillController@editSkill')->name('edit-skill');
+    Route::get('/{id}/delete', 'SkillController@deleteSkill')->name('delete-skill');
+    Route::get('/{id}/get', 'SkillController@getSkill')->name('get-skill');
 });
 
 //Section::inject('version', 'Мой сайт');
@@ -110,7 +111,7 @@ Route::get('/{obj}/{id}/photo', function($obj, $id) {
     $response->header('Content-Type', 'image/jpeg');
 //    return $response;
 });
-Route::get('/skills/', 'SkillController@showskills')->name('skills');
+Route::get('/skills/', 'SkillController@showSkills')->name('skills');
 Route::get('/questinfo', 'WogController@questinfo')->name('questinfo');
 Route::get('/achievements', 'WogController@personalData')->name('achievements');
 //Route::get('posts/{post}/comments/{comment}', function ($postId, $commentId) {}); ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);

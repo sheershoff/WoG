@@ -5,40 +5,79 @@ namespace App\Http\Controllers;
 use App\Models\Skill;
 use App\Models\User;
 use App\Models\UserSkill;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
-class SkillController extends Controller
-{
+class SkillController extends Controller {
 
-    public function skillAdd($id)
-    {
-        
+    public function addSkill(Request $request, $id) {
+        if (!Auth::check())
+            return '404';
+        $skill = new Skill;
+        $skill->name = $request->input('name');
+        $skill->description = $request->input('description');
+        $skill->appoint = $request->input('appoint');
+        $skill->parent_skill_id = $request->input('parent_skill_id');
+        if ($skill->save())
+            return response()->json([
+                        'text' => 'Навык сохранен',
+            ]);
+        else
+            return response()->json([
+                        'text' => 'Ошибка',
+            ]);
     }
 
-    public function skillEdit($id)
-    {
-        
+    public function editSkill(Request $request, $id) {
+        if (!Auth::check())
+            return '404';
+        $skill = Skill::find($id);
+        if (isset($skill)) {
+            $skill->name = $request->input('name');
+            $skill->description = $request->input('description');
+            $skill->appoint = $request->input('appoint');
+            $skill->save();
+            return response()->json([
+                        'text' => 'Сохранено',
+            ]);
+        } else
+            return response()->json([
+                        'text' => 'Ошибка',
+            ]);
     }
 
-    public function skillDelete($id)
-    {
-        
+    public function deleteSkill($id) {
+        if (!Auth::check())
+            return '404';
+        Skill::find($id)->delete();
+        return response()->json([
+                    'text' => 'Удалено',
+        ]);
     }
 
+    public function getSkill($id) {
+        if (!Auth::check())
+            return '404';
+        $skill = Skill::find($id);
+        return response()->json([
+                    'name' => $skill->name,
+                    'description' => $skill->description,
+                    'appoint' => $skill->appoint,
+        ]);
+    }
 
-    public function userSkillSave($id, $value)
-    {
+    public function userSkillSave($id, $value) {
         if (!Auth::check())
             return '404';
         $userSkill = UserSkill::where('user_id', '=', Auth::user()->id)->where('skill_id', '=', $id)->first();
         if (isset($userSkill)) {
             $userSkill->value = $value;
             $userSkill->save();
-            return json_encode([
-                'skillId' => $id,
-                'text' => 'Сохранено.',
+            return response()->json([
+                        'skillId' => $id,
+                        'text' => 'Сохранено.',
             ]);
         } else {
             $userSkill = UserSkill::create([
@@ -47,28 +86,26 @@ class SkillController extends Controller
                         'expert_user_id' => Auth::user()->id,
                         'value' => $value,
             ]);
-            return json_encode([
-                'skillId' => $id,
-                'text' => 'Добавлено.',
-                'add' => true,
+            return response()->json([
+                        'skillId' => $id,
+                        'text' => 'Добавлено.',
+                        'add' => true,
             ]);
         }
     }
 
-    public function userSkillDelete($id)
-    {
+    public function userSkillDelete($id) {
         if (!Auth::check())
             return '404';
         $userSkill = UserSkill::where('user_id', '=', Auth::user()->id)->where('skill_id', '=', $id)->first();
         $userSkill->forceDelete();
-        return json_encode([
-            'skillId' => $id,
-            'text' => 'Навык удален.',
+        return response()->json([
+                    'skillId' => $id,
+                    'text' => 'Навык удален.',
         ]);
     }
 
-    public function showskills()
-    {
+    public function showSkills() {
         if (Auth::check()) {
             $userSkills = Auth::user()->skill()->get();
             $treeData = Skill::orderBy('name')->get()->toArray();
@@ -76,33 +113,30 @@ class SkillController extends Controller
             for ($i = 0; $i < count($treeData); $i++)
                 $temp[$treeData[$i]['id']] = $treeData[$i];
             $treeData = $temp;
-            $treeData = $this->setSkill($treeData, $userSkills);
+            $treeData = $this->setSkillValues($treeData, $userSkills);
             $treeData = $this->getCats($treeData);
-
+            $adm = Auth::user()->roleUser->where('role_id', '=', '-1')->first();
             $skillsValue = DB::table('skill_levels')->orderBy('id')->get();
             return view('skills.allskills', [
                 'treeData' => $treeData,
                 'skillsValue' => $skillsValue,
+                'adm' => $adm,
             ]);
         } else
             return Redirect::to('/login?path=skills');
     }
 
-    function setSkill($treeData, $userSkills)
-    {
+    function setSkillValues($treeData, $userSkills) {
         foreach ($userSkills as $skill) {
             $treeData[$skill['id']]['skillValue'] = $skill->value;
         }
         return $treeData;
     }
 
-    function getCats($res)
-    {
-
+    function getCats($res) {
         $levels = array();
         $tree = array();
         $cur = array();
-
         foreach ($res as $rows) {
             if (!isset($rows['parent_skill_id']))
                 $rows['parent_skill_id'] = 0;
