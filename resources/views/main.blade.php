@@ -94,7 +94,7 @@
                 <h2>Суммарный навык</h2>
                 @foreach($skills as $skill)
                     {{--<div class="panel-body half-unit skillsHeader col-md-3">--}}
-                    <b> {{ $skill->name }}</b>: {{ $skill->count }} <i>({{ $skill->v1 }}/{{ $skill->v2 }}/{{ $skill->v3 }}/{{ $skill->v4 }}/{{ $skill->v5 }})</i>
+                    <a href="/skills/organization?id={{ $skill->id }}"><b>{{ $skill->name }}</b></a>: {{ $skill->count }} <i>({{ $skill->v1 }}/{{ $skill->v2 }}/{{ $skill->v3 }}/{{ $skill->v4 }}/{{ $skill->v5 }})</i>
                     {{--</div>--}}
                 @endforeach
             </div>

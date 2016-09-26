@@ -10,11 +10,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
-class SkillController extends Controller
-{
+class SkillController extends Controller {
 
-    public function addSkill(Request $request, $id)
-    {
+    public function addSkill(Request $request, $id) {
         if (!Auth::check())
             return '404';
         $skill = new Skill;
@@ -32,8 +30,7 @@ class SkillController extends Controller
             ]);
     }
 
-    public function editSkill(Request $request, $id)
-    {
+    public function editSkill(Request $request, $id) {
         if (!Auth::check())
             return '404';
         $skill = Skill::find($id);
@@ -51,8 +48,7 @@ class SkillController extends Controller
             ]);
     }
 
-    public function deleteSkill($id)
-    {
+    public function deleteSkill($id) {
         if (!Auth::check())
             return '404';
         Skill::find($id)->delete();
@@ -61,8 +57,7 @@ class SkillController extends Controller
         ]);
     }
 
-    public function getSkill($id)
-    {
+    public function getSkill($id) {
         if (!Auth::check())
             return '404';
         $skill = Skill::find($id);
@@ -73,8 +68,7 @@ class SkillController extends Controller
         ]);
     }
 
-    public function userSkillSave($id, $value)
-    {
+    public function userSkillSave($id, $value) {
         if (!Auth::check())
             return '404';
         $userSkill = UserSkill::where('user_id', '=', Auth::user()->id)->where('skill_id', '=', $id)->first();
@@ -100,8 +94,7 @@ class SkillController extends Controller
         }
     }
 
-    public function userSkillDelete($id)
-    {
+    public function userSkillDelete($id) {
         if (!Auth::check())
             return '404';
         $userSkill = UserSkill::where('user_id', '=', Auth::user()->id)->where('skill_id', '=', $id)->first();
@@ -112,8 +105,26 @@ class SkillController extends Controller
         ]);
     }
 
-    public function showSkills()
-    {
+    public function organizationSkills(Request $request) {
+        $user_skills = UserSkill::where('skill_id', '=', $request->input('id'))
+                        ->join('users', 'users.id', '=', 'user_skills.user_id')
+                        ->join('skills', 'skills.id', '=', 'user_skills.skill_id')
+                        ->select('skills.name as skill', 'users.name as user', 'user_skills.value')
+                        ->get();
+        $skills = UserSkill::join('skills', 'user_skills.skill_id', '=', 'skills.id')
+                    ->select('skills.id', 'skills.name', DB::raw('count(' . env('DB_PREFIX') . 'skills.name)'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=1 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v1'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=2 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v2'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=3 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v3'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=4 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v4'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=5 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v5'))
+                    ->groupBy('skills.name', 'skills.id')
+                    ->orderBy('count', 'desc')
+                    ->orderBy('name', 'asc')
+                    ->get();
+
+        return view('skills.organization', [
+            'user_skills' => $user_skills,
+            'skills' => $skills,
+        ]);
+    }
+
+    public function showSkills() {
         if (Auth::check()) {
             $userSkills = Auth::user()->skill()->get();
             $treeData = Skill::orderBy('name')->get()->toArray();
@@ -134,16 +145,14 @@ class SkillController extends Controller
             return Redirect::to('/login?path=skills');
     }
 
-    function setSkillValues($treeData, $userSkills)
-    {
+    function setSkillValues($treeData, $userSkills) {
         foreach ($userSkills as $skill) {
             $treeData[$skill['id']]['skillValue'] = $skill->value;
         }
         return $treeData;
     }
 
-    function getCats($res)
-    {
+    function getCats($res) {
         $levels = array();
         $tree = array();
         $cur = array();
