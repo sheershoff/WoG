@@ -104,17 +104,23 @@ class SkillController extends Controller {
                     'text' => 'Навык удален.',
         ]);
     }
-    
-    public function organizationSkills() {
-        $user_skills = UserSkill::where('user_id', '=', Auth::user()->id);
-                //where('skill_id', '=', $request->input('id'));
-       //         ->join('users', 'users.id', '=', 'user_skills.user_id')
-        //        ->join('skills', 'skills.id', '=', 'user_skills.skills_id')
-     //           ->select('skills.name as skill', 'users.name as user', 'user_skill.value')
-     //           ->groupBy('users.name')
-                
+
+    public function organizationSkills(Request $request) {
+        $user_skills = UserSkill::where('skill_id', '=', $request->input('id'))
+                        ->join('users', 'users.id', '=', 'user_skills.user_id')
+                        ->join('skills', 'skills.id', '=', 'user_skills.skill_id')
+                        ->select('skills.name as skill', 'users.name as user', 'user_skills.value')
+                        ->get();
+        $skills = UserSkill::join('skills', 'user_skills.skill_id', '=', 'skills.id')
+                    ->select('skills.id', 'skills.name', DB::raw('count(' . env('DB_PREFIX') . 'skills.name)'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=1 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v1'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=2 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v2'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=3 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v3'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=4 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v4'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=5 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v5'))
+                    ->groupBy('skills.name', 'skills.id')
+                    ->orderBy('count', 'desc')
+                    ->orderBy('name', 'asc')
+                    ->get();
+
         return view('skills.organization', [
-           'user_skills' => $user_skills,
+            'user_skills' => $user_skills,
+            'skills' => $skills,
         ]);
     }
 
