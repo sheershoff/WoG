@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\User;
+use App\Models\ActionTransaction;
 
 class VladyJiraFindLogin extends VladyJiraCommand
 {
@@ -31,6 +32,18 @@ class VladyJiraFindLogin extends VladyJiraCommand
         }
     }
 
+    protected $quest = 12;
+    protected $action_Ok = 18; //VladyJiraInit
+
+    protected function questJiraInitComplite()
+    {
+        $quests = $this->questUsers($this->quest)->join('users', 'user_id', 'users.id')->whereNotNull('jira')->get();
+        foreach ($quests as $q) {
+            ActionTransaction::newActionTransaction($q->user_id, $this->action_Ok);
+        }
+        return count($quests);
+    }
+
     /**
      * Execute the console command.
      *
@@ -50,6 +63,7 @@ class VladyJiraFindLogin extends VladyJiraCommand
             $this->line($user->email);
             $this->getUserByEmail($user);
         }
+        $this->line('Quest:' . $this->questJiraInitComplite());
     }
 
 }

@@ -113,7 +113,10 @@ class Quest extends BaseModelWithSoftDeletes
 //    {
 //        return $this->hasMany('Actions', 'quest_id');
 //    }
-//    public function scopeActiveted($query) {
+//    public function scopeShow() {
+//
+//    }
+//    //    public function scopeActiveted($query) {
 ////return DB::select ('select q.*
 //// from '.DB::getTablePrefix() . 'quests q
 //// inner join '.DB::getTablePrefix() . 'roles r on r.id = q.role_id

@@ -82,7 +82,7 @@ class VladyJiraClosedBug extends VladyJiraCommand
     public function handle()
     {
         $this->req["jql"] = $this->jira->jql["VladyJiraClosedBug"];
-        $issues = $this->jira->getIssues($this->req);
+        $issues = $this->jira->getIssues($this->req, 'expand=changelog'); //с историей
         //$users = User::/* where('jira', '=', '') -> */whereNull('jira')->whereNotNull('email')->get();
         $bar = $this->output->createProgressBar(count($issues));
         foreach ($issues as $issue) {

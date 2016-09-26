@@ -2,33 +2,34 @@
 
 namespace App\Models;
 
-
-
 /**
  * @property integer $id
  * @property integer $quest_id
  * @property integer $up_role_id
- * @property integer $organization_id
  * @property string $code
  * @property string $name
  * @property string $description
+ * @property boolean $init
+ * @property boolean $open
+ * @property boolean $close_quest
+ * @property boolean $inventary
  * @property string $created_at
  * @property string $updated_at
  * @property string $deleted_at
+ * @property boolean $button
  * @property Quest $quest
  * @property Role $role
- * @property Organization $organization
- * @property MailTemplate[] $mailTemplates
  * @property ActionTransaction[] $actionTransactions
  * @property ActionCurrency[] $actionCurrencies
- * @property ActionCommand[] $actionCommands
+ * @property MailTemplate[] $mailTemplates
  */
 class Action extends BaseModelWithSoftDeletes
 {
+
     /**
      * @var array
      */
-    protected $fillable = ['quest_id', 'up_role_id', 'organization_id', 'code', 'name', 'description', 'created_at', 'updated_at', 'deleted_at'];
+    protected $fillable = ['quest_id', 'up_role_id', 'code', 'name', 'description', 'init', 'open', 'close_quest', 'inventary', 'created_at', 'updated_at', 'deleted_at', 'button'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -44,22 +45,6 @@ class Action extends BaseModelWithSoftDeletes
     public function role()
     {
         return $this->belongsTo('App\Models\Role', 'up_role_id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function organization()
-    {
-        return $this->belongsTo('App\Models\Organization');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function mailTemplates()
-    {
-        return $this->hasMany('App\Models\MailTemplate');
     }
 
     /**
@@ -81,8 +66,9 @@ class Action extends BaseModelWithSoftDeletes
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function actionCommands()
+    public function mailTemplates()
     {
-        return $this->hasMany('App\Models\ActionCommand');
+        return $this->hasMany('App\Models\MailTemplate');
     }
+
 }

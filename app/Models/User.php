@@ -196,10 +196,11 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
 //     */
-//    public function ActionTransactions()
-//    {
-//        return $this->hasMany('ActionTransactions', 'user_id');
-//    }
+    public function actionTransactions()
+    {
+        return $this->hasMany(ActionTransaction::class, 'user_id');
+    }
+
 //
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
