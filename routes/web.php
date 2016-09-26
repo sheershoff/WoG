@@ -85,6 +85,10 @@ Route::group(['prefix' => 'skill'], function() {
     Route::get('/{id}/get', 'SkillController@getSkill')->name('get-skill');
 });
 
+Route::group(['prefix' => 'skills'], function() {
+    Route::get('/', 'SkillController@showSkills')->name('skills');
+    Route::get('/organization', 'SkillController@organizationSkills')->name('organization-skills');
+});
 //Section::inject('version', 'Мой сайт');
 
 Route::get('/', 'WogController@index')->name('index'); //<a href="{{ route('index')}}">
@@ -111,7 +115,6 @@ Route::get('/{obj}/{id}/photo', function($obj, $id) {
     $response->header('Content-Type', 'image/jpeg');
 //    return $response;
 });
-Route::get('/skills/', 'SkillController@showSkills')->name('skills');
 Route::get('/questinfo', 'WogController@questinfo')->name('questinfo');
 Route::get('/achievements', 'WogController@personalData')->name('achievements');
 //Route::get('posts/{post}/comments/{comment}', function ($postId, $commentId) {}); ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);

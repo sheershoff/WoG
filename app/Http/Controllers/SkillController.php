@@ -104,6 +104,19 @@ class SkillController extends Controller {
                     'text' => 'Навык удален.',
         ]);
     }
+    
+    public function organizationSkills() {
+        $user_skills = UserSkill::where('user_id', '=', Auth::user()->id);
+                //where('skill_id', '=', $request->input('id'));
+       //         ->join('users', 'users.id', '=', 'user_skills.user_id')
+        //        ->join('skills', 'skills.id', '=', 'user_skills.skills_id')
+     //           ->select('skills.name as skill', 'users.name as user', 'user_skill.value')
+     //           ->groupBy('users.name')
+                
+        return view('skills.organization', [
+           'user_skills' => $user_skills,
+        ]);
+    }
 
     public function showSkills() {
         if (Auth::check()) {

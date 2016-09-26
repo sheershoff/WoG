@@ -21,11 +21,9 @@ use App\Models\CurrencyType;
 use App\Models\MailTemplate;
 use App\Models\Balance;
 
-class WogController extends Controller
-{
+class WogController extends Controller {
 
-    public function index()
-    {
+    public function index() {
         $o = config('wog.organization');
 
         if (isset($o) && ($o <> 0)) {
@@ -34,8 +32,8 @@ class WogController extends Controller
                 'bls' => Balance::XP()->orderBy('value', 'desc')->take(5)->get(),
                 'bl2s' => Balance::Medal()->orderBy('created_at', 'desc')->take(5)->get(),
                 'skills' => UserSkill::join('skills', 'user_skills.skill_id', '=', 'skills.id')
-                        ->select('skills.name', DB::raw('count(' . env('DB_PREFIX') . 'skills.name)'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=1 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v1'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=2 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v2'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=3 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v3'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=4 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v4'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=5 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v5'))
-                        ->groupBy('skills.name')
+                        ->select('skills.id', 'skills.name', DB::raw('count(' . env('DB_PREFIX') . 'skills.name)'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=1 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v1'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=2 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v2'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=3 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v3'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=4 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v4'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=5 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v5'))
+                        ->groupBy('skills.name', 'skills.id')
                         ->orderBy('count', 'desc')
                         ->orderBy('name', 'asc')
                         ->get(),
@@ -45,8 +43,7 @@ class WogController extends Controller
         }
     }
 
-    public function home()
-    {
+    public function home() {
         if (!Auth::check()) {
             return;
         }
@@ -63,8 +60,7 @@ class WogController extends Controller
         ]);
     }
 
-    public function rating($type)
-    {
+    public function rating($type) {
         $bls = Balance::XP()->orderBy('value', 'desc')->get();
         $t = [];
         $v = [];
@@ -79,8 +75,7 @@ class WogController extends Controller
         return view('rating', ['v' => $v, 't' => $t]);
     }
 
-    public function personalData()
-    {
+    public function personalData() {
         $cash = DB::select('select c.name, b.value, ct.unit '
                         . 'from wog_balances b'
                         . ' join wog_currencies c on b.currency_id = c.id'
@@ -97,15 +92,13 @@ class WogController extends Controller
         ]);
     }
 
-    public function quests()
-    {
+    public function quests() {
         return view('quests', [
             'quests' => Auth::user()->quests()->get(),
         ]);
     }
 
-    public function openUserQuest($id)
-    {//UserQuest
+    public function openUserQuest($id) {//UserQuest
         if (!Auth::check()) {
             return;
         }
@@ -121,8 +114,7 @@ class WogController extends Controller
         }
     }
 
-    public static function addUserQuests()
-    {
+    public static function addUserQuests() {
         if (!Auth::check()) {
             return;
         }
@@ -152,8 +144,7 @@ class WogController extends Controller
         }
     }
 
-    public function execAutoAction()
-    {
+    public function execAutoAction() {
         if (!Auth::check()) {
             return;
         }
@@ -205,13 +196,11 @@ class WogController extends Controller
 //        }
     }
 
-    public function test()
-    {
+    public function test() {
         dd(Auth::user()->roleUser());
     }
 
-    public function info()
-    {
+    public function info() {
         $a = '';
 
 
@@ -276,8 +265,7 @@ class WogController extends Controller
         return $a;
     }
 
-    public function questinfo()
-    {
+    public function questinfo() {
         return view('questinfo', [
             'roles' => Role::orderBy('id', 'asc')->get(),
         ]);
