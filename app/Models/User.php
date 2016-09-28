@@ -300,7 +300,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 //it is the MainRobot
     public function addRole(array $roleId)
     {
-        $this->roles()->sync($roleId);
+        $this->roles()->attach($roleId);
     }
 
     /**
