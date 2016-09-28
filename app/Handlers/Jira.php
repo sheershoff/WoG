@@ -38,7 +38,9 @@ class Jira
      * Базовый запрос к Jira
      */
 
-    public function getJira($url, $req = FALSE)
+//$put = FALSE|TRUE|PUT|DELETE...
+
+    public function getJira($url, $req = FALSE, $put = FALSE)
     {
         $url = $this->apiurl . $url;
 //echo $url;
@@ -65,12 +67,25 @@ class Jira
         if ($req) {
             if (is_array($req)) {
                 $req = json_encode($req);
+                //dd($req);
             }
-            curl_setopt($ch, CURLOPT_POST, true);
+            if (!$put) {
+                $put = 'POST';
+            }
             curl_setopt($ch, CURLOPT_POSTFIELDS, $req); //http_build_query
         }
+        if ($put == 'POST') {
+
+            curl_setopt($ch, CURLOPT_POST, true);
+        } else if ($put === TRUE) {
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
+        } else if ($put) {
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $put);
+        }
+
         curl_setopt($ch, CURLOPT_USERPWD, "$this->username:$this->password");
-//curl_setopt($ch, CURLOPT_VERBOSE, true);
+//            var_dump($req);
+//        curl_setopt($ch, CURLOPT_VERBOSE, true);
         //dd($ch);
         $data = curl_exec($ch);
         // dd($data);
@@ -222,6 +237,26 @@ class Jira
         } else {
             return FALSE;
         }
+    }
+
+    //Добавляем комментарий
+    public function addComment($issuekey, $comment)
+    {
+        return $this->getJira('issue/' . $issuekey . '/comment', ["body" => $comment]);
+    }
+
+    //Edit fields
+    //$req = ["fields" => ["description" => "sdsds"]];
+    public function editIssue($issuekey, $req)
+    {
+        return $this->getJira('issue/' . $issuekey, $req, 'PUT');
+    }
+
+    //create issue
+    //$req =
+    public function createIssue($issuekey, $req)
+    {
+        return $this->getJira('issue/' . $issuekey, $req);
     }
 
     /*

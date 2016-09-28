@@ -10,6 +10,7 @@ use App\Console\Commands\VladyJiraClosedBug;
 use App\Console\Commands\VladyJiraFieldList;
 use App\Console\Commands\VladyJiraEpic;
 use App\Console\Commands\QuestAddAll;
+use App\Console\Commands\VladyTest;
 
 class Kernel extends ConsoleKernel
 {
@@ -26,6 +27,7 @@ class Kernel extends ConsoleKernel
         VladyJiraFieldList::class,
         VladyJiraEpic::class,
         QuestAddAll::class,
+        VladyTest::class,
     ];
 
     /**
