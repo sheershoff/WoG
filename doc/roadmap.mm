@@ -13,7 +13,7 @@
 <font NAME="SansSerif" SIZE="14"/>
 <icon BUILTIN="full-1"/>
 </node>
-<node COLOR="#990000" CREATED="1474856571092" ID="ID_818024020" MODIFIED="1474857433962" TEXT="https://github.com/xvlady/WoG/blob/master/doc/balance-gui.png - &#x431;&#x430;&#x43b;&#x430;&#x43d;&#x441;&#x438;&#x440;&#x43e;&#x449;&#x438;&#x43a;">
+<node COLOR="#990000" CREATED="1474856571092" ID="ID_818024020" MODIFIED="1475054494514" TEXT="https://github.com/xvlady/WoG/blob/master/doc/balance-gui.png - &#x431;&#x430;&#x43b;&#x430;&#x43d;&#x441;&#x438;&#x440;&#x43e;&#x432;&#x449;&#x438;&#x43a;">
 <font NAME="SansSerif" SIZE="14"/>
 <icon BUILTIN="full-9"/>
 </node>
@@ -81,8 +81,7 @@
   <body>
     <img src="roadmap_9137551554831716955.jpeg" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node COLOR="#990000" CREATED="1474857239548" FOLDED="true" ID="ID_284748709" MODIFIED="1474857433996" TEXT="&#x41f;&#x43e;&#x434;&#x441;&#x43a;&#x430;&#x437;&#x43a;&#x430; &#x432; &#x432;&#x438;&#x434;&#x435; &#x432;&#x441;&#x43f;&#x43b;&#x44b;&#x432;&#x430;&#x44e;&#x449;&#x435;&#x433;&#x43e; &#x43e;&#x43a;&#x43d;&#x430;">
@@ -95,8 +94,7 @@
   <body>
     <img src="roadmap_1553708168866460191.jpeg" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node COLOR="#990000" CREATED="1474857281527" ID="ID_1986655493" MODIFIED="1474857433997" TEXT="&#x412; &#x43f;&#x43e;&#x434;&#x441;&#x43a;&#x430;&#x437;&#x43a;&#x435; 3 &#x43f;&#x43e;&#x441;&#x43b;&#x435;&#x434;&#x43d;&#x438;&#x445; &#x43b;&#x44e;&#x434;&#x435;&#x439; &#x441; &#x43b;&#x443;&#x447;&#x448;&#x435;&#x439; &#x43e;&#x446;&#x435;&#x43d;&#x43a;&#x43e;&#x439;">
@@ -112,6 +110,12 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 <node COLOR="#990000" CREATED="1474857656651" ID="ID_1052261306" MODIFIED="1474857665711" TEXT="&#x421;&#x441;&#x44b;&#x43b;&#x43a;&#x430; &#x43d;&#x430; &#x441;&#x442;&#x440;&#x430;&#x43d;&#x438;&#x446;&#x443; &#x441;&#x43e; &#x432;&#x441;&#x435;&#x43c;&#x438;, &#x443; &#x43a;&#x43e;&#x433;&#x43e; &#x435;&#x441;&#x442;&#x44c; &#x43d;&#x430;&#x432;&#x44b;&#x43a; &#x438; &#x441;&#x430;&#x43c;&#x430; &#x441;&#x442;&#x440;&#x430;&#x43d;&#x438;&#x446;&#x430;">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1475036623519" ID="ID_921866421" MODIFIED="1475036643612" TEXT="&#x417;&#x430;&#x43c;&#x435;&#x43d;&#x438;&#x442;&#x44c; &#x43a;&#x43d;&#x43e;&#x43f;&#x43a;&#x438; &#x43d;&#x430; &#x43a;&#x430;&#x440;&#x442;&#x438;&#x43d;&#x43a;&#x438;(&#x440;&#x435;&#x434;&#x430;&#x43a;&#x442;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43d;&#x430;&#x432;&#x44b;&#x43a;&#x430;)">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1475036644303" ID="ID_1187743733" MODIFIED="1475036653997" TEXT="&#x414;&#x43e;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44c; &#x441;&#x43c;&#x435;&#x43d;&#x443; &#x440;&#x43e;&#x434;&#x438;&#x442;&#x435;&#x43b;&#x44f; &#x43d;&#x430;&#x432;&#x44b;&#x43a;&#x443;">
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
@@ -142,6 +146,9 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 <node COLOR="#990000" CREATED="1474857762882" ID="ID_66136130" MODIFIED="1474857778816" TEXT="&#x41a;&#x430;&#x440;&#x43c;&#x430;-&#x43a;&#x432;&#x435;&#x441;&#x442;. &#x422;&#x43e;&#x436;&#x435; &#x447;&#x442;&#x43e; &#x438; 7, &#x442;&#x43e;&#x43b;&#x44c;&#x43a;&#x43e; &#x43f;&#x43e; &#x432;&#x441;&#x435;&#x43c; &#x441;&#x43e;&#x442;&#x440;&#x443;&#x434;&#x43d;&#x438;&#x43a;&#x430;&#x43c; &#x43a;&#x430;&#x436;&#x434;&#x44b;&#x439; &#x441;&#x43e;&#x442;&#x440;&#x443;&#x434;&#x43d;&#x438;&#x43a; (34)">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1475035062465" ID="ID_1065822214" MODIFIED="1475035078324" TEXT="&#x411;&#x438;&#x440;&#x436;&#x430; &#x437;&#x430;&#x434;&#x430;&#x447;">
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
@@ -361,6 +368,20 @@
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1474858599097" ID="ID_803029376" MODIFIED="1474858609869" TEXT="&#x421;&#x43f;&#x438;&#x441;&#x43e;&#x43a; &#x442;&#x43e;&#x433;&#x43e; &#x447;&#x442;&#x43e; &#x432;&#x44b;&#x441;&#x442;&#x430;&#x432;&#x43b;&#x44f;&#x435;&#x43c; &#x43d;&#x430; wiki">
 <font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1475035098817" ID="ID_31387682" MODIFIED="1475035109167" TEXT="&#x412;&#x43e;&#x437;&#x43d;&#x430;&#x433;&#x440;&#x430;&#x436;&#x434;&#x435;&#x43d;&#x438;&#x44f;">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1475035111250" ID="ID_1779079953" MODIFIED="1475035117443" TEXT="&#x41c;&#x430;&#x442;&#x435;&#x440;&#x438;&#x430;&#x43b;&#x44c;&#x43d;&#x44b;&#x435;">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1475035118606" ID="ID_17474826" MODIFIED="1475035124411" TEXT="&#x43d;&#x435;&#x43c;&#x430;&#x442;&#x435;&#x440;&#x438;&#x430;&#x43b;&#x44c;&#x43d;&#x44b;&#x435;">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1475035126337" ID="ID_1854606445" MODIFIED="1475035143415" TEXT="AD">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1475035144468" ID="ID_699988864" MODIFIED="1475035159265" TEXT="&#x41a;&#x443;&#x440;&#x441;&#x43e;&#x440;&#x44b; &#x43a;&#x43e;&#x448;&#x435;&#x447;&#x43a;&#x430;&#x43c;&#x438;"/>
 </node>
 </node>
 </node>
