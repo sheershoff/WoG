@@ -110,10 +110,10 @@
                 appoint: modal_checkbox.prop('checked'),
                 parent_skill_id: id_skill,
             },  function(data) {
-                    modal_text.val('');
-                    modal_textarea.val('');
-                    modal_checkbox.prop('checked', false);
-                    alert(data.text);
+                    if (data.reload)
+                        window.location='/skills?id=' + id_skill;
+                    else
+                        alert(data.text);
             });
             $(this).off(event);
         });
@@ -137,11 +137,12 @@
                 appoint: modal_checkbox.prop('checked'),
                 skill_id: id_skill,
            }, function(data) {
-                modal_text.val('');
-                modal_textarea.val('');
-                modal_checkbox.prop('checked', false);
-                alert(data.text);
+                if (data.reload)
+                    window.location='/skills?id=' + id_skill;
+                else
+                    alert(data.text);
            }); 
+           $(this).off(event);
         });
         ////Добавить обновление элементов
     });

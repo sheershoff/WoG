@@ -15,6 +15,11 @@ class SkillController extends Controller {
     public function addSkill(Request $request, $id) {
         if (!Auth::check())
             return '404';
+        if (Skill::withTrashed()->where('name', '=', $request->input('name'))->where('organization_id', '=', 0)->first() != null)
+            return response()->json([
+                        'reload' => false,
+                        'text' => 'Такой навык уже существует',
+            ]);
         $skill = new Skill;
         $skill->name = $request->input('name');
         $skill->description = $request->input('description');
@@ -22,10 +27,12 @@ class SkillController extends Controller {
         $skill->parent_skill_id = $request->input('parent_skill_id');
         if ($skill->save())
             return response()->json([
+                        'reload' => true,
                         'text' => 'Навык сохранен',
             ]);
         else
             return response()->json([
+                        'reload' => false,
                         'text' => 'Ошибка',
             ]);
     }
@@ -34,16 +41,23 @@ class SkillController extends Controller {
         if (!Auth::check())
             return '404';
         $skill = Skill::find($id);
+        if (Skill::withTrashed()->where('name', '=', $request->input('name'))->where('organization_id', '=', 0)->first() != null)
+            return response()->json([
+                        'reload' => false,
+                        'text' => 'Такой навык уже существует',
+            ]);
         if (isset($skill)) {
             $skill->name = $request->input('name');
             $skill->description = $request->input('description');
             $skill->appoint = $request->input('appoint');
             $skill->save();
             return response()->json([
+                        'reload' => true,
                         'text' => 'Сохранено',
             ]);
         } else
             return response()->json([
+                        'reload' => false,
                         'text' => 'Ошибка',
             ]);
     }
@@ -107,16 +121,16 @@ class SkillController extends Controller {
 
     public function organizationSkills(Request $request) {
         $user_skills = UserSkill::where('skill_id', '=', $request->input('id'))
-                        ->join('users', 'users.id', '=', 'user_skills.user_id')
-                        ->join('skills', 'skills.id', '=', 'user_skills.skill_id')
-                        ->select('skills.name as skill', 'users.name as user', 'user_skills.value')
-                        ->get();
+                ->join('users', 'users.id', '=', 'user_skills.user_id')
+                ->join('skills', 'skills.id', '=', 'user_skills.skill_id')
+                ->select('skills.name as skill', 'users.name as user', 'user_skills.value')
+                ->get();
         $skills = UserSkill::join('skills', 'user_skills.skill_id', '=', 'skills.id')
-                    ->select('skills.id', 'skills.name', DB::raw('count(' . env('DB_PREFIX') . 'skills.name)'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=1 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v1'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=2 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v2'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=3 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v3'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=4 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v4'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=5 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v5'))
-                    ->groupBy('skills.name', 'skills.id')
-                    ->orderBy('count', 'desc')
-                    ->orderBy('name', 'asc')
-                    ->get();
+                ->select('skills.id', 'skills.name', DB::raw('count(' . env('DB_PREFIX') . 'skills.name)'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=1 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v1'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=2 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v2'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=3 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v3'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=4 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v4'), DB::raw('count(distinct case when ' . env('DB_PREFIX') . 'user_skills.value=5 then ' . env('DB_PREFIX') . 'user_skills.id else null end) as v5'))
+                ->groupBy('skills.name', 'skills.id')
+                ->orderBy('count', 'desc')
+                ->orderBy('name', 'asc')
+                ->get();
 
         return view('skills.organization', [
             'user_skills' => $user_skills,
