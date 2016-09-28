@@ -28,7 +28,7 @@ use AuthenticatesUsers;
      * Show the application's login form.
      *
      * @return \Illuminate\Http\Response
-     */
+     */  
     public function showLoginForm()
     {
         if ($this->organization == 0) {
@@ -43,8 +43,9 @@ use AuthenticatesUsers;
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Request $request)
     {
+        $this->redirectTo = $request->input('path', '/home');
         $this->organization = config('wog.organization');
         $this->organization = isset($this->organization) ? $this->organization : 0;
 //        if (!isset($o) && ($o == 0)) {
@@ -65,6 +66,7 @@ use AuthenticatesUsers;
      */
     protected function validateLogin(Request $request)
     {
+      //  $this->redirectTo = $request->input('path', '/home');
         $validate = [
             $this->username() => 'required', 'password' => 'required',
         ];
