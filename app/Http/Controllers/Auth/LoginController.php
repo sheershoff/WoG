@@ -66,7 +66,6 @@ use AuthenticatesUsers;
      */
     protected function validateLogin(Request $request)
     {
-      //  $this->redirectTo = $request->input('path', '/home');
         $validate = [
             $this->username() => 'required', 'password' => 'required',
         ];

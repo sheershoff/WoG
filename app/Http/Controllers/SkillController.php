@@ -41,7 +41,8 @@ class SkillController extends Controller {
         if (!Auth::check())
             return '404';
         $skill = Skill::find($id);
-        if (Skill::withTrashed()->where('name', '=', $request->input('name'))->where('organization_id', '=', 0)->first() != $skill)
+        $tempSkill = Skill::withTrashed()->where('name', '=', $request->input('name'))->where('organization_id', '=', 0)->first();
+        if ($tempSkill != null and  $tempSkill != $skill)
             return response()->json([
                         'reload' => false,
                         'text' => 'Такой навык уже существует',

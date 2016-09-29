@@ -23,7 +23,7 @@
     </div>
 
 
-<div class="panel-group skillsBackground" id="0">
+<div class="panel-group skillsBody" id="0">
     @include ('skills.skillview', $treeData)
 </div>
 
@@ -74,8 +74,18 @@
         }); 
     });
 
-    $('a[name="open-childs"]').click(function() {
-        $('div.' + $(this).data().skillId + '-text').text(arr[$('div.' + $(this).data().skillId + '-btn').find('label.active').find('input').data().skillValue - 1]); 
+    $('div.skillsHeader').dblclick(function() {
+        $(this).parent().find('div.collapse').collapse('toggle');
+    });
+    
+    $('div.collapse').on('show.bs.collapse', function (event) {
+        if ($(this).is(event.target))
+            $('div.' + $(this).data().skillId + ' a[name="plus"]').first().text('-');
+    });
+    
+    $('div.collapse').on('hide.bs.collapse', function (event) {
+        if ($(this).is(event.target))
+            $('div.' + $(this).data().skillId + ' a[name="plus"]').first().text('+');
     });
     
     $('button[name="delete-skill"]').click(function() {
@@ -123,12 +133,12 @@
   
     $('button[name="edit-skill"]').click(function() {
         event.stopPropagation();
-        $('.edit-modal').modal('show');
         var id_skill = $(this).data().skillId;
         $.get('/skill/' + id_skill + '/get', function(data) {
             modal_text.val(data.name);
             modal_textarea.val(data.description);
             modal_checkbox.prop('checked', data.appoint);
+            $('.edit-modal').modal('show');
         });
         $('button.modal-btn-save').on('click', function(event) {
            $.get('/skill/' + id_skill + '/edit', {
@@ -146,6 +156,8 @@
         });
         ////Добавить обновление элементов
     });
+    
+    
     
 </script>
 @stop
