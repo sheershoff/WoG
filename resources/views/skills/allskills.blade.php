@@ -9,7 +9,7 @@
             @endforeach
         ];
 </script>
-
+@if($header)
     <div class="panel panel-default">
         <div class="panel-heading">
             <h1 class="">Выбери навыки, которыми ты владеешь </h1>
@@ -19,9 +19,10 @@
             @foreach($skillsValue as $skill)
                 <p><b>{{ $skill->id }}</b> - {{ $skill->description }}</p>
             @endforeach
+            <a href="{{ url('/user/' . Auth::user()->id . '/skills') }}">Просмотреть выбранные навыки</a>
         </div>
     </div>
-
+@endif
 
 <div class="panel-group skillsBody" id="0">
     @include ('skills.skillview', $treeData)
@@ -52,6 +53,12 @@
                 });
             });
         @endif
+    @endif
+    
+    @if(!$header) 
+        $(document).ready(function() {
+           $('div.collapse').collapse('show'); 
+        });
     @endif
     
     $('input[name="add-skill-value"]').change(function () {

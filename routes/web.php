@@ -73,9 +73,10 @@ Route::group(['prefix' => 'jira-team-boadr'], function() {
     Route::get('/', 'AdminController@index');
 });
 
-Route::group(['prefix' => 'user/skill'], function() {
-    Route::get('/{id}/{value}/save', 'SkillController@userSkillSave')->name('user-skill-save');
-    Route::get('/{id}/delete', 'SkillController@userSkillDelete')->name('user-skill-delete');
+Route::group(['prefix' => 'user/'], function() {
+    Route::get('{user_id}/skills', 'SkillController@showSkills')->name('user_skills');
+    Route::get('skill/{id}/{value}/save', 'SkillController@userSkillSave')->name('user-skill-save');
+    Route::get('skill/{id}/delete', 'SkillController@userSkillDelete')->name('user-skill-delete');
 });
 
 Route::group(['prefix' => 'skill'], function() {

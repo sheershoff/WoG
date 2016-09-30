@@ -18,7 +18,7 @@
         </h4>
     </div>
 
-    <div id="{{ $k }}"  data-skill-id="{{$k}}" data-parent="#{{$v['parent_skill_id']}}" class="panel-body panel-collapse collapse skillsBody ">
+    <div id="{{ $k }}"  data-skill-id="{{$k}}" data-parent="#{{$v['parent_skill_id']}}" class="panel-body panel-collapse collapse skillsBody">
         @if($v['appoint'])
             @if(isset($skillsValue))
                 <div class="btn-group {{$k}}-btn" data-toggle="buttons">
