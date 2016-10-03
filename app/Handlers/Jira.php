@@ -4,8 +4,9 @@ namespace App\Handlers;
 
 /**
  * Description of jira
+ * Основанно на https://docs.atlassian.com/jira/REST/server/
  *
- * @author ansible
+ * @author xVlady
  */
 class Jira
 {
