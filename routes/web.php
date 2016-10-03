@@ -87,16 +87,16 @@ Route::group(['prefix' => 'skill'], function() {
 });
 
 Route::group(['prefix' => 'skills'], function() {
-    Route::get('/', 'SkillController@showSkills')->name('skills');
-    Route::get('/organization', 'SkillController@organizationSkills')->name('organization-skills');
+    Route::get('/', 'SkillController@showSkills')->name('skills')->middleware('login');
+    Route::get('/organization', 'SkillController@organizationSkills')->name('organization-skills')->middleware('login');
 });
 //Section::inject('version', 'Мой сайт');
 
 Route::get('/', 'WogController@index')->name('index'); //<a href="{{ route('index')}}">
-Route::get('/home', 'WogController@home')->name('home')->middleware('auth');
-Route::get('/personal-data', 'WogController@personalData')->name('personal-data');
-Route::get('/quests', 'WogController@quests')->name('quests');
-Route::get('/user/quest/{id}/open', 'WogController@openUserQuest')->name('user-quest');
+Route::get('/home', 'WogController@home')->name('home')->middleware('login');
+Route::get('/personal-data', 'WogController@personalData')->name('personal-data')->middleware('login');
+Route::get('/quests', 'WogController@quests')->name('quests')->middleware('login');
+Route::get('/user/quest/{id}/open', 'WogController@openUserQuest')->name('user-quest')->middleware('login');
 Route::get('/test', 'WogController@test')->name('test');
 Route::get('/info', 'WogController@info')->name('info');
 //Route::bind('userquest', function ($value) {
@@ -117,7 +117,7 @@ Route::get('/{obj}/{id}/photo', function($obj, $id) {
 //    return $response;
 });
 Route::get('/questinfo', 'WogController@questinfo')->name('questinfo');
-Route::get('/achievements', 'WogController@personalData')->name('achievements');
+Route::get('/achievements', 'WogController@personalData')->name('achievements')->middleware('login');
 //Route::get('posts/{post}/comments/{comment}', function ($postId, $commentId) {}); ->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
 Route::get('/rating/{currency?}', 'WogController@rating')->name('rating'); //function ($name = null) {
 // Маршруты авторизации...
