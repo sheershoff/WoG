@@ -12,8 +12,8 @@ class VladyJiraEpic extends VladyJiraCommand
      *
      * @var string
      */
-    protected $signature = 'jira:epic '
-            . '{action : cc - список тех, на кого задача назначена не корректно|list - Список эпиков с ответственными и командой}';
+    protected $signature = 'jira:epic'
+            . ' {action : cc - список тех, на кого задача назначена не корректно|list - Список эпиков с ответственными и командой}';
 
     /**
      * The console command description.
