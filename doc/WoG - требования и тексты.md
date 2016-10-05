@@ -695,41 +695,6 @@ project = GFIMPL AND resolution = Unresolved AND issuetype = Epic and priority=m
   </tr>
 </table>
 
-
-Маша Лученкова имеет опыт.
-
-# Полезные ссылки
-
-## Геймификация
-
-### Литература
-
-* Гейб Зиккерман "Геймификация в бизнесе" - https://mybook.ru/author/gejb-zikermann/gejmifikaciya-v-biznese-kak-probitsya-skvoz-shum-i/citations/
-
-* http://www.the-village.ru/village/business/case/156273-geymifikatsiya-v-biznese
-
-### Имеющиеся проекты
-
-* pryaniky.com - как-то убого
-
-* [https://www.billing.ru/events/korporativnaya-socialnaya-set-skillber](https://www.billing.ru/events/korporativnaya-socialnaya-set-skillber) - презентация системы ПС
-
-* [https://megawiki.megafon.ru/display/WOG](https://megawiki.megafon.ru/display/WOG) - Wiki пробной реализации
-
-* [http://10.66.7.41:8080/](http://10.66.7.41:8080/) - минималистичная поделка моего авторства
-
-## Работа распределенной команды
-
-### Инструменты
-
-* [https://megamozg.ru/article/25717/](https://megamozg.ru/article/25717/) - инструменты связи. Для того чтоб понимать чего нам не хватает в линке и нужно компенсировать
-
-## Jira
-
-* [https://developer.atlassian.com/jiradev/jira-apis/jira-rest-apis/jira-rest-api-tutorials/jira-rest-api-example-basic-authentication](https://developer.atlassian.com/jiradev/jira-apis/jira-rest-apis/jira-rest-api-tutorials/jira-rest-api-example-basic-authentication)
-
-* [https://danradigan.com/2014/04/12/php-jiras-rest-api/](https://danradigan.com/2014/04/12/php-jiras-rest-api/) 
-
 # Тексты писем участникам
 
 ## Welcome to WoG!
