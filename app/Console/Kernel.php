@@ -12,6 +12,7 @@ use App\Console\Commands\VladyJiraEpic;
 use App\Console\Commands\QuestAddAll;
 use App\Console\Commands\VladyTest;
 use App\Console\Commands\VladyJiraPostpone;
+use App\Console\Commands\VladyJiratransitionsIssueList;
 
 class Kernel extends ConsoleKernel
 {
@@ -30,6 +31,7 @@ class Kernel extends ConsoleKernel
         QuestAddAll::class,
         VladyTest::class,
         VladyJiraPostpone::class,
+        VladyJiratransitionsIssueList::class,
     ];
 
     /**

@@ -13,7 +13,7 @@ class VladyJiraPostpone extends VladyJiraCommand
      * @var string
      */
     protected $signature = 'jira:postpone'
-            . ' {action? : list - Список эпиков с ответственными и командой, typelink - табличка со статусами, onlytime - выводить только по времени}';
+            . ' {action? : list - Список эпиков с ответственными и командой, typelink - табличка со статусами, onlytime - выводить только по времени, onlyR}';
 
     /**
      * The console command description.
@@ -34,15 +34,6 @@ class VladyJiraPostpone extends VladyJiraCommand
         ],
     ];
 
-//    protected function getUserByEmail($user)
-//    {
-//        if (isset($e) && ($e !== FALSE) && ($e != '')) {
-//            $user->jira = $e;
-//            $user->save();
-//            return $e;
-//        }
-//    }
-
     public function typeLinkShow()
     {
         $headers = ["id", "name", "inward", "outward"];
@@ -57,7 +48,7 @@ class VladyJiraPostpone extends VladyJiraCommand
 
     public function checktime()
     {
-        $reqLite = $This->reqLite;
+        $reqLite = $this->reqLite;
         $reqLite["jql"] = $this->jira->jql["VladyJiraPostponeTime"];
         $issues = $this->jira->getIssues($reqLite);
         foreach ($issues as $issue) {
@@ -83,6 +74,37 @@ class VladyJiraPostpone extends VladyJiraCommand
             if ($returnToWork) {
                 $this->closePostpone($issue["key"], "Robot v2: Все связанные задачи выполнены или требуют вашего вмешательства. Подробнее https://confluence.billing.ru/display/GFIMP/POSTPONE");
             }
+        }
+    }
+
+    protected $reqRequestAndResolved = [
+//        "maxResults" => 2,
+        "fields" => [
+//            "assignee",
+            "comment",
+//            "summary"
+        ],
+    ];
+
+    protected function checkRequestAndResolved()
+    {
+        if ($this->argument('action') == 'list') {
+            return;
+        }
+        $this->reqRequestAndResolved["jql"] = $this->jira->jql["VladyJiraCloseRequestAndResolved"];
+        $issues = $this->jira->getIssues($this->reqRequestAndResolved); //, 'expand=changelog');
+        foreach ($issues as $issue) {
+            $x = array_pop($issue["fields"]["comment"]["comments"]);
+            $body_v1 = 'БагаRobot: Задача находится без движения в течении 7 дней и будет закрыта автоматически через неделю. Если задача актуальна для вас и чего-то ждёт - добавьте комментарий с текущим статусом и причинами ожидания.';
+            $body_v2 = 'БагаRobot: Задача находится статусе Request/Resolved без движения в течении 7 дней и будет закрыта автоматически через неделю. Если задача актуальна для вас и чего-то ждёт - добавьте комментарий с текущим статусом и причинами ожидания и задача не будет закрыта до следующего напоминания. https://confluence.billing.ru/display/GFIMP/feedback';
+            if (($x["author"]["key"] == "vkhonin") && (($x["body"] == $body_v1) || ($x["body"] == $body_v2))) {
+                $this->jira->addComment($issue["key"], '$body_v2');
+                $req = ["transition" =>
+                    ["id" => 91],
+                ];
+                $this->jira->transitionsIssue($issue["key"], $req);
+            }
+            $this->jira->addComment($issue["key"], $body_v2);
         }
     }
 
@@ -121,17 +143,30 @@ class VladyJiraPostpone extends VladyJiraCommand
     public function handle()
     {
 
+        //табличка с типами связи
         if ($this->argument('action') == 'typelink') {
             $this->typeLinkShow();
             return;
         }
 
+        //Баги в которых материмся и закрываем
+        $this->checkRequestAndResolved();
+        if ($this->argument('action') == 'onlyR') {
+            return;
+        }
+
+        //список багов к выходу из postpone
         $this->editissue = [];
+
+        //по дате выхода
         $this->checktime();
+
+        //по взаимосвязям
         if ($this->argument('action') != 'onlytime') {
             $this->checklink();
         }
 
+        //список выведенных или планируемых к выводу
         echo array_reduce($this->editissue, function ($carry, $item) {
             $carry .= ',' . $item;
             return $carry;
