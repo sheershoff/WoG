@@ -28,7 +28,7 @@ class VladyJiratransitionsIssueList extends VladyJiraCommand
      */
     public function handle()
     {
-        dd($this->jira->transitionsIssue($this->argument('Issue'), NULL));
+        dd(json_decode($this->jira->transitionsIssue($this->argument('Issue'), NULL), TRUE));
     }
 
 }

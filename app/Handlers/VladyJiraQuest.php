@@ -29,6 +29,7 @@ class VladyJiraQuest extends Jira
         'VladyJiraPostpone' => 'project = GFIMPL AND status=postpone AND "Причина ожидания" != "Исправление ошибки на внешней платформе" ORDER BY assignee',
         'VladyJiraPostponeTime' => 'project = GFIMPL AND status = Postpone and ("Date of study resumption" is null or "Date of study resumption"<now())  ORDER BY priority DESC',
         'VladyJiraCloseRequestAndResolved' => 'project = GFIMPL AND status in (Resolved, Request) and updatedDate<-7d ORDER BY priority DESC',
+        'VladyJiraEpicIsNull' => 'project = GFIMPL AND status!=closed AND "Epic Link" is EMPTY AND type not in (Sub-task, Epic) ORDER BY priority DESC',
     ];
 
     //project = GFPMO AND resolution = Unresolved AND issuetype = Story and "Epic Link"=GFPMO-512 ORDER BY priority DESC
