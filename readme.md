@@ -5,6 +5,7 @@
 
 # Назначение системы
 Система WoG предназначена для учёта бонусов, их отображения, распределения и конвертации.
+Техническая база системы вознаграждения и наказания (Повышения Мотивации) использующая игровые механики (Геймификация).
 
 Система не предназначена для того, что б быть:
 1. ToDo
@@ -38,6 +39,28 @@
 * Авторизация AD + учётки внутри игры вне AD, интеграция с соц.сетями
 * Права раздаются исключительно внутри игры, и могут быть основаны на AD группах или выдаваться напрямую.
 * API для чтения всей информации + внесения новых значений
+
+
+# Литература
+
+* Гейб Зиккерман "Геймификация в бизнесе" - https://mybook.ru/author/gejb-zikermann/gejmifikaciya-v-biznese-kak-probitsya-skvoz-shum-i/citations/
+
+* http://www.the-village.ru/village/business/case/156273-geymifikatsiya-v-biznese
+
+## Имеющиеся проекты
+
+* [pryaniky.com] - как-то убого
+
+* [https://www.billing.ru/events/korporativnaya-socialnaya-set-skillber](https://www.billing.ru/events/korporativnaya-socialnaya-set-skillber) - презентация системы компании Peter Service
+
+# Интеграции
+Сейчас это внешний к проекту софт. Скоре всего он будет свой для каждой инсталяции.
+Но на всякий случай в планах интеграция с
+## Работа распределенной команды
+* [https://megamozg.ru/article/25717/](https://megamozg.ru/article/25717/) - инструменты связи. 
+## Jira
+* [https://developer.atlassian.com/jiradev/jira-apis/jira-rest-apis/jira-rest-api-tutorials/jira-rest-api-example-basic-authentication](https://developer.atlassian.com/jiradev/jira-apis/jira-rest-apis/jira-rest-api-tutorials/jira-rest-api-example-basic-authentication)
+* [https://danradigan.com/2014/04/12/php-jiras-rest-api/](https://danradigan.com/2014/04/12/php-jiras-rest-api/) 
 
 # Авторство
 
