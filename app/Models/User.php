@@ -158,7 +158,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
 
     public function passiveQuests()
     {
-        return $this->quests()->wherePivot('user_quest_status_id', 1);
+        return $this->quests()->with('actions')->wherePivot('user_quest_status_id', 1);
     }
 
 //

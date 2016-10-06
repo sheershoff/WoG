@@ -11,7 +11,13 @@
                 <li>
                     <i class="unread"></i>
                     <img class="avatar" src="{{asset($val->photo())}}" alt="avatar">
-                    <p class="sender">{{ $val->name }}</p>
+                    <p class="sender">{{ $val->name }} 
+                        @foreach($val->actions as $action)
+                            @if ($action->button)
+                                <button type="button" class="btn btn-xs btn-default check-quest" data-action-id="{{ $action->id }}">{{ $action->name }}</button>
+                            @endif
+                        @endforeach
+                    </p>
                     <p class="message">{{ $val->description }}</p>
                     {{--<div class="actions">
 				 						<button style="margin-top: 14px;  margin-right: 5px; margin-left: -25px;" type="button" class="btn btn-default btn-xs">Завершить квест</button>
