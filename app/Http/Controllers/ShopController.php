@@ -22,10 +22,8 @@ class ShopController extends Controller {
         if (Auth::user()->roleUser->where('role_id', '=', '1')->first()) {
             $items = Action::with('actionCurrencies')->with('actionCurrencies.currency')->where('quest_id', '=', 3)->get();
             return view('shop', [
+                'cash' => Auth::user()->cash()->get(),
                 'items' => $items,
-                'ats' => ActionTransaction::orderBy('created_at', 'desc')->take(5)->get(),
-                'bls' => Balance::XP()->orderBy('value', 'desc')->take(5)->get(),
-                'bl2s' => Balance::Medal()->orderBy('created_at', 'desc')->take(5)->get(),
             ]);
         } else
             return redirect(url('home'));
