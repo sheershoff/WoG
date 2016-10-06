@@ -109,7 +109,7 @@ class ActionTransaction extends BaseModelWithSoftDeletes
 //try {
         $action = $this->action()->first();
         if ($action->close_quest) {
-            $userQuest = UserQuest::where('quest_id', '=', $action->quest_id)->first();
+            $userQuest = UserQuest::where('quest_id', '=', $action->quest_id)->where('user_id', '=', Auth::user()->id)->first();
             $userQuest->user_quest_status_id = 3;
             $userQuest->save();
         }
