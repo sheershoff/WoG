@@ -22,7 +22,13 @@
             <a href="{{ url('/user/' . Auth::user()->id . '/skills') }}">Просмотреть выбранные навыки</a>
         </div>
     </div>
+@else
+    <div class="panel panel-default panel-body">
+        <a href="{{ url('/skills') }}">Перейти к редактированию своих навыков</a>
+    </div>
 @endif
+
+
 
 <div class="panel-group skillsBody" id="0">
     @include ('skills.skillview', $treeData)
