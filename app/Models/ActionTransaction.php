@@ -113,6 +113,8 @@ class ActionTransaction extends BaseModelWithSoftDeletes
             $userQuest->user_quest_status_id = 3;
             $userQuest->save();
         }
+        if ($action->up_role_id != null)
+            Auth::user()->addRole([$action->up_role_id]);
         if (parent::save()) {
             $qs = ActionCurrency::where('action_id', '=', $this->action_id)->get();
             foreach ($qs as $q) {

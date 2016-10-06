@@ -109,10 +109,10 @@ class Quest extends BaseModelWithSoftDeletes
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasMany
 //     */
-//    public function Actions()
-//    {
-//        return $this->hasMany('Actions', 'quest_id');
-//    }
+    public function Actions()
+    {
+        return $this->hasMany(Action::class, 'quest_id');
+    }
 //    public function scopeShow() {
 //
 //    }

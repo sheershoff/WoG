@@ -101,7 +101,8 @@ Route::get('/', 'WogController@index')->name('index'); //<a href="{{ route('inde
 Route::get('/home', 'WogController@home')->name('home')->middleware('login');
 Route::get('/personal-data', 'WogController@personalData')->name('personal-data')->middleware('login');
 Route::get('/quests', 'WogController@quests')->name('quests')->middleware('login');
-Route::get('/user/quest/{id}/open', 'WogController@openUserQuest')->name('user-quest')->middleware('login');
+Route::get('/user/quest/{id}/open', 'WogController@openUserQuest')->name('user-quest-open')->middleware('login');
+Route::get('/user/quest/{id}/check', 'WogController@checkUserQuest')->name('user-quest-check')->middleware('login');
 Route::get('/test', 'WogController@test')->name('test');
 Route::get('/info', 'WogController@info')->name('info');
 //Route::bind('userquest', function ($value) {
