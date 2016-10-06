@@ -384,7 +384,7 @@ class CurrenciesTableSeeder extends Seeder
                 'function' => NULL,
                 'options' => NULL,
                 'top_menu' => false,
-                'role_id' => 2,
+                'role_id' => -2,
                 'currency_type_id' => 4,
                 'created_at' => NULL,
                 'updated_at' => NULL,

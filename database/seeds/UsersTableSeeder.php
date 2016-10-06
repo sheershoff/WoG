@@ -19,6 +19,33 @@ class UsersTableSeeder extends Seeder
         \DB::connection('pgsql')->table('users')->insert(array (
             0 => 
             array (
+                'id' => 93,
+                'login' => 'dmitry.gurin',
+                'name' => 'Гурин Дмитрий',
+                'email' => 'dmitry.gurin@megafon.ru',
+                'password' => '$2y$10$/0Y2CyAw3xHtCAAzVozMf./tTFYYJS/JRLF7G6UiO45Lk.yocu9c.',
+                'user_type' => 1,
+                'user_status_id' => 1,
+                'jira' => NULL,
+                'phone_number' => '+79222222057',
+                'tab_number' => NULL,
+                'description' => NULL,
+                'status' => 'я родился!',
+                'mail_agg_id' => NULL,
+                'mail_hour' => NULL,
+                'telegram' => NULL,
+                'telegram_id_user' => NULL,
+                'last_login' => NULL,
+                'remember_token' => 'a5lllOD0nYobv5MFGWONUPvgSJTYMGVODa567lwZbwT4xCkYLCXY75nE5Klq',
+                'organization_id' => 5,
+                'created_at' => '2016-10-06 09:56:27',
+                'updated_at' => '2016-10-06 09:56:27',
+                'deleted_at' => NULL,
+                'begin_worktime' => NULL,
+                'end_worktime' => NULL,
+            ),
+            1 => 
+            array (
                 'id' => 92,
                 'login' => 'evgeny.tomashevsky',
                 'name' => 'Томашевский Евгений',
@@ -44,7 +71,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            1 => 
+            2 => 
             array (
                 'id' => 91,
                 'login' => 'elena.vladimirova',
@@ -71,7 +98,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            2 => 
+            3 => 
             array (
                 'id' => 90,
                 'login' => 'pavel.korkin',
@@ -98,7 +125,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            3 => 
+            4 => 
             array (
                 'id' => 89,
                 'login' => 'dmitry.pryanishnikov',
@@ -125,7 +152,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            4 => 
+            5 => 
             array (
                 'id' => 88,
                 'login' => 'Olga.Bobyleva',
@@ -152,7 +179,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            5 => 
+            6 => 
             array (
                 'id' => 87,
                 'login' => 'ilya.gorbatov',
@@ -179,7 +206,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            6 => 
+            7 => 
             array (
                 'id' => 86,
                 'login' => 'nikolay.kotlyarov',
@@ -206,7 +233,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            7 => 
+            8 => 
             array (
                 'id' => 85,
                 'login' => 'yana.nikolaeva',
@@ -233,7 +260,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            8 => 
+            9 => 
             array (
                 'id' => 84,
                 'login' => NULL,
@@ -260,7 +287,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            9 => 
+            10 => 
             array (
                 'id' => 83,
                 'login' => NULL,
@@ -287,7 +314,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            10 => 
+            11 => 
             array (
                 'id' => 82,
                 'login' => NULL,
@@ -314,7 +341,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            11 => 
+            12 => 
             array (
                 'id' => 80,
                 'login' => 'sergey.khomutinin',
@@ -341,7 +368,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            12 => 
+            13 => 
             array (
                 'id' => 79,
                 'login' => 'maxim.golovanov',
@@ -368,7 +395,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            13 => 
+            14 => 
             array (
                 'id' => 76,
                 'login' => 'anton.maximov',
@@ -395,7 +422,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            14 => 
+            15 => 
             array (
                 'id' => 75,
                 'login' => 'vladimir.shestakov',
@@ -422,7 +449,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            15 => 
+            16 => 
             array (
                 'id' => 72,
                 'login' => 'sergey.martynov',
@@ -449,7 +476,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            16 => 
+            17 => 
             array (
                 'id' => 71,
                 'login' => 'ruslan.fomenko',
@@ -476,7 +503,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            17 => 
+            18 => 
             array (
                 'id' => 69,
                 'login' => NULL,
@@ -503,7 +530,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            18 => 
+            19 => 
             array (
                 'id' => 68,
                 'login' => NULL,
@@ -530,7 +557,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            19 => 
+            20 => 
             array (
                 'id' => 67,
                 'login' => NULL,
@@ -557,7 +584,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            20 => 
+            21 => 
             array (
                 'id' => 66,
                 'login' => NULL,
@@ -584,7 +611,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            21 => 
+            22 => 
             array (
                 'id' => 65,
                 'login' => 'grigory.osipenkov',
@@ -611,7 +638,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            22 => 
+            23 => 
             array (
                 'id' => 64,
                 'login' => 'irina.imaykina',
@@ -638,7 +665,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            23 => 
+            24 => 
             array (
                 'id' => 63,
                 'login' => 'evgeny.fomenko',
@@ -665,7 +692,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            24 => 
+            25 => 
             array (
                 'id' => 62,
                 'login' => 'svetlana.a.kuznetsov',
@@ -692,7 +719,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            25 => 
+            26 => 
             array (
                 'id' => 61,
                 'login' => 'artem.trikashny',
@@ -719,7 +746,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            26 => 
+            27 => 
             array (
                 'id' => 60,
                 'login' => 'ruslan.kazimukhometo',
@@ -746,7 +773,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            27 => 
+            28 => 
             array (
                 'id' => 59,
                 'login' => 'dmitry.v.tarasov',
@@ -773,7 +800,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            28 => 
+            29 => 
             array (
                 'id' => 58,
                 'login' => '',
@@ -800,7 +827,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            29 => 
+            30 => 
             array (
                 'id' => 57,
                 'login' => 'yana.baranova',
@@ -827,7 +854,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            30 => 
+            31 => 
             array (
                 'id' => 56,
                 'login' => 'sergey.gomzyakov',
@@ -854,7 +881,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            31 => 
+            32 => 
             array (
                 'id' => 55,
                 'login' => 'alexander.surkov',
@@ -881,7 +908,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            32 => 
+            33 => 
             array (
                 'id' => 54,
                 'login' => 'anna.y.aleshina',
@@ -908,7 +935,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            33 => 
+            34 => 
             array (
                 'id' => 53,
                 'login' => 'mikhail.pavlov',
@@ -935,7 +962,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            34 => 
+            35 => 
             array (
                 'id' => 52,
                 'login' => 'Valentin.Kovalchuk',
@@ -962,7 +989,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            35 => 
+            36 => 
             array (
                 'id' => 50,
                 'login' => 'denis.lykov',
@@ -989,7 +1016,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            36 => 
+            37 => 
             array (
                 'id' => 49,
                 'login' => 'roman.pyatyshev',
@@ -1016,7 +1043,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            37 => 
+            38 => 
             array (
                 'id' => 48,
                 'login' => 'Egor.Vershinin',
@@ -1043,7 +1070,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            38 => 
+            39 => 
             array (
                 'id' => 47,
                 'login' => 'Sergey.Semka',
@@ -1070,7 +1097,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            39 => 
+            40 => 
             array (
                 'id' => 45,
                 'login' => 'Gennady.Martyushov',
@@ -1097,7 +1124,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            40 => 
+            41 => 
             array (
                 'id' => 43,
                 'login' => 'evgeny.beliakov',
@@ -1124,7 +1151,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            41 => 
+            42 => 
             array (
                 'id' => 42,
                 'login' => 'sergey.batin',
@@ -1151,7 +1178,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            42 => 
+            43 => 
             array (
                 'id' => 40,
                 'login' => 'Denis.Sorokovik',
@@ -1178,7 +1205,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            43 => 
+            44 => 
             array (
                 'id' => 39,
                 'login' => 'Alexey.Vyunnikov',
@@ -1205,7 +1232,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            44 => 
+            45 => 
             array (
                 'id' => 38,
                 'login' => 'egor.budrin',
@@ -1232,7 +1259,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            45 => 
+            46 => 
             array (
                 'id' => 37,
                 'login' => 'egor.kovalchuk',
@@ -1259,7 +1286,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            46 => 
+            47 => 
             array (
                 'id' => 36,
                 'login' => 'Oleg.Skorobogaty',
@@ -1286,7 +1313,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            47 => 
+            48 => 
             array (
                 'id' => 35,
                 'login' => 'alexander.karpachev',
@@ -1313,7 +1340,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            48 => 
+            49 => 
             array (
                 'id' => 34,
                 'login' => 'Fedor.Volokhin',
@@ -1340,7 +1367,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            49 => 
+            50 => 
             array (
                 'id' => 33,
                 'login' => 'eduard.pavlov',
@@ -1367,7 +1394,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            50 => 
+            51 => 
             array (
                 'id' => 32,
                 'login' => 'sergey.rzhevsky',
@@ -1394,7 +1421,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            51 => 
+            52 => 
             array (
                 'id' => 30,
                 'login' => 'alexander.a.grischenko',
@@ -1421,7 +1448,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            52 => 
+            53 => 
             array (
                 'id' => 28,
                 'login' => 'sergey.grishaev',
@@ -1448,7 +1475,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            53 => 
+            54 => 
             array (
                 'id' => 27,
                 'login' => 'Alexander.Mikhaylov',
@@ -1475,7 +1502,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            54 => 
+            55 => 
             array (
                 'id' => 26,
                 'login' => 'Mikhail.Vysokolian',
@@ -1502,7 +1529,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            55 => 
+            56 => 
             array (
                 'id' => 25,
                 'login' => 'alexander.fetisov',
@@ -1529,7 +1556,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            56 => 
+            57 => 
             array (
                 'id' => 24,
                 'login' => 'Varvara.Pyatkova',
@@ -1556,7 +1583,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            57 => 
+            58 => 
             array (
                 'id' => 23,
                 'login' => 'igor.a.romanov',
@@ -1583,7 +1610,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            58 => 
+            59 => 
             array (
                 'id' => 22,
                 'login' => 'Egor.Mamontov',
@@ -1610,7 +1637,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            59 => 
+            60 => 
             array (
                 'id' => 21,
                 'login' => 'Dmitriy.Orlov',
@@ -1637,7 +1664,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            60 => 
+            61 => 
             array (
                 'id' => 20,
                 'login' => 'Vyacheslav.Sitnikov',
@@ -1664,7 +1691,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            61 => 
+            62 => 
             array (
                 'id' => 19,
                 'login' => 'dmitry.litokh',
@@ -1691,7 +1718,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            62 => 
+            63 => 
             array (
                 'id' => 18,
                 'login' => 'edgar.rubtsov',
@@ -1718,7 +1745,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            63 => 
+            64 => 
             array (
                 'id' => 17,
                 'login' => 'nikolay.bagrov',
@@ -1745,7 +1772,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            64 => 
+            65 => 
             array (
                 'id' => 16,
                 'login' => 'anton.khlevitsky',
@@ -1772,7 +1799,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            65 => 
+            66 => 
             array (
                 'id' => 15,
                 'login' => 'yaroslav.belavin',
@@ -1799,7 +1826,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            66 => 
+            67 => 
             array (
                 'id' => 14,
                 'login' => 'sergey.syarg',
@@ -1826,7 +1853,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            67 => 
+            68 => 
             array (
                 'id' => 13,
                 'login' => 'alexander.churakaev',
@@ -1853,7 +1880,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            68 => 
+            69 => 
             array (
                 'id' => 12,
                 'login' => 'alexander.gazha',
@@ -1880,7 +1907,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            69 => 
+            70 => 
             array (
                 'id' => 10,
                 'login' => 'yuri.trigub',
@@ -1907,7 +1934,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            70 => 
+            71 => 
             array (
                 'id' => 9,
                 'login' => 'alexey.y.zverev',
@@ -1934,7 +1961,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            71 => 
+            72 => 
             array (
                 'id' => 8,
                 'login' => 'yuri.tsay',
@@ -1961,7 +1988,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            72 => 
+            73 => 
             array (
                 'id' => 7,
                 'login' => 'ruslan.revel',
@@ -1988,7 +2015,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            73 => 
+            74 => 
             array (
                 'id' => 6,
                 'login' => 'Sergey.Kadilenko',
@@ -2015,7 +2042,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            74 => 
+            75 => 
             array (
                 'id' => 5,
                 'login' => 'yuriy.berezin',
@@ -2042,7 +2069,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            75 => 
+            76 => 
             array (
                 'id' => 4,
                 'login' => NULL,
@@ -2069,7 +2096,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            76 => 
+            77 => 
             array (
                 'id' => 3,
                 'login' => 'Anna.Protko',
@@ -2096,7 +2123,7 @@ class UsersTableSeeder extends Seeder
                 'begin_worktime' => NULL,
                 'end_worktime' => NULL,
             ),
-            77 => 
+            78 => 
             array (
                 'id' => 2,
                 'login' => 'vladimir.khonin',

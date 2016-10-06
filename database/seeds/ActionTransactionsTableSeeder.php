@@ -19,6 +19,58 @@ class ActionTransactionsTableSeeder extends Seeder
         \DB::connection('pgsql')->table('action_transactions')->insert(array (
             0 => 
             array (
+                'id' => 265,
+                'user_id' => 2,
+                'action_id' => 8,
+                'mail_template_id' => NULL,
+                'message' => NULL,
+                'created_at' => '2016-10-06 09:58:16',
+                'updated_at' => '2016-10-06 09:58:16',
+                'deleted_at' => NULL,
+                'uni_quest_id' => NULL,
+                'uni_outkey' => NULL,
+            ),
+            1 => 
+            array (
+                'id' => 264,
+                'user_id' => 93,
+                'action_id' => 13,
+                'mail_template_id' => NULL,
+                'message' => NULL,
+                'created_at' => '2016-10-06 09:56:58',
+                'updated_at' => '2016-10-06 09:56:58',
+                'deleted_at' => NULL,
+                'uni_quest_id' => NULL,
+                'uni_outkey' => NULL,
+            ),
+            2 => 
+            array (
+                'id' => 263,
+                'user_id' => 93,
+                'action_id' => 12,
+                'mail_template_id' => NULL,
+                'message' => NULL,
+                'created_at' => '2016-10-06 09:56:27',
+                'updated_at' => '2016-10-06 09:56:27',
+                'deleted_at' => NULL,
+                'uni_quest_id' => NULL,
+                'uni_outkey' => NULL,
+            ),
+            3 => 
+            array (
+                'id' => 262,
+                'user_id' => 2,
+                'action_id' => 13,
+                'mail_template_id' => NULL,
+                'message' => NULL,
+                'created_at' => '2016-10-06 09:53:23',
+                'updated_at' => '2016-10-06 09:53:23',
+                'deleted_at' => NULL,
+                'uni_quest_id' => NULL,
+                'uni_outkey' => NULL,
+            ),
+            4 => 
+            array (
                 'id' => 261,
                 'user_id' => 92,
                 'action_id' => 12,
@@ -30,7 +82,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            1 => 
+            5 => 
             array (
                 'id' => 260,
                 'user_id' => 91,
@@ -43,7 +95,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            2 => 
+            6 => 
             array (
                 'id' => 259,
                 'user_id' => 33,
@@ -56,7 +108,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            3 => 
+            7 => 
             array (
                 'id' => 258,
                 'user_id' => 43,
@@ -69,7 +121,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            4 => 
+            8 => 
             array (
                 'id' => 257,
                 'user_id' => 90,
@@ -82,7 +134,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            5 => 
+            9 => 
             array (
                 'id' => 256,
                 'user_id' => 89,
@@ -95,7 +147,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            6 => 
+            10 => 
             array (
                 'id' => 255,
                 'user_id' => 88,
@@ -108,7 +160,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            7 => 
+            11 => 
             array (
                 'id' => 254,
                 'user_id' => 87,
@@ -121,7 +173,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            8 => 
+            12 => 
             array (
                 'id' => 253,
                 'user_id' => 86,
@@ -134,7 +186,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            9 => 
+            13 => 
             array (
                 'id' => 252,
                 'user_id' => 85,
@@ -147,7 +199,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            10 => 
+            14 => 
             array (
                 'id' => 251,
                 'user_id' => 84,
@@ -160,7 +212,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            11 => 
+            15 => 
             array (
                 'id' => 250,
                 'user_id' => 83,
@@ -173,7 +225,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            12 => 
+            16 => 
             array (
                 'id' => 249,
                 'user_id' => 82,
@@ -186,7 +238,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            13 => 
+            17 => 
             array (
                 'id' => 248,
                 'user_id' => 6,
@@ -199,7 +251,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            14 => 
+            18 => 
             array (
                 'id' => 247,
                 'user_id' => 80,
@@ -212,7 +264,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            15 => 
+            19 => 
             array (
                 'id' => 246,
                 'user_id' => 79,
@@ -225,7 +277,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            16 => 
+            20 => 
             array (
                 'id' => 245,
                 'user_id' => 3,
@@ -238,7 +290,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            17 => 
+            21 => 
             array (
                 'id' => 244,
                 'user_id' => 17,
@@ -251,7 +303,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            18 => 
+            22 => 
             array (
                 'id' => 243,
                 'user_id' => 18,
@@ -264,7 +316,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            19 => 
+            23 => 
             array (
                 'id' => 242,
                 'user_id' => 19,
@@ -277,7 +329,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            20 => 
+            24 => 
             array (
                 'id' => 241,
                 'user_id' => 20,
@@ -290,7 +342,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            21 => 
+            25 => 
             array (
                 'id' => 240,
                 'user_id' => 21,
@@ -303,7 +355,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            22 => 
+            26 => 
             array (
                 'id' => 239,
                 'user_id' => 22,
@@ -316,7 +368,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            23 => 
+            27 => 
             array (
                 'id' => 238,
                 'user_id' => 23,
@@ -329,7 +381,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            24 => 
+            28 => 
             array (
                 'id' => 237,
                 'user_id' => 24,
@@ -342,7 +394,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            25 => 
+            29 => 
             array (
                 'id' => 236,
                 'user_id' => 27,
@@ -355,7 +407,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            26 => 
+            30 => 
             array (
                 'id' => 235,
                 'user_id' => 30,
@@ -368,7 +420,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            27 => 
+            31 => 
             array (
                 'id' => 234,
                 'user_id' => 32,
@@ -381,7 +433,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            28 => 
+            32 => 
             array (
                 'id' => 233,
                 'user_id' => 35,
@@ -394,7 +446,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            29 => 
+            33 => 
             array (
                 'id' => 232,
                 'user_id' => 39,
@@ -407,7 +459,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            30 => 
+            34 => 
             array (
                 'id' => 231,
                 'user_id' => 42,
@@ -420,7 +472,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            31 => 
+            35 => 
             array (
                 'id' => 230,
                 'user_id' => 45,
@@ -433,7 +485,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            32 => 
+            36 => 
             array (
                 'id' => 229,
                 'user_id' => 47,
@@ -446,7 +498,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            33 => 
+            37 => 
             array (
                 'id' => 228,
                 'user_id' => 48,
@@ -459,7 +511,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            34 => 
+            38 => 
             array (
                 'id' => 227,
                 'user_id' => 49,
@@ -472,7 +524,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            35 => 
+            39 => 
             array (
                 'id' => 226,
                 'user_id' => 50,
@@ -485,7 +537,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            36 => 
+            40 => 
             array (
                 'id' => 225,
                 'user_id' => 52,
@@ -498,7 +550,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            37 => 
+            41 => 
             array (
                 'id' => 224,
                 'user_id' => 54,
@@ -511,7 +563,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            38 => 
+            42 => 
             array (
                 'id' => 223,
                 'user_id' => 55,
@@ -524,7 +576,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            39 => 
+            43 => 
             array (
                 'id' => 222,
                 'user_id' => 57,
@@ -537,7 +589,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            40 => 
+            44 => 
             array (
                 'id' => 221,
                 'user_id' => 59,
@@ -550,7 +602,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            41 => 
+            45 => 
             array (
                 'id' => 220,
                 'user_id' => 63,
@@ -563,7 +615,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            42 => 
+            46 => 
             array (
                 'id' => 219,
                 'user_id' => 64,
@@ -576,7 +628,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            43 => 
+            47 => 
             array (
                 'id' => 218,
                 'user_id' => 65,
@@ -589,7 +641,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            44 => 
+            48 => 
             array (
                 'id' => 217,
                 'user_id' => 76,
@@ -602,7 +654,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            45 => 
+            49 => 
             array (
                 'id' => 216,
                 'user_id' => 75,
@@ -615,7 +667,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            46 => 
+            50 => 
             array (
                 'id' => 215,
                 'user_id' => 62,
@@ -628,7 +680,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            47 => 
+            51 => 
             array (
                 'id' => 214,
                 'user_id' => 60,
@@ -641,7 +693,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            48 => 
+            52 => 
             array (
                 'id' => 213,
                 'user_id' => 12,
@@ -654,7 +706,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            49 => 
+            53 => 
             array (
                 'id' => 212,
                 'user_id' => 13,
@@ -667,7 +719,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            50 => 
+            54 => 
             array (
                 'id' => 211,
                 'user_id' => 37,
@@ -680,7 +732,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            51 => 
+            55 => 
             array (
                 'id' => 210,
                 'user_id' => 14,
@@ -693,7 +745,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            52 => 
+            56 => 
             array (
                 'id' => 209,
                 'user_id' => 15,
@@ -706,7 +758,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            53 => 
+            57 => 
             array (
                 'id' => 208,
                 'user_id' => 7,
@@ -719,7 +771,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            54 => 
+            58 => 
             array (
                 'id' => 207,
                 'user_id' => 53,
@@ -732,7 +784,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            55 => 
+            59 => 
             array (
                 'id' => 206,
                 'user_id' => 16,
@@ -745,7 +797,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            56 => 
+            60 => 
             array (
                 'id' => 205,
                 'user_id' => 71,
@@ -758,7 +810,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            57 => 
+            61 => 
             array (
                 'id' => 204,
                 'user_id' => 72,
@@ -771,7 +823,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            58 => 
+            62 => 
             array (
                 'id' => 203,
                 'user_id' => 9,
@@ -784,7 +836,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            59 => 
+            63 => 
             array (
                 'id' => 202,
                 'user_id' => 56,
@@ -797,7 +849,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            60 => 
+            64 => 
             array (
                 'id' => 201,
                 'user_id' => 2,
@@ -810,7 +862,7 @@ class ActionTransactionsTableSeeder extends Seeder
                 'uni_quest_id' => NULL,
                 'uni_outkey' => NULL,
             ),
-            61 => 
+            65 => 
             array (
                 'id' => 200,
                 'user_id' => 2,

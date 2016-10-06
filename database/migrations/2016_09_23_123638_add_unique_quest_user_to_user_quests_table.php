@@ -15,7 +15,7 @@ class AddUniqueQuestUserToUserQuestsTable extends Migration
     public function up()
     {
         Schema::table('user_quests', function (Blueprint $table) {
-            $table->unique(['user_id', 'quest_id', 'deleted_at']); //уникальный ключ? если нужно соблюсти уникальность и не вставлять действия за уже совершённые действия
+            $table->unique(['user_id', 'quest_id']); //уникальный ключ, чтоб не плодить дубли
         });
     }
 
@@ -27,7 +27,7 @@ class AddUniqueQuestUserToUserQuestsTable extends Migration
     public function down()
     {
         Schema::table('user_quests', function (Blueprint $table) {
-            $table->dropUnique('user_quests_user_id_quest_id_deleted_at_unique');
+            $table->dropUnique('user_quests_user_id_quest_id_unique');
         });
     }
 
