@@ -76,7 +76,9 @@
                     <ul class="nav navbar-nav navbar-right">
                         @if (Auth::guest())
                         @else
-                        <li><a href="/shop">Shop</a></li>
+                            @if(Auth::user()->roleUser->where('role_id', '=', '1')->first())
+                                <li><a href="/shop">Shop</a></li>
+                            @endif
                         @endif
                         <li><a href="https://megawiki.megafon.ru/display/WOG">WiKi</a></li>
                         <li class="dropdown">

@@ -92,6 +92,11 @@ Route::group(['prefix' => 'skills'], function() {
 });
 //Section::inject('version', 'Мой сайт');
 
+Route::group(['prefix' => 'shop'], function() {
+    Route::get('/', 'ShopController@index')->name('shop')->middleware('login');
+    Route::get('/buy/{id}', 'ShopController@buyItem')->name('shop-buy-item');
+});
+
 Route::get('/', 'WogController@index')->name('index'); //<a href="{{ route('index')}}">
 Route::get('/home', 'WogController@home')->name('home')->middleware('login');
 Route::get('/personal-data', 'WogController@personalData')->name('personal-data')->middleware('login');

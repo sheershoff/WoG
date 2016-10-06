@@ -175,7 +175,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
      */
     public function balances()
     {
-        return $this->hasMany('Balances', 'user_id');
+        return $this->hasMany(Balance::class, 'user_id');
     }
 
     public function currency()
