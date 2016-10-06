@@ -12,8 +12,8 @@ class VladyJiraEpic extends VladyJiraCommand
      *
      * @var string
      */
-    protected $signature = 'jira:epic '
-            . '{action : cc - список тех, на кого задача назначена не корректно|list - Список эпиков с ответственными и командой}';
+    protected $signature = 'jira:epic'
+            . ' {action : cc - список тех, на кого задача назначена не корректно|list - Список эпиков с ответственными и командой}';
 
     /**
      * The console command description.
@@ -66,6 +66,9 @@ class VladyJiraEpic extends VladyJiraCommand
      */
     public function handle()
     {
+        //https://jira.billing.ru/browse/GFIMPL-6674 - Не верное заведение (к закрытию)
+        //Прошу заполнить эпик или задача будет закрыта. Подробнее https://confluence.billing.ru/display/GFIMP/Jira
+
         if ($this->argument('action') == 'list') {
             $req = $this->reqList;
         } else if ($this->argument('action') == 'cc') {

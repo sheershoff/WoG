@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Handlers;
+
 /**
  * Description of VladyJiraQuest
  *
@@ -7,6 +9,7 @@ namespace App\Handlers;
  */
 class VladyJiraQuest extends Jira
 {
+
     //protected $jira = NULL;
     public function __construct()
     {
@@ -16,12 +19,19 @@ class VladyJiraQuest extends Jira
         $proxy = config('wogJiraVlady.proxy');
         parent::__construct($apiurl, $username, $password, $proxy);
     }
+
     public $jql = [
         //Закрытые баги в проекте GFimpl за последнюю неделю
         'VladyJiraClosedBug' => 'project = GFimpl AND issuetype = bug and status=Closed and updated<-1h and updated>-1w and updated>=\'2016-09-11\' ORDER BY key desc',
         //список эпиков
         'VladyJiraEpic' => 'project in (GFIMPL,"OneBSS PMO") AND status!=closed AND issuetype = Epic ORDER BY assignee',
+        //postpone
+        'VladyJiraPostpone' => 'project = GFIMPL AND status=postpone AND "Причина ожидания" != "Исправление ошибки на внешней платформе" ORDER BY assignee',
+        'VladyJiraPostponeTime' => 'project = GFIMPL AND status = Postpone and ("Date of study resumption" is null or "Date of study resumption"<now())  ORDER BY priority DESC',
+        'VladyJiraCloseRequestAndResolved' => 'project = GFIMPL AND status in (Resolved, Request) and updatedDate<-7d ORDER BY priority DESC',
+        'VladyJiraEpicIsNull' => 'project = GFIMPL AND status!=closed AND "Epic Link" is EMPTY AND type not in (Sub-task, Epic) ORDER BY priority DESC',
     ];
+
     //project = GFPMO AND resolution = Unresolved AND issuetype = Story and "Epic Link"=GFPMO-512 ORDER BY priority DESC
     //project=GFIMPL AND type=Bug AND status!=closed order by created desc
     //Договорённости о коммуникациях - почта и встречи

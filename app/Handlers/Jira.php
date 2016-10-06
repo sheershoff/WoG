@@ -246,6 +246,11 @@ class Jira
         return $this->getJira('issue/' . $issuekey . '/comment', ["body" => $comment]);
     }
 
+    public function transitionsIssue($issuekey, $req)
+    {
+        return $this->getJira('issue/' . $issuekey . '/transitions?expand=transitions.fields', $req);
+    }
+
     //Edit fields
     //$req = ["fields" => ["description" => "sdsds"]];
     public function editIssue($issuekey, $req)
@@ -258,6 +263,11 @@ class Jira
     public function createIssue($issuekey, $req)
     {
         return $this->getJira('issue/' . $issuekey, $req);
+    }
+
+    public function issueLinkType()
+    {
+        return json_decode($this->getJira('issueLinkType'))->issueLinkTypes;
     }
 
     /*
