@@ -19,6 +19,54 @@ class SkillsTableSeeder extends Seeder
         \DB::connection('pgsql')->table('skills')->insert(array (
             0 => 
             array (
+                'id' => 779,
+                'code' => NULL,
+                'name' => 'Delphi XE',
+                'description' => '',
+                'is_hide' => true,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 696,
+                'appoint' => true,
+                'organization_id' => 0,
+                'created_at' => '2016-09-28 08:52:19',
+                'updated_at' => '2016-09-28 08:53:00',
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
+                'id' => 778,
+                'code' => NULL,
+                'name' => 'Karaf',
+                'description' => '',
+                'is_hide' => true,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 45,
+                'appoint' => true,
+                'organization_id' => 0,
+                'created_at' => '2016-09-28 07:54:28',
+                'updated_at' => '2016-09-28 08:54:00',
+                'deleted_at' => NULL,
+            ),
+            2 => 
+            array (
+                'id' => 777,
+                'code' => NULL,
+                'name' => 'Системы управления предприятием',
+                'description' => '1C, SAP, Oracle ES',
+                'is_hide' => true,
+                'options' => NULL,
+                'currency_id' => NULL,
+                'parent_skill_id' => 635,
+                'appoint' => true,
+                'organization_id' => 0,
+                'created_at' => '2016-09-28 05:16:23',
+                'updated_at' => '2016-09-28 05:18:21',
+                'deleted_at' => NULL,
+            ),
+            3 => 
+            array (
                 'id' => 773,
                 'code' => NULL,
                 'name' => 'Английский язык',
@@ -33,7 +81,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            1 => 
+            4 => 
             array (
                 'id' => 772,
                 'code' => NULL,
@@ -49,7 +97,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
+            5 => 
             array (
                 'id' => 771,
                 'code' => NULL,
@@ -65,7 +113,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            3 => 
+            6 => 
             array (
                 'id' => 770,
                 'code' => NULL,
@@ -81,7 +129,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            4 => 
+            7 => 
             array (
                 'id' => 769,
                 'code' => NULL,
@@ -97,7 +145,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            5 => 
+            8 => 
             array (
                 'id' => 768,
                 'code' => NULL,
@@ -113,7 +161,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            6 => 
+            9 => 
             array (
                 'id' => 767,
                 'code' => NULL,
@@ -129,7 +177,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            7 => 
+            10 => 
             array (
                 'id' => 766,
                 'code' => NULL,
@@ -145,7 +193,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            8 => 
+            11 => 
             array (
                 'id' => 765,
                 'code' => NULL,
@@ -161,7 +209,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            9 => 
+            12 => 
             array (
                 'id' => 764,
                 'code' => NULL,
@@ -177,7 +225,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            10 => 
+            13 => 
             array (
                 'id' => 763,
                 'code' => NULL,
@@ -193,7 +241,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            11 => 
+            14 => 
             array (
                 'id' => 762,
                 'code' => NULL,
@@ -209,7 +257,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            12 => 
+            15 => 
             array (
                 'id' => 761,
                 'code' => NULL,
@@ -225,7 +273,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            13 => 
+            16 => 
             array (
                 'id' => 760,
                 'code' => NULL,
@@ -241,7 +289,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            14 => 
+            17 => 
             array (
                 'id' => 759,
                 'code' => NULL,
@@ -257,7 +305,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            15 => 
+            18 => 
             array (
                 'id' => 758,
                 'code' => NULL,
@@ -273,7 +321,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            16 => 
+            19 => 
             array (
                 'id' => 757,
                 'code' => NULL,
@@ -289,7 +337,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            17 => 
+            20 => 
             array (
                 'id' => 756,
                 'code' => NULL,
@@ -305,7 +353,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            18 => 
+            21 => 
             array (
                 'id' => 755,
                 'code' => NULL,
@@ -321,7 +369,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            19 => 
+            22 => 
             array (
                 'id' => 754,
                 'code' => NULL,
@@ -337,7 +385,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            20 => 
+            23 => 
             array (
                 'id' => 753,
                 'code' => NULL,
@@ -353,7 +401,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            21 => 
+            24 => 
             array (
                 'id' => 752,
                 'code' => NULL,
@@ -369,7 +417,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            22 => 
+            25 => 
             array (
                 'id' => 751,
                 'code' => NULL,
@@ -385,7 +433,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            23 => 
+            26 => 
             array (
                 'id' => 750,
                 'code' => NULL,
@@ -401,7 +449,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            24 => 
+            27 => 
             array (
                 'id' => 749,
                 'code' => NULL,
@@ -417,7 +465,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            25 => 
+            28 => 
             array (
                 'id' => 748,
                 'code' => NULL,
@@ -433,7 +481,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            26 => 
+            29 => 
             array (
                 'id' => 747,
                 'code' => NULL,
@@ -449,7 +497,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            27 => 
+            30 => 
             array (
                 'id' => 746,
                 'code' => NULL,
@@ -465,7 +513,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            28 => 
+            31 => 
             array (
                 'id' => 745,
                 'code' => NULL,
@@ -481,7 +529,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            29 => 
+            32 => 
             array (
                 'id' => 744,
                 'code' => NULL,
@@ -497,7 +545,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            30 => 
+            33 => 
             array (
                 'id' => 743,
                 'code' => NULL,
@@ -513,7 +561,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            31 => 
+            34 => 
             array (
                 'id' => 742,
                 'code' => NULL,
@@ -529,7 +577,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            32 => 
+            35 => 
             array (
                 'id' => 741,
                 'code' => NULL,
@@ -545,7 +593,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            33 => 
+            36 => 
             array (
                 'id' => 740,
                 'code' => NULL,
@@ -561,7 +609,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            34 => 
+            37 => 
             array (
                 'id' => 739,
                 'code' => NULL,
@@ -577,7 +625,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            35 => 
+            38 => 
             array (
                 'id' => 738,
                 'code' => NULL,
@@ -593,7 +641,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            36 => 
+            39 => 
             array (
                 'id' => 737,
                 'code' => NULL,
@@ -609,7 +657,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            37 => 
+            40 => 
             array (
                 'id' => 736,
                 'code' => NULL,
@@ -625,7 +673,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            38 => 
+            41 => 
             array (
                 'id' => 735,
                 'code' => NULL,
@@ -641,7 +689,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            39 => 
+            42 => 
             array (
                 'id' => 734,
                 'code' => NULL,
@@ -657,7 +705,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            40 => 
+            43 => 
             array (
                 'id' => 733,
                 'code' => NULL,
@@ -673,7 +721,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            41 => 
+            44 => 
             array (
                 'id' => 732,
                 'code' => NULL,
@@ -689,7 +737,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            42 => 
+            45 => 
             array (
                 'id' => 731,
                 'code' => NULL,
@@ -705,7 +753,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            43 => 
+            46 => 
             array (
                 'id' => 730,
                 'code' => NULL,
@@ -721,23 +769,23 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            44 => 
+            47 => 
             array (
                 'id' => 729,
                 'code' => NULL,
-                'name' => 'Телекоммуникационные компании',
-                'description' => NULL,
+                'name' => 'Умение искать ошибки',
+                'description' => '',
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
                 'parent_skill_id' => 713,
-                'appoint' => false,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2016-09-28 04:16:36',
                 'deleted_at' => NULL,
             ),
-            45 => 
+            48 => 
             array (
                 'id' => 728,
                 'code' => NULL,
@@ -753,7 +801,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            46 => 
+            49 => 
             array (
                 'id' => 727,
                 'code' => NULL,
@@ -769,7 +817,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            47 => 
+            50 => 
             array (
                 'id' => 726,
                 'code' => NULL,
@@ -785,7 +833,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            48 => 
+            51 => 
             array (
                 'id' => 725,
                 'code' => NULL,
@@ -801,7 +849,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            49 => 
+            52 => 
             array (
                 'id' => 724,
                 'code' => NULL,
@@ -817,7 +865,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            50 => 
+            53 => 
             array (
                 'id' => 723,
                 'code' => NULL,
@@ -833,7 +881,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            51 => 
+            54 => 
             array (
                 'id' => 722,
                 'code' => NULL,
@@ -849,7 +897,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            52 => 
+            55 => 
             array (
                 'id' => 721,
                 'code' => NULL,
@@ -865,7 +913,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            53 => 
+            56 => 
             array (
                 'id' => 720,
                 'code' => NULL,
@@ -881,7 +929,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            54 => 
+            57 => 
             array (
                 'id' => 719,
                 'code' => NULL,
@@ -897,7 +945,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            55 => 
+            58 => 
             array (
                 'id' => 718,
                 'code' => NULL,
@@ -913,7 +961,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            56 => 
+            59 => 
             array (
                 'id' => 717,
                 'code' => NULL,
@@ -929,7 +977,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            57 => 
+            60 => 
             array (
                 'id' => 716,
                 'code' => NULL,
@@ -945,7 +993,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            58 => 
+            61 => 
             array (
                 'id' => 715,
                 'code' => NULL,
@@ -961,7 +1009,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            59 => 
+            62 => 
             array (
                 'id' => 713,
                 'code' => NULL,
@@ -977,7 +1025,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            60 => 
+            63 => 
             array (
                 'id' => 712,
                 'code' => NULL,
@@ -993,7 +1041,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            61 => 
+            64 => 
             array (
                 'id' => 711,
                 'code' => NULL,
@@ -1009,7 +1057,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            62 => 
+            65 => 
             array (
                 'id' => 710,
                 'code' => NULL,
@@ -1025,12 +1073,12 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            63 => 
+            66 => 
             array (
                 'id' => 709,
                 'code' => NULL,
-                'name' => 'Технологии управления',
-                'description' => NULL,
+                'name' => 'Технологии, стандарты, рекомендации управления и качества',
+                'description' => '',
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
@@ -1038,10 +1086,10 @@ class SkillsTableSeeder extends Seeder
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2016-09-28 04:12:27',
                 'deleted_at' => NULL,
             ),
-            64 => 
+            67 => 
             array (
                 'id' => 708,
                 'code' => NULL,
@@ -1050,14 +1098,14 @@ class SkillsTableSeeder extends Seeder
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 704,
+                'parent_skill_id' => 709,
                 'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            65 => 
+            68 => 
             array (
                 'id' => 707,
                 'code' => NULL,
@@ -1066,14 +1114,14 @@ class SkillsTableSeeder extends Seeder
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 704,
+                'parent_skill_id' => 709,
                 'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            66 => 
+            69 => 
             array (
                 'id' => 706,
                 'code' => NULL,
@@ -1086,10 +1134,10 @@ class SkillsTableSeeder extends Seeder
                 'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
+                'updated_at' => '2016-09-28 04:13:12',
+                'deleted_at' => '2016-09-28 04:13:12',
             ),
-            67 => 
+            70 => 
             array (
                 'id' => 705,
                 'code' => NULL,
@@ -1102,10 +1150,10 @@ class SkillsTableSeeder extends Seeder
                 'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
+                'updated_at' => '2016-09-28 04:13:03',
+                'deleted_at' => '2016-09-28 04:13:03',
             ),
-            68 => 
+            71 => 
             array (
                 'id' => 704,
                 'code' => NULL,
@@ -1118,15 +1166,15 @@ class SkillsTableSeeder extends Seeder
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
+                'updated_at' => '2016-09-28 04:13:20',
+                'deleted_at' => '2016-09-28 04:13:20',
             ),
-            69 => 
+            72 => 
             array (
                 'id' => 703,
                 'code' => NULL,
-                'name' => 'Стандарты и методологии',
-                'description' => NULL,
+                'name' => 'Управление',
+                'description' => '',
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
@@ -1134,10 +1182,10 @@ class SkillsTableSeeder extends Seeder
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2016-09-28 04:10:55',
                 'deleted_at' => NULL,
             ),
-            70 => 
+            73 => 
             array (
                 'id' => 702,
                 'code' => NULL,
@@ -1153,7 +1201,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            71 => 
+            74 => 
             array (
                 'id' => 701,
                 'code' => NULL,
@@ -1169,7 +1217,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            72 => 
+            75 => 
             array (
                 'id' => 700,
                 'code' => NULL,
@@ -1185,7 +1233,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            73 => 
+            76 => 
             array (
                 'id' => 699,
                 'code' => NULL,
@@ -1201,7 +1249,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            74 => 
+            77 => 
             array (
                 'id' => 698,
                 'code' => NULL,
@@ -1217,7 +1265,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            75 => 
+            78 => 
             array (
                 'id' => 697,
                 'code' => NULL,
@@ -1233,7 +1281,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            76 => 
+            79 => 
             array (
                 'id' => 696,
                 'code' => NULL,
@@ -1242,14 +1290,14 @@ class SkillsTableSeeder extends Seeder
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 635,
+                'parent_skill_id' => 39,
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            77 => 
+            80 => 
             array (
                 'id' => 695,
                 'code' => NULL,
@@ -1265,7 +1313,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            78 => 
+            81 => 
             array (
                 'id' => 694,
                 'code' => NULL,
@@ -1281,7 +1329,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            79 => 
+            82 => 
             array (
                 'id' => 693,
                 'code' => NULL,
@@ -1297,7 +1345,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            80 => 
+            83 => 
             array (
                 'id' => 692,
                 'code' => NULL,
@@ -1313,7 +1361,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            81 => 
+            84 => 
             array (
                 'id' => 691,
                 'code' => NULL,
@@ -1329,7 +1377,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            82 => 
+            85 => 
             array (
                 'id' => 690,
                 'code' => NULL,
@@ -1345,7 +1393,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            83 => 
+            86 => 
             array (
                 'id' => 689,
                 'code' => NULL,
@@ -1361,7 +1409,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            84 => 
+            87 => 
             array (
                 'id' => 688,
                 'code' => NULL,
@@ -1377,7 +1425,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            85 => 
+            88 => 
             array (
                 'id' => 687,
                 'code' => NULL,
@@ -1393,7 +1441,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            86 => 
+            89 => 
             array (
                 'id' => 686,
                 'code' => NULL,
@@ -1409,7 +1457,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            87 => 
+            90 => 
             array (
                 'id' => 685,
                 'code' => NULL,
@@ -1425,7 +1473,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            88 => 
+            91 => 
             array (
                 'id' => 684,
                 'code' => NULL,
@@ -1441,7 +1489,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            89 => 
+            92 => 
             array (
                 'id' => 683,
                 'code' => NULL,
@@ -1457,7 +1505,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            90 => 
+            93 => 
             array (
                 'id' => 682,
                 'code' => NULL,
@@ -1473,7 +1521,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            91 => 
+            94 => 
             array (
                 'id' => 681,
                 'code' => NULL,
@@ -1489,7 +1537,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            92 => 
+            95 => 
             array (
                 'id' => 680,
                 'code' => NULL,
@@ -1505,7 +1553,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            93 => 
+            96 => 
             array (
                 'id' => 679,
                 'code' => NULL,
@@ -1514,14 +1562,14 @@ class SkillsTableSeeder extends Seeder
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 635,
+                'parent_skill_id' => 39,
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            94 => 
+            97 => 
             array (
                 'id' => 678,
                 'code' => NULL,
@@ -1537,7 +1585,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            95 => 
+            98 => 
             array (
                 'id' => 677,
                 'code' => NULL,
@@ -1553,7 +1601,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            96 => 
+            99 => 
             array (
                 'id' => 676,
                 'code' => NULL,
@@ -1569,7 +1617,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            97 => 
+            100 => 
             array (
                 'id' => 675,
                 'code' => NULL,
@@ -1585,7 +1633,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            98 => 
+            101 => 
             array (
                 'id' => 674,
                 'code' => NULL,
@@ -1594,14 +1642,14 @@ class SkillsTableSeeder extends Seeder
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 635,
+                'parent_skill_id' => 39,
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            99 => 
+            102 => 
             array (
                 'id' => 673,
                 'code' => NULL,
@@ -1617,7 +1665,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            100 => 
+            103 => 
             array (
                 'id' => 672,
                 'code' => NULL,
@@ -1633,7 +1681,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            101 => 
+            104 => 
             array (
                 'id' => 671,
                 'code' => NULL,
@@ -1649,7 +1697,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            102 => 
+            105 => 
             array (
                 'id' => 670,
                 'code' => NULL,
@@ -1665,7 +1713,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            103 => 
+            106 => 
             array (
                 'id' => 669,
                 'code' => NULL,
@@ -1681,7 +1729,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            104 => 
+            107 => 
             array (
                 'id' => 668,
                 'code' => NULL,
@@ -1697,7 +1745,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            105 => 
+            108 => 
             array (
                 'id' => 667,
                 'code' => NULL,
@@ -1713,7 +1761,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            106 => 
+            109 => 
             array (
                 'id' => 666,
                 'code' => NULL,
@@ -1729,7 +1777,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            107 => 
+            110 => 
             array (
                 'id' => 665,
                 'code' => NULL,
@@ -1745,7 +1793,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            108 => 
+            111 => 
             array (
                 'id' => 664,
                 'code' => NULL,
@@ -1761,7 +1809,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            109 => 
+            112 => 
             array (
                 'id' => 663,
                 'code' => NULL,
@@ -1777,7 +1825,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            110 => 
+            113 => 
             array (
                 'id' => 662,
                 'code' => NULL,
@@ -1793,7 +1841,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            111 => 
+            114 => 
             array (
                 'id' => 661,
                 'code' => NULL,
@@ -1809,7 +1857,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            112 => 
+            115 => 
             array (
                 'id' => 660,
                 'code' => NULL,
@@ -1825,7 +1873,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            113 => 
+            116 => 
             array (
                 'id' => 659,
                 'code' => NULL,
@@ -1841,7 +1889,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            114 => 
+            117 => 
             array (
                 'id' => 658,
                 'code' => NULL,
@@ -1857,7 +1905,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            115 => 
+            118 => 
             array (
                 'id' => 657,
                 'code' => NULL,
@@ -1873,7 +1921,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            116 => 
+            119 => 
             array (
                 'id' => 656,
                 'code' => NULL,
@@ -1889,23 +1937,23 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            117 => 
+            120 => 
             array (
                 'id' => 655,
                 'code' => NULL,
-                'name' => 'Дизайн, проектирование и прототипирование GUI',
-                'description' => NULL,
+                'name' => 'Инструменты дизайна, а также проектирования и прототипирование GUI',
+                'description' => '',
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 635,
+                'parent_skill_id' => 117,
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2016-09-28 08:50:06',
                 'deleted_at' => NULL,
             ),
-            118 => 
+            121 => 
             array (
                 'id' => 654,
                 'code' => NULL,
@@ -1921,7 +1969,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            119 => 
+            122 => 
             array (
                 'id' => 653,
                 'code' => NULL,
@@ -1937,7 +1985,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            120 => 
+            123 => 
             array (
                 'id' => 652,
                 'code' => NULL,
@@ -1946,14 +1994,14 @@ class SkillsTableSeeder extends Seeder
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 635,
+                'parent_skill_id' => 39,
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            121 => 
+            124 => 
             array (
                 'id' => 651,
                 'code' => NULL,
@@ -1969,7 +2017,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            122 => 
+            125 => 
             array (
                 'id' => 650,
                 'code' => NULL,
@@ -1985,7 +2033,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            123 => 
+            126 => 
             array (
                 'id' => 649,
                 'code' => NULL,
@@ -2001,7 +2049,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            124 => 
+            127 => 
             array (
                 'id' => 648,
                 'code' => NULL,
@@ -2017,7 +2065,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            125 => 
+            128 => 
             array (
                 'id' => 647,
                 'code' => NULL,
@@ -2033,7 +2081,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            126 => 
+            129 => 
             array (
                 'id' => 646,
                 'code' => NULL,
@@ -2049,7 +2097,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            127 => 
+            130 => 
             array (
                 'id' => 645,
                 'code' => NULL,
@@ -2065,7 +2113,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            128 => 
+            131 => 
             array (
                 'id' => 644,
                 'code' => NULL,
@@ -2081,23 +2129,23 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            129 => 
+            132 => 
             array (
                 'id' => 643,
                 'code' => NULL,
-                'name' => 'Testing technology',
-                'description' => NULL,
+                'name' => 'Инструменты тестирования',
+                'description' => 'Unit, Performance, System and Other',
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 635,
-                'appoint' => false,
+                'parent_skill_id' => 39,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2016-09-28 08:00:19',
                 'deleted_at' => NULL,
             ),
-            130 => 
+            133 => 
             array (
                 'id' => 642,
                 'code' => NULL,
@@ -2106,14 +2154,14 @@ class SkillsTableSeeder extends Seeder
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 639,
+                'parent_skill_id' => 643,
                 'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            131 => 
+            134 => 
             array (
                 'id' => 641,
                 'code' => NULL,
@@ -2122,14 +2170,14 @@ class SkillsTableSeeder extends Seeder
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 639,
+                'parent_skill_id' => 643,
                 'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            132 => 
+            135 => 
             array (
                 'id' => 640,
                 'code' => NULL,
@@ -2138,14 +2186,14 @@ class SkillsTableSeeder extends Seeder
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 639,
+                'parent_skill_id' => 643,
                 'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            133 => 
+            136 => 
             array (
                 'id' => 639,
                 'code' => NULL,
@@ -2154,14 +2202,14 @@ class SkillsTableSeeder extends Seeder
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 635,
+                'parent_skill_id' => 39,
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
-                'deleted_at' => NULL,
+                'updated_at' => '2016-09-28 08:00:31',
+                'deleted_at' => '2016-09-28 08:00:31',
             ),
-            134 => 
+            137 => 
             array (
                 'id' => 638,
                 'code' => NULL,
@@ -2177,7 +2225,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            135 => 
+            138 => 
             array (
                 'id' => 637,
                 'code' => NULL,
@@ -2193,7 +2241,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            136 => 
+            139 => 
             array (
                 'id' => 636,
                 'code' => NULL,
@@ -2202,14 +2250,14 @@ class SkillsTableSeeder extends Seeder
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 635,
+                'parent_skill_id' => 777,
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            137 => 
+            140 => 
             array (
                 'id' => 635,
                 'code' => NULL,
@@ -2225,7 +2273,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            138 => 
+            141 => 
             array (
                 'id' => 633,
                 'code' => NULL,
@@ -2241,7 +2289,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            139 => 
+            142 => 
             array (
                 'id' => 632,
                 'code' => NULL,
@@ -2257,7 +2305,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            140 => 
+            143 => 
             array (
                 'id' => 631,
                 'code' => NULL,
@@ -2273,7 +2321,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            141 => 
+            144 => 
             array (
                 'id' => 630,
                 'code' => NULL,
@@ -2289,7 +2337,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            142 => 
+            145 => 
             array (
                 'id' => 629,
                 'code' => NULL,
@@ -2305,7 +2353,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            143 => 
+            146 => 
             array (
                 'id' => 628,
                 'code' => NULL,
@@ -2321,7 +2369,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            144 => 
+            147 => 
             array (
                 'id' => 627,
                 'code' => NULL,
@@ -2337,7 +2385,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            145 => 
+            148 => 
             array (
                 'id' => 626,
                 'code' => NULL,
@@ -2353,7 +2401,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            146 => 
+            149 => 
             array (
                 'id' => 625,
                 'code' => NULL,
@@ -2369,7 +2417,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            147 => 
+            150 => 
             array (
                 'id' => 624,
                 'code' => NULL,
@@ -2385,7 +2433,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            148 => 
+            151 => 
             array (
                 'id' => 623,
                 'code' => NULL,
@@ -2401,7 +2449,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            149 => 
+            152 => 
             array (
                 'id' => 622,
                 'code' => NULL,
@@ -2417,7 +2465,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            150 => 
+            153 => 
             array (
                 'id' => 621,
                 'code' => NULL,
@@ -2433,7 +2481,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            151 => 
+            154 => 
             array (
                 'id' => 620,
                 'code' => NULL,
@@ -2449,7 +2497,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            152 => 
+            155 => 
             array (
                 'id' => 619,
                 'code' => NULL,
@@ -2465,7 +2513,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            153 => 
+            156 => 
             array (
                 'id' => 618,
                 'code' => NULL,
@@ -2481,7 +2529,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            154 => 
+            157 => 
             array (
                 'id' => 617,
                 'code' => NULL,
@@ -2497,7 +2545,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            155 => 
+            158 => 
             array (
                 'id' => 616,
                 'code' => NULL,
@@ -2513,7 +2561,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            156 => 
+            159 => 
             array (
                 'id' => 615,
                 'code' => NULL,
@@ -2529,7 +2577,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            157 => 
+            160 => 
             array (
                 'id' => 614,
                 'code' => NULL,
@@ -2545,7 +2593,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            158 => 
+            161 => 
             array (
                 'id' => 613,
                 'code' => NULL,
@@ -2561,7 +2609,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            159 => 
+            162 => 
             array (
                 'id' => 612,
                 'code' => NULL,
@@ -2577,7 +2625,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            160 => 
+            163 => 
             array (
                 'id' => 611,
                 'code' => NULL,
@@ -2593,7 +2641,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            161 => 
+            164 => 
             array (
                 'id' => 610,
                 'code' => NULL,
@@ -2609,7 +2657,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            162 => 
+            165 => 
             array (
                 'id' => 609,
                 'code' => NULL,
@@ -2625,7 +2673,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            163 => 
+            166 => 
             array (
                 'id' => 608,
                 'code' => NULL,
@@ -2641,7 +2689,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            164 => 
+            167 => 
             array (
                 'id' => 607,
                 'code' => NULL,
@@ -2657,7 +2705,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            165 => 
+            168 => 
             array (
                 'id' => 606,
                 'code' => NULL,
@@ -2673,7 +2721,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            166 => 
+            169 => 
             array (
                 'id' => 605,
                 'code' => NULL,
@@ -2689,7 +2737,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            167 => 
+            170 => 
             array (
                 'id' => 604,
                 'code' => NULL,
@@ -2705,7 +2753,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            168 => 
+            171 => 
             array (
                 'id' => 603,
                 'code' => NULL,
@@ -2721,7 +2769,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            169 => 
+            172 => 
             array (
                 'id' => 602,
                 'code' => NULL,
@@ -2737,7 +2785,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            170 => 
+            173 => 
             array (
                 'id' => 601,
                 'code' => NULL,
@@ -2753,7 +2801,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            171 => 
+            174 => 
             array (
                 'id' => 600,
                 'code' => NULL,
@@ -2769,7 +2817,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            172 => 
+            175 => 
             array (
                 'id' => 599,
                 'code' => NULL,
@@ -2785,7 +2833,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            173 => 
+            176 => 
             array (
                 'id' => 598,
                 'code' => NULL,
@@ -2801,7 +2849,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            174 => 
+            177 => 
             array (
                 'id' => 596,
                 'code' => NULL,
@@ -2817,7 +2865,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            175 => 
+            178 => 
             array (
                 'id' => 595,
                 'code' => NULL,
@@ -2833,7 +2881,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            176 => 
+            179 => 
             array (
                 'id' => 594,
                 'code' => NULL,
@@ -2849,7 +2897,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            177 => 
+            180 => 
             array (
                 'id' => 593,
                 'code' => NULL,
@@ -2865,7 +2913,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            178 => 
+            181 => 
             array (
                 'id' => 592,
                 'code' => NULL,
@@ -2881,7 +2929,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            179 => 
+            182 => 
             array (
                 'id' => 591,
                 'code' => NULL,
@@ -2897,7 +2945,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            180 => 
+            183 => 
             array (
                 'id' => 590,
                 'code' => NULL,
@@ -2913,7 +2961,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            181 => 
+            184 => 
             array (
                 'id' => 589,
                 'code' => NULL,
@@ -2929,7 +2977,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            182 => 
+            185 => 
             array (
                 'id' => 588,
                 'code' => NULL,
@@ -2945,7 +2993,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            183 => 
+            186 => 
             array (
                 'id' => 587,
                 'code' => NULL,
@@ -2961,7 +3009,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            184 => 
+            187 => 
             array (
                 'id' => 586,
                 'code' => NULL,
@@ -2977,7 +3025,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            185 => 
+            188 => 
             array (
                 'id' => 585,
                 'code' => NULL,
@@ -2993,7 +3041,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            186 => 
+            189 => 
             array (
                 'id' => 584,
                 'code' => NULL,
@@ -3009,7 +3057,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            187 => 
+            190 => 
             array (
                 'id' => 583,
                 'code' => NULL,
@@ -3025,7 +3073,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            188 => 
+            191 => 
             array (
                 'id' => 582,
                 'code' => NULL,
@@ -3041,7 +3089,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            189 => 
+            192 => 
             array (
                 'id' => 581,
                 'code' => NULL,
@@ -3057,7 +3105,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            190 => 
+            193 => 
             array (
                 'id' => 580,
                 'code' => NULL,
@@ -3073,7 +3121,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            191 => 
+            194 => 
             array (
                 'id' => 579,
                 'code' => NULL,
@@ -3089,7 +3137,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            192 => 
+            195 => 
             array (
                 'id' => 578,
                 'code' => NULL,
@@ -3105,7 +3153,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            193 => 
+            196 => 
             array (
                 'id' => 577,
                 'code' => NULL,
@@ -3121,7 +3169,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            194 => 
+            197 => 
             array (
                 'id' => 576,
                 'code' => NULL,
@@ -3137,7 +3185,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            195 => 
+            198 => 
             array (
                 'id' => 575,
                 'code' => NULL,
@@ -3153,7 +3201,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            196 => 
+            199 => 
             array (
                 'id' => 574,
                 'code' => NULL,
@@ -3169,7 +3217,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            197 => 
+            200 => 
             array (
                 'id' => 573,
                 'code' => NULL,
@@ -3185,7 +3233,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            198 => 
+            201 => 
             array (
                 'id' => 572,
                 'code' => NULL,
@@ -3201,7 +3249,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            199 => 
+            202 => 
             array (
                 'id' => 571,
                 'code' => NULL,
@@ -3217,7 +3265,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            200 => 
+            203 => 
             array (
                 'id' => 570,
                 'code' => NULL,
@@ -3233,7 +3281,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            201 => 
+            204 => 
             array (
                 'id' => 569,
                 'code' => NULL,
@@ -3249,7 +3297,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            202 => 
+            205 => 
             array (
                 'id' => 567,
                 'code' => NULL,
@@ -3265,7 +3313,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            203 => 
+            206 => 
             array (
                 'id' => 566,
                 'code' => NULL,
@@ -3281,7 +3329,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            204 => 
+            207 => 
             array (
                 'id' => 565,
                 'code' => NULL,
@@ -3297,7 +3345,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            205 => 
+            208 => 
             array (
                 'id' => 564,
                 'code' => NULL,
@@ -3313,7 +3361,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            206 => 
+            209 => 
             array (
                 'id' => 563,
                 'code' => NULL,
@@ -3329,7 +3377,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            207 => 
+            210 => 
             array (
                 'id' => 562,
                 'code' => NULL,
@@ -3345,7 +3393,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            208 => 
+            211 => 
             array (
                 'id' => 561,
                 'code' => NULL,
@@ -3361,7 +3409,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            209 => 
+            212 => 
             array (
                 'id' => 560,
                 'code' => NULL,
@@ -3377,7 +3425,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            210 => 
+            213 => 
             array (
                 'id' => 558,
                 'code' => NULL,
@@ -3393,7 +3441,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            211 => 
+            214 => 
             array (
                 'id' => 557,
                 'code' => NULL,
@@ -3409,7 +3457,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            212 => 
+            215 => 
             array (
                 'id' => 556,
                 'code' => NULL,
@@ -3425,7 +3473,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            213 => 
+            216 => 
             array (
                 'id' => 555,
                 'code' => NULL,
@@ -3441,7 +3489,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            214 => 
+            217 => 
             array (
                 'id' => 554,
                 'code' => NULL,
@@ -3457,7 +3505,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            215 => 
+            218 => 
             array (
                 'id' => 553,
                 'code' => NULL,
@@ -3473,7 +3521,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            216 => 
+            219 => 
             array (
                 'id' => 552,
                 'code' => NULL,
@@ -3489,7 +3537,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            217 => 
+            220 => 
             array (
                 'id' => 551,
                 'code' => NULL,
@@ -3505,7 +3553,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            218 => 
+            221 => 
             array (
                 'id' => 550,
                 'code' => NULL,
@@ -3521,7 +3569,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            219 => 
+            222 => 
             array (
                 'id' => 548,
                 'code' => NULL,
@@ -3537,7 +3585,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            220 => 
+            223 => 
             array (
                 'id' => 546,
                 'code' => NULL,
@@ -3553,7 +3601,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            221 => 
+            224 => 
             array (
                 'id' => 545,
                 'code' => NULL,
@@ -3569,7 +3617,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            222 => 
+            225 => 
             array (
                 'id' => 544,
                 'code' => NULL,
@@ -3585,7 +3633,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            223 => 
+            226 => 
             array (
                 'id' => 543,
                 'code' => NULL,
@@ -3601,7 +3649,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            224 => 
+            227 => 
             array (
                 'id' => 542,
                 'code' => NULL,
@@ -3617,7 +3665,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            225 => 
+            228 => 
             array (
                 'id' => 541,
                 'code' => NULL,
@@ -3633,7 +3681,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            226 => 
+            229 => 
             array (
                 'id' => 540,
                 'code' => NULL,
@@ -3649,7 +3697,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            227 => 
+            230 => 
             array (
                 'id' => 539,
                 'code' => NULL,
@@ -3665,7 +3713,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            228 => 
+            231 => 
             array (
                 'id' => 538,
                 'code' => NULL,
@@ -3681,7 +3729,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            229 => 
+            232 => 
             array (
                 'id' => 537,
                 'code' => NULL,
@@ -3697,7 +3745,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            230 => 
+            233 => 
             array (
                 'id' => 536,
                 'code' => NULL,
@@ -3713,7 +3761,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            231 => 
+            234 => 
             array (
                 'id' => 535,
                 'code' => NULL,
@@ -3729,7 +3777,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            232 => 
+            235 => 
             array (
                 'id' => 534,
                 'code' => NULL,
@@ -3745,7 +3793,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            233 => 
+            236 => 
             array (
                 'id' => 533,
                 'code' => NULL,
@@ -3761,7 +3809,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            234 => 
+            237 => 
             array (
                 'id' => 532,
                 'code' => NULL,
@@ -3777,7 +3825,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            235 => 
+            238 => 
             array (
                 'id' => 531,
                 'code' => NULL,
@@ -3793,7 +3841,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            236 => 
+            239 => 
             array (
                 'id' => 530,
                 'code' => NULL,
@@ -3809,7 +3857,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            237 => 
+            240 => 
             array (
                 'id' => 529,
                 'code' => NULL,
@@ -3825,7 +3873,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            238 => 
+            241 => 
             array (
                 'id' => 528,
                 'code' => NULL,
@@ -3841,7 +3889,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            239 => 
+            242 => 
             array (
                 'id' => 527,
                 'code' => NULL,
@@ -3857,7 +3905,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            240 => 
+            243 => 
             array (
                 'id' => 526,
                 'code' => NULL,
@@ -3873,7 +3921,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            241 => 
+            244 => 
             array (
                 'id' => 525,
                 'code' => NULL,
@@ -3889,7 +3937,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            242 => 
+            245 => 
             array (
                 'id' => 524,
                 'code' => NULL,
@@ -3905,7 +3953,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            243 => 
+            246 => 
             array (
                 'id' => 523,
                 'code' => NULL,
@@ -3921,7 +3969,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            244 => 
+            247 => 
             array (
                 'id' => 522,
                 'code' => NULL,
@@ -3937,7 +3985,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            245 => 
+            248 => 
             array (
                 'id' => 521,
                 'code' => NULL,
@@ -3953,7 +4001,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            246 => 
+            249 => 
             array (
                 'id' => 520,
                 'code' => NULL,
@@ -3969,7 +4017,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            247 => 
+            250 => 
             array (
                 'id' => 519,
                 'code' => NULL,
@@ -3985,7 +4033,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            248 => 
+            251 => 
             array (
                 'id' => 518,
                 'code' => NULL,
@@ -4001,7 +4049,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            249 => 
+            252 => 
             array (
                 'id' => 517,
                 'code' => NULL,
@@ -4017,7 +4065,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            250 => 
+            253 => 
             array (
                 'id' => 516,
                 'code' => NULL,
@@ -4033,7 +4081,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            251 => 
+            254 => 
             array (
                 'id' => 515,
                 'code' => NULL,
@@ -4049,7 +4097,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            252 => 
+            255 => 
             array (
                 'id' => 514,
                 'code' => NULL,
@@ -4065,7 +4113,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            253 => 
+            256 => 
             array (
                 'id' => 513,
                 'code' => NULL,
@@ -4081,7 +4129,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            254 => 
+            257 => 
             array (
                 'id' => 512,
                 'code' => NULL,
@@ -4097,7 +4145,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            255 => 
+            258 => 
             array (
                 'id' => 511,
                 'code' => NULL,
@@ -4113,7 +4161,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            256 => 
+            259 => 
             array (
                 'id' => 510,
                 'code' => NULL,
@@ -4129,7 +4177,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            257 => 
+            260 => 
             array (
                 'id' => 509,
                 'code' => NULL,
@@ -4145,7 +4193,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            258 => 
+            261 => 
             array (
                 'id' => 508,
                 'code' => NULL,
@@ -4161,7 +4209,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            259 => 
+            262 => 
             array (
                 'id' => 507,
                 'code' => NULL,
@@ -4177,7 +4225,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            260 => 
+            263 => 
             array (
                 'id' => 506,
                 'code' => NULL,
@@ -4193,7 +4241,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            261 => 
+            264 => 
             array (
                 'id' => 505,
                 'code' => NULL,
@@ -4209,7 +4257,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            262 => 
+            265 => 
             array (
                 'id' => 504,
                 'code' => NULL,
@@ -4225,7 +4273,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            263 => 
+            266 => 
             array (
                 'id' => 503,
                 'code' => NULL,
@@ -4241,7 +4289,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            264 => 
+            267 => 
             array (
                 'id' => 502,
                 'code' => NULL,
@@ -4257,7 +4305,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            265 => 
+            268 => 
             array (
                 'id' => 501,
                 'code' => NULL,
@@ -4273,7 +4321,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            266 => 
+            269 => 
             array (
                 'id' => 500,
                 'code' => NULL,
@@ -4289,7 +4337,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            267 => 
+            270 => 
             array (
                 'id' => 499,
                 'code' => NULL,
@@ -4305,7 +4353,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            268 => 
+            271 => 
             array (
                 'id' => 498,
                 'code' => NULL,
@@ -4321,7 +4369,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            269 => 
+            272 => 
             array (
                 'id' => 497,
                 'code' => NULL,
@@ -4337,7 +4385,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            270 => 
+            273 => 
             array (
                 'id' => 496,
                 'code' => NULL,
@@ -4353,7 +4401,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            271 => 
+            274 => 
             array (
                 'id' => 495,
                 'code' => NULL,
@@ -4369,7 +4417,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            272 => 
+            275 => 
             array (
                 'id' => 494,
                 'code' => NULL,
@@ -4385,7 +4433,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            273 => 
+            276 => 
             array (
                 'id' => 493,
                 'code' => NULL,
@@ -4401,7 +4449,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            274 => 
+            277 => 
             array (
                 'id' => 492,
                 'code' => NULL,
@@ -4417,7 +4465,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            275 => 
+            278 => 
             array (
                 'id' => 491,
                 'code' => NULL,
@@ -4433,7 +4481,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            276 => 
+            279 => 
             array (
                 'id' => 490,
                 'code' => NULL,
@@ -4449,7 +4497,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            277 => 
+            280 => 
             array (
                 'id' => 489,
                 'code' => NULL,
@@ -4465,7 +4513,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            278 => 
+            281 => 
             array (
                 'id' => 488,
                 'code' => NULL,
@@ -4481,7 +4529,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            279 => 
+            282 => 
             array (
                 'id' => 487,
                 'code' => NULL,
@@ -4497,7 +4545,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            280 => 
+            283 => 
             array (
                 'id' => 486,
                 'code' => NULL,
@@ -4513,7 +4561,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            281 => 
+            284 => 
             array (
                 'id' => 485,
                 'code' => NULL,
@@ -4529,7 +4577,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            282 => 
+            285 => 
             array (
                 'id' => 484,
                 'code' => NULL,
@@ -4545,7 +4593,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            283 => 
+            286 => 
             array (
                 'id' => 483,
                 'code' => NULL,
@@ -4561,7 +4609,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            284 => 
+            287 => 
             array (
                 'id' => 482,
                 'code' => NULL,
@@ -4577,7 +4625,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            285 => 
+            288 => 
             array (
                 'id' => 481,
                 'code' => NULL,
@@ -4593,7 +4641,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            286 => 
+            289 => 
             array (
                 'id' => 480,
                 'code' => NULL,
@@ -4609,7 +4657,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            287 => 
+            290 => 
             array (
                 'id' => 479,
                 'code' => NULL,
@@ -4625,7 +4673,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            288 => 
+            291 => 
             array (
                 'id' => 478,
                 'code' => NULL,
@@ -4641,7 +4689,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            289 => 
+            292 => 
             array (
                 'id' => 477,
                 'code' => NULL,
@@ -4657,7 +4705,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            290 => 
+            293 => 
             array (
                 'id' => 476,
                 'code' => NULL,
@@ -4673,7 +4721,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            291 => 
+            294 => 
             array (
                 'id' => 475,
                 'code' => NULL,
@@ -4689,7 +4737,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            292 => 
+            295 => 
             array (
                 'id' => 474,
                 'code' => NULL,
@@ -4705,7 +4753,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            293 => 
+            296 => 
             array (
                 'id' => 473,
                 'code' => NULL,
@@ -4721,7 +4769,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            294 => 
+            297 => 
             array (
                 'id' => 472,
                 'code' => NULL,
@@ -4737,7 +4785,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            295 => 
+            298 => 
             array (
                 'id' => 471,
                 'code' => NULL,
@@ -4753,7 +4801,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            296 => 
+            299 => 
             array (
                 'id' => 470,
                 'code' => NULL,
@@ -4769,7 +4817,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            297 => 
+            300 => 
             array (
                 'id' => 469,
                 'code' => NULL,
@@ -4785,7 +4833,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            298 => 
+            301 => 
             array (
                 'id' => 468,
                 'code' => NULL,
@@ -4801,7 +4849,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            299 => 
+            302 => 
             array (
                 'id' => 467,
                 'code' => NULL,
@@ -4817,7 +4865,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            300 => 
+            303 => 
             array (
                 'id' => 466,
                 'code' => NULL,
@@ -4833,7 +4881,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            301 => 
+            304 => 
             array (
                 'id' => 465,
                 'code' => NULL,
@@ -4849,7 +4897,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            302 => 
+            305 => 
             array (
                 'id' => 464,
                 'code' => NULL,
@@ -4865,7 +4913,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            303 => 
+            306 => 
             array (
                 'id' => 463,
                 'code' => NULL,
@@ -4881,7 +4929,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            304 => 
+            307 => 
             array (
                 'id' => 462,
                 'code' => NULL,
@@ -4897,7 +4945,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            305 => 
+            308 => 
             array (
                 'id' => 461,
                 'code' => NULL,
@@ -4913,7 +4961,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            306 => 
+            309 => 
             array (
                 'id' => 460,
                 'code' => NULL,
@@ -4929,7 +4977,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            307 => 
+            310 => 
             array (
                 'id' => 459,
                 'code' => NULL,
@@ -4945,7 +4993,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            308 => 
+            311 => 
             array (
                 'id' => 458,
                 'code' => NULL,
@@ -4961,7 +5009,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            309 => 
+            312 => 
             array (
                 'id' => 457,
                 'code' => NULL,
@@ -4977,7 +5025,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            310 => 
+            313 => 
             array (
                 'id' => 456,
                 'code' => NULL,
@@ -4993,7 +5041,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            311 => 
+            314 => 
             array (
                 'id' => 455,
                 'code' => NULL,
@@ -5009,7 +5057,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            312 => 
+            315 => 
             array (
                 'id' => 454,
                 'code' => NULL,
@@ -5025,7 +5073,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            313 => 
+            316 => 
             array (
                 'id' => 453,
                 'code' => NULL,
@@ -5041,7 +5089,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            314 => 
+            317 => 
             array (
                 'id' => 452,
                 'code' => NULL,
@@ -5057,7 +5105,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            315 => 
+            318 => 
             array (
                 'id' => 451,
                 'code' => NULL,
@@ -5073,7 +5121,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            316 => 
+            319 => 
             array (
                 'id' => 450,
                 'code' => NULL,
@@ -5089,7 +5137,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            317 => 
+            320 => 
             array (
                 'id' => 449,
                 'code' => NULL,
@@ -5105,7 +5153,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            318 => 
+            321 => 
             array (
                 'id' => 448,
                 'code' => NULL,
@@ -5121,7 +5169,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            319 => 
+            322 => 
             array (
                 'id' => 447,
                 'code' => NULL,
@@ -5137,7 +5185,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            320 => 
+            323 => 
             array (
                 'id' => 446,
                 'code' => NULL,
@@ -5153,7 +5201,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            321 => 
+            324 => 
             array (
                 'id' => 445,
                 'code' => NULL,
@@ -5169,7 +5217,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            322 => 
+            325 => 
             array (
                 'id' => 444,
                 'code' => NULL,
@@ -5185,7 +5233,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            323 => 
+            326 => 
             array (
                 'id' => 443,
                 'code' => NULL,
@@ -5201,7 +5249,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            324 => 
+            327 => 
             array (
                 'id' => 442,
                 'code' => NULL,
@@ -5217,7 +5265,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            325 => 
+            328 => 
             array (
                 'id' => 441,
                 'code' => NULL,
@@ -5233,7 +5281,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            326 => 
+            329 => 
             array (
                 'id' => 440,
                 'code' => NULL,
@@ -5249,7 +5297,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            327 => 
+            330 => 
             array (
                 'id' => 439,
                 'code' => NULL,
@@ -5265,7 +5313,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            328 => 
+            331 => 
             array (
                 'id' => 438,
                 'code' => NULL,
@@ -5281,7 +5329,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            329 => 
+            332 => 
             array (
                 'id' => 437,
                 'code' => NULL,
@@ -5297,7 +5345,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            330 => 
+            333 => 
             array (
                 'id' => 436,
                 'code' => NULL,
@@ -5313,7 +5361,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            331 => 
+            334 => 
             array (
                 'id' => 435,
                 'code' => NULL,
@@ -5329,7 +5377,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            332 => 
+            335 => 
             array (
                 'id' => 434,
                 'code' => NULL,
@@ -5345,7 +5393,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            333 => 
+            336 => 
             array (
                 'id' => 433,
                 'code' => NULL,
@@ -5361,7 +5409,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            334 => 
+            337 => 
             array (
                 'id' => 431,
                 'code' => NULL,
@@ -5377,7 +5425,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            335 => 
+            338 => 
             array (
                 'id' => 430,
                 'code' => NULL,
@@ -5393,7 +5441,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            336 => 
+            339 => 
             array (
                 'id' => 429,
                 'code' => NULL,
@@ -5409,7 +5457,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            337 => 
+            340 => 
             array (
                 'id' => 428,
                 'code' => NULL,
@@ -5425,7 +5473,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            338 => 
+            341 => 
             array (
                 'id' => 427,
                 'code' => NULL,
@@ -5441,7 +5489,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            339 => 
+            342 => 
             array (
                 'id' => 426,
                 'code' => NULL,
@@ -5457,7 +5505,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            340 => 
+            343 => 
             array (
                 'id' => 425,
                 'code' => NULL,
@@ -5473,7 +5521,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            341 => 
+            344 => 
             array (
                 'id' => 424,
                 'code' => NULL,
@@ -5489,7 +5537,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            342 => 
+            345 => 
             array (
                 'id' => 423,
                 'code' => NULL,
@@ -5505,7 +5553,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            343 => 
+            346 => 
             array (
                 'id' => 422,
                 'code' => NULL,
@@ -5521,7 +5569,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            344 => 
+            347 => 
             array (
                 'id' => 421,
                 'code' => NULL,
@@ -5537,7 +5585,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            345 => 
+            348 => 
             array (
                 'id' => 420,
                 'code' => NULL,
@@ -5553,7 +5601,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            346 => 
+            349 => 
             array (
                 'id' => 419,
                 'code' => NULL,
@@ -5569,7 +5617,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            347 => 
+            350 => 
             array (
                 'id' => 418,
                 'code' => NULL,
@@ -5585,7 +5633,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            348 => 
+            351 => 
             array (
                 'id' => 417,
                 'code' => NULL,
@@ -5601,7 +5649,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            349 => 
+            352 => 
             array (
                 'id' => 416,
                 'code' => NULL,
@@ -5617,7 +5665,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            350 => 
+            353 => 
             array (
                 'id' => 415,
                 'code' => NULL,
@@ -5633,7 +5681,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            351 => 
+            354 => 
             array (
                 'id' => 414,
                 'code' => NULL,
@@ -5649,7 +5697,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            352 => 
+            355 => 
             array (
                 'id' => 413,
                 'code' => NULL,
@@ -5665,7 +5713,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            353 => 
+            356 => 
             array (
                 'id' => 412,
                 'code' => NULL,
@@ -5681,7 +5729,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            354 => 
+            357 => 
             array (
                 'id' => 411,
                 'code' => NULL,
@@ -5697,7 +5745,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            355 => 
+            358 => 
             array (
                 'id' => 410,
                 'code' => NULL,
@@ -5713,7 +5761,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            356 => 
+            359 => 
             array (
                 'id' => 409,
                 'code' => NULL,
@@ -5729,7 +5777,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            357 => 
+            360 => 
             array (
                 'id' => 408,
                 'code' => NULL,
@@ -5745,7 +5793,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            358 => 
+            361 => 
             array (
                 'id' => 407,
                 'code' => NULL,
@@ -5761,7 +5809,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            359 => 
+            362 => 
             array (
                 'id' => 406,
                 'code' => NULL,
@@ -5777,7 +5825,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            360 => 
+            363 => 
             array (
                 'id' => 405,
                 'code' => NULL,
@@ -5793,7 +5841,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            361 => 
+            364 => 
             array (
                 'id' => 404,
                 'code' => NULL,
@@ -5809,7 +5857,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            362 => 
+            365 => 
             array (
                 'id' => 403,
                 'code' => NULL,
@@ -5825,7 +5873,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            363 => 
+            366 => 
             array (
                 'id' => 402,
                 'code' => NULL,
@@ -5841,7 +5889,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            364 => 
+            367 => 
             array (
                 'id' => 401,
                 'code' => NULL,
@@ -5857,7 +5905,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            365 => 
+            368 => 
             array (
                 'id' => 400,
                 'code' => NULL,
@@ -5873,7 +5921,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            366 => 
+            369 => 
             array (
                 'id' => 399,
                 'code' => NULL,
@@ -5889,7 +5937,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            367 => 
+            370 => 
             array (
                 'id' => 398,
                 'code' => NULL,
@@ -5905,7 +5953,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            368 => 
+            371 => 
             array (
                 'id' => 397,
                 'code' => NULL,
@@ -5921,7 +5969,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            369 => 
+            372 => 
             array (
                 'id' => 396,
                 'code' => NULL,
@@ -5937,7 +5985,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            370 => 
+            373 => 
             array (
                 'id' => 395,
                 'code' => NULL,
@@ -5953,7 +6001,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            371 => 
+            374 => 
             array (
                 'id' => 394,
                 'code' => NULL,
@@ -5969,7 +6017,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            372 => 
+            375 => 
             array (
                 'id' => 393,
                 'code' => NULL,
@@ -5985,7 +6033,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            373 => 
+            376 => 
             array (
                 'id' => 392,
                 'code' => NULL,
@@ -6001,7 +6049,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            374 => 
+            377 => 
             array (
                 'id' => 391,
                 'code' => NULL,
@@ -6017,7 +6065,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            375 => 
+            378 => 
             array (
                 'id' => 390,
                 'code' => NULL,
@@ -6033,7 +6081,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            376 => 
+            379 => 
             array (
                 'id' => 389,
                 'code' => NULL,
@@ -6049,7 +6097,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            377 => 
+            380 => 
             array (
                 'id' => 388,
                 'code' => NULL,
@@ -6065,7 +6113,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            378 => 
+            381 => 
             array (
                 'id' => 387,
                 'code' => NULL,
@@ -6081,7 +6129,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            379 => 
+            382 => 
             array (
                 'id' => 386,
                 'code' => NULL,
@@ -6097,7 +6145,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            380 => 
+            383 => 
             array (
                 'id' => 385,
                 'code' => NULL,
@@ -6113,7 +6161,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            381 => 
+            384 => 
             array (
                 'id' => 384,
                 'code' => NULL,
@@ -6129,7 +6177,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            382 => 
+            385 => 
             array (
                 'id' => 382,
                 'code' => NULL,
@@ -6145,7 +6193,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            383 => 
+            386 => 
             array (
                 'id' => 381,
                 'code' => NULL,
@@ -6161,7 +6209,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            384 => 
+            387 => 
             array (
                 'id' => 380,
                 'code' => NULL,
@@ -6177,7 +6225,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            385 => 
+            388 => 
             array (
                 'id' => 378,
                 'code' => NULL,
@@ -6193,7 +6241,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            386 => 
+            389 => 
             array (
                 'id' => 377,
                 'code' => NULL,
@@ -6209,7 +6257,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            387 => 
+            390 => 
             array (
                 'id' => 376,
                 'code' => NULL,
@@ -6225,7 +6273,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            388 => 
+            391 => 
             array (
                 'id' => 374,
                 'code' => NULL,
@@ -6241,7 +6289,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            389 => 
+            392 => 
             array (
                 'id' => 373,
                 'code' => NULL,
@@ -6257,7 +6305,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            390 => 
+            393 => 
             array (
                 'id' => 372,
                 'code' => NULL,
@@ -6273,7 +6321,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            391 => 
+            394 => 
             array (
                 'id' => 371,
                 'code' => NULL,
@@ -6289,7 +6337,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            392 => 
+            395 => 
             array (
                 'id' => 370,
                 'code' => NULL,
@@ -6305,7 +6353,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            393 => 
+            396 => 
             array (
                 'id' => 369,
                 'code' => NULL,
@@ -6321,7 +6369,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            394 => 
+            397 => 
             array (
                 'id' => 368,
                 'code' => NULL,
@@ -6337,7 +6385,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            395 => 
+            398 => 
             array (
                 'id' => 367,
                 'code' => NULL,
@@ -6353,7 +6401,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            396 => 
+            399 => 
             array (
                 'id' => 366,
                 'code' => NULL,
@@ -6369,7 +6417,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            397 => 
+            400 => 
             array (
                 'id' => 365,
                 'code' => NULL,
@@ -6385,7 +6433,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            398 => 
+            401 => 
             array (
                 'id' => 364,
                 'code' => NULL,
@@ -6401,7 +6449,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            399 => 
+            402 => 
             array (
                 'id' => 363,
                 'code' => NULL,
@@ -6417,7 +6465,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            400 => 
+            403 => 
             array (
                 'id' => 361,
                 'code' => NULL,
@@ -6433,7 +6481,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            401 => 
+            404 => 
             array (
                 'id' => 360,
                 'code' => NULL,
@@ -6449,7 +6497,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            402 => 
+            405 => 
             array (
                 'id' => 359,
                 'code' => NULL,
@@ -6465,7 +6513,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            403 => 
+            406 => 
             array (
                 'id' => 358,
                 'code' => NULL,
@@ -6481,7 +6529,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            404 => 
+            407 => 
             array (
                 'id' => 357,
                 'code' => NULL,
@@ -6497,7 +6545,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            405 => 
+            408 => 
             array (
                 'id' => 356,
                 'code' => NULL,
@@ -6513,7 +6561,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            406 => 
+            409 => 
             array (
                 'id' => 355,
                 'code' => NULL,
@@ -6529,7 +6577,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            407 => 
+            410 => 
             array (
                 'id' => 354,
                 'code' => NULL,
@@ -6545,7 +6593,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            408 => 
+            411 => 
             array (
                 'id' => 353,
                 'code' => NULL,
@@ -6561,7 +6609,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            409 => 
+            412 => 
             array (
                 'id' => 352,
                 'code' => NULL,
@@ -6577,7 +6625,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            410 => 
+            413 => 
             array (
                 'id' => 351,
                 'code' => NULL,
@@ -6593,7 +6641,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            411 => 
+            414 => 
             array (
                 'id' => 350,
                 'code' => NULL,
@@ -6609,7 +6657,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            412 => 
+            415 => 
             array (
                 'id' => 349,
                 'code' => NULL,
@@ -6625,7 +6673,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            413 => 
+            416 => 
             array (
                 'id' => 348,
                 'code' => NULL,
@@ -6641,7 +6689,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            414 => 
+            417 => 
             array (
                 'id' => 347,
                 'code' => NULL,
@@ -6657,7 +6705,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            415 => 
+            418 => 
             array (
                 'id' => 346,
                 'code' => NULL,
@@ -6673,7 +6721,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            416 => 
+            419 => 
             array (
                 'id' => 345,
                 'code' => NULL,
@@ -6689,7 +6737,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            417 => 
+            420 => 
             array (
                 'id' => 344,
                 'code' => NULL,
@@ -6705,7 +6753,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            418 => 
+            421 => 
             array (
                 'id' => 342,
                 'code' => NULL,
@@ -6721,7 +6769,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            419 => 
+            422 => 
             array (
                 'id' => 341,
                 'code' => NULL,
@@ -6737,7 +6785,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            420 => 
+            423 => 
             array (
                 'id' => 340,
                 'code' => NULL,
@@ -6753,7 +6801,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            421 => 
+            424 => 
             array (
                 'id' => 339,
                 'code' => NULL,
@@ -6769,7 +6817,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            422 => 
+            425 => 
             array (
                 'id' => 338,
                 'code' => NULL,
@@ -6785,7 +6833,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            423 => 
+            426 => 
             array (
                 'id' => 337,
                 'code' => NULL,
@@ -6801,7 +6849,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            424 => 
+            427 => 
             array (
                 'id' => 336,
                 'code' => NULL,
@@ -6817,7 +6865,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            425 => 
+            428 => 
             array (
                 'id' => 335,
                 'code' => NULL,
@@ -6833,7 +6881,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            426 => 
+            429 => 
             array (
                 'id' => 334,
                 'code' => NULL,
@@ -6849,7 +6897,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            427 => 
+            430 => 
             array (
                 'id' => 333,
                 'code' => NULL,
@@ -6865,7 +6913,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            428 => 
+            431 => 
             array (
                 'id' => 332,
                 'code' => NULL,
@@ -6881,7 +6929,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            429 => 
+            432 => 
             array (
                 'id' => 331,
                 'code' => NULL,
@@ -6897,7 +6945,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            430 => 
+            433 => 
             array (
                 'id' => 330,
                 'code' => NULL,
@@ -6913,7 +6961,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            431 => 
+            434 => 
             array (
                 'id' => 329,
                 'code' => NULL,
@@ -6929,7 +6977,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            432 => 
+            435 => 
             array (
                 'id' => 328,
                 'code' => NULL,
@@ -6945,7 +6993,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            433 => 
+            436 => 
             array (
                 'id' => 327,
                 'code' => NULL,
@@ -6961,7 +7009,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            434 => 
+            437 => 
             array (
                 'id' => 326,
                 'code' => NULL,
@@ -6977,7 +7025,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            435 => 
+            438 => 
             array (
                 'id' => 325,
                 'code' => NULL,
@@ -6993,7 +7041,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            436 => 
+            439 => 
             array (
                 'id' => 324,
                 'code' => NULL,
@@ -7009,7 +7057,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            437 => 
+            440 => 
             array (
                 'id' => 323,
                 'code' => NULL,
@@ -7025,7 +7073,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            438 => 
+            441 => 
             array (
                 'id' => 322,
                 'code' => NULL,
@@ -7041,7 +7089,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            439 => 
+            442 => 
             array (
                 'id' => 321,
                 'code' => NULL,
@@ -7057,7 +7105,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            440 => 
+            443 => 
             array (
                 'id' => 320,
                 'code' => NULL,
@@ -7073,7 +7121,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            441 => 
+            444 => 
             array (
                 'id' => 319,
                 'code' => NULL,
@@ -7089,7 +7137,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            442 => 
+            445 => 
             array (
                 'id' => 318,
                 'code' => NULL,
@@ -7105,7 +7153,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            443 => 
+            446 => 
             array (
                 'id' => 317,
                 'code' => NULL,
@@ -7121,7 +7169,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            444 => 
+            447 => 
             array (
                 'id' => 316,
                 'code' => NULL,
@@ -7137,7 +7185,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            445 => 
+            448 => 
             array (
                 'id' => 315,
                 'code' => NULL,
@@ -7153,7 +7201,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            446 => 
+            449 => 
             array (
                 'id' => 314,
                 'code' => NULL,
@@ -7169,7 +7217,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            447 => 
+            450 => 
             array (
                 'id' => 313,
                 'code' => NULL,
@@ -7185,7 +7233,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            448 => 
+            451 => 
             array (
                 'id' => 312,
                 'code' => NULL,
@@ -7201,7 +7249,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            449 => 
+            452 => 
             array (
                 'id' => 310,
                 'code' => NULL,
@@ -7217,7 +7265,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            450 => 
+            453 => 
             array (
                 'id' => 309,
                 'code' => NULL,
@@ -7233,7 +7281,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            451 => 
+            454 => 
             array (
                 'id' => 308,
                 'code' => NULL,
@@ -7249,7 +7297,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            452 => 
+            455 => 
             array (
                 'id' => 307,
                 'code' => NULL,
@@ -7265,7 +7313,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            453 => 
+            456 => 
             array (
                 'id' => 306,
                 'code' => NULL,
@@ -7281,7 +7329,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            454 => 
+            457 => 
             array (
                 'id' => 305,
                 'code' => NULL,
@@ -7297,7 +7345,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            455 => 
+            458 => 
             array (
                 'id' => 304,
                 'code' => NULL,
@@ -7313,7 +7361,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            456 => 
+            459 => 
             array (
                 'id' => 303,
                 'code' => NULL,
@@ -7329,7 +7377,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            457 => 
+            460 => 
             array (
                 'id' => 302,
                 'code' => NULL,
@@ -7345,7 +7393,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            458 => 
+            461 => 
             array (
                 'id' => 301,
                 'code' => NULL,
@@ -7361,7 +7409,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            459 => 
+            462 => 
             array (
                 'id' => 300,
                 'code' => NULL,
@@ -7377,7 +7425,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            460 => 
+            463 => 
             array (
                 'id' => 299,
                 'code' => NULL,
@@ -7393,7 +7441,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            461 => 
+            464 => 
             array (
                 'id' => 298,
                 'code' => NULL,
@@ -7409,7 +7457,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            462 => 
+            465 => 
             array (
                 'id' => 297,
                 'code' => NULL,
@@ -7425,7 +7473,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            463 => 
+            466 => 
             array (
                 'id' => 296,
                 'code' => NULL,
@@ -7441,7 +7489,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            464 => 
+            467 => 
             array (
                 'id' => 295,
                 'code' => NULL,
@@ -7457,7 +7505,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            465 => 
+            468 => 
             array (
                 'id' => 294,
                 'code' => NULL,
@@ -7473,7 +7521,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            466 => 
+            469 => 
             array (
                 'id' => 293,
                 'code' => NULL,
@@ -7489,7 +7537,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            467 => 
+            470 => 
             array (
                 'id' => 292,
                 'code' => NULL,
@@ -7505,7 +7553,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            468 => 
+            471 => 
             array (
                 'id' => 291,
                 'code' => NULL,
@@ -7521,7 +7569,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            469 => 
+            472 => 
             array (
                 'id' => 290,
                 'code' => NULL,
@@ -7537,7 +7585,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            470 => 
+            473 => 
             array (
                 'id' => 289,
                 'code' => NULL,
@@ -7553,7 +7601,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            471 => 
+            474 => 
             array (
                 'id' => 288,
                 'code' => NULL,
@@ -7569,7 +7617,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            472 => 
+            475 => 
             array (
                 'id' => 287,
                 'code' => NULL,
@@ -7585,7 +7633,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            473 => 
+            476 => 
             array (
                 'id' => 286,
                 'code' => NULL,
@@ -7601,7 +7649,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            474 => 
+            477 => 
             array (
                 'id' => 285,
                 'code' => NULL,
@@ -7617,7 +7665,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            475 => 
+            478 => 
             array (
                 'id' => 284,
                 'code' => NULL,
@@ -7633,7 +7681,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            476 => 
+            479 => 
             array (
                 'id' => 283,
                 'code' => NULL,
@@ -7649,7 +7697,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            477 => 
+            480 => 
             array (
                 'id' => 282,
                 'code' => NULL,
@@ -7665,7 +7713,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            478 => 
+            481 => 
             array (
                 'id' => 281,
                 'code' => NULL,
@@ -7681,7 +7729,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            479 => 
+            482 => 
             array (
                 'id' => 280,
                 'code' => NULL,
@@ -7697,7 +7745,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            480 => 
+            483 => 
             array (
                 'id' => 279,
                 'code' => NULL,
@@ -7713,7 +7761,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            481 => 
+            484 => 
             array (
                 'id' => 278,
                 'code' => NULL,
@@ -7729,7 +7777,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            482 => 
+            485 => 
             array (
                 'id' => 277,
                 'code' => NULL,
@@ -7745,7 +7793,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            483 => 
+            486 => 
             array (
                 'id' => 276,
                 'code' => NULL,
@@ -7761,7 +7809,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            484 => 
+            487 => 
             array (
                 'id' => 275,
                 'code' => NULL,
@@ -7777,7 +7825,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            485 => 
+            488 => 
             array (
                 'id' => 274,
                 'code' => NULL,
@@ -7793,7 +7841,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            486 => 
+            489 => 
             array (
                 'id' => 273,
                 'code' => NULL,
@@ -7809,7 +7857,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            487 => 
+            490 => 
             array (
                 'id' => 272,
                 'code' => NULL,
@@ -7825,7 +7873,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            488 => 
+            491 => 
             array (
                 'id' => 271,
                 'code' => NULL,
@@ -7841,7 +7889,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            489 => 
+            492 => 
             array (
                 'id' => 270,
                 'code' => NULL,
@@ -7857,7 +7905,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            490 => 
+            493 => 
             array (
                 'id' => 269,
                 'code' => NULL,
@@ -7873,7 +7921,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            491 => 
+            494 => 
             array (
                 'id' => 268,
                 'code' => NULL,
@@ -7889,7 +7937,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            492 => 
+            495 => 
             array (
                 'id' => 267,
                 'code' => NULL,
@@ -7905,7 +7953,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            493 => 
+            496 => 
             array (
                 'id' => 266,
                 'code' => NULL,
@@ -7921,7 +7969,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            494 => 
+            497 => 
             array (
                 'id' => 265,
                 'code' => NULL,
@@ -7937,7 +7985,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            495 => 
+            498 => 
             array (
                 'id' => 264,
                 'code' => NULL,
@@ -7953,7 +8001,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            496 => 
+            499 => 
             array (
                 'id' => 263,
                 'code' => NULL,
@@ -7969,7 +8017,9 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            497 => 
+        ));
+        \DB::connection('pgsql')->table('skills')->insert(array (
+            0 => 
             array (
                 'id' => 262,
                 'code' => NULL,
@@ -7985,7 +8035,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            498 => 
+            1 => 
             array (
                 'id' => 261,
                 'code' => NULL,
@@ -8001,7 +8051,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            499 => 
+            2 => 
             array (
                 'id' => 260,
                 'code' => NULL,
@@ -8017,9 +8067,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-        ));
-        \DB::connection('pgsql')->table('skills')->insert(array (
-            0 => 
+            3 => 
             array (
                 'id' => 259,
                 'code' => NULL,
@@ -8035,7 +8083,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            1 => 
+            4 => 
             array (
                 'id' => 258,
                 'code' => NULL,
@@ -8051,7 +8099,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
+            5 => 
             array (
                 'id' => 257,
                 'code' => NULL,
@@ -8067,7 +8115,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            3 => 
+            6 => 
             array (
                 'id' => 256,
                 'code' => NULL,
@@ -8083,7 +8131,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            4 => 
+            7 => 
             array (
                 'id' => 255,
                 'code' => NULL,
@@ -8099,7 +8147,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            5 => 
+            8 => 
             array (
                 'id' => 254,
                 'code' => NULL,
@@ -8115,7 +8163,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            6 => 
+            9 => 
             array (
                 'id' => 253,
                 'code' => NULL,
@@ -8131,7 +8179,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            7 => 
+            10 => 
             array (
                 'id' => 252,
                 'code' => NULL,
@@ -8147,7 +8195,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            8 => 
+            11 => 
             array (
                 'id' => 251,
                 'code' => NULL,
@@ -8163,7 +8211,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            9 => 
+            12 => 
             array (
                 'id' => 250,
                 'code' => NULL,
@@ -8179,7 +8227,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            10 => 
+            13 => 
             array (
                 'id' => 249,
                 'code' => NULL,
@@ -8195,7 +8243,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            11 => 
+            14 => 
             array (
                 'id' => 248,
                 'code' => NULL,
@@ -8211,7 +8259,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            12 => 
+            15 => 
             array (
                 'id' => 247,
                 'code' => NULL,
@@ -8227,7 +8275,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            13 => 
+            16 => 
             array (
                 'id' => 246,
                 'code' => NULL,
@@ -8243,7 +8291,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            14 => 
+            17 => 
             array (
                 'id' => 245,
                 'code' => NULL,
@@ -8259,7 +8307,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            15 => 
+            18 => 
             array (
                 'id' => 244,
                 'code' => NULL,
@@ -8275,7 +8323,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            16 => 
+            19 => 
             array (
                 'id' => 243,
                 'code' => NULL,
@@ -8291,7 +8339,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            17 => 
+            20 => 
             array (
                 'id' => 242,
                 'code' => NULL,
@@ -8307,7 +8355,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            18 => 
+            21 => 
             array (
                 'id' => 241,
                 'code' => NULL,
@@ -8323,7 +8371,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            19 => 
+            22 => 
             array (
                 'id' => 240,
                 'code' => NULL,
@@ -8339,7 +8387,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            20 => 
+            23 => 
             array (
                 'id' => 239,
                 'code' => NULL,
@@ -8355,7 +8403,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            21 => 
+            24 => 
             array (
                 'id' => 238,
                 'code' => NULL,
@@ -8371,7 +8419,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            22 => 
+            25 => 
             array (
                 'id' => 237,
                 'code' => NULL,
@@ -8387,7 +8435,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            23 => 
+            26 => 
             array (
                 'id' => 236,
                 'code' => NULL,
@@ -8403,7 +8451,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            24 => 
+            27 => 
             array (
                 'id' => 235,
                 'code' => NULL,
@@ -8419,7 +8467,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            25 => 
+            28 => 
             array (
                 'id' => 234,
                 'code' => NULL,
@@ -8435,7 +8483,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            26 => 
+            29 => 
             array (
                 'id' => 233,
                 'code' => NULL,
@@ -8451,7 +8499,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            27 => 
+            30 => 
             array (
                 'id' => 232,
                 'code' => NULL,
@@ -8467,7 +8515,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            28 => 
+            31 => 
             array (
                 'id' => 231,
                 'code' => NULL,
@@ -8483,7 +8531,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            29 => 
+            32 => 
             array (
                 'id' => 230,
                 'code' => NULL,
@@ -8499,7 +8547,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            30 => 
+            33 => 
             array (
                 'id' => 229,
                 'code' => NULL,
@@ -8515,7 +8563,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            31 => 
+            34 => 
             array (
                 'id' => 228,
                 'code' => NULL,
@@ -8531,7 +8579,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            32 => 
+            35 => 
             array (
                 'id' => 227,
                 'code' => NULL,
@@ -8547,7 +8595,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            33 => 
+            36 => 
             array (
                 'id' => 226,
                 'code' => NULL,
@@ -8563,7 +8611,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            34 => 
+            37 => 
             array (
                 'id' => 225,
                 'code' => NULL,
@@ -8579,7 +8627,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            35 => 
+            38 => 
             array (
                 'id' => 224,
                 'code' => NULL,
@@ -8595,7 +8643,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            36 => 
+            39 => 
             array (
                 'id' => 223,
                 'code' => NULL,
@@ -8611,7 +8659,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            37 => 
+            40 => 
             array (
                 'id' => 222,
                 'code' => NULL,
@@ -8627,7 +8675,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            38 => 
+            41 => 
             array (
                 'id' => 221,
                 'code' => NULL,
@@ -8643,7 +8691,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            39 => 
+            42 => 
             array (
                 'id' => 220,
                 'code' => NULL,
@@ -8659,7 +8707,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            40 => 
+            43 => 
             array (
                 'id' => 219,
                 'code' => NULL,
@@ -8675,7 +8723,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            41 => 
+            44 => 
             array (
                 'id' => 218,
                 'code' => NULL,
@@ -8691,7 +8739,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            42 => 
+            45 => 
             array (
                 'id' => 217,
                 'code' => NULL,
@@ -8707,7 +8755,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            43 => 
+            46 => 
             array (
                 'id' => 216,
                 'code' => NULL,
@@ -8723,7 +8771,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            44 => 
+            47 => 
             array (
                 'id' => 215,
                 'code' => NULL,
@@ -8739,7 +8787,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            45 => 
+            48 => 
             array (
                 'id' => 214,
                 'code' => NULL,
@@ -8755,7 +8803,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            46 => 
+            49 => 
             array (
                 'id' => 213,
                 'code' => NULL,
@@ -8771,7 +8819,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            47 => 
+            50 => 
             array (
                 'id' => 212,
                 'code' => NULL,
@@ -8787,7 +8835,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            48 => 
+            51 => 
             array (
                 'id' => 211,
                 'code' => NULL,
@@ -8803,7 +8851,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            49 => 
+            52 => 
             array (
                 'id' => 210,
                 'code' => NULL,
@@ -8819,7 +8867,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            50 => 
+            53 => 
             array (
                 'id' => 209,
                 'code' => NULL,
@@ -8835,7 +8883,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            51 => 
+            54 => 
             array (
                 'id' => 208,
                 'code' => NULL,
@@ -8851,7 +8899,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            52 => 
+            55 => 
             array (
                 'id' => 207,
                 'code' => NULL,
@@ -8867,7 +8915,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            53 => 
+            56 => 
             array (
                 'id' => 206,
                 'code' => NULL,
@@ -8883,7 +8931,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            54 => 
+            57 => 
             array (
                 'id' => 205,
                 'code' => NULL,
@@ -8899,7 +8947,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            55 => 
+            58 => 
             array (
                 'id' => 204,
                 'code' => NULL,
@@ -8915,7 +8963,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            56 => 
+            59 => 
             array (
                 'id' => 203,
                 'code' => NULL,
@@ -8931,7 +8979,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            57 => 
+            60 => 
             array (
                 'id' => 202,
                 'code' => NULL,
@@ -8947,7 +8995,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            58 => 
+            61 => 
             array (
                 'id' => 201,
                 'code' => NULL,
@@ -8963,7 +9011,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            59 => 
+            62 => 
             array (
                 'id' => 200,
                 'code' => NULL,
@@ -8979,7 +9027,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            60 => 
+            63 => 
             array (
                 'id' => 199,
                 'code' => NULL,
@@ -8995,7 +9043,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:26:03',
             ),
-            61 => 
+            64 => 
             array (
                 'id' => 198,
                 'code' => NULL,
@@ -9011,7 +9059,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:24:50',
             ),
-            62 => 
+            65 => 
             array (
                 'id' => 197,
                 'code' => NULL,
@@ -9020,14 +9068,14 @@ class SkillsTableSeeder extends Seeder
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => NULL,
+                'parent_skill_id' => 39,
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            63 => 
+            66 => 
             array (
                 'id' => 196,
                 'code' => NULL,
@@ -9043,7 +9091,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            64 => 
+            67 => 
             array (
                 'id' => 195,
                 'code' => NULL,
@@ -9059,7 +9107,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            65 => 
+            68 => 
             array (
                 'id' => 194,
                 'code' => NULL,
@@ -9075,12 +9123,12 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            66 => 
+            69 => 
             array (
                 'id' => 193,
                 'code' => NULL,
-                'name' => 'C plus plus',
-                'description' => NULL,
+                'name' => 'SQL',
+                'description' => 'ansi',
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
@@ -9088,10 +9136,10 @@ class SkillsTableSeeder extends Seeder
                 'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2016-09-28 04:25:16',
                 'deleted_at' => NULL,
             ),
-            67 => 
+            70 => 
             array (
                 'id' => 192,
                 'code' => NULL,
@@ -9107,7 +9155,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            68 => 
+            71 => 
             array (
                 'id' => 191,
                 'code' => NULL,
@@ -9123,7 +9171,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            69 => 
+            72 => 
             array (
                 'id' => 190,
                 'code' => NULL,
@@ -9139,7 +9187,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            70 => 
+            73 => 
             array (
                 'id' => 189,
                 'code' => NULL,
@@ -9155,7 +9203,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            71 => 
+            74 => 
             array (
                 'id' => 188,
                 'code' => NULL,
@@ -9171,7 +9219,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            72 => 
+            75 => 
             array (
                 'id' => 187,
                 'code' => NULL,
@@ -9187,7 +9235,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            73 => 
+            76 => 
             array (
                 'id' => 186,
                 'code' => NULL,
@@ -9203,7 +9251,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            74 => 
+            77 => 
             array (
                 'id' => 185,
                 'code' => NULL,
@@ -9219,7 +9267,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            75 => 
+            78 => 
             array (
                 'id' => 184,
                 'code' => NULL,
@@ -9235,7 +9283,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            76 => 
+            79 => 
             array (
                 'id' => 183,
                 'code' => NULL,
@@ -9251,7 +9299,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            77 => 
+            80 => 
             array (
                 'id' => 182,
                 'code' => NULL,
@@ -9267,7 +9315,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            78 => 
+            81 => 
             array (
                 'id' => 181,
                 'code' => NULL,
@@ -9283,7 +9331,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            79 => 
+            82 => 
             array (
                 'id' => 180,
                 'code' => NULL,
@@ -9299,7 +9347,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            80 => 
+            83 => 
             array (
                 'id' => 179,
                 'code' => NULL,
@@ -9315,7 +9363,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            81 => 
+            84 => 
             array (
                 'id' => 178,
                 'code' => NULL,
@@ -9331,7 +9379,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            82 => 
+            85 => 
             array (
                 'id' => 177,
                 'code' => NULL,
@@ -9347,7 +9395,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            83 => 
+            86 => 
             array (
                 'id' => 176,
                 'code' => NULL,
@@ -9363,7 +9411,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            84 => 
+            87 => 
             array (
                 'id' => 175,
                 'code' => NULL,
@@ -9379,7 +9427,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            85 => 
+            88 => 
             array (
                 'id' => 174,
                 'code' => NULL,
@@ -9395,7 +9443,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            86 => 
+            89 => 
             array (
                 'id' => 173,
                 'code' => NULL,
@@ -9411,7 +9459,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            87 => 
+            90 => 
             array (
                 'id' => 172,
                 'code' => NULL,
@@ -9427,7 +9475,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            88 => 
+            91 => 
             array (
                 'id' => 171,
                 'code' => NULL,
@@ -9443,7 +9491,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            89 => 
+            92 => 
             array (
                 'id' => 170,
                 'code' => NULL,
@@ -9459,7 +9507,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            90 => 
+            93 => 
             array (
                 'id' => 169,
                 'code' => NULL,
@@ -9475,7 +9523,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            91 => 
+            94 => 
             array (
                 'id' => 168,
                 'code' => NULL,
@@ -9491,7 +9539,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            92 => 
+            95 => 
             array (
                 'id' => 167,
                 'code' => NULL,
@@ -9507,7 +9555,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            93 => 
+            96 => 
             array (
                 'id' => 166,
                 'code' => NULL,
@@ -9523,7 +9571,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            94 => 
+            97 => 
             array (
                 'id' => 165,
                 'code' => NULL,
@@ -9539,7 +9587,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            95 => 
+            98 => 
             array (
                 'id' => 164,
                 'code' => NULL,
@@ -9555,7 +9603,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            96 => 
+            99 => 
             array (
                 'id' => 163,
                 'code' => NULL,
@@ -9571,7 +9619,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            97 => 
+            100 => 
             array (
                 'id' => 162,
                 'code' => NULL,
@@ -9587,7 +9635,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            98 => 
+            101 => 
             array (
                 'id' => 161,
                 'code' => NULL,
@@ -9603,7 +9651,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            99 => 
+            102 => 
             array (
                 'id' => 159,
                 'code' => NULL,
@@ -9619,7 +9667,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            100 => 
+            103 => 
             array (
                 'id' => 158,
                 'code' => NULL,
@@ -9635,7 +9683,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            101 => 
+            104 => 
             array (
                 'id' => 157,
                 'code' => NULL,
@@ -9651,12 +9699,12 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            102 => 
+            105 => 
             array (
                 'id' => 156,
                 'code' => NULL,
-                'name' => 'Фреймворки',
-                'description' => NULL,
+                'name' => 'web фреймворки',
+                'description' => '',
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
@@ -9664,10 +9712,10 @@ class SkillsTableSeeder extends Seeder
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2016-09-28 08:04:03',
                 'deleted_at' => NULL,
             ),
-            103 => 
+            106 => 
             array (
                 'id' => 155,
                 'code' => NULL,
@@ -9683,7 +9731,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            104 => 
+            107 => 
             array (
                 'id' => 154,
                 'code' => NULL,
@@ -9699,7 +9747,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            105 => 
+            108 => 
             array (
                 'id' => 153,
                 'code' => NULL,
@@ -9715,7 +9763,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            106 => 
+            109 => 
             array (
                 'id' => 152,
                 'code' => NULL,
@@ -9731,7 +9779,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            107 => 
+            110 => 
             array (
                 'id' => 151,
                 'code' => NULL,
@@ -9747,7 +9795,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            108 => 
+            111 => 
             array (
                 'id' => 150,
                 'code' => NULL,
@@ -9763,7 +9811,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            109 => 
+            112 => 
             array (
                 'id' => 149,
                 'code' => NULL,
@@ -9779,7 +9827,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            110 => 
+            113 => 
             array (
                 'id' => 148,
                 'code' => NULL,
@@ -9795,7 +9843,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            111 => 
+            114 => 
             array (
                 'id' => 147,
                 'code' => NULL,
@@ -9811,7 +9859,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            112 => 
+            115 => 
             array (
                 'id' => 146,
                 'code' => NULL,
@@ -9827,7 +9875,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            113 => 
+            116 => 
             array (
                 'id' => 145,
                 'code' => NULL,
@@ -9843,7 +9891,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            114 => 
+            117 => 
             array (
                 'id' => 144,
                 'code' => NULL,
@@ -9859,7 +9907,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            115 => 
+            118 => 
             array (
                 'id' => 143,
                 'code' => NULL,
@@ -9875,7 +9923,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            116 => 
+            119 => 
             array (
                 'id' => 142,
                 'code' => NULL,
@@ -9891,7 +9939,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            117 => 
+            120 => 
             array (
                 'id' => 141,
                 'code' => NULL,
@@ -9907,7 +9955,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            118 => 
+            121 => 
             array (
                 'id' => 140,
                 'code' => NULL,
@@ -9923,7 +9971,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            119 => 
+            122 => 
             array (
                 'id' => 139,
                 'code' => NULL,
@@ -9939,7 +9987,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            120 => 
+            123 => 
             array (
                 'id' => 138,
                 'code' => NULL,
@@ -9955,7 +10003,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            121 => 
+            124 => 
             array (
                 'id' => 137,
                 'code' => NULL,
@@ -9971,7 +10019,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            122 => 
+            125 => 
             array (
                 'id' => 136,
                 'code' => NULL,
@@ -9987,7 +10035,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            123 => 
+            126 => 
             array (
                 'id' => 135,
                 'code' => NULL,
@@ -10003,7 +10051,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            124 => 
+            127 => 
             array (
                 'id' => 134,
                 'code' => NULL,
@@ -10019,23 +10067,23 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            125 => 
+            128 => 
             array (
                 'id' => 133,
                 'code' => NULL,
-                'name' => 'Методологии',
-                'description' => NULL,
+                'name' => 'Методологии разработки ПО',
+                'description' => '',
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 39,
+                'parent_skill_id' => 703,
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2016-09-28 04:21:17',
                 'deleted_at' => NULL,
             ),
-            126 => 
+            129 => 
             array (
                 'id' => 132,
                 'code' => NULL,
@@ -10051,7 +10099,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            127 => 
+            130 => 
             array (
                 'id' => 131,
                 'code' => NULL,
@@ -10067,7 +10115,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            128 => 
+            131 => 
             array (
                 'id' => 130,
                 'code' => NULL,
@@ -10083,7 +10131,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            129 => 
+            132 => 
             array (
                 'id' => 129,
                 'code' => NULL,
@@ -10099,7 +10147,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            130 => 
+            133 => 
             array (
                 'id' => 128,
                 'code' => NULL,
@@ -10115,7 +10163,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            131 => 
+            134 => 
             array (
                 'id' => 127,
                 'code' => NULL,
@@ -10131,7 +10179,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            132 => 
+            135 => 
             array (
                 'id' => 126,
                 'code' => NULL,
@@ -10147,7 +10195,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            133 => 
+            136 => 
             array (
                 'id' => 125,
                 'code' => NULL,
@@ -10163,7 +10211,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            134 => 
+            137 => 
             array (
                 'id' => 124,
                 'code' => NULL,
@@ -10179,7 +10227,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            135 => 
+            138 => 
             array (
                 'id' => 123,
                 'code' => NULL,
@@ -10195,7 +10243,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            136 => 
+            139 => 
             array (
                 'id' => 122,
                 'code' => NULL,
@@ -10211,7 +10259,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            137 => 
+            140 => 
             array (
                 'id' => 121,
                 'code' => NULL,
@@ -10227,7 +10275,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            138 => 
+            141 => 
             array (
                 'id' => 120,
                 'code' => NULL,
@@ -10243,7 +10291,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            139 => 
+            142 => 
             array (
                 'id' => 119,
                 'code' => NULL,
@@ -10259,7 +10307,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            140 => 
+            143 => 
             array (
                 'id' => 118,
                 'code' => NULL,
@@ -10275,7 +10323,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            141 => 
+            144 => 
             array (
                 'id' => 117,
                 'code' => NULL,
@@ -10284,14 +10332,14 @@ class SkillsTableSeeder extends Seeder
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => 39,
+                'parent_skill_id' => 635,
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            142 => 
+            145 => 
             array (
                 'id' => 116,
                 'code' => NULL,
@@ -10307,7 +10355,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            143 => 
+            146 => 
             array (
                 'id' => 115,
                 'code' => NULL,
@@ -10323,7 +10371,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            144 => 
+            147 => 
             array (
                 'id' => 114,
                 'code' => NULL,
@@ -10339,7 +10387,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            145 => 
+            148 => 
             array (
                 'id' => 113,
                 'code' => NULL,
@@ -10355,7 +10403,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            146 => 
+            149 => 
             array (
                 'id' => 112,
                 'code' => NULL,
@@ -10371,7 +10419,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            147 => 
+            150 => 
             array (
                 'id' => 111,
                 'code' => NULL,
@@ -10387,7 +10435,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            148 => 
+            151 => 
             array (
                 'id' => 110,
                 'code' => NULL,
@@ -10403,7 +10451,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            149 => 
+            152 => 
             array (
                 'id' => 109,
                 'code' => NULL,
@@ -10419,7 +10467,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            150 => 
+            153 => 
             array (
                 'id' => 108,
                 'code' => NULL,
@@ -10435,7 +10483,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            151 => 
+            154 => 
             array (
                 'id' => 107,
                 'code' => NULL,
@@ -10451,7 +10499,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            152 => 
+            155 => 
             array (
                 'id' => 106,
                 'code' => NULL,
@@ -10467,7 +10515,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            153 => 
+            156 => 
             array (
                 'id' => 105,
                 'code' => NULL,
@@ -10483,7 +10531,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            154 => 
+            157 => 
             array (
                 'id' => 104,
                 'code' => NULL,
@@ -10499,7 +10547,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            155 => 
+            158 => 
             array (
                 'id' => 103,
                 'code' => NULL,
@@ -10515,7 +10563,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            156 => 
+            159 => 
             array (
                 'id' => 102,
                 'code' => NULL,
@@ -10531,7 +10579,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            157 => 
+            160 => 
             array (
                 'id' => 101,
                 'code' => NULL,
@@ -10547,7 +10595,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            158 => 
+            161 => 
             array (
                 'id' => 100,
                 'code' => NULL,
@@ -10563,7 +10611,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            159 => 
+            162 => 
             array (
                 'id' => 99,
                 'code' => NULL,
@@ -10579,7 +10627,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            160 => 
+            163 => 
             array (
                 'id' => 98,
                 'code' => NULL,
@@ -10595,7 +10643,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            161 => 
+            164 => 
             array (
                 'id' => 97,
                 'code' => NULL,
@@ -10611,7 +10659,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            162 => 
+            165 => 
             array (
                 'id' => 96,
                 'code' => NULL,
@@ -10627,7 +10675,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            163 => 
+            166 => 
             array (
                 'id' => 95,
                 'code' => NULL,
@@ -10643,7 +10691,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            164 => 
+            167 => 
             array (
                 'id' => 94,
                 'code' => NULL,
@@ -10659,7 +10707,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            165 => 
+            168 => 
             array (
                 'id' => 93,
                 'code' => NULL,
@@ -10675,7 +10723,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            166 => 
+            169 => 
             array (
                 'id' => 92,
                 'code' => NULL,
@@ -10691,7 +10739,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            167 => 
+            170 => 
             array (
                 'id' => 91,
                 'code' => NULL,
@@ -10707,7 +10755,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            168 => 
+            171 => 
             array (
                 'id' => 90,
                 'code' => NULL,
@@ -10723,7 +10771,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            169 => 
+            172 => 
             array (
                 'id' => 89,
                 'code' => NULL,
@@ -10739,7 +10787,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            170 => 
+            173 => 
             array (
                 'id' => 88,
                 'code' => NULL,
@@ -10755,7 +10803,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            171 => 
+            174 => 
             array (
                 'id' => 87,
                 'code' => NULL,
@@ -10771,7 +10819,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            172 => 
+            175 => 
             array (
                 'id' => 86,
                 'code' => NULL,
@@ -10787,7 +10835,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            173 => 
+            176 => 
             array (
                 'id' => 85,
                 'code' => NULL,
@@ -10803,7 +10851,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            174 => 
+            177 => 
             array (
                 'id' => 84,
                 'code' => NULL,
@@ -10819,7 +10867,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            175 => 
+            178 => 
             array (
                 'id' => 83,
                 'code' => NULL,
@@ -10835,7 +10883,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            176 => 
+            179 => 
             array (
                 'id' => 82,
                 'code' => NULL,
@@ -10851,7 +10899,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            177 => 
+            180 => 
             array (
                 'id' => 81,
                 'code' => NULL,
@@ -10867,7 +10915,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            178 => 
+            181 => 
             array (
                 'id' => 80,
                 'code' => NULL,
@@ -10883,7 +10931,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            179 => 
+            182 => 
             array (
                 'id' => 79,
                 'code' => NULL,
@@ -10899,7 +10947,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            180 => 
+            183 => 
             array (
                 'id' => 78,
                 'code' => NULL,
@@ -10915,7 +10963,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            181 => 
+            184 => 
             array (
                 'id' => 77,
                 'code' => NULL,
@@ -10931,7 +10979,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            182 => 
+            185 => 
             array (
                 'id' => 76,
                 'code' => NULL,
@@ -10947,7 +10995,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            183 => 
+            186 => 
             array (
                 'id' => 75,
                 'code' => NULL,
@@ -10963,7 +11011,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            184 => 
+            187 => 
             array (
                 'id' => 74,
                 'code' => NULL,
@@ -10979,7 +11027,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            185 => 
+            188 => 
             array (
                 'id' => 73,
                 'code' => NULL,
@@ -10995,7 +11043,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            186 => 
+            189 => 
             array (
                 'id' => 72,
                 'code' => NULL,
@@ -11011,7 +11059,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            187 => 
+            190 => 
             array (
                 'id' => 71,
                 'code' => NULL,
@@ -11027,7 +11075,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            188 => 
+            191 => 
             array (
                 'id' => 70,
                 'code' => NULL,
@@ -11043,7 +11091,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            189 => 
+            192 => 
             array (
                 'id' => 69,
                 'code' => NULL,
@@ -11059,7 +11107,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            190 => 
+            193 => 
             array (
                 'id' => 68,
                 'code' => NULL,
@@ -11075,7 +11123,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            191 => 
+            194 => 
             array (
                 'id' => 67,
                 'code' => NULL,
@@ -11091,7 +11139,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            192 => 
+            195 => 
             array (
                 'id' => 66,
                 'code' => NULL,
@@ -11107,7 +11155,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            193 => 
+            196 => 
             array (
                 'id' => 65,
                 'code' => NULL,
@@ -11123,7 +11171,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            194 => 
+            197 => 
             array (
                 'id' => 64,
                 'code' => NULL,
@@ -11139,7 +11187,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            195 => 
+            198 => 
             array (
                 'id' => 63,
                 'code' => NULL,
@@ -11155,7 +11203,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            196 => 
+            199 => 
             array (
                 'id' => 62,
                 'code' => NULL,
@@ -11171,7 +11219,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            197 => 
+            200 => 
             array (
                 'id' => 61,
                 'code' => NULL,
@@ -11187,7 +11235,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            198 => 
+            201 => 
             array (
                 'id' => 60,
                 'code' => NULL,
@@ -11203,7 +11251,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            199 => 
+            202 => 
             array (
                 'id' => 59,
                 'code' => NULL,
@@ -11219,7 +11267,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            200 => 
+            203 => 
             array (
                 'id' => 58,
                 'code' => NULL,
@@ -11235,7 +11283,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            201 => 
+            204 => 
             array (
                 'id' => 57,
                 'code' => NULL,
@@ -11251,7 +11299,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            202 => 
+            205 => 
             array (
                 'id' => 56,
                 'code' => NULL,
@@ -11267,7 +11315,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            203 => 
+            206 => 
             array (
                 'id' => 55,
                 'code' => NULL,
@@ -11283,7 +11331,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            204 => 
+            207 => 
             array (
                 'id' => 54,
                 'code' => NULL,
@@ -11299,7 +11347,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            205 => 
+            208 => 
             array (
                 'id' => 53,
                 'code' => NULL,
@@ -11315,7 +11363,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            206 => 
+            209 => 
             array (
                 'id' => 52,
                 'code' => NULL,
@@ -11331,7 +11379,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            207 => 
+            210 => 
             array (
                 'id' => 51,
                 'code' => NULL,
@@ -11347,7 +11395,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 15:32:16',
             ),
-            208 => 
+            211 => 
             array (
                 'id' => 50,
                 'code' => NULL,
@@ -11363,7 +11411,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            209 => 
+            212 => 
             array (
                 'id' => 49,
                 'code' => NULL,
@@ -11379,7 +11427,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            210 => 
+            213 => 
             array (
                 'id' => 48,
                 'code' => NULL,
@@ -11395,7 +11443,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            211 => 
+            214 => 
             array (
                 'id' => 47,
                 'code' => NULL,
@@ -11411,7 +11459,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            212 => 
+            215 => 
             array (
                 'id' => 46,
                 'code' => NULL,
@@ -11427,12 +11475,12 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            213 => 
+            216 => 
             array (
                 'id' => 45,
                 'code' => NULL,
-                'name' => 'Cервера приложений',
-                'description' => NULL,
+                'name' => 'Сервера приложений',
+                'description' => '',
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
@@ -11440,10 +11488,10 @@ class SkillsTableSeeder extends Seeder
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2016-09-28 07:54:06',
                 'deleted_at' => NULL,
             ),
-            214 => 
+            217 => 
             array (
                 'id' => 44,
                 'code' => NULL,
@@ -11459,7 +11507,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            215 => 
+            218 => 
             array (
                 'id' => 43,
                 'code' => NULL,
@@ -11475,7 +11523,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            216 => 
+            219 => 
             array (
                 'id' => 42,
                 'code' => NULL,
@@ -11491,7 +11539,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            217 => 
+            220 => 
             array (
                 'id' => 41,
                 'code' => NULL,
@@ -11507,7 +11555,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            218 => 
+            221 => 
             array (
                 'id' => 40,
                 'code' => NULL,
@@ -11523,7 +11571,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            219 => 
+            222 => 
             array (
                 'id' => 39,
                 'code' => NULL,
@@ -11532,14 +11580,14 @@ class SkillsTableSeeder extends Seeder
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
-                'parent_skill_id' => NULL,
+                'parent_skill_id' => 635,
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2016-09-28 04:19:44',
                 'deleted_at' => NULL,
             ),
-            220 => 
+            223 => 
             array (
                 'id' => 38,
                 'code' => NULL,
@@ -11549,13 +11597,13 @@ class SkillsTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => NULL,
                 'parent_skill_id' => 29,
-                'appoint' => false,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            221 => 
+            224 => 
             array (
                 'id' => 37,
                 'code' => NULL,
@@ -11565,13 +11613,13 @@ class SkillsTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => NULL,
                 'parent_skill_id' => 29,
-                'appoint' => false,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            222 => 
+            225 => 
             array (
                 'id' => 36,
                 'code' => NULL,
@@ -11581,13 +11629,13 @@ class SkillsTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => NULL,
                 'parent_skill_id' => 29,
-                'appoint' => false,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            223 => 
+            226 => 
             array (
                 'id' => 35,
                 'code' => NULL,
@@ -11597,13 +11645,13 @@ class SkillsTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => NULL,
                 'parent_skill_id' => 29,
-                'appoint' => false,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            224 => 
+            227 => 
             array (
                 'id' => 34,
                 'code' => NULL,
@@ -11613,29 +11661,29 @@ class SkillsTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => NULL,
                 'parent_skill_id' => 29,
-                'appoint' => false,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            225 => 
+            228 => 
             array (
                 'id' => 33,
                 'code' => NULL,
-            'name' => 'Умение искать ошибки (может как-то перефразировать)',
-                'description' => NULL,
+            'name' => 'Умение искать ошибки (траблшутинг)',
+                'description' => '',
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
                 'parent_skill_id' => 29,
-                'appoint' => false,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2016-09-28 09:57:04',
                 'deleted_at' => NULL,
             ),
-            226 => 
+            229 => 
             array (
                 'id' => 32,
                 'code' => NULL,
@@ -11645,13 +11693,13 @@ class SkillsTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => NULL,
                 'parent_skill_id' => 29,
-                'appoint' => false,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            227 => 
+            230 => 
             array (
                 'id' => 31,
                 'code' => NULL,
@@ -11661,13 +11709,13 @@ class SkillsTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => NULL,
                 'parent_skill_id' => 29,
-                'appoint' => false,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            228 => 
+            231 => 
             array (
                 'id' => 30,
                 'code' => NULL,
@@ -11677,18 +11725,18 @@ class SkillsTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => NULL,
                 'parent_skill_id' => 29,
-                'appoint' => false,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            229 => 
+            232 => 
             array (
                 'id' => 29,
                 'code' => NULL,
-                'name' => 'личностные навыки',
-                'description' => NULL,
+                'name' => 'Личностные навыки',
+                'description' => '',
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
@@ -11696,10 +11744,10 @@ class SkillsTableSeeder extends Seeder
                 'appoint' => false,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2016-09-30 04:49:53',
                 'deleted_at' => NULL,
             ),
-            230 => 
+            233 => 
             array (
                 'id' => 28,
                 'code' => NULL,
@@ -11709,13 +11757,13 @@ class SkillsTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => NULL,
                 'parent_skill_id' => 10,
-                'appoint' => false,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            231 => 
+            234 => 
             array (
                 'id' => 27,
                 'code' => NULL,
@@ -11725,13 +11773,13 @@ class SkillsTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => NULL,
                 'parent_skill_id' => 10,
-                'appoint' => false,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            232 => 
+            235 => 
             array (
                 'id' => 26,
                 'code' => NULL,
@@ -11741,13 +11789,13 @@ class SkillsTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => NULL,
                 'parent_skill_id' => 10,
-                'appoint' => false,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            233 => 
+            236 => 
             array (
                 'id' => 25,
                 'code' => NULL,
@@ -11763,7 +11811,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            234 => 
+            237 => 
             array (
                 'id' => 24,
                 'code' => NULL,
@@ -11779,7 +11827,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            235 => 
+            238 => 
             array (
                 'id' => 23,
                 'code' => NULL,
@@ -11795,7 +11843,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            236 => 
+            239 => 
             array (
                 'id' => 22,
                 'code' => NULL,
@@ -11811,7 +11859,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            237 => 
+            240 => 
             array (
                 'id' => 21,
                 'code' => NULL,
@@ -11827,7 +11875,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            238 => 
+            241 => 
             array (
                 'id' => 20,
                 'code' => NULL,
@@ -11843,7 +11891,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            239 => 
+            242 => 
             array (
                 'id' => 19,
                 'code' => NULL,
@@ -11859,7 +11907,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            240 => 
+            243 => 
             array (
                 'id' => 18,
                 'code' => NULL,
@@ -11875,7 +11923,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            241 => 
+            244 => 
             array (
                 'id' => 17,
                 'code' => NULL,
@@ -11891,7 +11939,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            242 => 
+            245 => 
             array (
                 'id' => 16,
                 'code' => NULL,
@@ -11907,7 +11955,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            243 => 
+            246 => 
             array (
                 'id' => 15,
                 'code' => NULL,
@@ -11923,7 +11971,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            244 => 
+            247 => 
             array (
                 'id' => 14,
                 'code' => NULL,
@@ -11939,7 +11987,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            245 => 
+            248 => 
             array (
                 'id' => 13,
                 'code' => NULL,
@@ -11955,7 +12003,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            246 => 
+            249 => 
             array (
                 'id' => 12,
                 'code' => NULL,
@@ -11965,13 +12013,13 @@ class SkillsTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => NULL,
                 'parent_skill_id' => 10,
-                'appoint' => false,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            247 => 
+            250 => 
             array (
                 'id' => 11,
                 'code' => NULL,
@@ -11981,13 +12029,13 @@ class SkillsTableSeeder extends Seeder
                 'options' => NULL,
                 'currency_id' => NULL,
                 'parent_skill_id' => 10,
-                'appoint' => false,
+                'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            248 => 
+            251 => 
             array (
                 'id' => 10,
                 'code' => NULL,
@@ -12003,7 +12051,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            249 => 
+            252 => 
             array (
                 'id' => 8,
                 'code' => NULL,
@@ -12019,7 +12067,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 14:51:16',
             ),
-            250 => 
+            253 => 
             array (
                 'id' => 6,
                 'code' => NULL,
@@ -12035,7 +12083,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 14:51:16',
             ),
-            251 => 
+            254 => 
             array (
                 'id' => 5,
                 'code' => NULL,
@@ -12051,7 +12099,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 14:51:16',
             ),
-            252 => 
+            255 => 
             array (
                 'id' => 4,
                 'code' => NULL,
@@ -12067,7 +12115,7 @@ class SkillsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => '2016-09-19 14:51:16',
             ),
-            253 => 
+            256 => 
             array (
                 'id' => 1,
                 'code' => NULL,

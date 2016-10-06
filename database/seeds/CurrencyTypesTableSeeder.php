@@ -22,7 +22,7 @@ class CurrencyTypesTableSeeder extends Seeder
                 'id' => 13,
                 'code' => 'body',
                 'name' => 'слоты для инвентаря',
-                'description' => 'слоты для носимого инвентаря (тела игрока)',
+            'description' => 'слоты для носимого инвентаря (тела игрока)',
                 'unit' => '',
                 'created_at' => NULL,
                 'updated_at' => NULL,
@@ -86,8 +86,8 @@ class CurrencyTypesTableSeeder extends Seeder
             6 => 
             array (
                 'id' => 4,
-                'code' => 'armor',
-                'name' => 'Шмот',
+                'code' => 'inventary',
+                'name' => 'Инвентарь',
                 'description' => NULL,
                 'unit' => 'шт',
                 'created_at' => NULL,
@@ -112,6 +112,17 @@ class CurrencyTypesTableSeeder extends Seeder
                 'name' => 'Платёжные балансы',
                 'description' => 'Платёжные балансы, такие как gold, mana и т.п.',
                 'unit' => 'Тугриков',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            9 => 
+            array (
+                'id' => 1,
+                'code' => 'armor',
+                'name' => 'Шмот',
+                'description' => 'то что надевается на персонажа',
+                'unit' => 'шт',
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,

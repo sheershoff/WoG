@@ -98,7 +98,7 @@ class ActionCurrenciesTableSeeder extends Seeder
                 'code' => NULL,
                 'name' => NULL,
                 'description' => NULL,
-                'currency_id' => 4,
+                'currency_id' => 1,
                 'action_id' => 13,
                 'value' => -1,
                 'transaction_user' => true,

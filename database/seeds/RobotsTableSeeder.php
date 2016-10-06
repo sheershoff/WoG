@@ -58,7 +58,7 @@ class RobotsTableSeeder extends Seeder
                 'id' => 3,
                 'code' => NULL,
                 'name' => 'Shop',
-                'description' => 'Игровые магазины',
+                'description' => 'игровые магазины',
                 'user_id' => NULL,
                 'organization_id' => 0,
                 'created_at' => NULL,

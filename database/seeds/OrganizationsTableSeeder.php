@@ -29,6 +29,16 @@ class OrganizationsTableSeeder extends Seeder
             ),
             1 => 
             array (
+                'id' => 4,
+                'code' => 'chaild',
+                'name' => 'Ребёнку',
+                'description' => 'Вознаграждения ребёнку за учёбу и т.п.',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            2 => 
+            array (
                 'id' => 3,
                 'code' => 'Test2                         ',
                 'name' => 'Test2',
@@ -37,7 +47,7 @@ class OrganizationsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
+            3 => 
             array (
                 'id' => 2,
                 'code' => 'Test1                         ',
@@ -47,7 +57,7 @@ class OrganizationsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            3 => 
+            4 => 
             array (
                 'id' => 1,
                 'code' => 'Demo                          ',
@@ -57,7 +67,7 @@ class OrganizationsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            4 => 
+            5 => 
             array (
                 'id' => 0,
                 'code' => 'Def                           ',

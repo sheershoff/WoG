@@ -31,6 +31,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             1 => 
             array (
@@ -46,6 +48,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             2 => 
             array (
@@ -61,6 +65,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             3 => 
             array (
@@ -76,6 +82,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             4 => 
             array (
@@ -91,6 +99,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             5 => 
             array (
@@ -107,6 +117,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             6 => 
             array (
@@ -122,6 +134,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             7 => 
             array (
@@ -137,6 +151,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             8 => 
             array (
@@ -152,6 +168,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             9 => 
             array (
@@ -167,6 +185,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             10 => 
             array (
@@ -182,6 +202,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             11 => 
             array (
@@ -197,6 +219,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             12 => 
             array (
@@ -212,13 +236,15 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             13 => 
             array (
                 'id' => 10,
                 'code' => NULL,
                 'name' => '1000 CLM',
-                'description' => 'Небывалый рекорд!',
+                'description' => 'Не бывалый рекорд!',
                 'function' => NULL,
                 'options' => NULL,
                 'top_menu' => false,
@@ -227,6 +253,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             14 => 
             array (
@@ -242,6 +270,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             15 => 
             array (
@@ -257,6 +287,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             16 => 
             array (
@@ -272,6 +304,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             17 => 
             array (
@@ -287,6 +321,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             18 => 
             array (
@@ -302,6 +338,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             19 => 
             array (
@@ -317,6 +355,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             20 => 
             array (
@@ -332,6 +372,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
             21 => 
             array (
@@ -347,6 +389,8 @@ class CurrenciesTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
+                'size' => NULL,
+                'max_currency_id' => NULL,
             ),
         ));
         
