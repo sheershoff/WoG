@@ -77,14 +77,14 @@ class WogController extends Controller {
 
     public function personalData() {
         $cash = DB::select('select c.name, b.value, ct.unit '
-                        . 'from wog_balances b'
-                        . ' join wog_currencies c on b.currency_id = c.id'
-                        . ' join wog_currency_types ct on c.currency_type_id = ct.id'
+                        . 'from ' . DB::getTablePrefix() . 'balances b'
+                        . ' join ' . DB::getTablePrefix() . 'currencies c on b.currency_id = c.id'
+                        . ' join ' . DB::getTablePrefix() . 'currency_types ct on c.currency_type_id = ct.id'
                         . ' where b.user_id = ' . Auth::user()->id);
         $status = DB::select('select r.name'
-                        . ' from wog_users u'
-                        . ' join wog_role_user ru on u.id = ru.user_id'
-                        . ' join wog_roles r on ru.role_id = r.id '
+                        . ' from ' . DB::getTablePrefix() . 'users u'
+                        . ' join ' . DB::getTablePrefix() . 'role_user ru on u.id = ru.user_id'
+                        . ' join ' . DB::getTablePrefix() . 'roles r on ru.role_id = r.id '
                         . 'where u.id = ' . Auth::user()->id . '');
         return view('personal_data', [
             'status' => $status,

@@ -100,7 +100,7 @@
 
         @if (Session::has('message'))
         <div class="row">
-            <div class=”col-md-12">
+            <div class=”col-md-12 col-md-offset-2">
                 <div class=”alert alert-info”>{{ Session::get('message') }}</div>
             </div>
         </div><!--/row -->
