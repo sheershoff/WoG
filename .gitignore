@@ -10,3 +10,4 @@ composer
 /composer.bat
 composer.lock
 setpath.bat
+/composer.lock
