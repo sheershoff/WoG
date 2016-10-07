@@ -64,7 +64,7 @@ class ActionTransaction extends BaseModelWithSoftDeletes
      */
     public function mailTemplate()
     {
-        return $this->belongsTo('App\Models\MailTemplate');
+        return $this->belongsToMany('App\Models\MailTemplate');
     }
 
     /**
@@ -90,7 +90,7 @@ class ActionTransaction extends BaseModelWithSoftDeletes
             $uq->uni_outkey = $uni_outkey;
             $uq->uni_quest_id = $uni_quest_id;
         }
-        $uq->save(); // <~ this is your "insert" statement
+        return $uq->save(); // <~ this is your "insert" statement
     }
 
     function save(array $options = [])
@@ -101,7 +101,7 @@ class ActionTransaction extends BaseModelWithSoftDeletes
 //            $this->email = mb_convert_case($this->email, MB_CASE_LOWER, "UTF-8");
 //        }
         DB::beginTransaction();
-        $x = $this->actionMailTemplate()->get();
+        $x = $this->action()->first()->mailTemplates()->get();
         if (count($x) > 0) {
             $i = random_int(0, count($x) - 1);
             $this->mail_template_id = $x[$i]->id;
@@ -129,11 +129,11 @@ class ActionTransaction extends BaseModelWithSoftDeletes
                 $b->value = $b->value + $q->value;
                 $b->save();
             }
-            if (count($x) > 0) {
-                Mail::send('emails.welcome', ["title" => $this->mailTemplate()->name, "body" => $this->mailTemplate()->body], function($message) {
-                    $message->to(Auth::user()->email, Auth::user()->name)->subject($this->mailTemplate()->code);
-                });
-            }
+     //       if (count($x) > 0) {
+     //           Mail::send('emails.welcome', ["title" => $this->mailTemplate()->name, "body" => $this->mailTemplate()->body], function($message) {
+     //               $message->to(Auth::user()->email, Auth::user()->name)->subject($this->mailTemplate()->code);
+     //           });
+     //       }
 
             $success = true;
         }
