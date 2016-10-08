@@ -56,11 +56,37 @@
 # Интеграции
 Сейчас это внешний к проекту софт. Скоре всего он будет свой для каждой инсталяции.
 Но на всякий случай в планах интеграция с
+
 ## Работа распределенной команды
-* [https://megamozg.ru/article/25717/](https://megamozg.ru/article/25717/) - инструменты связи. 
+* [https://megamozg.ru/article/25717/](https://megamozg.ru/article/25717/) - инструменты связи.
+
 ## Jira
 * [https://developer.atlassian.com/jiradev/jira-apis/jira-rest-apis/jira-rest-api-tutorials/jira-rest-api-example-basic-authentication](https://developer.atlassian.com/jiradev/jira-apis/jira-rest-apis/jira-rest-api-tutorials/jira-rest-api-example-basic-authentication)
 * [https://danradigan.com/2014/04/12/php-jiras-rest-api/](https://danradigan.com/2014/04/12/php-jiras-rest-api/) 
+
+# install
+git clone https://github.com/xvlady/WoG.git
+cd WoG
+cp .env.example .env
+nano .env
+composer update
+php artisan key:generate
+
+#опционально
+npm update
+bower update
+php artisan vendor:publish #не опубликованые данные компонентов, обычно не требуется
+npm link gulp
+npm link laravel-elixir
+gulp #вытаскиваем из vendor/bower_dl/ то что нужно в паблик, обычно не требуется
+#gulp --production
+
+php artisan migrate:reset #сносим вседанные
+php artisan migrate #заливаем обратно структуру данных
+php artisan migrate --seed #заливаем данных
+./vendor/bin/phpunit #как минимум двигаем последовательности
+
+artisan serve --host= --port=9999
 
 # Авторство
 
