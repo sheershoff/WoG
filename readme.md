@@ -8,9 +8,11 @@
 Техническая база системы вознаграждения и наказания (Повышения Мотивации) использующая игровые механики (Геймификация).
 
 Система не предназначена для того, что б быть:
+
 1. ToDo
 2. BugTracer
 3. Соцсетью
+
 Но успешно может интегрироваться с ними и извлекать/помещать в них данные.
 
 # Цели
@@ -32,7 +34,7 @@
 
 # Технические требования
 * PostgreSQL9.*
-* PHP 5.6.23 или выше (laravel 5.3)
+* PHP 5.6.26 или выше (laravel 5.3)
 ## опционально
 * Отправка и получение почты (pop/smtp) 
 * telegramBot 
@@ -65,6 +67,7 @@
 * [https://danradigan.com/2014/04/12/php-jiras-rest-api/](https://danradigan.com/2014/04/12/php-jiras-rest-api/) 
 
 # install
+```bash
 git clone https://github.com/xvlady/WoG.git
 cd WoG
 cp .env.example .env
@@ -87,6 +90,7 @@ php artisan migrate --seed #заливаем данных
 ./vendor/bin/phpunit #как минимум двигаем последовательности
 
 artisan serve --host= --port=9999
+```
 
 # Авторство
 
