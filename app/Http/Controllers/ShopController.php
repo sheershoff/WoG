@@ -20,7 +20,7 @@ class ShopController extends Controller {
 
     public function index() {
         if (Auth::user()->roleUser->where('role_id', '=', '1')->first()) {
-            $cats = Quest::with('actions')->where('robot_id', '=', 9)->whereExists(function($query)
+            $cats = Quest::with('actions')->where('robot_id', '=', 10)->whereExists(function($query)
             {
                 $query->select('role_user.*')->from('role_user')->where('user_id', '=', Auth::user()->id)->whereRaw('"role_id" = "' . DB::getTablePrefix() .'quests"."role_id"');
             })->get();
