@@ -16,14 +16,19 @@
 <div class="container">
     <div class="row">
         <div class="panel panel-body panel-group">
-        @foreach($items as $item)
-            <div class="col-md-2">
-                <p><b>{{ $item->name }}</b></p>
-                <p>{{ $item->description }}</p>
-                @foreach($item->actionCurrencies as $cur)
-                    <p><i>{{ $cur->currency->name }}: {{ $cur->value }}</i></p>
-                @endforeach
-                <button type="button" class="btn btn-primary buy-item" data-item-id="{{ $item->id }}">Купить</button>
+        @foreach($cats as $items)
+            <h1>{{$items->name}}</h1>
+            <div class="row">
+            @foreach($items->actions as $item)
+                <div class="col-md-2">
+                    <p><b>{{ $item->name }}</b></p>
+                    <p>{{ $item->description }}</p>
+                    @foreach($item->actionCurrencies as $cur)
+                        <p><i>{{ $cur->currency->name }}: {{ $cur->value }}</i></p>
+                    @endforeach
+                    <button type="button" class="btn btn-primary buy-item" data-item-id="{{ $item->id }}">Купить</button>
+                </div>
+            @endforeach 
             </div>
         @endforeach
         </div>
