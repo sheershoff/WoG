@@ -26,7 +26,7 @@ class VladyJiraPostpone extends VladyJiraCommand
      *  запрос для получения списка закрытых багов
      */
     protected $req = [
-//        "maxResults" => 2,
+        "maxResults" => 2,
         "fields" => [
 //            "assignee",
             "issuelinks",
@@ -48,12 +48,26 @@ class VladyJiraPostpone extends VladyJiraCommand
 
     public function checktime()
     {
+        $this->line('Вывод по дате');
         $reqLite = $this->reqLite;
         $reqLite["jql"] = $this->jira->jql["VladyJiraPostponeTime"];
         $issues = $this->jira->getIssues($reqLite);
+        $bar = $this->output->createProgressBar(count($issues)); //количество
         foreach ($issues as $issue) {
+            $bar->advance();
+            $this->line(' ' . $issue["key"] . ' ');
             $this->closePostpone($issue["key"], 'Robot: Дата ожидаемого завершения работ ("Date of study resumption") в прошлом или незаполнена. Подробнее https://confluence.billing.ru/display/GFIMP/POSTPONE');
         }
+    }
+
+    function checkLinkItIsWork($i)
+    {
+        return (isset($i["inwardIssue"]) &&
+                $i["inwardIssue"]["fields"]["issuetype"]["id"] != 10200 &&
+                in_array($i["inwardIssue"]["fields"]["status"]["name"], $this->inWork)) ||
+                (isset($i["outwardIssue"]) &&
+                $i["outwardIssue"]["fields"]["issuetype"]["id"] == 10200 &&
+                in_array($i["outwardIssue"]["fields"]["status"]["name"], $this->inWork));
     }
 
     public function checklink()
@@ -65,23 +79,24 @@ class VladyJiraPostpone extends VladyJiraCommand
             $returnToWork = TRUE;
             if (isset($issue["fields"]["issuelinks"])) {
                 foreach ($issue["fields"]["issuelinks"] as $i) {
-                    if (isset($i["inwardIssue"]) && in_array($i["inwardIssue"]["fields"]["status"]["name"], $this->inWork)) {
+                    if ($this->checkLinkItIsWork($i)) {
                         $returnToWork = FALSE;
                         break;
                     }
                 }
             }
             if ($returnToWork) {
-                $this->closePostpone($issue["key"], "Robot v2: Все связанные задачи выполнены или требуют вашего вмешательства. Подробнее https://confluence.billing.ru/display/GFIMP/POSTPONE");
+                $this->closePostpone($issue["key"], "Robot v3: Все связанные задачи выполнены или требуют вашего вмешательства. Подробнее https://confluence.billing.ru/display/GFIMP/POSTPONE");
             }
         }
     }
 
     protected $reqRequestAndResolved = [
-//        "maxResults" => 2,
+        "maxResults" => 2,
         "fields" => [
 //            "assignee",
             "comment",
+            "resolution",
 //            "summary"
         ],
     ];
@@ -93,18 +108,34 @@ class VladyJiraPostpone extends VladyJiraCommand
         }
         $this->reqRequestAndResolved["jql"] = $this->jira->jql["VladyJiraCloseRequestAndResolved"];
         $issues = $this->jira->getIssues($this->reqRequestAndResolved); //, 'expand=changelog');
+
+        $this->line('RequestAndResolved');
+        $bar = $this->output->createProgressBar(count($issues)); //количество
+
         foreach ($issues as $issue) {
+            $bar->advance();
+            //dd($issue);
             $x = array_pop($issue["fields"]["comment"]["comments"]);
             $body_v1 = 'БагаRobot: Задача находится без движения в течении 7 дней и будет закрыта автоматически через неделю. Если задача актуальна для вас и чего-то ждёт - добавьте комментарий с текущим статусом и причинами ожидания.';
             $body_v2 = 'БагаRobot: Задача находится статусе Request/Resolved без движения в течении 7 дней и будет закрыта автоматически через неделю. Если задача актуальна для вас и чего-то ждёт - добавьте комментарий с текущим статусом и причинами ожидания и задача не будет закрыта до следующего напоминания. https://confluence.billing.ru/display/GFIMP/feedback';
             if (($x["author"]["key"] == "vkhonin") && (($x["body"] == $body_v1) || ($x["body"] == $body_v2))) {
-                $this->jira->addComment($issue["key"], '$body_v2');
-                $req = ["transition" =>
-                    ["id" => 91],
-                ];
-                $this->jira->transitionsIssue($issue["key"], $req);
+                $this->line(' ' . $issue["key"]);
+                //$req = ["transition" => ["id" => 211]];
+                if (!isset($issue["fields"]["resolution"])) {
+                    $req = ["transition" => ["name" => "Closed"], "fields" => ["resolution" => ["id" => "1"]]];
+                    echo " resolution";
+                }
+                if (!$this->jira->transitionsIssue($issue["key"], $req)) {
+                    var_dump($req);
+                    dd(json_decode($this->jira->transitionsIssue($issue["key"], NULL), TRUE));
+                    return;
+                }
+                $this->jira->addComment($issue["key"], 'БагаRobot: Задача закрыта автоматически, т.к. находится в статусе Request/Resolved без движения более 2 недель и реакция на напоминания отсутствует. Подробнее https://confluence.billing.ru/display/GFIMP/feedback');
+                $this->line(' closed');
+            } else {
+                $this->line(' ' . $issue["key"] . ' comment');
+                $this->jira->addComment($issue["key"], $body_v2);
             }
-            $this->jira->addComment($issue["key"], $body_v2);
         }
     }
 
