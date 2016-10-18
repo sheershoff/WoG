@@ -20,10 +20,14 @@ class ShopController extends Controller {
 
     public function index() {
         if (Auth::user()->roleUser->where('role_id', '=', '1')->first()) {
-            $cats = Quest::with('actions')->where('robot_id', '=', 10)->whereExists(function($query)
-            {
-                $query->select('role_user.*')->from('role_user')->where('user_id', '=', Auth::user()->id)->whereRaw('"role_id" = "' . DB::getTablePrefix() .'quests"."role_id"');
-            })->get();
+            $cats = Quest::with(['actions' => function($query){
+                $query->whereExists(function($query2){
+                   $query2->select('action_currencies.*')->from('action_currencies')->whereRaw('"action_id" ="' . DB::getTablePrefix() . 'actions"."id"'); 
+                });
+            }, 'actions.actionCurrencies'])->where('robot_id', '=', 10)
+                            ->whereExists(function($query) {
+                                $query->select('role_user.*')->from('role_user')->where('user_id', '=', Auth::user()->id)->whereRaw('"role_id" = "' . DB::getTablePrefix() . 'quests"."role_id"');
+                            })->get();
             return view('shop', [
                 'cash' => Auth::user()->cash()->get(),
                 'cats' => $cats,
