@@ -2,6 +2,8 @@
 
 namespace App\Console\Commands;
 
+/* список полей проекта или вообще всех */
+
 class VladyJiraFieldList extends VladyJiraCommand
 {
 

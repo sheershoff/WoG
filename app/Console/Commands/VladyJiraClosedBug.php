@@ -5,6 +5,10 @@ namespace App\Console\Commands;
 use App\Models\User;
 use App\Models\ActionTransaction;
 
+/*
+ * Рассчёт бонусов на основе закрытых багов/ В разработке
+ */
+
 class VladyJiraClosedBug extends VladyJiraCommand
 {
 

@@ -5,6 +5,8 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Cache;
 
+/* обновляем кешь для диаграмы гантта */
+
 class VladyJiraGantt extends Command
 {
 

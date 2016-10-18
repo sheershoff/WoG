@@ -6,6 +6,10 @@ use Illuminate\Console\Command;
 use App\Models\UserQuest;
 use Illuminate\Support\Facades\DB;
 
+/*
+ * Добавляем квесты конкретному пользователю или всем анализируя зависимости и права
+ */
+
 class QuestAddAll extends Command
 {
 

@@ -2,6 +2,10 @@
 
 namespace App\Console\Commands;
 
+/*
+ * Список переходов доступных для конкретного Issue
+ */
+
 class VladyJiratransitionsIssueList extends VladyJiraCommand
 {
 
