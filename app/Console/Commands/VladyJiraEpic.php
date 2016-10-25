@@ -4,6 +4,10 @@ namespace App\Console\Commands;
 
 use App\Models\User;
 
+/*
+ * ещё одна недоделанная автоматизация по борьбе с неправильными назначениями на сотрудников
+ */
+
 class VladyJiraEpic extends VladyJiraCommand
 {
 

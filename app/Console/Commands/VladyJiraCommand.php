@@ -2,9 +2,13 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
 use App\Handlers\VladyJiraQuest;
 use App\Models\UserQuest;
+use Illuminate\Console\Command;
+
+/*
+ * базовый класc для консольных команд использующих jira
+ */
 
 class VladyJiraCommand extends Command
 {
@@ -19,15 +23,10 @@ class VladyJiraCommand extends Command
     public function __construct()
     {
         parent::__construct();
-        $this->jira = new VladyJiraQuest();
+        $this->jira = new VladyJiraQuest(); //инициированна с параметрами из конфига
     }
 
-    protected $reqLite = [
-        "fields" => [
-            "summary"
-        ],
-    ];
-
+    //Список пользователей? для которых открыт $quest
     public function questUsers($quest)
     {
         return UserQuest::where('quest_id', $quest)->where('user_quest_status_id', 2);

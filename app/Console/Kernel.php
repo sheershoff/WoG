@@ -11,8 +11,10 @@ use App\Console\Commands\VladyJiraFieldList;
 use App\Console\Commands\VladyJiraEpic;
 use App\Console\Commands\QuestAddAll;
 use App\Console\Commands\VladyTest;
+use App\Console\Commands\VladyJiraPostponeTime;
 use App\Console\Commands\VladyJiraPostpone;
 use App\Console\Commands\VladyJiratransitionsIssueList;
+use App\Console\Commands\VladyJiraTypeLink;
 
 class Kernel extends ConsoleKernel
 {
@@ -27,10 +29,12 @@ class Kernel extends ConsoleKernel
         VladyJiraGantt::class,
         VladyJiraClosedBug::class,
         VladyJiraFieldList::class,
+        VladyJiraTypeLink::class,
         VladyJiraEpic::class,
         QuestAddAll::class,
         VladyTest::class,
         VladyJiraPostpone::class,
+        VladyJiraPostponeTime::class,
         VladyJiratransitionsIssueList::class,
     ];
 
@@ -46,6 +50,8 @@ class Kernel extends ConsoleKernel
                 ->dailyAt('23:10');
         $schedule->command('quest:addall')
                 ->dailyAt('23:10');
+        $schedule->command('jira:postponetime')
+                ->dailyAt('02:10');
 //        $schedule->call(function () {
 //            DB::table('recent_users')->delete();
 //        })->daily();

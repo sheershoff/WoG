@@ -5,6 +5,8 @@ namespace App\Console\Commands;
 use App\Models\User;
 use App\Models\ActionTransaction;
 
+/* ищем пользователей jira в 2 приёма - у кого есть поле у кого */
+
 class VladyJiraFindLogin extends VladyJiraCommand
 {
 
@@ -22,7 +24,8 @@ class VladyJiraFindLogin extends VladyJiraCommand
      */
     protected $description = 'Find and add jira login by email';
 
-    protected function getUserByEmail($user)
+    //ищем пользователя jira пр email
+    protected function seJiraLogonByEmailFromUser($user)
     {
         $e = $this->jira->getUserByEmail($user->email);
         if (isset($e) && ($e !== FALSE) && ($e != '')) {
@@ -34,6 +37,8 @@ class VladyJiraFindLogin extends VladyJiraCommand
 
     protected $quest = 12;
     protected $action_Ok = 18; //VladyJiraInit
+
+    //Ищем тех у кого активен квест и заполнено поле
 
     protected function questJiraInitComplite()
     {
@@ -56,13 +61,16 @@ class VladyJiraFindLogin extends VladyJiraCommand
      */
     public function handle()
     {
+        //берём всех пользователей без заполненого атрибута jira
         $users = User::/* where('jira', '=', '') -> */whereNull('jira')->whereNotNull('email')->get();
         $bar = $this->output->createProgressBar(count($users));
         foreach ($users as $user) {
             $bar->advance();
             $this->line($user->email);
-            $this->getUserByEmail($user);
+            //ищем и если возможно? заполняем
+            $this->seJiraLogonByEmailFromUser($user);
         }
+        //Ищем тех у кого активен квест и заполнено поле
         $this->line('Quest:' . $this->questJiraInitComplite());
     }
 
