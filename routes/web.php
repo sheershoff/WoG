@@ -100,6 +100,7 @@ Route::group(['prefix' => 'shop'], function() {
 Route::get('/', 'WogController@index')->name('index'); //<a href="{{ route('index')}}">
 Route::get('/home', 'WogController@home')->name('home')->middleware('login');
 Route::get('/personal-data', 'ProfileController@personalData')->name('personal-data')->middleware('login');
+Route::match(['get', 'post'], '/profile/save', 'ProfileController@saveProfile')->name('profile-save')->middleware('login');
 Route::get('/quests', 'WogController@quests')->name('quests')->middleware('login');
 Route::get('/user/quest/{id}/open', 'WogController@openUserQuest')->name('user-quest-open')->middleware('login');
 Route::get('/user/quest/{id}/check', 'WogController@checkUserQuest')->name('user-quest-check')->middleware('login');

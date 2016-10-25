@@ -11,4 +11,5 @@ return [
      */
 
     'organization' => env('ORGANIZATION', 0),
+    'can_edit_user' => 1,
 ];
