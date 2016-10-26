@@ -41,7 +41,6 @@ class ShopController extends Controller {
             return '404';
         $hasRole = true;
         $currencies = ActionCurrency::where('action_id', '=', $id)->get();
-        $ss = '';
         foreach ($currencies as $cur) {
             if (!Auth::user()->roleUser->where('role_id', '=', $cur->currency->role_id)->first()) {
                 $hasRole = false;

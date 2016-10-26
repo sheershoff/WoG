@@ -74,10 +74,13 @@
     });
     
     $('.check-quest').click(function (event) {
-        $.get('/user/quest/' + $(this).data().actionId + '/check', function (data) {
-            
+        $.get('/shop/buy/' + $(this).data().actionId, function(data) {
+     //   $.get('/user/quest/' + $(this).data().actionId + '/check', function (data) {
+            if (data.error)
+                alert(data.text)
+            else
+                location.reload();
         });
-        location.reload();
 
     });
 
