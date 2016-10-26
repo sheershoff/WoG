@@ -68,7 +68,7 @@ class Jira
         if ($req) {
             if (is_array($req)) {
                 $req = json_encode($req);
-                //dd($req);
+//dd($req);
             }
             if (!$put) {
                 $put = 'POST';
@@ -87,9 +87,9 @@ class Jira
         curl_setopt($ch, CURLOPT_USERPWD, "$this->username:$this->password");
 //            var_dump($req);
 //        curl_setopt($ch, CURLOPT_VERBOSE, true);
-        //dd($ch);
+//dd($ch);
         $data = curl_exec($ch);
-        // dd($data);
+// dd($data);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         $ch_error = curl_error($ch);
         curl_close($ch);
@@ -191,35 +191,35 @@ class Jira
                 itemWork($key, $value, $param, $itemadd);
             }
             unset($item["fields"]);
-            //var_dump($itemadd);
+//var_dump($itemadd);
             $item = $itemadd;
         }
         return $data;
     }
 
 ///rest/api/2/issue/
-    //";//?os_username=".$login."&os_password=".$password;
-    //$param = 'expand=changelog' для вывода истории
+//";//?os_username=".$login."&os_password=".$password;
+//$param = 'expand=changelog' для вывода истории
     public function getIssues($req, $param = '')
     {
-        //var_dump($req);
+//var_dump($req);
         $maxResults = array_key_exists("maxResults", $req) ? $req["maxResults"] : 0;
         $startAt = array_key_exists("startAt", $req) ? $req["startAt"] : 0;
         $param = !isset($param) || $param == '' ? '' : '?' . $param;
         $json = $this->getJira('search' . $param, $req); //.'?jql='.urlencode('project=GFIMPL AND type=Bug AND status!=closed order by created desc')
         $data = json_decode($json, TRUE);
-        //echo $data["startAt"].'-'.$data["maxResults"].'('.$data["total"].")\n";
+//echo $data["startAt"].'-'.$data["maxResults"].'('.$data["total"].")\n";
         if (($data["startAt"] + $data["maxResults"] < $data["total"]) &&
                 (($maxResults == 0) || ($data["startAt"] + $data["maxResults"] < $maxResults)) &&
                 ($data["maxResults"] != 0)
         ) {
             $req["startAt"] = $startAt + $data["maxResults"];
-            //echo ".z".count($data["issues"])."key=".$data["issues"][0]["key"]."\n";
+//echo ".z".count($data["issues"])."key=".$data["issues"][0]["key"]."\n";
             $data = array_merge($data["issues"], $this->getIssues($req));
-            //echo ".y".count($data)."key=".$data[0]["key"]."\n";
+//echo ".y".count($data)."key=".$data[0]["key"]."\n";
             return $data;
         } else {
-            //echo ".f".count($data["issues"])."key=".$data["issues"][0]["key"]."\n";
+//echo ".f".count($data["issues"])."key=".$data["issues"][0]["key"]."\n";
             return $data["issues"];
         }
     }
@@ -231,7 +231,7 @@ class Jira
     public function getUserByEmail($email)
     {
         $json = $this->getJira('user/search?username=' . $email); //.'?jql='.urlencode('project=GFIMPL AND type=Bug AND status!=closed order by created desc')
-        //https://jira.billing.ru/rest/api/2/user/search?username=vladimir.khonin@megafon.ru
+//https://jira.billing.ru/rest/api/2/user/search?username=vladimir.khonin@megafon.ru
         $data = json_decode($json, FALSE);
         if (count($data) > 0) {
             return $data[0]->key;
@@ -240,7 +240,7 @@ class Jira
         }
     }
 
-    //Добавляем комментарий
+//Добавляем комментарий
     public function addComment($issuekey, $comment)
     {
         return $this->getJira('issue/' . $issuekey . '/comment', ["body" => $comment]);
@@ -251,23 +251,38 @@ class Jira
         return $this->getJira('issue/' . $issuekey . '/transitions?expand=transitions.fields', $req);
     }
 
-    //Edit fields
-    //$req = ["fields" => ["description" => "sdsds"]];
+//Edit fields
+//$req = ["fields" => ["description" => "sdsds"]];
     public function editIssue($issuekey, $req)
     {
         return $this->getJira('issue/' . $issuekey, $req, 'PUT');
     }
 
-    //create issue
-    //$req =
-    public function createIssue($issuekey, $req)
+//create issue
+//$req =
+    public function createIssue($req)
     {
-        return $this->getJira('issue/' . $issuekey, $req);
+        return $this->getJira('issue', $req);
     }
 
     public function issueLinkType()
     {
         return json_decode($this->getJira('issueLinkType'))->issueLinkTypes;
+    }
+
+    public function issueType()
+    {
+        return json_decode($this->getJira('issuetype'));
+    }
+
+    public function createIssueLink($type, $inwardIssue, $outwardIssue, $comment)
+    {
+        $req = ["type" => ["name" => $type],
+            "inwardIssue" => ["key" => $inwardIssue],
+            "outwardIssue" => ["key" => $outwardIssue],
+            "comment" => ["body" => $comment]
+        ];
+        dd($this->getJira('issueLink', $req));
     }
 
     /*

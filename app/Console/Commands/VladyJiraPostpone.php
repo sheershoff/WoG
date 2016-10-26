@@ -37,10 +37,10 @@ class VladyJiraPostpone extends VladyJiraCommand
     function checkLinkItIsWork($i)
     {
         return (isset($i["inwardIssue"]) &&
-                $i["inwardIssue"]["fields"]["issuetype"]["id"] != 10200 &&
+                $i["type"]["id"] != 10200 &&
                 in_array($i["inwardIssue"]["fields"]["status"]["name"], $this->inWork)) ||
                 (isset($i["outwardIssue"]) &&
-                $i["outwardIssue"]["fields"]["issuetype"]["id"] == 10200 &&
+                $i["type"]["id"] == 10200 &&
                 in_array($i["outwardIssue"]["fields"]["status"]["name"], $this->inWork));
     }
 
@@ -92,7 +92,7 @@ class VladyJiraPostpone extends VladyJiraCommand
             }
             //выводим
             if ($returnToWork) {
-                $this->closePostpone($issue["key"], "Robot v3: Все связанные задачи выполнены или требуют вашего вмешательства. Подробнее https://confluence.billing.ru/display/GFIMP/POSTPONE");
+                $this->closePostpone($issue["key"], "Robot v4: Все связанные задачи выполнены или требуют вашего вмешательства. Подробнее https://confluence.billing.ru/display/GFIMP/POSTPONE");
             }
         }
 

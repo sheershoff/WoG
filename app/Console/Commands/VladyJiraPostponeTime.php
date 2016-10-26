@@ -26,7 +26,7 @@ class VladyJiraPostponeTime extends VladyJiraCommand
         'jql' => 'project = GFIMPL AND status = Postpone and ("Date of study resumption" is null or "Date of study resumption"<now())  ORDER BY priority DESC',
 //        "maxResults" => 2,
         "fields" => [
-            "summary"
+            "customfield_12385"
         ],
     ];
 
@@ -60,7 +60,11 @@ class VladyJiraPostponeTime extends VladyJiraCommand
         foreach ($issues as $issue) {
             $bar->advance();
             $this->line(' ' . $issue["key"] . ' ');
-            $this->closePostpone($issue["key"], 'Robot: Дата ожидаемого завершения работ ("Date of study resumption") в прошлом или незаполнена. Подробнее https://confluence.billing.ru/display/GFIMP/POSTPONE');
+            if ($issue["fields"]["customfield_12385"]) {
+                $this->closePostpone($issue["key"], 'Robot: Дата ожидаемого завершения работ ("Date of study resumption"=' . $issue["fields"]["customfield_12385"] . ') в прошлом. Подробнее https://confluence.billing.ru/display/GFIMP/POSTPONE');
+            } else {
+                $this->closePostpone($issue["key"], 'Robot: Дата ожидаемого завершения работ ("Date of study resumption") не заполнена. Подробнее https://confluence.billing.ru/display/GFIMP/POSTPONE');
+            }
         }
 
         //список выведенных или планируемых к выводу
