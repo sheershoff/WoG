@@ -275,14 +275,17 @@ class Jira
         return json_decode($this->getJira('issuetype'));
     }
 
-    public function createIssueLink($type, $inwardIssue, $outwardIssue, $comment)
+    public function createIssueLink($type, $inwardIssue, $outwardIssue)
     {
-        $req = ["type" => ["name" => $type],
+        $req = [
+            "type" => ["name" => $type],
             "inwardIssue" => ["key" => $inwardIssue],
             "outwardIssue" => ["key" => $outwardIssue],
-            "comment" => ["body" => $comment]
         ];
-        dd($this->getJira('issueLink', $req));
+//        if (isset($comment)) {
+//            $req["comment"] = ["body" => $comment];
+//        }
+        return $this->getJira('issueLink', $req);
     }
 
     /*

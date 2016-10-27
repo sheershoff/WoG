@@ -33,7 +33,7 @@ class VladyJiraTrain extends VladyJiraCommand
     ];
     protected $reqTagJql = 'project = TRAIN AND (status != Closed OR resolution != Duplicate) AND summary ~ ';
     protected $reqTag = [
-        "jql" => 'project = TRAIN AND summory ~ ', //and key=CLM-167564
+        "jql" => '',
         "maxResults" => 20,
         "fields" => [
 //            "comment",
@@ -62,14 +62,15 @@ class VladyJiraTrain extends VladyJiraCommand
 
     protected function buildSystamList($issue, $links)
     {
-        $finel_note = $issue["fields"]["customfield_12397"];
+        $finel_note = $issue["fields"]['customfield_12397'];
         foreach ($issue["fields"]["comment"]["comments"] as $c) {
             if ($c["author"]["name"] == 'JIRA_Service') {
                 $matches = [];
                 if (preg_match($this->re, $c['body'], $matches)) {
                     $outs = [];
-                    if (preg_match_all($this->reLine, trim($matches[1] . ' ' . $matches[3]), $outs, PREG_SET_ORDER)) {
-                        //dd($outs);
+                    $app = trim($matches[1] . ' ' . $matches[3]);
+                    if (preg_match_all($this->reLine, $app, $outs, PREG_SET_ORDER)) {
+//dd($outs);
                         foreach ($outs as $out) {
                             $this->editissue[] = ['key' => $issue['key'], 'system' => trim($out[1]), 'version' => trim($out[3]), 'links' => $links, 'note' => $finel_note, $matches[0]];
                         }
@@ -83,50 +84,57 @@ class VladyJiraTrain extends VladyJiraCommand
         }
     }
 
-    protected function getKeyLink($i)
-    {
-        return $this->chechInwardIssue($i) ? $i["inwardIssue"]["key"] : $i["outwardIssue"]["key"];
-    }
+    protected $project = ['GFIMPL', 'GFBPTST']; //'CLM'
 
-    protected $clm = FALSE;
-
-    protected function checkProjectLink($i)
-    {
-        $key = $this->getKeyLink($i);
-        return (substr($key, 0, 6) == 'GFIMPL') || (substr($key, 0, 7) == 'GFBPTST') || ($this->clm && (substr($key, 0, 3) == 'CLM'));
-    }
-
-    function checkLinkItIsWork($i)
-    {
-        return ((isset($i["inwardIssue"]) && $i["type"]["id"] == 10200) ||
-                (isset($i["outwardIssue"]) && $i["type"]["id"] != 10200)) && $this->checkProjectLink($i);
-    }
+//    function checkLinkItIsWork($i)
+//    {
+//        return ((isset($i["inwardIssue"]) && $i["type"]["id"] == 10200) ||
+//                (isset($i["outwardIssue"]) && $i["type"]["id"] != 10200)) && $this->checkProjectLink($i);
+//    }
 
     protected function extractLink($i)
     {
-        return isset($i["inwardIssue"]) ? $i["inwardIssue"] : $i["outwardIssue"];
+        if (isset($i["inwardIssue"])) {
+            $r = $i["inwardIssue"];
+            $r['ward'] = 'in';
+        } else {
+            $r = $i["outwardIssue"];
+            $r['ward'] = 'out';
+        }
+//        if ((isset($i["inwardIssue"]) && $i["type"]["id"] == 10200) ||
+//            (isset($i["outwardIssue"]) && $i["type"]["id"] != 10200))
+
+        $r["type"] = $i["type"];
+        $re = '/(\w*)/ix';
+        $matches = '';
+        preg_match($re, $r["key"], $matches);
+        $r['project'] = $matches[1];
+        return $r;
     }
 
-    protected function chechInwardIssue($i)
-    {
-        return isset($i["inwardIssue"]);
-    }
-
-    function listLinkKey($issue)
+    function listLink($issue)
     {
         $links = [];
-//Если что-то прилинковано
+        //Если что-то прилинковано
         if (isset($issue["fields"]["issuelinks"])) {
-//то идём по списку линков
+            //то идём по списку линков
             //dd($issue["fields"]["issuelinks"]);
             foreach ($issue["fields"]["issuelinks"] as $i) {
-                if ($this->checkLinkItIsWork($i)) {
-                    dd($i["fields"]["issuetype"]["name"]);
-                    $links[] = ['link' => $this->getKeyLink($i), 'type' => $i["fields"]["issuetype"]["name"]];
-                }
+                $links[] = $this->extractLink($i);
             }
         }
         return $links;
+    }
+
+    static function callback_from_diff_array_for_key_property($a, $b)
+    {
+        if ($a["key"] < $b["key"]) {
+            return -1;
+        } elseif ($a["key"] > $b["key"]) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
     /**
@@ -139,42 +147,60 @@ class VladyJiraTrain extends VladyJiraCommand
     {
         $issues = $this->jira->getIssues($this->req);
         $this->clm = FALSE;
-        $bar = $this->output->createProgressBar(count($issues)); //количество
-//идём по списку тасков
+        //$bar = $this->output->createProgressBar(count($issues)); //количество
+        //идём по списку CLM и собираем с них ссылки
         foreach ($issues as $issue) {
-            $bar->advance();
-            $this->line(' ' . $issue["key"]);
-            $links = $this->listLinkKey($issue);
-            $links[] = $issue["key"];
-            $this->buildSystamList($issue, $links);
+            //$bar->advance();
+            //$this->line(' ' . $issue["key"]);
+            $this->buildSystamList($issue, $this->listLink($issue));
         }
         //dd($this->editissue);
-        //теперь по полученному списку работаем с тагами
-        $this->clm = TRUE;
+        //теперь по полученному списку работаем
         $bar = $this->output->createProgressBar(count($this->editissue)); //количество
-        foreach ($this->editissue as $i) {
-            //1.Проверяем есть ли такой TAG
-            echo ' ' . $i['system'] . ' ' . $i['version'] . "\n";
-            $this->reqTag['jql'] = $this->reqTagJql . '"' . $i['system'] . ' ' . $i['version'] . '" ORDER BY status ASC';
-            $tag = $this->jira->getIssues($this->reqTag);
-            if ($tag == []) {
+        foreach ($this->editissue as $clm_links) {
+            $bar->advance();
+            //1.Проверяем есть ли такой TRAIN
+            $summory = $clm_links['system'] . ' ' . $clm_links['version'];
+            echo ' ' . $clm_links['key'] . ' ' . $summory;
+            $this->reqTag['jql'] = $this->reqTagJql . '"' . $summory . '" ORDER BY status ASC';
+            $train = $this->jira->getIssues($this->reqTag);
+            if ($train == []) {
                 //Если нет - создаём
-                $req = ["fields" => ["project" => ['id' => '16900'], "issuetype" => ['id' => '6'], 'priority' => ['id' => '10000'], "summary" => $i['system'] . ' ' . $i['version']]];
+                $req = ["fields" => ["project" => ['id' => '16900'], "issuetype" => ['id' => '6'], 'priority' => ['id' => '10000'], "summary" => $clm_links['system'] . ' ' . $clm_links['version']]];
                 if (!$this->jira->createIssue($req)) {
                     dd($req);
                 } else {
-                    $tag = $this->jira->getIssues($this->reqTag);
+                    $train = $this->jira->getIssues($this->reqTag);
                 }
             };
             //Если по фильтру нашли несколько тасков? то берём первый
-            if (is_array($tag)) {
-                $tag = $tag[0];
+            if (is_array($train)) {
+                $train = $train[0];
             }
+            $listLink = $this->listLink($train);
             //2.проверяем его линки
-            $links = array_diff($i['links'], $this->listLinkKey($tag));
+            $links = array_udiff($clm_links['links'], $listLink, array($this, 'callback_from_diff_array_for_key_property'));
+//            dd($links); //$type, $inwardIssue, $outwardIssue, $comment)
             foreach ($links as $link) {
-                $this->jira->createIssueLink();
+                if (in_array($link["project"], $this->project)) {
+                    if ($link['ward'] == 'in') {
+                        $this->jira->createIssueLink($link["type"]["name"], $link["key"], $train['key']);
+                    } else {
+                        $this->jira->createIssueLink($link["type"]["name"], $train['key'], $link["key"]);
+                    }
+                    echo ' ' . $link["key"];
+                }
             }
+            if (array_udiff([['key' => $clm_links['key']]], $listLink, array($this, 'callback_from_diff_array_for_key_property')) != []) {
+                $this->jira->createIssueLink('realizes', $train['key'], $clm_links['key']);
+                if ($clm_links['note'] != '') {
+                    if (!$this->jira->addComment($train['key'], $clm_links['note'])) {
+//                        $this->jira->addComment($train['key'], 'xxx');
+                        //dd([$train['key'], $clm_links['note']]); //Сейчас на это нет прав!!!
+                    }
+                }
+            }
+            echo "\n";
         }
 ////
 //список выведенных или планируемых к выводу
@@ -182,7 +208,7 @@ class VladyJiraTrain extends VladyJiraCommand
 //            $carry .= ',' . $item;
 //            return $carry;
 //        });
-        //dd($this->editissue);
+//dd($this->editissue);
     }
 
 }
