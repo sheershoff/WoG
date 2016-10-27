@@ -16,8 +16,13 @@
 
         <!-- Styles -->
         <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet">
-        <link href="{{asset('/css/all.css') }}" rel="stylesheet">
-        <link href="{{asset('/css/wog.css') }}?" rel="stylesheet">
+        @if(Auth::guest())
+            <link href="{{asset('/css/style1/all.css') }}" rel="stylesheet">
+            <link href="{{asset('/css/style1/wog.css') }}" rel="stylesheet">
+        @else
+            <link href="{{asset('/css/style' . Auth::user()->style . '/all.css') }}" rel="stylesheet">
+            <link href="{{asset('/css/style' . Auth::user()->style . '/wog.css') }}" rel="stylesheet">
+        @endif
         <!-- JavaScripts -->
         <script type="text/javascript" src="{{asset('/js/jquery.js') }}"></script>
     </head>
