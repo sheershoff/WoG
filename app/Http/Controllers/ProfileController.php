@@ -48,6 +48,17 @@ class ProfileController extends Controller {
         $user->login = $request->input('login');
         $user->email = $request->input('email');
         $user->phone_number = $request->input('phone_number');
+        switch ($request->input('style')) {
+            case 'Белая': $user->style = 1; break;
+            case 'Черная': $user->style = 2; break;
+            case 'Гламурная': $user->style = 3; break;
+        }
+        $user->begin_worktime = $request->input('begin_worktime', '8:30');
+        $user->end_worktime = $request->input('end_worktime', '18:00');
+        $user->sub_user1 = $request->input('sub_user1', NULL);
+        $user->sub_user2 = $request->input('sub_user2', NULL);
+        $user->sub_comment = $request->input('sub_comment', NULL);
+        $user->job_comment = $request->input('job_comment', NULL);
         $user->save();
   //      return response()->json([
   //          'reload' => TRUE,
