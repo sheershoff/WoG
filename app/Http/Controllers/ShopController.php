@@ -39,40 +39,7 @@ class ShopController extends Controller {
     public function buyItem($id) {
         if (!Auth::check())
             return '404';
-        $hasRole = true;
-        $currencies = ActionCurrency::where('action_id', '=', $id)->get();
-        foreach ($currencies as $cur) {
-            if (!Auth::user()->roleUser->where('role_id', '=', $cur->currency->role_id)->first()) {
-                $hasRole = false;
-                break;
-            }
-            $balance = Auth::user()->balances->where('currency_id', '=', $cur->currency_id)->first();
-
-            if ($balance != null) {
-                if ($balance->value + $cur->value < 0)
-                    return response()->json([
-                                'error' => true,
-                                'text' => 'cash_error',
-                    ]);
-            }
-            else
-            if ($cur->value < 0)
-                return response()->json([
-                            'error' => true,
-                            'text' => 'cash_error',
-                ]);
-        }
-        if (!$hasRole)
-            return response()->json([
-                        'error' => true,
-                        'text' => 'role_error',
-            ]);
-
-        ActionTransaction::newActionTransaction(Auth::user()->id, $id);
-        return response()->json([
-                    'error' => false,
-                    'text' => 'success',
-        ]);
+        return ActionTransaction::newActionTransaction(Auth::user()->id, $id);
     }
 
 }

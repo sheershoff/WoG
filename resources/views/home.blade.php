@@ -74,14 +74,7 @@
     });
     
     $('.check-quest').click(function (event) {
-        $.get('/shop/buy/' + $(this).data().actionId, function(data) {
-     //   $.get('/user/quest/' + $(this).data().actionId + '/check', function (data) {
-            if (data.error)
-                alert(data.text)
-            else
-                location.reload();
-        });
-
+        location.href = '/user/quest/' + $(this).data().actionId + '/check';
     });
 
 // $.ajax({

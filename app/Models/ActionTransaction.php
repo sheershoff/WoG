@@ -83,6 +83,27 @@ class ActionTransaction extends BaseModelWithSoftDeletes
                 return;
             }
         }
+        ////////////
+        //Проверка на всякое
+        ////////////
+        $currencies = ActionCurrency::where('action_id', '=', $action_id)->get();
+        foreach ($currencies as $cur) {
+            if (!Auth::user()->roleUser->where('role_id', '=', $cur->currency->role_id)->first()) {
+                return redirect()->back()->with('message', 'Role_error');
+            }
+            $balance = Auth::user()->balances->where('currency_id', '=', $cur->currency_id)->first();
+
+            if ($balance != null) {
+                if ($balance->value + $cur->value < 0)
+                    return redirect()->back()->with('message', 'Cash_error');
+            }
+            else
+            if ($cur->value < 0)
+                return redirect()->back()->with('message', 'Cash_error');
+        }
+        ////////////
+        //
+        ////////////
         $uq = new ActionTransaction();
         $uq->user_id = $userId;
         $uq->action_id = $action_id;
@@ -90,7 +111,8 @@ class ActionTransaction extends BaseModelWithSoftDeletes
             $uq->uni_outkey = $uni_outkey;
             $uq->uni_quest_id = $uni_quest_id;
         }
-        return $uq->save(); // <~ this is your "insert" statement
+        $uq->save(); // <~ this is your "insert" statement
+        return redirect()->back()->with('message', 'Success!');
     }
 
     function save(array $options = [])
