@@ -39,7 +39,7 @@ class ShopController extends Controller {
     public function buyItem($id) {
         if (!Auth::check())
             return '404';
-        return ActionTransaction::newActionTransaction(Auth::user()->id, $id);
+        return ActionTransaction::newActionTransaction(Auth::user()->id, $id, $validate = true);
     }
 
 }

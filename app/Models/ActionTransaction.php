@@ -75,7 +75,7 @@ class ActionTransaction extends BaseModelWithSoftDeletes
         return $this->hasMany('App\Models\CurrencyTransaction', 'action_trancaction_id');
     }
 
-    public static function newActionTransaction($userId, $action_id, $uni_quest_id = null, $uni_outkey = null)
+    public static function newActionTransaction($userId, $action_id, $uni_quest_id = null, $uni_outkey = null, $validate = false)
     {
         if (isset($uni_outkey)) {
             //Если есть требование уникальности? то проверяем и если нужно не вставляем
@@ -85,22 +85,23 @@ class ActionTransaction extends BaseModelWithSoftDeletes
         }
         ////////////
         //Проверка на всякое
+        //Обязательно поменять текущего пользователя на переменную после передачи пользователя в параметреы!!!111
         ////////////
         $currencies = ActionCurrency::where('action_id', '=', $action_id)->get();
-        foreach ($currencies as $cur) {
-            if (!Auth::user()->roleUser->where('role_id', '=', $cur->currency->role_id)->first()) {
-                return redirect()->back()->with('message', 'Role_error');
-            }
-            $balance = Auth::user()->balances->where('currency_id', '=', $cur->currency_id)->first();
+            foreach ($currencies as $cur) {
+                if ($validate && !Auth::user()->roleUser->where('role_id', '=', $cur->currency->role_id)->first()) {
+                    return redirect()->back()->with('message', 'Role_error');
+                }
+                $balance = Auth::user()->balances->where('currency_id', '=', $cur->currency_id)->first();
 
-            if ($balance != null) {
-                if ($balance->value + $cur->value < 0)
+                if ($balance != null) {
+                    if ($balance->value + $cur->value < 0)
+                        return redirect()->back()->with('message', 'Cash_error');
+                }
+                else
+                if ($cur->value < 0)
                     return redirect()->back()->with('message', 'Cash_error');
             }
-            else
-            if ($cur->value < 0)
-                return redirect()->back()->with('message', 'Cash_error');
-        }
         ////////////
         //
         ////////////

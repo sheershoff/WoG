@@ -109,7 +109,7 @@ class WogController extends Controller {
 
     public function checkUserQuest($id) {
         //Здесь должно быть много валидации
-        return ActionTransaction::newActionTransaction(Auth::user()->id, $id);
+        return ActionTransaction::newActionTransaction(Auth::user()->id, $id, $validate = true);
     }
 
     public function test() {
