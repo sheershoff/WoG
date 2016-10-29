@@ -23,8 +23,8 @@ class VladyJiraTrain extends VladyJiraCommand
      *  запрос для получения списка закрытых багов
      */
     protected $req = [
-        "jql" => 'project = clm AND status="Correction is done" and updated > -21d ORDER BY status DESC, updatedDate DESC', //and key=CLM-167564
-        "maxResults" => 10,
+        "jql" => 'project = clm AND status="Correction is done" and updated > -31d ORDER BY status DESC, updatedDate DESC', //and key=CLM-167564
+        "maxResults" => 1000,
         "fields" => [
             "comment",
             "customfield_12397", // "Issue summary"
@@ -164,6 +164,10 @@ class VladyJiraTrain extends VladyJiraCommand
             echo ' ' . $clm_links['key'] . ' ' . $summory;
             $this->reqTag['jql'] = $this->reqTagJql . '"' . $summory . '" ORDER BY status ASC';
             $train = $this->jira->getIssues($this->reqTag);
+            //todo: отфильтровать перепроверив summory
+            $train = array_filter($train, function ($item) use ($summory) {
+                return $item["fields"]["summary"] == $summory;
+            });
             if ($train == []) {
                 //Если нет - создаём
                 $req = ["fields" => ["project" => ['id' => '16900'], "issuetype" => ['id' => '6'], 'priority' => ['id' => '10000'], "summary" => $clm_links['system'] . ' ' . $clm_links['version']]];
@@ -194,10 +198,9 @@ class VladyJiraTrain extends VladyJiraCommand
             if (array_udiff([['key' => $clm_links['key']]], $listLink, array($this, 'callback_from_diff_array_for_key_property')) != []) {
                 $this->jira->createIssueLink('realizes', $train['key'], $clm_links['key']);
                 if ($clm_links['note'] != '') {
-                    if (!$this->jira->addComment($train['key'], $clm_links['note'])) {
-//                        $this->jira->addComment($train['key'], 'xxx');
-                        //dd([$train['key'], $clm_links['note']]); //Сейчас на это нет прав!!!
-                    }
+                    $this->jira->addComment($train['key'], 'Скопированно из:' . $clm_links['key'] . ':' . $clm_links['note']);
+                    //$this->jira->addComment($train['key'], 'xxx');
+                    //dd([$train['key'], $clm_links['note']]); //Сейчас на это нет прав!!!
                 }
             }
             echo "\n";

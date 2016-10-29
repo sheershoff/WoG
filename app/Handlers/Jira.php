@@ -96,10 +96,10 @@ class Jira
         if ($ch_error) {
             echo "cURL Error: $ch_error";
         }
-        if ($httpcode != 200) {
-            echo $httpcode;
-        }
-        return ($httpcode >= 200 && $httpcode < 300) ? $data : false;
+//        if ($httpcode != 200) {
+//            echo $httpcode;
+//        }
+        return ($httpcode >= 200 && $httpcode < 300) ? ($data == "" ? TRUE : $data ) : false;
     }
 
     /*
@@ -246,9 +246,21 @@ class Jira
         return $this->getJira('issue/' . $issuekey . '/comment', ["body" => $comment]);
     }
 
-    public function transitionsIssue($issuekey, $req)
+    //$req = ["transition" => ["id" => "17"], "fields" => ["resolution" => ["id" => "1"]]];
+    public function transitionsIssue($issuekey, $req = NULL)
     {
         return $this->getJira('issue/' . $issuekey . '/transitions?expand=transitions.fields', $req);
+    }
+
+    public function transitionsDst($issuekey, $name)
+    {
+        $transitions = json_decode($this->getJira('issue/' . $issuekey . '/transitions?expand=transitions.fields', null));
+        $tr = [];
+        foreach ($transitions->transitions as $t) {
+            $tr[$t->name] = $t->id;
+        }
+//        dd($tr);
+        return $tr[$name];
     }
 
 //Edit fields
