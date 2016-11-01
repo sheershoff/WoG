@@ -94,7 +94,9 @@ Route::group(['prefix' => 'skills'], function() {
 
 Route::group(['prefix' => 'shop'], function() {
     Route::get('/', 'ShopController@index')->name('shop')->middleware('login');
-    Route::get('/buy/{id}', 'ShopController@buyItem')->name('shop-buy-item');
+    Route::get('/buy/{id}', 'ShopController@buyItem')->name('shop-buy-item')->middleware('login');
+    Route::get('/buy/{id}/{email}', 'ShopController@buyItem')->name('shop-buy-item-to-user')->middleware('login');
+    Route::get('/find/{email}', 'ShopController@findUser')->name('shop-find-user')->middleware('login');
 });
 
 Route::get('/', 'WogController@index')->name('index'); //<a href="{{ route('index')}}">

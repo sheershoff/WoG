@@ -28,7 +28,7 @@ class ActionTransaction extends BaseModelWithSoftDeletes
     /**
      * @var array
      */
-    protected $fillable = ['uni_quest_id', 'user_id', 'action_id', 'mail_template_id', 'message', 'created_at', 'updated_at', 'deleted_at', 'uni_outkey'];
+    protected $fillable = ['uni_quest_id', 'user_id', 'action_id', 'mail_template_id', 'message', 'created_at', 'updated_at', 'deleted_at', 'uni_outkey', 'transaction_user_id'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -75,7 +75,7 @@ class ActionTransaction extends BaseModelWithSoftDeletes
         return $this->hasMany('App\Models\CurrencyTransaction', 'action_trancaction_id');
     }
 
-    public static function newActionTransaction($userId, $action_id, $uni_quest_id = null, $uni_outkey = null, $validate = false)
+    public static function newActionTransaction($userId, $action_id, $uni_quest_id = null, $uni_outkey = null, $validate = false, $transaction_user = null)
     {
         if (isset($uni_outkey)) {
             //Если есть требование уникальности? то проверяем и если нужно не вставляем
@@ -112,6 +112,8 @@ class ActionTransaction extends BaseModelWithSoftDeletes
             $uq->uni_outkey = $uni_outkey;
             $uq->uni_quest_id = $uni_quest_id;
         }
+        if (isset($transaction_user))
+            $uq->transaction_user_id = $transaction_user;
         $uq->save(); // <~ this is your "insert" statement
         return redirect()->back()->with('message', 'Success!');
     }
@@ -142,13 +144,17 @@ class ActionTransaction extends BaseModelWithSoftDeletes
             $qs = ActionCurrency::where('action_id', '=', $this->action_id)->get();
             foreach ($qs as $q) {
                 $uq = new CurrencyTransaction();
+                if (isset($this->transaction_user_id) && $q->value > 0)
+                    $user = $this->transaction_user_id;
+                else
+                    $user = $this->user_id;
+                $uq->user_id = $user;
                 $uq->value = $q->value;
                 $uq->currency_id = $q->currency_id;
-                $uq->user_id = $this->user_id;
                 $uq->action_currency_id = $q->id;
                 $uq->action_trancaction_id = $this->id;
                 $uq->save(); // <~ this is your "insert" statement
-                $b = Balance::firstOrNew(['user_id' => $this->user_id, 'currency_id' => $q->currency_id]);
+                $b = Balance::firstOrNew(['user_id' => $user, 'currency_id' => $q->currency_id]);
                 $b->value = $b->value + $q->value;
                 $b->save();
             }

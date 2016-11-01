@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+@include('shops.modals')
 <div class="panel panel-default">
         <div class="panel-heading">
             <h1 class="">Магазин</h1>
@@ -26,7 +28,8 @@
                     @foreach($item->actionCurrencies as $cur)
                         <p><i>{{ $cur->currency->name }}: {{ $cur->value }}</i></p>
                     @endforeach
-                    <button type="button" class="btn btn-primary buy-item" data-item-id="{{ $item->id }}">Купить</button>
+                    <button type="button" class="btn btn-primary btn-xs buy-item" data-item-id="{{ $item->id }}">Купить</button>
+                    <button type="button" class="btn btn-primary btn-xs select-user" data-item-id="{{ $item->id }}">Купить другу</button>
                 </div>
             @endforeach 
             </div>
@@ -37,12 +40,24 @@
 
 <script>
     $('button.buy-item').click(function() {
-        $.get('/shop/buy/' + $(this).data().itemId, function(data) {
-            if (!data.error)
-                alert(data.text);
-            else
-                alert(data.text);
+        location.href = '/shop/buy/' + $(this).data().itemId;
+    });
+    
+    $('button.select-user').click(function() {
+        $itemId = $(this).data().itemId;
+        $('.select-user-modal').modal('show');
+        $('input.user-email').change(function() {
+            $.get('shop/find/' + $('input.user-email').val(), function(data) {
+                if (data)
+                    $('button.modal-btn-buy').attr('disabled', false);
+                else
+                    $('button.modal-btn-buy').attr('disabled', true);
+            });
         });
+        $('button.modal-btn-buy').click(function() {
+            location.href = 'shop/buy/' + $itemId + '/' + $('input.user-email').val();
+        });
+        /////// Добавить появление нового элемента без перезагрузки страницы
     });
 </script>
 @endsection
