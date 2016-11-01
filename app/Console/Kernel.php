@@ -15,6 +15,8 @@ use App\Console\Commands\VladyJiraPostponeTime;
 use App\Console\Commands\VladyJiraPostpone;
 use App\Console\Commands\VladyJiratransitionsIssueList;
 use App\Console\Commands\VladyJiraTypeLink;
+use App\Console\Commands\VladyJiraTrain;
+use App\Console\Commands\VladyJiraIssueType;
 
 class Kernel extends ConsoleKernel
 {
@@ -36,6 +38,8 @@ class Kernel extends ConsoleKernel
         VladyJiraPostpone::class,
         VladyJiraPostponeTime::class,
         VladyJiratransitionsIssueList::class,
+        VladyJiraTrain::class,
+        VladyJiraIssueType::class,
     ];
 
     /**
