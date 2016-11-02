@@ -48,14 +48,28 @@
         $('.select-user-modal').modal('show');
         $('input.user-email').change(function() {
             $.get('shop/find/' + $('input.user-email').val(), function(data) {
-                if (data)
-                    $('button.modal-btn-buy').attr('disabled', false);
-                else
-                    $('button.modal-btn-buy').attr('disabled', true);
+                if (data != 'empty') {
+                    $('i.fa').removeClass('fa-close');
+                    $('i.fa').addClass('fa-check')
+                }
+                else {
+                    $('i.fa').removeClass('fa-check')
+                    $('i.fa').addClass('fa-close');
+                }
             });
         });
         $('button.modal-btn-buy').click(function() {
-            location.href = 'shop/buy/' + $itemId + '/' + $('input.user-email').val();
+            if ($('input.user-email').val() == '')
+                    alert('Поле не должно быть пустым.');
+            else
+                $.get('shop/find/' + $('input.user-email').val(), function(data) {
+                    if (data != 'empty') {
+                        location.href = 'shop/buy/' + $itemId + '/' + $('input.user-email').val();
+                    }
+                    else {
+                        alert('Пользователя с таким email не существует.');
+                    }
+                });
         });
         /////// Добавить появление нового элемента без перезагрузки страницы
     });

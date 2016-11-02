@@ -50,27 +50,27 @@
             <div class="body">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <label for="name">Фамилия</label>
-                <input name="name" class="input-huge form-control" type="text" value="{{ explode(' ', Auth::user()->name)[0] }}" required>
+                <input name="name" class="input-huge profile" type="text" value="{{ explode(' ', Auth::user()->name)[0] }}" required>
                 <label for="surname">Имя</label>
-                <input name="surname" class="input-huge" type="text" value="{{ explode(' ', Auth::user()->name)[1] }}" required>
+                <input name="surname" class="input-huge profile" type="text" value="{{ explode(' ', Auth::user()->name)[1] }}" required>
                 <label>Имя пользователя</label>
-                <input name="login" class="input-huge" type="text" value="{{ Auth::user()->login }}" required>
+                <input name="login" class="input-huge profile" type="text" value="{{ Auth::user()->login }}" required>
                 <label>E-mail</label>
-                <input name="email" class="input-huge" type="email" value="{{ Auth::user()->email }}" required>
+                <input name="email" class="input-huge profile" type="email" value="{{ Auth::user()->email }}" required>
                 <label>Номер телефона</label>
-                <input name="phone_number" class="input-huge" type="tel" pattern="+7[0-9]{10}" value="{{ Auth::user()->phone_number }}" required>
+                <input name="phone_number" class="input-huge profile" type="tel" value="{{ Auth::user()->phone_number }}" required>
                 <label for="style">Тема</label>
                 <select name="style">
                     <option>Белая</option>
                     <option @if (Auth::user()->style == 2) selected @endif>Черная</option>
                     <option @if (Auth::user()->style == 3) selected @endif>Гламурная</option>
                 </select>
-                <label>Рабочее время</label>
-                </p> C <input type="time" name="begin_worktime" value="{{ Auth::user()->begin_worktime }}" required> до <input type="time" name="end_worktime" value="{{ Auth::user()->end_worktime }}" required>
+                <label>Рабочее время (МСК)</label>
+                </p> C <input class="profile" type="time" name="begin_worktime" value="{{ Auth::user()->begin_worktime }}" required> до <input class="profile" type="time" name="end_worktime" value="{{ Auth::user()->end_worktime }}" required>
                 <label for="sub_user1">E-mail лица, которое вас замещает в ваше отсутствие (за исключением руководителя)</label>
-                <input name="sub_user1" class="input-huge" type="email" value="{{ Auth::user()->sub_user1 }}">
+                <input name="sub_user1" class="input-huge profile" type="email" value="{{ Auth::user()->sub_user1 }}">
                 <label for="sub_user2">E-mail запасного варианта лица, которое вас замещает в ваше отсутствие (за исключением руководителя)</label>
-                <input name="sub_user2" class="input-huge" type="email" value="{{ Auth::user()->sub_user2 }}">
+                <input name="sub_user2" class="input-huge profile" type="email" value="{{ Auth::user()->sub_user2 }}">
                 <label for="sub_comment">Комментарий о замещениии</label>
                 <textarea name="sub_comment" maxlength="300" rows="3">{{ Auth::user()->sub_comment }}</textarea>                
                 <label for="job_comment">Ваше текущее направление деятельности</label>
@@ -87,6 +87,14 @@
     <script>
         $(document).ready(function () {
             $('form').find('input, button').attr('disabled', true);
+        });
+    </script> 
+@else
+    <script>
+        $(document).ready(function () {
+            @foreach(config('wog.not_edit_user_fields') as $field)
+                $('form').find('[name="{{ $field }}"]').attr('disabled', true);
+            @endforeach
         });
     </script> 
 @endif

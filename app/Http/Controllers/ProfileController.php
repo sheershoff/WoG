@@ -59,12 +59,9 @@ class ProfileController extends Controller {
         $user->sub_user2 = $request->input('sub_user2', NULL);
         $user->sub_comment = $request->input('sub_comment', NULL);
         $user->job_comment = $request->input('job_comment', NULL);
-        $user->save();
-  //      return response()->json([
-  //          'reload' => TRUE,
-  //          'text' => 'Пользователь сохранен',
-  //      ]);
-        return redirect(url('personal-data'));
+        if ($user->save())
+            return redirect()->back()->with('message', 'Success!');
+        return redirect()->back()->with('message', 'False!');
     }
 
 }

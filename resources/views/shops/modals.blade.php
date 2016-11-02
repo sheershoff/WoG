@@ -7,11 +7,14 @@
                 Введите email получателя
             </div>
             <div class="modal-body">
-                <input type="email" class="form-control user-email" placeholder="Email">
+                <div class="input-group">
+                    <input type="text" class="form-control user-email" placeholder="Email">
+                    <span class="input-group-addon"><i class="fa fa-close" aria-hidden="true"></i></span>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                <button type="button" class="btn btn-primary modal-btn-buy" data-dismiss="modal" disabled>Купить</button>
+                <button type="button" class="btn btn-primary modal-btn-buy">Купить</button>
             </div>
         </div>
     </div>

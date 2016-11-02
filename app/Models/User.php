@@ -327,6 +327,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
     }
     
     public static function findUser($email) {
+        $email = strtolower($email);
         if (User::where('email', '=', $email)->first()) {
             return response()->json([
                         'status' => 'base',
@@ -340,7 +341,7 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
                 ]);
             else
                 return response()->json([
-                            'status' => false,
+                            'status' => 'empty',
                             'message' => 'Email отсустстувет'
                 ]);
         }

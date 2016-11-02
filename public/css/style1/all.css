@@ -315,7 +315,7 @@ input[type=submit] {
     border-radius: 4px;
 
 }
-input[type=text], [type=email], [type=time], [type=tel], textarea, select, option {
+input.profile[type=text], input.profile[type=email], input.profile[type=time], input.profile[type=tel], textarea, select, option {
     background: #cdcbcc;
     font-size: 13px;
     display: block;
@@ -328,7 +328,7 @@ input[type=text], [type=email], [type=time], [type=tel], textarea, select, optio
     text-indent: 18px;
     margin: 0 0 18px;
 }
-input[type=time] {
+input.profile[type=time] {
     text-indent: 0px;
     width: 15%;
     display: inline;

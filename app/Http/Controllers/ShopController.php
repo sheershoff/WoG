@@ -39,6 +39,7 @@ class ShopController extends Controller {
 
     public function buyItem($id, $email = null) {
         $transactionUser = null;
+        $email = strtolower($email);
         if (isset($email))
             switch (json_decode(User::findUser($email)->getContent())->status) {
                 case 'base':
