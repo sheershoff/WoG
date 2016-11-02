@@ -19,6 +19,534 @@ class UserQuestsTableSeeder extends Seeder
         \DB::connection('pgsql')->table('user_quests')->insert(array (
             0 => 
             array (
+                'id' => 685,
+                'quest_id' => 15,
+                'quest_type' => 1,
+                'user_id' => 17,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-11-02 04:35:01',
+                'updated_at' => '2016-11-02 04:35:01',
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
+                'id' => 684,
+                'quest_id' => 14,
+                'quest_type' => 1,
+                'user_id' => 17,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-11-02 04:35:01',
+                'updated_at' => '2016-11-02 04:35:01',
+                'deleted_at' => NULL,
+            ),
+            2 => 
+            array (
+                'id' => 683,
+                'quest_id' => 3,
+                'quest_type' => 1,
+                'user_id' => 17,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-11-02 04:35:01',
+                'updated_at' => '2016-11-02 04:35:01',
+                'deleted_at' => NULL,
+            ),
+            3 => 
+            array (
+                'id' => 682,
+                'quest_id' => 1,
+                'quest_type' => 1,
+                'user_id' => 17,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-11-02 04:35:01',
+                'updated_at' => '2016-11-02 04:35:33',
+                'deleted_at' => NULL,
+            ),
+            4 => 
+            array (
+                'id' => 681,
+                'quest_id' => 2,
+                'quest_type' => 1,
+                'user_id' => 17,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-11-02 04:35:01',
+                'updated_at' => '2016-11-02 04:35:29',
+                'deleted_at' => NULL,
+            ),
+            5 => 
+            array (
+                'id' => 680,
+                'quest_id' => 15,
+                'quest_type' => 1,
+                'user_id' => 60,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-26 01:57:21',
+                'updated_at' => '2016-10-26 01:57:21',
+                'deleted_at' => NULL,
+            ),
+            6 => 
+            array (
+                'id' => 679,
+                'quest_id' => 14,
+                'quest_type' => 1,
+                'user_id' => 60,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-26 01:57:21',
+                'updated_at' => '2016-10-26 01:57:21',
+                'deleted_at' => NULL,
+            ),
+            7 => 
+            array (
+                'id' => 678,
+                'quest_id' => 3,
+                'quest_type' => 1,
+                'user_id' => 60,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-26 01:57:21',
+                'updated_at' => '2016-10-26 01:57:21',
+                'deleted_at' => NULL,
+            ),
+            8 => 
+            array (
+                'id' => 677,
+                'quest_id' => 1,
+                'quest_type' => 1,
+                'user_id' => 60,
+                'user_quest_status_id' => 1,
+                'created_at' => '2016-10-26 01:57:21',
+                'updated_at' => '2016-10-26 01:57:21',
+                'deleted_at' => NULL,
+            ),
+            9 => 
+            array (
+                'id' => 676,
+                'quest_id' => 2,
+                'quest_type' => 1,
+                'user_id' => 60,
+                'user_quest_status_id' => 1,
+                'created_at' => '2016-10-26 01:57:21',
+                'updated_at' => '2016-10-26 01:57:21',
+                'deleted_at' => NULL,
+            ),
+            10 => 
+            array (
+                'id' => 674,
+                'quest_id' => 12,
+                'quest_type' => 1,
+                'user_id' => 97,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-21 07:58:02',
+                'updated_at' => '2016-10-21 07:58:02',
+                'deleted_at' => NULL,
+            ),
+            11 => 
+            array (
+                'id' => 673,
+                'quest_id' => 0,
+                'quest_type' => 1,
+                'user_id' => 97,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-21 07:58:02',
+                'updated_at' => '2016-10-21 07:58:02',
+                'deleted_at' => NULL,
+            ),
+            12 => 
+            array (
+                'id' => 672,
+                'quest_id' => 14,
+                'quest_type' => 1,
+                'user_id' => 95,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            13 => 
+            array (
+                'id' => 671,
+                'quest_id' => 15,
+                'quest_type' => 1,
+                'user_id' => 95,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            14 => 
+            array (
+                'id' => 670,
+                'quest_id' => 14,
+                'quest_type' => 1,
+                'user_id' => 90,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            15 => 
+            array (
+                'id' => 669,
+                'quest_id' => 15,
+                'quest_type' => 1,
+                'user_id' => 90,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            16 => 
+            array (
+                'id' => 668,
+                'quest_id' => 14,
+                'quest_type' => 1,
+                'user_id' => 93,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            17 => 
+            array (
+                'id' => 667,
+                'quest_id' => 15,
+                'quest_type' => 1,
+                'user_id' => 93,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            18 => 
+            array (
+                'id' => 666,
+                'quest_id' => 14,
+                'quest_type' => 1,
+                'user_id' => 2,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            19 => 
+            array (
+                'id' => 665,
+                'quest_id' => 15,
+                'quest_type' => 1,
+                'user_id' => 2,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            20 => 
+            array (
+                'id' => 664,
+                'quest_id' => 16,
+                'quest_type' => 1,
+                'user_id' => 4,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            21 => 
+            array (
+                'id' => 663,
+                'quest_id' => 16,
+                'quest_type' => 1,
+                'user_id' => 8,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            22 => 
+            array (
+                'id' => 662,
+                'quest_id' => 16,
+                'quest_type' => 1,
+                'user_id' => 10,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            23 => 
+            array (
+                'id' => 661,
+                'quest_id' => 16,
+                'quest_type' => 1,
+                'user_id' => 25,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            24 => 
+            array (
+                'id' => 660,
+                'quest_id' => 16,
+                'quest_type' => 1,
+                'user_id' => 26,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            25 => 
+            array (
+                'id' => 659,
+                'quest_id' => 16,
+                'quest_type' => 1,
+                'user_id' => 28,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            26 => 
+            array (
+                'id' => 658,
+                'quest_id' => 16,
+                'quest_type' => 1,
+                'user_id' => 34,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            27 => 
+            array (
+                'id' => 657,
+                'quest_id' => 16,
+                'quest_type' => 1,
+                'user_id' => 36,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            28 => 
+            array (
+                'id' => 656,
+                'quest_id' => 16,
+                'quest_type' => 1,
+                'user_id' => 38,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            29 => 
+            array (
+                'id' => 655,
+                'quest_id' => 16,
+                'quest_type' => 1,
+                'user_id' => 40,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            30 => 
+            array (
+                'id' => 654,
+                'quest_id' => 16,
+                'quest_type' => 1,
+                'user_id' => 61,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 23:10:01',
+                'updated_at' => '2016-10-19 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            31 => 
+            array (
+                'id' => 653,
+                'quest_id' => 15,
+                'quest_type' => 1,
+                'user_id' => 80,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 12:07:24',
+                'updated_at' => '2016-10-19 12:07:24',
+                'deleted_at' => NULL,
+            ),
+            32 => 
+            array (
+                'id' => 652,
+                'quest_id' => 14,
+                'quest_type' => 1,
+                'user_id' => 80,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-19 12:07:24',
+                'updated_at' => '2016-10-19 12:07:24',
+                'deleted_at' => NULL,
+            ),
+            33 => 
+            array (
+                'id' => 651,
+                'quest_id' => 0,
+                'quest_type' => 1,
+                'user_id' => 96,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-18 23:10:01',
+                'updated_at' => '2016-10-18 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            34 => 
+            array (
+                'id' => 650,
+                'quest_id' => 12,
+                'quest_type' => 1,
+                'user_id' => 96,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-18 23:10:01',
+                'updated_at' => '2016-10-18 23:10:01',
+                'deleted_at' => NULL,
+            ),
+            35 => 
+            array (
+                'id' => 628,
+                'quest_id' => 3,
+                'quest_type' => 1,
+                'user_id' => 95,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-14 14:11:35',
+                'updated_at' => '2016-10-14 14:11:35',
+                'deleted_at' => NULL,
+            ),
+            36 => 
+            array (
+                'id' => 627,
+                'quest_id' => 1,
+                'quest_type' => 1,
+                'user_id' => 95,
+                'user_quest_status_id' => 1,
+                'created_at' => '2016-10-14 14:11:35',
+                'updated_at' => '2016-10-14 14:11:35',
+                'deleted_at' => NULL,
+            ),
+            37 => 
+            array (
+                'id' => 626,
+                'quest_id' => 2,
+                'quest_type' => 1,
+                'user_id' => 95,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-14 14:11:35',
+                'updated_at' => '2016-10-14 14:11:43',
+                'deleted_at' => NULL,
+            ),
+            38 => 
+            array (
+                'id' => 625,
+                'quest_id' => 3,
+                'quest_type' => 1,
+                'user_id' => 90,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-14 08:52:14',
+                'updated_at' => '2016-10-14 08:52:14',
+                'deleted_at' => NULL,
+            ),
+            39 => 
+            array (
+                'id' => 624,
+                'quest_id' => 1,
+                'quest_type' => 1,
+                'user_id' => 90,
+                'user_quest_status_id' => 1,
+                'created_at' => '2016-10-14 08:52:14',
+                'updated_at' => '2016-10-14 08:52:14',
+                'deleted_at' => NULL,
+            ),
+            40 => 
+            array (
+                'id' => 623,
+                'quest_id' => 2,
+                'quest_type' => 1,
+                'user_id' => 90,
+                'user_quest_status_id' => 1,
+                'created_at' => '2016-10-14 08:52:14',
+                'updated_at' => '2016-10-14 08:52:14',
+                'deleted_at' => NULL,
+            ),
+            41 => 
+            array (
+                'id' => 622,
+                'quest_id' => 3,
+                'quest_type' => 1,
+                'user_id' => 80,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-13 05:13:34',
+                'updated_at' => '2016-10-13 05:13:34',
+                'deleted_at' => NULL,
+            ),
+            42 => 
+            array (
+                'id' => 621,
+                'quest_id' => 1,
+                'quest_type' => 1,
+                'user_id' => 80,
+                'user_quest_status_id' => 1,
+                'created_at' => '2016-10-13 05:13:34',
+                'updated_at' => '2016-10-13 05:13:34',
+                'deleted_at' => NULL,
+            ),
+            43 => 
+            array (
+                'id' => 620,
+                'quest_id' => 2,
+                'quest_type' => 1,
+                'user_id' => 80,
+                'user_quest_status_id' => 1,
+                'created_at' => '2016-10-13 05:13:34',
+                'updated_at' => '2016-10-13 05:13:34',
+                'deleted_at' => NULL,
+            ),
+            44 => 
+            array (
+                'id' => 618,
+                'quest_id' => 12,
+                'quest_type' => 1,
+                'user_id' => 95,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-12 14:26:35',
+                'updated_at' => '2016-10-12 14:26:35',
+                'deleted_at' => NULL,
+            ),
+            45 => 
+            array (
+                'id' => 617,
+                'quest_id' => 0,
+                'quest_type' => 1,
+                'user_id' => 95,
+                'user_quest_status_id' => 3,
+                'created_at' => '2016-10-12 14:26:35',
+                'updated_at' => '2016-10-14 14:11:35',
+                'deleted_at' => NULL,
+            ),
+            46 => 
+            array (
+                'id' => 615,
+                'quest_id' => 12,
+                'quest_type' => 1,
+                'user_id' => 94,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-11 06:51:42',
+                'updated_at' => '2016-10-11 06:51:42',
+                'deleted_at' => NULL,
+            ),
+            47 => 
+            array (
+                'id' => 614,
+                'quest_id' => 0,
+                'quest_type' => 1,
+                'user_id' => 94,
+                'user_quest_status_id' => 2,
+                'created_at' => '2016-10-11 06:51:42',
+                'updated_at' => '2016-10-11 06:51:42',
+                'deleted_at' => NULL,
+            ),
+            48 => 
+            array (
                 'id' => 612,
                 'quest_id' => 3,
                 'quest_type' => 1,
@@ -28,7 +556,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-10-06 09:56:58',
                 'deleted_at' => NULL,
             ),
-            1 => 
+            49 => 
             array (
                 'id' => 611,
                 'quest_id' => 1,
@@ -39,7 +567,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-10-06 09:56:58',
                 'deleted_at' => NULL,
             ),
-            2 => 
+            50 => 
             array (
                 'id' => 610,
                 'quest_id' => 2,
@@ -50,7 +578,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-10-06 09:56:58',
                 'deleted_at' => NULL,
             ),
-            3 => 
+            51 => 
             array (
                 'id' => 605,
                 'quest_id' => 12,
@@ -61,7 +589,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-10-06 09:56:27',
                 'deleted_at' => NULL,
             ),
-            4 => 
+            52 => 
             array (
                 'id' => 604,
                 'quest_id' => 0,
@@ -72,7 +600,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-10-06 09:56:27',
                 'deleted_at' => NULL,
             ),
-            5 => 
+            53 => 
             array (
                 'id' => 601,
                 'quest_id' => 3,
@@ -83,7 +611,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-10-06 09:53:23',
                 'deleted_at' => NULL,
             ),
-            6 => 
+            54 => 
             array (
                 'id' => 599,
                 'quest_id' => 1,
@@ -94,18 +622,18 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-10-06 09:53:23',
                 'deleted_at' => NULL,
             ),
-            7 => 
+            55 => 
             array (
                 'id' => 598,
                 'quest_id' => 2,
                 'quest_type' => 1,
                 'user_id' => 2,
-                'user_quest_status_id' => 1,
+                'user_quest_status_id' => 2,
                 'created_at' => '2016-10-06 09:53:23',
-                'updated_at' => '2016-10-06 09:53:23',
+                'updated_at' => '2016-10-06 10:28:54',
                 'deleted_at' => NULL,
             ),
-            8 => 
+            56 => 
             array (
                 'id' => 596,
                 'quest_id' => 12,
@@ -116,7 +644,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-10-04 07:24:36',
                 'deleted_at' => NULL,
             ),
-            9 => 
+            57 => 
             array (
                 'id' => 595,
                 'quest_id' => 0,
@@ -127,7 +655,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-10-04 07:24:36',
                 'deleted_at' => NULL,
             ),
-            10 => 
+            58 => 
             array (
                 'id' => 590,
                 'quest_id' => 12,
@@ -138,7 +666,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-28 10:52:17',
                 'deleted_at' => NULL,
             ),
-            11 => 
+            59 => 
             array (
                 'id' => 589,
                 'quest_id' => 0,
@@ -149,7 +677,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-28 10:52:17',
                 'deleted_at' => NULL,
             ),
-            12 => 
+            60 => 
             array (
                 'id' => 587,
                 'quest_id' => 12,
@@ -160,7 +688,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-27 14:08:58',
                 'deleted_at' => NULL,
             ),
-            13 => 
+            61 => 
             array (
                 'id' => 586,
                 'quest_id' => 0,
@@ -171,7 +699,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-27 14:08:58',
                 'deleted_at' => NULL,
             ),
-            14 => 
+            62 => 
             array (
                 'id' => 584,
                 'quest_id' => 12,
@@ -182,7 +710,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-27 12:43:29',
                 'deleted_at' => NULL,
             ),
-            15 => 
+            63 => 
             array (
                 'id' => 583,
                 'quest_id' => 0,
@@ -193,18 +721,18 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-27 12:43:29',
                 'deleted_at' => NULL,
             ),
-            16 => 
+            64 => 
             array (
                 'id' => 582,
                 'quest_id' => 0,
                 'quest_type' => 1,
                 'user_id' => 90,
-                'user_quest_status_id' => 2,
+                'user_quest_status_id' => 3,
                 'created_at' => '2016-09-23 12:43:30',
-                'updated_at' => '2016-09-23 12:43:30',
+                'updated_at' => '2016-10-14 08:52:14',
                 'deleted_at' => NULL,
             ),
-            17 => 
+            65 => 
             array (
                 'id' => 581,
                 'quest_id' => 12,
@@ -215,7 +743,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            18 => 
+            66 => 
             array (
                 'id' => 580,
                 'quest_id' => 0,
@@ -226,7 +754,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            19 => 
+            67 => 
             array (
                 'id' => 579,
                 'quest_id' => 12,
@@ -237,7 +765,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            20 => 
+            68 => 
             array (
                 'id' => 578,
                 'quest_id' => 0,
@@ -248,7 +776,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            21 => 
+            69 => 
             array (
                 'id' => 577,
                 'quest_id' => 12,
@@ -259,7 +787,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            22 => 
+            70 => 
             array (
                 'id' => 576,
                 'quest_id' => 0,
@@ -270,7 +798,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            23 => 
+            71 => 
             array (
                 'id' => 575,
                 'quest_id' => 12,
@@ -281,7 +809,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            24 => 
+            72 => 
             array (
                 'id' => 574,
                 'quest_id' => 0,
@@ -292,7 +820,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            25 => 
+            73 => 
             array (
                 'id' => 573,
                 'quest_id' => 12,
@@ -303,7 +831,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            26 => 
+            74 => 
             array (
                 'id' => 572,
                 'quest_id' => 0,
@@ -314,7 +842,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            27 => 
+            75 => 
             array (
                 'id' => 571,
                 'quest_id' => 12,
@@ -325,7 +853,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            28 => 
+            76 => 
             array (
                 'id' => 570,
                 'quest_id' => 0,
@@ -336,7 +864,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            29 => 
+            77 => 
             array (
                 'id' => 569,
                 'quest_id' => 12,
@@ -347,7 +875,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            30 => 
+            78 => 
             array (
                 'id' => 568,
                 'quest_id' => 0,
@@ -358,7 +886,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            31 => 
+            79 => 
             array (
                 'id' => 567,
                 'quest_id' => 12,
@@ -369,7 +897,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            32 => 
+            80 => 
             array (
                 'id' => 566,
                 'quest_id' => 0,
@@ -380,7 +908,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            33 => 
+            81 => 
             array (
                 'id' => 565,
                 'quest_id' => 12,
@@ -391,7 +919,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            34 => 
+            82 => 
             array (
                 'id' => 564,
                 'quest_id' => 0,
@@ -402,7 +930,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            35 => 
+            83 => 
             array (
                 'id' => 563,
                 'quest_id' => 12,
@@ -413,18 +941,18 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            36 => 
+            84 => 
             array (
                 'id' => 562,
                 'quest_id' => 0,
                 'quest_type' => 1,
                 'user_id' => 80,
-                'user_quest_status_id' => 2,
+                'user_quest_status_id' => 3,
                 'created_at' => '2016-09-23 12:43:30',
-                'updated_at' => '2016-09-23 12:43:30',
+                'updated_at' => '2016-10-13 05:13:34',
                 'deleted_at' => NULL,
             ),
-            37 => 
+            85 => 
             array (
                 'id' => 561,
                 'quest_id' => 12,
@@ -435,7 +963,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            38 => 
+            86 => 
             array (
                 'id' => 560,
                 'quest_id' => 0,
@@ -446,7 +974,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            39 => 
+            87 => 
             array (
                 'id' => 559,
                 'quest_id' => 12,
@@ -457,7 +985,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            40 => 
+            88 => 
             array (
                 'id' => 558,
                 'quest_id' => 0,
@@ -468,7 +996,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            41 => 
+            89 => 
             array (
                 'id' => 557,
                 'quest_id' => 12,
@@ -479,18 +1007,18 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            42 => 
+            90 => 
             array (
                 'id' => 556,
                 'quest_id' => 0,
                 'quest_type' => 1,
                 'user_id' => 17,
-                'user_quest_status_id' => 2,
+                'user_quest_status_id' => 3,
                 'created_at' => '2016-09-23 12:43:30',
-                'updated_at' => '2016-09-23 12:43:30',
+                'updated_at' => '2016-11-02 04:35:01',
                 'deleted_at' => NULL,
             ),
-            43 => 
+            91 => 
             array (
                 'id' => 555,
                 'quest_id' => 12,
@@ -501,7 +1029,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            44 => 
+            92 => 
             array (
                 'id' => 554,
                 'quest_id' => 0,
@@ -512,7 +1040,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            45 => 
+            93 => 
             array (
                 'id' => 553,
                 'quest_id' => 12,
@@ -523,7 +1051,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            46 => 
+            94 => 
             array (
                 'id' => 552,
                 'quest_id' => 0,
@@ -534,7 +1062,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            47 => 
+            95 => 
             array (
                 'id' => 551,
                 'quest_id' => 12,
@@ -545,7 +1073,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            48 => 
+            96 => 
             array (
                 'id' => 550,
                 'quest_id' => 0,
@@ -556,7 +1084,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            49 => 
+            97 => 
             array (
                 'id' => 549,
                 'quest_id' => 12,
@@ -567,7 +1095,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            50 => 
+            98 => 
             array (
                 'id' => 548,
                 'quest_id' => 0,
@@ -578,7 +1106,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            51 => 
+            99 => 
             array (
                 'id' => 547,
                 'quest_id' => 12,
@@ -589,7 +1117,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            52 => 
+            100 => 
             array (
                 'id' => 546,
                 'quest_id' => 0,
@@ -600,7 +1128,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            53 => 
+            101 => 
             array (
                 'id' => 545,
                 'quest_id' => 12,
@@ -611,7 +1139,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            54 => 
+            102 => 
             array (
                 'id' => 544,
                 'quest_id' => 0,
@@ -622,7 +1150,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            55 => 
+            103 => 
             array (
                 'id' => 543,
                 'quest_id' => 12,
@@ -633,7 +1161,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            56 => 
+            104 => 
             array (
                 'id' => 542,
                 'quest_id' => 0,
@@ -644,7 +1172,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            57 => 
+            105 => 
             array (
                 'id' => 541,
                 'quest_id' => 12,
@@ -655,7 +1183,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            58 => 
+            106 => 
             array (
                 'id' => 540,
                 'quest_id' => 0,
@@ -666,7 +1194,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            59 => 
+            107 => 
             array (
                 'id' => 539,
                 'quest_id' => 12,
@@ -677,7 +1205,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            60 => 
+            108 => 
             array (
                 'id' => 538,
                 'quest_id' => 0,
@@ -688,7 +1216,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            61 => 
+            109 => 
             array (
                 'id' => 537,
                 'quest_id' => 12,
@@ -699,7 +1227,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            62 => 
+            110 => 
             array (
                 'id' => 536,
                 'quest_id' => 0,
@@ -710,7 +1238,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            63 => 
+            111 => 
             array (
                 'id' => 535,
                 'quest_id' => 12,
@@ -721,7 +1249,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            64 => 
+            112 => 
             array (
                 'id' => 534,
                 'quest_id' => 0,
@@ -732,7 +1260,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            65 => 
+            113 => 
             array (
                 'id' => 533,
                 'quest_id' => 12,
@@ -743,7 +1271,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            66 => 
+            114 => 
             array (
                 'id' => 532,
                 'quest_id' => 0,
@@ -754,7 +1282,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            67 => 
+            115 => 
             array (
                 'id' => 531,
                 'quest_id' => 12,
@@ -765,7 +1293,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            68 => 
+            116 => 
             array (
                 'id' => 530,
                 'quest_id' => 0,
@@ -776,7 +1304,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            69 => 
+            117 => 
             array (
                 'id' => 529,
                 'quest_id' => 12,
@@ -787,7 +1315,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            70 => 
+            118 => 
             array (
                 'id' => 528,
                 'quest_id' => 0,
@@ -798,7 +1326,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            71 => 
+            119 => 
             array (
                 'id' => 527,
                 'quest_id' => 12,
@@ -809,7 +1337,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            72 => 
+            120 => 
             array (
                 'id' => 526,
                 'quest_id' => 0,
@@ -820,7 +1348,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            73 => 
+            121 => 
             array (
                 'id' => 525,
                 'quest_id' => 12,
@@ -831,7 +1359,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            74 => 
+            122 => 
             array (
                 'id' => 524,
                 'quest_id' => 0,
@@ -842,7 +1370,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            75 => 
+            123 => 
             array (
                 'id' => 523,
                 'quest_id' => 12,
@@ -853,7 +1381,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            76 => 
+            124 => 
             array (
                 'id' => 522,
                 'quest_id' => 0,
@@ -864,7 +1392,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            77 => 
+            125 => 
             array (
                 'id' => 521,
                 'quest_id' => 12,
@@ -875,7 +1403,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            78 => 
+            126 => 
             array (
                 'id' => 520,
                 'quest_id' => 0,
@@ -886,7 +1414,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            79 => 
+            127 => 
             array (
                 'id' => 519,
                 'quest_id' => 12,
@@ -897,7 +1425,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            80 => 
+            128 => 
             array (
                 'id' => 518,
                 'quest_id' => 0,
@@ -908,7 +1436,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            81 => 
+            129 => 
             array (
                 'id' => 517,
                 'quest_id' => 12,
@@ -919,7 +1447,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            82 => 
+            130 => 
             array (
                 'id' => 516,
                 'quest_id' => 0,
@@ -930,7 +1458,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            83 => 
+            131 => 
             array (
                 'id' => 515,
                 'quest_id' => 12,
@@ -941,7 +1469,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            84 => 
+            132 => 
             array (
                 'id' => 514,
                 'quest_id' => 0,
@@ -952,7 +1480,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            85 => 
+            133 => 
             array (
                 'id' => 513,
                 'quest_id' => 12,
@@ -963,7 +1491,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            86 => 
+            134 => 
             array (
                 'id' => 512,
                 'quest_id' => 0,
@@ -974,7 +1502,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            87 => 
+            135 => 
             array (
                 'id' => 511,
                 'quest_id' => 12,
@@ -985,7 +1513,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            88 => 
+            136 => 
             array (
                 'id' => 510,
                 'quest_id' => 0,
@@ -996,7 +1524,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            89 => 
+            137 => 
             array (
                 'id' => 509,
                 'quest_id' => 12,
@@ -1007,7 +1535,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            90 => 
+            138 => 
             array (
                 'id' => 508,
                 'quest_id' => 0,
@@ -1018,7 +1546,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            91 => 
+            139 => 
             array (
                 'id' => 507,
                 'quest_id' => 12,
@@ -1029,7 +1557,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            92 => 
+            140 => 
             array (
                 'id' => 506,
                 'quest_id' => 0,
@@ -1040,7 +1568,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            93 => 
+            141 => 
             array (
                 'id' => 505,
                 'quest_id' => 12,
@@ -1051,7 +1579,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            94 => 
+            142 => 
             array (
                 'id' => 504,
                 'quest_id' => 0,
@@ -1062,7 +1590,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            95 => 
+            143 => 
             array (
                 'id' => 503,
                 'quest_id' => 12,
@@ -1073,7 +1601,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            96 => 
+            144 => 
             array (
                 'id' => 502,
                 'quest_id' => 0,
@@ -1084,7 +1612,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            97 => 
+            145 => 
             array (
                 'id' => 501,
                 'quest_id' => 12,
@@ -1095,7 +1623,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            98 => 
+            146 => 
             array (
                 'id' => 500,
                 'quest_id' => 0,
@@ -1106,7 +1634,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            99 => 
+            147 => 
             array (
                 'id' => 499,
                 'quest_id' => 12,
@@ -1117,7 +1645,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            100 => 
+            148 => 
             array (
                 'id' => 498,
                 'quest_id' => 0,
@@ -1128,7 +1656,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            101 => 
+            149 => 
             array (
                 'id' => 497,
                 'quest_id' => 12,
@@ -1139,18 +1667,18 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            102 => 
+            150 => 
             array (
                 'id' => 496,
                 'quest_id' => 0,
                 'quest_type' => 1,
                 'user_id' => 60,
-                'user_quest_status_id' => 2,
+                'user_quest_status_id' => 3,
                 'created_at' => '2016-09-23 12:43:30',
-                'updated_at' => '2016-09-23 12:43:30',
+                'updated_at' => '2016-10-26 01:57:21',
                 'deleted_at' => NULL,
             ),
-            103 => 
+            151 => 
             array (
                 'id' => 495,
                 'quest_id' => 12,
@@ -1161,7 +1689,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            104 => 
+            152 => 
             array (
                 'id' => 494,
                 'quest_id' => 9,
@@ -1172,7 +1700,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            105 => 
+            153 => 
             array (
                 'id' => 493,
                 'quest_id' => 5,
@@ -1183,7 +1711,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            106 => 
+            154 => 
             array (
                 'id' => 492,
                 'quest_id' => 4,
@@ -1194,7 +1722,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            107 => 
+            155 => 
             array (
                 'id' => 491,
                 'quest_id' => 9,
@@ -1205,7 +1733,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            108 => 
+            156 => 
             array (
                 'id' => 490,
                 'quest_id' => 5,
@@ -1216,7 +1744,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            109 => 
+            157 => 
             array (
                 'id' => 489,
                 'quest_id' => 4,
@@ -1227,7 +1755,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            110 => 
+            158 => 
             array (
                 'id' => 488,
                 'quest_id' => 0,
@@ -1238,7 +1766,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            111 => 
+            159 => 
             array (
                 'id' => 487,
                 'quest_id' => 12,
@@ -1249,7 +1777,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            112 => 
+            160 => 
             array (
                 'id' => 486,
                 'quest_id' => 0,
@@ -1260,7 +1788,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            113 => 
+            161 => 
             array (
                 'id' => 485,
                 'quest_id' => 12,
@@ -1271,7 +1799,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            114 => 
+            162 => 
             array (
                 'id' => 484,
                 'quest_id' => 0,
@@ -1282,7 +1810,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            115 => 
+            163 => 
             array (
                 'id' => 483,
                 'quest_id' => 12,
@@ -1293,7 +1821,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            116 => 
+            164 => 
             array (
                 'id' => 482,
                 'quest_id' => 0,
@@ -1304,7 +1832,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            117 => 
+            165 => 
             array (
                 'id' => 481,
                 'quest_id' => 12,
@@ -1315,7 +1843,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            118 => 
+            166 => 
             array (
                 'id' => 480,
                 'quest_id' => 0,
@@ -1326,7 +1854,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            119 => 
+            167 => 
             array (
                 'id' => 479,
                 'quest_id' => 12,
@@ -1337,7 +1865,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            120 => 
+            168 => 
             array (
                 'id' => 478,
                 'quest_id' => 9,
@@ -1348,7 +1876,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            121 => 
+            169 => 
             array (
                 'id' => 477,
                 'quest_id' => 5,
@@ -1359,7 +1887,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            122 => 
+            170 => 
             array (
                 'id' => 476,
                 'quest_id' => 4,
@@ -1370,7 +1898,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            123 => 
+            171 => 
             array (
                 'id' => 475,
                 'quest_id' => 9,
@@ -1381,7 +1909,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            124 => 
+            172 => 
             array (
                 'id' => 474,
                 'quest_id' => 5,
@@ -1392,7 +1920,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            125 => 
+            173 => 
             array (
                 'id' => 473,
                 'quest_id' => 4,
@@ -1403,7 +1931,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            126 => 
+            174 => 
             array (
                 'id' => 472,
                 'quest_id' => 9,
@@ -1414,7 +1942,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            127 => 
+            175 => 
             array (
                 'id' => 471,
                 'quest_id' => 5,
@@ -1425,7 +1953,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            128 => 
+            176 => 
             array (
                 'id' => 470,
                 'quest_id' => 4,
@@ -1436,7 +1964,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            129 => 
+            177 => 
             array (
                 'id' => 469,
                 'quest_id' => 9,
@@ -1447,7 +1975,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            130 => 
+            178 => 
             array (
                 'id' => 468,
                 'quest_id' => 5,
@@ -1458,7 +1986,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            131 => 
+            179 => 
             array (
                 'id' => 467,
                 'quest_id' => 4,
@@ -1469,7 +1997,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            132 => 
+            180 => 
             array (
                 'id' => 466,
                 'quest_id' => 9,
@@ -1480,7 +2008,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-27 14:09:46',
                 'deleted_at' => NULL,
             ),
-            133 => 
+            181 => 
             array (
                 'id' => 465,
                 'quest_id' => 5,
@@ -1491,7 +2019,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-27 14:11:53',
                 'deleted_at' => NULL,
             ),
-            134 => 
+            182 => 
             array (
                 'id' => 464,
                 'quest_id' => 4,
@@ -1502,7 +2030,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-27 14:09:58',
                 'deleted_at' => NULL,
             ),
-            135 => 
+            183 => 
             array (
                 'id' => 463,
                 'quest_id' => 9,
@@ -1513,7 +2041,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            136 => 
+            184 => 
             array (
                 'id' => 462,
                 'quest_id' => 5,
@@ -1524,7 +2052,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            137 => 
+            185 => 
             array (
                 'id' => 461,
                 'quest_id' => 4,
@@ -1535,7 +2063,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            138 => 
+            186 => 
             array (
                 'id' => 460,
                 'quest_id' => 9,
@@ -1546,7 +2074,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            139 => 
+            187 => 
             array (
                 'id' => 459,
                 'quest_id' => 5,
@@ -1557,7 +2085,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            140 => 
+            188 => 
             array (
                 'id' => 458,
                 'quest_id' => 4,
@@ -1568,7 +2096,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            141 => 
+            189 => 
             array (
                 'id' => 457,
                 'quest_id' => 9,
@@ -1579,7 +2107,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            142 => 
+            190 => 
             array (
                 'id' => 456,
                 'quest_id' => 5,
@@ -1590,7 +2118,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            143 => 
+            191 => 
             array (
                 'id' => 455,
                 'quest_id' => 4,
@@ -1601,7 +2129,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            144 => 
+            192 => 
             array (
                 'id' => 454,
                 'quest_id' => 9,
@@ -1612,7 +2140,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            145 => 
+            193 => 
             array (
                 'id' => 453,
                 'quest_id' => 5,
@@ -1623,7 +2151,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            146 => 
+            194 => 
             array (
                 'id' => 452,
                 'quest_id' => 4,
@@ -1634,7 +2162,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            147 => 
+            195 => 
             array (
                 'id' => 451,
                 'quest_id' => 9,
@@ -1645,7 +2173,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            148 => 
+            196 => 
             array (
                 'id' => 450,
                 'quest_id' => 5,
@@ -1656,7 +2184,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            149 => 
+            197 => 
             array (
                 'id' => 449,
                 'quest_id' => 4,
@@ -1667,7 +2195,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            150 => 
+            198 => 
             array (
                 'id' => 448,
                 'quest_id' => 9,
@@ -1678,7 +2206,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            151 => 
+            199 => 
             array (
                 'id' => 447,
                 'quest_id' => 5,
@@ -1689,7 +2217,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            152 => 
+            200 => 
             array (
                 'id' => 446,
                 'quest_id' => 4,
@@ -1700,7 +2228,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            153 => 
+            201 => 
             array (
                 'id' => 445,
                 'quest_id' => 0,
@@ -1711,7 +2239,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            154 => 
+            202 => 
             array (
                 'id' => 444,
                 'quest_id' => 12,
@@ -1722,7 +2250,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            155 => 
+            203 => 
             array (
                 'id' => 443,
                 'quest_id' => 0,
@@ -1733,7 +2261,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            156 => 
+            204 => 
             array (
                 'id' => 442,
                 'quest_id' => 12,
@@ -1744,7 +2272,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            157 => 
+            205 => 
             array (
                 'id' => 441,
                 'quest_id' => 0,
@@ -1755,7 +2283,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            158 => 
+            206 => 
             array (
                 'id' => 440,
                 'quest_id' => 12,
@@ -1766,7 +2294,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            159 => 
+            207 => 
             array (
                 'id' => 439,
                 'quest_id' => 0,
@@ -1777,7 +2305,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            160 => 
+            208 => 
             array (
                 'id' => 438,
                 'quest_id' => 12,
@@ -1788,7 +2316,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            161 => 
+            209 => 
             array (
                 'id' => 437,
                 'quest_id' => 0,
@@ -1799,7 +2327,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            162 => 
+            210 => 
             array (
                 'id' => 436,
                 'quest_id' => 12,
@@ -1810,7 +2338,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            163 => 
+            211 => 
             array (
                 'id' => 435,
                 'quest_id' => 0,
@@ -1821,7 +2349,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            164 => 
+            212 => 
             array (
                 'id' => 434,
                 'quest_id' => 12,
@@ -1832,7 +2360,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            165 => 
+            213 => 
             array (
                 'id' => 433,
                 'quest_id' => 0,
@@ -1843,7 +2371,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-10-06 09:56:58',
                 'deleted_at' => NULL,
             ),
-            166 => 
+            214 => 
             array (
                 'id' => 432,
                 'quest_id' => 12,
@@ -1854,7 +2382,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:43:30',
                 'deleted_at' => NULL,
             ),
-            167 => 
+            215 => 
             array (
                 'id' => 431,
                 'quest_id' => 12,
@@ -1865,7 +2393,7 @@ class UserQuestsTableSeeder extends Seeder
                 'updated_at' => '2016-09-23 12:42:49',
                 'deleted_at' => NULL,
             ),
-            168 => 
+            216 => 
             array (
                 'id' => 430,
                 'quest_id' => 0,

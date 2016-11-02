@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-
-
 /**
  * @property integer $id
  * @property integer $currency_id
@@ -17,7 +15,8 @@ namespace App\Models;
  * @property User $user
  * @property Organization $organization
  */
-class Balance extends BaseModelWithSoftDeletes {
+class Balance extends BaseModelWithSoftDeletes
+{
 
     /**
      * @var array
@@ -27,21 +26,24 @@ class Balance extends BaseModelWithSoftDeletes {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function currency() {
+    public function currency()
+    {
         return $this->belongsTo('App\Models\Currency');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo('App\Models\User');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function organization() {
+    public function organization()
+    {
         return $this->belongsTo('App\Models\Organization');
     }
 
@@ -50,8 +52,9 @@ class Balance extends BaseModelWithSoftDeletes {
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function scopeXP($query) {
-        return $query->join('currencies', 'currencies.id', '=', 'balances.currency_id')->whereIn('currencies.currency_type_id', [1, 3, 10])->select('balances.*', 'currencies.name', 'currencies.description');
+    public function scopeXP($query)
+    {
+        return $query->join('currencies', 'currencies.id', '=', 'balances.currency_id')->whereIn('currencies.currency_type_id', [3, 10])->select('balances.*', 'currencies.name', 'currencies.description');
     }
 
     /**
@@ -59,8 +62,9 @@ class Balance extends BaseModelWithSoftDeletes {
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function scopeMedal($query) {
-        return $query->join('currencies', 'currencies.id', '=', 'balances.currency_id')->where('currencies.currency_type_id', 2)->select('balances.*', 'currencies.name', 'currencies.description');
+    public function scopeMedal($query)
+    {
+        return $query->join('currencies', 'currencies.id', '=', 'balances.currency_id')->where('currencies.currency_type_id', 9)->select('balances.*', 'currencies.name', 'currencies.description');
     }
 
 }

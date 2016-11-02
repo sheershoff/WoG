@@ -58,7 +58,7 @@
                 <label>E-mail</label>
                 <input name="email" class="input-huge" type="email" value="{{ Auth::user()->email }}" required>
                 <label>Номер телефона</label>
-                <input name="phone_number" class="input-huge" type="tel" pattern="+7[0-9]{10}" value="{{ Auth::user()->phone_number }}" required>
+                <input name="phone_number" class="input-huge" type="tel" value="{{ Auth::user()->phone_number }}" required>
                 <label for="style">Тема</label>
                 <select name="style">
                     <option>Белая</option>
@@ -72,7 +72,7 @@
                 <label for="sub_user2">E-mail запасного варианта лица, которое вас замещает в ваше отсутствие (за исключением руководителя)</label>
                 <input name="sub_user2" class="input-huge" type="email" value="{{ Auth::user()->sub_user2 }}">
                 <label for="sub_comment">Комментарий о замещениии</label>
-                <textarea name="sub_comment" maxlength="300" rows="3">{{ Auth::user()->sub_comment }}</textarea>                
+                <textarea name="sub_comment" maxlength="300" rows="3">{{ Auth::user()->sub_comment }}</textarea>
                 <label for="job_comment">Ваше текущее направление деятельности</label>
                 <textarea name="job_comment" maxlength="300" rows="3">{{ Auth::user()->job_comment }}</textarea>
             </div>
@@ -84,10 +84,10 @@
 </div>
 
 @if(!config('wog.can_edit_user'))
-    <script>
-        $(document).ready(function () {
-            $('form').find('input, button').attr('disabled', true);
-        });
-    </script> 
+<script>
+    $(document).ready(function () {
+        $('form').find('input, button').attr('disabled', true);
+    });
+</script>
 @endif
 @stop

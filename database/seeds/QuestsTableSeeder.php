@@ -19,6 +19,60 @@ class QuestsTableSeeder extends Seeder
         \DB::connection('pgsql')->table('quests')->insert(array (
             0 => 
             array (
+                'id' => 16,
+                'code' => NULL,
+                'name' => 'Супер-товары',
+                'description' => NULL,
+                'role_id' => 2,
+                'author_user_id' => NULL,
+                'is_hide' => true,
+                'is_auto' => true,
+                'time_recheck' => 86400,
+                'function_time_recheck' => NULL,
+                'function_check' => NULL,
+                'robot_id' => 10,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
+                'id' => 15,
+                'code' => NULL,
+                'name' => 'Приятные товары',
+                'description' => NULL,
+                'role_id' => 1,
+                'author_user_id' => NULL,
+                'is_hide' => true,
+                'is_auto' => true,
+                'time_recheck' => 86400,
+                'function_time_recheck' => NULL,
+                'function_check' => NULL,
+                'robot_id' => 10,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            2 => 
+            array (
+                'id' => 14,
+                'code' => NULL,
+                'name' => 'Полезные товары',
+                'description' => '',
+                'role_id' => 1,
+                'author_user_id' => NULL,
+                'is_hide' => true,
+                'is_auto' => true,
+                'time_recheck' => 86400,
+                'function_time_recheck' => NULL,
+                'function_check' => NULL,
+                'robot_id' => 10,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            3 => 
+            array (
                 'id' => 13,
                 'code' => 'VladyJiraClosedBug',
                 'name' => 'Бонус за закрытые баги',
@@ -35,7 +89,7 @@ class QuestsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            1 => 
+            4 => 
             array (
                 'id' => 12,
                 'code' => 'VladyJiraFindLogin',
@@ -53,7 +107,7 @@ class QuestsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
+            5 => 
             array (
                 'id' => 9,
                 'code' => NULL,
@@ -71,7 +125,7 @@ class QuestsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            3 => 
+            6 => 
             array (
                 'id' => 5,
                 'code' => NULL,
@@ -91,7 +145,7 @@ currency_types=4
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            4 => 
+            7 => 
             array (
                 'id' => 4,
                 'code' => NULL,
@@ -109,7 +163,7 @@ currency_types=4
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            5 => 
+            8 => 
             array (
                 'id' => 3,
                 'code' => 'shop',
@@ -127,7 +181,7 @@ currency_types=4
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            6 => 
+            9 => 
             array (
                 'id' => 2,
                 'code' => NULL,
@@ -145,7 +199,7 @@ currency_types=4
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            7 => 
+            10 => 
             array (
                 'id' => 1,
                 'code' => NULL,
@@ -163,7 +217,7 @@ currency_types=4
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            8 => 
+            11 => 
             array (
                 'id' => 0,
                 'code' => NULL,
