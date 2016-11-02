@@ -325,5 +325,25 @@ class User extends BaseModelWithSoftDeletes implements AuthenticatableContract, 
     {
         return strtolower($value);
     }
+    
+    public static function findUser($email) {
+        if (User::where('email', '=', $email)->first()) {
+            return response()->json([
+                        'status' => 'base',
+                        'message' => 'Email в базе'
+            ]);
+        } else {
+            if (\Adldap::search()->where('mail', '=', $email)->first())
+                return response()->json([
+                            'status' => 'ad',
+                            'message' => 'Email в AD'
+                ]);
+            else
+                return response()->json([
+                            'status' => false,
+                            'message' => 'Email отсустстувет'
+                ]);
+        }
+    }    
 
 }

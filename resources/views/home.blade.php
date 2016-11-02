@@ -74,11 +74,7 @@
     });
     
     $('.check-quest').click(function (event) {
-        $.get('/user/quest/' + $(this).data().actionId + '/check', function (data) {
-            
-        });
-        location.reload();
-
+        location.href = '/user/quest/' + $(this).data().actionId + '/check';
     });
 
 // $.ajax({

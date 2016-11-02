@@ -15,20 +15,21 @@ use App\Models\ActionTransaction;
 use App\Models\Quest;
 use App\Models\Action;
 use App\Models\ActionCurrency;
+use App\Models\User;
 
 class ShopController extends Controller {
 
     public function index() {
         if (Auth::user()->roleUser->where('role_id', '=', '1')->first()) {
-            $cats = Quest::with(['actions' => function($query){
-                $query->whereExists(function($query2){
-                   $query2->select('action_currencies.*')->from('action_currencies')->whereRaw('"action_id" ="' . DB::getTablePrefix() . 'actions"."id"'); 
-                });
-            }, 'actions.actionCurrencies'])->where('robot_id', '=', 10)
+            $cats = Quest::with(['actions' => function($query) {
+                                    $query->whereExists(function($query2) {
+                                                $query2->select('action_currencies.*')->from('action_currencies')->whereRaw('"action_id" ="' . DB::getTablePrefix() . 'actions"."id"');
+                                            });
+                                }, 'actions.actionCurrencies', 'actions.actionCurrencies.currency'])->where('robot_id', '=', 10)
                             ->whereExists(function($query) {
                                 $query->select('role_user.*')->from('role_user')->where('user_id', '=', Auth::user()->id)->whereRaw('"role_id" = "' . DB::getTablePrefix() . 'quests"."role_id"');
                             })->get();
-            return view('shop', [
+            return view('shops/shop', [
                 'cash' => Auth::user()->cash()->get(),
                 'cats' => $cats,
             ]);
@@ -36,44 +37,24 @@ class ShopController extends Controller {
             return redirect(url('home'));
     }
 
-    public function buyItem($id) {
-        if (!Auth::check())
-            return '404';
-        $hasRole = true;
-        $currencies = ActionCurrency::where('action_id', '=', $id)->get();
-        $ss = '';
-        foreach ($currencies as $cur) {
-            if (!Auth::user()->roleUser->where('role_id', '=', $cur->currency->role_id)->first()) {
-                $hasRole = false;
-                break;
+    public function buyItem($id, $email = null) {
+        $transactionUser = null;
+        if (isset($email))
+            switch (json_decode(User::findUser($email)->getContent())->status) {
+                case 'base':
+                    $transactionUser = User::where('email', '=', $email)->first()->id;
+                    break;
+                case 'ad':
+                    $transactionUser = new User();
+                    $transactionUser->email = $email;
+                    $transactionUser->save();
+                    $transactionUser = $transactionUser->id;
+                    break;
             }
-            $balance = Auth::user()->balances->where('currency_id', '=', $cur->currency_id)->first();
-
-            if ($balance != null) {
-                if ($balance->value + $cur->value < 0)
-                    return response()->json([
-                                'error' => true,
-                                'text' => 'cash_error',
-                    ]);
-            }
-            else
-            if ($cur->value < 0)
-                return response()->json([
-                            'error' => true,
-                            'text' => 'cash_error',
-                ]);
-        }
-        if (!$hasRole)
-            return response()->json([
-                        'error' => true,
-                        'text' => 'role_error',
-            ]);
-
-        ActionTransaction::newActionTransaction(Auth::user()->id, $id);
-        return response()->json([
-                    'error' => false,
-                    'text' => 'success',
-        ]);
+        return ActionTransaction::newActionTransaction(Auth::user()->id, $id, null, null, true, $transactionUser);
     }
 
+    public function findUser($email) {
+        return json_decode(User::findUser($email)->getContent())->status;
+    }
 }
