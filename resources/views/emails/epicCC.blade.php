@@ -7,17 +7,20 @@
         <p>{{$body}}</p>
         @foreach($issuesError as $issue)
         @if ($loop->first)
+        <p>Следующие задачи требуют вашего внимания:</p>
         <table>
             <tr><th>issue</th>
                 <th>summary</th>
                 <th>assignee</th>
                 <th>updated</th>
+                <th>status</th>
             </tr>
             @endif
             <tr><td><a href="https://jira.billing.ru/browse/{{$issue["key"]}}">{{$issue["key"]}}</a></td>
                 <td>{{$issue['fields']["summary"]}}</td>
                 <td>{{$issue['fields']["assignee"]["key"]}}</td>
                 <td>{{$issue['fields']["updated"]}}</td>
+                <td>{{$issue['fields']["status"]["name"]}}</td>
             </tr>
             @if ($loop->last)
         </table>
