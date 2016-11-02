@@ -12007,8 +12007,8 @@ class SkillsTableSeeder extends Seeder
             array (
                 'id' => 12,
                 'code' => NULL,
-                'name' => 'it',
-                'description' => NULL,
+                'name' => 'IT',
+                'description' => '',
                 'is_hide' => true,
                 'options' => NULL,
                 'currency_id' => NULL,
@@ -12016,7 +12016,7 @@ class SkillsTableSeeder extends Seeder
                 'appoint' => true,
                 'organization_id' => 0,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => '2016-10-14 14:16:05',
                 'deleted_at' => NULL,
             ),
             250 => 

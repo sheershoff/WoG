@@ -56,6 +56,10 @@ class Kernel extends ConsoleKernel
                 ->dailyAt('23:10');
         $schedule->command('jira:postponetime')
                 ->dailyAt('02:10');
+        $schedule->command('jira:postpone')
+                ->dailyAt('02:20');
+        $schedule->command('jira:epic null')
+                ->dailyAt('02:30');
 //        $schedule->call(function () {
 //            DB::table('recent_users')->delete();
 //        })->daily();

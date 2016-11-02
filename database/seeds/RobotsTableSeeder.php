@@ -19,6 +19,18 @@ class RobotsTableSeeder extends Seeder
         \DB::connection('pgsql')->table('robots')->insert(array (
             0 => 
             array (
+                'id' => 10,
+                'code' => NULL,
+                'name' => 'Магазин',
+                'description' => 'Базовый магазин',
+                'user_id' => NULL,
+                'organization_id' => 0,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'deleted_at' => NULL,
+            ),
+            1 => 
+            array (
                 'id' => 7,
                 'code' => NULL,
                 'name' => 'Инвентарь',
@@ -29,7 +41,7 @@ class RobotsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            1 => 
+            2 => 
             array (
                 'id' => 5,
                 'code' => NULL,
@@ -41,7 +53,7 @@ class RobotsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            2 => 
+            3 => 
             array (
                 'id' => 4,
                 'code' => NULL,
@@ -53,7 +65,7 @@ class RobotsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            3 => 
+            4 => 
             array (
                 'id' => 3,
                 'code' => NULL,
@@ -65,7 +77,7 @@ class RobotsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            4 => 
+            5 => 
             array (
                 'id' => 2,
                 'code' => NULL,
@@ -77,7 +89,7 @@ class RobotsTableSeeder extends Seeder
                 'updated_at' => NULL,
                 'deleted_at' => NULL,
             ),
-            5 => 
+            6 => 
             array (
                 'id' => 1,
                 'code' => NULL,

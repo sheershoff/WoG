@@ -72,7 +72,7 @@
                 <label for="sub_user2">E-mail запасного варианта лица, которое вас замещает в ваше отсутствие (за исключением руководителя)</label>
                 <input name="sub_user2" class="input-huge profile" type="email" value="{{ Auth::user()->sub_user2 }}">
                 <label for="sub_comment">Комментарий о замещениии</label>
-                <textarea name="sub_comment" maxlength="300" rows="3">{{ Auth::user()->sub_comment }}</textarea>                
+                <textarea name="sub_comment" maxlength="300" rows="3">{{ Auth::user()->sub_comment }}</textarea>
                 <label for="job_comment">Ваше текущее направление деятельности</label>
                 <textarea name="job_comment" maxlength="300" rows="3">{{ Auth::user()->job_comment }}</textarea>
             </div>
