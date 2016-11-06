@@ -1,0 +1,28 @@
+app:
+  image: php:5
+  working_dir: /usr/src/myapp
+  volumes:
+    - .:/usr/src/myapp
+  links:
+    - "redis:redis"
+    - "postgres:postgres"
+  command: "./docker-bootstrap-app.sh"
+  expose:
+    - 9999
+  ports:
+    - "9999:9999"
+
+redis:
+  image: redis
+  volumes:
+    - ./.tmp-docker-volumes/redis:/data
+
+postgres:
+  image: postgres
+  environment:
+    PGDATA: "/var/lib/postgresql/data/pgdata"
+    POSTGRES_DB: "wog"
+    POSTGRES_USER: "wog"
+    POSTGRES_PASSWORD: "wog"
+  volumes:
+    - ./.tmp-docker-volumes/pgdata:/var/lib/postgresql/data/pgdata
