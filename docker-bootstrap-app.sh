@@ -95,6 +95,8 @@ else
     export REDIS_PORT=$REDIS_PORT_6379_TCP_PORT
 fi
 
+export LDAP=false
+
 php artisan key:generate
 npm i
 npm i bower gulp gulp-cli

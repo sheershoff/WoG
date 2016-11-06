@@ -28,6 +28,15 @@ class ProfileController extends Controller {
 
     public function saveProfile(Request $request) {
         $user = Auth::user();
+        if(!config('wog.can_edit_user')){
+            return 'Недостаточно прав для редактирования пользователя';
+        }
+        $this->validate($request,[
+            'name' => 'required',
+            'surname' => 'required',
+            'login' => 'required',
+            'email' => 'required|email',
+        ]);
         $tempUser = User::withTrashed()->where('login', '=', $request->input('login'))->where('organization_id', '=', $user->organization_id)->first();
         if ($tempUser != null and $tempUser->id != $user->id)
     //        return response()->json([
