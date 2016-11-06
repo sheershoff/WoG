@@ -66,6 +66,13 @@
 * [https://developer.atlassian.com/jiradev/jira-apis/jira-rest-apis/jira-rest-api-tutorials/jira-rest-api-example-basic-authentication](https://developer.atlassian.com/jiradev/jira-apis/jira-rest-apis/jira-rest-api-tutorials/jira-rest-api-example-basic-authentication)
 * [https://danradigan.com/2014/04/12/php-jiras-rest-api/](https://danradigan.com/2014/04/12/php-jiras-rest-api/) 
 
+# docker для разработки
+```bash
+git clone https://github.com/xvlady/WoG.git
+cd WoG
+docker-compose up
+```
+
 # install
 ```bash
 git clone https://github.com/xvlady/WoG.git

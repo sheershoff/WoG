@@ -11,3 +11,8 @@ composer
 composer.lock
 setpath.bat
 /composer.lock
+# idea files
+.idea
+*.iml
+# dev docker data folder
+.tmp-docker-volumes
