@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Log;
 
 class ProfileController extends Controller {
 
@@ -28,8 +29,32 @@ class ProfileController extends Controller {
 
     public function saveProfile(Request $request) {
         $user = Auth::user();
+        if (!config('wog.can_edit_user')) {
+            return 'У данной организации отключено редактирование профиля пользователя';
+        }
+
+        $validateRules = [
+            'name' => 'required',
+            'surname' => 'required',
+            'login' => 'required',
+            'email' => 'required|email',
+            'style' => 'required|numeric|in:1,2,3'
+        ];
+
+        // do not validate fields that are not allowed to edit
+        foreach (config('wog.not_edit_user_fields') as $field) {
+            unset($validateRules[$field]);
+            if($field == 'name'){
+                unset($validateRules['surname']);
+            }
+        }
+
+        if (sizeof($validateRules) > 0) {
+            $this->validate($request, $validateRules);
+        }
+
         $tempUser = User::withTrashed()->where('login', '=', $request->input('login'))->where('organization_id', '=', $user->organization_id)->first();
-        if ($tempUser != null and $tempUser->id != $user->id)
+        if ($tempUser != null && $tempUser->id != $user->id && !in_array('login',config('wog.not_edit_user_fields')))
     //        return response()->json([
     //                    'reload' => false,
     //                    'text' => 'Пользователь с таким логином существует.',
@@ -37,28 +62,39 @@ class ProfileController extends Controller {
                 return 'логин';
         else {
             $tempUser = User::withTrashed()->where('email', '=', $request->input('email'))->where('organization_id', '=', $user->organization_id)->first();
-            if ($tempUser != null and $tempUser->id != $user->id)
+            if ($tempUser != null && $tempUser->id != $user->id &&  !in_array('id',config('wog.not_edit_user_fields')))
       //          return response()->json([
     //                        'reload' => false,
     //                        'text' => 'Пользователь с таким email существует.',
     //            ]);
                 return 'емейл';
         }
-        $user->name = $request->input('name') . ' ' . $request->input('surname');
-        $user->login = $request->input('login');
-        $user->email = $request->input('email');
-        $user->phone_number = $request->input('phone_number');
-        switch ($request->input('style')) {
-            case 'Белая': $user->style = 1; break;
-            case 'Черная': $user->style = 2; break;
-            case 'Гламурная': $user->style = 3; break;
+
+        // doesn't fit in the general scheme, so ad-hoc processing
+        if(!in_array('name',config('wog.not_edit_user_fields'))) {
+            $user->name = $request->input('name') . ' ' . $request->input('surname');
         }
-        $user->begin_worktime = $request->input('begin_worktime', '8:30');
-        $user->end_worktime = $request->input('end_worktime', '18:00');
-        $user->sub_user1 = $request->input('sub_user1', NULL);
-        $user->sub_user2 = $request->input('sub_user2', NULL);
-        $user->sub_comment = $request->input('sub_comment', NULL);
-        $user->job_comment = $request->input('job_comment', NULL);
+
+        $editable_columns = [
+            'style' => 1,
+            'begin_worktime' => '8:30',
+            'end_worktime' => '18:00',
+            'login' => '',
+            'email' => '',
+            'phone_number' => '',
+            'sub_user1' => '',
+            'sub_user2' => '',
+            'sub_comment' => '',
+            'job_comment' => '',
+        ];
+
+        // set editable columns filtered by not_edit config values
+        foreach($editable_columns as $column => $value){
+            if(!in_array($column,config('wog.not_edit_user_fields'))) {
+                $user->$column = $request->input($column, $value);
+            }
+        }
+
         if ($user->save())
             return redirect()->back()->with('message', 'Success!');
         return redirect()->back()->with('message', 'False!');
